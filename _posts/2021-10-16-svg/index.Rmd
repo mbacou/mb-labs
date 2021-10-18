@@ -1,13 +1,14 @@
 ---
-title: Interactive SVG with D3.js
+title: Interactive SVG with D3.js (draft)
 description: |
-  Part 1: add interactivity to existing WA sheets (IWMI).
+  Part 1: add interactivity to printable WA+ sheets (IWMI).
 author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
 date: 2020-10-01
 categories:
+  - draft
   - imwi
   - hydrology
 output:

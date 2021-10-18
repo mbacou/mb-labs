@@ -1,13 +1,14 @@
 ---
-title: Custom Highcharts
+title: Custom Highcharts (draft)
 description: |
-  Part 2: build custom data-driven charts using Highcharts.js (IWMI).
+  Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI).
 author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
 preview: resource-base.svg
 categories:
+  - draft
   - imwi
   - hydrology
 date: "`r Sys.Date()`"
