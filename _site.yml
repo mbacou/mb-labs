@@ -1,0 +1,22 @@
+name: 2021-iwmi
+title: Visualization Playground
+description: |
+  WA+ model visualization playground and projects
+base_url: https://mbacou.github.io/2021-iwmi
+favicon: www/favicon.png
+output_dir: "docs"
+theme: www/theme.css
+navbar:
+  logo:
+    image: www/logo.svg
+    href: index.html
+  search: false
+  source_url: https://github.com/mbacou/2021-iwmi
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - icon: fa fa-rss
+      href: index.xml
+output: distill::distill_article

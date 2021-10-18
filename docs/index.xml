@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Visualization Playground</title>
+    <link>https://mbacou.github.io/2021-iwmi</link>
+    <atom:link href="https://mbacou.github.io/2021-iwmi/index.xml" rel="self" type="application/rss+xml"/>
+    <description>WA+ model visualization playground and projects
+</description>
+    <image>
+      <title>Visualization Playground</title>
+      <url>https://mbacou.github.io/2021-iwmi/www/favicon.png</url>
+      <link>https://mbacou.github.io/2021-iwmi</link>
+    </image>
+    <generator>Distill</generator>
+    <lastBuildDate>Mon, 18 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Interactive SVG with D3.js</title>
+      <dc:creator>BACOU, Melanie</dc:creator>
+      <link>https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg</link>
+      <description>Prototype visuals and code snippets for IWMI Water Accounting+ model visualization.</description>
+      <guid>https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg</guid>
+      <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg/../../www/svg/sheet_1.svg" medium="image" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>Custom Highcharts</title>
+      <dc:creator>BACOU, Melanie</dc:creator>
+      <link>https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts</link>
+      <description>Prototype visuals and code snippets for IWMI Water Accounting+ model visualization.</description>
+      <guid>https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts</guid>
+      <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

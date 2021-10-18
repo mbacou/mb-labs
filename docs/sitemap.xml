@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://mbacou.github.io/2021-iwmi/about.html</loc>
+    <lastmod>2021-10-18T05:32:26+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.github.io/2021-iwmi/</loc>
+    <lastmod>2021-10-18T05:32:26+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg/</loc>
+    <lastmod>2021-10-18T06:32:01+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts/</loc>
+    <lastmod>2021-10-18T06:31:44+01:00</lastmod>
+  </url>
+</urlset>
