@@ -1,5 +1,5 @@
 name: mb-labs
-title: BACOU, Melanie
+title: Mel's Labs
 description: |
   My playground for consulting and data science projects
 base_url: https://mbacou.github.io/mb-labs
@@ -14,7 +14,6 @@ collections:
     categories_metadata: true
     authors_metadata: true
     feed_items_max: 50
-    disqus: mb-labs-general
     share: [twitter, linkedin]
     custom: _custom.html
 navbar:
@@ -26,8 +25,6 @@ navbar:
   right:
     - text: Notebooks
       href: index.html
-    - text: Portfolio
-      href: https://mbacou.github.io/portfolio
     - text: About
       href: about.html
     - icon: fa fa-rss

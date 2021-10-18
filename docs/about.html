@@ -83,7 +83,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>BACOU, Melanie: About this blog</title>
+  <title>Mel's Labs: About this blog</title>
 
   <meta property="description" itemprop="description" content="Some additional details about the blog"/>
 
@@ -92,15 +92,15 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="BACOU, Melanie: About this blog"/>
+  <meta property="og:title" content="Mel&#39;s Labs: About this blog"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="Some additional details about the blog"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="BACOU, Melanie"/>
+  <meta property="og:site_name" content="Mel&#39;s Labs"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="BACOU, Melanie: About this blog"/>
+  <meta property="twitter:title" content="Mel&#39;s Labs: About this blog"/>
   <meta property="twitter:description" content="Some additional details about the blog"/>
 
   <!--/radix_placeholder_meta_tags-->
@@ -1881,7 +1881,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     --heading-font:    "Roboto Condensed", serif;
     --mono-font:       monospace;
     --body-font:       "Roboto", sans-serif;
-    --navbar-font:     "Roboto Condensed", serif;
+    --navbar-font:     "Roboto", sans-serif;
   }
 
   /*-- ARTICLE METADATA --*/
@@ -1896,6 +1896,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   .d-contents {
     --heading-size:    18px;
     --contents-size:   13px;
+    --heading-font:    "Roboto Condensed", serif;
+    --body-font:       "Roboto Condensed", serif;
     --body-color:      rgba(17, 17, 17, 0.8);
   }
 
@@ -1922,7 +1924,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     --text-color:       rgb(243, 243, 243);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       rgb(18, 20, 39);
+    --bkgd-color:       rgba(18, 20, 39, 0.8);
   }
 
   /*-- CUSTOM --*/
@@ -1940,12 +1942,19 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   .d-title {
     background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
   }
+  body.layout-listing {
+    background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 30%);
+  }
   .sourceCode {
     background-color: rgba(243, 243, 243, 0.8);
     padding-bottom: 1em;
   }
   d-appendix .citation-appendix, .d-appendix .citation-appendix {
     background: rgb(255, 255, 255);
+  }
+  .posts-list .dt-tags .dt-tag {
+    border: none;
+    padding: 0.4em 0;
   }</style>
   <style type="text/css">
   /* base style */
@@ -2144,7 +2153,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     --heading-font:    "Roboto Condensed", serif;
     --mono-font:       monospace;
     --body-font:       "Roboto", sans-serif;
-    --navbar-font:     "Roboto Condensed", serif;
+    --navbar-font:     "Roboto", sans-serif;
   }
 
   /*-- ARTICLE METADATA --*/
@@ -2159,6 +2168,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   .d-contents {
     --heading-size:    18px;
     --contents-size:   13px;
+    --heading-font:    "Roboto Condensed", serif;
+    --body-font:       "Roboto Condensed", serif;
     --body-color:      rgba(17, 17, 17, 0.8);
   }
 
@@ -2185,7 +2196,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     --text-color:       rgb(243, 243, 243);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       rgb(18, 20, 39);
+    --bkgd-color:       rgba(18, 20, 39, 0.8);
   }
 
   /*-- CUSTOM --*/
@@ -2203,12 +2214,19 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   .d-title {
     background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
   }
+  body.layout-listing {
+    background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 30%);
+  }
   .sourceCode {
     background-color: rgba(243, 243, 243, 0.8);
     padding-bottom: 1em;
   }
   d-appendix .citation-appendix, .d-appendix .citation-appendix {
     background: rgb(255, 255, 255);
+  }
+  .posts-list .dt-tags .dt-tag {
+    border: none;
+    padding: 0.4em 0;
   }
 
   </style>
@@ -2234,11 +2252,10 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <a class="logo" href="index.html">
 <img src="www/logo.svg" alt="Logo"/>
 </a>
-<a href="index.html" class="title">BACOU, Melanie</a>
+<a href="index.html" class="title">Mel's Labs</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Notebooks</a>
-<a href="https://mbacou.github.io/portfolio">Portfolio</a>
 <a href="about.html">About</a>
 <a href="index.xml">
 <i class="fa fa-rss" aria-hidden="true"></i>

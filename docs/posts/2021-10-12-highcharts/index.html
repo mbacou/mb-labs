@@ -86,7 +86,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>BACOU, Melanie: Custom Highcharts</title>
+<title>Mel's Labs: Custom Highcharts</title>
 
 <meta property="description" itemprop="description" content="Part 2: build custom data-driven charts using Highcharts.js (IWMI)."/>
 
@@ -100,23 +100,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="BACOU, Melanie"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="BACOU, Melanie: Custom Highcharts"/>
+<meta property="og:title" content="Mel&#39;s Labs: Custom Highcharts"/>
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="Part 2: build custom data-driven charts using Highcharts.js (IWMI)."/>
 <meta property="og:url" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
 <meta property="og:image" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/resource-base.svg"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:site_name" content="BACOU, Melanie"/>
+<meta property="og:site_name" content="Mel&#39;s Labs"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="BACOU, Melanie: Custom Highcharts"/>
+<meta property="twitter:title" content="Mel&#39;s Labs: Custom Highcharts"/>
 <meta property="twitter:description" content="Part 2: build custom data-driven charts using Highcharts.js (IWMI)."/>
 <meta property="twitter:url" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
 <meta property="twitter:image" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/resource-base.svg"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="BACOU, Melanie: Custom Highcharts"/>
+<meta name="citation_title" content="Mel&#39;s Labs: Custom Highcharts"/>
 <meta name="citation_fulltext_html_url" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
 <meta name="citation_fulltext_world_readable" content=""/>
 <meta name="citation_online_date" content="2021/10/18"/>
@@ -1904,7 +1904,7 @@ html {
   --heading-font:    "Roboto Condensed", serif;
   --mono-font:       monospace;
   --body-font:       "Roboto", sans-serif;
-  --navbar-font:     "Roboto Condensed", serif;
+  --navbar-font:     "Roboto", sans-serif;
 }
 
 /*-- ARTICLE METADATA --*/
@@ -1919,6 +1919,8 @@ d-byline {
 .d-contents {
   --heading-size:    18px;
   --contents-size:   13px;
+  --heading-font:    "Roboto Condensed", serif;
+  --body-font:       "Roboto Condensed", serif;
   --body-color:      rgba(17, 17, 17, 0.8);
 }
 
@@ -1945,7 +1947,7 @@ d-appendix {
   --text-color:       rgb(243, 243, 243);
   --text-size:        15px;
   --hover-color:      white;
-  --bkgd-color:       rgb(18, 20, 39);
+  --bkgd-color:       rgba(18, 20, 39, 0.8);
 }
 
 /*-- CUSTOM --*/
@@ -1963,12 +1965,19 @@ h1, h2, h3, d-title h1 {
 .d-title {
   background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
 }
+body.layout-listing {
+  background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 30%);
+}
 .sourceCode {
   background-color: rgba(243, 243, 243, 0.8);
   padding-bottom: 1em;
 }
 d-appendix .citation-appendix, .d-appendix .citation-appendix {
   background: rgb(255, 255, 255);
+}
+.posts-list .dt-tags .dt-tag {
+  border: none;
+  padding: 0.4em 0;
 }</style>
 <style type="text/css">
 /* base style */
@@ -2211,7 +2220,7 @@ html {
   --heading-font:    "Roboto Condensed", serif;
   --mono-font:       monospace;
   --body-font:       "Roboto", sans-serif;
-  --navbar-font:     "Roboto Condensed", serif;
+  --navbar-font:     "Roboto", sans-serif;
 }
 
 /*-- ARTICLE METADATA --*/
@@ -2226,6 +2235,8 @@ d-byline {
 .d-contents {
   --heading-size:    18px;
   --contents-size:   13px;
+  --heading-font:    "Roboto Condensed", serif;
+  --body-font:       "Roboto Condensed", serif;
   --body-color:      rgba(17, 17, 17, 0.8);
 }
 
@@ -2252,7 +2263,7 @@ d-appendix {
   --text-color:       rgb(243, 243, 243);
   --text-size:        15px;
   --hover-color:      white;
-  --bkgd-color:       rgb(18, 20, 39);
+  --bkgd-color:       rgba(18, 20, 39, 0.8);
 }
 
 /*-- CUSTOM --*/
@@ -2270,12 +2281,19 @@ h1, h2, h3, d-title h1 {
 .d-title {
   background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
 }
+body.layout-listing {
+  background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 30%);
+}
 .sourceCode {
   background-color: rgba(243, 243, 243, 0.8);
   padding-bottom: 1em;
 }
 d-appendix .citation-appendix, .d-appendix .citation-appendix {
   background: rgb(255, 255, 255);
+}
+.posts-list .dt-tags .dt-tag {
+  border: none;
+  padding: 0.4em 0;
 }
 
 </style>
@@ -2300,11 +2318,10 @@ d-appendix .citation-appendix, .d-appendix .citation-appendix {
 <a class="logo" href="../../index.html">
 <img src="../../www/logo.svg" alt="Logo"/>
 </a>
-<a href="../../index.html" class="title">BACOU, Melanie</a>
+<a href="../../index.html" class="title">Mel's Labs</a>
 </div>
 <div class="nav-right">
 <a href="../../index.html">Notebooks</a>
-<a href="https://mbacou.github.io/portfolio">Portfolio</a>
 <a href="../../about.html">About</a>
 <a href="../../index.xml">
 <i class="fa fa-rss" aria-hidden="true"></i>
@@ -2879,11 +2896,6 @@ Figure 1: Sample Treemap
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
-    <span class="disqus-comments">
-      <i class="fas fa-comments"></i>
-      &nbsp;
-      <span class="disqus-comment-count" data-disqus-identifier="posts/2021-10-12-highcharts/">Comment on this article</span>
-    </span>
     <span class="article-sharing">
       Share: &nbsp;
       <a href="https://twitter.com/share?text=Custom%20Highcharts&amp;url=https%3A%2F%2Fmbacou.github.io%2Fmb-labs%2Fposts%2F2021-10-12-highcharts%2F">
@@ -2894,20 +2906,6 @@ Figure 1: Sample Treemap
       </a>
     </span>
   </p>
-  <script id="dsq-count-scr" src="https://mb-labs-general.disqus.com/count.js" async></script>
-  <div id="disqus_thread" class="hidden"></div>
-  <script type="text/javascript" cookie-consent="functionality">
-var disqus_config = function () {
-  this.page.url = 'https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/';
-  this.page.identifier = 'posts/2021-10-12-highcharts/';
-};
-(function() {
-  var d = document, s = d.createElement('script');
-  s.src = 'https://mb-labs-general.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-})();
-</script>
 </div>
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2926,11 +2924,11 @@ var disqus_config = function () {
   <p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/mbacou/mb-labs">https://github.com/mbacou/mb-labs</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Melanie (2021, Oct. 18). BACOU, Melanie: Custom Highcharts. Retrieved from https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/</pre>
+  <pre class="citation-appendix short">Melanie (2021, Oct. 18). Mel's Labs: Custom Highcharts. Retrieved from https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/</pre>
   <p>BibTeX citation</p>
   <pre class="citation-appendix long">@misc{melanie2021custom,
   author = {Melanie, BACOU,},
-  title = {BACOU, Melanie: Custom Highcharts},
+  title = {Mel's Labs: Custom Highcharts},
   url = {https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/},
   year = {2021}
 }</pre>
