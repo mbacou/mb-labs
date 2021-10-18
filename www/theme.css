@@ -20,7 +20,7 @@ html {
   --aside-size:      12px;
   --fig-cap-size:    13px;
   /*-- Main font colors --*/
-  --title-color:     #253655;
+  --title-color:     #121427;
   --header-color:    rgba(0, 0, 0, 0.8);
   --body-color:      rgba(0, 0, 0, 0.8);
   --aside-color:     rgba(0, 0, 0, 0.6);
@@ -44,6 +44,7 @@ d-byline {
 .d-contents {
   --heading-size:    18px;
   --contents-size:   13px;
+  --body-color:      rgba(0, 0, 0, 0.8);
 }
 
 /*-- ARTICLE APPENDIX --*/
@@ -59,17 +60,17 @@ d-appendix {
 
 .distill-site-header {
   --title-size:       18px;
-  --text-color:       rgba(255, 255, 255, 0.9);
+  --text-color:       rgba(255, 255, 255, 0.8);
   --text-size:        15px;
   --hover-color:      white;
-  --bkgd-color:       #37517e;
+  --bkgd-color:       #121427;
 }
 
 .distill-site-footer {
-  --text-color:       rgba(255, 255, 255, 0.9);
+  --text-color:        rgba(255, 255, 255, 0.8);
   --text-size:        15px;
   --hover-color:      white;
-  --bkgd-color:       #253655;
+  --bkgd-color:       #121427;
 }
 
 h1, h2, h3 {

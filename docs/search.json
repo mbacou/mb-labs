@@ -6,15 +6,15 @@
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-18T07:22:09+01:00"
+      "last_modified": "2021-10-18T10:01:51+01:00"
     },
     {
       "path": "index.html",
-      "title": "WA+ Model Visualization Playground",
-      "description": "A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations.\n",
+      "title": "Notebooks",
+      "description": "A series of interactive notebooks\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-18T07:22:11+01:00"
+      "last_modified": "2021-10-18T10:01:52+01:00"
     }
   ],
   "collections": ["posts/posts.json"]

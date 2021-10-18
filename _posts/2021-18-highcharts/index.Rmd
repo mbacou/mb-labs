@@ -8,9 +8,9 @@ author:
     url: https://linkedin/in/mbacou
 preview: resource-base.svg
 date: "`r Sys.Date()`"
+date_prefix: 2020-10-01
 output:
   distill::distill_article:
-    toc: true
     dev: svglite
     code_folding: true
     self_contained: false

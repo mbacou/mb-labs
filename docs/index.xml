@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
-    <title>WA+ Visualization</title>
-    <link>https://mbacou.github.io/2021-iwmi</link>
-    <atom:link href="https://mbacou.github.io/2021-iwmi/index.xml" rel="self" type="application/rss+xml"/>
-    <description>WA+ model visualization playground and projects
+    <title>BACOU, Melanie</title>
+    <link>https://mbacou.github.io/mb-labs</link>
+    <atom:link href="https://mbacou.github.io/mb-labs/index.xml" rel="self" type="application/rss+xml"/>
+    <description>My playground for consulting and data science projects
 </description>
     <image>
-      <title>WA+ Visualization</title>
-      <url>https://mbacou.github.io/2021-iwmi/www/favicon.png</url>
-      <link>https://mbacou.github.io/2021-iwmi</link>
+      <title>BACOU, Melanie</title>
+      <url>https://mbacou.github.io/mb-labs/www/logo.svg</url>
+      <link>https://mbacou.github.io/mb-labs</link>
     </image>
     <generator>Distill</generator>
     <lastBuildDate>Mon, 18 Oct 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Interactive SVG with D3.js</title>
       <dc:creator>BACOU, Melanie</dc:creator>
-      <link>https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg</link>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</link>
       <description>Part 1: add interactivity to existing WA sheets.</description>
-      <guid>https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg</guid>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
       <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg/../../www/svg/sheet_1.svg" medium="image" type="image/svg+xml"/>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
       <title>Custom Highcharts</title>
       <dc:creator>BACOU, Melanie</dc:creator>
-      <link>https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts</link>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-18-highcharts</link>
       <description>Part 2: build custom data-driven charts using Highcharts.js.</description>
-      <guid>https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts</guid>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-18-highcharts</guid>
       <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts/resource-base.svg" medium="image" type="image/svg+xml"/>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-18-highcharts/resource-base.svg" medium="image" type="image/svg+xml"/>
     </item>
   </channel>
 </rss>

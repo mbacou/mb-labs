@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
-    <loc>https://mbacou.github.io/2021-iwmi/about.html</loc>
+    <loc>https://mbacou.github.io/mb-labs/about.html</loc>
     <lastmod>2021-10-18T05:32:26+01:00</lastmod>
   </url>
   <url>
-    <loc>https://mbacou.github.io/2021-iwmi/</loc>
-    <lastmod>2021-10-18T07:06:44+01:00</lastmod>
+    <loc>https://mbacou.github.io/mb-labs/</loc>
+    <lastmod>2021-10-18T08:21:53+01:00</lastmod>
   </url>
   <url>
-    <loc>https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg/</loc>
-    <lastmod>2021-10-18T07:14:14+01:00</lastmod>
+    <loc>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/</loc>
+    <lastmod>2021-10-18T09:17:54+01:00</lastmod>
   </url>
   <url>
-    <loc>https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts/</loc>
-    <lastmod>2021-10-18T07:17:36+01:00</lastmod>
+    <loc>https://mbacou.github.io/mb-labs/posts/2021-18-highcharts/</loc>
+    <lastmod>2021-10-18T09:27:52+01:00</lastmod>
   </url>
 </urlset>

@@ -1,9 +1,11 @@
-name: 2021-iwmi
-title: WA+ Visualization
+name: mb-labs
+title: BACOU, Melanie
 description: |
-  WA+ model visualization playground and projects
-base_url: https://mbacou.github.io/2021-iwmi
-favicon: www/favicon.png
+  My playground for consulting and data science projects
+base_url: https://mbacou.github.io/mb-labs
+repository_url: https://github.com/mbacou/mb-labs
+creative_commons: CC BY
+favicon: www/logo.svg
 output_dir: "docs"
 theme: www/theme.css
 navbar:
@@ -11,12 +13,18 @@ navbar:
     image: www/logo.svg
     href: index.html
   search: false
-  source_url: https://github.com/mbacou/2021-iwmi
+  source_url: true
   right:
-    - text: "Home"
+    - text: Notebooks
       href: index.html
-    - text: "About"
+    - text: Portfolio
+      href: https://mbacou.github.io/portfolio
+    - text: About
       href: about.html
     - icon: fa fa-rss
       href: index.xml
-output: distill::distill_article
+output:
+  distill::distill_article:
+    css: www/theme.css
+    highlight: rstudio
+    toc: true
