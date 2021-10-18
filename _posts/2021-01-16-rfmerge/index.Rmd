@@ -7,6 +7,8 @@ author:
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
 date: 2020-01-16
+categories:
+  - risk modeling
 output:
   distill::distill_article:
     dev: png

@@ -7,8 +7,12 @@ author:
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
 date: 2020-10-01
+categories:
+  - imwi
+  - hydrology
 output:
   distill::distill_article:
+    toc: true
     dev: svglite
     code_folding: true
     self_contained: false

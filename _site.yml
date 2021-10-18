@@ -10,6 +10,10 @@ output_dir: "docs"
 theme: www/theme.css
 collections:
   posts:
+    categories: true
+    categories_metadata: true
+    authors_metadata: true
+    feed_items_max: 50
     disqus: mb-labs-general
     share: [twitter, linkedin]
     custom: _custom.html

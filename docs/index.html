@@ -1887,9 +1887,9 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
   /*-- ARTICLE METADATA --*/
   d-byline {
-    --heading-size:    0.6rem;
+    --heading-size:    0.8rem;
     --heading-color:   rgba(17, 17, 17, 0.5);
-    --body-size:       0.8rem;
+    --body-size:       0.9rem;
     --body-color:      rgba(17, 17, 17, 0.8);
   }
 
@@ -1926,6 +1926,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     --bkgd-color:       rgb(18, 20, 39);
   }
 
+  /*-- CUSTOM --*/
   h1, h2, h3, d-title h1 {
     font-weight: normal;
   }
@@ -1937,10 +1938,10 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   .d-appendix, d-byline {
     background-color: rgb(243, 243, 243);
   }
-  .d-title, summary {
+  .d-title {
     background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
   }
-  pre .sourceCode {
+  .sourceCode {
     background-color: rgba(243, 243, 243, 0.8);
     padding-bottom: 1em;
   }
@@ -2149,9 +2150,9 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
   /*-- ARTICLE METADATA --*/
   d-byline {
-    --heading-size:    0.6rem;
+    --heading-size:    0.8rem;
     --heading-color:   rgba(17, 17, 17, 0.5);
-    --body-size:       0.8rem;
+    --body-size:       0.9rem;
     --body-color:      rgba(17, 17, 17, 0.8);
   }
 
@@ -2188,6 +2189,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     --bkgd-color:       rgb(18, 20, 39);
   }
 
+  /*-- CUSTOM --*/
   h1, h2, h3, d-title h1 {
     font-weight: normal;
   }
@@ -2199,10 +2201,10 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   .d-appendix, d-byline {
     background-color: rgb(243, 243, 243);
   }
-  .d-title, summary {
+  .d-title {
     background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
   }
-  pre .sourceCode {
+  .sourceCode {
     background-color: rgba(243, 243, 243, 0.8);
     padding-bottom: 1em;
   }
@@ -2388,7 +2390,7 @@ function init_posts_list() {
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Notebooks">Notebooks</h1>
 <a href="posts/2021-10-12-highcharts/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<script class="post-metadata" type="text/json">{"categories":["imwi","hydrology"]}</script>
 <div class="metadata">
 <div class="publishedDate">Oct. 18, 2021</div>
 <div class="dt-authors">
@@ -2400,12 +2402,15 @@ function init_posts_list() {
 </div>
 <div class="description">
 <h2>Custom Highcharts</h2>
-<div class="dt-tags"></div>
+<div class="dt-tags">
+<div class="dt-tag">imwi</div>
+<div class="dt-tag">hydrology</div>
+</div>
 <p>Part 2: build custom data-driven charts using Highcharts.js (IWMI).</p>
 </div>
 </a>
 <a href="posts/2021-10-16-svg/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<script class="post-metadata" type="text/json">{"categories":["imwi","hydrology"]}</script>
 <div class="metadata">
 <div class="publishedDate">Oct. 1, 2020</div>
 <div class="dt-authors">
@@ -2417,12 +2422,15 @@ function init_posts_list() {
 </div>
 <div class="description">
 <h2>Interactive SVG with D3.js</h2>
-<div class="dt-tags"></div>
+<div class="dt-tags">
+<div class="dt-tag">imwi</div>
+<div class="dt-tag">hydrology</div>
+</div>
 <p>Part 1: add interactivity to existing WA sheets (IWMI).</p>
 </div>
 </a>
 <a href="posts/2021-01-16-rfmerge/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<script class="post-metadata" type="text/json">{"categories":["risk modeling"]}</script>
 <div class="metadata">
 <div class="publishedDate">Jan. 16, 2020</div>
 <div class="dt-authors">
@@ -2434,7 +2442,9 @@ function init_posts_list() {
 </div>
 <div class="description">
 <h2>Merge Ground and Satellite Observations with RFMerge</h2>
-<div class="dt-tags"></div>
+<div class="dt-tags">
+<div class="dt-tag">risk modeling</div>
+</div>
 <p>Recalibrate ERA5 hourly temperatures to CIMIS network ground observations.</p>
 </div>
 </a>
@@ -2442,9 +2452,10 @@ function init_posts_list() {
 <div class="posts-sidebar">
 <div><div class="sidebar-section custom">
   <h3>About</h3>
-  <p>This blog is a <a href="about.html">personal playground</a> of public R, Python, and JavaScript notebooks for statistical and geospatial analyses.
-  <br/></p>
+  <p>This blog is a <a href="about.html">personal playground</a> of public R, Python, and JavaScript notebooks for statistical and geospatial analyses.</p>
+</div>
 
+<div class="sidebar-section custom">
   <h3>Search</h3>
   <form action="https://duckduckgo.com/">
     <input type="text" name="q" placeholder="Search...">
@@ -2452,6 +2463,27 @@ function init_posts_list() {
     <!--<button type="submit">Search</button>-->
   </form>
 </div>
+</div>
+<div class="sidebar-section categories">
+<h3>Categories</h3>
+<ul>
+<li>
+<a href="#category:articles">articles</a>
+<span class="category-count">(3)</span>
+</li>
+<li>
+<a href="#category:hydrology">hydrology</a>
+<span class="category-count">(2)</span>
+</li>
+<li>
+<a href="#category:imwi">imwi</a>
+<span class="category-count">(2)</span>
+</li>
+<li>
+<a href="#category:risk_modeling">risk modeling</a>
+<span class="category-count">(1)</span>
+</li>
+</ul>
 </div>
 </div>
 <div class="posts-more">

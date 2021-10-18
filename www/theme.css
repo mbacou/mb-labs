@@ -34,9 +34,9 @@ html {
 
 /*-- ARTICLE METADATA --*/
 d-byline {
-  --heading-size:    0.6rem;
+  --heading-size:    0.8rem;
   --heading-color:   rgba(17, 17, 17, 0.5);
-  --body-size:       0.8rem;
+  --body-size:       0.9rem;
   --body-color:      rgba(17, 17, 17, 0.8);
 }
 
@@ -73,6 +73,7 @@ d-appendix {
   --bkgd-color:       rgb(18, 20, 39);
 }
 
+/*-- CUSTOM --*/
 h1, h2, h3, d-title h1 {
   font-weight: normal;
 }
@@ -84,10 +85,10 @@ h1, h2, h3, d-title h1 {
 .d-appendix, d-byline {
   background-color: rgb(243, 243, 243);
 }
-.d-title, summary {
+.d-title {
   background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
 }
-pre .sourceCode {
+.sourceCode {
   background-color: rgba(243, 243, 243, 0.8);
   padding-bottom: 1em;
 }
