@@ -1,0 +1,366 @@
+---
+title: WA+ Visualization Playground
+description: |
+  Prototype visuals and code snippets for IWMI Water Accounting+ model visualization.
+author:
+  - name: BACOU, Melanie
+    email: mel@mbacou.com
+    url: https://linkedin/in/mbacou
+    affiliation: IWMI
+    affiliation_url: https://iwmi.cgiar.org/
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    dev: svglite
+    code_folding: true
+    theme: www/theme.css
+    favicon: www/favicon.png
+    self_contained: false
+    extra_dependencies: !expr list(htmltools::htmlDependency("d3", "6.2.0", c(href="js/d3v6-6.2.0"), script="d3.min.js"))
+---
+
+```{r setup, include=FALSE}
+
+library(knitr)
+library(jsonlite)
+library(scales)
+library(stringr)
+library(data.table)
+library(highcharter)
+
+opts_chunk$set(res=220, pointsize=8)
+
+# Default color palette
+pal <- c(
+  primary="#253655", secondary="#37517e",
+  success="#2ed06e", info="#00b9ff", warning="#ffa600", danger="#c22e2e") %>%
+  alpha(.8)
+
+```
+
+
+This notebook is to explore multiple visualization schemes:
+
+1. **Interactive SVG**: add user interactivity to existing SVG (or simplified) designs using low-level [D3.js](https://d3js.org/) library
+2. **Graphviz**: redesign the WA+ sheets using [Graphviz](https://graphviz.org/) and provide interactivity with [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/)
+2. **Highcharts**: reshape WA+ model output to create standard treemaps using [Highcharts.js](https://www.highcharts.com/) charting library
+3. **Highcharts**: reshape WA+ model output to create steam graphs and/or network graphs
+4. **Leaflet**: create a 3D map of basin landscape with SVG annotations (arrows, etc.) using [leaflet.js](https://leafletjs.com/)
+
+The **D3.js** approach is the more flexible scheme but also the more difficult to implement.
+
+
+# Data Preparation
+
+To validate the different approaches we use sample model output and datasets provided by **Naga Valpuri** for Mali (Niger river basin) and Kenya (Mara basin). 
+
+```{r}
+
+data <- list(
+  ken = "../data/ken/hydroloop_results/csv",
+  mli = "../data/mli/csv_km3"
+) %>%
+  lapply(list.files, pattern="*.csv", recursive=TRUE, full.names=TRUE) %>%
+  lapply(data.table) %>%
+  rbindlist(idcol="iso3", use.names=TRUE, fill=TRUE) %>%
+  setnames("V1", "path")
+
+data[, 
+  file := basename(path)
+][, `:=`(
+  year = str_extract(file, "_[0-9]{4}") %>% str_sub(2,5) %>% as.integer(),
+  month = str_extract(file, "[0-9]{4}_[0-9]{1,2}") %>% str_sub(6,7) %>% as.integer()
+)] %>% setorder(iso3, year, month, na.last=TRUE)
+
+data[iso3=="ken", .(file, year, month)][c(1:5, (.N-4):.N)] %>% 
+  kable(caption="Kenya - List of output files (top and last 5)")
+data[iso3=="mli", .(file, year, month)] %>% 
+  kable(caption="Mali - List of output files")
+
+```
+
+In particular we have yearly (2 seasons) model steps for Mali and monthly steps for Kenya that are further aggregated to seasonal and yearly time spans (by variable), as well as monthly time-series. In Mali only **Sheet 1** was produced (Resource Base).
+
+Let's load a sample output for Kenya for the year 2017.
+
+```{r}
+
+f <- "sheet1_2017.csv"
+ken <- data[iso3=="ken" & file==f][1, fread(path)]
+ken %>% 
+  kable(caption=f)
+
+```
+
+This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLASS`. Units are in **km³/year**.
+
+And monthly time-series of Incremental ET by land-use classes:
+
+```{r}
+
+f <- "sheet1_basin_etincr_monthly.csv"
+ken.ts <- data[iso3=="ken" & file==f][1, fread(path)]
+ken.ts[c(1:5, (.N-4):.N)] %>% 
+  kable(caption=f)
+
+```
+
+We make the yearly dataset available in the client as a JSON array named `data`. We also pass a default color palette `pal`.
+
+```{r, results="asis"}
+
+cat(sprintf("
+  <script> 
+  var data = %s;
+  var pal = %s;
+  </script>", toJSON(ken), toJSON(pal)))
+
+```
+
+
+
+# Interactive SVG
+
+In this section we work off the existing SVG designs, using `D3.js` library to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).
+
+There are multiple SVG template sheets provided in the Kenya code repository. They are shown below.
+
+```{r, out.width="25%", fig.width=2, fig.show="hold"}
+
+svg <- "../data/ken/scripts/WAsheets/template/svg" %>%
+  list.files(pattern="*.svg", full.names=TRUE)
+
+include_graphics(svg[-c(1:2, 6)])
+
+```
+
+We focus first on the Resource Base sheet. Note that these sheets were created in Inkscape using **SVG 1.1** specifications. They are complex designs and not optimized for rendering in a browser, so we start by testing a few simple interactions.
+
+Below we load the **Resource Base sheet** using `D3.js` and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read and rendered in the browser as expected.
+
+Note that `d3.js` needs to be provided as an external dependency to this notebook.
+
+Dummy SVG widget using sample Kenya data.
+
+<div id="d3ex1" class="l-body" height="auto"></div>
+
+```{js}
+
+// Keep only positive variables
+var dd = data.filter((d) => (d.VALUE > 0));
+
+let hw = 500;
+let box = 20;
+
+var svg = d3v6.select("#d3ex1")
+  .append("svg")
+  .attr("width", hw)
+  .attr("height", 340); 
+
+svg  
+  .selectAll("rect")
+  .data(dd)
+  .enter()
+  .append("rect")
+  .attr("x", 5)
+  .attr("y", (_, i) => (i * (box+5)+5) )
+  .attr("width", (d) => (d.VALUE * 500/14) )
+  .attr("height", box)
+  .attr("fill", pal[1])
+  .on("mouseover", handleMouseOver)
+  .on("mouseout", handleMouseOut);
+
+svg
+  .selectAll("text")
+  .data(dd)
+  .enter()
+  .append("text")
+  .attr("x", 5)
+  .attr("y", (_, i) => (i * (box+5)+15) )
+  .attr("fill", "black")
+  .text((d) => (d.VARIABLE));
+
+// Test interactions
+function handleMouseOver(d, i) {
+d3v6.select(this)
+.attr("fill", pal[3])
+};
+
+function handleMouseOut(d, i) {
+d3v6.select(this)
+.attr("fill", pal[1])
+};
+
+// Test transformations
+var tt = svg.selectAll("text");
+setTimeout(() => {
+tt.move(0, 10)
+}, 2000);
+
+d3v6.selection.prototype.move = function(x, y) {
+this.attr("transform", "translate(" + x + "," + y + ")");
+return this;
+};
+
+
+```
+
+Original SVG design with data bindings.
+
+<div id="d3ex2" class="l-body"></div>
+
+```{js}
+
+var div = d3v6.select("#d3ex2");
+
+// Append external design
+d3v6.xml("svg/sheet_1.svg")
+  .then(d => {
+  div.node().append(d.documentElement);
+  });
+
+var svg = div.select("svg");
+
+svg
+  .selectAll("text")
+  .data(data)
+  .enter()
+  .text((d) => (d.VALUE) );
+
+```
+
+Now that we have the SVG DOM loaded, we can enumerate its elements, in particular we can list all data-driven elements with default value "NaN".
+
+```{js, eval=FALSE}
+
+setTimeout(() => {
+svg.move(0, 10)
+}, 2000);
+
+```
+
+
+# Graphviz
+
+# Data-driven Treemaps
+
+First we define a default theme for Highcharts objects.
+
+```{r}
+
+hc_theme_iwmi <- function(
+  hc,
+  title = NULL,
+  subtitle = NULL,
+  label = NULL,
+  x = NULL,
+  y = NULL,
+  exporting = TRUE,
+  credits = FALSE,
+  ...) {
+  
+  thm <- hc_theme(
+    
+    chart = list(
+      backgroundColor = "transparent"
+    ),
+    # Don't use semantic colors
+    colors = unname(pal),
+    title = list(
+      style = list(color="#333", fontSize="16px"),
+      align = "left"
+    ),
+    subtitle = list(
+      style = list(color='#777', fontSize="13px"),
+      align = "left"
+    ),
+    legend = list(
+      enabled = TRUE,
+      itemStyle = list(color="#777"),
+      verticalAlign = "top",
+      align = "left",
+      itemHoverStyle = list(color="#333")
+    ),
+    xAxis = list(
+      title = list(enabled=FALSE),
+      dateTimeLabelFormats = list(day='%e %b', week='%e %b %y', month='%b-%y', year='%Y'))
+    ,
+    yAxis = list(
+      title = list(enabled=FALSE)
+    ),
+    tooltip = list(
+      enabled = TRUE, shared = TRUE, split = FALSE,
+      pointFormat = "{series.name}: <strong>{point.y:,.1f}</strong><br/>",
+      xDateFormat = "%Y-%m-%d",
+      dateTimeLabelFormats = "%Y-%m-%d",
+      valueDecimals = 2
+    ),
+    plotOptions = list(
+      series = list(
+        opacity = .8,
+        connectNulls = TRUE,
+        marker = list(enabled=NA, radius=3, enabledThreshold=8),
+        dataLabels = list(enabled=NA, style=list(fontSize="11px"))
+      ),
+      heatmap = list(
+        marker = list(enabled=TRUE, lineWidth=6, lineColor="#fff"),
+        dataLabels = list(enabled=TRUE, pointFormat="{point.value:,.0f}")
+      )
+    ),
+    exporting = list(
+      enabled = exporting,
+      csv = list(dateFormat="%Y-%m-%d"),
+      buttons = list(contextButton=list(
+        symbolSize = 12,
+        symbolFill = "#fff",
+        symbolStroke = "#777",
+        symbolStrokeWidth = 1.3,
+        menuItems = c("printChart", "downloadPNG", "downloadSVG", "downloadCSV")))
+    ),
+    credits = list(
+      enabled = credits,
+      position = list(align="left"),
+      href = "https://iwni.cgiar.org/",
+      style = list(fontSize="11px")
+    ),
+    ...
+  )
+  
+  p  = hc_add_theme(hc, thm) %>%
+    hc_title(text = title) %>%
+    hc_subtitle(text = subtitle)
+  
+  if(length(label)>0) p = p %>%
+    hc_annotations(list(labels = list(
+      list(text=label, useHTML=TRUE, shape="rect", point=list(x=x, y=y)))))
+  
+  return(p)
+}
+
+```
+
+A simple treemap.
+
+
+```{r, fig.cap="Sample Treemap"}
+
+# Add shaded colors
+ken[, COLOR := abs(VALUE)] %>%
+  data_to_hierarchical(c(CLASS, SUBCLASS, VARIABLE), COLOR, pal[c(2,4,3)]) %>%
+  hchart(
+    type = "treemap",
+    layoutAlgorithm = "squarified",
+    dataLabels = list(enabled=T, format="{point.name}"),
+    tooltip = list(pointFormat="
+      {point.parent}<br/>{point.name}<br/>Value: {point.value:,.2f}")
+  ) %>%
+  hc_theme_iwmi("Resource Base", "Kenya 2017") %>%
+  hc_exporting(enabled=TRUE)
+
+```
+
+
+# Data-driven Steamgraphs
+
+
