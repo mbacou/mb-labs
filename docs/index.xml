@@ -17,7 +17,7 @@
       <title>Interactive SVG with D3.js</title>
       <dc:creator>BACOU, Melanie</dc:creator>
       <link>https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg</link>
-      <description>Prototype visuals and code snippets for IWMI Water Accounting+ model visualization.</description>
+      <description>Part 1: add interactivity to existing WA sheets.</description>
       <guid>https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg</guid>
       <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/2021-iwmi/posts/2021-10-16-svg/../../www/svg/sheet_1.svg" medium="image" type="image/svg+xml"/>
@@ -26,9 +26,10 @@
       <title>Custom Highcharts</title>
       <dc:creator>BACOU, Melanie</dc:creator>
       <link>https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts</link>
-      <description>Prototype visuals and code snippets for IWMI Water Accounting+ model visualization.</description>
+      <description>Part 2: build custom data-driven charts using Highcharts.js.</description>
       <guid>https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts</guid>
       <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/2021-iwmi/posts/2021-18-highcharts/resource-base.svg" medium="image" type="image/svg+xml"/>
     </item>
   </channel>
 </rss>

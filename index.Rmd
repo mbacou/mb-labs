@@ -1,7 +1,8 @@
 ---
 title: "WA+ Model Visualization Playground"
+description: |
+  A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations.
 site: distill::distill_website
 listing: posts
 ---
 
-A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations.

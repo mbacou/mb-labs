@@ -1,7 +1,7 @@
 ---
 title: Interactive SVG with D3.js
 description: |
-  Prototype visuals and code snippets for IWMI Water Accounting+ model visualization.
+  Part 1: add interactivity to existing WA sheets.
 author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
@@ -119,11 +119,11 @@ cat(sprintf("
 
 In this section we work off the existing SVG designs, using `D3.js` library to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).
 
-There are multiple SVG template sheets provided in the Kenya code repository. They are shown below.
+There are multiple SVG template sheets provided in the Kenya code repository (under `./scripts/WAsheets/template/svg`). They are shown below.
 
 ```{r, out.width="25%", fig.width=2, fig.show="hold"}
 
-svg <- "../../_data/ken/scripts/WAsheets/template/svg" %>%
+svg <- "../../www/svg" %>%
   list.files(pattern="*.svg", full.names=TRUE)
 
 include_graphics(svg[-c(1:2, 6)])

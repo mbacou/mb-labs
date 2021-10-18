@@ -1,11 +1,12 @@
 ---
 title: Custom Highcharts
 description: |
-  Prototype visuals and code snippets for IWMI Water Accounting+ model visualization.
+  Part 2: build custom data-driven charts using Highcharts.js.
 author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
+preview: resource-base.svg
 date: "`r Sys.Date()`"
 output:
   distill::distill_article:
@@ -186,10 +187,10 @@ hc_theme_iwmi <- function(
 
 ```
 
-A simple treemap.
+A barebone treemap to start with.
 
 
-```{r, fig.cap="Sample Treemap"}
+```{r, fig.cap="Sample Treemap", preview=TRUE}
 
 # Add shaded colors
 ken[, COLOR := abs(VALUE)] %>%

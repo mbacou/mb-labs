@@ -89,6 +89,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>WA+ Visualization: WA+ Model Visualization Playground</title>
 
+  <meta property="description" itemprop="description" content="A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations."/>
 
   <link rel="icon" type="image/png" href="www/favicon.png"/>
 
@@ -96,18 +97,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="WA+ Visualization: WA+ Model Visualization Playground"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="WA+ Visualization"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="WA+ Visualization: WA+ Model Visualization Playground"/>
+  <meta property="twitter:description" content="A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["WA+ Model Visualization Playground"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["WA+ Model Visualization Playground"]},{"type":"character","attributes":{},"value":["A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations.\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1924,6 +1927,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --bkgd-color:       #253655;
   }
 
+  h1, h2, h3 {
+    font-weight: normal;
+  }
+  d-title h1 {
+    font-weight: normal;
+  }
   .distill-site-footer {
     margin-top: 1em;
     padding-top: 1em;
@@ -2106,7 +2115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"WA+ Model Visualization Playground","authors":[]}
+{"title":"WA+ Model Visualization Playground","description":"A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2284,7 +2293,7 @@ function init_posts_list() {
 <div class="description">
 <h2>Interactive SVG with D3.js</h2>
 <div class="dt-tags"></div>
-<p>Prototype visuals and code snippets for IWMI Water Accounting+ model visualization.</p>
+<p>Part 1: add interactivity to existing WA sheets.</p>
 </div>
 </a>
 <a href="posts/2021-18-highcharts/" class="post-preview">
@@ -2296,12 +2305,12 @@ function init_posts_list() {
 </div>
 </div>
 <div class="thumbnail">
-<img/>
+<img src="posts/2021-18-highcharts/resource-base.svg"/>
 </div>
 <div class="description">
 <h2>Custom Highcharts</h2>
 <div class="dt-tags"></div>
-<p>Prototype visuals and code snippets for IWMI Water Accounting+ model visualization.</p>
+<p>Part 2: build custom data-driven charts using Highcharts.js.</p>
 </div>
 </a>
 </div>
@@ -2315,12 +2324,11 @@ function init_posts_list() {
 <h1>WA+ Model Visualization Playground</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations.</p></p>
 </div>
 
 
 <div class="d-article">
-<p>A series of interactive notebooks to explore multiple visualization schemes for WA+ model simulations.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
