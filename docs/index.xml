@@ -14,22 +14,31 @@
     <generator>Distill</generator>
     <lastBuildDate>Mon, 18 Oct 2021 00:00:00 +0000</lastBuildDate>
     <item>
+      <title>Custom Highcharts</title>
+      <dc:creator>BACOU, Melanie</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</link>
+      <description>Part 2: build custom data-driven charts using Highcharts.js (IWMI).</description>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</guid>
+      <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/resource-base.svg" medium="image" type="image/svg+xml"/>
+    </item>
+    <item>
       <title>Interactive SVG with D3.js</title>
       <dc:creator>BACOU, Melanie</dc:creator>
       <link>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</link>
-      <description>Part 1: add interactivity to existing WA sheets.</description>
+      <description>Part 1: add interactivity to existing WA sheets (IWMI).</description>
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
-      <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
-      <title>Custom Highcharts</title>
+      <title>Merge Ground and Satellite Observations with RFMerge</title>
       <dc:creator>BACOU, Melanie</dc:creator>
-      <link>https://mbacou.github.io/mb-labs/posts/2021-18-highcharts</link>
-      <description>Part 2: build custom data-driven charts using Highcharts.js.</description>
-      <guid>https://mbacou.github.io/mb-labs/posts/2021-18-highcharts</guid>
-      <pubDate>Mon, 18 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-18-highcharts/resource-base.svg" medium="image" type="image/svg+xml"/>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge</link>
+      <description>Recalibrate ERA5 hourly temperatures to CIMIS network ground observations.</description>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge</guid>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge/index_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
   </channel>
 </rss>

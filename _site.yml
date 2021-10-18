@@ -8,6 +8,11 @@ creative_commons: CC BY
 favicon: www/logo.svg
 output_dir: "docs"
 theme: www/theme.css
+collections:
+  posts:
+    disqus: mb-labs-general
+    share: [twitter, linkedin]
+    custom: _custom.html
 navbar:
   logo:
     image: www/logo.svg

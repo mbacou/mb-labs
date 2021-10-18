@@ -1,13 +1,12 @@
 ---
 title: Interactive SVG with D3.js
 description: |
-  Part 1: add interactivity to existing WA sheets.
+  Part 1: add interactivity to existing WA sheets (IWMI).
 author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
-date: "`r Sys.Date()`"
-date_prefix: 2020-10-01
+date: 2020-10-01
 output:
   distill::distill_article:
     dev: svglite
@@ -25,36 +24,31 @@ library(stringr)
 library(data.table)
 
 opts_chunk$set(res=220, pointsize=8)
-
-# Default color palette
-pal <- c(
-  primary="#253655", secondary="#37517e",
-  success="#2ed06e", info="#008ec0", warning="#ffa600", danger="#c22e2e") %>%
-  alpha(.8)
+pal <- readRDS("../../_assets/palette.rds")
 
 ```
 
 
 This notebook is to explore multiple visualization schemes:
 
-1. **Interactive SVG**: add user interactivity to existing SVG (or simplified) designs using low-level [D3.js](https://d3js.org/) library
+1. **Interactive SVG**: add user interactivity to existing SVG sheets (or simplified) designs using low-level [D3.js](https://d3js.org/) JavaScript library
 2. **Graphviz**: redesign the WA+ sheets using [Graphviz](https://graphviz.org/) and provide interactivity with [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/)
-2. **Highcharts**: reshape WA+ model output to create standard treemaps using [Highcharts.js](https://www.highcharts.com/) charting library
-3. **Highcharts**: reshape WA+ model output to create steam graphs and/or network graphs
-4. **Leaflet**: create a 3D map of basin landscape with SVG annotations (arrows, etc.) using [leaflet.js](https://leafletjs.com/)
+2. **Highcharts**: reshape WA+ model output to create more standard treemaps using [Highcharts.js](https://www.highcharts.com/) charting library
+3. **Highcharts**: reshape WA+ model output to create custom steam graphs and/or network graphs
+4. **Leaflet**: create a 3D map of basin landscape with SVG annotation layers (arrows, etc.) using [leaflet.js](https://leafletjs.com/)
 
-The **D3.js** approach is the more flexible scheme but also the more difficult to implement. Other approaches will be developed in separate notebooks.
+The **D3.js** approach is the more flexible but also the more difficult to implement (success is uncertain). Other approaches will be developed in separate notebooks.
 
 
 # Data Preparation
 
-To validate the different approaches we use sample model output and datasets provided by **Naga Valpuri** for Mali (Niger river basin) and Kenya (Mara basin). 
+To validate the different approaches we use sample output datasets provided by **Naga Valpuri** for Mali (Niger river basin) and Kenya (Mara basin). All hydrological models are written in Python and published to GitHub (e.g. [Mali notebooks](https://github.com/wateraccounting/WAPORWA)).
 
 ```{r}
 
 data <- list(
-  ken = "../../_data/ken/hydroloop_results/csv",
-  mli = "../../_data/mli/csv_km3"
+  ken = "~/Projects/2021-iwmi/data/ken/hydroloop_results/csv",
+  mli = "~/Projects/2021-iwmi/data/mli/csv_km3"
 ) %>%
   lapply(list.files, pattern="*.csv", recursive=TRUE, full.names=TRUE) %>%
   lapply(data.table) %>%
@@ -101,7 +95,7 @@ ken.ts[c(1:5, (.N-4):.N)] %>%
 
 ```
 
-We make the yearly dataset available in the client as a JSON array named `data`. We also pass a default color palette `pal`.
+We make the yearly dataset available in the client as a JSON array named `data`. We also pass a default color palette `pal` for convenience.
 
 ```{r, results="asis"}
 
@@ -114,29 +108,30 @@ cat(sprintf("
 ```
 
 
-
 # Interactive SVG
 
-In this section we work off the existing SVG designs, using `D3.js` library to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).
+In this section we work off the existing SVG designs, using `D3.js` API to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).
 
 There are multiple SVG template sheets provided in the Kenya code repository (under `./scripts/WAsheets/template/svg`). They are shown below.
 
-```{r, out.width="25%", fig.width=2, fig.show="hold"}
+```{r, out.width="33%", fig.width=2, fig.show="hold"}
 
 svg <- "../../www/svg" %>%
   list.files(pattern="*.svg", full.names=TRUE)
 
-include_graphics(svg[-c(1:2, 6)])
+include_graphics(svg[-c(1:2, 6, 8)])
 
 ```
 
-We focus first on the Resource Base sheet. Note that these sheets were created in Inkscape using **SVG 1.1** specifications. They are complex designs and not optimized for rendering in a browser, so we start by testing a few simple interactions.
+These sheets incorporate a quantity of domain-specific knowledge, they are used to both teach and communicate about the WA+ approach and simulation results. They are produced in the final step of the analysis (using vector graphic templates), typically after the water accounts have been aggregated to a seasonal or yearly time span. The process is somewhat (but not entirely automated, e.g. the analyst can decide to add or hide elements).
 
-Below we load the **Resource Base sheet** using `D3.js` and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read and rendered in the browser as expected.
+We focus first on the Resource Base sheet. Note that the original templates were created in Inkscape with **SVG 1.1** specifications. They are professional printable designs and not optimized for rendering in a browser, so we start by testing whether we can interact and modify these designs using D3.
 
-Note that `d3.js` needs to be provided as an external dependency to this notebook.
+Below we load the **Resource Base sheet** and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read and rendered in the browser as expected.
 
-Dummy SVG widget using sample Kenya data.
+Note that `d3.js` needs to be provided as an external dependency to this notebook (see source code).
+
+Dummy SVG widget using sample Kenya data for 2017.
 
 <div id="d3ex1" class="l-body" height="auto"></div>
 

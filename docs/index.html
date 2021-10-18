@@ -1873,11 +1873,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     --aside-size:      12px;
     --fig-cap-size:    13px;
     /*-- Main font colors --*/
-    --title-color:     #121427;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    --title-color:     rgba(17, 17, 17, 0.9);
+    --header-color:    rgba(17, 17, 17, 0.8);
+    --body-color:      rgba(17, 17, 17, 1.0);
+    --aside-color:     rgba(17, 17, 17, 0.6);
+    --fig-cap-color:   rgba(17, 17, 17, 0.6);
     /*-- Specify custom fonts ~~~ must be imported above   --*/
     --heading-font:    "Roboto Condensed", serif;
     --mono-font:       monospace;
@@ -1888,24 +1888,24 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   /*-- ARTICLE METADATA --*/
   d-byline {
     --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
+    --heading-color:   rgba(17, 17, 17, 0.5);
     --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(17, 17, 17, 0.8);
   }
 
   /*-- ARTICLE TABLE OF CONTENTS --*/
   .d-contents {
     --heading-size:    18px;
     --contents-size:   13px;
-    --body-color:      rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(17, 17, 17, 0.8);
   }
 
   /*-- ARTICLE APPENDIX --*/
   d-appendix {
     --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
+    --heading-color:   rgba(17, 17, 17, 0.65);
     --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
+    --text-color:      rgba(17, 17, 17, 0.5);
   }
 
   /*-- WEBSITE HEADER + FOOTER --*/
@@ -1913,32 +1913,40 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
   .distill-site-header {
     --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-color:       rgb(243, 243, 243);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #121427;
+    --bkgd-color:       rgb(18, 20, 39);
   }
 
   .distill-site-footer {
-    --text-color:        rgba(255, 255, 255, 0.8);
+    --text-color:       rgb(243, 243, 243);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #121427;
+    --bkgd-color:       rgb(18, 20, 39);
   }
 
-  h1, h2, h3 {
-    font-weight: normal;
-  }
-  d-title h1 {
+  h1, h2, h3, d-title h1 {
     font-weight: normal;
   }
   .distill-site-footer {
-    margin-top: 1em;
+    margin-top: unset;
     padding-top: 1em;
     padding-bottom: unset;
   }
-
-  </style>
+  .d-appendix, d-byline {
+    background-color: rgb(243, 243, 243);
+  }
+  .d-title, summary {
+    background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
+  }
+  pre .sourceCode {
+    background-color: rgba(243, 243, 243, 0.8);
+    padding-bottom: 1em;
+  }
+  d-appendix .citation-appendix, .d-appendix .citation-appendix {
+    background: rgb(255, 255, 255);
+  }</style>
   <style type="text/css">
   /* base style */
 
@@ -2127,11 +2135,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
     --aside-size:      12px;
     --fig-cap-size:    13px;
     /*-- Main font colors --*/
-    --title-color:     #121427;
-    --header-color:    rgba(0, 0, 0, 0.8);
-    --body-color:      rgba(0, 0, 0, 0.8);
-    --aside-color:     rgba(0, 0, 0, 0.6);
-    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    --title-color:     rgba(17, 17, 17, 0.9);
+    --header-color:    rgba(17, 17, 17, 0.8);
+    --body-color:      rgba(17, 17, 17, 1.0);
+    --aside-color:     rgba(17, 17, 17, 0.6);
+    --fig-cap-color:   rgba(17, 17, 17, 0.6);
     /*-- Specify custom fonts ~~~ must be imported above   --*/
     --heading-font:    "Roboto Condensed", serif;
     --mono-font:       monospace;
@@ -2142,24 +2150,24 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   /*-- ARTICLE METADATA --*/
   d-byline {
     --heading-size:    0.6rem;
-    --heading-color:   rgba(0, 0, 0, 0.5);
+    --heading-color:   rgba(17, 17, 17, 0.5);
     --body-size:       0.8rem;
-    --body-color:      rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(17, 17, 17, 0.8);
   }
 
   /*-- ARTICLE TABLE OF CONTENTS --*/
   .d-contents {
     --heading-size:    18px;
     --contents-size:   13px;
-    --body-color:      rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(17, 17, 17, 0.8);
   }
 
   /*-- ARTICLE APPENDIX --*/
   d-appendix {
     --heading-size:    15px;
-    --heading-color:   rgba(0, 0, 0, 0.65);
+    --heading-color:   rgba(17, 17, 17, 0.65);
     --text-size:       0.8em;
-    --text-color:      rgba(0, 0, 0, 0.5);
+    --text-color:      rgba(17, 17, 17, 0.5);
   }
 
   /*-- WEBSITE HEADER + FOOTER --*/
@@ -2167,32 +2175,40 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
   .distill-site-header {
     --title-size:       18px;
-    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-color:       rgb(243, 243, 243);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #121427;
+    --bkgd-color:       rgb(18, 20, 39);
   }
 
   .distill-site-footer {
-    --text-color:        rgba(255, 255, 255, 0.8);
+    --text-color:       rgb(243, 243, 243);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #121427;
+    --bkgd-color:       rgb(18, 20, 39);
   }
 
-  h1, h2, h3 {
-    font-weight: normal;
-  }
-  d-title h1 {
+  h1, h2, h3, d-title h1 {
     font-weight: normal;
   }
   .distill-site-footer {
-    margin-top: 1em;
+    margin-top: unset;
     padding-top: 1em;
     padding-bottom: unset;
   }
-
-
+  .d-appendix, d-byline {
+    background-color: rgb(243, 243, 243);
+  }
+  .d-title, summary {
+    background: linear-gradient(180deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
+  }
+  pre .sourceCode {
+    background-color: rgba(243, 243, 243, 0.8);
+    padding-bottom: 1em;
+  }
+  d-appendix .citation-appendix, .d-appendix .citation-appendix {
+    background: rgb(255, 255, 255);
+  }
 
   </style>
   <!--/radix_placeholder_site_in_header-->
@@ -2368,13 +2384,30 @@ function init_posts_list() {
 
 
 
-<div class="posts-container posts-apply-limit l-page">
+<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Notebooks">Notebooks</h1>
-<a href="posts/2021-10-16-svg/" class="post-preview">
+<a href="posts/2021-10-12-highcharts/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
 <div class="publishedDate">Oct. 18, 2021</div>
+<div class="dt-authors">
+<div class="dt-author">BACOU, Melanie</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2021-10-12-highcharts/resource-base.svg"/>
+</div>
+<div class="description">
+<h2>Custom Highcharts</h2>
+<div class="dt-tags"></div>
+<p>Part 2: build custom data-driven charts using Highcharts.js (IWMI).</p>
+</div>
+</a>
+<a href="posts/2021-10-16-svg/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":[]}</script>
+<div class="metadata">
+<div class="publishedDate">Oct. 1, 2020</div>
 <div class="dt-authors">
 <div class="dt-author">BACOU, Melanie</div>
 </div>
@@ -2385,26 +2418,41 @@ function init_posts_list() {
 <div class="description">
 <h2>Interactive SVG with D3.js</h2>
 <div class="dt-tags"></div>
-<p>Part 1: add interactivity to existing WA sheets.</p>
+<p>Part 1: add interactivity to existing WA sheets (IWMI).</p>
 </div>
 </a>
-<a href="posts/2021-18-highcharts/" class="post-preview">
+<a href="posts/2021-01-16-rfmerge/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":[]}</script>
 <div class="metadata">
-<div class="publishedDate">Oct. 18, 2021</div>
+<div class="publishedDate">Jan. 16, 2020</div>
 <div class="dt-authors">
 <div class="dt-author">BACOU, Melanie</div>
 </div>
 </div>
 <div class="thumbnail">
-<img src="posts/2021-18-highcharts/resource-base.svg"/>
+<img src="posts/2021-01-16-rfmerge/index_files/figure-html5/unnamed-chunk-2-1.png"/>
 </div>
 <div class="description">
-<h2>Custom Highcharts</h2>
+<h2>Merge Ground and Satellite Observations with RFMerge</h2>
 <div class="dt-tags"></div>
-<p>Part 2: build custom data-driven charts using Highcharts.js.</p>
+<p>Recalibrate ERA5 hourly temperatures to CIMIS network ground observations.</p>
 </div>
 </a>
+</div>
+<div class="posts-sidebar">
+<div><div class="sidebar-section custom">
+  <h3>About</h3>
+  <p>This blog is a <a href="about.html">personal playground</a> of public R, Python, and JavaScript notebooks for statistical and geospatial analyses.
+  <br/></p>
+
+  <h3>Search</h3>
+  <form action="https://duckduckgo.com/">
+    <input type="text" name="q" placeholder="Search...">
+    <input type="hidden" name="sites" value="https://mbacou.github.io/mb-labs/">
+    <!--<button type="submit">Search</button>-->
+  </form>
+</div>
+</div>
 </div>
 <div class="posts-more">
 <a href="#">More articles &raquo;</a>
