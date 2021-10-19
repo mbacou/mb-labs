@@ -6,11 +6,12 @@ author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
-date: 2020-01-16
+date: 2021-01-16
 categories:
   - risk modeling
 output:
   distill::distill_article:
+    toc: true
     dev: png
     code_folding: false
     self_contained: false
@@ -378,7 +379,8 @@ era <- brick("./out/ERA5_2m_temperature_2017.grd")
 era <- raster(era, 1)
 
 tmap_mode("view")
-tm_shape(era) + tm_raster(title="ERA5-LAND<br/>Temperature<br/>2020-02-01 00:00<br/>°C", alpha=.6) +
+tm_shape(era) + 
+  tm_raster(title="ERA5-LAND<br/>Temperature<br/>2020-02-01 00:00<br/>°C", alpha=.6) +
   tm_shape(stations) + tm_dots("black", title="CIMIS WS") + 
   tm_shape(pts) + tm_dots("blue", title="OLAM Site") + 
   tm_shape(pts[pts$loc_id %in% c(25, 82, 83), ]) + 

@@ -34,7 +34,7 @@
       <category>imwi</category>
       <category>hydrology</category>
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
@@ -44,8 +44,18 @@
       <description>Recalibrate ERA5 hourly temperatures to CIMIS network ground observations.</description>
       <category>risk modeling</category>
       <guid>https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge</guid>
-      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge/index_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="960"/>
+    </item>
+    <item>
+      <title>ERA5-LAND Temperature Validation (California)</title>
+      <dc:creator>BACOU, Melanie</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca</link>
+      <description>Can we justify winter Y2017 corrections to ERA5-LAND temperature grids over central California?</description>
+      <category>risk modeling</category>
+      <guid>https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca</guid>
+      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca/index_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="1152"/>
     </item>
   </channel>
 </rss>
