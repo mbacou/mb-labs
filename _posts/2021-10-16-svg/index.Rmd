@@ -163,7 +163,7 @@ let box = 20;
 var svg = d3.select("#d3ex1")
   .append("svg")
   .attr("width", hw)
-  .attr("height", hw*0.8); 
+  .attr("height", box*18); 
 
 svg  
   .selectAll("rect")
@@ -174,7 +174,7 @@ svg
   .attr("y", (_, i) => (i * (box+5)+5) )
   .attr("width", (d) => (Math.abs(d.VALUE) * 500/14) )
   .attr("height", box)
-  .attr("fill", pal[1])
+  .attr("fill", pal[3])
   .on("mouseover", handleMouseOver)
   .on("mouseout", handleMouseOut);
 
@@ -186,21 +186,21 @@ svg
   .attr("x", 10)
   .attr("y", (_, i) => (i * (box+5)+20) )
   .style("fill", "black")
-  .style("font-size", ".9em")
+  .style("font-size", ".8em")
   .text((d) => (d.SUBCLASS + " - " + d.VARIABLE + ": " 
   + d.VALUE.toFixed(2) + " km³/year"));
 
 // Test interactions
 function handleMouseOver(d, i) {
   d3.select(this)
-  .style("fill", pal[3])
-  .move(2, -2)
+  .style("fill", pal[4])
+  .move(1, 0)
 };
 
 function handleMouseOut(d, i) {
   d3.select(this)
-  .style("fill", pal[1])
-  .move(-2, 2)
+  .style("fill", pal[3])
+  .move(-1, 0)
 };
 
 d3.selection.prototype.move = function(x, y) {

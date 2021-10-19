@@ -6,7 +6,7 @@
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-19T18:24:15+01:00"
+      "last_modified": "2021-10-19T18:30:30+01:00"
     },
     {
       "path": "index.html",
@@ -14,7 +14,7 @@
       "description": "A series of interactive notebooks\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-19T18:24:16+01:00"
+      "last_modified": "2021-10-19T18:30:31+01:00"
     }
   ],
   "collections": ["posts/posts.json"]
