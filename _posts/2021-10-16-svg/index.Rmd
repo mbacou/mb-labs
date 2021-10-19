@@ -18,10 +18,9 @@ output:
     dev: svglite
     code_folding: true
     self_contained: false
-    extra_dependencies: !expr list(htmltools::htmlDependency("d3", "6.2.0", c(href="../../www/js/d3v6-6.2.0"), script="d3.min.js"))
 ---
 
-```{r setup, include=FALSE}
+```{r setup}
 
 library(knitr)
 library(jsonlite)
@@ -105,7 +104,8 @@ We make the yearly dataset available in the client as a JSON array named `data`.
 
 ```{r, results="asis"}
 
-cat(sprintf("
+cat(
+  sprintf("
   <script> 
   var data = %s;
   var pal = %s;
@@ -124,7 +124,6 @@ There are multiple SVG template sheets provided in the Kenya code repository (un
 
 svg <- "../../www/svg" %>%
   list.files(pattern="*.svg", full.names=TRUE)
-
 include_graphics(svg[-c(1:2, 6, 8)])
 
 ```
@@ -133,26 +132,38 @@ These sheets incorporate a quantity of domain-specific knowledge, they are used 
 
 Note that the original templates were created in Inkscape with **SVG 1.1** specifications. They are professional printable designs and not optimized for rendering in a browser, so we start by testing whether we can interact and modify these designs using D3. We focus on the Resource Base sheet first. 
 
+> <u>Note</u>: Inkscape provides a templating system that allows merging a SVG file (with template fields declared in the form `%VAR_name%` with a CSV data file to batch generate PNG or PDF documents. That system is not limited to merging text labels, colors and sizes can also be read in from an external CSV source[^ink].
+
+[^ink]: Refer to [inkscape_merge](https://github.com/borgand/inkscape_merge) tool.
+
+
 Below we load the sheet and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read and rendered in the browser as expected.
 
-Note that `d3.js` needs to be provided as an external dependency to this notebook (see source code).
+Provide D3 as an external dependency in this notebook.
+
+```{r, results="asis", code_folding=FALSE}
+
+# Import D3,js library
+htmltools::tags$script(src="https://d3js.org/d3.v6.min.js")
+
+```
 
 Dummy SVG widget using sample Kenya data for 2017.
 
-<div id="d3ex1" class="l-body" height="auto"></div>
+<div id="d3ex1" class="l-body"></div>
 
 ```{js}
 
 // Keep only positive variables
-var dd = data.filter((d) => (d.VALUE > 0));
+var dd = data.filter((d) => (d.VALUE != 0));
 
-let hw = 500;
+let hw = $("#d3ex1").width();
 let box = 20;
 
-var svg = d3v6.select("#d3ex1")
+var svg = d3.select("#d3ex1")
   .append("svg")
   .attr("width", hw)
-  .attr("height", 340); 
+  .attr("height", hw*0.8); 
 
 svg  
   .selectAll("rect")
@@ -161,7 +172,7 @@ svg
   .append("rect")
   .attr("x", 5)
   .attr("y", (_, i) => (i * (box+5)+5) )
-  .attr("width", (d) => (d.VALUE * 500/14) )
+  .attr("width", (d) => (Math.abs(d.VALUE) * 500/14) )
   .attr("height", box)
   .attr("fill", pal[1])
   .on("mouseover", handleMouseOver)
@@ -172,31 +183,29 @@ svg
   .data(dd)
   .enter()
   .append("text")
-  .attr("x", 5)
-  .attr("y", (_, i) => (i * (box+5)+15) )
-  .attr("fill", "black")
-  .text((d) => (d.VARIABLE));
+  .attr("x", 10)
+  .attr("y", (_, i) => (i * (box+5)+20) )
+  .style("fill", "black")
+  .style("font-size", ".9em")
+  .text((d) => (d.SUBCLASS + " - " + d.VARIABLE + ": " 
+  + d.VALUE.toFixed(2) + " km³/year"));
 
 // Test interactions
 function handleMouseOver(d, i) {
-d3v6.select(this)
-.attr("fill", pal[3])
+  d3.select(this)
+  .style("fill", pal[3])
+  .move(2, -2)
 };
 
 function handleMouseOut(d, i) {
-d3v6.select(this)
-.attr("fill", pal[1])
+  d3.select(this)
+  .style("fill", pal[1])
+  .move(-2, 2)
 };
 
-// Test transformations
-var tt = svg.selectAll("text");
-setTimeout(() => {
-tt.move(0, 10)
-}, 2000);
-
-d3v6.selection.prototype.move = function(x, y) {
-this.attr("transform", "translate(" + x + "," + y + ")");
-return this;
+d3.selection.prototype.move = function(x, y) {
+  this.attr("transform", "translate(" + x + "," + y + ")");
+  return this;
 };
 
 
@@ -208,10 +217,10 @@ Original SVG design with data bindings.
 
 ```{js}
 
-var div = d3v6.select("#d3ex2");
+var div = d3.select("#d3ex2");
 
 // Append external design
-d3v6.xml("../../www/svg/sheet_1.svg")
+d3.xml("../../www/svg/sheet_1.svg")
   .then(d => {
   div.node().append(d.documentElement);
   });
@@ -240,4 +249,6 @@ svg.move(0, 10)
 # Graphviz
 
 [placeholder]
+
+# References
 

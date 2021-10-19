@@ -126,7 +126,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","date_prefix","categories","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Interactive SVG with D3.js (draft)"]},{"type":"character","attributes":{},"value":["Part 1: add interactivity to IWMI's printable WA+ sheets."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email","url"]}},"value":[{"type":"character","attributes":{},"value":["BACOU, Melanie"]},{"type":"character","attributes":{},"value":["mel@mbacou.com"]},{"type":"character","attributes":{},"value":["https://linkedin/in/mbacou"]}]}]},{"type":"character","attributes":{},"value":["2021-10-19"]},{"type":"character","attributes":{},"value":["2021-10-01"]},{"type":"character","attributes":{},"value":["draft","imwi","hydrology"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","dev","code_folding","self_contained","extra_dependencies"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["svglite"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]}},"value":[{"type":"character","attributes":{},"value":["d3"]},{"type":"character","attributes":{},"value":["6.2.0"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["href"]}},"value":[{"type":"character","attributes":{},"value":["../../www/js/d3v6-6.2.0"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["d3.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"logical","attributes":{},"value":[true]}]}]}]}]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/"]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","date_prefix","categories","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Interactive SVG with D3.js (draft)"]},{"type":"character","attributes":{},"value":["Part 1: add interactivity to IWMI's printable WA+ sheets."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email","url"]}},"value":[{"type":"character","attributes":{},"value":["BACOU, Melanie"]},{"type":"character","attributes":{},"value":["mel@mbacou.com"]},{"type":"character","attributes":{},"value":["https://linkedin/in/mbacou"]}]}]},{"type":"character","attributes":{},"value":["2021-10-19"]},{"type":"character","attributes":{},"value":["2021-10-01"]},{"type":"character","attributes":{},"value":["draft","imwi","hydrology"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","dev","code_folding","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["svglite"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/"]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2132,7 +2132,6 @@ d-appendix d-footnote-list a.footnote-backlink {
 }</style>
 <!--/radix_placeholder_distill-->
   <script src="../../site_libs/header-attrs-2.11/header-attrs.js"></script>
-  <script src="../../www/js/d3v6-6.2.0/d3.min.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2312,8 +2311,27 @@ d-appendix .citation-appendix, .d-appendix .citation-appendix {
 <li><a href="#data-preparation">Data Preparation</a></li>
 <li><a href="#interactive-svg">Interactive SVG</a></li>
 <li><a href="#graphviz">Graphviz</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 </nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://yihui.org/knitr/'>knitr</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://arxiv.org/abs/1403.2805'>jsonlite</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://scales.r-lib.org'>scales</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://stringr.tidyverse.org'>stringr</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://r-datatable.com'>data.table</a></span><span class='op'>)</span>
+
+<span class='va'>opts_chunk</span><span class='op'>$</span><span class='fu'>set</span><span class='op'>(</span>res<span class='op'>=</span><span class='fl'>220</span>, pointsize<span class='op'>=</span><span class='fl'>8</span><span class='op'>)</span>
+<span class='va'>pal</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span><span class='op'>(</span><span class='st'>"../../_assets/palette.rds"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
 </div>
 <p>This notebook is to explore multiple visualization schemes:</p>
 <ol type="1">
@@ -2818,7 +2836,8 @@ Show code
 Show code
 </summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sprintf.html'>sprintf</a></span><span class='op'>(</span><span class='st'>"
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/sprintf.html'>sprintf</a></span><span class='op'>(</span><span class='st'>"
   &lt;script&gt; 
   var data = %s;
   var pal = %s;
@@ -2842,7 +2861,6 @@ Show code
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>svg</span> <span class='op'>&lt;-</span> <span class='st'>"../../www/svg"</span> <span class='op'>%&gt;%</span>
   <span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span>pattern<span class='op'>=</span><span class='st'>"*.svg"</span>, full.names<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
-
 <span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='va'>svg</span><span class='op'>[</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, <span class='fl'>6</span>, <span class='fl'>8</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -2851,10 +2869,21 @@ Show code
 </div>
 <p>These sheets incorporate a quantity of domain-specific knowledge, they are used to both teach and communicate about the WA+ approach and simulation results. They are produced in the final step of the analysis (using vector graphic templates), typically after the water accounts have been aggregated to a seasonal or yearly time span. The process is somewhat (but not entirely) automated, e.g. the analyst can decide to add or hide elements.</p>
 <p>Note that the original templates were created in Inkscape with <strong>SVG 1.1</strong> specifications. They are professional printable designs and not optimized for rendering in a browser, so we start by testing whether we can interact and modify these designs using D3. We focus on the Resource Base sheet first.</p>
+<blockquote>
+<p><u>Note</u>: Inkscape provides a templating system that allows merging a SVG file (with template fields declared in the form <code>%VAR_name%</code> with a CSV data file to batch generate PNG or PDF documents. That system is not limited to merging text labels, colors and sizes can also be read in from an external CSV source<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+</blockquote>
 <p>Below we load the sheet and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read and rendered in the browser as expected.</p>
-<p>Note that <code>d3.js</code> needs to be provided as an external dependency to this notebook (see source code).</p>
+<p>Provide D3 as an external dependency in this notebook.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Import D3,js library</span>
+<span class='fu'>htmltools</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span><span class='op'>$</span><span class='fu'>script</span><span class='op'>(</span>src<span class='op'>=</span><span class='st'>"https://d3js.org/d3.v6.min.js"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><script src="https://d3js.org/d3.v6.min.js"></script></p>
+</div>
 <p>Dummy SVG widget using sample Kenya data for 2017.</p>
-<div id="d3ex1" class="l-body" height="auto">
+<div id="d3ex1" class="l-body">
 
 </div>
 <div class="layout-chunk" data-layout="l-body">
@@ -2864,15 +2893,15 @@ Show code
 </summary>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">// Keep only positive variables</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> dd <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">VALUE</span> <span class="op">&gt;</span> <span class="dv">0</span>))<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> dd <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">VALUE</span> <span class="op">!=</span> <span class="dv">0</span>))<span class="op">;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> hw <span class="op">=</span> <span class="dv">500</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> hw <span class="op">=</span> <span class="fu">$</span>(<span class="st">&quot;#d3ex1&quot;</span>)<span class="op">.</span><span class="fu">width</span>()<span class="op">;</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> box <span class="op">=</span> <span class="dv">20</span><span class="op">;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> svg <span class="op">=</span> d3v6<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;#d3ex1&quot;</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;#d3ex1&quot;</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;svg&quot;</span>)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> hw)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> <span class="dv">340</span>)<span class="op">;</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> hw<span class="op">*</span><span class="fl">0.8</span>)<span class="op">;</span> </span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>svg  </span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;rect&quot;</span>)</span>
@@ -2881,7 +2910,7 @@ Show code
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;rect&quot;</span>)</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="dv">5</span>)</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> (i <span class="op">*</span> (box<span class="op">+</span><span class="dv">5</span>)<span class="op">+</span><span class="dv">5</span>) )</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> (d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">VALUE</span> <span class="op">*</span> <span class="dv">500</span><span class="op">/</span><span class="dv">14</span>) )</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> (d) <span class="kw">=&gt;</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">abs</span>(d<span class="op">.</span><span class="at">VALUE</span>) <span class="op">*</span> <span class="dv">500</span><span class="op">/</span><span class="dv">14</span>) )</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> box)</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">1</span>])</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">on</span>(<span class="st">&quot;mouseover&quot;</span><span class="op">,</span> handleMouseOver)</span>
@@ -2892,45 +2921,43 @@ Show code
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">data</span>(dd)</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">enter</span>()</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;text&quot;</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="dv">5</span>)</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> (i <span class="op">*</span> (box<span class="op">+</span><span class="dv">5</span>)<span class="op">+</span><span class="dv">15</span>) )</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;black&quot;</span>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">text</span>((d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">VARIABLE</span>))<span class="op">;</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="co">// Test interactions</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">handleMouseOver</span>(d<span class="op">,</span> i) {</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>d3v6<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">3</span>])</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">handleMouseOut</span>(d<span class="op">,</span> i) {</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>d3v6<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">1</span>])</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co">// Test transformations</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> tt <span class="op">=</span> svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text&quot;</span>)<span class="op">;</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>tt<span class="op">.</span><span class="fu">move</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">10</span>)</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">2000</span>)<span class="op">;</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>d3v6<span class="op">.</span><span class="at">selection</span><span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">move</span> <span class="op">=</span> <span class="kw">function</span>(x<span class="op">,</span> y) {</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="kw">this</span><span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;translate(&quot;</span> <span class="op">+</span> x <span class="op">+</span> <span class="st">&quot;,&quot;</span> <span class="op">+</span> y <span class="op">+</span> <span class="st">&quot;)&quot;</span>)<span class="op">;</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="kw">this</span><span class="op">;</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="dv">10</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> (i <span class="op">*</span> (box<span class="op">+</span><span class="dv">5</span>)<span class="op">+</span><span class="dv">20</span>) )</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;font-size&quot;</span><span class="op">,</span> <span class="st">&quot;.9em&quot;</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">text</span>((d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">SUBCLASS</span> <span class="op">+</span> <span class="st">&quot; - &quot;</span> <span class="op">+</span> d<span class="op">.</span><span class="at">VARIABLE</span> <span class="op">+</span> <span class="st">&quot;: &quot;</span> </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="op">+</span> d<span class="op">.</span><span class="at">VALUE</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>) <span class="op">+</span> <span class="st">&quot; km³/year&quot;</span>))<span class="op">;</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">// Test interactions</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">handleMouseOver</span>(d<span class="op">,</span> i) {</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">3</span>])</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">move</span>(<span class="dv">2</span><span class="op">,</span> <span class="op">-</span><span class="dv">2</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">handleMouseOut</span>(d<span class="op">,</span> i) {</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">1</span>])</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">move</span>(<span class="op">-</span><span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>)</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>d3<span class="op">.</span><span class="at">selection</span><span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">move</span> <span class="op">=</span> <span class="kw">function</span>(x<span class="op">,</span> y) {</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;translate(&quot;</span> <span class="op">+</span> x <span class="op">+</span> <span class="st">&quot;,&quot;</span> <span class="op">+</span> y <span class="op">+</span> <span class="st">&quot;)&quot;</span>)<span class="op">;</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">this</span><span class="op">;</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
 </details>
 <script type="text/javascript">
 
 // Keep only positive variables
-var dd = data.filter((d) => (d.VALUE > 0));
+var dd = data.filter((d) => (d.VALUE != 0));
 
-let hw = 500;
+let hw = $("#d3ex1").width();
 let box = 20;
 
-var svg = d3v6.select("#d3ex1")
+var svg = d3.select("#d3ex1")
   .append("svg")
   .attr("width", hw)
-  .attr("height", 340); 
+  .attr("height", hw*0.8); 
 
 svg  
   .selectAll("rect")
@@ -2939,7 +2966,7 @@ svg
   .append("rect")
   .attr("x", 5)
   .attr("y", (_, i) => (i * (box+5)+5) )
-  .attr("width", (d) => (d.VALUE * 500/14) )
+  .attr("width", (d) => (Math.abs(d.VALUE) * 500/14) )
   .attr("height", box)
   .attr("fill", pal[1])
   .on("mouseover", handleMouseOver)
@@ -2950,31 +2977,29 @@ svg
   .data(dd)
   .enter()
   .append("text")
-  .attr("x", 5)
-  .attr("y", (_, i) => (i * (box+5)+15) )
-  .attr("fill", "black")
-  .text((d) => (d.VARIABLE));
+  .attr("x", 10)
+  .attr("y", (_, i) => (i * (box+5)+20) )
+  .style("fill", "black")
+  .style("font-size", ".9em")
+  .text((d) => (d.SUBCLASS + " - " + d.VARIABLE + ": " 
+  + d.VALUE.toFixed(2) + " km³/year"));
 
 // Test interactions
 function handleMouseOver(d, i) {
-d3v6.select(this)
-.attr("fill", pal[3])
+  d3.select(this)
+  .style("fill", pal[3])
+  .move(2, -2)
 };
 
 function handleMouseOut(d, i) {
-d3v6.select(this)
-.attr("fill", pal[1])
+  d3.select(this)
+  .style("fill", pal[1])
+  .move(-2, 2)
 };
 
-// Test transformations
-var tt = svg.selectAll("text");
-setTimeout(() => {
-tt.move(0, 10)
-}, 2000);
-
-d3v6.selection.prototype.move = function(x, y) {
-this.attr("transform", "translate(" + x + "," + y + ")");
-return this;
+d3.selection.prototype.move = function(x, y) {
+  this.attr("transform", "translate(" + x + "," + y + ")");
+  return this;
 };
 
 
@@ -2990,10 +3015,10 @@ return this;
 Show code
 </summary>
 <div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> div <span class="op">=</span> d3v6<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;#d3ex2&quot;</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> div <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;#d3ex2&quot;</span>)<span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Append external design</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>d3v6<span class="op">.</span><span class="fu">xml</span>(<span class="st">&quot;../../www/svg/sheet_1.svg&quot;</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>d3<span class="op">.</span><span class="fu">xml</span>(<span class="st">&quot;../../www/svg/sheet_1.svg&quot;</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(d <span class="kw">=&gt;</span> {</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  div<span class="op">.</span><span class="fu">node</span>()<span class="op">.</span><span class="fu">append</span>(d<span class="op">.</span><span class="at">documentElement</span>)<span class="op">;</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
@@ -3008,10 +3033,10 @@ Show code
 </details>
 <script type="text/javascript">
 
-var div = d3v6.select("#d3ex2");
+var div = d3.select("#d3ex2");
 
 // Append external design
-d3v6.xml("../../www/svg/sheet_1.svg")
+d3.xml("../../www/svg/sheet_1.svg")
   .then(d => {
   div.node().append(d.documentElement);
   });
@@ -3040,7 +3065,14 @@ Show code
 </div>
 <h1 id="graphviz">Graphviz</h1>
 <p>[placeholder]</p>
+<h1 id="references">References</h1>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Refer to <a href="https://github.com/borgand/inkscape_merge">inkscape_merge</a> tool.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
