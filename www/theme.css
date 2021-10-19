@@ -101,3 +101,7 @@ d-appendix .citation-appendix, .d-appendix .citation-appendix {
   border: none;
   padding: 0.4em 0;
 }
+table {
+  font-size: .8em;
+  font-family: "Roboto Condensed", sans-serif;
+}
