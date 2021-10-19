@@ -1,7 +1,7 @@
 ---
 title: Interactive SVG with D3.js (draft)
 description: |
-  Part 1: add interactivity to printable WA+ sheets (IWMI).
+  Part 1: add interactivity to IWMI's printable WA+ sheets.
 author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
@@ -115,7 +115,7 @@ cat(sprintf("
 
 # Interactive SVG
 
-In this section we work off the existing SVG designs, using `D3.js` API to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).
+We work off the existing SVG designs, using `D3.js` API to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).
 
 There are multiple SVG template sheets provided in the Kenya code repository (under `./scripts/WAsheets/template/svg`). They are shown below.
 
@@ -128,11 +128,11 @@ include_graphics(svg[-c(1:2, 6, 8)])
 
 ```
 
-These sheets incorporate a quantity of domain-specific knowledge, they are used to both teach and communicate about the WA+ approach and simulation results. They are produced in the final step of the analysis (using vector graphic templates), typically after the water accounts have been aggregated to a seasonal or yearly time span. The process is somewhat (but not entirely automated, e.g. the analyst can decide to add or hide elements).
+These sheets incorporate a quantity of domain-specific knowledge, they are used to both teach and communicate about the WA+ approach and simulation results. They are produced in the final step of the analysis (using vector graphic templates), typically after the water accounts have been aggregated to a seasonal or yearly time span. The process is somewhat (but not entirely) automated, e.g. the analyst can decide to add or hide elements.
 
-We focus first on the Resource Base sheet. Note that the original templates were created in Inkscape with **SVG 1.1** specifications. They are professional printable designs and not optimized for rendering in a browser, so we start by testing whether we can interact and modify these designs using D3.
+Note that the original templates were created in Inkscape with **SVG 1.1** specifications. They are professional printable designs and not optimized for rendering in a browser, so we start by testing whether we can interact and modify these designs using D3. We focus on the Resource Base sheet first. 
 
-Below we load the **Resource Base sheet** and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read and rendered in the browser as expected.
+Below we load the sheet and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read and rendered in the browser as expected.
 
 Note that `d3.js` needs to be provided as an external dependency to this notebook (see source code).
 
