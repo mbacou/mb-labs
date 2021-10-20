@@ -2369,13 +2369,12 @@ Show code
 </div>
 <p>This notebook is to explore multiple visualization schemes:</p>
 <ol type="1">
-<li><strong>Interactive SVG</strong>: add user interactivity to existing SVG sheets (or simplified) designs using low-level <a href="https://d3js.org/">D3.js</a> JavaScript library</li>
+<li><strong>Interactive SVG</strong>: add user interactivity to existing SVG sheets (or simplified) designs using low-level <a href="https://d3js.org/">D3.js</a> library</li>
 <li><strong>Graphviz</strong>: redesign the WA+ sheets using <a href="https://graphviz.org/">Graphviz</a> and provide interactivity with <a href="https://rich-iannone.github.io/DiagrammeR/">DiagrammeR</a></li>
-<li><strong>Highcharts</strong>: reshape WA+ model output to create more standard treemaps using <a href="https://www.highcharts.com/">Highcharts.js</a> charting library</li>
-<li><strong>Highcharts</strong>: reshape WA+ model output to create custom steam graphs and/or network graphs</li>
+<li><strong>Highcharts</strong>: reshape WA+ model output to create more standard treemaps / sankey diagrams etc. using <a href="https://www.highcharts.com/">Highcharts.js</a> charting library</li>
 <li><strong>Leaflet</strong>: create a 3D map of basin landscape with SVG annotation layers (arrows, etc.) using <a href="https://leafletjs.com/">leaflet.js</a></li>
 </ol>
-<p>The <strong>D3.js</strong> approach is the more flexible but also the more difficult to implement (success is uncertain). Other approaches will be developed in separate notebooks.</p>
+<p>The <strong>D3.js</strong> approach is the more flexible but also the more tedious to implement. Other approaches will be developed in separate notebooks.</p>
 <h1 id="data-preparation">Data Preparation</h1>
 <p>To validate the different approaches we use sample output datasets provided by <strong>Naga Valpuri</strong> for Mali (Niger river basin) and Kenya (Mara basin). All hydrological models are written in Python and published to GitHub (e.g. <a href="https://github.com/wateraccounting/WAPORWA">Mali notebooks</a>).</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2934,7 +2933,7 @@ Show code
   </script>
 </div>
 <h1 id="interactive-svg">Interactive SVG</h1>
-<p>We work off the existing SVG designs, using <code>D3.js</code> API to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).</p>
+<p>We work off the existing SVG designs, using <code>D3.js</code> constructs to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).</p>
 <p>There are multiple SVG template sheets provided in the Kenya code repository (under <code>./scripts/WAsheets/template/svg</code>). They are shown below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
@@ -2950,13 +2949,13 @@ Show code
 </details>
 <p><img src="../../www/svg/sheet_1.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_2.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_3.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_4_part1.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_5.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_6.svg" width="33%" data-distill-preview=1 /></p>
 </div>
-<p>These sheets incorporate a quantity of domain-specific knowledge, they are used to both teach and communicate about the WA+ approach and simulation results. They are produced in the final step of the analysis (using vector graphic templates), typically after the water accounts have been aggregated to a seasonal or yearly time span. The process is somewhat (but not entirely) automated, e.g. the analyst can decide to add or hide elements.</p>
+<p>These sheets incorporate a quantity of domain-specific knowledge, they are used to both teach and communicate about the WA+ approach and simulation results. They are produced in the final step of the analysis, typically after the water accounts have been aggregated to a seasonal or yearly time span. The process is somewhat (but not entirely) automated, e.g. the analyst can decide to add or hide elements.</p>
 <p>Note that the original templates were created in Inkscape with <strong>SVG 1.1</strong> specifications. They are professional printable designs and not optimized for rendering in a browser, so we start by testing whether we can interact and modify these designs using D3. We focus on the Resource Base sheet first.</p>
 <blockquote>
 <p><u>Note</u>: Inkscape provides a templating system that allows merging a SVG file (with template fields declared in the form <code>%VAR_name%</code> with a CSV data file to batch generate PNG or PDF documents. That system is not limited to merging text labels, colors and sizes can also be read in from an external CSV source<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 </blockquote>
 <p>Below we load the sheet and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read and rendered in the browser as expected.</p>
-<p>Provide D3 as an external dependency in this notebook.</p>
+<p>Provide D3 as an external dependency in this notebook:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Import D3</span>
@@ -3177,12 +3176,12 @@ fun_reset();
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_color</span>() {</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  svg</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text&quot;</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;red&quot;</span>)<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">3</span>])<span class="op">;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a> </span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_fill</span>() {</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  svg</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;path&quot;</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;red&quot;</span>)<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;path&quot;</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">4</span>])<span class="op">;</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a> </span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_move</span>(id) {</span>
@@ -3198,12 +3197,12 @@ fun_reset();
 function fun_color() {
   svg
    .selectAll("text")
-   .style("fill", "red");
+   .style("fill", pal[3]);
  };
  
 function fun_fill() {
   svg
-   .selectAll("path").style("fill", "red");
+   .selectAll("path").style("fill", pal[4]);
  };
  
 function fun_move(id) {
@@ -3217,6 +3216,7 @@ div.append(p).html(vars);
 
 </script>
 </div>
+<p>At this point, we need to modify (simplify) the original SVG design manually to make it easier to select and manipulate logical layers and groups of elements with D3. We can create a useful hierarchy in Inkscape and then re-import the modified version here. We can also add a static color legend.</p>
 <h1 id="graphviz">Graphviz</h1>
 <p>[placeholder]</p>
 <h1 id="references">References</h1>
