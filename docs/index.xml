@@ -12,7 +12,19 @@
       <link>https://mbacou.github.io/mb-labs</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 19 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Interactive SVG with D3.js (draft)</title>
+      <dc:creator>BACOU, Melanie</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</link>
+      <description>Part 1: add interactivity to IWMI's printable WA+ sheets.</description>
+      <category>draft</category>
+      <category>imwi</category>
+      <category>hydrology</category>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
+      <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1.svg" medium="image" type="image/svg+xml"/>
+    </item>
     <item>
       <title>Custom Highcharts (draft)</title>
       <dc:creator>BACOU, Melanie</dc:creator>
@@ -24,18 +36,6 @@
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</guid>
       <pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/resource-base.svg" medium="image" type="image/svg+xml"/>
-    </item>
-    <item>
-      <title>Interactive SVG with D3.js (draft)</title>
-      <dc:creator>BACOU, Melanie</dc:creator>
-      <link>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</link>
-      <description>Part 1: add interactivity to IWMI's printable WA+ sheets.</description>
-      <category>draft</category>
-      <category>imwi</category>
-      <category>hydrology</category>
-      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
-      <pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
       <title>Merge Ground and Satellite Observations with RFMerge</title>

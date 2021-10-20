@@ -373,7 +373,7 @@ save.image(file.path(dir, "./tmp/2020-burn_olam_usa_06.RData"))
 
 Validate ZOI, DEM, and ERA5 covariates.
 
-```{r}
+```{r, layout="l-screen"}
 
 era <- brick("./out/ERA5_2m_temperature_2017.grd")
 era <- raster(era, 1)
@@ -384,13 +384,11 @@ tm_shape(era) +
   tm_shape(stations) + tm_dots("black", title="CIMIS WS") + 
   tm_shape(pts) + tm_dots("blue", title="OLAM Site") + 
   tm_shape(pts[pts$loc_id %in% c(25, 82, 83), ]) + 
-  tm_dots("red", title="OLAM Site")
+  tm_dots("red")
 
 ```
 
 ```{r, fig.height=5}
-
-pts <- spTransform(pts, CRS("+init=epsg:3310"))
 
 plot(era[[1]], sub=basename(f[1]), main="ERA5 Hourly Temp. °C")
 plot(zoi, lty=2, add=T, col=NA)
@@ -404,6 +402,8 @@ legend("topright", legend=c("Active station", "Stale station", "Production site"
 DEM at ERA5 extent and resolution.
 
 ```{r, fig.height=5}
+
+pts <- spTransform(pts, CRS("+init=epsg:3310"))
 
 plot(dem, main="SRTM 90m (meter)")
 plot(zoi, add=T, lty=2, col=NA)

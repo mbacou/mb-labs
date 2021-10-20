@@ -120,7 +120,7 @@ We work off the existing SVG designs, using `D3.js` API to add data binding and 
 
 There are multiple SVG template sheets provided in the Kenya code repository (under `./scripts/WAsheets/template/svg`). They are shown below.
 
-```{r, out.width="33%", fig.width=2, fig.show="hold"}
+```{r, out.width="33%", fig.width=3, fig.show="hold"}
 
 svg <- "../../www/svg" %>%
   list.files(pattern="*.svg", full.names=TRUE)
@@ -143,27 +143,26 @@ Provide D3 as an external dependency in this notebook.
 
 ```{r, results="asis", code_folding=FALSE}
 
-# Import D3,js library
+# Import D3
 htmltools::tags$script(src="https://d3js.org/d3.v6.min.js")
 
 ```
 
-Dummy SVG widget using sample Kenya data for 2017.
+First we create a dummy SVG widget using the sample Kenya data for 2017.
 
 <div id="d3ex1" class="l-body"></div>
 
-```{js}
+```{js, code_folding=F}
 
 // Keep only positive variables
-var dd = data.filter((d) => (d.VALUE != 0));
+var dd = data.filter((d) => (d.VALUE !== 0));
 
 let hw = $("#d3ex1").width();
 let box = 20;
 
 var svg = d3.select("#d3ex1")
   .append("svg")
-  .attr("width", hw)
-  .attr("height", box*18); 
+  .attr("viewBox", [0, 0, hw, box*18])
 
 svg  
   .selectAll("rect")
@@ -172,7 +171,7 @@ svg
   .append("rect")
   .attr("x", 5)
   .attr("y", (_, i) => (i * (box+5)+5) )
-  .attr("width", (d) => (Math.abs(d.VALUE) * 500/14) )
+  .attr("width", (d) => (Math.abs(d.VALUE) * hw/14) )
   .attr("height", box)
   .attr("fill", pal[3])
   .on("mouseover", handleMouseOver)
@@ -208,42 +207,62 @@ d3.selection.prototype.move = function(x, y) {
   return this;
 };
 
-
 ```
 
-Original SVG design with data bindings.
+Then we load the original SVG design and progressively add data bindings.
 
 <div id="d3ex2" class="l-body"></div>
+<div class="l-gutter">
+  <button onclick="fun_color('.d3ex2');">Change Text Color</button>
+  <button onclick="fun_remove('.d3ex2');">Change Fill Color</button>
+  <button onclick="fun_reset('.d3ex2');">Reset Design</button>
+</div>
 
-```{js}
+```{js, code_folding=FALSE}
 
 var div = d3.select("#d3ex2");
+var svg = div
+  .append("svg")
+  .attr("viewBox", [0, 0, hw, hw*0.8])
+  .insert("svg:g")
+  .attr("class", "d3ex2");
 
-// Append external design
-d3.xml("../../www/svg/sheet_1.svg")
-  .then(d => {
-  div.node().append(d.documentElement);
-  });
+function fun_reset(target, src="../../www/svg/sheet_1.svg") {
+  var e = d3.select(target);
+  //e.node().remove();
+  // Append external design
+  d3.xml(src)
+    .then(d => {
+    e.node().append(d.documentElement);
+    });
+};
 
-var svg = div.select("svg");
+fun_reset(".d3ex2");
 
-svg
-  .selectAll("text")
-  .data(data)
-  .enter()
-  .text((d) => (d.VALUE) );
+```
+
+Now that we have the SVG DOM loaded, we can do silly things, like change the text color or remove some elements. We can also list all text elements with default value "NaN".
+
+```{js, code_folding=FALSE}
+
+function fun_color(d) {
+ d3.select(d)
+   .selectAll("text")
+   .style("fill", "red");
+ };
+ 
+function fun_remove(d) {
+ d3.select(d)
+   .selectAll("path").style("fill", "red");
+ }; 
+ 
+ 
+var vars = svg.selectAll("text[text='NaN']").id();
+div.append(p).html(vars);
+
 
 ```
 
-Now that we have the SVG DOM loaded, we can enumerate its elements, in particular we can list all data-driven elements with default value "NaN".
-
-```{js, eval=FALSE}
-
-setTimeout(() => {
-svg.move(0, 10)
-}, 2000);
-
-```
 
 
 # Graphviz
