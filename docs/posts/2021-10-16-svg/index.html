@@ -2929,7 +2929,7 @@ Show code
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;#d3ex1&quot;</span>)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;svg&quot;</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;viewBox&quot;</span><span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> hw<span class="op">,</span> box<span class="op">*</span><span class="dv">18</span>])<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;viewBox&quot;</span><span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> hw<span class="op">,</span> box<span class="op">*</span><span class="dv">19</span>])<span class="op">;</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>svg</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;rect&quot;</span>)</span>
@@ -2951,9 +2951,9 @@ Show code
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">enter</span>()</span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;text&quot;</span>)</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="dv">90</span>)</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> (i <span class="op">*</span> (box<span class="op">+</span><span class="dv">5</span>)<span class="op">+</span>box) )</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> (i <span class="op">*</span> (box<span class="op">+</span><span class="dv">5</span>) <span class="op">+</span> box)  )</span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;black&quot;</span>)</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;font-size&quot;</span><span class="op">,</span> <span class="st">&quot;.8em&quot;</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;font-size&quot;</span><span class="op">,</span> box<span class="op">*.</span><span class="dv">6</span><span class="op">+</span><span class="st">&quot;px&quot;</span>)</span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;text-anchor&quot;</span><span class="op">,</span> <span class="st">&quot;start&quot;</span>)</span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">text</span>((d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">VALUE</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>) <span class="op">+</span> <span class="st">&quot; km³/year&quot;</span>))<span class="op">;</span></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  </span>
@@ -2964,9 +2964,9 @@ Show code
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">enter</span>()</span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;text&quot;</span>)</span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> hw<span class="dv">-10</span>)</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> (i <span class="op">*</span> (box<span class="op">+</span><span class="dv">5</span>)<span class="op">+</span>box) )</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> (i <span class="op">*</span> (box<span class="op">+</span><span class="dv">5</span>) <span class="op">+</span> box) )</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;black&quot;</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;font-size&quot;</span><span class="op">,</span> <span class="st">&quot;.8em&quot;</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;font-size&quot;</span><span class="op">,</span> box<span class="op">*.</span><span class="dv">6</span><span class="op">+</span><span class="st">&quot;px&quot;</span>)</span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;text-anchor&quot;</span><span class="op">,</span> <span class="st">&quot;end&quot;</span>)</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">text</span>((d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">SUBCLASS</span> <span class="op">+</span> <span class="st">&quot; - &quot;</span> <span class="op">+</span> d<span class="op">.</span><span class="at">VARIABLE</span>))<span class="op">;</span>  </span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
@@ -2998,7 +2998,7 @@ const max_value = 13;
 
 var svg = d3.select("#d3ex1")
   .append("svg")
-  .attr("viewBox", [0, 0, hw, box*18]);
+  .attr("viewBox", [0, 0, hw, box*19]);
 
 svg
   .selectAll("rect")
@@ -3020,9 +3020,9 @@ svg
   .enter()
   .append("text")
   .attr("x", 90)
-  .attr("y", (_, i) => (i * (box+5)+box) )
+  .attr("y", (_, i) => (i * (box+5) + box)  )
   .style("fill", "black")
-  .style("font-size", ".8em")
+  .style("font-size", box*.6+"px")
   .attr("text-anchor", "start")
   .text((d) => (d.VALUE.toFixed(2) + " km³/year"));
   
@@ -3033,9 +3033,9 @@ svg
   .enter()
   .append("text")
   .attr("x", hw-10)
-  .attr("y", (_, i) => (i * (box+5)+box) )
+  .attr("y", (_, i) => (i * (box+5) + box) )
   .style("fill", "black")
-  .style("font-size", ".8em")
+  .style("font-size", box*.6+"px")
   .attr("text-anchor", "end")
   .text((d) => (d.SUBCLASS + " - " + d.VARIABLE));  
 

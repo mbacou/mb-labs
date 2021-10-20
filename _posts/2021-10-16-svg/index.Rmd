@@ -164,7 +164,7 @@ const max_value = 13;
 
 var svg = d3.select("#d3ex1")
   .append("svg")
-  .attr("viewBox", [0, 0, hw, box*18]);
+  .attr("viewBox", [0, 0, hw, box*19]);
 
 svg
   .selectAll("rect")
@@ -186,9 +186,9 @@ svg
   .enter()
   .append("text")
   .attr("x", 90)
-  .attr("y", (_, i) => (i * (box+5)+box) )
+  .attr("y", (_, i) => (i * (box+5) + box)  )
   .style("fill", "black")
-  .style("font-size", ".8em")
+  .style("font-size", box*.6+"px")
   .attr("text-anchor", "start")
   .text((d) => (d.VALUE.toFixed(2) + " km³/year"));
   
@@ -199,9 +199,9 @@ svg
   .enter()
   .append("text")
   .attr("x", hw-10)
-  .attr("y", (_, i) => (i * (box+5)+box) )
+  .attr("y", (_, i) => (i * (box+5) + box) )
   .style("fill", "black")
-  .style("font-size", ".8em")
+  .style("font-size", box*.6+"px")
   .attr("text-anchor", "end")
   .text((d) => (d.SUBCLASS + " - " + d.VARIABLE));  
 
