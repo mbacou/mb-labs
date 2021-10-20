@@ -155,40 +155,55 @@ First we create a dummy SVG widget using the sample Kenya data for 2017.
 
 ```{js, code_folding=F}
 
-// Keep only positive variables
+// Keep only non-null variables
 var dd = data.filter((d) => (d.VALUE !== 0));
 
-const hw = $("#d3ex1").width();
+const hw = 400;
 const box = 20;
+const max_value = 13;
 
 var svg = d3.select("#d3ex1")
   .append("svg")
-  .attr("viewBox", [0, 0, hw, box*18])
+  .attr("viewBox", [0, 0, hw, box*18]);
 
-svg  
+svg
   .selectAll("rect")
   .data(dd)
   .enter()
   .append("rect")
-  .attr("x", 5)
+  .attr("x", d => Math.min(80, 80+((hw-80)*d.VALUE/max_value)) )
   .attr("y", (_, i) => (i * (box+5)+5) )
-  .attr("width", (d) => (Math.abs(d.VALUE) * hw/14) )
+  .attr("width", d => (hw-80)*Math.abs(d.VALUE)/max_value )
   .attr("height", box)
-  .attr("fill", pal[3])
+  .attr("fill", d => pal[d.SUBCLASS])
   .on("mouseover", handleMouseOver)
   .on("mouseout", handleMouseOut);
 
 svg
+  .append("g")
   .selectAll("text")
   .data(dd)
   .enter()
   .append("text")
-  .attr("x", 10)
+  .attr("x", 90)
   .attr("y", (_, i) => (i * (box+5)+20) )
   .style("fill", "black")
   .style("font-size", ".8em")
-  .text((d) => (d.SUBCLASS + " - " + d.VARIABLE + ": " 
-  + d.VALUE.toFixed(2) + " km³/year"));
+  .attr("text-anchor", "start")
+  .text((d) => (d.VALUE.toFixed(2) + " km³/year"));
+  
+svg
+  .append("g")
+  .selectAll("text")
+  .data(dd)
+  .enter()
+  .append("text")
+  .attr("x", hw-10)
+  .attr("y", (_, i) => (i * (box+5)+20) )
+  .style("fill", "black")
+  .style("font-size", ".8em")
+  .attr("text-anchor", "end")
+  .text((d) => (d.SUBCLASS + " - " + d.VARIABLE));  
 
 // Test interactions
 function handleMouseOver(d, i) {
@@ -229,7 +244,7 @@ var svg = div
   .append("svg")
   .attr("viewBox", [0, 0, hw, hw*0.8])
   .insert("svg:g")
-  .attr("class", ".d3ex2");  
+  .attr("class", "d3ex2");  
 
 function fun_reset(src="../../www/svg/sheet_1.svg") {
   svg.selectAll("svg").remove();
@@ -245,7 +260,7 @@ fun_reset();
 
 ```
 
-Now that we have the SVG DOM loaded, we can do silly things, like change the text color or move (translate) some elements. We can also list all text elements with default value "NaN", so that we can start mapping text labels to data values.
+Now that we have the SVG DOM loaded, we can do silly things, like change the text color or move (translate) some elements. We can also list all text elements with default value "NaN", so that we can start mapping labels to data values.
 
 ```{js, code_folding=FALSE}
 
@@ -268,7 +283,6 @@ function fun_move(id) {
  
 var vars = svg.selectAll("text[text='NaN']").id();
 div.append(p).html(vars);
-
 
 ```
 
