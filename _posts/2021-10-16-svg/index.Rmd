@@ -24,12 +24,14 @@ output:
 
 library(knitr)
 library(jsonlite)
+library(ggplot2)
 library(scales)
 library(stringr)
 library(data.table)
 
 opts_chunk$set(res=220, pointsize=8)
 pal <- readRDS("../../_assets/palette.rds")
+options(ggplot2.discrete.color=pal)
 
 ```
 
@@ -64,12 +66,13 @@ data[,
   file := basename(path)
 ][, `:=`(
   year = str_extract(file, "_[0-9]{4}") %>% str_sub(2,5) %>% as.integer(),
-  month = str_extract(file, "[0-9]{4}_[0-9]{1,2}") %>% str_sub(6,7) %>% as.integer()
+  month = str_extract(file, "[0-9]{4}_[0-9]{1,2}") %>% str_sub(6,7) %>% as.integer(),
+  sheet = str_extract(tolower(file), "sheet[0-9]{1}") 
 )] %>% setorder(iso3, year, month, na.last=TRUE)
 
-data[iso3=="ken", .(file, year, month)][c(1:5, (.N-4):.N)] %>% 
+data[iso3=="ken", .(file, sheet, year, month)][c(1:5, (.N-4):.N)] %>% 
   kable(caption="Kenya - List of output files (top and last 5)")
-data[iso3=="mli", .(file, year, month)] %>% 
+data[iso3=="mli", .(file, sheet, year, month)] %>% 
   kable(caption="Mali - List of output files")
 
 ```
@@ -100,7 +103,30 @@ ken.ts[c(1:5, (.N-4):.N)] %>%
 
 ```
 
-We make the yearly dataset available in the client as a JSON array named `data`. We also pass a default color palette `pal` for convenience.
+We'll gather all the **yearly** budgets for now into a long table, and plot the trends.
+
+```{r, fig.asp=.8}
+
+f <- data[sheet=="sheet1" & is.na(month) & !is.na(year)]
+
+data <- lapply(1:nrow(f), function(x) 
+  fread(f[x, path])[, `:=`(
+    iso3 = f[x, iso3],
+    sheet = f[x, sheet],
+    year = f[x, year]
+  )]) %>% rbindlist()
+
+ggplot(data, aes(year, VALUE, color=paste(SUBCLASS, VARIABLE, sep=" "))) +
+  geom_line() +
+  facet_wrap(~toupper(iso3), scales="free") +
+  labs(x=NULL, y="kg/m³", title="Yearly Resource Base") +
+  theme_minimal() + theme(
+    legend.position="bottom", 
+    text=element_text(family="Roboto Condensed"))
+
+```
+
+We make a yearly dataset available in the client as a JSON array named `data`. We also pass a default color palette `pal` for convenience.
 
 ```{r, results="asis"}
 
@@ -109,7 +135,7 @@ cat(
   <script> 
   var data = %s;
   var pal = %s;
-  </script>", toJSON(ken), toJSON(pal)))
+  </script>", toJSON(data[iso3=="ken" & year==2017]), toJSON(pal)))
 
 ```
 
@@ -120,7 +146,7 @@ We work off the existing SVG designs, using `D3.js` API to add data binding and 
 
 There are multiple SVG template sheets provided in the Kenya code repository (under `./scripts/WAsheets/template/svg`). They are shown below.
 
-```{r, out.width="33%", fig.width=3, fig.show="hold"}
+```{r, out.width="33%", fig.width=3, fig.show="hold", preview=TRUE}
 
 svg <- "../../www/svg" %>%
   list.files(pattern="*.svg", full.names=TRUE)

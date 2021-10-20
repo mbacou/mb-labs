@@ -131,7 +131,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/d3v5-5.9.2/API.md","index_files/d3v5-5.9.2/CHANGES.md","index_files/d3v5-5.9.2/d3.min.js","index_files/d3v5-5.9.2/LICENSE","index_files/d3v5-5.9.2/README.md","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.11/header-attrs.js","index_files/htmlwidgets-1.5.4/htmlwidgets.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/r2d3-binding-0.2.5/r2d3.js","index_files/r2d3-render-0.1.0/r2d3-render.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","sheet.js","test.js","test.svg"]}
+  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/d3v5-5.9.2/API.md","index_files/d3v5-5.9.2/CHANGES.md","index_files/d3v5-5.9.2/d3.min.js","index_files/d3v5-5.9.2/LICENSE","index_files/d3v5-5.9.2/README.md","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/figure-html5/unnamed-chunk-4-1.svg","index_files/header-attrs-2.11/header-attrs.js","index_files/htmlwidgets-1.5.4/htmlwidgets.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/r2d3-binding-0.2.5/r2d3.js","index_files/r2d3-render-0.1.0/r2d3-render.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","sheet.js","test.js","test.svg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2355,12 +2355,14 @@ Show code
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://yihui.org/knitr/'>knitr</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://arxiv.org/abs/1403.2805'>jsonlite</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://scales.r-lib.org'>scales</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://stringr.tidyverse.org'>stringr</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://r-datatable.com'>data.table</a></span><span class='op'>)</span>
 
 <span class='va'>opts_chunk</span><span class='op'>$</span><span class='fu'>set</span><span class='op'>(</span>res<span class='op'>=</span><span class='fl'>220</span>, pointsize<span class='op'>=</span><span class='fl'>8</span><span class='op'>)</span>
 <span class='va'>pal</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/readRDS.html'>readRDS</a></span><span class='op'>(</span><span class='st'>"../../_assets/palette.rds"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/options.html'>options</a></span><span class='op'>(</span>ggplot2.discrete.color<span class='op'>=</span><span class='va'>pal</span><span class='op'>)</span>
 </code></pre>
 </div>
 </details>
@@ -2395,10 +2397,11 @@ Show code
   <span class='va'>file</span> <span class='op'>:=</span> <span class='fu'><a href='https://rdrr.io/r/base/basename.html'>basename</a></span><span class='op'>(</span><span class='va'>path</span><span class='op'>)</span>
 <span class='op'>]</span><span class='op'>[</span>, <span class='fu'>`:=`</span><span class='op'>(</span>
   year <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>file</span>, <span class='st'>"_[0-9]{4}"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_sub.html'>str_sub</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>5</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='op'>)</span>,
-  month <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>file</span>, <span class='st'>"[0-9]{4}_[0-9]{1,2}"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_sub.html'>str_sub</a></span><span class='op'>(</span><span class='fl'>6</span>,<span class='fl'>7</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='op'>)</span>
+  month <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>file</span>, <span class='st'>"[0-9]{4}_[0-9]{1,2}"</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_sub.html'>str_sub</a></span><span class='op'>(</span><span class='fl'>6</span>,<span class='fl'>7</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://rdrr.io/r/base/integer.html'>as.integer</a></span><span class='op'>(</span><span class='op'>)</span>,
+  sheet <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/chartr.html'>tolower</a></span><span class='op'>(</span><span class='va'>file</span><span class='op'>)</span>, <span class='st'>"sheet[0-9]{1}"</span><span class='op'>)</span> 
 <span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://Rdatatable.gitlab.io/data.table/reference/setorder.html'>setorder</a></span><span class='op'>(</span><span class='va'>iso3</span>, <span class='va'>year</span>, <span class='va'>month</span>, na.last<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 
-<span class='va'>data</span><span class='op'>[</span><span class='va'>iso3</span><span class='op'>==</span><span class='st'>"ken"</span>, <span class='fu'>.</span><span class='op'>(</span><span class='va'>file</span>, <span class='va'>year</span>, <span class='va'>month</span><span class='op'>)</span><span class='op'>]</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>, <span class='op'>(</span><span class='va'>.N</span><span class='op'>-</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>:</span><span class='va'>.N</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+<span class='va'>data</span><span class='op'>[</span><span class='va'>iso3</span><span class='op'>==</span><span class='st'>"ken"</span>, <span class='fu'>.</span><span class='op'>(</span><span class='va'>file</span>, <span class='va'>sheet</span>, <span class='va'>year</span>, <span class='va'>month</span><span class='op'>)</span><span class='op'>]</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>, <span class='op'>(</span><span class='va'>.N</span><span class='op'>-</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>:</span><span class='va'>.N</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
   <span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>caption<span class='op'>=</span><span class='st'>"Kenya - List of output files (top and last 5)"</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -2408,6 +2411,7 @@ Show code
 <thead>
 <tr class="header">
 <th style="text-align: left;">file</th>
+<th style="text-align: left;">sheet</th>
 <th style="text-align: right;">year</th>
 <th style="text-align: right;">month</th>
 </tr>
@@ -2415,51 +2419,61 @@ Show code
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">sheet1_2003_1.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2003</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sheet2_2003_1.csv</td>
+<td style="text-align: left;">sheet2</td>
 <td style="text-align: right;">2003</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sheet1_2003_2.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2003</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sheet2_2003_2.csv</td>
+<td style="text-align: left;">sheet2</td>
 <td style="text-align: right;">2003</td>
 <td style="text-align: right;">2</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sheet1_2003_3.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2003</td>
 <td style="text-align: right;">3</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sheet5_subbasin_1_supply_sw.csv</td>
+<td style="text-align: left;">sheet5</td>
 <td style="text-align: right;">–</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sheet6_recharge.csv</td>
+<td style="text-align: left;">sheet6</td>
 <td style="text-align: right;">–</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sheet6_return_gw_from_gw.csv</td>
+<td style="text-align: left;">sheet6</td>
 <td style="text-align: right;">–</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sheet6_return_gw_from_sw.csv</td>
+<td style="text-align: left;">sheet6</td>
 <td style="text-align: right;">–</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">sheet6_supply_gw.csv</td>
+<td style="text-align: left;">sheet6</td>
 <td style="text-align: right;">–</td>
 <td style="text-align: right;">–</td>
 </tr>
@@ -2470,7 +2484,7 @@ Show code
 Show code
 </summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>data</span><span class='op'>[</span><span class='va'>iso3</span><span class='op'>==</span><span class='st'>"mli"</span>, <span class='fu'>.</span><span class='op'>(</span><span class='va'>file</span>, <span class='va'>year</span>, <span class='va'>month</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>data</span><span class='op'>[</span><span class='va'>iso3</span><span class='op'>==</span><span class='st'>"mli"</span>, <span class='fu'>.</span><span class='op'>(</span><span class='va'>file</span>, <span class='va'>sheet</span>, <span class='va'>year</span>, <span class='va'>month</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> 
   <span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>caption<span class='op'>=</span><span class='st'>"Mali - List of output files"</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -2480,6 +2494,7 @@ Show code
 <thead>
 <tr class="header">
 <th style="text-align: left;">file</th>
+<th style="text-align: left;">sheet</th>
 <th style="text-align: right;">year</th>
 <th style="text-align: right;">month</th>
 </tr>
@@ -2487,41 +2502,49 @@ Show code
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Sheet1_2010.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2010</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sheet1_2011.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2011</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sheet1_2012.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2012</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sheet1_2013.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2013</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sheet1_2014.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2014</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sheet1_2015.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2015</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sheet1_2016.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2016</td>
 <td style="text-align: right;">–</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sheet1_2017.csv</td>
+<td style="text-align: left;">sheet1</td>
 <td style="text-align: right;">2017</td>
 <td style="text-align: right;">–</td>
 </tr>
@@ -2861,7 +2884,35 @@ Show code
 </tbody>
 </table>
 </div>
-<p>We make the yearly dataset available in the client as a JSON array named <code>data</code>. We also pass a default color palette <code>pal</code> for convenience.</p>
+<p>We’ll gather all the <strong>yearly</strong> budgets for now into a long table, and plot the trends.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>f</span> <span class='op'>&lt;-</span> <span class='va'>data</span><span class='op'>[</span><span class='va'>sheet</span><span class='op'>==</span><span class='st'>"sheet1"</span> <span class='op'>&amp;</span> <span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>month</span><span class='op'>)</span> <span class='op'>&amp;</span> <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span><span class='op'>]</span>
+
+<span class='va'>data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>f</span><span class='op'>)</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> 
+  <span class='fu'><a href='https://Rdatatable.gitlab.io/data.table/reference/fread.html'>fread</a></span><span class='op'>(</span><span class='va'>f</span><span class='op'>[</span><span class='va'>x</span>, <span class='va'>path</span><span class='op'>]</span><span class='op'>)</span><span class='op'>[</span>, <span class='fu'>`:=`</span><span class='op'>(</span>
+    iso3 <span class='op'>=</span> <span class='va'>f</span><span class='op'>[</span><span class='va'>x</span>, <span class='va'>iso3</span><span class='op'>]</span>,
+    sheet <span class='op'>=</span> <span class='va'>f</span><span class='op'>[</span><span class='va'>x</span>, <span class='va'>sheet</span><span class='op'>]</span>,
+    year <span class='op'>=</span> <span class='va'>f</span><span class='op'>[</span><span class='va'>x</span>, <span class='va'>year</span><span class='op'>]</span>
+  <span class='op'>)</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://Rdatatable.gitlab.io/data.table/reference/rbindlist.html'>rbindlist</a></span><span class='op'>(</span><span class='op'>)</span>
+
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>data</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>year</span>, <span class='va'>VALUE</span>, color<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>SUBCLASS</span>, <span class='va'>VARIABLE</span>, sep<span class='op'>=</span><span class='st'>" "</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/facet_wrap.html'>facet_wrap</a></span><span class='op'>(</span><span class='op'>~</span><span class='fu'><a href='https://rdrr.io/r/base/chartr.html'>toupper</a></span><span class='op'>(</span><span class='va'>iso3</span><span class='op'>)</span>, scales<span class='op'>=</span><span class='st'>"free"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='cn'>NULL</span>, y<span class='op'>=</span><span class='st'>"kg/m³"</span>, title<span class='op'>=</span><span class='st'>"Yearly Resource Base"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>
+    legend.position<span class='op'>=</span><span class='st'>"bottom"</span>, 
+    text<span class='op'>=</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>family<span class='op'>=</span><span class='st'>"Roboto Condensed"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<p><img src="index_files/figure-html5/unnamed-chunk-4-1.svg" width="624" /></p>
+</div>
+<p>We make a yearly dataset available in the client as a JSON array named <code>data</code>. We also pass a default color palette <code>pal</code> for convenience.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
@@ -2873,12 +2924,12 @@ Show code
   &lt;script&gt; 
   var data = %s;
   var pal = %s;
-  &lt;/script&gt;"</span>, <span class='fu'><a href='https://rdrr.io/pkg/jsonlite/man/fromJSON.html'>toJSON</a></span><span class='op'>(</span><span class='va'>ken</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/pkg/jsonlite/man/fromJSON.html'>toJSON</a></span><span class='op'>(</span><span class='va'>pal</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+  &lt;/script&gt;"</span>, <span class='fu'><a href='https://rdrr.io/pkg/jsonlite/man/fromJSON.html'>toJSON</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>[</span><span class='va'>iso3</span><span class='op'>==</span><span class='st'>"ken"</span> <span class='op'>&amp;</span> <span class='va'>year</span><span class='op'>==</span><span class='fl'>2017</span><span class='op'>]</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/pkg/jsonlite/man/fromJSON.html'>toJSON</a></span><span class='op'>(</span><span class='va'>pal</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
 </details>
 <script> 
-  var data = [{"CLASS":"INFLOW","SUBCLASS":"PRECIPITATION","VARIABLE":"Rainfall","VALUE":13.1648},{"CLASS":"INFLOW","SUBCLASS":"PRECIPITATION","VARIABLE":"Snowfall","VALUE":0},{"CLASS":"INFLOW","SUBCLASS":"PRECIPITATION","VARIABLE":"Precipitation recycling","VALUE":0},{"CLASS":"INFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Main riverstem","VALUE":0},{"CLASS":"INFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Tributaries","VALUE":0},{"CLASS":"INFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Utilized surface water","VALUE":0},{"CLASS":"INFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Flood","VALUE":0},{"CLASS":"INFLOW","SUBCLASS":"GROUNDWATER","VARIABLE":"Natural","VALUE":0},{"CLASS":"INFLOW","SUBCLASS":"GROUNDWATER","VARIABLE":"Utilized","VALUE":0},{"CLASS":"INFLOW","SUBCLASS":"OTHER","VARIABLE":"Desalinized","VALUE":0},{"CLASS":"STORAGE","SUBCLASS":"CHANGE","VARIABLE":"Surface storage","VALUE":-3.8473},{"CLASS":"STORAGE","SUBCLASS":"CHANGE","VARIABLE":"Storage in sinks","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"ET LANDSCAPE","VARIABLE":"Protected","VALUE":1.3878},{"CLASS":"OUTFLOW","SUBCLASS":"ET LANDSCAPE","VARIABLE":"Utilized","VALUE":2.4564},{"CLASS":"OUTFLOW","SUBCLASS":"ET LANDSCAPE","VARIABLE":"Modified","VALUE":3.0237},{"CLASS":"OUTFLOW","SUBCLASS":"ET LANDSCAPE","VARIABLE":"Managed","VALUE":0.0985},{"CLASS":"OUTFLOW","SUBCLASS":"ET UTILIZED FLOW","VARIABLE":"Protected","VALUE":0.0125},{"CLASS":"OUTFLOW","SUBCLASS":"ET UTILIZED FLOW","VARIABLE":"Utilized","VALUE":0.6944},{"CLASS":"OUTFLOW","SUBCLASS":"ET UTILIZED FLOW","VARIABLE":"Modified","VALUE":0.0771},{"CLASS":"OUTFLOW","SUBCLASS":"ET UTILIZED FLOW","VARIABLE":"Managed","VALUE":0.6134},{"CLASS":"OUTFLOW","SUBCLASS":"ET INCREMENTAL","VARIABLE":"Manmade","VALUE":0.0023},{"CLASS":"OUTFLOW","SUBCLASS":"ET INCREMENTAL","VARIABLE":"Natural","VALUE":0.784},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Main riverstem","VALUE":1.5649},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Tributaries","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Utilized surface water","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Flood","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Interbasin transfer","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"GROUNDWATER","VARIABLE":"Natural","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"GROUNDWATER","VARIABLE":"Utilized","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"OTHER","VARIABLE":"Non-utilizable","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"OTHER","VARIABLE":"Other","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"RESERVED","VARIABLE":"Commited","VALUE":0.6405},{"CLASS":"OUTFLOW","SUBCLASS":"RESERVED","VARIABLE":"Navigational","VALUE":0},{"CLASS":"OUTFLOW","SUBCLASS":"RESERVED","VARIABLE":"Environmental","VALUE":0}];
+  var data = [{"CLASS":"INFLOW","SUBCLASS":"PRECIPITATION","VARIABLE":"Rainfall","VALUE":13.1648,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"INFLOW","SUBCLASS":"PRECIPITATION","VARIABLE":"Snowfall","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"INFLOW","SUBCLASS":"PRECIPITATION","VARIABLE":"Precipitation recycling","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"INFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Main riverstem","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"INFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Tributaries","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"INFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Utilized surface water","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"INFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Flood","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"INFLOW","SUBCLASS":"GROUNDWATER","VARIABLE":"Natural","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"INFLOW","SUBCLASS":"GROUNDWATER","VARIABLE":"Utilized","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"INFLOW","SUBCLASS":"OTHER","VARIABLE":"Desalinized","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"STORAGE","SUBCLASS":"CHANGE","VARIABLE":"Surface storage","VALUE":-3.8473,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"STORAGE","SUBCLASS":"CHANGE","VARIABLE":"Storage in sinks","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET LANDSCAPE","VARIABLE":"Protected","VALUE":1.3878,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET LANDSCAPE","VARIABLE":"Utilized","VALUE":2.4564,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET LANDSCAPE","VARIABLE":"Modified","VALUE":3.0237,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET LANDSCAPE","VARIABLE":"Managed","VALUE":0.0985,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET UTILIZED FLOW","VARIABLE":"Protected","VALUE":0.0125,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET UTILIZED FLOW","VARIABLE":"Utilized","VALUE":0.6944,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET UTILIZED FLOW","VARIABLE":"Modified","VALUE":0.0771,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET UTILIZED FLOW","VARIABLE":"Managed","VALUE":0.6134,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET INCREMENTAL","VARIABLE":"Manmade","VALUE":0.0023,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"ET INCREMENTAL","VARIABLE":"Natural","VALUE":0.784,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Main riverstem","VALUE":1.5649,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Tributaries","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Utilized surface water","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Flood","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"SURFACE WATER","VARIABLE":"Interbasin transfer","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"GROUNDWATER","VARIABLE":"Natural","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"GROUNDWATER","VARIABLE":"Utilized","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"OTHER","VARIABLE":"Non-utilizable","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"OTHER","VARIABLE":"Other","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"RESERVED","VARIABLE":"Commited","VALUE":0.6405,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"RESERVED","VARIABLE":"Navigational","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017},{"CLASS":"OUTFLOW","SUBCLASS":"RESERVED","VARIABLE":"Environmental","VALUE":0,"iso3":"ken","sheet":"sheet1","year":2017}];
   var pal = ["#3C8DBC","#DD4B39","#00A65A","#00C0EF","#F39C12","#0073B7","#001F3F","#39CCCC","#3D9970","#01FF70","#FF851B","#F012BE","#605CA8","#D81B60","#111111","#D2D6DE"];
   </script>
 </div>
@@ -2897,7 +2948,7 @@ Show code
 </code></pre>
 </div>
 </details>
-<p><img src="../../www/svg/sheet_1.svg" width="33%" /><img src="../../www/svg/sheet_2.svg" width="33%" /><img src="../../www/svg/sheet_3.svg" width="33%" /><img src="../../www/svg/sheet_4_part1.svg" width="33%" /><img src="../../www/svg/sheet_5.svg" width="33%" /><img src="../../www/svg/sheet_6.svg" width="33%" /></p>
+<p><img src="../../www/svg/sheet_1.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_2.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_3.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_4_part1.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_5.svg" width="33%" data-distill-preview=1 /><img src="../../www/svg/sheet_6.svg" width="33%" data-distill-preview=1 /></p>
 </div>
 <p>These sheets incorporate a quantity of domain-specific knowledge, they are used to both teach and communicate about the WA+ approach and simulation results. They are produced in the final step of the analysis (using vector graphic templates), typically after the water accounts have been aggregated to a seasonal or yearly time span. The process is somewhat (but not entirely) automated, e.g. the analyst can decide to add or hide elements.</p>
 <p>Note that the original templates were created in Inkscape with <strong>SVG 1.1</strong> specifications. They are professional printable designs and not optimized for rendering in a browser, so we start by testing whether we can interact and modify these designs using D3. We focus on the Resource Base sheet first.</p>
