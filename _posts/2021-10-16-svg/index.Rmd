@@ -150,15 +150,16 @@ htmltools::tags$script(src="https://d3js.org/d3.v6.min.js")
 
 First we create a dummy SVG widget using the sample Kenya data for 2017.
 
-<div id="d3ex1" class="l-body"></div>
+::: {#d3ex1 .l-body}
+:::
 
 ```{js, code_folding=F}
 
 // Keep only positive variables
 var dd = data.filter((d) => (d.VALUE !== 0));
 
-let hw = $("#d3ex1").width();
-let box = 20;
+const hw = $("#d3ex1").width();
+const box = 20;
 
 var svg = d3.select("#d3ex1")
   .append("svg")
@@ -211,12 +212,15 @@ d3.selection.prototype.move = function(x, y) {
 
 Then we load the original SVG design and progressively add data bindings.
 
-<div id="d3ex2" class="l-body"></div>
-<div class="l-gutter">
-  <button onclick="fun_color('.d3ex2');">Change Text Color</button>
-  <button onclick="fun_remove('.d3ex2');">Change Fill Color</button>
-  <button onclick="fun_reset('.d3ex2');">Reset Design</button>
-</div>
+::: {#d3ex2 .l-body}
+:::
+
+:::{.l-gutter}
+<button onclick="fun_color();">Change Text Color</button>
+<button onclick="fun_fill();">Change Fill Color</button>
+<button onclick="fun_move('path8792');">Translate</button>
+<button onclick="fun_reset();">Reset Design</button>
+:::
 
 ```{js, code_folding=FALSE}
 
@@ -225,37 +229,42 @@ var svg = div
   .append("svg")
   .attr("viewBox", [0, 0, hw, hw*0.8])
   .insert("svg:g")
-  .attr("class", "d3ex2");
+  .attr("class", ".d3ex2");  
 
-function fun_reset(target, src="../../www/svg/sheet_1.svg") {
-  var e = d3.select(target);
-  //e.node().remove();
+function fun_reset(src="../../www/svg/sheet_1.svg") {
+  svg.selectAll("svg").remove();
+
   // Append external design
   d3.xml(src)
     .then(d => {
-    e.node().append(d.documentElement);
+    svg.node().append(d.documentElement);
     });
 };
 
-fun_reset(".d3ex2");
+fun_reset();
 
 ```
 
-Now that we have the SVG DOM loaded, we can do silly things, like change the text color or remove some elements. We can also list all text elements with default value "NaN".
+Now that we have the SVG DOM loaded, we can do silly things, like change the text color or move (translate) some elements. We can also list all text elements with default value "NaN", so that we can start mapping text labels to data values.
 
 ```{js, code_folding=FALSE}
 
-function fun_color(d) {
- d3.select(d)
+function fun_color() {
+  svg
    .selectAll("text")
    .style("fill", "red");
  };
  
-function fun_remove(d) {
- d3.select(d)
+function fun_fill() {
+  svg
    .selectAll("path").style("fill", "red");
- }; 
+ };
  
+function fun_move(id) {
+  svg.select("#"+id) 
+    .raise()
+    .move(-20, -20);
+ };  
  
 var vars = svg.selectAll("text[text='NaN']").id();
 div.append(p).html(vars);

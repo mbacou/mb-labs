@@ -2923,8 +2923,8 @@ Show code
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">// Keep only positive variables</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> dd <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>((d) <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">VALUE</span> <span class="op">!==</span> <span class="dv">0</span>))<span class="op">;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> hw <span class="op">=</span> <span class="fu">$</span>(<span class="st">&quot;#d3ex1&quot;</span>)<span class="op">.</span><span class="fu">width</span>()<span class="op">;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> box <span class="op">=</span> <span class="dv">20</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> hw <span class="op">=</span> <span class="fu">$</span>(<span class="st">&quot;#d3ex1&quot;</span>)<span class="op">.</span><span class="fu">width</span>()<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> box <span class="op">=</span> <span class="dv">20</span><span class="op">;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;#d3ex1&quot;</span>)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;svg&quot;</span>)</span>
@@ -2977,8 +2977,8 @@ Show code
 // Keep only positive variables
 var dd = data.filter((d) => (d.VALUE !== 0));
 
-let hw = $("#d3ex1").width();
-let box = 20;
+const hw = $("#d3ex1").width();
+const box = 20;
 
 var svg = d3.select("#d3ex1")
   .append("svg")
@@ -3034,7 +3034,18 @@ d3.selection.prototype.move = function(x, y) {
 
 </div>
 <div class="l-gutter">
-<p><button onclick="fun_color('.d3ex2');">Change Text Color</button> <button onclick="fun_remove('.d3ex2');">Change Fill Color</button> <button onclick="fun_reset('.d3ex2');">Reset Design</button></p>
+<button onclick="fun_color();">
+Change Text Color
+</button>
+<button onclick="fun_fill();">
+Change Fill Color
+</button>
+<button onclick="fun_move(&#39;path8792&#39;);">
+Translate
+</button>
+<button onclick="fun_reset();">
+Reset Design
+</button>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -3043,19 +3054,19 @@ d3.selection.prototype.move = function(x, y) {
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;svg&quot;</span>)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;viewBox&quot;</span><span class="op">,</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> hw<span class="op">,</span> hw<span class="op">*</span><span class="fl">0.8</span>])</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">insert</span>(<span class="st">&quot;svg:g&quot;</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;d3ex2&quot;</span>)<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;.d3ex2&quot;</span>)<span class="op">;</span>  </span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_reset</span>(target<span class="op">,</span> src<span class="op">=</span><span class="st">&quot;../../www/svg/sheet_1.svg&quot;</span>) {</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> e <span class="op">=</span> d3<span class="op">.</span><span class="fu">select</span>(target)<span class="op">;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="co">//e.node().remove();</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_reset</span>(src<span class="op">=</span><span class="st">&quot;../../www/svg/sheet_1.svg&quot;</span>) {</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;svg&quot;</span>)<span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Append external design</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">xml</span>(src)</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">then</span>(d <span class="kw">=&gt;</span> {</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    e<span class="op">.</span><span class="fu">node</span>()<span class="op">.</span><span class="fu">append</span>(d<span class="op">.</span><span class="at">documentElement</span>)<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    svg<span class="op">.</span><span class="fu">node</span>()<span class="op">.</span><span class="fu">append</span>(d<span class="op">.</span><span class="at">documentElement</span>)<span class="op">;</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">fun_reset</span>(<span class="st">&quot;.d3ex2&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">fun_reset</span>()<span class="op">;</span></span></code></pre></div>
 <script type="text/javascript">
 
 var div = d3.select("#d3ex2");
@@ -3063,52 +3074,62 @@ var svg = div
   .append("svg")
   .attr("viewBox", [0, 0, hw, hw*0.8])
   .insert("svg:g")
-  .attr("class", "d3ex2");
+  .attr("class", ".d3ex2");  
 
-function fun_reset(target, src="../../www/svg/sheet_1.svg") {
-  var e = d3.select(target);
-  //e.node().remove();
+function fun_reset(src="../../www/svg/sheet_1.svg") {
+  svg.selectAll("svg").remove();
+
   // Append external design
   d3.xml(src)
     .then(d => {
-    e.node().append(d.documentElement);
+    svg.node().append(d.documentElement);
     });
 };
 
-fun_reset(".d3ex2");
+fun_reset();
 
 </script>
 </div>
 <p>Now that we have the SVG DOM loaded, we can do silly things, like change the text color or remove some elements. We can also list all text elements with default value “NaN”.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_color</span>(d) {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> d3<span class="op">.</span><span class="fu">select</span>(d)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_color</span>() {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  svg</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text&quot;</span>)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;red&quot;</span>)<span class="op">;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_remove</span>(d) {</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a> d3<span class="op">.</span><span class="fu">select</span>(d)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_fill</span>() {</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  svg</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;path&quot;</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;red&quot;</span>)<span class="op">;</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span> </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> vars <span class="op">=</span> svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text[text=&#39;NaN&#39;]&quot;</span>)<span class="op">.</span><span class="fu">id</span>()<span class="op">;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>div<span class="op">.</span><span class="fu">append</span>(p)<span class="op">.</span><span class="fu">html</span>(vars)<span class="op">;</span></span></code></pre></div>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_move</span>(id) {</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  svg<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;#&quot;</span><span class="op">+</span>id) </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">raise</span>()</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">move</span>(<span class="op">-</span><span class="dv">20</span><span class="op">,</span> <span class="op">-</span><span class="dv">20</span>)<span class="op">;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span>  </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> vars <span class="op">=</span> svg<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text[text=&#39;NaN&#39;]&quot;</span>)<span class="op">.</span><span class="fu">id</span>()<span class="op">;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>div<span class="op">.</span><span class="fu">append</span>(p)<span class="op">.</span><span class="fu">html</span>(vars)<span class="op">;</span></span></code></pre></div>
 <script type="text/javascript">
 
-function fun_color(d) {
- d3.select(d)
+function fun_color() {
+  svg
    .selectAll("text")
    .style("fill", "red");
  };
  
-function fun_remove(d) {
- d3.select(d)
+function fun_fill() {
+  svg
    .selectAll("path").style("fill", "red");
- }; 
+ };
  
+function fun_move(id) {
+  svg.select("#"+id) 
+    .raise()
+    .move(-20, -20);
+ };  
  
 var vars = svg.selectAll("text[text='NaN']").id();
 div.append(p).html(vars);
