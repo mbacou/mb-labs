@@ -76,7 +76,7 @@ data[iso3=="mli", .(file, sheet, year, month)] %>%
 
 ```
 
-In particular we have yearly (2 seasons) model steps for Mali and monthly steps for Kenya that are further aggregated to seasonal and yearly time spans (by variable), as well as monthly time-series. In Mali only **Sheet 1** was produced (Resource Base).
+In particular we have yearly model steps for Mali and monthly steps for Kenya that are further aggregated to yearly time spans (by variable), as well as monthly time-series. In Mali only **Sheet 1** was produced (Resource Base).
 
 Let's load a sample output for Kenya for the year 2017.
 
