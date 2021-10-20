@@ -158,7 +158,7 @@ First we create a dummy SVG widget using the sample Kenya data for 2017.
 // Keep only non-null variables
 var dd = data.filter((d) => (d.VALUE !== 0));
 
-const hw = 400;
+const hw = $("#d3ex1").width();
 const box = 20;
 const max_value = 13;
 
@@ -175,7 +175,7 @@ svg
   .attr("y", (_, i) => (i * (box+5)+5) )
   .attr("width", d => (hw-80)*Math.abs(d.VALUE)/max_value )
   .attr("height", box)
-  .attr("fill", d => pal[d.SUBCLASS])
+  .attr("fill", d => pal[3])
   .on("mouseover", handleMouseOver)
   .on("mouseout", handleMouseOut);
 
