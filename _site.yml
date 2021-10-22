@@ -17,7 +17,6 @@ collections:
     share: [twitter, linkedin]
     custom: _custom.html
 navbar:
-  logo: www/logo_w.svg
   search: false
   source_url: true
   right:
