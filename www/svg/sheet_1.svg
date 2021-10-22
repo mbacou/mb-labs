@@ -412,7 +412,7 @@
            id="tspan44355">Utilized flow</tspan></text>
     </g>
     <g
-       id="g177403"
+       id="ginflow"
        inkscape:label="ginflow">
       <rect
          style="fill:#5f9dd3;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -814,7 +814,7 @@
        inkscape:label="arrow"
        sodipodi:nodetypes="cccccccccc" />
     <g
-       id="g177501"
+       id="goutflow"
        inkscape:label="goutflow">
       <rect
          style="fill:url(#linearGradient129121);fill-opacity:1;fill-rule:evenodd;stroke-width:1"

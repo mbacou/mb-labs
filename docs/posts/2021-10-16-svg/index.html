@@ -3082,11 +3082,12 @@ Dummy Widget
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co">// Test interactions</span></span>
 <span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">handleMouseOver</span>(d<span class="op">,</span> i) {</span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>   d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">2</span>])<span class="op">;</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">handleMouseOut</span>(d<span class="op">,</span> i<span class="op">,</span> fill<span class="op">=</span>pal[<span class="dv">1</span>]) {</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> fill)<span class="op">;</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>   d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">2</span>])<span class="op">;</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">handleMouseOut</span>(d<span class="op">,</span> i<span class="op">,</span> fill<span class="op">=</span>pal[<span class="dv">1</span>]) {</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> fill)<span class="op">;</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
 <script type="text/javascript">
 
 // Keep only non-null variables
@@ -3157,6 +3158,7 @@ svg.selectAll("mybar")
 // Test interactions
 function handleMouseOver(d, i) {
    d3.select(this).style("fill", pal[2]);
+   d3.select(this).attr("fill", pal[2]);
 };
 
 function handleMouseOut(d, i, fill=pal[1]) {
@@ -3260,10 +3262,10 @@ svg
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">0</span>])<span class="op">;</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_group</span>(el<span class="op">=</span><span class="st">&quot;d3ex2&quot;</span>) {</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;.&quot;</span> <span class="op">+</span> el)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;g&quot;</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;path&quot;</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_group</span>(el<span class="op">=</span><span class="st">&quot;d3ex2&quot;</span><span class="op">,</span> sel<span class="op">=</span><span class="st">&quot;&quot;</span>) {</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> f <span class="op">=</span> sel <span class="op">!=</span> <span class="st">&quot;&quot;</span> <span class="op">?</span> <span class="st">&quot;[id=&#39;&quot;</span> <span class="op">+</span> sel <span class="op">+</span> <span class="st">&quot;&#39;]&quot;</span> <span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;.&quot;</span> <span class="op">+</span> el)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;g&quot;</span> <span class="op">+</span> f)</span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;stroke&quot;</span><span class="op">,</span> pal[<span class="dv">9</span>])</span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">raise</span>()</span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">move</span>(<span class="op">-</span><span class="dv">20</span><span class="op">,</span> <span class="op">-</span><span class="dv">20</span>)<span class="op">;</span></span>
@@ -3291,10 +3293,10 @@ function fun_fill(el="d3ex2") {
     .style("fill", pal[0]);
  };
  
-function fun_group(el="d3ex2") {
+function fun_group(el="d3ex2", sel="") {
+  let f = sel != "" ? "[id='" + sel + "']" : "";
   d3.select("." + el)
-  .selectAll("g")
-  .selectAll("path")
+  .select("g" + f)
     .style("stroke", pal[9])
     .raise()
     .move(-20, -20);
@@ -3307,7 +3309,7 @@ function fun_group(el="d3ex2") {
 
 </div>
 <div class="l-gutter">
-<button onclick="fun_group(&#39;d3ex3&#39;);">
+<button onclick="fun_group(&#39;d3ex3&#39;, &#39;ginflow&#39;);">
 Show Groups
 </button>
 <button onclick="fun_reset(&#39;d3ex3&#39;, &#39;../../www/svg/sheet_1.svg&#39;);">
@@ -3326,8 +3328,10 @@ Reset Design
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">fun_reset</span>(<span class="st">&quot;d3ex3&quot;</span><span class="op">,</span> <span class="st">&quot;../../www/svg/sheet_1.svg&quot;</span>)<span class="op">;</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;.d3ex3&quot;</span>)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;rect&quot;</span>)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">on</span>(<span class="st">&quot;mouseover&quot;</span><span class="op">,</span> handleMouseOver)<span class="op">;</span></span></code></pre></div>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;svg&quot;</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;#ginflow&quot;</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;rect&quot;</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">on</span>(<span class="st">&quot;mouseover&quot;</span><span class="op">,</span> handleMouseOver)<span class="op">;</span></span></code></pre></div>
 <script type="text/javascript">
 
 var div = d3.select("#d3ex3");
@@ -3340,6 +3344,8 @@ var svg = div
 fun_reset("d3ex3", "../../www/svg/sheet_1.svg");
 
 d3.select(".d3ex3")
+  .select("svg")
+  .selectAll("#ginflow")
   .selectAll("rect")
   .on("mouseover", handleMouseOver);
 
