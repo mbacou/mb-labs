@@ -29,9 +29,23 @@ library(scales)
 library(stringr)
 library(data.table)
 
-opts_chunk$set(res=220, pointsize=8)
-pal <- readRDS("../../_assets/palette.rds")
+pal <- fread("
+  color, name
+  #004a72, blue
+  #337ab7, light-blue
+  #d9edf7, aqua
+  #8a4f7d, purple
+  #b185a7, fuschia
+  #ff8811, orange
+  #f4d06f, yellow
+  #4da167, green
+  #53dd6c, lime
+  #dc493a, red
+  #6b4b3e, maroon
+  #96705b, olive")
+pal <- pal$color
 options(ggplot2.discrete.color=pal)
+opts_chunk$set(res=220, pointsize=8)
 
 ```
 
@@ -149,7 +163,7 @@ There are multiple SVG template sheets provided in the Kenya code repository (un
 
 svg <- "../../www/svg" %>%
   list.files(pattern="*.svg", full.names=TRUE)
-include_graphics(svg[-c(1:2, 6, 8)])
+include_graphics(svg[-c(2:4, 7, 9)])
 
 ```
 
@@ -170,12 +184,15 @@ Provide D3 as an external dependency in this notebook:
 
 # Import D3
 htmltools::tags$script(src="https://d3js.org/d3.v6.min.js")
-
 ```
 
-First we create a dummy SVG widget using the sample Kenya data for 2017.
+First we create a dummy SVG widget using the sample Kenya data for 2017 (to make sure libraries are loaded).
 
 ::: {#d3ex1 .l-body}
+:::
+
+:::{.l-gutter}
+<button onclick="fun_barchart();">Dummy Widget</button>
 :::
 
 ```{js, code_folding=F}
@@ -183,69 +200,75 @@ First we create a dummy SVG widget using the sample Kenya data for 2017.
 // Keep only non-null variables
 var dd = data.filter((d) => (d.VALUE !== 0));
 
-const hw = $("#d3ex1").width();
-const box = .6*hw/18;
-const max_value = 13;
+function fun_barchart(data=dd, target="#d3ex1") {
 
-var svg = d3.select("#d3ex1")
-  .append("svg")
-  .attr("viewBox", [0, 0, hw, box*19]);
+  d3.select(target).selectAll("svg").remove();
 
-svg
-  .selectAll("rect")
-  .data(dd)
-  .enter()
-  .append("rect")
-  .attr("x", d => Math.min(80, 80+((hw-80)*d.VALUE/max_value)) )
-  .attr("y", (_, i) => (i * (box+5)+5) )
-  .attr("width", d => (hw-80)*Math.abs(d.VALUE)/max_value )
-  .attr("height", box)
-  .attr("fill", d => pal[3])
-  .on("mouseover", handleMouseOver)
-  .on("mouseout", handleMouseOut);
-
-svg
-  .append("g")
-  .selectAll("text")
-  .data(dd)
-  .enter()
-  .append("text")
-  .attr("x", 90)
-  .attr("y", (_, i) => (i * (box+5) + box)  )
-  .style("fill", "black")
-  .style("font-size", box*.6+"px")
-  .attr("text-anchor", "start")
-  .text((d) => (d.VALUE.toFixed(2) + " km³/year"));
+  var width = $(target).width() - 10;
+  var box = 0.6 * width/18;
+  var height = box * 21;
   
-svg
-  .append("g")
-  .selectAll("text")
-  .data(dd)
-  .enter()
-  .append("text")
-  .attr("x", hw-10)
-  .attr("y", (_, i) => (i * (box+5) + box) )
-  .style("fill", "black")
-  .style("font-size", box*.6+"px")
-  .attr("text-anchor", "end")
-  .text((d) => (d.SUBCLASS + " - " + d.VARIABLE));  
+  var svg = d3.select(target)
+    .append("svg")
+    .attr("viewBox", [0, 0, width, height])
+    .append("g")
+      .attr("transform", "translate(10, 10)");  
+    
+  // Add X axis 
+  var x = d3.scaleLinear()
+    .domain([0, 14])
+    .range([0, width]);
+  
+  svg
+    .selectAll("mybar")
+    .data(data)
+    .enter()
+    .append("rect")
+    .attr("x", d => x(Math.min(0, d.VALUE)) )
+    .attr("y", (_, i) => (i * (box+5)+5) )
+    .attr("width", d => 0 )
+    .attr("height", box)
+    .attr("fill", pal[1])
+    .on("mouseover", handleMouseOver)
+    .on("mouseout", handleMouseOut);
+    
+svg.selectAll("mybar")
+    .data(data)
+    .enter()
+    .append("text")
+    .attr("x", d => x(0)+10)
+    .attr("y", (_, i) => (i * (box+5) + box)  )
+    .style("font-size", box*0.6 + "px")
+    .attr("text-anchor", "start")
+    .text(d => (d.VALUE.toFixed(2) + " km³/year"));
+    
+  svg
+    .append("g")
+    .selectAll("text")
+    .data(data)
+    .enter()
+    .append("text")
+    .attr("x", width-20)
+    .attr("y", (_, i) => (i * (box+5) + box) )
+    .style("font-size", box*.6+"px")
+    .attr("text-anchor", "end")
+    .text(d => (d.SUBCLASS + " - " + d.VARIABLE));
+    
+  // Animation
+  svg.selectAll("rect")
+    .transition()
+    .duration(800)
+    .attr("width", d => x(Math.abs(d.VALUE)))
+    .delay((d,i) => i*100);
+};
 
 // Test interactions
 function handleMouseOver(d, i) {
-  d3.select(this)
-  .style("fill", pal[4])
-  .move(1, 0)
+   d3.select(this).style("fill", pal[2]);
 };
 
-function handleMouseOut(d, i) {
-  d3.select(this)
-  .style("fill", pal[3])
-  .move(-1, 0)
-};
-
-d3.selection.prototype.move = function(x, y) {
-  this.attr("transform", "translate(" + x + "," + y + ")");
-  return this;
+function handleMouseOut(d, i, fill=pal[1]) {
+  d3.select(this).style("fill", fill);
 };
 
 ```
@@ -258,12 +281,13 @@ Then we load the original SVG design and progressively add data bindings.
 :::{.l-gutter}
 <button onclick="fun_color();">Change Text Color</button>
 <button onclick="fun_fill();">Change Fill Color</button>
-<button onclick="fun_move('path8792');">Translate</button>
-<button onclick="fun_reset();">Reset Design</button>
+<button onclick="fun_group();">Show Groups</button>
+<button onclick="fun_reset();">Reset Widget</button>
 :::
 
 ```{js, code_folding=FALSE}
 
+var hw = $("#d3ex2").width();
 var div = d3.select("#d3ex2");
 var svg = div
   .append("svg")
@@ -271,48 +295,88 @@ var svg = div
   .insert("svg:g")
   .attr("class", "d3ex2");  
 
-function fun_reset(src="../../www/svg/sheet_1.svg") {
-  svg.selectAll("svg").remove();
+function fun_reset(target="d3ex2", src="../../www/svg/sheet_1_old.svg") {
+  d3.select("." + target).selectAll("svg").remove();
 
   // Append external design
   d3.xml(src)
     .then(d => {
-    svg.node().append(d.documentElement);
+    d3.select("." + target).node().append(d.documentElement);
     });
 };
 
 fun_reset();
 
+svg
+  .selectAll("path")
+  .on("mouseover", handleMouseOver);
+
 ```
 
-Now that we have the SVG DOM loaded, we can do silly things, like change the text color or move (translate) some elements. We can also list all text elements with default value "NaN", so that we can start mapping labels to data values.
+Now that we have the SVG DOM loaded, we can do silly things, like change the text color or highlight some elements. We can also list all text elements with default value "NaN", so that we can start mapping labels to data values.
 
 ```{js, code_folding=FALSE}
 
-function fun_color() {
-  svg
-   .selectAll("text")
-   .style("fill", pal[3]);
+d3.selection.prototype.move = function(x, y) {
+  this
+    .transition()
+    .duration(800)
+    .attr("transform", "translate(" + x + "," + y + ")");
+  return this;
+};
+
+function fun_color(el="d3ex2") {
+  d3.select("." + el)
+  .select("svg")
+  .selectAll("text")
+   .style("fill", "white");
  };
  
-function fun_fill() {
-  svg
-   .selectAll("path").style("fill", pal[4]);
+function fun_fill(el="d3ex2") {
+  d3.select("." + el)
+  .selectAll("path")
+    .style("fill", pal[0]);
  };
  
-function fun_move(id) {
-  svg.select("#"+id) 
+function fun_group(el="d3ex2") {
+  d3.select("." + el)
+  .selectAll("g")
+  .selectAll("path")
+    .style("stroke", pal[9])
     .raise()
     .move(-20, -20);
- };  
- 
-var vars = svg.selectAll("text[text='NaN']").id();
-div.append(p).html(vars);
+ };
 
 ```
 
+At this point, we need to manually modify (simplify) the original SVG design to clean up paths and to make it easier to select and manipulate (drill through) logical layers and groups of elements. We can create a useful hierarchy in Inkscape and then re-import the modified design here.
 
-At this point, we need to modify (simplify) the original SVG design manually to make it easier to select and manipulate logical layers and groups of elements with D3. We can create a useful hierarchy in Inkscape and then re-import the modified version here. We can also add a static color legend.
+::: {#d3ex3 .l-body}
+:::
+
+:::{.l-gutter}
+<button onclick="fun_group('d3ex3');">Show Groups</button>
+<button onclick="fun_reset('d3ex3', '../../www/svg/sheet_1.svg');">Reset Design</button>
+:::
+
+```{js, code_folding=FALSE}
+
+var div = d3.select("#d3ex3");
+var svg = div
+  .append("svg")
+  .attr("viewBox", [0, 0, hw, hw*0.8])
+  .insert("svg:g")
+  .attr("class", "d3ex3");
+
+fun_reset("d3ex3", "../../www/svg/sheet_1.svg");
+
+d3.select(".d3ex3")
+  .selectAll("rect")
+  .on("mouseover", handleMouseOver);
+
+```
+
+Next step is to map text labels to data variables.
 
 
 # Graphviz
