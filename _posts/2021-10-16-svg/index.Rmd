@@ -45,7 +45,6 @@ pal <- fread("
   #96705b, olive")
 pal <- pal$color
 options(ggplot2.discrete.color=pal)
-opts_chunk$set(res=220, pointsize=8)
 
 ```
 
@@ -103,7 +102,25 @@ ken %>%
 
 ```
 
-This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLASS`. Units are in **km³/year**.
+This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLASS`. Units are in **km³/year**. That categorical data can be represented in a Sankey diagram but not very useful as-is (see [next](#sankey) section).
+
+```{r}
+
+library(ggalluvial)
+  
+ggplot(ken, aes(axis1=CLASS, axis2=SUBCLASS, axis3=VARIABLE, y=VALUE)) +
+  geom_alluvium(aes(fill=CLASS), width=1/4, alpha=.7, color="white") +
+  geom_stratum(width=1/4) +
+  geom_text(stat="stratum", aes(label=after_stat(stratum)), angle=90, size=2.2) +
+  scale_x_discrete(limits=c("class", "subclass", "variable")) +
+  labs(y=NULL, fill=NULL) +
+  scale_fill_manual(values=pal) +
+  theme(
+    panel.grid=element_blank(),
+    legend.position="top",
+    axis.text=element_text(face="bold"))
+
+```
 
 And monthly time-series of Incremental ET by land-use classes:
 
@@ -118,7 +135,7 @@ ken.ts[c(1:5, (.N-4):.N)] %>%
 
 We'll gather all the **yearly** budgets for now into a long table, and plot the trends.
 
-```{r, fig.asp=.8}
+```{r, fig.asp=.7}
 
 f <- data[sheet=="sheet1" & is.na(month) & !is.na(year)]
 
@@ -129,13 +146,15 @@ data <- lapply(1:nrow(f), function(x)
     year = f[x, year]
   )]) %>% rbindlist()
 
-ggplot(data, aes(year, VALUE, color=paste(SUBCLASS, VARIABLE, sep=" "))) +
-  geom_line() +
+ggplot(data[VALUE>0 & SUBCLASS %like% "ET"], 
+  aes(year, VALUE, color=paste(SUBCLASS, VARIABLE, sep=" "))) +
+  geom_line(size=1) +
   facet_wrap(~toupper(iso3), scales="free") +
-  labs(x=NULL, y="kg/m³", title="Yearly Resource Base") +
-  theme_minimal() + theme(
-    legend.position="bottom", 
-    text=element_text(family="Roboto Condensed"))
+  labs(x=NULL, y="kg/m³", color=NULL) +
+  scale_color_manual(values=pal) +
+  guides(color=guide_legend(ncol=3)) +
+  theme(
+    legend.position="top")
 
 ```
 

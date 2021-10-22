@@ -131,7 +131,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/d3v5-5.9.2/API.md","index_files/d3v5-5.9.2/CHANGES.md","index_files/d3v5-5.9.2/d3.min.js","index_files/d3v5-5.9.2/LICENSE","index_files/d3v5-5.9.2/README.md","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/figure-html5/unnamed-chunk-4-1.svg","index_files/header-attrs-2.11/header-attrs.js","index_files/htmlwidgets-1.5.4/htmlwidgets.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/r2d3-binding-0.2.5/r2d3.js","index_files/r2d3-render-0.1.0/r2d3-render.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","sheet.js"]}
+  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/d3v5-5.9.2/API.md","index_files/d3v5-5.9.2/CHANGES.md","index_files/d3v5-5.9.2/d3.min.js","index_files/d3v5-5.9.2/LICENSE","index_files/d3v5-5.9.2/README.md","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/figure-html5/unnamed-chunk-3-1.svg","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/figure-html5/unnamed-chunk-4-1.svg","index_files/figure-html5/unnamed-chunk-5-1.png","index_files/figure-html5/unnamed-chunk-5-1.svg","index_files/header-attrs-2.11/header-attrs.js","index_files/htmlwidgets-1.5.4/htmlwidgets.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/r2d3-binding-0.2.5/r2d3.js","index_files/r2d3-render-0.1.0/r2d3-render.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","sheet.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2376,7 +2376,6 @@ Show code
   #96705b, olive"</span><span class='op'>)</span>
 <span class='va'>pal</span> <span class='op'>&lt;-</span> <span class='va'>pal</span><span class='op'>$</span><span class='va'>color</span>
 <span class='fu'><a href='https://rdrr.io/r/base/options.html'>options</a></span><span class='op'>(</span>ggplot2.discrete.color<span class='op'>=</span><span class='va'>pal</span><span class='op'>)</span>
-<span class='va'>opts_chunk</span><span class='op'>$</span><span class='fu'>set</span><span class='op'>(</span>res<span class='op'>=</span><span class='fl'>220</span>, pointsize<span class='op'>=</span><span class='fl'>8</span><span class='op'>)</span>
 </code></pre>
 </div>
 </details>
@@ -2797,7 +2796,31 @@ Show code
 </tbody>
 </table>
 </div>
-<p>This file lists 34 output variables grouped into <code>CLASS</code> and <code>SUBCLASS</code>. Units are in <strong>km³/year</strong>.</p>
+<p>This file lists 34 output variables grouped into <code>CLASS</code> and <code>SUBCLASS</code>. Units are in <strong>km³/year</strong>. That categorical data can be represented in a Sankey diagram but not very useful as-is (see <a href="#sankey">next</a> section).</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://corybrunson.github.io/ggalluvial/'>ggalluvial</a></span><span class='op'>)</span>
+  
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>ken</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>axis1<span class='op'>=</span><span class='va'>CLASS</span>, axis2<span class='op'>=</span><span class='va'>SUBCLASS</span>, axis3<span class='op'>=</span><span class='va'>VARIABLE</span>, y<span class='op'>=</span><span class='va'>VALUE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='http://corybrunson.github.io/ggalluvial/reference/geom_alluvium.html'>geom_alluvium</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>fill<span class='op'>=</span><span class='va'>CLASS</span><span class='op'>)</span>, width<span class='op'>=</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>, alpha<span class='op'>=</span><span class='fl'>.7</span>, color<span class='op'>=</span><span class='st'>"white"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='http://corybrunson.github.io/ggalluvial/reference/geom_stratum.html'>geom_stratum</a></span><span class='op'>(</span>width<span class='op'>=</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_text.html'>geom_text</a></span><span class='op'>(</span>stat<span class='op'>=</span><span class='st'>"stratum"</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>label<span class='op'>=</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes_eval.html'>after_stat</a></span><span class='op'>(</span><span class='va'>stratum</span><span class='op'>)</span><span class='op'>)</span>, angle<span class='op'>=</span><span class='fl'>90</span>, size<span class='op'>=</span><span class='fl'>2.2</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_discrete.html'>scale_x_discrete</a></span><span class='op'>(</span>limits<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"class"</span>, <span class='st'>"subclass"</span>, <span class='st'>"variable"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>y<span class='op'>=</span><span class='cn'>NULL</span>, fill<span class='op'>=</span><span class='cn'>NULL</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_manual.html'>scale_fill_manual</a></span><span class='op'>(</span>values<span class='op'>=</span><span class='va'>pal</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>
+    panel.grid<span class='op'>=</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span>,
+    legend.position<span class='op'>=</span><span class='st'>"top"</span>,
+    axis.text<span class='op'>=</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face<span class='op'>=</span><span class='st'>"bold"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<p><img src="index_files/figure-html5/unnamed-chunk-3-1.svg" width="624" /></p>
+</div>
 <p>And monthly time-series of Incremental ET by land-use classes:</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
@@ -2813,7 +2836,7 @@ Show code
 </div>
 </details>
 <table>
-<caption><span id="tab:unnamed-chunk-3">Table 3: </span>sheet1_basin_etincr_monthly.csv</caption>
+<caption><span id="tab:unnamed-chunk-4">Table 3: </span>sheet1_basin_etincr_monthly.csv</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">time</th>
@@ -2913,17 +2936,19 @@ Show code
     year <span class='op'>=</span> <span class='va'>f</span><span class='op'>[</span><span class='va'>x</span>, <span class='va'>year</span><span class='op'>]</span>
   <span class='op'>)</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://Rdatatable.gitlab.io/data.table/reference/rbindlist.html'>rbindlist</a></span><span class='op'>(</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>data</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>year</span>, <span class='va'>VALUE</span>, color<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>SUBCLASS</span>, <span class='va'>VARIABLE</span>, sep<span class='op'>=</span><span class='st'>" "</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>[</span><span class='va'>VALUE</span><span class='op'>&gt;</span><span class='fl'>0</span> <span class='op'>&amp;</span> <span class='va'>SUBCLASS</span> <span class='op'>%like%</span> <span class='st'>"ET"</span><span class='op'>]</span>, 
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>year</span>, <span class='va'>VALUE</span>, color<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>SUBCLASS</span>, <span class='va'>VARIABLE</span>, sep<span class='op'>=</span><span class='st'>" "</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span>size<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span>
   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/facet_wrap.html'>facet_wrap</a></span><span class='op'>(</span><span class='op'>~</span><span class='fu'><a href='https://rdrr.io/r/base/chartr.html'>toupper</a></span><span class='op'>(</span><span class='va'>iso3</span><span class='op'>)</span>, scales<span class='op'>=</span><span class='st'>"free"</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='cn'>NULL</span>, y<span class='op'>=</span><span class='st'>"kg/m³"</span>, title<span class='op'>=</span><span class='st'>"Yearly Resource Base"</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>
-    legend.position<span class='op'>=</span><span class='st'>"bottom"</span>, 
-    text<span class='op'>=</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>family<span class='op'>=</span><span class='st'>"Roboto Condensed"</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='cn'>NULL</span>, y<span class='op'>=</span><span class='st'>"kg/m³"</span>, color<span class='op'>=</span><span class='cn'>NULL</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_manual.html'>scale_color_manual</a></span><span class='op'>(</span>values<span class='op'>=</span><span class='va'>pal</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/guides.html'>guides</a></span><span class='op'>(</span>color<span class='op'>=</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/guide_legend.html'>guide_legend</a></span><span class='op'>(</span>ncol<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>
+    legend.position<span class='op'>=</span><span class='st'>"top"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </details>
-<p><img src="index_files/figure-html5/unnamed-chunk-4-1.svg" width="624" /></p>
+<p><img src="index_files/figure-html5/unnamed-chunk-5-1.svg" width="624" /></p>
 </div>
 <p>We make a yearly dataset available in the client as a JSON array named <code>data</code>. We also pass a default color palette <code>pal</code> for convenience.</p>
 <div class="layout-chunk" data-layout="l-body">
