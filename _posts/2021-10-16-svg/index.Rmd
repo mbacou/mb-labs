@@ -22,7 +22,7 @@ output:
 
 ```{r setup}
 
-library(knitr)
+library(rmarkdown)
 library(jsonlite)
 library(ggplot2)
 library(scales)
@@ -49,21 +49,21 @@ options(ggplot2.discrete.color=pal)
 ```
 
 
-This notebook is to explore multiple visualization schemes:
+This notebook is to explore multiple visualization schemes for hydrologic model simulations:
 
 1. **Interactive SVG**: add user interactivity to existing SVG sheets (or simplified) designs using low-level [D3.js](https://d3js.org/) library
 2. **Graphviz**: redesign the WA+ sheets using [Graphviz](https://graphviz.org/) and provide interactivity with [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/)
-3. **Highcharts**: reshape WA+ model output to create more standard treemaps / sankey diagrams etc. using [Highcharts.js](https://www.highcharts.com/) charting library
+3. **Highcharts**: reshape WA+ model output to create more standard Sankey and/or treemaps [Highcharts.js](https://www.highcharts.com/) library
 4. **Leaflet**: create a 3D map of basin landscape with SVG annotation layers (arrows, etc.) using [leaflet.js](https://leafletjs.com/)
 
-The **D3.js** approach is the more flexible but also the more tedious to implement. Other approaches will be developed in separate notebooks.
+The **D3.js** approach is the more flexible but also the more "tedious" to implement. Other approaches will be developed in separate notebooks.
 
 
 # Data Preparation
 
-To validate the different approaches we use sample output datasets provided by **Naga Valpuri** for Mali (Niger river basin) and Kenya (Mara basin). All hydrological models are written in Python and published to GitHub (e.g. [Mali notebooks](https://github.com/wateraccounting/WAPORWA)).
+To validate the different approaches we use sample output datasets provided by **Naga Valpuri** (IWMI) for Mali (Niger river basin) and Kenya (Mara river basin). All hydrologic models are written in Python and version controlled to GitHub (e.g. [Mali notebooks](https://github.com/wateraccounting/WAPORWA)).
 
-```{r}
+```{r, fig.cap="Kenya - List of output files (top and last 5)"}
 
 data <- list(
   ken = "~/Projects/2021-iwmi/data/ken/hydroloop_results/csv",
@@ -82,27 +82,28 @@ data[,
   sheet = str_extract(tolower(file), "sheet[0-9]{1}") 
 )] %>% setorder(iso3, year, month, na.last=TRUE)
 
-data[iso3=="ken", .(file, sheet, year, month)][c(1:5, (.N-4):.N)] %>% 
-  kable(caption="Kenya - List of output files (top and last 5)")
-data[iso3=="mli", .(file, sheet, year, month)] %>% 
-  kable(caption="Mali - List of output files")
-
+data[iso3=="ken", .(file, sheet, year, month)] %>% 
+  paged_table()
 ```
 
-In particular we have yearly model steps for Mali and monthly steps for Kenya that are further aggregated to yearly time spans (by variable), as well as monthly time-series. In Mali only **Sheet 1** was produced (Resource Base).
+```{r, fig.cap="Mali - List of output files"}
 
-Let's load a sample output for Kenya for the year 2017.
+data[iso3=="mli", .(file, sheet, year, month)] %>% 
+  paged_table()
+```
 
-```{r}
+In particular we have yearly model steps for Mali and monthly steps for Kenya that are further aggregated to yearly time spans (by variable), as well as monthly time-series. In Mali only **Sheet 1** was produced (Resource Base), but the Kenya analysis includes output variables for all 6 hydro sheets. 
+
+Let's load a sample model output for Kenya for the year 2017.
+
+```{r, fig.cap="sheet1_2017.csv"}
 
 f <- "sheet1_2017.csv"
 ken <- data[iso3=="ken" & file==f][1, fread(path)]
-ken %>% 
-  kable(caption=f)
-
+ken %>% paged_table()
 ```
 
-This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLASS`. Units are in **km³/year**. That categorical data can be represented in a Sankey diagram but not very useful as-is (see [next](#sankey) section).
+This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLASS`. Units are in **km³/year**. This categorical data can be represented in a Sankey diagram but not very useful as-is (see [next](../2021-10-12-highcharts) section for more work on this).
 
 ```{r}
 
@@ -122,18 +123,16 @@ ggplot(ken, aes(axis1=CLASS, axis2=SUBCLASS, axis3=VARIABLE, y=VALUE)) +
 
 ```
 
-And monthly time-series of Incremental ET by land-use classes:
+And monthly time-series of **Incremental ET** by land-use classes:
 
-```{r}
+```{r, fig.cap="sheet1_basin_etincr_monthly.csv"}
 
 f <- "sheet1_basin_etincr_monthly.csv"
 ken.ts <- data[iso3=="ken" & file==f][1, fread(path)]
-ken.ts[c(1:5, (.N-4):.N)] %>% 
-  kable(caption=f)
-
+ken.ts %>% paged_table()
 ```
 
-We'll gather all the **yearly** budgets for now into a long table, and plot the trends.
+We'll gather all the **yearly** budgets for now into a long table, and quickly visualize the time-series.
 
 ```{r, fig.asp=.7}
 
@@ -158,7 +157,8 @@ ggplot(data[VALUE>0 & SUBCLASS %like% "ET"],
 
 ```
 
-We make a yearly dataset available in the client as a JSON array named `data`. We also pass a default color palette `pal` for convenience.
+We pass this yearly dataset to the client (web browser) as a JSON array named `data`. We also pass a default color palette `pal` (declared above) for convenience.
+
 
 ```{r, results="asis"}
 
@@ -182,30 +182,29 @@ There are multiple SVG template sheets provided in the Kenya code repository (un
 
 svg <- "../../www/svg" %>%
   list.files(pattern="*.svg", full.names=TRUE)
-include_graphics(svg[-c(2:4, 7, 9)])
+knitr::include_graphics(svg[-c(2:4, 7, 9)])
 
 ```
 
-These sheets incorporate a quantity of domain-specific knowledge, they are used to both teach and communicate about the WA+ approach and simulation results. They are produced in the final step of the analysis, typically after the water accounts have been aggregated to a seasonal or yearly time span. The process is somewhat (but not entirely) automated, e.g. the analyst can decide to add or hide elements.
+These sheets incorporate a quantity of domain-specific knowledge, they are used to both teach and communicate about the WA+ modeling approach and simulation results. The PDF documents are produced in the final step of the analysis, typically after the water accounts have been aggregated to a seasonal or yearly time span. The process is somewhat (but not entirely) automated, e.g. the analyst can decide to add or hide elements.
 
 Note that the original templates were created in Inkscape with **SVG 1.1** specifications. They are professional printable designs and not optimized for rendering in a browser, so we start by testing whether we can interact and modify these designs using D3. We focus on the Resource Base sheet first. 
 
-> <u>Note</u>: Inkscape provides a templating system that allows merging a SVG file (with template fields declared in the form `%VAR_name%` with a CSV data file to batch generate PNG or PDF documents. That system is not limited to merging text labels, colors and sizes can also be read in from an external CSV source[^ink].
+> <u>Note</u>: Inkscape provides multiple templating utilities to "merge" SVG files (with template fields declared in the form `%VAR_name%` with CSV data in order to batch generate PNG or PDF documents. That system is not limited to merging text labels, colors and sizes can also be read in from an external CSV source[^ink].
 
-[^ink]: Refer to [inkscape_merge](https://github.com/borgand/inkscape_merge) tool.
+[^ink]: For example [inkscape_merge](https://github.com/borgand/inkscape_merge) tool.
 
+Below we load the sheet and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read in and rendered in the browser as we expect.
 
-Below we load the sheet and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read and rendered in the browser as expected.
-
-Provide D3 as an external dependency in this notebook:
+And we need `D3.js` as an external dependency in this notebook:
 
 ```{r, results="asis", code_folding=FALSE}
 
-# Import D3
+# Import D3.js lib
 htmltools::tags$script(src="https://d3js.org/d3.v6.min.js")
 ```
 
-First we create a dummy SVG widget using the sample Kenya data for 2017 (to make sure libraries are loaded).
+Click to render a dummy SVG widget using the sample Kenya data for 2017 (to make sure libraries are loaded).
 
 ::: {#d3ex1 .l-body}
 :::
@@ -219,15 +218,15 @@ First we create a dummy SVG widget using the sample Kenya data for 2017 (to make
 // Keep only non-null variables
 var dd = data.filter((d) => (d.VALUE !== 0));
 
-function fun_barchart(data=dd, target="#d3ex1") {
+function fun_barchart(data=dd, el="#d3ex1") {
 
-  d3.select(target).selectAll("svg").remove();
+  d3.select(el).selectAll("svg").remove();
 
-  var width = $(target).width() - 10;
+  var width = $(el).width() - 10;
   var box = 0.6 * width/18;
   var height = box * 21;
   
-  var svg = d3.select(target)
+  var svg = d3.select(el)
     .append("svg")
     .attr("viewBox", [0, 0, width, height])
     .append("g")
@@ -283,17 +282,17 @@ svg.selectAll("mybar")
 
 // Test interactions
 function handleMouseOver(d, i) {
-   d3.select(this).style("fill", pal[2]);
-   d3.select(this).attr("fill", pal[2]);
+   d3.select(this).style("fill-opacity", .5);
+   d3.select(this).attr("fill-opacity", .5);
 };
 
-function handleMouseOut(d, i, fill=pal[1]) {
-  d3.select(this).style("fill", fill);
+function handleMouseOut(d, i) {
+  d3.select(this).style("fill-opacity", 1);
 };
 
 ```
 
-Then we load the original SVG design and progressively add data bindings.
+D3 is incredibly wordy, but then again it's flexible! Then we load the original SVG design and progressively add data bindings.
 
 ::: {#d3ex2 .l-body}
 :::
@@ -315,21 +314,17 @@ var svg = div
   .insert("svg:g")
   .attr("class", "d3ex2");  
 
-function fun_reset(target="d3ex2", src="../../www/svg/sheet_1_old.svg") {
-  d3.select("." + target).selectAll("svg").remove();
+function fun_reset(src="../../www/svg/sheet_1_old.svg", el="d3ex2") {
+  d3.select("." + el).selectAll("svg").remove();
 
   // Append external design
   d3.xml(src)
     .then(d => {
-    d3.select("." + target).node().append(d.documentElement);
+    d3.select("." + el).node().append(d.documentElement);
     });
 };
 
 fun_reset();
-
-svg
-  .selectAll("path")
-  .on("mouseover", handleMouseOver);
 
 ```
 
@@ -358,13 +353,17 @@ function fun_fill(el="d3ex2") {
     .style("fill", pal[0]);
  };
  
-function fun_group(el="d3ex2", sel="") {
-  let f = sel != "" ? "[id='" + sel + "']" : "";
+function fun_group(el="d3ex2") {
   d3.select("." + el)
-  .select("g" + f)
+  .select("svg")
+  .selectAll("g")
     .style("stroke", pal[9])
+    .style("fill-opacity", .4)
     .raise()
-    .move(-20, -20);
+    .each((d,i) => d3.select(this).move(
+      Math.floor(Math.random() * 10), 
+      Math.floor(Math.random() * 10)
+      ));
  };
 
 ```
@@ -375,8 +374,8 @@ At this point, we need to manually modify (simplify) the original SVG design to 
 :::
 
 :::{.l-gutter}
-<button onclick="fun_group('d3ex3', 'ginflow');">Show Inflows</button>
-<button onclick="fun_reset('d3ex3', '../../www/svg/sheet_1.svg');">Reset Design</button>
+<button onclick="fun_group('d3ex3');">Show Groups</button>
+<button onclick="fun_reset('../../www/svg/sheet_1.svg', 'd3ex3');">Reset Design</button>
 :::
 
 ```{js, code_folding=FALSE}
@@ -388,12 +387,10 @@ var svg = div
   .insert("svg:g")
   .attr("class", "d3ex3");
 
-fun_reset("d3ex3", "../../www/svg/sheet_1.svg");
+fun_reset("../../www/svg/sheet_1.svg", "d3ex3");
 
-d3.select(".d3ex3")
-  .select("svg")
-  .selectAll("#ginflow")
-  .selectAll("rect")
+svg
+  .select("g#ginflow")
   .on("mouseover", handleMouseOver);
 
 ```

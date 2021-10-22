@@ -38,18 +38,13 @@ pal <- readRDS("../../_assets/palette.rds")
 ```
 
 
-This notebook is to explore multiple visualization schemes:
+This notebook is Part 2 of a code playground for hydrologic model visualization. In [Part 1](../2021-10-16-svg/) we focused on `D3.js`, here we build Javascript widgets using a higher-level graphic library `Highchart.js`.
 
-1. **Interactive SVG**: add user interactivity to existing SVG (or simplified) designs using low-level [D3.js](https://d3js.org/) library
-2. **Graphviz**: redesign the WA+ sheets using [Graphviz](https://graphviz.org/) and provide interactivity with [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/)
-2. **Highcharts**: reshape WA+ model output to create standard treemaps using [Highcharts.js](https://www.highcharts.com/) charting library
-3. **Highcharts**: reshape WA+ model output to create steam graphs and/or network graphs
-4. **Leaflet**: create a 3D map of basin landscape with SVG annotations (arrows, etc.) using [leaflet.js](https://leafletjs.com/)
-
+`Highcharts` is built on top of D3 but comes with sample configurations and R and Python clients, making it easier to build highly dynamic charts, esp. Sankey, treemaps, flow diagrams, etc. with less code.
 
 # Data Preparation
 
-To validate the different approaches we use sample model output and datasets provided by **Naga Valpuri** for Mali (Niger river basin) and Kenya (Mara basin). 
+To validate the different approaches we use sample model output and datasets provided by **Naga Valpuri** for Mali (Niger river basin) and Kenya (Mara river  basin). 
 
 ```{r}
 
@@ -76,9 +71,9 @@ data[iso3=="mli", .(file, year, month)] %>%
 
 ```
 
-In particular we have yearly (2 seasons) model steps for Mali and monthly steps for Kenya that are further aggregated to seasonal and yearly time spans (by variable), as well as monthly time-series. In Mali only **Sheet 1** was produced (Resource Base).
+In particular we have yearly model steps for Mali and monthly steps for Kenya that are further aggregated to seasonal and yearly time spans (by variable), as well as monthly time-series. In Mali only **Sheet 1** was produced (Resource Base).
 
-Let's load a sample output for Kenya for the year 2017.
+A sample simulation output for Kenya for the year 2017.
 
 ```{r}
 
@@ -89,12 +84,14 @@ ken %>%
 
 ```
 
-This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLASS`. Units are in **km³/year**.
+This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLASS`. Units are in **km³/year**. These numbers represent flow variables (water flowing into the basin, and water leaving the basin as both ground and surface waters, either stored, utilized, evaporated, infiltrated, or runoff).
 
 
-# Treemaps
+# Sankey Diagram {#sankey}
 
-First we define a default theme for Highcharts objects.
+A Sankey diagram is a type of directed network graph in which the width of the arrows (vertices) is proportional to the flow rate.
+
+Here we use R library [`networkD3`](http://christophergandrud.github.io/networkD3/) to build the charts (chart configurations built in R can be exported to vanilla Javascript). First we define a default theme for Highcharts, which we'll reuse across visuals.
 
 ```{r}
 
@@ -188,6 +185,18 @@ hc_theme_iwmi <- function(
 }
 
 ```
+
+Then we reshape our sample Kenya dataset for 2017 into a list of vertices between 2 nodes (with fields `from`, `to`, `value` at minimum).
+
+```{r}
+
+
+
+```
+
+
+
+# Treemaps {#treemap}
 
 A barebone treemap to start with.
 

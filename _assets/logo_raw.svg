@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (1:1.1+202109281943+c3084ef5ed)"
+   sodipodi:docname="logo_raw.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="mm"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:24.6944px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#0f0f0f;stroke-width:0.140009"
+       x="73.302155"
+       y="34.960175"
+       id="text2703"><tspan
+         sodipodi:role="line"
+         id="tspan2701"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6944px;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.140009"
+         x="73.302155"
+         y="34.960175">‽<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, '"
+   id="tspan14951">BACOU, Melanie</tspan></tspan></text>
+    <circle
+       style="fill:#121d27;fill-opacity:1;stroke-width:0.140009"
+       id="path24112"
+       cx="40.191261"
+       cy="73.664886"
+       r="13.555879" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:24.6944px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.140009"
+       x="40.209347"
+       y="83.449799"
+       id="text2703-9"><tspan
+         sodipodi:role="line"
+         id="tspan2701-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.6944px;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.140009"
+         x="40.209347"
+         y="83.449799">‽<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';fill:#ffffff;fill-opacity:1"
+   id="tspan14951-7" /></tspan></text>
+    <path
+       id="path24112-06"
+       style="fill:#121d27;fill-opacity:1;stroke-width:0.529168"
+       d="m 145.19922,372.32031 a 51.234817,51.234817 0 0 0 -51.234376,51.23438 51.234817,51.234817 0 0 0 51.234376,51.23437 51.234817,51.234817 0 0 0 51.23437,-51.23437 51.234817,51.234817 0 0 0 -51.23437,-51.23438 z m -6.35742,13.70508 h 8.88672 l -0.0918,7.33789 c 5.13454,0.39497 9.08486,2.12674 11.84961,5.19531 2.79513,3.03819 4.19336,7.04862 4.19336,12.03125 0,4.01041 -1.15582,7.59419 -3.46485,10.75391 -2.27864,3.15972 -4.89084,6.10743 -7.83789,8.8418 -2.91666,2.73437 -4.375,6.62262 -4.375,11.66601 h -8.52148 l -0.45703,-39.51172 c -2.58246,1.61024 -3.87305,4.07119 -3.87305,7.38282 h -8.43164 c 0.0608,-4.01041 1.21658,-7.35179 3.46484,-10.02539 2.24826,-2.70399 5.16494,-4.55795 8.75,-5.56055 z m 8.70508,14.76563 -0.27344,23.60742 c 2.27864,-2.27864 4.17622,-4.34593 5.69531,-6.19922 1.51909,-1.8533 2.2793,-4.31424 2.2793,-7.38281 0,-5.86371 -2.56664,-9.20508 -7.70117,-10.02539 z m -3.37305,50.63086 c 1.61024,0 2.84071,0.47222 3.6914,1.41406 0.88108,0.94184 1.32227,2.0957 1.32227,3.46289 0,1.30642 -0.44119,2.43121 -1.32227,3.37305 -0.85069,0.94183 -2.08116,1.4121 -3.6914,1.4121 -1.64062,0 -2.88564,-0.47027 -3.73633,-1.4121 -0.82031,-0.94184 -1.23047,-2.06663 -1.23047,-3.37305 0,-1.36719 0.41016,-2.52105 1.23047,-3.46289 0.85069,-0.94184 2.09571,-1.41407 3.73633,-1.41406 z"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="/home/mbacou/Projects/mb-labs/www/logo_b.png"
+       inkscape:export-xdpi="220"
+       inkscape:export-ydpi="220" />
+    <path
+       id="path24112-0"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.529168"
+       d="m 289.59766,228.02148 a 51.234817,51.234817 0 0 0 -51.23438,51.23438 51.234817,51.234817 0 0 0 51.23438,51.23633 51.234817,51.234817 0 0 0 51.23632,-51.23633 51.234817,51.234817 0 0 0 -51.23632,-51.23438 z m -6.35547,13.70508 h 8.88672 l -0.0918,7.33789 c 5.13454,0.39497 9.0829,2.12674 11.84766,5.19532 2.79513,3.03818 4.19336,7.04862 4.19335,12.03125 0,4.01041 -1.15386,7.59614 -3.46289,10.75586 -2.27864,3.15971 -4.8928,6.10547 -7.83984,8.83984 -2.91666,2.73437 -4.37305,6.62457 -4.37305,11.66797 h -8.52343 l -0.45508,-39.51172 c -2.58246,1.61024 -3.87305,4.07119 -3.87305,7.38281 h -8.43164 c 0.0608,-4.01041 1.21463,-7.35374 3.46289,-10.02734 2.24826,-2.70399 5.16494,-4.55599 8.75,-5.5586 z m 8.70312,14.76563 -0.27343,23.60742 c 2.27864,-2.27864 4.17817,-4.34397 5.69726,-6.19727 1.5191,-1.85329 2.27734,-4.31424 2.27734,-7.38281 0,-5.8637 -2.56663,-9.20703 -7.70117,-10.02734 z m -3.37109,50.63281 c 1.61024,0 2.84071,0.47027 3.6914,1.41211 0.88108,0.94184 1.32032,2.0957 1.32032,3.46289 0,1.30642 -0.43924,2.43121 -1.32032,3.37305 -0.85069,0.94184 -2.08116,1.41211 -3.6914,1.41211 -1.64062,0 -2.88759,-0.47027 -3.73828,-1.41211 -0.82031,-0.94184 -1.23047,-2.06663 -1.23047,-3.37305 0,-1.36719 0.41016,-2.52105 1.23047,-3.46289 0.85069,-0.94184 2.09766,-1.41211 3.73828,-1.41211 z"
+       transform="scale(0.26458333)"
+       inkscape:export-filename="/home/mbacou/Projects/mb-labs/www/logo_w.png"
+       inkscape:export-xdpi="220"
+       inkscape:export-ydpi="220" />
+  </g>
+</svg>

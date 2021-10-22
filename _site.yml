@@ -1,13 +1,13 @@
 name: mb-labs
 title: Mel's Labs
 description: |
-  My playground for consulting and data science projects
+  My playground for consulting and data science projects.
 base_url: https://mbacou.github.io/mb-labs
 repository_url: https://github.com/mbacou/mb-labs
-creative_commons: CC BY
-favicon: www/logo.svg
-output_dir: "docs"
+favicon: www/logo_w.svg
 theme: www/theme.css
+creative_commons: CC BY
+output_dir: docs
 collections:
   posts:
     categories: true
@@ -17,6 +17,7 @@ collections:
     share: [twitter, linkedin]
     custom: _custom.html
 navbar:
+  logo: www/logo_w.svg
   search: false
   source_url: true
   right:
