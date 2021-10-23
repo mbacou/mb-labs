@@ -2,13 +2,42 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   width="297mm"
+   height="210mm"
    viewBox="0 0 297 210"
    version="1.1"
+   id="svg2357"
+   inkscape:version="1.1.1 (1:1.1+202109281943+c3084ef5ed)"
+   sodipodi:docname="sheet-1.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2359"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:object-nodes="true"
+     inkscape:snap-nodes="true"
+     inkscape:snap-others="false"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-grids="true"
+     inkscape:snap-bbox="false"
+     inkscape:snap-global="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2418"
+       dotted="false"
+       empspacing="2" />
+  </sodipodi:namedview>
   <defs
      id="defs2354">
     <linearGradient
@@ -144,7 +173,7 @@
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-family:Arial;-inkscape-font-specification:'Arial Condensed';text-align:end;text-anchor:end;fill:#333333;fill-opacity:1"
    id="tspan173762">Period: </tspan>NaN</tspan></text>
     <g
-       id="glevel3"
+       id="g177329"
        inkscape:label="glevel3">
       <rect
          style="fill:#abe0ed;fill-opacity:1;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -393,7 +422,7 @@
            id="tspan44355">Utilized flow</tspan></text>
     </g>
     <g
-       id="ginflow"
+       id="g177403"
        inkscape:label="ginflow">
       <rect
          style="fill:#46bbd4;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -806,7 +835,7 @@
        inkscape:label="arrow"
        sodipodi:nodetypes="cccccccccc" />
     <g
-       id="goutflow"
+       id="g177501"
        inkscape:label="goutflow">
       <rect
          style="fill:url(#linearGradient206443);fill-opacity:1;fill-rule:evenodd;stroke-width:1"

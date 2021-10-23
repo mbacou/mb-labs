@@ -29,22 +29,26 @@ library(scales)
 library(stringr)
 library(data.table)
 
-pal <- fread("
-  color, name
-  #004a72, blue
-  #337ab7, light-blue
-  #d9edf7, aqua
-  #8a4f7d, purple
-  #b185a7, fuschia
-  #ff8811, orange
-  #f4d06f, yellow
-  #4da167, green
-  #53dd6c, lime
-  #dc493a, red
-  #6b4b3e, maroon
-  #96705b, olive")
-pal <- pal$color
+# IMWI color palette
+tmp <- fread("../../_assets/IWMI.gpl", skip=4, header=F)
+pal <- grDevices::rgb(tmp[, .(V1, V2, V3)], maxColorValue=255)
+names(pal) <- tmp[, V4]
 options(ggplot2.discrete.color=pal)
+theme_mb <- function(
+  base_size = 8,
+  base_family = "Roboto Condensed",
+  base_fill = pal["light"], ...) theme_minimal(base_size, base_family) +
+  theme(
+    panel.background = element_rect(fill=base_fill, color=NA),
+    plot.background = element_rect(fill="transparent", color=NA),
+    panel.grid = element_line(color="white"),
+    legend.box.background = element_rect(fill="transparent", color=NA),
+    text = element_text(color=pal["black"], lineheight=.8),
+    strip.text = element_text(face="bold", hjust=0, size=base_size),
+    legend.position = "top",
+    legend.justification = c("right", "top"),
+    legend.key.height = unit(.8, "line")
+  ) + theme(...)
 
 ```
 
@@ -63,7 +67,7 @@ The **D3.js** approach is the more flexible but also the more "tedious" to imple
 
 To validate the different approaches we use sample output datasets provided by **Naga Valpuri** (IWMI) for Mali (Niger river basin) and Kenya (Mara river basin). All hydrologic models are written in Python and version controlled to GitHub (e.g. [Mali notebooks](https://github.com/wateraccounting/WAPORWA)).
 
-```{r, fig.cap="Kenya - List of output files (top and last 5)"}
+```{r, fig.cap="Kenya - List of output files"}
 
 data <- list(
   ken = "~/Projects/2021-iwmi/data/ken/hydroloop_results/csv",
@@ -82,13 +86,13 @@ data[,
   sheet = str_extract(tolower(file), "sheet[0-9]{1}") 
 )] %>% setorder(iso3, year, month, na.last=TRUE)
 
-data[iso3=="ken", .(file, sheet, year, month)] %>% 
+data[iso3=="ken", .(iso3, file, sheet, year, month)] %>% 
   paged_table()
 ```
 
 ```{r, fig.cap="Mali - List of output files"}
 
-data[iso3=="mli", .(file, sheet, year, month)] %>% 
+data[iso3=="mli", .(iso3, file, sheet, year, month)] %>% 
   paged_table()
 ```
 
@@ -109,16 +113,16 @@ This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLAS
 
 library(ggalluvial)
   
-ggplot(ken, aes(axis1=CLASS, axis2=SUBCLASS, axis3=VARIABLE, y=VALUE)) +
+ggplot(ken, 
+  aes(axis1=CLASS, axis2=abbreviate(SUBCLASS), axis3=abbreviate(VARIABLE), y=VALUE)) +
   geom_alluvium(aes(fill=CLASS), width=1/4, alpha=.7, color="white") +
   geom_stratum(width=1/4) +
   geom_text(stat="stratum", aes(label=after_stat(stratum)), angle=90, size=2.2) +
   scale_x_discrete(limits=c("class", "subclass", "variable")) +
   labs(y=NULL, fill=NULL) +
-  scale_fill_manual(values=pal) +
-  theme(
+  scale_fill_manual(values=unname(pal)) +
+  theme_mb(
     panel.grid=element_blank(),
-    legend.position="top",
     axis.text=element_text(face="bold"))
 
 ```
@@ -132,7 +136,7 @@ ken.ts <- data[iso3=="ken" & file==f][1, fread(path)]
 ken.ts %>% paged_table()
 ```
 
-We'll gather all the **yearly** budgets for now into a long table, and quickly visualize the time-series.
+We'll gather all the **yearly** budgets for now into a long table, and simply visualize the time-series.
 
 ```{r, fig.asp=.7}
 
@@ -149,11 +153,10 @@ ggplot(data[VALUE>0 & SUBCLASS %like% "ET"],
   aes(year, VALUE, color=paste(SUBCLASS, VARIABLE, sep=" "))) +
   geom_line(size=1) +
   facet_wrap(~toupper(iso3), scales="free") +
-  labs(x=NULL, y="kg/m³", color=NULL) +
-  scale_color_manual(values=pal) +
+  labs(x=NULL, y=NULL, title="Yearly ET Budgets (kg/m³)", color=NULL) +
+  scale_color_manual(values=unname(pal)) +
   guides(color=guide_legend(ncol=3)) +
-  theme(
-    legend.position="top")
+  theme_mb()
 
 ```
 
@@ -283,7 +286,6 @@ svg.selectAll("mybar")
 // Test interactions
 function handleMouseOver(d, i) {
    d3.select(this).style("fill-opacity", .5);
-   d3.select(this).attr("fill-opacity", .5);
 };
 
 function handleMouseOut(d, i) {
@@ -315,12 +317,17 @@ var svg = div
   .attr("class", "d3ex2");  
 
 function fun_reset(src="../../www/svg/sheet_1_old.svg", el="d3ex2") {
-  d3.select("." + el).selectAll("svg").remove();
+  var s = d3.select("." + el);
+  s.selectAll("svg").remove();
 
   // Append external design
   d3.xml(src)
     .then(d => {
-    d3.select("." + el).node().append(d.documentElement);
+    s.node().append(d.documentElement);
+    d3.select("." + el)
+      .selectAll("rect")
+        .on("mouseover", handleMouseOver)
+        .on("mouseout", handleMouseOut); 
     });
 };
 
@@ -353,18 +360,19 @@ function fun_fill(el="d3ex2") {
     .style("fill", pal[0]);
  };
  
-function fun_group(el="d3ex2") {
+function fun_group(el="d3ex2", group="") {
+var g = group=="" ? "g" : "g[id=" + group + "]";
   d3.select("." + el)
   .select("svg")
-  .selectAll("g")
-    .style("stroke", pal[9])
+  .selectAll(g)
+    .style("stroke", pal[7])
     .style("fill-opacity", .4)
     .raise()
-    .each((d,i) => d3.select(this).move(
-      Math.floor(Math.random() * 10), 
+    .move(
+      Math.floor(Math.random() * 20),
       Math.floor(Math.random() * 10)
-      ));
- };
+      );
+};
 
 ```
 
@@ -374,24 +382,20 @@ At this point, we need to manually modify (simplify) the original SVG design to 
 :::
 
 :::{.l-gutter}
-<button onclick="fun_group('d3ex3');">Show Groups</button>
+<button onclick="fun_group('d3ex3', 'ginflow');">Show Inflows</button>
+<button onclick="fun_group('d3ex3', 'goutflow');">Show Outflows</button>
 <button onclick="fun_reset('../../www/svg/sheet_1.svg', 'd3ex3');">Reset Design</button>
 :::
 
 ```{js, code_folding=FALSE}
 
-var div = d3.select("#d3ex3");
-var svg = div
+d3.select("#d3ex3")
   .append("svg")
   .attr("viewBox", [0, 0, hw, hw*0.8])
   .insert("svg:g")
   .attr("class", "d3ex3");
 
 fun_reset("../../www/svg/sheet_1.svg", "d3ex3");
-
-svg
-  .select("g#ginflow")
-  .on("mouseover", handleMouseOver);
 
 ```
 
