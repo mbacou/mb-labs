@@ -285,11 +285,13 @@ svg.selectAll("mybar")
 
 // Test interactions
 function handleMouseOver(d, i) {
-   d3.select(this).style("fill-opacity", .5);
+   d3.select(this)
+   .attr("fill-opacity", .5);
 };
 
 function handleMouseOut(d, i) {
-  d3.select(this).style("fill-opacity", 1);
+  d3.select(this)
+  .attr("fill-opacity", 1);
 };
 
 ```
@@ -357,7 +359,8 @@ function fun_color(el="d3ex2") {
 function fun_fill(el="d3ex2") {
   d3.select("." + el)
   .selectAll("path")
-    .style("fill", pal[0]);
+    .style("fill", pal[0])
+    .attr("fill", pal[0]);
  };
  
 function fun_group(el="d3ex2", group="") {
@@ -365,8 +368,8 @@ var g = group=="" ? "g" : "g[id=" + group + "]";
   d3.select("." + el)
   .select("svg")
   .selectAll(g)
-    .style("stroke", pal[7])
-    .style("fill-opacity", .4)
+    .attr("stroke", pal[7])
+    .attr("fill-opacity", .4)
     .raise()
     .move(
       Math.floor(Math.random() * 20),

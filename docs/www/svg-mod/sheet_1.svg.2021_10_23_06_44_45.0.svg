@@ -24,7 +24,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g177403"
      inkscape:object-nodes="true"
      inkscape:snap-nodes="true"
      inkscape:snap-others="false"
@@ -40,6 +40,16 @@
   </sodipodi:namedview>
   <defs
      id="defs2354">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Wavywhite"
+       id="pattern7952"
+       patternTransform="scale(1.0681019,0.42740632)" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Wavywhite"
+       id="pattern7496"
+       patternTransform="matrix(2.0233576,2.0212633,-0.41527147,0.41570172,0,0)" />
     <pattern
        inkscape:collect="always"
        patternUnits="userSpaceOnUse"
@@ -185,7 +195,7 @@
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-family:Arial;-inkscape-font-specification:'Arial Condensed';text-align:end;text-anchor:end;fill:#333333;fill-opacity:1"
    id="tspan173762">Period: </tspan>NaN</tspan></text>
     <g
-       id="guses"
+       id="g177329"
        inkscape:label="guses">
       <rect
          style="fill:#abe0ed;fill-opacity:1;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -434,7 +444,7 @@
            id="tspan44355">Utilized flow</tspan></text>
     </g>
     <g
-       id="ginflow"
+       id="g177403"
        inkscape:label="ginflow">
       <rect
          style="fill:#46bbd4;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -470,6 +480,13 @@
          width="15.875"
          height="113.77084"
          x="21.166666"
+         y="71.4375" />
+      <rect
+         style="opacity:0.4;mix-blend-mode:lighten;fill:url(#pattern7496);fill-opacity:1;fill-rule:evenodd;stroke-width:0.999997"
+         id="rect2489-3-2"
+         width="7.1965408"
+         height="113.77084"
+         x="29.845125"
          y="71.4375" />
       <path
          id="path8870"
@@ -841,24 +858,27 @@
            y="193.18248"
            id="tspan140053">+ΔS</tspan></text>
     </g>
+    <path
+       id="path8878-7"
+       style="fill:url(#linearGradient21431);fill-opacity:1;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:8.11429;stroke-dasharray:none;stroke-opacity:1"
+       d="m 52.916663,51.375643 -4.622972,3.735689 4.622972,3.735174 H 244.79026 v 9.999906 h 7.47086 v -9.999906 -7.470863 h -7.47086 z"
+       inkscape:label="arrow"
+       sodipodi:nodetypes="cccccccccc" />
+    <path
+       id="path8878-7-5"
+       style="opacity:0.4;mix-blend-mode:overlay;fill:url(#pattern7952);fill-opacity:1"
+       d="m 52.916667,51.375643 -4.622972,3.735689 4.622972,3.735174 H 244.79026 v 9.999907 h 7.47086 v -9.999906 -7.470863 h -7.47086 z"
+       inkscape:label="arrow"
+       sodipodi:nodetypes="cccccccccc" />
+    <rect
+       style="fill:url(#linearGradient206487);fill-opacity:1;stroke-width:0.999998"
+       id="rect1202"
+       width="15.875002"
+       height="47.624996"
+       x="256.64584"
+       y="142.875" />
     <g
-       id="arrow"
-       inkscape:label="arrow">
-      <path
-         id="path8878-7"
-         style="fill:url(#linearGradient21431);fill-opacity:1;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:8.11429;stroke-dasharray:none;stroke-opacity:1"
-         d="m 52.916663,51.375643 -4.622972,3.735689 4.622972,3.735174 H 244.79026 v 9.999906 h 7.47086 v -9.999906 -7.470863 h -7.47086 z"
-         inkscape:label="arrow-1"
-         sodipodi:nodetypes="cccccccccc" />
-      <path
-         id="path8878-7-5"
-         style="opacity:0.4;mix-blend-mode:overlay;fill:url(#Wavywhite);fill-opacity:1"
-         d="m 52.916667,51.375643 -4.622972,3.735689 4.622972,3.735174 H 244.79026 v 9.999907 h 7.47086 v -9.999906 -7.470863 h -7.47086 z"
-         inkscape:label="arrow-2"
-         sodipodi:nodetypes="cccccccccc" />
-    </g>
-    <g
-       id="goutflow"
+       id="g177501"
        inkscape:label="goutflow">
       <rect
          style="fill:url(#linearGradient206443);fill-opacity:1;fill-rule:evenodd;stroke-width:1"
@@ -929,6 +949,13 @@
          style="fill:#22ad7a;stroke:#ffffff;stroke-width:0.529169;stroke-miterlimit:8.11429;stroke-dasharray:none;stroke-opacity:1"
          sodipodi:nodetypes="cccccc"
          inkscape:label="path8877" />
+      <rect
+         style="opacity:0.4;mix-blend-mode:lighten;fill:url(#Wavywhite);fill-opacity:1;fill-rule:evenodd;stroke-width:0.999997"
+         id="rect2489-3-2-9"
+         width="7.1965408"
+         height="113.77084"
+         x="256.64584"
+         y="71.4375" />
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264583"
@@ -1187,13 +1214,6 @@
            x="-193.34743"
            y="236.967"
            id="tspan30900">water</tspan></text>
-      <rect
-         style="fill:url(#linearGradient206487);fill-opacity:1;stroke-width:0.999998"
-         id="rect1202"
-         width="15.875002"
-         height="47.624996"
-         x="256.64584"
-         y="142.875" />
       <rect
          style="fill:#46bbd4;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect1095"

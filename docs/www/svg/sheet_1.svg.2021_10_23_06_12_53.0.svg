@@ -24,7 +24,7 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g177403"
      inkscape:object-nodes="true"
      inkscape:snap-nodes="true"
      inkscape:snap-others="false"
@@ -40,18 +40,6 @@
   </sodipodi:namedview>
   <defs
      id="defs2354">
-    <pattern
-       inkscape:collect="always"
-       patternUnits="userSpaceOnUse"
-       width="30.066020"
-       height="5.1805778"
-       id="Wavywhite"
-       inkscape:stockid="Wavy white">
-      <path
-         style="fill:white;stroke:none;"
-         d="M 7.597,0.061 C 5.079,-0.187 2.656,0.302 -0.01,1.788 L -0.01,3.061 C 2.773,1.431 5.173,1.052 7.472,1.280 C 9.770,1.508 11.969,2.361 14.253,3.218 C 18.820,4.931 23.804,6.676 30.066,3.061 L 30.062,1.788 C 23.622,5.497 19.246,3.770 14.691,2.061 C 12.413,1.207 10.115,0.311 7.597,0.061 z "
-         id="path3361" />
-    </pattern>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient206485">
@@ -137,6 +125,17 @@
        x2="267.4794"
        y2="166.6875"
        gradientUnits="userSpaceOnUse" />
+    <hatch
+       inkscape:collect="always"
+       id="hatch5"
+       hatchUnits="userSpaceOnUse"
+       pitch="15">
+      <hatchpath
+         stroke="#000000"
+         offset="5"
+         d="M 0,0 5,10 10,5"
+         id="hatchpath9178" />
+    </hatch>
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -175,8 +174,8 @@
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264583"
        x="245.5914"
        y="47.586712"
-       id="var_period"
-       inkscape:label="var_period"><tspan
+       id="period"
+       inkscape:label="period"><tspan
          sodipodi:role="line"
          id="tspan7329"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;text-anchor:end;fill:#333333;fill-opacity:1;stroke-width:0.264583"
@@ -185,7 +184,7 @@
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-family:Arial;-inkscape-font-specification:'Arial Condensed';text-align:end;text-anchor:end;fill:#333333;fill-opacity:1"
    id="tspan173762">Period: </tspan>NaN</tspan></text>
     <g
-       id="guses"
+       id="g177329"
        inkscape:label="guses">
       <rect
          style="fill:#abe0ed;fill-opacity:1;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -434,7 +433,7 @@
            id="tspan44355">Utilized flow</tspan></text>
     </g>
     <g
-       id="ginflow"
+       id="g177403"
        inkscape:label="ginflow">
       <rect
          style="fill:#46bbd4;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -841,24 +840,14 @@
            y="193.18248"
            id="tspan140053">+ΔS</tspan></text>
     </g>
+    <path
+       id="path8878-7"
+       style="fill:url(#linearGradient21431);fill-opacity:1;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:8.11429;stroke-dasharray:none;stroke-opacity:1"
+       d="m 52.916663,51.375643 -4.622972,3.735689 4.622972,3.735174 H 244.79026 v 9.999906 h 7.47086 v -9.999906 -7.470863 h -7.47086 z"
+       inkscape:label="arrow"
+       sodipodi:nodetypes="cccccccccc" />
     <g
-       id="arrow"
-       inkscape:label="arrow">
-      <path
-         id="path8878-7"
-         style="fill:url(#linearGradient21431);fill-opacity:1;stroke:#ffffff;stroke-width:0.529167;stroke-miterlimit:8.11429;stroke-dasharray:none;stroke-opacity:1"
-         d="m 52.916663,51.375643 -4.622972,3.735689 4.622972,3.735174 H 244.79026 v 9.999906 h 7.47086 v -9.999906 -7.470863 h -7.47086 z"
-         inkscape:label="arrow-1"
-         sodipodi:nodetypes="cccccccccc" />
-      <path
-         id="path8878-7-5"
-         style="opacity:0.4;mix-blend-mode:overlay;fill:url(#Wavywhite);fill-opacity:1"
-         d="m 52.916667,51.375643 -4.622972,3.735689 4.622972,3.735174 H 244.79026 v 9.999907 h 7.47086 v -9.999906 -7.470863 h -7.47086 z"
-         inkscape:label="arrow-2"
-         sodipodi:nodetypes="cccccccccc" />
-    </g>
-    <g
-       id="goutflow"
+       id="g177501"
        inkscape:label="goutflow">
       <rect
          style="fill:url(#linearGradient206443);fill-opacity:1;fill-rule:evenodd;stroke-width:1"
@@ -1397,5 +1386,23 @@
            y="189.07124"
            style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:3.88056px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#333333;fill-opacity:1">0000</tspan></text>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264583"
+       x="219.10146"
+       y="205.04129"
+       id="text23273-5-2-3"><tspan
+         sodipodi:role="line"
+         id="tspan23271-6-6-5"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:4.58611px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#333333;fill-opacity:1;stroke-width:0.264583"
+         x="219.10146"
+         y="205.04129">Null</tspan></text>
+    <rect
+       style="fill:url(#hatch5);fill-opacity:1;stroke-width:0.529167;stroke-miterlimit:8.11429"
+       id="rect3928"
+       width="7.700027"
+       height="5.7839942"
+       x="208.81927"
+       y="200.53474" />
   </g>
 </svg>
