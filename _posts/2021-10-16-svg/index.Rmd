@@ -8,6 +8,7 @@ author:
     url: https://linkedin/in/mbacou
 date: "`r Sys.Date()`"
 date_prefix: 2021-10-01
+preview: ../../www/svg/sheet_1_edited.svg
 categories:
   - draft
   - imwi
@@ -149,6 +150,8 @@ data <- lapply(1:nrow(f), function(x)
     year = f[x, year]
   )]) %>% rbindlist()
 
+fwrite(data, "data.csv")
+
 ggplot(data[VALUE>0 & SUBCLASS %like% "ET"], 
   aes(year, VALUE, color=paste(SUBCLASS, VARIABLE, sep=" "))) +
   geom_line(size=1) +
@@ -181,11 +184,11 @@ We work off the existing SVG designs, using `D3.js` constructs to add data bindi
 
 There are multiple SVG template sheets provided in the Kenya code repository (under `./scripts/WAsheets/template/svg`). They are shown below.
 
-```{r, out.width="33%", fig.width=3, fig.show="hold", preview=TRUE}
+```{r, out.width="33%", fig.width=3, fig.show="hold"}
 
 svg <- "../../www/svg" %>%
   list.files(pattern="*.svg", full.names=TRUE)
-knitr::include_graphics(svg[-c(2:4, 7, 9)])
+knitr::include_graphics(svg[-c(1:3, 7, 9)])
 
 ```
 
@@ -201,10 +204,10 @@ Below we load the sheet and proceed to map each box height/width and label to an
 
 And we need `D3.js` as an external dependency in this notebook:
 
-```{r, results="asis", code_folding=FALSE}
-
+```{r, code_folding=FALSE}
 # Import D3.js lib
-htmltools::tags$script(src="https://d3js.org/d3.v6.min.js")
+htmltools::tags$script(src="https://cdn.jsdelivr.net/npm/d3@6")
+htmltools::tags$script(src="https://cdn.jsdelivr.net/npm/d3-array@3")
 ```
 
 Click to render a dummy SVG widget using the sample Kenya data for 2017 (to make sure libraries are loaded).
@@ -318,7 +321,7 @@ var svg = div
   .insert("svg:g")
   .attr("class", "d3ex2");  
 
-function fun_reset(src="../../www/svg/sheet_1_old.svg", el="d3ex2") {
+function fun_reset(src="../../www/svg/sheet_1.svg", el="d3ex2") {
   var s = d3.select("." + el);
   s.selectAll("svg").remove();
 
@@ -379,7 +382,11 @@ var g = group=="" ? "g" : "g[id=" + group + "]";
 
 ```
 
+## Optimized SVG
+
 At this point, we need to manually modify (simplify) the original SVG design to clean up paths and to make it easier to select and manipulate (drill through) logical layers and groups of elements. We can create a useful hierarchy in Inkscape and then re-import the modified design here.
+
+> Note: make sure to remove attributes `<svg width="" height="">` from the SVG file produced by Inkscape.
 
 ::: {#d3ex3 .l-body}
 :::
@@ -387,7 +394,7 @@ At this point, we need to manually modify (simplify) the original SVG design to 
 :::{.l-gutter}
 <button onclick="fun_group('d3ex3', 'ginflow');">Show Inflows</button>
 <button onclick="fun_group('d3ex3', 'goutflow');">Show Outflows</button>
-<button onclick="fun_reset('../../www/svg/sheet_1.svg', 'd3ex3');">Reset Design</button>
+<button onclick="fun_reset('../../www/svg/sheet_1_edited.svg', 'd3ex3');">Reset Design</button>
 :::
 
 ```{js, code_folding=FALSE}
@@ -398,16 +405,32 @@ d3.select("#d3ex3")
   .insert("svg:g")
   .attr("class", "d3ex3");
 
-fun_reset("../../www/svg/sheet_1.svg", "d3ex3");
+fun_reset("../../www/svg/sheet_1_edited.svg", "d3ex3");
 
 ```
 
 Next step is to map text labels to data variables.
 
+## Data Bindings
 
-# Graphviz
+Object model for Sheet 1 is shown below.
 
-[placeholder]
+```{r, eval=F}
+
+model <- fread("sheet_1_schema.csv")
+
+model %>% paged_table()
+
+```
+
+When bound with the yearly model simulation, the widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
+
+
+<iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="640" width="100%" style="border:none;">
+<p>Your browser does not support iframes</p>
+</iframe>
+
+
 
 # References
 
