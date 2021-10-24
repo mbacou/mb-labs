@@ -45,15 +45,15 @@ This approach is inspired by:
 
 1. [Curmi et al. 2013](https://www.researchgate.net/publication/257673216_Visualising_a_Stochastic_Model_of_Californian_Water_Resources_Using_Sankey_Diagrams) 
 2. Lancaster University [Food-Energy Flows](https://github.com/csaladenes/food-energy-flows) diagram
-3. Truth Studio for the Nature Conservancy's [static illustration](http://www.truthstudio.com/content/Visualizing_Water_Nat_Geo_01_SCRIPT.pdf) of the Colorado River basin's withdrawals and consumption.
+3. TruthStudio for the Nature Conservancy's [static illustrations](https://www.truthstudio.com/portfolio_page/visualizing-water/) of the Colorado River basin's withdrawals and consumption.
 
 ```{r, out.width="50%", fig.width=3, fig.show="hold"}
 
 c(
+  "../../www/fig/sankey_truthstudio_1.gif",
+  "../../www/fig/sankey_truthstudio_2.gif",  
   "../../www/fig/sankey_curmi_2013.png",
-  "../../www/fig/sankey_lancaster.png",
-  "../../www/fig/sankey_truthstudio_1.png",
-  "../../www/fig/sankey_truthstudio_1.png"
+  "../../www/fig/sankey_lancaster.png"
 ) %>%
   include_graphics()
 
