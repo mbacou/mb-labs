@@ -33,7 +33,7 @@ library(highcharter)
 opts_chunk$set(res=220, pointsize=8)
 
 # Default color palette
-pal <- readRDS("../../_assets/palette.rds")
+pal <- readRDS("../../_assets/pal_iwmi.rds")
 
 ```
 

@@ -34,6 +34,7 @@ library(data.table)
 tmp <- fread("../../_assets/IWMI.gpl", skip=4, header=F)
 pal <- grDevices::rgb(tmp[, .(V1, V2, V3)], maxColorValue=255)
 names(pal) <- tmp[, V4]
+saveRDS(pal, "../../_assets/pal_iwmi.rds")
 
 # Default plot theme
 options(ggplot2.discrete.color=pal)
@@ -214,7 +215,7 @@ Click to render a dummy SVG widget using the sample Kenya data for 2017 (to make
 ::: {#d3ex1 .l-body}
 :::
 
-:::{.l-gutter}
+::: {.l-gutter}
 <button onclick="fun_barchart();">Dummy Widget</button>
 :::
 

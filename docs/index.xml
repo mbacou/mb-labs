@@ -53,10 +53,11 @@
       <dc:creator>BACOU, Melanie</dc:creator>
       <link>https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge</link>
       <description>Recalibrate ERA5 hourly temperatures to CIMIS network ground observations.</description>
+      <category>meteo</category>
       <category>risk modeling</category>
       <guid>https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge</guid>
       <pubDate>Sat, 16 Jan 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge/index_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="960"/>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge/index_files/figure-html5/unnamed-chunk-10-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
       <title>ERA5-LAND Temperature Validation (California)</title>
