@@ -4,6 +4,7 @@ library(r2d3)
 
 data <- fread("data.csv")
 setnames(data, tolower(names(data)))
+data[, year := as.Date(paste0(year, "-01-01"))]
 
 ui <- fluidPage(
 
@@ -12,7 +13,7 @@ ui <- fluidPage(
     br(),
     sliderInput("numYear", "Year",
       min=data[, min(year)], max=data[, max(year)],
-      value=data[, max(year)], step=1, round=T)
+      value=data[, max(year)], step=365, timeFormat="%Y")
   ),
 
   d3Output("d3")
@@ -22,7 +23,8 @@ ui <- fluidPage(
 server <- function(input, output) {
 
   dt = reactive(
-    data[sheet=="sheet1" & iso3==input$txtISO3 & year==input$numYear]
+    data[sheet=="sheet1" & iso3==input$txtISO3 &
+        year(year)==year(input$numYear)]
     )
 
   output$d3 = renderD3({

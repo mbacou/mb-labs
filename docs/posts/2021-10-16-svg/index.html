@@ -2596,12 +2596,7 @@ Show code
 <span class='fu'>htmltools</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span><span class='op'>$</span><span class='fu'>script</span><span class='op'>(</span>src<span class='op'>=</span><span class='st'>"https://cdn.jsdelivr.net/npm/d3@6"</span><span class='op'>)</span>
 </code></pre>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/d3@6"></script>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>htmltools</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span><span class='op'>$</span><span class='fu'>script</span><span class='op'>(</span>src<span class='op'>=</span><span class='st'>"https://cdn.jsdelivr.net/npm/d3-array@3"</span><span class='op'>)</span>
-</code></pre>
-</div>
-<p><script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script></p>
+<p><script src="https://cdn.jsdelivr.net/npm/d3@6"></script></p>
 </div>
 <p>Click to render a dummy SVG widget using the sample Kenya data for 2017 (to make sure libraries are loaded).</p>
 <div id="d3ex1" class="l-body">
@@ -2923,7 +2918,7 @@ var g = group=="" ? "g" : "g[id=" + group + "]";
 <h2 id="optimized-svg">Optimized SVG</h2>
 <p>At this point, we need to manually modify (simplify) the original SVG design to clean up paths and to make it easier to select and manipulate (drill through) logical layers and groups of elements. We can create a useful hierarchy in Inkscape and then re-import the modified design here.</p>
 <blockquote>
-<p>Note: make sure to remove attributes <code>&lt;svg width="" height=""&gt;</code> from the SVG file produced by Inkscape.</p>
+<p>Note: make sure to remove attributes <code>&lt;svg width="" height=""&gt;</code> from the SVG file produced by Inkscape for the design to size properly in its DOM container.</p>
 </blockquote>
 <div id="d3ex3" class="l-body">
 
@@ -2960,7 +2955,7 @@ fun_reset("../../www/svg/sheet_1_edited.svg", "d3ex3");
 
 </script>
 </div>
-<p>Next step is to map text labels to data variables.</p>
+<p>Next step is to map text labels and possible cell height to data variables.</p>
 <h2 id="data-bindings">Data Bindings</h2>
 <p>Object model for Sheet 1 is shown below.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2976,7 +2971,7 @@ Show code
 </div>
 </details>
 </div>
-<p>When bound with the yearly model simulation, the widget now behaves as follows (src: <a href="https://mbacou.shinyapps.io/iwmi_app/">shinyapps.io</a>).</p>
+<p>When bound with the yearly model simulation dataset <code>data</code> assembled above, the HTML widget now behaves as follows (src: <a href="https://mbacou.shinyapps.io/iwmi_app/">shinyapps.io</a>).</p>
 <iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="640" width="100%" style="border:none;">
 <p>
 Your browser does not support iframes

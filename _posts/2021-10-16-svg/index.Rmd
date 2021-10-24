@@ -207,7 +207,6 @@ And we need `D3.js` as an external dependency in this notebook:
 ```{r, code_folding=FALSE}
 # Import D3.js lib
 htmltools::tags$script(src="https://cdn.jsdelivr.net/npm/d3@6")
-htmltools::tags$script(src="https://cdn.jsdelivr.net/npm/d3-array@3")
 ```
 
 Click to render a dummy SVG widget using the sample Kenya data for 2017 (to make sure libraries are loaded).
@@ -386,7 +385,7 @@ var g = group=="" ? "g" : "g[id=" + group + "]";
 
 At this point, we need to manually modify (simplify) the original SVG design to clean up paths and to make it easier to select and manipulate (drill through) logical layers and groups of elements. We can create a useful hierarchy in Inkscape and then re-import the modified design here.
 
-> Note: make sure to remove attributes `<svg width="" height="">` from the SVG file produced by Inkscape.
+> Note: make sure to remove attributes `<svg width="" height="">` from the SVG file produced by Inkscape for the design to size properly in its DOM container.
 
 ::: {#d3ex3 .l-body}
 :::
@@ -409,7 +408,7 @@ fun_reset("../../www/svg/sheet_1_edited.svg", "d3ex3");
 
 ```
 
-Next step is to map text labels to data variables.
+Next step is to map text labels and possible cell height to data variables.
 
 ## Data Bindings
 
@@ -423,7 +422,7 @@ model %>% paged_table()
 
 ```
 
-When bound with the yearly model simulation, the widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
+When bound with the yearly model simulation dataset `data` assembled above, the HTML widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
 
 
 <iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="640" width="100%" style="border:none;">
