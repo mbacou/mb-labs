@@ -178,7 +178,7 @@ cat(
 ```
 
 
-# Interactive SVG
+# Interactive Sheets
 
 We work off the existing SVG designs, using `D3.js` constructs to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).
 
@@ -410,7 +410,7 @@ fun_reset("../../www/svg/sheet_1_edited.svg", "d3ex3");
 
 Next step is to map text labels and possible cell height to data variables.
 
-## Data Bindings
+## HTML Widget
 
 Object model for Sheet 1 is shown below.
 

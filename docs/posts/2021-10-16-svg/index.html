@@ -2343,10 +2343,10 @@ summary {
 <h3>Contents</h3>
 <ul>
 <li><a href="#data-preparation">Data Preparation</a></li>
-<li><a href="#interactive-svg">Interactive SVG</a>
+<li><a href="#interactive-sheets">Interactive Sheets</a>
 <ul>
 <li><a href="#optimized-svg">Optimized SVG</a></li>
-<li><a href="#data-bindings">Data Bindings</a></li>
+<li><a href="#html-widget">HTML Widget</a></li>
 </ul></li>
 <li><a href="#references">References</a></li>
 </ul>
@@ -2566,7 +2566,7 @@ Show code
   var pal = ["#28537D","#46BBD4","#5088C6","#0297A6","#22AD7A","#DD9103","#E86933","#8B2635","#51291E","#FFE156","#333333","#E8E7E7"];
   </script>
 </div>
-<h1 id="interactive-svg">Interactive SVG</h1>
+<h1 id="interactive-sheets">Interactive Sheets</h1>
 <p>We work off the existing SVG designs, using <code>D3.js</code> constructs to add data binding and interactions. An important drawback of this approach is that each SVG element (rectangle, arrow, text, etc.) is tied to a data variable, so any change in the underlying data schema (esp. renaming of output variables) would require to manually edit the corresponding SVG sheet (using a text or vector graphic editor).</p>
 <p>There are multiple SVG template sheets provided in the Kenya code repository (under <code>./scripts/WAsheets/template/svg</code>). They are shown below.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2956,7 +2956,7 @@ fun_reset("../../www/svg/sheet_1_edited.svg", "d3ex3");
 </script>
 </div>
 <p>Next step is to map text labels and possible cell height to data variables.</p>
-<h2 id="data-bindings">Data Bindings</h2>
+<h2 id="html-widget">HTML Widget</h2>
 <p>Object model for Sheet 1 is shown below.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
