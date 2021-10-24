@@ -427,7 +427,7 @@ model %>% paged_table()
 When bound with the yearly model simulation dataset `data` assembled above, the HTML widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
 
 
-<iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="640" width="100%" style="border:none;">
+<iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="680" width="100%" style="border:none;">
 <p>Your browser does not support iframes</p>
 </iframe>
 

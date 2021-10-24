@@ -49,8 +49,8 @@ var root = svg.select(".sheet_1").select("svg");
   root
     .selectAll("rect")
     .data(data)
-    .attr("height", d => 100*d.value)
-    .attr("d", d => d);
+    //.attr("height", d => 1000*d.value)
+    .attr("d", d => d.value);
 
   root
     .selectAll("text")
