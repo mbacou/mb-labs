@@ -14,7 +14,7 @@
     <generator>Distill</generator>
     <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Custom Highcharts (draft)</title>
+      <title>Visualizing Water: Sankey Diagrams (draft)</title>
       <dc:creator>BACOU, Melanie</dc:creator>
       <link>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</link>
       <description>Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI).</description>
@@ -23,10 +23,10 @@
       <category>hydrology</category>
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</guid>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/resource-base.svg" medium="image" type="image/svg+xml"/>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/../../www/fig/sankey_curmi_2013.png" medium="image" type="image/png" width="850" height="531"/>
     </item>
     <item>
-      <title>Interactive SVG with D3.js (draft)</title>
+      <title>Visualizing Water: Interactive SVG with D3.js (draft)</title>
       <dc:creator>BACOU, Melanie</dc:creator>
       <link>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</link>
       <description>Part 1: add interactivity to IWMI's printable WA+ sheets.</description>
@@ -36,6 +36,17 @@
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1_edited.svg" medium="image" type="image/svg+xml"/>
+    </item>
+    <item>
+      <title>Visualizing Water: Interactive 3D Timelapse of River Basins (draft)</title>
+      <dc:creator>BACOU, Melanie</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</link>
+      <description>Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins.</description>
+      <category>draft</category>
+      <category>imwi</category>
+      <category>hydrology</category>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</guid>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Merge Ground and Satellite Observations with RFMerge</title>

@@ -1,5 +1,5 @@
 ---
-title: Interactive SVG with D3.js (draft)
+title: "Visualizing Water: Interactive SVG with D3.js (draft)"
 description: |
   Part 1: add interactivity to IWMI's printable WA+ sheets.
 author:
@@ -56,12 +56,11 @@ theme_mb <- function(
 ```
 
 
-This notebook is to explore multiple visualization schemes for hydrologic model simulations:
+This notebook is to explore multiple visualization schemes for hydrologic model simulations. It's broken down into 3 parts:
 
-1. **Interactive SVG**: add user interactivity to existing SVG sheets (or simplified) designs using low-level [D3.js](https://d3js.org/) library
-2. **Graphviz**: redesign the WA+ sheets using [Graphviz](https://graphviz.org/) and provide interactivity with [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/)
-3. **Highcharts**: reshape WA+ model output to create more standard Sankey and/or treemaps [Highcharts.js](https://www.highcharts.com/) library
-4. **Leaflet**: create a 3D map of basin landscape with SVG annotation layers (arrows, etc.) using [leaflet.js](https://leafletjs.com/)
+1. **Interactive SVG** (this page): add user interactivity to existing SVG sheets (or simplified) designs using low-level [D3.js](https://d3js.org/) library
+2. [Flow diagrams](../2021-10-12-highcharts/): reshape WA+ model output to create interactive Sankey diagrams with [Highcharts.js](https://www.highcharts.com/)
+3. [Interactive 3D timelapse of river basins](../2021-10-24-3dmap/): create a 3D map of basin landscape with SVG annotation layers (arrows, etc.)
 
 The **D3.js** approach is the more flexible but also the more "tedious" to implement. Other approaches will be developed in separate notebooks.
 
@@ -188,9 +187,8 @@ There are multiple SVG templates provided in the Kenya code repository (under `.
 
 ```{r, out.width="33%", fig.width=3, fig.show="hold"}
 
-svg <- "../../www/svg" %>%
-  list.files(pattern="*.svg", full.names=TRUE)
-knitr::include_graphics(svg[-c(1:3, 7, 9)])
+list.files("../../www/svg", pattern="*.svg", full.names=TRUE)[-c(1:3,7,9)] %>%
+  knitr::include_graphics()
 
 ```
 

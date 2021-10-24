@@ -86,11 +86,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Mel's Labs: Visualizing Water: Sankey Diagrams (draft)</title>
+<title>Mel's Labs: Visualizing Water: Interactive 3D Timelapse of River Basins (draft)</title>
 
-<meta property="description" itemprop="description" content="Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI)."/>
+<meta property="description" itemprop="description" content="Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins."/>
 
-<link rel="canonical" href="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
+<link rel="canonical" href="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/"/>
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 <link rel="icon" type="image/svg+xml" href="../../www/logo_w.svg"/>
 
@@ -100,28 +100,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="BACOU, Melanie"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Mel&#39;s Labs: Visualizing Water: Sankey Diagrams (draft)"/>
+<meta property="og:title" content="Mel&#39;s Labs: Visualizing Water: Interactive 3D Timelapse of River Basins (draft)"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI)."/>
-<meta property="og:url" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
-<meta property="og:image" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/../../www/fig/sankey_curmi_2013.png"/>
-<meta property="og:image:width" content="850"/>
-<meta property="og:image:height" content="531"/>
+<meta property="og:description" content="Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins."/>
+<meta property="og:url" content="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Mel&#39;s Labs"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Mel&#39;s Labs: Visualizing Water: Sankey Diagrams (draft)"/>
-<meta property="twitter:description" content="Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI)."/>
-<meta property="twitter:url" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
-<meta property="twitter:image" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/../../www/fig/sankey_curmi_2013.png"/>
-<meta property="twitter:image:width" content="850"/>
-<meta property="twitter:image:height" content="531"/>
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Mel&#39;s Labs: Visualizing Water: Interactive 3D Timelapse of River Basins (draft)"/>
+<meta property="twitter:description" content="Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins."/>
+<meta property="twitter:url" content="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="Mel&#39;s Labs: Visualizing Water: Sankey Diagrams (draft)"/>
-<meta name="citation_fulltext_html_url" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
+<meta name="citation_title" content="Mel&#39;s Labs: Visualizing Water: Interactive 3D Timelapse of River Basins (draft)"/>
+<meta name="citation_fulltext_html_url" content="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/"/>
 <meta name="citation_fulltext_world_readable" content=""/>
 <meta name="citation_online_date" content="2021/10/24"/>
 <meta name="citation_publication_date" content="2021/10/24"/>
@@ -130,12 +124,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","categories","date","date_prefix","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Visualizing Water: Sankey Diagrams (draft)"]},{"type":"character","attributes":{},"value":["Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI)."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email","url"]}},"value":[{"type":"character","attributes":{},"value":["BACOU, Melanie"]},{"type":"character","attributes":{},"value":["mel@mbacou.com"]},{"type":"character","attributes":{},"value":["https://linkedin/in/mbacou"]}]}]},{"type":"character","attributes":{},"value":["draft","imwi","hydrology"]},{"type":"character","attributes":{},"value":["2021-10-24"]},{"type":"character","attributes":{},"value":["2021-10-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","dev","code_folding","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["svglite"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","preview","categories","date","date_prefix","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Visualizing Water: Interactive 3D Timelapse of River Basins (draft)"]},{"type":"character","attributes":{},"value":["Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email","url"]}},"value":[{"type":"character","attributes":{},"value":["BACOU, Melanie"]},{"type":"character","attributes":{},"value":["mel@mbacou.com"]},{"type":"character","attributes":{},"value":["https://linkedin/in/mbacou"]}]}]},{"type":"character","attributes":{},"value":["resource-base.svg"]},{"type":"character","attributes":{},"value":["draft","imwi","hydrology"]},{"type":"character","attributes":{},"value":["2021-10-24"]},{"type":"character","attributes":{},"value":["2021-10-24"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","dev","code_folding","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["svglite"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/"]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.11/header-attrs.js","index_files/highchart-binding-0.8.2.9000/highchart.js","index_files/highcharts-9.1.0/css/htmlwdgtgrid.css","index_files/highcharts-9.1.0/css/motion.css","index_files/highcharts-9.1.0/custom/appear.js","index_files/highcharts-9.1.0/custom/delay-animation.js","index_files/highcharts-9.1.0/custom/reset.js","index_files/highcharts-9.1.0/custom/symbols-extra.js","index_files/highcharts-9.1.0/custom/text-symbols.js","index_files/highcharts-9.1.0/custom/tooltip-delay.js","index_files/highcharts-9.1.0/highcharts-3d.js","index_files/highcharts-9.1.0/highcharts-more.js","index_files/highcharts-9.1.0/highcharts.js","index_files/highcharts-9.1.0/modules/accessibility.js","index_files/highcharts-9.1.0/modules/annotations-advanced.js","index_files/highcharts-9.1.0/modules/annotations.js","index_files/highcharts-9.1.0/modules/arrow-symbols.js","index_files/highcharts-9.1.0/modules/boost-canvas.js","index_files/highcharts-9.1.0/modules/boost.js","index_files/highcharts-9.1.0/modules/broken-axis.js","index_files/highcharts-9.1.0/modules/bullet.js","index_files/highcharts-9.1.0/modules/coloraxis.js","index_files/highcharts-9.1.0/modules/current-date-indicator.js","index_files/highcharts-9.1.0/modules/cylinder.js","index_files/highcharts-9.1.0/modules/data.js","index_files/highcharts-9.1.0/modules/datagrouping.js","index_files/highcharts-9.1.0/modules/debugger.js","index_files/highcharts-9.1.0/modules/dependency-wheel.js","index_files/highcharts-9.1.0/modules/dotplot.js","index_files/highcharts-9.1.0/modules/drag-panes.js","index_files/highcharts-9.1.0/modules/draggable-points.js","index_files/highcharts-9.1.0/modules/drilldown.js","index_files/highcharts-9.1.0/modules/dumbbell.js","index_files/highcharts-9.1.0/modules/export-data.js","index_files/highcharts-9.1.0/modules/exporting.js","index_files/highcharts-9.1.0/modules/full-screen.js","index_files/highcharts-9.1.0/modules/funnel.js","index_files/highcharts-9.1.0/modules/funnel3d.js","index_files/highcharts-9.1.0/modules/gantt.js","index_files/highcharts-9.1.0/modules/grid-axis.js","index_files/highcharts-9.1.0/modules/heatmap.js","index_files/highcharts-9.1.0/modules/histogram-bellcurve.js","index_files/highcharts-9.1.0/modules/item-series.js","index_files/highcharts-9.1.0/modules/lollipop.js","index_files/highcharts-9.1.0/modules/map.js","index_files/highcharts-9.1.0/modules/marker-clusters.js","index_files/highcharts-9.1.0/modules/networkgraph.js","index_files/highcharts-9.1.0/modules/no-data-to-display.js","index_files/highcharts-9.1.0/modules/offline-exporting.js","index_files/highcharts-9.1.0/modules/oldie-polyfills.js","index_files/highcharts-9.1.0/modules/oldie.js","index_files/highcharts-9.1.0/modules/organization.js","index_files/highcharts-9.1.0/modules/overlapping-datalabels.js","index_files/highcharts-9.1.0/modules/parallel-coordinates.js","index_files/highcharts-9.1.0/modules/pareto.js","index_files/highcharts-9.1.0/modules/pathfinder.js","index_files/highcharts-9.1.0/modules/pattern-fill.js","index_files/highcharts-9.1.0/modules/price-indicator.js","index_files/highcharts-9.1.0/modules/pyramid3d.js","index_files/highcharts-9.1.0/modules/sankey.js","index_files/highcharts-9.1.0/modules/series-label.js","index_files/highcharts-9.1.0/modules/solid-gauge.js","index_files/highcharts-9.1.0/modules/sonification.js","index_files/highcharts-9.1.0/modules/static-scale.js","index_files/highcharts-9.1.0/modules/stock-tools.js","index_files/highcharts-9.1.0/modules/stock.js","index_files/highcharts-9.1.0/modules/streamgraph.js","index_files/highcharts-9.1.0/modules/sunburst.js","index_files/highcharts-9.1.0/modules/tilemap.js","index_files/highcharts-9.1.0/modules/timeline.js","index_files/highcharts-9.1.0/modules/treegrid.js","index_files/highcharts-9.1.0/modules/treemap.js","index_files/highcharts-9.1.0/modules/variable-pie.js","index_files/highcharts-9.1.0/modules/variwide.js","index_files/highcharts-9.1.0/modules/vector.js","index_files/highcharts-9.1.0/modules/venn.js","index_files/highcharts-9.1.0/modules/windbarb.js","index_files/highcharts-9.1.0/modules/wordcloud.js","index_files/highcharts-9.1.0/modules/xrange.js","index_files/highcharts-9.1.0/plugins/draggable-legend.js","index_files/highcharts-9.1.0/plugins/grouped-categories.js","index_files/highcharts-9.1.0/plugins/highcharts-regression.js","index_files/highcharts-9.1.0/plugins/motion.js","index_files/highcharts-9.1.0/plugins/multicolor_series.js","index_files/htmlwidgets-1.5.4/htmlwidgets.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/proj4js-2.3.15/proj4.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","resource-base.svg"]}
+  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/header-attrs-2.11/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2294,7 +2288,7 @@ summary {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Visualizing Water: Sankey Diagrams (draft)","description":"Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI).","authors":[{"author":"BACOU, Melanie","authorURL":"https://linkedin/in/mbacou","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-24T00:00:00.000+01:00","citationText":"Melanie, 2021"}
+{"title":"Visualizing Water: Interactive 3D Timelapse of River Basins (draft)","description":"Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins.","authors":[{"author":"BACOU, Melanie","authorURL":"https://linkedin/in/mbacou","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-24T00:00:00.000+01:00","citationText":"Melanie, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2322,7 +2316,7 @@ summary {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Visualizing Water: Sankey Diagrams (draft)</h1>
+<h1>Visualizing Water: Interactive 3D Timelapse of River Basins (draft)</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../index.html#category:draft" class="dt-tag">draft</a>
@@ -2330,7 +2324,7 @@ summary {
   <a href="../../index.html#category:hydrology" class="dt-tag">hydrology</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI).</p></p>
+<p><p>Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2340,169 +2334,18 @@ summary {
 </div>
 
 <div class="d-article">
-<div class="d-contents d-contents-float">
-<nav class="l-text toc figcaption" id="TOC">
-<h3>Contents</h3>
-<ul>
-<li><a href="#sankey">Sankey Diagram</a></li>
-<li><a href="#steamgraphs">Steamgraphs</a></li>
-</ul>
-</nav>
-</div>
-<p>This notebook is Part 2 of a code playground for hydrologic model visualization. In <a href="../2021-10-16-svg/">Part 1</a> we focused on <code>D3.js</code>, here we test network and hierarchical visuals using a higher-level graphic library <code>Highchart.js</code>.</p>
-<p><code>Highcharts</code> is built on top of D3 but comes with sample configurations and R and Python clients, making it easier to build dynamic charts, esp. Sankey, treemaps, and flow diagrams with significantly less code.</p>
-<p>This approach is inspired by:</p>
-<ol type="1">
-<li><a href="https://www.researchgate.net/publication/257673216_Visualising_a_Stochastic_Model_of_Californian_Water_Resources_Using_Sankey_Diagrams">Curmi et al. 2013</a></li>
-<li>Lancaster University <a href="https://github.com/csaladenes/food-energy-flows">Food-Energy Flows</a> diagram</li>
-<li>Truth Studio for the Nature Conservancy’s <a href="http://www.truthstudio.com/content/Visualizing_Water_Nat_Geo_01_SCRIPT.pdf">static illustration</a> of the Colorado River basin’s withdrawals and consumption.</li>
-</ol>
-<div class="layout-chunk" data-layout="l-body">
-<details>
-<summary>
-Show code
-</summary>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>
-  <span class='st'>"../../www/fig/sankey_curmi_2013.png"</span>,
-  <span class='st'>"../../www/fig/sankey_lancaster.png"</span>,
-  <span class='st'>"../../www/fig/sankey_truthstudio_1.png"</span>,
-  <span class='st'>"../../www/fig/sankey_truthstudio_1.png"</span>
-<span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='op'>)</span>
-</code></pre>
-</div>
-</details>
-<p><img src="../../www/fig/sankey_curmi_2013.png" width="50%" /><img src="../../www/fig/sankey_lancaster.png" width="50%" /><img src="../../www/fig/sankey_truthstudio_1.png" width="50%" /><img src="../../www/fig/sankey_truthstudio_1.png" width="50%" /></p>
-</div>
-<div class="layout-chunk" data-layout="l-body">
-<details>
-<summary>
-Show code
-</summary>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Load yearly dataset generated in Part 1</span>
-<span class='va'>data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://Rdatatable.gitlab.io/data.table/reference/fread.html'>fread</a></span><span class='op'>(</span><span class='st'>"../2021-10-16-svg/data.csv"</span><span class='op'>)</span>
-</code></pre>
-</div>
-</details>
-</div>
-<h1 id="sankey">Sankey Diagram</h1>
-<p>A Sankey diagram is a type of directed network graph in which the width of the arrows (vertices) is proportional to the flow rate.</p>
-<p>Here we use R library <a href="http://christophergandrud.github.io/networkD3/"><code>networkD3</code></a> to build the charts (chart configurations built in R can be exported to vanilla Javascript). First we define a default theme for Highcharts, which we’ll reuse across visuals.</p>
-<div class="layout-chunk" data-layout="l-body">
-<details>
-<summary>
-Show code
-</summary>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>hc_theme_iwmi</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span>
-  <span class='va'>hc</span>,
-  <span class='va'>title</span> <span class='op'>=</span> <span class='cn'>NULL</span>,
-  <span class='va'>subtitle</span> <span class='op'>=</span> <span class='cn'>NULL</span>,
-  <span class='va'>label</span> <span class='op'>=</span> <span class='cn'>NULL</span>,
-  <span class='va'>x</span> <span class='op'>=</span> <span class='cn'>NULL</span>,
-  <span class='va'>y</span> <span class='op'>=</span> <span class='cn'>NULL</span>,
-  <span class='va'>exporting</span> <span class='op'>=</span> <span class='cn'>TRUE</span>,
-  <span class='va'>credits</span> <span class='op'>=</span> <span class='cn'>FALSE</span>,
-  <span class='va'>...</span><span class='op'>)</span> <span class='op'>{</span>
-  
-  <span class='va'>thm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='http://jkunst.com/highcharter/reference/hc_theme.html'>hc_theme</a></span><span class='op'>(</span>
-    
-    chart <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      backgroundColor <span class='op'>=</span> <span class='st'>"transparent"</span>
-    <span class='op'>)</span>,
-    <span class='co'># Don't use semantic colors</span>
-    colors <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/unname.html'>unname</a></span><span class='op'>(</span><span class='va'>pal</span><span class='op'>)</span>,
-    title <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      style <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>color<span class='op'>=</span><span class='st'>"#333"</span>, fontSize<span class='op'>=</span><span class='st'>"16px"</span><span class='op'>)</span>,
-      align <span class='op'>=</span> <span class='st'>"left"</span>
-    <span class='op'>)</span>,
-    subtitle <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      style <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>color<span class='op'>=</span><span class='st'>'#777'</span>, fontSize<span class='op'>=</span><span class='st'>"13px"</span><span class='op'>)</span>,
-      align <span class='op'>=</span> <span class='st'>"left"</span>
-    <span class='op'>)</span>,
-    legend <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      enabled <span class='op'>=</span> <span class='cn'>TRUE</span>,
-      itemStyle <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>color<span class='op'>=</span><span class='st'>"#777"</span><span class='op'>)</span>,
-      verticalAlign <span class='op'>=</span> <span class='st'>"top"</span>,
-      align <span class='op'>=</span> <span class='st'>"left"</span>,
-      itemHoverStyle <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>color<span class='op'>=</span><span class='st'>"#333"</span><span class='op'>)</span>
-    <span class='op'>)</span>,
-    xAxis <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      title <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>enabled<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>,
-      dateTimeLabelFormats <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>day<span class='op'>=</span><span class='st'>'%e %b'</span>, week<span class='op'>=</span><span class='st'>'%e %b %y'</span>, month<span class='op'>=</span><span class='st'>'%b-%y'</span>, year<span class='op'>=</span><span class='st'>'%Y'</span><span class='op'>)</span><span class='op'>)</span>
-    ,
-    yAxis <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      title <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>enabled<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
-    <span class='op'>)</span>,
-    tooltip <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      enabled <span class='op'>=</span> <span class='cn'>TRUE</span>, shared <span class='op'>=</span> <span class='cn'>TRUE</span>, split <span class='op'>=</span> <span class='cn'>FALSE</span>,
-      pointFormat <span class='op'>=</span> <span class='st'>"{series.name}: &lt;strong&gt;{point.y:,.1f}&lt;/strong&gt;&lt;br/&gt;"</span>,
-      xDateFormat <span class='op'>=</span> <span class='st'>"%Y-%m-%d"</span>,
-      dateTimeLabelFormats <span class='op'>=</span> <span class='st'>"%Y-%m-%d"</span>,
-      valueDecimals <span class='op'>=</span> <span class='fl'>2</span>
-    <span class='op'>)</span>,
-    plotOptions <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      series <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-        opacity <span class='op'>=</span> <span class='fl'>.8</span>,
-        connectNulls <span class='op'>=</span> <span class='cn'>TRUE</span>,
-        marker <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>enabled<span class='op'>=</span><span class='cn'>NA</span>, radius<span class='op'>=</span><span class='fl'>3</span>, enabledThreshold<span class='op'>=</span><span class='fl'>8</span><span class='op'>)</span>,
-        dataLabels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>enabled<span class='op'>=</span><span class='cn'>NA</span>, style<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>fontSize<span class='op'>=</span><span class='st'>"11px"</span><span class='op'>)</span><span class='op'>)</span>
-      <span class='op'>)</span>,
-      heatmap <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-        marker <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>enabled<span class='op'>=</span><span class='cn'>TRUE</span>, lineWidth<span class='op'>=</span><span class='fl'>6</span>, lineColor<span class='op'>=</span><span class='st'>"#fff"</span><span class='op'>)</span>,
-        dataLabels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>enabled<span class='op'>=</span><span class='cn'>TRUE</span>, pointFormat<span class='op'>=</span><span class='st'>"{point.value:,.0f}"</span><span class='op'>)</span>
-      <span class='op'>)</span>
-    <span class='op'>)</span>,
-    exporting <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      enabled <span class='op'>=</span> <span class='va'>exporting</span>,
-      csv <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>dateFormat<span class='op'>=</span><span class='st'>"%Y-%m-%d"</span><span class='op'>)</span>,
-      buttons <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>contextButton<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-        symbolSize <span class='op'>=</span> <span class='fl'>12</span>,
-        symbolFill <span class='op'>=</span> <span class='st'>"#fff"</span>,
-        symbolStroke <span class='op'>=</span> <span class='st'>"#777"</span>,
-        symbolStrokeWidth <span class='op'>=</span> <span class='fl'>1.3</span>,
-        menuItems <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"printChart"</span>, <span class='st'>"downloadPNG"</span>, <span class='st'>"downloadSVG"</span>, <span class='st'>"downloadCSV"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
-    <span class='op'>)</span>,
-    credits <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      enabled <span class='op'>=</span> <span class='va'>credits</span>,
-      position <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>align<span class='op'>=</span><span class='st'>"left"</span><span class='op'>)</span>,
-      href <span class='op'>=</span> <span class='st'>"https://iwni.cgiar.org/"</span>,
-      style <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>fontSize<span class='op'>=</span><span class='st'>"11px"</span><span class='op'>)</span>
-    <span class='op'>)</span>,
-    <span class='va'>...</span>
-  <span class='op'>)</span>
-  
-  <span class='va'>p</span>  <span class='op'>=</span> <span class='fu'><a href='http://jkunst.com/highcharter/reference/hc_add_theme.html'>hc_add_theme</a></span><span class='op'>(</span><span class='va'>hc</span>, <span class='va'>thm</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-    <span class='fu'><a href='http://jkunst.com/highcharter/reference/hc_title.html'>hc_title</a></span><span class='op'>(</span>text <span class='op'>=</span> <span class='va'>title</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-    <span class='fu'><a href='http://jkunst.com/highcharter/reference/hc_subtitle.html'>hc_subtitle</a></span><span class='op'>(</span>text <span class='op'>=</span> <span class='va'>subtitle</span><span class='op'>)</span>
-  
-  <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>label</span><span class='op'>)</span><span class='op'>&gt;</span><span class='fl'>0</span><span class='op'>)</span> <span class='va'>p</span> <span class='op'>=</span> <span class='va'>p</span> <span class='op'>%&gt;%</span>
-    <span class='fu'><a href='http://jkunst.com/highcharter/reference/hc_annotations.html'>hc_annotations</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
-      <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>text<span class='op'>=</span><span class='va'>label</span>, useHTML<span class='op'>=</span><span class='cn'>TRUE</span>, shape<span class='op'>=</span><span class='st'>"rect"</span>, point<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
-  
-  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>p</span><span class='op'>)</span>
-<span class='op'>}</span>
-</code></pre>
-</div>
-</details>
-</div>
-<p>Then we reshape our sample Kenya dataset for 2017 into a list of vertices between 2 nodes (with fields <code>from</code>, <code>to</code>, <code>value</code> at minimum).</p>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-<h1 id="steamgraphs">Steamgraphs</h1>
+<p>This notebook is <strong>Part 3</strong> of an exploration to visualize results of hydrologic models. In <a href="../2021-10-16-svg/">Part 1</a> we built highly customized widgets using <code>D3.js</code>, and in <a href="../2021-10-12-highcharts/">Part 2</a> we looked at flow diagrams. Here we test multiple libraries to generate 3D views of river basins, in particular we want to compare <a href="https://leafletjs.com/">leaflet</a> and <a href="https://threejs.org/">Three.js</a> implementations.</p>
+<p>Aside from rendering spatial terrain and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels and charts to illustrate and quantify the hydrological cycle.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
     <span class="article-sharing">
       Share: &nbsp;
-      <a href="https://twitter.com/share?text=Visualizing%20Water%3A%20Sankey%20Diagrams%20%28draft%29&amp;url=https%3A%2F%2Fmbacou.github.io%2Fmb-labs%2Fposts%2F2021-10-12-highcharts%2F">
+      <a href="https://twitter.com/share?text=Visualizing%20Water%3A%20Interactive%203D%20Timelapse%20of%20River%20Basins%20%28draft%29&amp;url=https%3A%2F%2Fmbacou.github.io%2Fmb-labs%2Fposts%2F2021-10-24-3dmap%2F">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fmbacou.github.io%2Fmb-labs%2Fposts%2F2021-10-12-highcharts%2F&amp;title=Visualizing%20Water%3A%20Sankey%20Diagrams%20%28draft%29">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fmbacou.github.io%2Fmb-labs%2Fposts%2F2021-10-24-3dmap%2F&amp;title=Visualizing%20Water%3A%20Interactive%203D%20Timelapse%20of%20River%20Basins%20%28draft%29">
         <i class="fab fa-linkedin"></i>
       </a>
     </span>
@@ -2525,12 +2368,12 @@ Show code
   <p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/mbacou/mb-labs">https://github.com/mbacou/mb-labs</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Melanie (2021, Oct. 24). Mel's Labs: Visualizing Water: Sankey Diagrams (draft). Retrieved from https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/</pre>
+  <pre class="citation-appendix short">Melanie (2021, Oct. 24). Mel's Labs: Visualizing Water: Interactive 3D Timelapse of River Basins (draft). Retrieved from https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/</pre>
   <p>BibTeX citation</p>
   <pre class="citation-appendix long">@misc{melanie2021visualizing,
   author = {Melanie, BACOU,},
-  title = {Mel's Labs: Visualizing Water: Sankey Diagrams (draft)},
-  url = {https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/},
+  title = {Mel's Labs: Visualizing Water: Interactive 3D Timelapse of River Basins (draft)},
+  url = {https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/},
   year = {2021}
 }</pre>
 </div>

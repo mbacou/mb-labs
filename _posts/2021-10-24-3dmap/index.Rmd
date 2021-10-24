@@ -1,0 +1,45 @@
+---
+title: "Visualizing Water: Interactive 3D Timelapse of River Basins (draft)"
+description: |
+  Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins.
+author:
+  - name: BACOU, Melanie
+    email: mel@mbacou.com
+    url: https://linkedin/in/mbacou
+preview: resource-base.svg
+categories:
+  - draft
+  - imwi
+  - hydrology
+date: "`r Sys.Date()`"
+date_prefix: 2021-10-24
+output:
+  distill::distill_article:
+    toc: true
+    dev: svglite
+    code_folding: true
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+
+library(knitr)
+library(jsonlite)
+library(scales)
+library(stringr)
+library(data.table)
+library(highcharter)
+
+opts_chunk$set(res=220, pointsize=8)
+
+# Default color palette
+pal <- readRDS("../../_assets/palette.rds")
+
+```
+
+
+This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built highly customized widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at flow diagrams. Here we test multiple libraries to generate 3D views of river basins, in particular we want to compare [leaflet](https://leafletjs.com/) and [Three.js](https://threejs.org/) implementations.
+
+Aside from rendering spatial terrain and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels and charts to illustrate and quantify the hydrological cycle.
+
+

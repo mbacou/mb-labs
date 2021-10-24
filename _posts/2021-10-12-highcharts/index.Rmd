@@ -1,12 +1,11 @@
 ---
-title: Custom Highcharts (draft)
+title: "Visualizing Water: Sankey Diagrams (draft)"
 description: |
   Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI).
 author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
-preview: resource-base.svg
 categories:
   - draft
   - imwi
@@ -38,53 +37,35 @@ pal <- readRDS("../../_assets/palette.rds")
 ```
 
 
-This notebook is Part 2 of a code playground for hydrologic model visualization. In [Part 1](../2021-10-16-svg/) we focused on `D3.js`, here we build Javascript widgets using a higher-level graphic library `Highchart.js`.
+This notebook is Part 2 of a code playground for hydrologic model visualization. In [Part 1](../2021-10-16-svg/) we focused on `D3.js`, here we test network and hierarchical visuals using a higher-level graphic library `Highchart.js`.
 
-`Highcharts` is built on top of D3 but comes with sample configurations and R and Python clients, making it easier to build highly dynamic charts, esp. Sankey, treemaps, flow diagrams, etc. with less code.
+`Highcharts` is built on top of D3 but comes with sample configurations and R and Python clients, making it easier to build dynamic charts, esp. Sankey, treemaps, and flow diagrams with significantly less code.
 
-# Data Preparation
+This approach is inspired by:
 
-To validate the different approaches we use sample model output and datasets provided by **Naga Valpuri** for Mali (Niger river basin) and Kenya (Mara river  basin). 
+1. [Curmi et al. 2013](https://www.researchgate.net/publication/257673216_Visualising_a_Stochastic_Model_of_Californian_Water_Resources_Using_Sankey_Diagrams) 
+2. Lancaster University [Food-Energy Flows](https://github.com/csaladenes/food-energy-flows) diagram
+3. Truth Studio for the Nature Conservancy's [static illustration](http://www.truthstudio.com/content/Visualizing_Water_Nat_Geo_01_SCRIPT.pdf) of the Colorado River basin's withdrawals and consumption.
 
-```{r}
+```{r, out.width="50%", fig.width=3, fig.show="hold"}
 
-data <- list(
-  ken = "~/Projects/2021-iwmi/data/ken/hydroloop_results/csv",
-  mli = "~/Projects/2021-iwmi/data/mli/csv_km3"
+c(
+  "../../www/fig/sankey_curmi_2013.png",
+  "../../www/fig/sankey_lancaster.png",
+  "../../www/fig/sankey_truthstudio_1.png",
+  "../../www/fig/sankey_truthstudio_1.png"
 ) %>%
-  lapply(list.files, pattern="*.csv", recursive=TRUE, full.names=TRUE) %>%
-  lapply(data.table) %>%
-  rbindlist(idcol="iso3", use.names=TRUE, fill=TRUE) %>%
-  setnames("V1", "path")
-
-data[, 
-  file := basename(path)
-][, `:=`(
-  year = str_extract(file, "_[0-9]{4}") %>% str_sub(2,5) %>% as.integer(),
-  month = str_extract(file, "[0-9]{4}_[0-9]{1,2}") %>% str_sub(6,7) %>% as.integer()
-)] %>% setorder(iso3, year, month, na.last=TRUE)
-
-data[iso3=="ken", .(file, year, month)][c(1:5, (.N-4):.N)] %>% 
-  kable(caption="Kenya - List of output files (top and last 5)")
-data[iso3=="mli", .(file, year, month)] %>% 
-  kable(caption="Mali - List of output files")
+  include_graphics()
 
 ```
 
-In particular we have yearly model steps for Mali and monthly steps for Kenya that are further aggregated to seasonal and yearly time spans (by variable), as well as monthly time-series. In Mali only **Sheet 1** was produced (Resource Base).
-
-A sample simulation output for Kenya for the year 2017.
 
 ```{r}
 
-f <- "sheet1_2017.csv"
-ken <- data[iso3=="ken" & file==f][1, fread(path)]
-ken %>% 
-  kable(caption=f)
+# Load yearly dataset generated in Part 1
+data <- fread("../2021-10-16-svg/data.csv")
 
 ```
-
-This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLASS`. Units are in **km³/year**. These numbers represent flow variables (water flowing into the basin, and water leaving the basin as both ground and surface waters, either stored, utilized, evaporated, infiltrated, or runoff).
 
 
 # Sankey Diagram {#sankey}
@@ -194,29 +175,6 @@ Then we reshape our sample Kenya dataset for 2017 into a list of vertices betwee
 
 ```
 
-
-
-# Treemaps {#treemap}
-
-A barebone treemap to start with.
-
-
-```{r, fig.cap="Sample Treemap", preview=TRUE}
-
-# Add shaded colors
-ken[, COLOR := abs(VALUE)] %>%
-  data_to_hierarchical(c(CLASS, SUBCLASS, VARIABLE), COLOR, pal[c(2,4,3)]) %>%
-  hchart(
-    type = "treemap",
-    layoutAlgorithm = "squarified",
-    dataLabels = list(enabled=T, format="{point.name}"),
-    tooltip = list(pointFormat="
-      {point.parent}<br/>{point.name}<br/>Value: {point.value:,.2f}")
-  ) %>%
-  hc_theme_iwmi("Resource Base", "Kenya 2017") %>%
-  hc_exporting(enabled=TRUE)
-
-```
 
 
 # Steamgraphs
