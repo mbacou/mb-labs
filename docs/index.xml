@@ -17,7 +17,7 @@
       <title>Visualizing Water: Sankey Diagrams (draft)</title>
       <dc:creator>BACOU, Melanie</dc:creator>
       <link>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</link>
-      <description>Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI).</description>
+      <description>Part 2: custom data-driven flow charts using Highcharts.js and NetworkD3 (IWMI).</description>
       <category>draft</category>
       <category>imwi</category>
       <category>hydrology</category>

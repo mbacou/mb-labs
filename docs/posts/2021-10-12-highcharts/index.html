@@ -88,7 +88,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
 <title>Mel's Labs: Visualizing Water: Sankey Diagrams (draft)</title>
 
-<meta property="description" itemprop="description" content="Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI)."/>
+<meta property="description" itemprop="description" content="Part 2: custom data-driven flow charts using Highcharts.js and NetworkD3 (IWMI)."/>
 
 <link rel="canonical" href="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
 <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
@@ -102,7 +102,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
 <meta property="og:title" content="Mel&#39;s Labs: Visualizing Water: Sankey Diagrams (draft)"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI)."/>
+<meta property="og:description" content="Part 2: custom data-driven flow charts using Highcharts.js and NetworkD3 (IWMI)."/>
 <meta property="og:url" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
 <meta property="og:image" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/../../www/fig/sankey_truthstudio_1.gif"/>
 <meta property="og:locale" content="en_US"/>
@@ -111,7 +111,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:title" content="Mel&#39;s Labs: Visualizing Water: Sankey Diagrams (draft)"/>
-<meta property="twitter:description" content="Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI)."/>
+<meta property="twitter:description" content="Part 2: custom data-driven flow charts using Highcharts.js and NetworkD3 (IWMI)."/>
 <meta property="twitter:url" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"/>
 <meta property="twitter:image" content="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/../../www/fig/sankey_truthstudio_1.gif"/>
 
@@ -126,7 +126,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","categories","date","date_prefix","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Visualizing Water: Sankey Diagrams (draft)"]},{"type":"character","attributes":{},"value":["Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI)."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email","url"]}},"value":[{"type":"character","attributes":{},"value":["BACOU, Melanie"]},{"type":"character","attributes":{},"value":["mel@mbacou.com"]},{"type":"character","attributes":{},"value":["https://linkedin/in/mbacou"]}]}]},{"type":"character","attributes":{},"value":["draft","imwi","hydrology"]},{"type":"character","attributes":{},"value":["2021-10-24"]},{"type":"character","attributes":{},"value":["2021-10-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","dev","code_folding","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["svglite"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","categories","date","date_prefix","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Visualizing Water: Sankey Diagrams (draft)"]},{"type":"character","attributes":{},"value":["Part 2: custom data-driven flow charts using Highcharts.js and NetworkD3 (IWMI)."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email","url"]}},"value":[{"type":"character","attributes":{},"value":["BACOU, Melanie"]},{"type":"character","attributes":{},"value":["mel@mbacou.com"]},{"type":"character","attributes":{},"value":["https://linkedin/in/mbacou"]}]}]},{"type":"character","attributes":{},"value":["draft","imwi","hydrology"]},{"type":"character","attributes":{},"value":["2021-10-24"]},{"type":"character","attributes":{},"value":["2021-10-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","dev","code_folding","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["svglite"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2290,7 +2290,7 @@ summary {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Visualizing Water: Sankey Diagrams (draft)","description":"Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI).","authors":[{"author":"BACOU, Melanie","authorURL":"https://linkedin/in/mbacou","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-24T00:00:00.000+01:00","citationText":"Melanie, 2021"}
+{"title":"Visualizing Water: Sankey Diagrams (draft)","description":"Part 2: custom data-driven flow charts using Highcharts.js and NetworkD3 (IWMI).","authors":[{"author":"BACOU, Melanie","authorURL":"https://linkedin/in/mbacou","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-24T00:00:00.000+01:00","citationText":"Melanie, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2326,7 +2326,7 @@ summary {
   <a href="../../index.html#category:hydrology" class="dt-tag">hydrology</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI).</p></p>
+<p><p>Part 2: custom data-driven flow charts using Highcharts.js and NetworkD3 (IWMI).</p></p>
 </div>
 
 <div class="d-byline">
@@ -2345,13 +2345,13 @@ summary {
 </ul>
 </nav>
 </div>
-<p>This notebook is Part 2 of a code playground for hydrologic model visualization. In <a href="../2021-10-16-svg/">Part 1</a> we focused on <code>D3.js</code>, here we test network and hierarchical visuals using a higher-level graphic library <code>Highchart.js</code>.</p>
-<p><code>Highcharts</code> is built on top of D3 but comes with sample configurations and R and Python clients, making it easier to build dynamic charts, esp. Sankey, treemaps, and flow diagrams with significantly less code.</p>
-<p>This approach is inspired by:</p>
+<p>This notebook is Part 2 of a code playground for hydrologic model visualization. In <a href="../2021-10-16-svg/">Part 1</a> we focused on <code>D3.js</code>, here we test network and hierarchical visuals using higher-level graphic libraries <a href="https://www.highcharts.com/">Highchart.js</a> and <a href="http://christophergandrud.github.io/networkD3/">networkD3</a>.</p>
+<p>The 2 libraries are built on top of D3 but they come with sample configurations and R and Python clients, making it easier to build dynamic charts, esp. Sankey, treemaps, network and flow diagrams with significantly less code.</p>
+<p>The approach here is inspired by:</p>
 <ol type="1">
+<li>TruthStudio for the Nature Conservancy’s <a href="https://www.truthstudio.com/portfolio_page/visualizing-water/">static illustrations</a> of the Colorado River basin’s withdrawals and consumption.</li>
 <li><a href="https://www.researchgate.net/publication/257673216_Visualising_a_Stochastic_Model_of_Californian_Water_Resources_Using_Sankey_Diagrams">Curmi et al. 2013</a></li>
 <li>Lancaster University <a href="https://github.com/csaladenes/food-energy-flows">Food-Energy Flows</a> diagram</li>
-<li>TruthStudio for the Nature Conservancy’s <a href="https://www.truthstudio.com/portfolio_page/visualizing-water/">static illustrations</a> of the Colorado River basin’s withdrawals and consumption.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
 <details>
@@ -2364,7 +2364,6 @@ Show code
   <span class='st'>"../../www/fig/sankey_truthstudio_2.gif"</span>,  
   <span class='st'>"../../www/fig/sankey_curmi_2013.png"</span>,
   <span class='st'>"../../www/fig/sankey_lancaster.png"</span>
-
 <span class='op'>)</span> <span class='op'>%&gt;%</span>
   <span class='fu'><a href='https://rdrr.io/pkg/knitr/man/include_graphics.html'>include_graphics</a></span><span class='op'>(</span><span class='op'>)</span>
 </code></pre>

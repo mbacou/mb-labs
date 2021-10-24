@@ -1,7 +1,7 @@
 ---
 title: "Visualizing Water: Sankey Diagrams (draft)"
 description: |
-  Part 2: convert WA+ sheets to custom data-driven charts using Highcharts.js (IWMI).
+  Part 2: custom data-driven flow charts using Highcharts.js and networkD3 (IWMI).
 author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
@@ -37,15 +37,16 @@ pal <- readRDS("../../_assets/palette.rds")
 ```
 
 
-This notebook is Part 2 of a code playground for hydrologic model visualization. In [Part 1](../2021-10-16-svg/) we focused on `D3.js`, here we test network and hierarchical visuals using a higher-level graphic library `Highchart.js`.
+This notebook is Part 2 of a code playground for hydrologic model visualization. In [Part 1](../2021-10-16-svg/) we focused on `D3.js`, here we test network and hierarchical visuals using higher-level graphic libraries [Highchart.js](https://www.highcharts.com/) and [networkD3](http://christophergandrud.github.io/networkD3/).
 
-`Highcharts` is built on top of D3 but comes with sample configurations and R and Python clients, making it easier to build dynamic charts, esp. Sankey, treemaps, and flow diagrams with significantly less code.
+The 2 libraries are built on top of D3 but they come with sample configurations and R and Python clients, making it easier to build dynamic charts, esp. Sankey, treemaps, network and flow diagrams with significantly less code.
 
-This approach is inspired by:
+The approach here is inspired by:
 
-1. [Curmi et al. 2013](https://www.researchgate.net/publication/257673216_Visualising_a_Stochastic_Model_of_Californian_Water_Resources_Using_Sankey_Diagrams) 
-2. Lancaster University [Food-Energy Flows](https://github.com/csaladenes/food-energy-flows) diagram
-3. TruthStudio for the Nature Conservancy's [static illustrations](https://www.truthstudio.com/portfolio_page/visualizing-water/) of the Colorado River basin's withdrawals and consumption.
+1. TruthStudio for the Nature Conservancy's [static illustrations](https://www.truthstudio.com/portfolio_page/visualizing-water/) of the Colorado River basin's withdrawals and consumption.
+2. [Curmi et al. 2013](https://www.researchgate.net/publication/257673216_Visualising_a_Stochastic_Model_of_Californian_Water_Resources_Using_Sankey_Diagrams) 
+3. Lancaster University [Food-Energy Flows](https://github.com/csaladenes/food-energy-flows) diagram
+
 
 ```{r, out.width="50%", fig.width=3, fig.show="hold"}
 
