@@ -92,7 +92,7 @@ The basin covers a large area, so we need 8 SRTM tiles, but 1 is enough for a pr
 ```{r, out.width="33%", fig.show="hold", code_folding=F}
 
 # Satellite basemaps
-maptiles::get_tiles(terra::ext(zoi), "Esri.WorldImagery", zoom=12) %>%
+maptiles::get_tiles(terra::ext(zoi), "Esri.WorldImagery", zoom=10) %>%
   stack() %>%
   crop(zoi) %>%
   mask(zoi) -> bmap
@@ -163,7 +163,7 @@ Using the same steps as above we could test with multiple basemaps, e.g. OpenTop
 ```{r}
 
 # Satellite basemaps
-maptiles::get_tiles(terra::ext(zoi), "Thunderforest.Outdoors", zoom=13,
+maptiles::get_tiles(terra::ext(zoi), "Thunderforest.Outdoors", zoom=10,
   apikey="0d9308069306459f86443180dadc39ac") %>%
   stack() %>%
   crop(zoi) %>%
