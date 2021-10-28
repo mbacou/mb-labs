@@ -1,5 +1,5 @@
 ---
-title: "Visualizing Water: Interactive 3D Timelapse of River Basins (draft)"
+title: "Visualizing Water: Interactive Timelapse Map of River Basins (draft)"
 description: |
   Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins.
 author:
@@ -23,23 +23,164 @@ output:
 
 ```{r setup, include=FALSE}
 
+if(interactive()) setwd("_posts/2021-10-24-3dmap/")
+
 library(knitr)
-library(jsonlite)
 library(scales)
 library(stringr)
 library(data.table)
-library(highcharter)
+library(raster)
+library(rayshader)
+library(rayrender)
+library(rgl)
+setupKnitr(autoprint=TRUE)
 
 opts_chunk$set(res=220, pointsize=8)
 
 # Default color palette
 pal <- readRDS("../../_assets/pal_iwmi.rds")
+par(font.main=1, cex.axis=.8)
 
 ```
 
 
-This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built highly customized widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at flow diagrams. Here we test multiple libraries to generate 3D views of river basins, in particular we want to compare [leaflet](https://leafletjs.com/) and [Three.js](https://threejs.org/) implementations.
+This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built custom HTML widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at rendering water fluxes using Sankey diagrams. Here we test multiple libraries to generate hillshade (3D) views of river basins and water infrastructure, in particular we want to compare [leaflet](https://leafletjs.com/), [Three.js](https://threejs.org/) and [MapboxGL](https://docs.mapbox.com/mapbox-gl-js/example/) implementations.
 
-Aside from rendering spatial terrain and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels and charts to illustrate and quantify the hydrological cycle.
+Aside from rendering spatial terrain and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels to illustrate and quantify the hydrological cycle.
+
+Some inspiration below:
+
+- [NASA Web WorldWind](https://worldwind.arc.nasa.gov/web/examples/#anchor)
+- [Flood depth on 3D terrain](https://observablehq.com/@sw1227/flood-depth-map-on-3d-terrain?collection=@sw1227/geo)
+- Contouring with [Threes.js](https://observablehq.com/@sw1227/contoured-mountainious-terrai-3d?collection=@sw1227/3d)
 
 
+```{r}
+
+
+```
+
+
+
+# Data Acquisition
+
+We'll start with a sample view of the Niger River basin.
+
+
+```{r, layout="l-body", code_folding=F}
+
+zoi <- shapefile("~/Projects/2021-iwmi/data/mli/srtm/zoi.shp")
+ext <- extent(zoi)
+center <- coordinates(zoi)
+
+# Get CGIAR SRTM DEM at 90m
+srtm <- getData("SRTM", lon=center[,1], lat=center[,2], path="_data")
+srtm <- crop(srtm, zoi)
+srtm <- mask(srtm, zoi)
+srtm
+
+# Get LUC
+#luc <- raster("~/Projects/2021-iwmi/data/mli/stat/")
+
+# Admin boundaries
+
+```
+
+The basin covers a large area, so we need 8 SRTM tiles, but 1 is enough for a proof of concept. Next we'll get a satellite basemap.
+
+```{r, out.width="50%", fig.show="hold", code_folding=F}
+
+# Satellite basemaps
+bmap <- maptiles::get_tiles(terra::ext(zoi), "Esri.WorldImagery", zoom=12)
+bmap <- stack(bmap)
+bmap <- crop(bmap, zoi)
+bmap <- mask(bmap, zoi)
+bmap <- resample(bmap, srtm)
+
+plot(terra::ext(zoi), axes=T, asp=1, border=NA, 
+  main="Niger River Basin (Mali) - ESRI World Imagery")
+plotRGB(bmap, add=T)
+grid(col="white")
+
+plot(srtm, axes=T, asp=1, border=NA, 
+  main="Niger River Basin (Mali) - SRTM 90m")
+grid(col="white")
+
+# Convert to rayshader format
+srtm_array <- raster_to_matrix(srtm)
+r <- raster_to_matrix(bmap$red)
+g <- raster_to_matrix(bmap$green)
+b <- raster_to_matrix(bmap$blue)
+
+bmap_array <- array(0, dim=c(nrow(r), ncol(r), 3))
+bmap_array[,,1] <- r/255
+bmap_array[,,2] <- g/255
+bmap_array[,,3] <- b/255
+
+bmap_array %>%
+  aperm(c(2,1,3)) %>%
+  # Scale contrast
+  rescale(to=c(0,1)) -> bmap_array
+
+```
+
+```{r, eval=FALSE}
+
+srtm_array %>%
+  sphere_shade() %>%
+  add_overlay(height_shade(srtm_array), alphalayer=0.6)  %>%
+  add_shadow(ray_shade(srtm_array, zscale=50)) %>%
+  plot_map()
+
+srtm_array %>%
+  sphere_shade(zscale=20, texture="imhof1") %>%
+  plot_3d(srtm_array, 
+    zscale=20, fov=70, theta=0, phi=30, 
+    windowsize=c(600, 600), zoom=0.8, 
+    water=TRUE, waterdepth=360, wateralpha=0.5, watercolor="#233aa1",
+    waterlinecolor="white", waterlinealpha=0.5)
+
+srtm_array %>%
+  #add_overlay(bmap_array, alphalayer=1.0) %>%
+  sphere_shade(texture=create_texture(
+    lightcolor="white",
+    shadowcolor="black",
+    leftcolor="grey",
+    rightcolor="grey",
+    centercolor="grey"),
+    colorintensity=0.12,
+    sunangle=45) %>%
+  plot_3d(srtm_array,
+    windowsize=c(600, 600), zscale=10, zoom=0.8,
+    phi=80, theta=0, fov=0,
+    shadow=TRUE, shadowcolor="#5da5da",
+    water=TRUE, waterdepth=360, watercolor="lightblue", waterlinecolor="lightblue")  
+
+render_highquality(
+  lightdirection=c(-45,45), lightaltitude=30, clamp_value=10, 
+  samples=256, camera_lookat=c(0,-50,0), clear=TRUE)
+
+```
+
+Rendering the 90m SRTM elevation map with WebGL and a default texture.
+
+```{r, code_folding=F}
+
+alt <- getData("alt", country="MLI", path="_data")
+alt <- crop(alt, zoi)
+alt <- raster_to_matrix(alt)
+
+srtm_array %>%
+  sphere_shade() %>%
+  #add_overlay(bmap_array, alphalayer=0.6)  %>%
+  add_overlay(height_shade(srtm_array), alphalayer=0.6)  %>%
+  add_shadow(ray_shade(srtm_array, zscale=90)) %>%
+  plot_3d(alt, 
+    zscale=10, fov=70, theta=0, phi=30, 
+    windowsize=c(600, 600), zoom=0.6, 
+    water=TRUE, waterdepth=360, wateralpha=0.5, watercolor=pal["blue"],
+    waterlinecolor="white", waterlinealpha=0.5)
+
+rglwidget()
+
+```

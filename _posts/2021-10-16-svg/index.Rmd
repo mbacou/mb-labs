@@ -13,6 +13,8 @@ categories:
   - draft
   - imwi
   - hydrology
+bibliography: biblio.bib
+nocite: "@*"
 output:
   distill::distill_article:
     toc: true
@@ -29,6 +31,8 @@ library(ggplot2)
 library(scales)
 library(stringr)
 library(data.table)
+library(r2d3)
+library(crosstalk)
 
 # IMWI color palette
 tmp <- fread("../../_assets/IWMI.gpl", skip=4, header=F)
@@ -207,7 +211,7 @@ And we need to import `D3.js` as an external dependency in this notebook:
 
 ```{r, code_folding=FALSE}
 # Import D3.js lib
-htmltools::tags$script(src="https://cdn.jsdelivr.net/npm/d3@6")
+#htmltools::tags$script(src="https://cdn.jsdelivr.net/npm/d3@6")
 ```
 
 Click to render a dummy SVG widget using the sample Kenya data for 2017 (to make sure libraries are loaded).
@@ -418,7 +422,6 @@ Object model for Sheet 1 is shown below.
 ```{r, eval=F}
 
 model <- fread("sheet_1_schema.csv")
-
 model %>% paged_table()
 
 ```
@@ -430,7 +433,10 @@ When bound with the yearly model simulation dataset `data` assembled above, the 
 <p>Your browser does not support iframes</p>
 </iframe>
 
-
+Next step will be to animate the other 4 sheets using the same approach and include all 6 widgets into a reusable R (and/or Python) package.
 
 # References
+
+::: {#refs}
+:::
 

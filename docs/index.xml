@@ -12,7 +12,19 @@
       <link>https://mbacou.github.io/mb-labs</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Visualizing Water: Interactive Timelapse Map of River Basins (draft)</title>
+      <dc:creator>BACOU, Melanie</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</link>
+      <description>Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins.</description>
+      <category>draft</category>
+      <category>imwi</category>
+      <category>hydrology</category>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</guid>
+      <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/index_files/figure-html5/unnamed-chunk-3-1.svg" medium="image" type="image/svg+xml"/>
+    </item>
     <item>
       <title>Visualizing Water: Sankey Diagrams (draft)</title>
       <dc:creator>BACOU, Melanie</dc:creator>
@@ -36,17 +48,6 @@
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1_edited.svg" medium="image" type="image/svg+xml"/>
-    </item>
-    <item>
-      <title>Visualizing Water: Interactive 3D Timelapse of River Basins (draft)</title>
-      <dc:creator>BACOU, Melanie</dc:creator>
-      <link>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</link>
-      <description>Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins.</description>
-      <category>draft</category>
-      <category>imwi</category>
-      <category>hydrology</category>
-      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</guid>
-      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Merge Ground and Satellite Observations with RFMerge</title>
