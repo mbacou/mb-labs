@@ -124,44 +124,6 @@ bmap_array %>%
 
 ```
 
-```{r, eval=FALSE}
-
-srtm_array %>%
-  sphere_shade() %>%
-  add_overlay(height_shade(srtm_array), alphalayer=0.6)  %>%
-  add_shadow(ray_shade(srtm_array, zscale=50)) %>%
-  plot_map()
-
-srtm_array %>%
-  sphere_shade(zscale=20, texture="imhof1") %>%
-  plot_3d(srtm_array, 
-    zscale=20, fov=70, theta=0, phi=30, 
-    windowsize=c(600, 600), zoom=0.8, 
-    water=TRUE, waterdepth=360, wateralpha=0.5, watercolor="#233aa1",
-    waterlinecolor="white", waterlinealpha=0.5)
-
-srtm_array %>%
-  #add_overlay(bmap_array, alphalayer=1.0) %>%
-  sphere_shade(texture=create_texture(
-    lightcolor="white",
-    shadowcolor="black",
-    leftcolor="grey",
-    rightcolor="grey",
-    centercolor="grey"),
-    colorintensity=0.12,
-    sunangle=45) %>%
-  plot_3d(srtm_array,
-    windowsize=c(600, 600), zscale=10, zoom=0.8,
-    phi=80, theta=0, fov=0,
-    shadow=TRUE, shadowcolor="#5da5da",
-    water=TRUE, waterdepth=360, watercolor="lightblue", waterlinecolor="lightblue")  
-
-render_highquality(
-  lightdirection=c(-45,45), lightaltitude=30, clamp_value=10, 
-  samples=256, camera_lookat=c(0,-50,0), clear=TRUE)
-
-```
-
 Rendering the 90m SRTM elevation map with WebGL and a default texture.
 
 ```{r, code_folding=F}
@@ -171,15 +133,15 @@ alt <- crop(alt, zoi)
 alt <- raster_to_matrix(alt)
 
 srtm_array %>%
-  sphere_shade() %>%
-  #add_overlay(bmap_array, alphalayer=0.6)  %>%
+  sphere_shade(texture="bw") %>%
+  add_overlay(bmap_array, alphalayer=.8)  %>%
   add_overlay(height_shade(srtm_array), alphalayer=0.6)  %>%
-  add_shadow(ray_shade(srtm_array, zscale=90)) %>%
-  plot_3d(alt, 
-    zscale=10, fov=70, theta=0, phi=30, 
-    windowsize=c(600, 600), zoom=0.6, 
-    water=TRUE, waterdepth=360, wateralpha=0.5, watercolor=pal["blue"],
-    waterlinecolor="white", waterlinealpha=0.5)
+  #add_shadow(ray_shade(srtm_array, zscale=90)) %>%
+  plot_3d(alt,
+    windowsize=c(600, 600), zscale=20, zoom=0.6,
+    phi=30, theta=0, fov=70,
+    shadow=TRUE, shadowcolor=pal["black"],
+    water=FALSE, waterdepth=360, watercolor=pal["blue"], waterlinecolor=pal["blue"]) 
 
 rglwidget()
 
