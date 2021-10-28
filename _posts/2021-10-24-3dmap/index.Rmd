@@ -113,7 +113,13 @@ plot(srtm, axes=T, asp=1, border=NA,
   main="Selingue Dam (Mali) - SRTM 90m")
 grid(col="white")
 
-# Convert to rayshader format
+```
+
+Next we convert the 2 rasters to a matrix format that's compatible with [Rayshader](https://github.com/tylermorganwall/rayshader/) methods.
+
+```{r}
+
+# Convert rasters to rayshader matrix format
 srtm_array <- raster_to_matrix(srtm)
 r <- raster_to_matrix(bmap$red)
 g <- raster_to_matrix(bmap$green)
@@ -126,12 +132,12 @@ bmap_array[,,3] <- b/255
 
 bmap_array %>%
   aperm(c(2,1,3)) %>%
-  # Scale contrast
+  # Stretch contrast
   rescale(to=c(0,1)) -> bmap_array
 
 ```
 
-Rendering the 90m SRTM elevation map with WebGL and a satellite texture.
+Rendering the (downsampled) 90m SRTM elevation map with WebGL and a satellite texture.
 
 ```{r, code_folding=F, fig.cap="Interactive 3D Scene of Selingue Dam (Niger River basin)"}
 
@@ -145,11 +151,58 @@ srtm_array %>%
   add_overlay(height_shade(srtm_array), alphalayer=0.6)  %>%
   #add_shadow(ray_shade(srtm_array, zscale=90)) %>%
   plot_3d(alt,
-    windowsize=c(600, 600), zscale=20, zoom=0.6,
-    phi=30, theta=0, fov=70,
+    windowsize=c(600, 600), zscale=20, zoom=0.5,
+    phi=30, theta=20, fov=70,
     shadow=TRUE, shadowcolor=pal["black"],
     water=FALSE, waterdepth=360, watercolor=pal["blue"], waterlinecolor=pal["blue"]) 
 
 rglwidget()
 
 ```
+
+Using the same steps as above we could test with multiple basemaps, e.g. OpenTopoMap and ThunderForest, that might help highlight more of the topological features.
+
+```{r}
+
+# Satellite basemaps
+maptiles::get_tiles(terra::ext(zoi), "Thunderforest.Outdoors", zoom=12,
+  apikey="0d9308069306459f86443180dadc39ac") %>%
+  stack() %>%
+  crop(zoi) %>%
+  mask(zoi) %>%
+  resample(srtm) -> bmap
+
+# Convert rasters to rayshader matrix format
+r <- raster_to_matrix(bmap$red)
+g <- raster_to_matrix(bmap$green)
+b <- raster_to_matrix(bmap$blue)
+
+bmap_array <- array(0, dim=c(nrow(r), ncol(r), 3))
+bmap_array[,,1] <- r/255
+bmap_array[,,2] <- g/255
+bmap_array[,,3] <- b/255
+
+bmap_array %>%
+  aperm(c(2,1,3)) %>%
+  # Stretch contrast
+  rescale(to=c(0,1)) -> bmap_array
+
+```
+
+```{r, code_folding=F, fig.cap="Interactive 3D Scene of Selingue Dam (Niger River basin)"}
+
+srtm_array %>%
+  height_shade() %>%
+  add_overlay(bmap_array, alphalayer=1)  %>%
+  add_overlay(height_shade(srtm_array), alphalayer=0.6)  %>%
+  add_shadow(ray_shade(srtm_array, zscale=90)) %>%
+  plot_3d(alt,
+    windowsize=c(600, 600), zscale=20, zoom=0.5,
+    phi=30, theta=20, fov=70,
+    shadow=TRUE, shadowcolor=pal["black"],
+    water=TRUE, waterdepth=336, watercolor=pal["blue"], waterlinecolor=pal["blue"]) 
+
+rglwidget()
+
+```
+
