@@ -1,7 +1,7 @@
 ---
 title: "Visualizing Water: Interactive Timelapse Map of River Basins (draft)"
 description: |
-  Part 3: mutliple mapping libraries to represent water flux over 3D maps of river basins.
+  Part 3: how to represent water flux over 3D maps of river basins.
 author:
   - name: BACOU, Melanie
     email: mel@mbacou.com
@@ -64,19 +64,20 @@ Some inspiration below:
 
 # Data Acquisition
 
-We'll start with a sample view of the Niger River basin.
+We'll start with a sample scene of the **Selingue Dam** in the Niger River basin.
 
 
 ```{r, layout="l-body", code_folding=F}
 
+basin <- shapefile("~/Projects/2021-iwmi/data/mli/srtm/mli_basin.shp")
 zoi <- shapefile("~/Projects/2021-iwmi/data/mli/srtm/zoi.shp")
 ext <- extent(zoi)
 center <- coordinates(zoi)
 
 # Get CGIAR SRTM DEM at 90m
-srtm <- getData("SRTM", lon=center[,1], lat=center[,2], path="_data")
-srtm <- crop(srtm, zoi)
-srtm <- mask(srtm, zoi)
+getData("SRTM", lon=center[,1], lat=center[,2], path="_data") %>%
+  crop(zoi) %>%
+  mask(zoi) -> srtm
 srtm
 
 # Get LUC
@@ -88,22 +89,28 @@ srtm
 
 The basin covers a large area, so we need 8 SRTM tiles, but 1 is enough for a proof of concept. Next we'll get a satellite basemap.
 
-```{r, out.width="50%", fig.show="hold", code_folding=F}
+```{r, out.width="33%", fig.show="hold", code_folding=F}
 
 # Satellite basemaps
-bmap <- maptiles::get_tiles(terra::ext(zoi), "Esri.WorldImagery", zoom=12)
-bmap <- stack(bmap)
-bmap <- crop(bmap, zoi)
-bmap <- mask(bmap, zoi)
-bmap <- resample(bmap, srtm)
+maptiles::get_tiles(terra::ext(zoi), "Esri.WorldImagery", zoom=12) %>%
+  stack() %>%
+  crop(zoi) %>%
+  mask(zoi) %>%
+  resample(srtm) -> bmap
+
+plot(terra::vect(basin), axes=T, asp=1, col=pal[2], border=pal[1], lwd=2,
+  main="Niger River Basin (Mali)")
+plot(zoi, add=T, lty=3, col=alpha(pal["red"], .6), border=pal["red"], lwd=2)
+text(-8, 10.5, "Selingue Dam\n(Mali)", col=pal["red"], cex=.7, font=2)
+grid()
 
 plot(terra::ext(zoi), axes=T, asp=1, border=NA, 
-  main="Niger River Basin (Mali) - ESRI World Imagery")
+  main="Selingue Dam (Mali) - ESRI World Imagery")
 plotRGB(bmap, add=T)
 grid(col="white")
 
 plot(srtm, axes=T, asp=1, border=NA, 
-  main="Niger River Basin (Mali) - SRTM 90m")
+  main="Selingue Dam (Mali) - SRTM 90m")
 grid(col="white")
 
 # Convert to rayshader format
@@ -124,13 +131,13 @@ bmap_array %>%
 
 ```
 
-Rendering the 90m SRTM elevation map with WebGL and a default texture.
+Rendering the 90m SRTM elevation map with WebGL and a satellite texture.
 
-```{r, code_folding=F}
+```{r, code_folding=F, fig.cap="Interactive 3D Scene of Selingue Dam (Niger River basin)"}
 
-alt <- getData("alt", country="MLI", path="_data")
-alt <- crop(alt, zoi)
-alt <- raster_to_matrix(alt)
+getData("alt", country="MLI", path="_data") %>%
+  crop(zoi) %>%
+  raster_to_matrix() -> alt
 
 srtm_array %>%
   sphere_shade(texture="bw") %>%
