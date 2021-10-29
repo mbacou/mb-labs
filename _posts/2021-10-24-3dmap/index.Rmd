@@ -33,7 +33,7 @@ library(raster)
 library(osmdata)
 library(rayshader)
 library(rgl)
-setupKnitr()
+setupKnitr(autoprint=TRUE)
 
 opts_chunk$set(res=220, pointsize=8)
 
@@ -144,17 +144,20 @@ bmap_array %>%
 
 ```{r, code_folding=F, fig.cap="Hillshade Basemap of Selingue Dam (Niger River basin)"}
 
+srtm_water <- srtm_array
+srtm_water[srtm_water < 353] <- 0
+
 basemap_sat <- srtm_array %>%
-  sphere_shade() %>%
+  height_shade() %>%
   add_overlay(bmap_array) %>%
-  add_overlay(height_shade(srtm_array), alphalayer=0.6)  %>%
-  add_shadow(ray_shade(srtm_array, zscale=90))
+  add_shadow(ray_shade(srtm_array, zscale=90)) %>%
+  add_water(detect_water(srtm_water), color=alpha(pal["blue"], 0.4))
 
 basemap_sat %>% plot_map()
 
 ```
 
-```{r, code_folding=F, fig.cap="Hillshade Basemap of Selingue Dam (Niger River basin)"}
+```{r, code_folding=F, rgl.margin=0, fig.cap="Hillshade Basemap of Selingue Dam (Niger River basin)"}
 
 alt <- getData("alt", country="MLI", path="_data") %>%
   crop(zoi) %>%
@@ -162,7 +165,7 @@ alt <- getData("alt", country="MLI", path="_data") %>%
 
 basemap_sat %>% plot_3d(alt,
   zscale=20, zoom=0.5,
-  phi=30, theta=20, fov=70,
+  phi=30, theta=20, fov=0,
   shadow=TRUE, shadowcolor=pal["black"])
 
 rglwidget()
@@ -173,9 +176,6 @@ That doesn't look very clear, so instead we'll create a basemap, not using the s
 
 ```{r, code_folding=F, eval=FALSE}
 
-srtm_water <- srtm_array
-srtm_water[srtm_water < 350] <- 0
-
 base_map <- srtm_array %>% 
   height_shade() %>% 
   add_overlay(sphere_shade(srtm_array, texture="desert", 
@@ -183,20 +183,19 @@ base_map <- srtm_array %>%
   add_shadow(lamb_shade(srtm_array, zscale=6), 0) %>%
   add_shadow(ambient_shade(srtm_array), 0) %>%
   add_shadow(texture_shade(srtm_array, detail=8/10, contrast=9, brightness=11), 0.1) %>%
-  add_water(detect_water(srtm_water), color=alpha(pal["blue"], 0.8))
+  add_water(detect_water(srtm_water), color=alpha(pal["blue"], 0.4))
 
 saveRDS(base_map, "./_data/base_map.rds")
 
 ```
 
-```{r, fig.cap="Step 1 - Hillshade Basemap of Selingue Dam"}
+```{r, rgl.margin=0, fig.cap="Step 1 - Hillshade Basemap of Selingue Dam"}
 
-rgl.close()
 base_map <- readRDS("./_data/base_map.rds")
 
 base_map %>% plot_3d(alt,
   zscale=20, zoom=0.5,
-  phi=30, theta=20, fov=70,
+  phi=30, theta=20, fov=0,
   shadow=TRUE, shadowcolor=pal["black"])
 
 rglwidget()
@@ -235,6 +234,7 @@ place_layer <- generate_label_overlay(
   data_label_column="name")
 
 scene <- base_map %>% 
+#scene <- basemap_sat %>%   
   add_overlay(road_layer) %>%
   add_overlay(water_layer, alphalayer=1) %>%
   add_overlay(place_layer)
@@ -261,19 +261,18 @@ saveRDS(scene2, "./_data/scene2.rds")
 
 ```
 
-```{r, fig.cap="Interactive 3D Scene of Selingue Dam"}
+```{r, rgl.margin=0, fig.cap="Interactive 3D Scene of Selingue Dam"}
 
-rgl.close()
 scene <- readRDS("./_data/scene.rds")
 scene2 <- readRDS("./_data/scene2.rds")
 
 scene %>% plot_3d(alt, zscale=20, 
-  theta=30, phi=20, fov=70, zoom=0.5)
+  theta=30, phi=20, fov=0, zoom=0.5)
 
 # Add polygon annotations
 xyz <- sf::read_sf("~/Projects/2021-iwmi/data/mli/srtm/xyz.shp")
 render_polygons(xyz, ext, data_column_top="z",
-  scale_data=1.5, color=alpha(pal["orange"], .6), 
+  scale_data=1, color=alpha(pal["orange"], 0.8), 
   lit=F, light_intensity=0.01, clear_previous=T)
 
 rglwidget()
@@ -281,7 +280,7 @@ rglwidget()
 ```
 
 
-# Threes.js
+# Three.js
 
 A vanilla JavaScript approach using a Three.js 3D viewer over the same area.
 
