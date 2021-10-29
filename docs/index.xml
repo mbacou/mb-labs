@@ -12,17 +12,29 @@
       <link>https://mbacou.github.io/mb-labs</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 28 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Visualizing Water: Interactive SVG with D3.js (draft)</title>
+      <dc:creator>Melanie BACOU</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</link>
+      <description>Part 1: add interactivity to IWMI's printable WA+ sheets.</description>
+      <category>draft</category>
+      <category>imwi</category>
+      <category>hydrology</category>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1_edited.svg" medium="image" type="image/svg+xml"/>
+    </item>
     <item>
       <title>Visualizing Water: Interactive Timelapse Map of River Basins (draft)</title>
-      <dc:creator>BACOU, Melanie</dc:creator>
+      <dc:creator>Melanie BACOU</dc:creator>
       <link>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</link>
       <description>Part 3: how to represent water flux over 3D maps of river basins.</description>
       <category>draft</category>
       <category>imwi</category>
       <category>hydrology</category>
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</guid>
-      <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/../../www/fig/webgl.png" medium="image" type="image/png" width="624" height="384"/>
     </item>
     <item>
@@ -36,18 +48,6 @@
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</guid>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/../../www/fig/sankey_truthstudio_1.gif" medium="image" type="image/gif"/>
-    </item>
-    <item>
-      <title>Visualizing Water: Interactive SVG with D3.js (draft)</title>
-      <dc:creator>BACOU, Melanie</dc:creator>
-      <link>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</link>
-      <description>Part 1: add interactivity to IWMI's printable WA+ sheets.</description>
-      <category>draft</category>
-      <category>imwi</category>
-      <category>hydrology</category>
-      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
-      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1_edited.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
       <title>Merge Ground and Satellite Observations with RFMerge</title>

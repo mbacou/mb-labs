@@ -3,7 +3,7 @@ title: ERA5-LAND Temperature Validation (California)
 description: |
   Can we justify winter Y2017 corrections to ERA5-LAND temperature grids over central California?
 author:
-  - name: BACOU, Melanie
+  - name: Melanie BACOU
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
 date: 2020-12-02

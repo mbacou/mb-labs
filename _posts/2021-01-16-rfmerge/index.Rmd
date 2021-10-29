@@ -3,7 +3,7 @@ title: Merge Ground and Satellite Observations with RFMerge
 description: |
   Recalibrate ERA5 hourly temperatures to CIMIS network ground observations.
 author:
-  - name: BACOU, Melanie
+  - name: Melanie BACOU
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
 date: 2021-01-16

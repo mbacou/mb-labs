@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,12 +77,34 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
 </style>
 
   <!--radix_placeholder_meta_tags-->
@@ -95,9 +117,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <link rel="icon" type="image/svg+xml" href="../../www/logo_w.svg"/>
 
 <!--  https://schema.org/Article -->
-<meta property="article:published" itemprop="datePublished" content="2021-10-24"/>
-<meta property="article:created" itemprop="dateCreated" content="2021-10-24"/>
-<meta name="article:author" content="BACOU, Melanie"/>
+<meta property="article:published" itemprop="datePublished" content="2021-10-29"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-10-29"/>
+<meta name="article:author" content="Melanie BACOU"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
 <meta property="og:title" content="Mel&#39;s Labs: Visualizing Water: Interactive SVG with D3.js (draft)"/>
@@ -119,15 +141,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="citation_title" content="Mel&#39;s Labs: Visualizing Water: Interactive SVG with D3.js (draft)"/>
 <meta name="citation_fulltext_html_url" content="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/"/>
 <meta name="citation_fulltext_world_readable" content=""/>
-<meta name="citation_online_date" content="2021/10/24"/>
-<meta name="citation_publication_date" content="2021/10/24"/>
-<meta name="citation_author" content="BACOU, Melanie"/>
+<meta name="citation_online_date" content="2021/10/29"/>
+<meta name="citation_publication_date" content="2021/10/29"/>
+<meta name="citation_author" content="Melanie BACOU"/>
 <!--/radix_placeholder_meta_tags-->
   
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","date_prefix","preview","categories","bibliography","nocite","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Visualizing Water: Interactive SVG with D3.js (draft)"]},{"type":"character","attributes":{},"value":["Part 1: add interactivity to IWMI's printable WA+ sheets."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email","url"]}},"value":[{"type":"character","attributes":{},"value":["BACOU, Melanie"]},{"type":"character","attributes":{},"value":["mel@mbacou.com"]},{"type":"character","attributes":{},"value":["https://linkedin/in/mbacou"]}]}]},{"type":"character","attributes":{},"value":["2021-10-24"]},{"type":"character","attributes":{},"value":["2021-10-01"]},{"type":"character","attributes":{},"value":["../../www/svg/sheet_1_edited.svg"]},{"type":"character","attributes":{},"value":["draft","imwi","hydrology"]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["@*"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","dev","code_folding","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["svglite"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/"]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","date_prefix","preview","categories","bibliography","nocite","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["Visualizing Water: Interactive SVG with D3.js (draft)"]},{"type":"character","attributes":{},"value":["Part 1: add interactivity to IWMI's printable WA+ sheets."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","email","url"]}},"value":[{"type":"character","attributes":{},"value":["Melanie BACOU"]},{"type":"character","attributes":{},"value":["mel@mbacou.com"]},{"type":"character","attributes":{},"value":["https://linkedin/in/mbacou"]}]}]},{"type":"character","attributes":{},"value":["2021-10-29"]},{"type":"character","attributes":{},"value":["2021-10-01"]},{"type":"character","attributes":{},"value":["../../www/svg/sheet_1_edited.svg"]},{"type":"character","attributes":{},"value":["draft","imwi","hydrology"]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"character","attributes":{},"value":["@*"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","dev","code_folding","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["svglite"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/"]},{"type":"character","attributes":{},"value":["https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2296,7 +2318,7 @@ summary {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Visualizing Water: Interactive SVG with D3.js (draft)","description":"Part 1: add interactivity to IWMI's printable WA+ sheets.","authors":[{"author":"BACOU, Melanie","authorURL":"https://linkedin/in/mbacou","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-24T00:00:00.000+01:00","citationText":"Melanie, 2021"}
+{"title":"Visualizing Water: Interactive SVG with D3.js (draft)","description":"Part 1: add interactivity to IWMI's printable WA+ sheets.","authors":[{"author":"Melanie BACOU","authorURL":"https://linkedin/in/mbacou","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-10-29T00:00:00.000+01:00","citationText":"BACOU, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2336,9 +2358,9 @@ summary {
 </div>
 
 <div class="d-byline">
-  BACOU, Melanie <a href="https://linkedin/in/mbacou" class="uri">https://linkedin/in/mbacou</a> 
+  Melanie BACOU <a href="https://linkedin/in/mbacou" class="uri">https://linkedin/in/mbacou</a> 
   
-<br/>2021-10-24
+<br/>2021-10-29
 </div>
 
 <div class="d-article">
@@ -2600,9 +2622,10 @@ Show code
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Import D3.js lib</span>
-<span class='co'>#htmltools::tags$script(src="https://cdn.jsdelivr.net/npm/d3@6")</span>
+<span class='fu'>htmltools</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/htmltools/man/builder.html'>tags</a></span><span class='op'>$</span><span class='fu'>script</span><span class='op'>(</span>src<span class='op'>=</span><span class='st'>"https://cdn.jsdelivr.net/npm/d3@6"</span><span class='op'>)</span>
 </code></pre>
 </div>
+<p><script src="https://cdn.jsdelivr.net/npm/d3@6"></script></p>
 </div>
 <p>Click to render a dummy SVG widget using the sample Kenya data for 2017 (to make sure libraries are loaded).</p>
 <div id="d3ex1" class="l-body">
@@ -3047,10 +3070,10 @@ World Bank. 2010. <span>“<span>The Zambezi River Basin A Multi-Sector Investme
   <p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/mbacou/mb-labs">https://github.com/mbacou/mb-labs</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Melanie (2021, Oct. 24). Mel's Labs: Visualizing Water: Interactive SVG with D3.js (draft). Retrieved from https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/</pre>
+  <pre class="citation-appendix short">BACOU (2021, Oct. 29). Mel's Labs: Visualizing Water: Interactive SVG with D3.js (draft). Retrieved from https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/</pre>
   <p>BibTeX citation</p>
-  <pre class="citation-appendix long">@misc{melanie2021visualizing,
-  author = {Melanie, BACOU,},
+  <pre class="citation-appendix long">@misc{bacou2021visualizing,
+  author = {BACOU, Melanie},
   title = {Mel's Labs: Visualizing Water: Interactive SVG with D3.js (draft)},
   url = {https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/},
   year = {2021}
