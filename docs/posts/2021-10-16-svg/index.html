@@ -2374,7 +2374,6 @@ summary {
 <li><a href="#optimized-svg">Optimized SVG</a></li>
 <li><a href="#html-widget">HTML Widget</a></li>
 </ul></li>
-<li><a href="#references">References</a></li>
 </ul>
 </nav>
 </div>
@@ -2384,7 +2383,9 @@ summary {
 Show code
 </summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/rstudio/rmarkdown'>rmarkdown</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"./_posts/2021-10-16-svg"</span><span class='op'>)</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/rstudio/rmarkdown'>rmarkdown</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://arxiv.org/abs/1403.2805'>jsonlite</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://scales.r-lib.org'>scales</a></span><span class='op'>)</span>
@@ -2880,29 +2881,37 @@ fun_reset();
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;.&quot;</span> <span class="op">+</span> el)</span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;svg&quot;</span>)</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text&quot;</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;white&quot;</span>)<span class="op">;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_fill</span>(el<span class="op">=</span><span class="st">&quot;d3ex2&quot;</span>) {</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;.&quot;</span> <span class="op">+</span> el)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;path&quot;</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">0</span>])</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">0</span>])<span class="op">;</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_group</span>(el<span class="op">=</span><span class="st">&quot;d3ex2&quot;</span><span class="op">,</span> group<span class="op">=</span><span class="st">&quot;&quot;</span>) {</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> g <span class="op">=</span> group<span class="op">==</span><span class="st">&quot;&quot;</span> <span class="op">?</span> <span class="st">&quot;g&quot;</span> <span class="op">:</span> <span class="st">&quot;g[id=&quot;</span> <span class="op">+</span> group <span class="op">+</span> <span class="st">&quot;]&quot;</span><span class="op">;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> <span class="st">&quot;white&quot;</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text[class=data]&quot;</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">transition</span>()</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">duration</span>(<span class="dv">800</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;translate(2,2)&quot;</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">transition</span>()</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">duration</span>(<span class="dv">800</span>)    </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> <span class="st">&quot;translate(-2,-2)&quot;</span>)   </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">5</span>])<span class="op">;</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_fill</span>(el<span class="op">=</span><span class="st">&quot;d3ex2&quot;</span>) {</span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;.&quot;</span> <span class="op">+</span> el)</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;svg&quot;</span>)</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(g)</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;stroke&quot;</span><span class="op">,</span> pal[<span class="dv">7</span>])</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill-opacity&quot;</span><span class="op">,</span> <span class="op">.</span><span class="dv">4</span>)</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">raise</span>()</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">move</span>(</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>      <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> <span class="dv">20</span>)<span class="op">,</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>      <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> <span class="dv">10</span>)</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>      )<span class="op">;</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;path&quot;</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">style</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">0</span>])</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> pal[<span class="dv">0</span>])<span class="op">;</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a> }<span class="op">;</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fun_group</span>(el<span class="op">=</span><span class="st">&quot;d3ex2&quot;</span><span class="op">,</span> group<span class="op">=</span><span class="st">&quot;&quot;</span>) {</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> g <span class="op">=</span> group<span class="op">==</span><span class="st">&quot;&quot;</span> <span class="op">?</span> <span class="st">&quot;g&quot;</span> <span class="op">:</span> <span class="st">&quot;g[id=&quot;</span> <span class="op">+</span> group <span class="op">+</span> <span class="st">&quot;]&quot;</span><span class="op">;</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    d3<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;.&quot;</span> <span class="op">+</span> el)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;svg&quot;</span>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">selectAll</span>(g)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;stroke&quot;</span><span class="op">,</span> pal[<span class="dv">7</span>])</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill-opacity&quot;</span><span class="op">,</span> <span class="op">.</span><span class="dv">4</span>)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">raise</span>()</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">move</span>(</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> <span class="dv">20</span>)<span class="op">,</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> <span class="dv">10</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>        )<span class="op">;</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
 <script type="text/javascript">
 
 d3.selection.prototype.move = function(x, y) {
@@ -2917,7 +2926,15 @@ function fun_color(el="d3ex2") {
   d3.select("." + el)
   .select("svg")
   .selectAll("text")
-   .style("fill", "white");
+    .style("fill", "white")
+  .selectAll("text[class=data]")
+    .transition()
+    .duration(800)
+    .attr("transform", "translate(2,2)")
+    .transition()
+    .duration(800)    
+    .attr("transform", "translate(-2,-2)")   
+    .style("fill", pal[5]);
  };
  
 function fun_fill(el="d3ex2") {
@@ -2928,17 +2945,17 @@ function fun_fill(el="d3ex2") {
  };
  
 function fun_group(el="d3ex2", group="") {
-var g = group=="" ? "g" : "g[id=" + group + "]";
-  d3.select("." + el)
-  .select("svg")
-  .selectAll(g)
-    .attr("stroke", pal[7])
-    .attr("fill-opacity", .4)
-    .raise()
-    .move(
-      Math.floor(Math.random() * 20),
-      Math.floor(Math.random() * 10)
-      );
+  var g = group=="" ? "g" : "g[id=" + group + "]";
+    d3.select("." + el)
+    .select("svg")
+    .selectAll(g)
+      .attr("stroke", pal[7])
+      .attr("fill-opacity", .4)
+      .raise()
+      .move(
+        Math.floor(Math.random() * 20),
+        Math.floor(Math.random() * 10)
+        );
 };
 
 </script>
@@ -2952,6 +2969,9 @@ var g = group=="" ? "g" : "g[id=" + group + "]";
 
 </div>
 <div class="l-gutter">
+<button onclick="fun_color(&#39;d3ex3&#39;);">
+Highlight Data
+</button>
 <button onclick="fun_group(&#39;d3ex3&#39;, &#39;ginflow&#39;);">
 Show Inflows
 </button>
@@ -2999,7 +3019,7 @@ Show code
 </details>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["class"],"name":[2],"type":["chr"],"align":["left"]},{"label":["subclass"],"name":[3],"type":["chr"],"align":["left"]},{"label":["variable"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"var_available_water","2":"","3":"","4":""},{"1":"var_basin","2":"","3":"","4":"Basin"},{"1":"var_blue_managed","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Managed"},{"1":"var_blue_modified","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Modified"},{"1":"var_blue_protected","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Protected"},{"1":"var_blue_utilized","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Utilized"},{"1":"var_consumed_water","2":"","3":"","4":""},{"1":"var_depleted_water","2":"","3":"","4":""},{"1":"var_et_out","2":"","3":"","4":""},{"1":"var_et_recycled","2":"","3":"","4":""},{"1":"var_exploitable_water","2":"","3":"","4":""},{"1":"var_external_in","2":"","3":"","4":""},{"1":"var_external_out","2":"","3":"","4":""},{"1":"var_green_managed","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Managed"},{"1":"var_green_modified","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Modified"},{"1":"var_green_protected","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Protected"},{"1":"var_green_utilized","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Utilized"},{"1":"var_gross_inflow","2":"","3":"","4":""},{"1":"var_incremental_etman","2":"OUTFLOW","3":"ET INCREMENTAL","4":"Manmade"},{"1":"var_incremental_etnat","2":"OUTFLOW","3":"ET INCREMENTAL","4":"Natural"},{"1":"var_landscape_et","2":"","3":"","4":""},{"1":"var_neg_delta_s","2":"STORAGE","3":"CHANGE","4":"Surface storage"},{"1":"var_net_inflow","2":"","3":"","4":""},{"1":"var_non-consumed_water","2":"","3":"","4":""},{"1":"var_non-recoverable_flow","2":"","3":"","4":""},{"1":"var_non-utilizable_outflow","2":"OUTFLOW","3":"OTHER","4":"Non-utilizable"},{"1":"var_outflow","2":"","3":"","4":""},{"1":"var_p_advec","2":"INFLOW","3":"PRECIPITATION","4":"Rainfall"},{"1":"var_P_snow","2":"INFLOW","3":"PRECIPITATION","4":"Snowfall"},{"1":"var_p_recycled","2":"INFLOW","3":"PRECIPITATION","4":"Precipitation recycling"},{"1":"var_period","2":"","3":"","4":"Simulation period"},{"1":"var_pos_delta_s","2":"STORAGE","3":"CHANGE","4":"Surface storage"},{"1":"var_q_desal","2":"INFLOW","3":"SURFACE WATER","4":"Desalinized"},{"1":"var_q_gw_in","2":"INFLOW","3":"GROUNDWATER","4":"Natural"},{"1":"var_q_gw_in","2":"INFLOW","3":"GROUNDWATER","4":"Utilized"},{"1":"var_q_gw_out","2":"INFLOW","3":"GROUNDWATER","4":""},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Main riverstem"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Tributaries"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Flood"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Main riverstem"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Tributaries"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Flood"},{"1":"var_q_sw_outlet","2":"OUTFLOW","3":"SURFACE WATER","4":"Interbasin transfer"},{"1":"var_rainfall_et","2":"","3":"","4":""},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Commited"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Navigational"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Environmental"},{"1":"var_title","2":"","3":"","4":"Title"},{"1":"var_utilizable_outflow","2":"OUTFLOW","3":"SURFACE WATER","4":"Utilized surface water"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["class"],"name":[2],"type":["chr"],"align":["left"]},{"label":["subclass"],"name":[3],"type":["chr"],"align":["left"]},{"label":["variable"],"name":[4],"type":["chr"],"align":["left"]},{"label":["value"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"var_available_water","2":"","3":"","4":"","5":"0"},{"1":"var_basin","2":"","3":"","4":"Basin","5":"Basin"},{"1":"var_blue_managed","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Managed","5":"0"},{"1":"var_blue_modified","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Modified","5":"0"},{"1":"var_blue_protected","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Protected","5":"0"},{"1":"var_blue_utilized","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Utilized","5":"0"},{"1":"var_consumed_water","2":"","3":"","4":"","5":"0"},{"1":"var_depleted_water","2":"","3":"","4":"","5":"0"},{"1":"var_et_out","2":"","3":"","4":"","5":"0"},{"1":"var_et_recycled","2":"","3":"","4":"","5":"0"},{"1":"var_exploitable_water","2":"","3":"","4":"","5":"0"},{"1":"var_external_in","2":"","3":"","4":"","5":"0"},{"1":"var_external_out","2":"","3":"","4":"","5":"0"},{"1":"var_green_managed","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Managed","5":"0"},{"1":"var_green_modified","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Modified","5":"0"},{"1":"var_green_protected","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Protected","5":"0"},{"1":"var_green_utilized","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Utilized","5":"0"},{"1":"var_gross_inflow","2":"","3":"","4":"","5":"0"},{"1":"var_incremental_etman","2":"OUTFLOW","3":"ET INCREMENTAL","4":"Manmade","5":"0"},{"1":"var_incremental_etnat","2":"OUTFLOW","3":"ET INCREMENTAL","4":"Natural","5":"0"},{"1":"var_landscape_et","2":"","3":"","4":"","5":"0"},{"1":"var_neg_delta_s","2":"STORAGE","3":"CHANGE","4":"Surface storage","5":"0"},{"1":"var_net_inflow","2":"","3":"","4":"","5":"0"},{"1":"var_non-consumed_water","2":"","3":"","4":"","5":"0"},{"1":"var_non-recoverable_flow","2":"","3":"","4":"","5":"0"},{"1":"var_non-utilizable_outflow","2":"OUTFLOW","3":"OTHER","4":"Non-utilizable","5":"0"},{"1":"var_outflow","2":"","3":"","4":"","5":"0"},{"1":"var_p_advec","2":"INFLOW","3":"PRECIPITATION","4":"Rainfall","5":"0"},{"1":"var_P_snow","2":"INFLOW","3":"PRECIPITATION","4":"Snowfall","5":"0"},{"1":"var_p_recycled","2":"INFLOW","3":"PRECIPITATION","4":"Precipitation recycling","5":"0"},{"1":"var_period","2":"","3":"","4":"Simulation period","5":"0"},{"1":"var_pos_delta_s","2":"STORAGE","3":"CHANGE","4":"Surface storage","5":"0"},{"1":"var_q_desal","2":"INFLOW","3":"SURFACE WATER","4":"Desalinized","5":"0"},{"1":"var_q_gw_in","2":"INFLOW","3":"GROUNDWATER","4":"Natural","5":"0"},{"1":"var_q_gw_in","2":"INFLOW","3":"GROUNDWATER","4":"Utilized","5":"0"},{"1":"var_q_gw_out","2":"INFLOW","3":"GROUNDWATER","4":"","5":"0"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Main riverstem","5":"0"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Tributaries","5":"0"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Flood","5":"0"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Main riverstem","5":"0"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Tributaries","5":"0"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Flood","5":"0"},{"1":"var_q_sw_outlet","2":"OUTFLOW","3":"SURFACE WATER","4":"Interbasin transfer","5":"0"},{"1":"var_rainfall_et","2":"","3":"","4":"","5":"0"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Commited","5":"0"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Navigational","5":"0"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Environmental","5":"0"},{"1":"var_title","2":"","3":"","4":"Title","5":"Resource Base"},{"1":"var_utilizable_outflow","2":"OUTFLOW","3":"SURFACE WATER","4":"Utilized surface water","5":"0"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -3009,8 +3029,71 @@ Show code
 Your browser does not support iframes
 </p>
 </iframe>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// !preview r2d3 data=NULL</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> pal <span class="op">=</span> [<span class="st">&#39;#3C8DBC&#39;</span><span class="op">,</span><span class="st">&#39;#DD4B39&#39;</span><span class="op">,</span><span class="st">&#39;#00A65A&#39;</span><span class="op">,</span><span class="st">&#39;#00C0EF&#39;</span><span class="op">,</span><span class="st">&#39;#F39C12&#39;</span><span class="op">,</span><span class="st">&#39;#0073B7&#39;</span><span class="op">,</span><span class="st">&#39;#001F3F&#39;</span><span class="op">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;#39CCCC&#39;</span><span class="op">,</span><span class="st">&#39;#3D9970&#39;</span><span class="op">,</span><span class="st">&#39;#01FF70&#39;</span><span class="op">,</span><span class="st">&#39;#FF851B&#39;</span><span class="op">,</span><span class="st">&#39;#F012BE&#39;</span><span class="op">,</span><span class="st">&#39;#605CA8&#39;</span><span class="op">,</span><span class="st">&#39;#D81B60&#39;</span><span class="op">,</span><span class="st">&#39;#111111&#39;</span><span class="op">,</span><span class="st">&#39;#D2D6DE&#39;</span>]<span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">// Test interactions</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">handleMouseOver</span>(d<span class="op">,</span> i) {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>   d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>   <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill-opacity&quot;</span><span class="op">,</span> <span class="fl">0.5</span>)<span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">handleMouseOut</span>(d<span class="op">,</span> i) {</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill-opacity&quot;</span><span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> obj <span class="op">=</span> svg</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">insert</span>(<span class="st">&quot;svg:g&quot;</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;class&quot;</span><span class="op">,</span> <span class="st">&quot;sheet_1&quot;</span>)<span class="op">;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>obj<span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;svg&quot;</span>)<span class="op">.</span><span class="fu">remove</span>()<span class="op">;</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co">// Init external design</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>d3<span class="op">.</span><span class="fu">xml</span>(<span class="st">&quot;sheet_1_edited.svg&quot;</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  obj<span class="op">.</span><span class="fu">node</span>()<span class="op">.</span><span class="fu">append</span>(d<span class="op">.</span><span class="at">documentElement</span>)<span class="op">;</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  obj</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;rect&quot;</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">&quot;mouseover&quot;</span><span class="op">,</span> handleMouseOver)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">&quot;mouseout&quot;</span><span class="op">,</span> handleMouseOut)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>      <span class="op">.</span><span class="fu">on</span>(<span class="st">&quot;click&quot;</span><span class="op">,</span> <span class="kw">function</span>() {</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>        Shiny<span class="op">.</span><span class="fu">setInputValue</span>(</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>          <span class="st">&quot;bar_clicked&quot;</span><span class="op">,</span> {</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;id&quot;</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;id&quot;</span>)<span class="op">,</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;data&quot;</span> <span class="op">:</span> d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;d&quot;</span>)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span> {<span class="dt">priority</span><span class="op">:</span> <span class="st">&quot;event&quot;</span>}</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>          )<span class="op">;</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(d3<span class="op">.</span><span class="fu">select</span>(<span class="kw">this</span>)<span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;d&quot;</span>))<span class="op">;</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>      })<span class="op">;</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="co">// Rendering</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>r2d3<span class="op">.</span><span class="fu">onRender</span>(<span class="kw">function</span>(data<span class="op">,</span> svg<span class="op">,</span> width<span class="op">,</span> height<span class="op">,</span> options) {</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> <span class="bu">root</span> <span class="op">=</span> svg<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;.sheet_1&quot;</span>)<span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;svg&quot;</span>)<span class="op">;</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;rect&quot;</span>)</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">data</span>(data)</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    <span class="co">//.attr(&quot;height&quot;, d =&gt; 1000*d.value)</span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;d&quot;</span><span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span>)<span class="op">;</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text&quot;</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">data</span>(data)</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">text</span>(d <span class="kw">=&gt;</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">&quot;(.2f&quot;</span>)(d<span class="op">.</span><span class="at">value</span>))<span class="op">;</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+</div>
 <p>Next step will be to animate the other 4 sheets using the same approach and include all 6 widgets into a reusable R (and/or Python) package.</p>
-<h1 id="references">References</h1>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-Astagneau2021" class="csl-entry" role="doc-biblioentry">
 Astagneau, Paul C., Guillaume Thirel, Olivier Delaigue, Joseph H. A. Guillaume, Juraj Parajka, Claudia C. Brauer, Alberto Viglione, Wouter Buytaert, and Keith J. Beven. 2021. <span>“<span class="nocase">Technical note: Hydrology modelling R packages - A unified analysis of models and practicalities from a user perspective</span>.”</span> Copernicus GmbH. <a href="https://doi.org/10.5194/hess-25-3937-2021">https://doi.org/10.5194/hess-25-3937-2021</a>.
@@ -3034,7 +3117,6 @@ Marre, Alain. 2015. <span>“<span class="nocase">Eau, Agriculture et Pauvret<sp
 World Bank. 2010. <span>“<span>The Zambezi River Basin A Multi-Sector Investment Opportunities Analysis</span>.”</span> Washington D.C, USA.: World Bank.
 </div>
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>

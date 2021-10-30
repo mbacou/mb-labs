@@ -46,8 +46,8 @@
       <category>imwi</category>
       <category>hydrology</category>
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</guid>
-      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/index_files/figure-html5/unnamed-chunk-3-1.svg" medium="image" type="image/svg+xml"/>
+      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/./fig/preview.png" medium="image" type="image/png" width="624" height="384"/>
     </item>
     <item>
       <title>Merge Ground and Satellite Observations with RFMerge</title>

@@ -25,6 +25,8 @@ output:
 
 ```{r setup}
 
+if(interactive()) setwd("./_posts/2021-10-16-svg")
+
 library(rmarkdown)
 library(jsonlite)
 library(ggplot2)
@@ -360,7 +362,15 @@ function fun_color(el="d3ex2") {
   d3.select("." + el)
   .select("svg")
   .selectAll("text")
-   .style("fill", "white");
+    .style("fill", "white")
+  .selectAll("text[class=data]")
+    .transition()
+    .duration(800)
+    .attr("transform", "translate(2,2)")
+    .transition()
+    .duration(800)    
+    .attr("transform", "translate(-2,-2)")   
+    .style("fill", pal[5]);
  };
  
 function fun_fill(el="d3ex2") {
@@ -371,17 +381,17 @@ function fun_fill(el="d3ex2") {
  };
  
 function fun_group(el="d3ex2", group="") {
-var g = group=="" ? "g" : "g[id=" + group + "]";
-  d3.select("." + el)
-  .select("svg")
-  .selectAll(g)
-    .attr("stroke", pal[7])
-    .attr("fill-opacity", .4)
-    .raise()
-    .move(
-      Math.floor(Math.random() * 20),
-      Math.floor(Math.random() * 10)
-      );
+  var g = group=="" ? "g" : "g[id=" + group + "]";
+    d3.select("." + el)
+    .select("svg")
+    .selectAll(g)
+      .attr("stroke", pal[7])
+      .attr("fill-opacity", .4)
+      .raise()
+      .move(
+        Math.floor(Math.random() * 20),
+        Math.floor(Math.random() * 10)
+        );
 };
 
 ```
@@ -396,6 +406,7 @@ At this point, we need to manually modify (simplify) the original SVG design to 
 :::
 
 :::{.l-gutter}
+<button onclick="fun_color('d3ex3');">Highlight Data</button>
 <button onclick="fun_group('d3ex3', 'ginflow');">Show Inflows</button>
 <button onclick="fun_group('d3ex3', 'goutflow');">Show Outflows</button>
 <button onclick="fun_reset('./svg/sheet_1_edited.svg', 'd3ex3');">Reset Design</button>
@@ -433,10 +444,9 @@ When bound with the yearly model simulation `data` assembled above, the HTML wid
 <p>Your browser does not support iframes</p>
 </iframe>
 
+```{js, code=xfun::read_utf8("./app/sheet_1.js"), eval=FALSE, code_folding=FALSE}
+```
+
 Next step will be to animate the other 4 sheets using the same approach and include all 6 widgets into a reusable R (and/or Python) package.
 
-# References
-
-::: {#refs}
-:::
 
