@@ -26,18 +26,6 @@
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/fig/sankey_truthstudio_1.gif" medium="image" type="image/gif"/>
     </item>
     <item>
-      <title>Visualizing Water: Interactive SVG with D3.js (draft)</title>
-      <dc:creator>Melanie BACOU</dc:creator>
-      <link>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</link>
-      <description>Part 1: add interactivity to IWMI's printable WA+ sheets.</description>
-      <category>draft</category>
-      <category>imwi</category>
-      <category>hydrology</category>
-      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
-      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/./svg/sheet_1_edited.svg" medium="image" type="image/svg+xml"/>
-    </item>
-    <item>
       <title>Visualizing Water: Interactive Timelapse Map of River Basins (draft)</title>
       <dc:creator>Melanie BACOU</dc:creator>
       <link>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</link>
@@ -48,6 +36,18 @@
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</guid>
       <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/./fig/preview.png" medium="image" type="image/png" width="624" height="384"/>
+    </item>
+    <item>
+      <title>Visualizing Water: Interactive SVG with D3.js (draft)</title>
+      <dc:creator>Melanie BACOU</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</link>
+      <description>Part 1: add interactivity to IWMI's printable WA+ sheets.</description>
+      <category>draft</category>
+      <category>imwi</category>
+      <category>hydrology</category>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/./svg/sheet_1_edited.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
       <title>Merge Ground and Satellite Observations with RFMerge</title>

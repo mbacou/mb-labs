@@ -362,15 +362,19 @@ function fun_color(el="d3ex2") {
   d3.select("." + el)
   .select("svg")
   .selectAll("text")
-    .style("fill", "white")
+    .style("fill", "white");
+    
+  d3.select("." + el)
+  .select("svg")    
   .selectAll("text[class=data]")
+    .style("fill", pal[5])
+    .attr("stroke", pal[5])
     .transition()
     .duration(800)
     .attr("transform", "translate(2,2)")
     .transition()
     .duration(800)    
-    .attr("transform", "translate(-2,-2)")   
-    .style("fill", pal[5]);
+    .attr("transform", "translate(0,0)");
  };
  
 function fun_fill(el="d3ex2") {
@@ -432,7 +436,7 @@ Object model for Sheet 1 is shown below.
 
 ```{r}
 
-model <- fread("./data/sheet_1_schema.csv")
+model <- fread("./app/sheet_1_schema.csv")
 model %>% paged_table()
 
 ```
@@ -440,7 +444,7 @@ model %>% paged_table()
 When bound with the yearly model simulation `data` assembled above, the HTML widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
 
 
-<iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="680" width="100%" style="border:none;">
+<iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="880" width="100%" style="border:none;">
 <p>Your browser does not support iframes</p>
 </iframe>
 

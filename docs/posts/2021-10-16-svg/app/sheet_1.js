@@ -1,9 +1,10 @@
 // !preview r2d3 data=NULL
 
-var pal = ['#3C8DBC','#DD4B39','#00A65A','#00C0EF','#F39C12','#0073B7','#001F3F',
-  '#39CCCC','#3D9970','#01FF70','#FF851B','#F012BE','#605CA8','#D81B60','#111111','#D2D6DE'];
+var pal = ['#3C8DBC','#DD4B39','#00A65A','#00C0EF','#F39C12','#0073B7',
+  '#001F3F','#39CCCC','#3D9970','#01FF70','#FF851B','#F012BE','#605CA8',
+  '#D81B60','#111111','#D2D6DE'];
 
-// Test interactions
+// Interactions
 function handleMouseOver(d, i) {
    d3.select(this)
    .attr("fill-opacity", 0.5);
@@ -26,14 +27,16 @@ d3.xml("sheet_1_edited.svg")
   obj.node().append(d.documentElement);
 
   obj
-    .selectAll("rect")
+    .selectAll("rect").merge(obj.selectAll("path"))
       .on("mouseover", handleMouseOver)
       .on("mouseout", handleMouseOut)
       .on("click", function() {
         Shiny.setInputValue(
           "bar_clicked", {
             "id" : d3.select(this).attr("id"),
-            "data" : d3.select(this).attr("d")
+            "value" : d3.select(this).attr("value"),
+            "var" : d3.select(this).attr("var"),
+            "color" : d3.select(this).attr("fill")
             }, {priority: "event"}
           );
         console.log(d3.select(this).attr("d"));
@@ -51,11 +54,14 @@ var root = svg.select(".sheet_1").select("svg");
     .selectAll("rect")
     .data(data)
     //.attr("height", d => 1000*d.value)
-    .attr("d", d => d.value);
+    .attr("var", d => d.id)
+    .attr("value", d => d.value);
 
   root
-    .selectAll("text")
+    .selectAll("text[class=data]")
     .data(data)
+    // will need to include data mapping here
+    .attr("text-anchor", "middle")
     .text(d => d3.format("(.2f")(d.value));
 
 });
