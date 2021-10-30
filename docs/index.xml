@@ -12,7 +12,19 @@
       <link>https://mbacou.github.io/mb-labs</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Visualizing Water: Sankey Diagrams (draft)</title>
+      <dc:creator>Melanie BACOU</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</link>
+      <description>Part 2: custom data-driven flow charts using Highcharts.js and networkD3 (IWMI).</description>
+      <category>draft</category>
+      <category>imwi</category>
+      <category>hydrology</category>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</guid>
+      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/fig/sankey_truthstudio_1.gif" medium="image" type="image/gif"/>
+    </item>
     <item>
       <title>Visualizing Water: Interactive SVG with D3.js (draft)</title>
       <dc:creator>Melanie BACOU</dc:creator>
@@ -22,8 +34,8 @@
       <category>imwi</category>
       <category>hydrology</category>
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
-      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/../../www/svg/sheet_1_edited.svg" medium="image" type="image/svg+xml"/>
+      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/./svg/sheet_1_edited.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
       <title>Visualizing Water: Interactive Timelapse Map of River Basins (draft)</title>
@@ -35,19 +47,7 @@
       <category>hydrology</category>
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</guid>
       <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/../../www/fig/webgl.png" medium="image" type="image/png" width="624" height="384"/>
-    </item>
-    <item>
-      <title>Visualizing Water: Sankey Diagrams (draft)</title>
-      <dc:creator>BACOU, Melanie</dc:creator>
-      <link>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</link>
-      <description>Part 2: custom data-driven flow charts using Highcharts.js and NetworkD3 (IWMI).</description>
-      <category>draft</category>
-      <category>imwi</category>
-      <category>hydrology</category>
-      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</guid>
-      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/../../www/fig/sankey_truthstudio_1.gif" medium="image" type="image/gif"/>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/index_files/figure-html5/unnamed-chunk-3-1.svg" medium="image" type="image/svg+xml"/>
     </item>
     <item>
       <title>Merge Ground and Satellite Observations with RFMerge</title>

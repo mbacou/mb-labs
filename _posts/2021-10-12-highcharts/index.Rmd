@@ -51,10 +51,10 @@ The approach here is inspired by:
 ```{r, out.width="50%", fig.width=3, fig.show="hold"}
 
 c(
-  "../../www/fig/sankey_truthstudio_1.gif",
-  "../../www/fig/sankey_truthstudio_2.gif",  
-  "../../www/fig/sankey_curmi_2013.png",
-  "../../www/fig/sankey_lancaster.png"
+  "./fig/sankey_truthstudio_1.gif",
+  "./fig/sankey_truthstudio_2.gif",  
+  "./fig/sankey_curmi_2013.png",
+  "./fig/sankey_lancaster.png"
 ) %>%
   include_graphics()
 
@@ -64,7 +64,7 @@ c(
 ```{r}
 
 # Load yearly dataset generated in Part 1
-data <- fread("../2021-10-16-svg/data.csv")
+data <- fread("../2021-10-16-svg/data/data.csv")
 
 ```
 

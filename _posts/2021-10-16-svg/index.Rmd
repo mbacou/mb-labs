@@ -8,7 +8,7 @@ author:
     url: https://linkedin/in/mbacou
 date: "`r Sys.Date()`"
 date_prefix: 2021-10-01
-preview: ../../www/svg/sheet_1_edited.svg
+preview: ./svg/sheet_1_edited.svg
 categories:
   - draft
   - imwi
@@ -156,7 +156,7 @@ data <- lapply(1:nrow(f), function(x)
     year = f[x, year]
   )]) %>% rbindlist()
 
-fwrite(data, "data.csv")
+fwrite(data, "./data/data.csv")
 
 ggplot(data[VALUE>0 & SUBCLASS %like% "ET"], 
   aes(year, VALUE, color=paste(SUBCLASS, VARIABLE, sep=" "))) +
@@ -192,7 +192,7 @@ There are multiple SVG templates provided in the Kenya code repository (under `.
 
 ```{r, out.width="33%", fig.width=3, fig.show="hold"}
 
-list.files("../../www/svg", pattern="*.svg", full.names=TRUE)[-c(1:3,7,9)] %>%
+list.files("./fig/svg", pattern="*.svg", full.names=TRUE)[-c(1:3,7,9)] %>%
   knitr::include_graphics()
 
 ```
@@ -325,7 +325,7 @@ var svg = div
   .insert("svg:g")
   .attr("class", "d3ex2");  
 
-function fun_reset(src="../../www/svg/sheet_1.svg", el="d3ex2") {
+function fun_reset(src="./svg/sheet_1.svg", el="d3ex2") {
   var s = d3.select("." + el);
   s.selectAll("svg").remove();
 
@@ -398,7 +398,7 @@ At this point, we need to manually modify (simplify) the original SVG design to 
 :::{.l-gutter}
 <button onclick="fun_group('d3ex3', 'ginflow');">Show Inflows</button>
 <button onclick="fun_group('d3ex3', 'goutflow');">Show Outflows</button>
-<button onclick="fun_reset('../../www/svg/sheet_1_edited.svg', 'd3ex3');">Reset Design</button>
+<button onclick="fun_reset('./svg/sheet_1_edited.svg', 'd3ex3');">Reset Design</button>
 :::
 
 ```{js, code_folding=FALSE}
@@ -409,7 +409,7 @@ d3.select("#d3ex3")
   .insert("svg:g")
   .attr("class", "d3ex3");
 
-fun_reset("../../www/svg/sheet_1_edited.svg", "d3ex3");
+fun_reset("./svg/sheet_1_edited.svg", "d3ex3");
 
 ```
 
@@ -419,14 +419,14 @@ Next step is to map text labels and possible cell height to data variables.
 
 Object model for Sheet 1 is shown below.
 
-```{r, eval=F}
+```{r}
 
-model <- fread("sheet_1_schema.csv")
+model <- fread("./data/sheet_1_schema.csv")
 model %>% paged_table()
 
 ```
 
-When bound with the yearly model simulation dataset `data` assembled above, the HTML widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
+When bound with the yearly model simulation `data` assembled above, the HTML widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
 
 
 <iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="680" width="100%" style="border:none;">

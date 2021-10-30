@@ -6,7 +6,7 @@ author:
   - name: Melanie BACOU
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
-preview: ../../www/fig/webgl.png
+preview: ./fig/preview.png
 categories:
   - draft
   - imwi
