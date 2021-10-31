@@ -5,9 +5,9 @@ account: mbacou
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 4941978
-bundleId: 5194206
+bundleId: 5194405
 url: https://mbacou.shinyapps.io/iwmi_app/
-when: 1635634565.90252
-lastSyncTime: 1635634565.90254
+when: 1635642161.12013
+lastSyncTime: 1635642161.12015
 asMultiple: FALSE
 asStatic: FALSE

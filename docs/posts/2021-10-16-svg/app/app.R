@@ -30,21 +30,16 @@ plot_ts <- function(dt, color) {
 ui <- fluidPage(
 
   fluidRow(
-    column(6,
+    column(3,
       selectInput("txtISO3", "Basin", data[, unique(iso3)]),
       sliderInput("numYear", "Year",
         min=data[, min(year)], max=data[, max(year)],
-        value=data[, max(year)], step=365, timeFormat="%Y")
+        value=data[, max(year)], step=365, timeFormat="%Y"),
+      textAreaInput("objSelected", "Click a cell to get its value", "none", rows=1)
     ),
-    column(6,
-      textAreaInput("objSelected", "Click a cell to get its value", "none"),
-    ),
-    column(12,
+    column(9,
       d3Output("d3"),
-      p("Click a flow to show more details.")
-    ),
-    column(12,
-      highchartOutput("plot_ts", height="280px")
+      highchartOutput("plot_ts", height="200px")
     )
   )
 )
@@ -52,26 +47,27 @@ ui <- fluidPage(
 
 server <- function(input, output) {
 
+  s = reactiveVal()
+
   dt = reactive(
-    data[sheet=="sheet1" & iso3==input$txtISO3 &
-        year(year)==year(input$numYear)]
+    data[sheet=="sheet1" & iso3==input$txtISO3]
   )
 
-  s = reactive(input$bar_clicked)
-
   output$d3 = renderD3({
-    r2d3(dt(), script="sheet_1.js")
+    r2d3(dt()[year(year)==year(input$numYear)], script="sheet_1.js")
   })
 
-  observeEvent(s(), {
+  observeEvent(input$bar_clicked, {
+    s = input$bar_clicked
     updateTextAreaInput(inputId="objSelected",
-      value=paste(s()$var, ": ", s()$value))
+      value=paste(s$var, ": ", comma(as.numeric(s$value), accuracy=0.01)))
+    s(s)
   })
 
   output$plot_ts = renderHighchart({
     req(s()$var)
-    plot_ts(
-      data[sheet=="sheet1" & iso3==input$txtISO3 & id==s()$var], s()$color)
+    s = s()
+    plot_ts(dt()[id==s$var], s$color)
   })
 
 }

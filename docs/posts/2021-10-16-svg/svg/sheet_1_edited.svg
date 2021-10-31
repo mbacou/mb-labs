@@ -1,26 +1,27 @@
-<svg id="svg2357" version="1.1" viewBox="0 0 297 210" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg id="svg2357" version="1.1" viewBox="0 0 283.1 171.35" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs id="defs2354">
+  <pattern id="pattern81600" patternTransform="translate(10.319 35.285)" xlink:href="#Wavywhite"/>
   <pattern id="Wavywhite" width="30.066020" height="5.1805778" patternUnits="userSpaceOnUse">
    <path id="path3361" d="m7.597 0.061c-2.518-0.248-4.941 0.241-7.607 1.727v1.273c2.783-1.63 5.183-2.009 7.482-1.781 2.298 0.228 4.497 1.081 6.781 1.938 4.567 1.713 9.551 3.458 15.813-0.157l-4e-3 -1.273c-6.44 3.709-10.816 1.982-15.371 0.273-2.278-0.854-4.576-1.75-7.094-2z" fill="#fff"/>
   </pattern>
-  <linearGradient id="linearGradient21431" x1="190" x2="1100" y1="110" y2="110" gradientTransform="scale(.26458)" gradientUnits="userSpaceOnUse">
+  <linearGradient id="linearGradient21431" x1="190" x2="1100" y1="110" y2="110" gradientTransform="matrix(.26458 0 0 .26458 10.319 35.285)" gradientUnits="userSpaceOnUse">
    <stop id="stop21425" stop-color="#f4d06f" offset="0"/>
    <stop id="stop21427" stop-color="#22ad7a" offset="1"/>
   </linearGradient>
-  <linearGradient id="linearGradient129137" x1="42.333" x2="26.458" y1="128.32" y2="128.32" gradientUnits="userSpaceOnUse">
+  <linearGradient id="linearGradient129137" x1="29.365" x2="14.309" y1="127.71" y2="127.71" gradientTransform="translate(10.319 35.285)" gradientUnits="userSpaceOnUse">
    <stop id="stop129131" stop-color="#f4d06f" offset="0"/>
    <stop id="stop129133" stop-color="#f4d06f" stop-opacity="0" offset="1"/>
   </linearGradient>
-  <linearGradient id="linearGradient206443" x1="253.06" x2="267.46" y1="107.16" y2="107.16" gradientUnits="userSpaceOnUse">
+  <linearGradient id="linearGradient206443" x1="243.92" x2="260.69" y1="107.16" y2="107.16" gradientTransform="translate(10.319 35.285)" gradientUnits="userSpaceOnUse">
    <stop id="stop206437" stop-color="#22ad7a" offset="0"/>
    <stop id="stop206439" stop-color="#22ad7a" stop-opacity="0" offset="1"/>
   </linearGradient>
-  <linearGradient id="linearGradient206487" x1="251.67" x2="267.48" y1="166.69" y2="166.69" gradientUnits="userSpaceOnUse">
+  <linearGradient id="linearGradient206487" x1="243.17" x2="260.92" y1="128.5" y2="128.5" gradientTransform="translate(10.319 35.285)" gradientUnits="userSpaceOnUse">
    <stop id="stop206481" stop-color="#46bbd4" offset="0"/>
    <stop id="stop206483" stop-color="#46bbd4" stop-opacity="0" offset="1"/>
   </linearGradient>
  </defs>
- <g id="g4529">
+ <g id="g4529" transform="translate(-10.319 -35.285)">
   <text id="var_title" class="data" x="40.321812" y="47.572933" fill="#333333" font-family="Arial" font-size="5.6444px" font-stretch="condensed" font-weight="bold" stroke-width=".26458" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal" xml:space="preserve"><tspan id="tspan4657" x="40.321812" y="47.572933" fill="#333333" font-family="Arial" font-size="5.6444px" font-stretch="condensed" font-weight="bold" stroke-width=".26458" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan id="tspan176134" fill="#333333" font-family="Arial" font-stretch="condensed" font-weight="normal">Sheet 1: </tspan>Resource Base NaN</tspan></text>
   <text id="var_basin" class="data" x="245.5914" y="41.466072" fill="#333333" font-family="Arial" font-size="4.9389px" font-stretch="condensed" font-weight="bold" stroke-width=".26458" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal" xml:space="preserve"><tspan id="tspan7259" x="245.5914" y="41.466072" fill="#333333" font-family="Arial" font-size="4.9389px" font-stretch="condensed" font-weight="bold" stroke-width=".26458" text-align="end" text-anchor="end" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan id="tspan172200" fill="#333333" font-family="Arial" font-stretch="condensed" font-weight="normal" text-align="end" text-anchor="end">Basin:</tspan> NaN</tspan></text>
   <text id="var_period" class="data" x="245.5914" y="47.586712" fill="#333333" font-family="Arial" font-size="4.9389px" font-stretch="condensed" font-weight="bold" stroke-width=".26458" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal" xml:space="preserve"><tspan id="tspan7329" x="245.5914" y="47.586712" fill="#333333" font-family="Arial" font-size="4.9389px" font-stretch="condensed" font-weight="bold" stroke-width=".26458" text-align="end" text-anchor="end" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"><tspan id="tspan173762" fill="#333333" font-family="Arial" font-stretch="condensed" font-weight="normal" text-align="end" text-anchor="end">Period: </tspan>NaN</tspan></text>
@@ -93,7 +94,7 @@
   </g>
   <g id="arrow">
    <path id="arrow_1" d="m52.917 51.376-4.623 3.7357 4.623 3.7352h191.87v9.9999h7.4709v-17.471h-7.4709z" fill="url(#linearGradient21431)" stroke="#fff" stroke-miterlimit="8.1143" stroke-width=".52917"/>
-   <path id="arrow_2" d="m52.917 51.376-4.623 3.7357 4.623 3.7352h191.87v9.9999h7.4709v-17.471h-7.4709z" fill="url(#Wavywhite)" opacity=".4" style="mix-blend-mode:overlay"/>
+   <path id="arrow_2" d="m52.917 51.376-4.623 3.7357 4.623 3.7352h191.87v9.9999h7.4709v-17.471h-7.4709z" fill="url(#pattern81600)" opacity=".4" style="mix-blend-mode:overlay"/>
   </g>
   <g id="goutflow">
    <rect id="rect_external_out" x="256.65" y="71.438" width="15.875" height="71.438" fill="url(#linearGradient206443)" fill-rule="evenodd"/>

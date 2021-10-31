@@ -1,5 +1,7 @@
 // !preview r2d3 data=NULL
 
+var font_size = "4.5861px";
+
 var pal = ['#3C8DBC','#DD4B39','#00A65A','#00C0EF','#F39C12','#0073B7',
   '#001F3F','#39CCCC','#3D9970','#01FF70','#FF851B','#F012BE','#605CA8',
   '#D81B60','#111111','#D2D6DE'];
@@ -14,6 +16,18 @@ function handleMouseOut(d, i) {
   d3.select(this)
   .attr("fill-opacity", 1);
 }
+
+function handleDataMouseOver() {
+  d3.select(this)
+  .raise()
+  .attr("font-size", font_size*3);
+}
+
+function handleDataMouseOut() {
+  d3.select(this)
+  .attr("font-size", font_size);
+}
+
 
 const obj = svg
   .insert("svg:g")
@@ -39,8 +53,13 @@ d3.xml("sheet_1_edited.svg")
             "color" : d3.select(this).attr("fill")
             }, {priority: "event"}
           );
-        console.log(d3.select(this).attr("d"));
+        //console.log(d3.select(this).attr("d"));
       });
+
+  obj
+    .selectAll("text[class=data]")
+      .on("mouseover", handleDataMouseOver)
+      .on("mouseout", handleDataMouseOut);
 
 });
 
