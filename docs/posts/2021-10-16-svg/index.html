@@ -3013,30 +3013,14 @@ fun_reset("./svg/sheet_1_edited.svg", "d3ex3");
 </div>
 <p>Next step is to map text labels and possible cell height to data variables.</p>
 <h2 id="html-widget">HTML Widget</h2>
-<p>Object model for Sheet 1 is shown below.</p>
-<div class="layout-chunk" data-layout="l-body">
-<details>
-<summary>
-Show code
-</summary>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>model</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://Rdatatable.gitlab.io/data.table/reference/fread.html'>fread</a></span><span class='op'>(</span><span class='st'>"./app/sheet_1_schema.csv"</span><span class='op'>)</span>
-<span class='va'>model</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://pkgs.rstudio.com/rmarkdown/reference/paged_table.html'>paged_table</a></span><span class='op'>(</span><span class='op'>)</span>
-</code></pre>
-</div>
-</details>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["class"],"name":[2],"type":["chr"],"align":["left"]},{"label":["subclass"],"name":[3],"type":["chr"],"align":["left"]},{"label":["variable"],"name":[4],"type":["chr"],"align":["left"]},{"label":["value"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"var_available_water","2":"","3":"","4":"","5":"0"},{"1":"var_basin","2":"","3":"","4":"Basin","5":"Basin"},{"1":"var_blue_managed","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Managed","5":"0"},{"1":"var_blue_modified","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Modified","5":"0"},{"1":"var_blue_protected","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Protected","5":"0"},{"1":"var_blue_utilized","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Utilized","5":"0"},{"1":"var_consumed_water","2":"","3":"","4":"","5":"0"},{"1":"var_depleted_water","2":"","3":"","4":"","5":"0"},{"1":"var_et_out","2":"","3":"","4":"","5":"0"},{"1":"var_et_recycled","2":"","3":"","4":"","5":"0"},{"1":"var_exploitable_water","2":"","3":"","4":"","5":"0"},{"1":"var_external_in","2":"","3":"","4":"","5":"0"},{"1":"var_external_out","2":"","3":"","4":"","5":"0"},{"1":"var_green_managed","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Managed","5":"0"},{"1":"var_green_modified","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Modified","5":"0"},{"1":"var_green_protected","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Protected","5":"0"},{"1":"var_green_utilized","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Utilized","5":"0"},{"1":"var_gross_inflow","2":"","3":"","4":"","5":"0"},{"1":"var_incremental_etman","2":"OUTFLOW","3":"ET INCREMENTAL","4":"Manmade","5":"0"},{"1":"var_incremental_etnat","2":"OUTFLOW","3":"ET INCREMENTAL","4":"Natural","5":"0"},{"1":"var_landscape_et","2":"","3":"","4":"","5":"0"},{"1":"var_neg_delta_s","2":"STORAGE","3":"CHANGE","4":"Surface storage","5":"0"},{"1":"var_net_inflow","2":"","3":"","4":"","5":"0"},{"1":"var_non-consumed_water","2":"","3":"","4":"","5":"0"},{"1":"var_non-recoverable_flow","2":"","3":"","4":"","5":"0"},{"1":"var_non-utilizable_outflow","2":"OUTFLOW","3":"OTHER","4":"Non-utilizable","5":"0"},{"1":"var_outflow","2":"","3":"","4":"","5":"0"},{"1":"var_p_advec","2":"INFLOW","3":"PRECIPITATION","4":"Rainfall","5":"0"},{"1":"var_P_snow","2":"INFLOW","3":"PRECIPITATION","4":"Snowfall","5":"0"},{"1":"var_p_recycled","2":"INFLOW","3":"PRECIPITATION","4":"Precipitation recycling","5":"0"},{"1":"var_period","2":"","3":"","4":"Simulation period","5":"0"},{"1":"var_pos_delta_s","2":"STORAGE","3":"CHANGE","4":"Surface storage","5":"0"},{"1":"var_q_desal","2":"INFLOW","3":"SURFACE WATER","4":"Desalinized","5":"0"},{"1":"var_q_gw_in","2":"INFLOW","3":"GROUNDWATER","4":"Natural","5":"0"},{"1":"var_q_gw_in","2":"INFLOW","3":"GROUNDWATER","4":"Utilized","5":"0"},{"1":"var_q_gw_out","2":"INFLOW","3":"GROUNDWATER","4":"","5":"0"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Main riverstem","5":"0"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Tributaries","5":"0"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Flood","5":"0"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Main riverstem","5":"0"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Tributaries","5":"0"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Flood","5":"0"},{"1":"var_q_sw_outlet","2":"OUTFLOW","3":"SURFACE WATER","4":"Interbasin transfer","5":"0"},{"1":"var_rainfall_et","2":"","3":"","4":"","5":"0"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Commited","5":"0"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Navigational","5":"0"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Environmental","5":"0"},{"1":"var_title","2":"","3":"","4":"Title","5":"Resource Base"},{"1":"var_utilizable_outflow","2":"OUTFLOW","3":"SURFACE WATER","4":"Utilized surface water","5":"0"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-</div>
-<p>When bound with the yearly model simulation <code>data</code> assembled above, the HTML widget now behaves as follows (src: <a href="https://mbacou.shinyapps.io/iwmi_app/">shinyapps.io</a>).</p>
-<iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="880" width="100%" style="border:none;">
+<p>When bound with the yearly model simulation dataset assembled above, the HTML widget now behaves as follows (src: <a href="https://mbacou.shinyapps.io/iwmi_app/">shinyapps.io</a>).</p>
+<div class="l-page-outset">
+<iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="660" width="100%" style="border:none;">
 <p>
 Your browser does not support iframes
 </p>
 </iframe>
+</div>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
@@ -3129,6 +3113,24 @@ Show code
 <span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
 </details>
+</div>
+<p>Object model for Sheet 1 is shown in the table below.</p>
+<div class="layout-chunk" data-layout="l-body">
+<details>
+<summary>
+Show code
+</summary>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>model</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://Rdatatable.gitlab.io/data.table/reference/fread.html'>fread</a></span><span class='op'>(</span><span class='st'>"./app/sheet_1_schema.csv"</span><span class='op'>)</span>
+<span class='va'>model</span><span class='op'>[</span>, <span class='fu'>.</span><span class='op'>(</span><span class='va'>id</span>, <span class='va'>class</span>, <span class='va'>subclass</span>, <span class='va'>variable</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://pkgs.rstudio.com/rmarkdown/reference/paged_table.html'>paged_table</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+</details>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["chr"],"align":["left"]},{"label":["class"],"name":[2],"type":["chr"],"align":["left"]},{"label":["subclass"],"name":[3],"type":["chr"],"align":["left"]},{"label":["variable"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"var_available_water","2":"","3":"","4":""},{"1":"var_basin","2":"","3":"","4":"Basin"},{"1":"var_blue_managed","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Managed"},{"1":"var_blue_modified","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Modified"},{"1":"var_blue_protected","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Protected"},{"1":"var_blue_utilized","2":"OUTFLOW","3":"ET UTILIZED FLOW","4":"Utilized"},{"1":"var_consumed_water","2":"","3":"","4":""},{"1":"var_depleted_water","2":"","3":"","4":""},{"1":"var_et_out","2":"","3":"","4":""},{"1":"var_et_recycled","2":"","3":"","4":""},{"1":"var_exploitable_water","2":"","3":"","4":""},{"1":"var_external_in","2":"","3":"","4":""},{"1":"var_external_out","2":"","3":"","4":""},{"1":"var_green_managed","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Managed"},{"1":"var_green_modified","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Modified"},{"1":"var_green_protected","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Protected"},{"1":"var_green_utilized","2":"OUTFLOW","3":"ET LANDSCAPE","4":"Utilized"},{"1":"var_gross_inflow","2":"","3":"","4":""},{"1":"var_incremental_etman","2":"OUTFLOW","3":"ET INCREMENTAL","4":"Manmade"},{"1":"var_incremental_etnat","2":"OUTFLOW","3":"ET INCREMENTAL","4":"Natural"},{"1":"var_landscape_et","2":"","3":"","4":""},{"1":"var_neg_delta_s","2":"STORAGE","3":"CHANGE","4":"Surface storage"},{"1":"var_net_inflow","2":"","3":"","4":""},{"1":"var_non-consumed_water","2":"","3":"","4":""},{"1":"var_non-recoverable_flow","2":"","3":"","4":""},{"1":"var_non-utilizable_outflow","2":"OUTFLOW","3":"OTHER","4":"Non-utilizable"},{"1":"var_outflow","2":"","3":"","4":""},{"1":"var_p_advec","2":"INFLOW","3":"PRECIPITATION","4":"Rainfall"},{"1":"var_P_snow","2":"INFLOW","3":"PRECIPITATION","4":"Snowfall"},{"1":"var_p_recycled","2":"INFLOW","3":"PRECIPITATION","4":"Precipitation recycling"},{"1":"var_period","2":"","3":"","4":"Simulation period"},{"1":"var_pos_delta_s","2":"STORAGE","3":"CHANGE","4":"Surface storage"},{"1":"var_q_desal","2":"INFLOW","3":"SURFACE WATER","4":"Desalinized"},{"1":"var_q_gw_in","2":"INFLOW","3":"GROUNDWATER","4":"Natural"},{"1":"var_q_gw_in","2":"INFLOW","3":"GROUNDWATER","4":"Utilized"},{"1":"var_q_gw_out","2":"INFLOW","3":"GROUNDWATER","4":""},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Main riverstem"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Tributaries"},{"1":"var_q_sw_in","2":"INFLOW","3":"SURFACE WATER","4":"Flood"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Main riverstem"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Tributaries"},{"1":"var_q_sw_out","2":"OUTFLOW","3":"SURFACE WATER","4":"Flood"},{"1":"var_q_sw_outlet","2":"OUTFLOW","3":"SURFACE WATER","4":"Interbasin transfer"},{"1":"var_rainfall_et","2":"","3":"","4":""},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Commited"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Navigational"},{"1":"var_reserved_outflow_max","2":"OUTFLOW","3":"RESERVED","4":"Environmental"},{"1":"var_title","2":"","3":"","4":"Title"},{"1":"var_utilizable_outflow","2":"OUTFLOW","3":"SURFACE WATER","4":"Utilized surface water"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 <p>Next step is to animate <strong>Sheet #2</strong> using the same approach and include these widgets into a reusable R (and/or Python) package.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

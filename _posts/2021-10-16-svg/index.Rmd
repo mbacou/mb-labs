@@ -432,22 +432,24 @@ Next step is to map text labels and possible cell height to data variables.
 
 ## HTML Widget
 
-Object model for Sheet 1 is shown below.
+When bound with the yearly model simulation dataset assembled above, the HTML widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
+
+::: {.l-page-outset}
+<iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="660" width="100%" style="border:none;">
+<p>Your browser does not support iframes</p>
+</iframe>
+:::
+
+```{js, code=xfun::read_utf8("./app/sheet_1.js"), eval=FALSE}
+```
+
+Object model for **Sheet #1** is shown in the table below. 
 
 ```{r}
 
 model <- fread("./app/sheet_1_schema.csv")
-model %>% paged_table()
+model[, .(id, class, subclass, variable)] %>% paged_table()
 
-```
-
-When bound with the yearly model simulation `data` assembled above, the HTML widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
-
-<iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="880" width="100%" style="border:none;">
-<p>Your browser does not support iframes</p>
-</iframe>
-
-```{js, code=xfun::read_utf8("./app/sheet_1.js"), eval=FALSE}
 ```
 
 Next step is to animate **Sheet #2** using the same approach and include these widgets into a reusable R (and/or Python) package.

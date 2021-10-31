@@ -1,7 +1,5 @@
 // !preview r2d3 data=NULL
 
-var font_size = "4.5861px";
-
 var pal = ['#3C8DBC','#DD4B39','#00A65A','#00C0EF','#F39C12','#0073B7',
   '#001F3F','#39CCCC','#3D9970','#01FF70','#FF851B','#F012BE','#605CA8',
   '#D81B60','#111111','#D2D6DE'];
