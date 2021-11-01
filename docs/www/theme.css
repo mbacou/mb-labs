@@ -117,3 +117,6 @@ table, summary {
 summary {
   font-size: .9em;
 }
+d-article h2 {
+  font-weight: unset;
+}
