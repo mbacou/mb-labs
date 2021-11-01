@@ -420,13 +420,13 @@ Finally we'll use WebGL to render this scene in 3D.
 
 ```{r, fig.cap="Step 2: Interactive 3D Scene of Niger River Basin"}
 
-try(rgl.close())
 scene <- readRDS("./_data/scene_basin.rds")
 
-scene %>% plot_3d(resize_matrix(srtm_array, 1/3), zscale=80, 
+scene %>% plot_3d(resize_matrix(srtm_array, 1/5), zscale=80, 
   theta=30, phi=50, fov=0, zoom=0.5)
 
 rglwidget()
+rgl.close()
 
 ```
 
