@@ -46,32 +46,35 @@ par(font.main=1, cex.axis=.8)
 ```
 
 
-This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built custom HTML widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at rendering water fluxes using Sankey diagrams. Here we test multiple libraries to generate hillshade (3D) views of river basins and water infrastructure, in particular we want to compare [leaflet](https://leafletjs.com/), [Three.js](https://threejs.org/) and [MapboxGL](https://docs.mapbox.com/mapbox-gl-js/example/) implementations.
+This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built custom HTML widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at rendering water fluxes using Sankey diagrams. Here we test multiple libraries to generate hillshade (3D) views of river basins and water infrastructure, in particular we want to compare [leaflet](https://leafletjs.com/), [Three.js](https://threejs.org/) and [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) implementations.
 
-Aside from rendering topography and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels to illustrate the hydrological cycle.
+Aside from rendering topography and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels to illustrate the water cycle.
 
-Another objective is to provide basin and sub-basin statistics, starting with precipitation, ET, soil moisture (used in the WA+ approach), and adding other covariates, such as population, land use allocation, and crop allocation.
+Another objective is to provide basin and sub-basin statistics, starting with precipitation, ET, soil moisture, and adding other covariates, such as population, land use allocation, and crop allocation.
 
 Some inspiration below:
 
 - Tylor Morgan [Tutorial: Adding OSM Data to Rayshader Maps](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/)
-- [NASA Web WorldWind](https://worldwind.arc.nasa.gov/web/examples/#anchor)
-- [Flood depth on 3D terrain](https://observablehq.com/@sw1227/flood-depth-map-on-3d-terrain?collection=@sw1227/geo)
+- [Flood depth on 3D terrain](https://observablehq.com/@sw1227/flood-depth-map-on-3d-terrain?collection=@sw1227/geo) 
+- [NASA Web WorldWind](https://worldwind.arc.nasa.gov/web/examples/#anchor) 
 
 
 ```{r, out.width="48%", fig.width=3, fig.show="hold"}
 
-list.files("./fig", full.names=TRUE)[c(2,5)] %>%
+list.files("./fig", full.names=TRUE)[c(2,7)] %>%
   knitr::include_graphics()
 
 ```
 
 
-# WebGL: Sample Scene Processing with Rayshdaer
+# WebGL: Sample Scene Processing with Rayshader[^rs]
+
+[^rs]: https://www.rayshader.com/
+
 
 ## Data Acquisition
 
-We'll start with a sample scene of the **Selingue Dam** in the Niger River basin.
+We'll experiment with a smaller sample scene of the **Selingue Dam** in the Niger River basin.
 
 
 ```{r, layout="l-body", code_folding=F}
@@ -95,7 +98,7 @@ bmap <- maptiles::get_tiles(terra::ext(zoi), "Esri.WorldImagery", zoom=10) %>%
 
 ```
 
-The basin covers a large area, so we need 8 SRTM tiles, but 1 is enough for a proof of concept. Next we'll get a satellite basemap.
+The basin covers a large area, so we would need 8 SRTM tiles, but 1 is enough for a proof of concept. Next we'll get a satellite basemap.
 
 ```{r, out.width="33%", fig.show="hold", code_folding=F}
 
@@ -119,7 +122,7 @@ grid(col="white")
 
 ## Scene Rendering
 
-Next we convert the 2 rasters to a matrix format that's compatible with [Rayshader](https://github.com/tylermorganwall/rayshader/) methods.
+Next we convert the 2 rasters to a matrix format that's compatible with [Rayshader](https://github.com/tylermorganwall/rayshader/) hillshading methods.
 
 ```{r}
 
@@ -158,7 +161,7 @@ basemap_sat %>% plot_map()
 
 ```
 
-That doesn't look very clear, so instead we'll create a basemap, not using the satellite image but a simple desert texture.
+That doesn't look very clear, so instead we'll create a basemap, not using the satellite image but a built-in desert texture.
 
 ```{r, code_folding=F, eval=FALSE}
 
@@ -193,7 +196,7 @@ rglwidget()
 
 ```
 
-Looks better, so let's acquire and overlay spatial features from OSM. 
+Looks better, so let's acquire and overlay spatial features from OSM. Note that water-related features for Mali are scarcely available from OSM, but network streams are recorded.
 
 ```{r, code_folding=FALSE, eval=FALSE}
 
@@ -234,7 +237,7 @@ saveRDS(scene, "./_data/scene.rds")
 
 ```
 
-Finally we'll use WebGL to render this scene in 3D.
+Finally we'll use WebGL to render this scene in 3D. We also test adding polygon (bar) annotations.
 
 ```{r, code_folding=FALSE, eval=FALSE}
 
@@ -270,15 +273,16 @@ rglwidget()
 
 ```
 
+The generated scene (PNG image and associated JS code) is 3.5MB.
+
 
 # WebGL: Full Scene with Rayshader
 
-Following the approach above, we generate a 3D scene for the entire Niger River basin used in the analysis.
+Following the approach above, we experiment with a 3D scene for the entire Niger River basin area used in the analysis.
 
 ## Data Acquisition
 
-
-```{r, eval=FALSE}
+```{r, code_folding=FALSE, eval=FALSE}
 
 # Basin boundaries
 zoi <- shapefile("~/Projects/2021-iwmi/data/mli/srtm/mli_basin.shp")
@@ -291,7 +295,7 @@ adm <- sf::st_read(
 places <- sf::st_read(
   "~/Projects/2021-iwmi/data/mli/srtm/mli_adm2_centroids.shp")
 
-# Get upsampled CGIAR SRTM DEM at 90m
+# Get CGIAR SRTM DEM (upsampled)
 alt <- lapply(c("MLI", "GIN", "CIV"), 
   function(x) getData("alt", country=x, mask=FALSE) %>%
     crop(zoi) %>%
@@ -306,7 +310,7 @@ alt
 # Get ESA WorldCover (clipped in QGIS)
 luc <- raster("~/Projects/2021-iwmi/data/mli/srtm/ESA WorldCover clip.tiff")
 
-# Note that I can't find a colormap for this raster, so switching so ESA CCI
+# Note that I can't find a colormap for this raster, so switching to ESA CCI instead
 luc <- raster("~/Projects/2021-iwmi/data/mli/srtm/mli_esa_cci_300m.tif")
 
 # And its colormap
@@ -321,7 +325,7 @@ bmap <- maptiles::get_tiles(terra::ext(zoi), "OpenStreetMap.HOT", zoom=6) %>%
   mask(zoi)
 
 # We'll use GloRIC v10 stream network instead of OSM
-# Features are filtered to 'Class_hydr < 12'
+# Features are filtered to 'Class_hydr > 12'
 gloric <- sf::st_read("~/Projects/2021-iwmi/data/mli/srtm/mli_gloric_filtered.shp")
 
 save(zoi, ext, adm, places, alt, luc, pal.luc, bmap, gloric,
@@ -349,7 +353,7 @@ grid()
 
 ## Scene Rendering
 
-Same as above.
+Same configuration as above.
 
 ```{r}
 
@@ -416,7 +420,7 @@ saveRDS(scene, "./_data/scene_basin.rds")
 
 ```
 
-Finally we'll use WebGL to render this scene in 3D.
+Finally we'll use WebGL to render this scene in 3D (place names need additional work).
 
 ```{r, fig.cap="Step 2: Interactive 3D Scene of Niger River Basin"}
 
@@ -431,9 +435,14 @@ rgl.close()
 ```
 
 
-# 3D Rendering with Three.js
+# 3D Processing with Three.js
 
-Similar [implementation](./threejs_files/) using Three.js libraries and viewer. The scene is **12 MB in size** (low resampling), it was generated using the [Qgis2threejs](https://qgis2threejs.readthedocs.io/en/docs/) plugin. The main difference is we're showing **ESA CCI land cover classification** as an image overlay.
+Similar implementation using **Three.js** libraries and viewer instead of WebGL. The scene is **12 MB in size** (using a low resampling rate), it was generated using the [Qgis2threejs](https://qgis2threejs.readthedocs.io/en/docs/) plugin. The main difference is we're showing **ESA CCI land cover classification** as an image overlay instead of a texture.
 
+```{r, fig.cap="3D Scene of Niger River Basin with Land Cover Overlay"}
 
+knitr::include_graphics("./fig/threejs_luc.png")
 
+```
+
+This [widget is rendered](./threejs_files/) here. 
