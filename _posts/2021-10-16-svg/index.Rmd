@@ -194,7 +194,7 @@ There are multiple SVG templates provided in the Kenya code repository (under `.
 
 ```{r, out.width="33%", fig.width=3, fig.show="hold"}
 
-list.files("./fig/svg", pattern="*.svg", full.names=TRUE)[-c(1:3,7,9)] %>%
+list.files("./svg", pattern="*.svg", full.names=TRUE)[-c(1:3,7,9)] %>%
   knitr::include_graphics()
 
 ```

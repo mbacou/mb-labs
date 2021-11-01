@@ -46,7 +46,7 @@ par(font.main=1, cex.axis=.8)
 ```
 
 
-This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built custom HTML widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at rendering water fluxes using Sankey diagrams. Here we test multiple libraries to generate hillshade (3D) views of river basins and water infrastructure, in particular we want to compare [leaflet](https://leafletjs.com/), [Three.js](https://threejs.org/) and [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) implementations.
+This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built custom HTML widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at rendering water fluxes using Sankey diagrams. Here we test multiple libraries to generate hillshade (3D) views of river basins and water infrastructure, in particular we want to compare [Three.js](https://threejs.org/) and [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) implementations.
 
 Aside from rendering topography and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels to illustrate the water cycle.
 
@@ -54,9 +54,10 @@ Another objective is to provide basin and sub-basin statistics, starting with pr
 
 Some inspiration below:
 
-- Tylor Morgan [Tutorial: Adding OSM Data to Rayshader Maps](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/)
+- Tyler Morgan [Tutorial: Adding OSM Data to Rayshader Maps](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/)
 - [Flood depth on 3D terrain](https://observablehq.com/@sw1227/flood-depth-map-on-3d-terrain?collection=@sw1227/geo) 
 - [NASA Web WorldWind](https://worldwind.arc.nasa.gov/web/examples/#anchor) 
+- [WebGL with Google Maps API](https://cloud.google.com/blog/products/maps-platform/using-new-webgl-powered-maps-features) on how to overlay 3D scenes.
 
 
 ```{r, out.width="48%", fig.width=3, fig.show="hold"}
