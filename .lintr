@@ -1,3 +1,0 @@
-linters: with_defaults(
-  infix_spaces_linter = FALSE
-  )

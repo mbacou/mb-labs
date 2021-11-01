@@ -28,23 +28,20 @@ plot_ts <- function(dt, color) {
 
 
 ui <- fluidPage(
-  column(3,
-    selectInput("txtISO3", "Basin", data[, unique(iso3)]),
-    sliderInput("numYear", "Year",
-      min=data[, min(year)], max=data[, max(year)],
-      value=data[, max(year)], step=365, timeFormat="%Y"),
-    textAreaInput("objSelected", "Click a cell to get its value", "none")
-  ),
-  column(9,
-    tabsetPanel(
-      tabPanel("Sheet #1",
-        d3Output("d3"),
-        highchartOutput("plot_ts", height="200px")
-      ),
-
-      tabPanel("Sheet #2"
-      ),
-      tabPanel("Map"
+  fluidRow(
+    column(3,
+      selectInput("txtISO3", "Basin", data[, unique(iso3)]),
+      sliderInput("numYear", "Year",
+        min=data[, min(year)], max=data[, max(year)],
+        value=data[, max(year)], step=365, timeFormat="%Y"),
+      textAreaInput("objSelected", "Click a cell to get its value", "none")
+    ),
+    column(9,
+      tabsetPanel(
+        tabPanel("Sheet #1",
+          d3Output("d3"),
+          highchartOutput("plot_ts", height="200px")
+        )
       )
     )
   )

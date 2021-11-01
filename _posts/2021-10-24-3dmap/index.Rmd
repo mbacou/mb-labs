@@ -6,13 +6,15 @@ author:
   - name: Melanie BACOU
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
+date: "`r Sys.Date()`"
+date_prefix: 2021-10-24
 preview: ./fig/preview.png
+bibliography: biblio.bib
+nocite: "@*"
 categories:
   - draft
   - imwi
   - hydrology
-date: "`r Sys.Date()`"
-date_prefix: 2021-10-24
 output:
   distill::distill_article:
     toc: true
@@ -46,24 +48,28 @@ par(font.main=1, cex.axis=.8)
 
 This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built custom HTML widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at rendering water fluxes using Sankey diagrams. Here we test multiple libraries to generate hillshade (3D) views of river basins and water infrastructure, in particular we want to compare [leaflet](https://leafletjs.com/), [Three.js](https://threejs.org/) and [MapboxGL](https://docs.mapbox.com/mapbox-gl-js/example/) implementations.
 
-Aside from rendering spatial terrain and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels to illustrate and quantify the hydrological cycle.
+Aside from rendering topography and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels to illustrate the hydrological cycle.
+
+Another objective is to provide basin and sub-basin statistics, starting with precipitation, ET, soil moisture (used in the WA+ approach), and adding other covariates, such as population, land use allocation, and crop allocation.
 
 Some inspiration below:
 
-- tylor Morgan [Tutorial: Adding OSM Data to Rayshader Maps](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/)
+- Tylor Morgan [Tutorial: Adding OSM Data to Rayshader Maps](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/)
 - [NASA Web WorldWind](https://worldwind.arc.nasa.gov/web/examples/#anchor)
 - [Flood depth on 3D terrain](https://observablehq.com/@sw1227/flood-depth-map-on-3d-terrain?collection=@sw1227/geo)
-- Contouring with [Threes.js](https://observablehq.com/@sw1227/contoured-mountainious-terrai-3d?collection=@sw1227/3d)
 
 
-```{r}
+```{r, out.width="50%", fig.width=3, fig.show="hold"}
 
+list.files("./fig", full.names=TRUE)[c(2,4)] %>%
+  knitr::include_graphics()
 
 ```
 
 
+# WebGL: Sample Scene Processing with Rayshdaer
 
-# Data Acquisition
+## Data Acquisition
 
 We'll start with a sample scene of the **Selingue Dam** in the Niger River basin.
 
@@ -76,15 +82,16 @@ ext <- extent(zoi)
 center <- coordinates(zoi)
 
 # Get CGIAR SRTM DEM at 90m
-getData("SRTM", lon=center[,1], lat=center[,2], path="_data") %>%
+srtm <- getData("SRTM", lon=center[,1], lat=center[,2], path="_data") %>%
   crop(zoi) %>%
-  mask(zoi) -> srtm
+  mask(zoi)
 srtm
 
-# Get LUC
-#luc <- raster("~/Projects/2021-iwmi/data/mli/stat/")
-
-# Admin boundaries
+# Satellite basemaps
+bmap <- maptiles::get_tiles(terra::ext(zoi), "Esri.WorldImagery", zoom=10) %>%
+  stack() %>%
+  crop(zoi) %>%
+  mask(zoi)
 
 ```
 
@@ -92,31 +99,25 @@ The basin covers a large area, so we need 8 SRTM tiles, but 1 is enough for a pr
 
 ```{r, out.width="33%", fig.show="hold", code_folding=F}
 
-# Satellite basemaps
-maptiles::get_tiles(terra::ext(zoi), "Esri.WorldImagery", zoom=10) %>%
-  stack() %>%
-  crop(zoi) %>%
-  mask(zoi) -> bmap
-
-plot(terra::vect(basin), axes=T, asp=1, col=pal[2], border=pal[1], lwd=2,
+plot(terra::vect(basin), col=pal[2], border=pal[1], lwd=2,
   main="Niger River Basin (Mali)")
-plot(zoi, add=T, lty=3, col=alpha(pal["red"], .6), border=pal["red"], lwd=2)
+plot(zoi, lty=3, col=alpha(pal["red"], .6), border=pal["red"], lwd=2, add=T)
 text(-8, 10.5, "Selingue Dam\n(Mali)", col=pal["red"], cex=.7, font=2)
 grid()
 
-plot(terra::ext(zoi), axes=T, asp=1, border=NA, 
+plot(terra::ext(zoi), 
   main="Selingue Dam (Mali) - ESRI World Imagery")
 plotRGB(bmap, add=T)
 grid(col="white")
 
-plot(srtm, axes=T, asp=1, border=NA, 
+plot(terra::rast(srtm),
   main="Selingue Dam (Mali) - SRTM 90m")
 grid(col="white")
 
 ```
 
 
-# WebGL (rayshader)
+## Scene Rendering
 
 Next we convert the 2 rasters to a matrix format that's compatible with [Rayshader](https://github.com/tylermorganwall/rayshader/) methods.
 
@@ -157,21 +158,6 @@ basemap_sat %>% plot_map()
 
 ```
 
-```{r, code_folding=F, rgl.margin=0, fig.cap="Hillshade Basemap of Selingue Dam (Niger River basin)"}
-
-alt <- getData("alt", country="MLI", path="_data") %>%
-  crop(zoi) %>%
-  raster_to_matrix()
-
-basemap_sat %>% plot_3d(alt,
-  zscale=20, zoom=0.5,
-  phi=30, theta=20, fov=0,
-  shadow=TRUE, shadowcolor=pal["black"])
-
-rglwidget()
-
-```
-
 That doesn't look very clear, so instead we'll create a basemap, not using the satellite image but a simple desert texture.
 
 ```{r, code_folding=F, eval=FALSE}
@@ -190,6 +176,11 @@ saveRDS(base_map, "./_data/base_map.rds")
 ```
 
 ```{r, rgl.margin=0, fig.cap="Step 1 - Hillshade Basemap of Selingue Dam"}
+
+# Upsampled SRTM
+alt <- getData("alt", country="MLI", path="_data") %>%
+  crop(zoi) %>%
+  raster_to_matrix()
 
 base_map <- readRDS("./_data/base_map.rds")
 
@@ -261,7 +252,7 @@ saveRDS(scene2, "./_data/scene2.rds")
 
 ```
 
-```{r, rgl.margin=0, fig.cap="Interactive 3D Scene of Selingue Dam"}
+```{r, rgl.margin=0, fig.cap="Step 2: Interactive 3D Scene of Selingue Dam"}
 
 scene <- readRDS("./_data/scene.rds")
 scene2 <- readRDS("./_data/scene2.rds")
@@ -280,9 +271,169 @@ rglwidget()
 ```
 
 
-# Three.js
+# WebGL: Full Scene with Rayshader
 
-A vanilla JavaScript approach using a Three.js 3D viewer over the same area.
+Following the approach above, we generate a 3D scene for the entire Niger River basin used in the analysis.
+
+## Data Acquisition
+
+
+```{r, eval=FALSE}
+
+# Basin boundaries
+zoi <- shapefile("~/Projects/2021-iwmi/data/mli/srtm/mli_basin.shp")
+ext <- extent(zoi)
+center <- coordinates(zoi)
+
+# Admin2 boundaries
+adm <- sf::st_read(
+  "~/Projects/2021-iwmi/data/mli/srtm/mli_adm2_lines.shp")
+places <- sf::st_read(
+  "~/Projects/2021-iwmi/data/mli/srtm/mli_adm2_centroids.shp")
+
+# Get upsampled CGIAR SRTM DEM at 90m
+alt <- lapply(c("MLI", "GIN", "CIV"), 
+  function(x) getData("alt", country=x, mask=FALSE) %>%
+    crop(zoi) %>%
+    mask(zoi)
+)
+alt <- mosaic(alt[[1]], alt[[2]], alt[[3]], fun=mean)
+alt <- mask(crop(alt, zoi), zoi)
+writeRaster(alt, "~/Projects/2021-iwmi/data/mli/srtm/mli_alt.tif",
+  overwrite=T)
+alt
+
+# Get ESA WorldCover (clipped in QGIS)
+luc <- raster("~/Projects/2021-iwmi/data/mli/srtm/ESA WorldCover clip.tiff")
+
+# Note that I can't find a colormap for this raster, so switching so ESA CCI
+luc <- raster("~/Projects/2021-iwmi/data/mli/srtm/mli_esa_cci_300m.tif")
+
+# And its colormap
+pal.luc <- fread("~/Maps/ESA/ESA CCI Colormap.txt")
+setnames(pal.luc, c("value", "R", "G", "B", "A", "label"))
+pal.luc[, hex := rgb(R, G, B, maxColorValue=255)]
+
+# OSM basemap
+bmap <- maptiles::get_tiles(terra::ext(zoi), "OpenStreetMap.HOT", zoom=6) %>%
+  stack() %>%
+  crop(zoi) %>%
+  mask(zoi)
+
+# We'll use GloRIC v10 stream network instead of OSM
+# Features are filtered to 'Class_hydr < 12'
+gloric <- sf::st_read("~/Projects/2021-iwmi/data/mli/srtm/mli_gloric_filtered.shp")
+
+save(zoi, ext, adm, places, alt, luc, pal.luc, bmap, gloric,
+  file="./_data/osm.RData")
+
+```
+
+```{r, out.width="50%", fig.show="hold", code_folding=F}
+
+load("./_data/osm.RData")
+
+plot(terra::rast(alt),
+  main="Niger River Basin (Mali) - SRTM 1km")
+plot(adm, lty=3, col=pal["black"], lwd=1, add=T)
+plot(gloric, col=pal["blue"], lwd=.4, add=T)
+grid()
+
+plot(terra::rast(luc), col=pal.luc$hex, 
+  breaks=pal.luc$value, legend=F,
+  main="Niger River Basin (Mali) - ESA CCI 300m")
+plot(adm, lty=3, col=pal["black"], lwd=1, add=T)
+grid()
+
+```
+
+## Scene Rendering
+
+Same as above.
+
+```{r}
+
+# Convert rasters to rayshader matrix format
+srtm_array <- raster_to_matrix(alt)
+
+# Convert sat basemap to matrix (test)
+r <- raster_to_matrix(bmap$red)
+g <- raster_to_matrix(bmap$green)
+b <- raster_to_matrix(bmap$blue)
+
+bmap_array <- array(0, dim=c(nrow(r), ncol(r), 3))
+bmap_array[,,1] <- r/255
+bmap_array[,,2] <- g/255
+bmap_array[,,3] <- b/255
+
+bmap_array %>%
+  aperm(c(2,1,3)) %>%
+  # Stretch contrast
+  rescale(to=c(0,1)) -> bmap_array
+
+```
+
+```{r, code_folding=F, eval=FALSE}
+
+base_map <- srtm_array %>% 
+  height_shade() %>% 
+  add_overlay(sphere_shade(srtm_array, texture="desert"), alphalayer=0.5) %>%
+  add_shadow(lamb_shade(srtm_array, zscale=6), 0) %>%
+  add_shadow(ambient_shade(srtm_array), 0)
+
+saveRDS(base_map, "./_data/base_map_basin.rds")
+
+```
+
+```{r, rgl.margin=0, fig.cap="Step 1 - Hillshade Basemap Niger River Basin"}
+
+base_map <- readRDS("./_data/base_map_basin.rds")
+plot_map(base_map)
+
+```
+
+```{r, code_folding=FALSE, eval=FALSE}
+
+admin_layer <- generate_line_overlay(adm,
+  extent=ext, srtm_array, linewidth=3, lty=1, color=pal["light"])
+
+water_layer <- generate_line_overlay(gloric, 
+  extent=ext, srtm_array, linewidth=3, color=pal["light-blue"])
+
+place_layer <- generate_label_overlay(places,
+  extent=ext, heightmap=srtm_array,
+  font=2, text_size=1.6, point_size=0, color=pal["light"],
+  halo_color=pal["black"], halo_expand=2, halo_blur=2, halo_alpha=.6, seed=1,
+  data_label_column="ADM2_NAME")
+
+scene <- base_map %>% 
+#scene <- basemap_luc %>%   
+  add_overlay(admin_layer) %>%
+  add_overlay(water_layer)
+  #add_overlay(place_layer)
+
+saveRDS(scene, "./_data/scene_basin.rds")
+
+```
+
+Finally we'll use WebGL to render this scene in 3D.
+
+```{r, fig.cap="Step 2: Interactive 3D Scene of Niger River Basin"}
+
+try(rgl.close())
+scene <- readRDS("./_data/scene_basin.rds")
+
+scene %>% plot_3d(resize_matrix(srtm_array, 1/5), zscale=80, 
+  theta=30, phi=50, fov=0, zoom=0.5)
+
+rglwidget()
+
+```
+
+
+# 3D Rendering with Three.js
+
+Similar [implementation](./threejs_files/) using Three.js libraries and viewer. The scene is **12 MB in size** (low resampling), it was generated using the [Qgis2threejs](https://qgis2threejs.readthedocs.io/en/docs/) plugin. The main difference is we're showing **ESA CCI land cover classification** as an image overlay.
 
 
 

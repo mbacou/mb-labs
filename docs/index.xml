@@ -12,7 +12,19 @@
       <link>https://mbacou.github.io/mb-labs</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 31 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Visualizing Water: Interactive Timelapse Map of River Basins (draft)</title>
+      <dc:creator>Melanie BACOU</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</link>
+      <description>Part 3: how to represent water flux over 3D maps of river basins.</description>
+      <category>draft</category>
+      <category>imwi</category>
+      <category>hydrology</category>
+      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</guid>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/./fig/preview.png" medium="image" type="image/png" width="624" height="384"/>
+    </item>
     <item>
       <title>Visualizing Water: Interactive SVG with D3.js (draft)</title>
       <dc:creator>Melanie BACOU</dc:creator>
@@ -36,18 +48,6 @@
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</guid>
       <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/fig/sankey_truthstudio_1.gif" medium="image" type="image/gif"/>
-    </item>
-    <item>
-      <title>Visualizing Water: Interactive Timelapse Map of River Basins (draft)</title>
-      <dc:creator>Melanie BACOU</dc:creator>
-      <link>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</link>
-      <description>Part 3: how to represent water flux over 3D maps of river basins.</description>
-      <category>draft</category>
-      <category>imwi</category>
-      <category>hydrology</category>
-      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap</guid>
-      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/./fig/preview.png" medium="image" type="image/png" width="624" height="384"/>
     </item>
     <item>
       <title>Merge Ground and Satellite Observations with RFMerge</title>
