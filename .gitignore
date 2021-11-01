@@ -2,8 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-data/
-maps/
 _data/
 _posts/*/index_files
 _posts/*/*.html
