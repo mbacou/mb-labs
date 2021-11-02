@@ -448,7 +448,7 @@ Finally we'll use WebGL to render this scene in 3D.
 
 scene <- readRDS("./_data/scene_basin.rds")
 scene %>% plot_3d(resize_matrix(srtm_array, 1/5), zscale=40, 
-  linewidth=0, theta=30, phi=45, fov=0, zoom=0.5, 
+  linewidth=0, theta=15, phi=45, fov=0, zoom=0.4, 
   family="Roboto Condensed",
   shadow=TRUE, shadowcolor=pal["black"], solidcolor=pal["black"])
 
