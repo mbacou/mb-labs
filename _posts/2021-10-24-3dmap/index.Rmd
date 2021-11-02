@@ -149,7 +149,7 @@ bmap_array %>%
 
 2D view of the generated basemap with satellite image overlay.
 
-```{r, code_folding=F, fig.cap="Hillshade Basemap of Selingue Dam (Niger River basin)"}
+```{r, code_folding=F, fig.cap="Hillshaded Basemap of Selingue Dam (Niger River basin)"}
 
 srtm_water <- srtm_array
 srtm_water[srtm_water < 353] <- 0
@@ -181,17 +181,10 @@ saveRDS(base_map, "./_data/base_map.rds")
 
 ```
 
-```{r, rgl.margin=0, fig.cap="Step 1 - Hillshade Basemap of Selingue Dam"}
+```{r, rgl.margin=0, fig.cap="Hillshaded Basemap of Selingue Dam"}
 
 base_map <- readRDS("./_data/base_map.rds")
-
-base_map %>% plot_3d(resize_matrix(srtm_array, 1/10),
-  zscale=20, zoom=0.5,
-  phi=30, theta=20, fov=0,
-  family="Roboto Condensed",
-  shadow=TRUE, shadowcolor=pal["black"], solidcolor=pal["black"])
-
-rglwidget()
+plot_map(base_map)
 
 ```
 
@@ -258,7 +251,7 @@ saveRDS(scene2, "./_data/scene2.rds")
 
 ```
 
-```{r, rgl.margin=0, fig.cap="Step 2: Interactive 3D Scene of Selingue Dam"}
+```{r, rgl.margin=0, fig.cap="Interactive 3D Scene of Selingue Dam"}
 
 scene <- readRDS("./_data/scene.rds")
 scene2 <- readRDS("./_data/scene2.rds")
@@ -289,18 +282,18 @@ Following the approach above, we experiment with a 3D scene for the entire Niger
 
 ```{r, code_folding=FALSE, eval=FALSE}
 
-# Basin boundaries
+# Basin boundaries from IWMI
 zoi <- shapefile("~/Projects/2021-iwmi/data/mli/srtm/mli_basin.shp")
 ext <- extent(zoi)
 center <- coordinates(zoi)
 
-# Admin2 boundaries
+# GAUL admin-2 boundaries
 adm <- sf::st_read(
   "~/Projects/2021-iwmi/data/mli/srtm/mli_adm2_lines.shp")
 places <- sf::st_read(
   "~/Projects/2021-iwmi/data/mli/srtm/mli_adm2_centroids.shp")
 
-# Get CGIAR SRTM DEM (upsampled)
+# CGIAR SRTM DEM (upsampled)
 alt <- lapply(c("MLI", "GIN", "CIV"), 
   function(x) getData("alt", country=x, mask=FALSE) %>%
     crop(zoi) %>%
@@ -312,7 +305,7 @@ writeRaster(alt, "~/Projects/2021-iwmi/data/mli/srtm/mli_alt.tif",
   overwrite=T)
 alt
 
-# Get ESA WorldCover (clipped in QGIS)
+# ESA WorldCover (clipped in QGIS)
 luc <- raster("~/Projects/2021-iwmi/data/mli/srtm/ESA WorldCover clip.tiff")
 
 # Note that I can't find a colormap for this raster, so switching to ESA CCI instead
@@ -323,17 +316,11 @@ pal.luc <- fread("~/Maps/ESA/ESA CCI Colormap.txt")
 setnames(pal.luc, c("value", "R", "G", "B", "A", "label"))
 pal.luc[, hex := rgb(R, G, B, maxColorValue=255)]
 
-# OSM basemap
-bmap <- maptiles::get_tiles(terra::ext(zoi), "OpenStreetMap.HOT", zoom=6) %>%
-  stack() %>%
-  crop(zoi) %>%
-  mask(zoi)
-
 # We'll use GloRIC v1.0 stream network instead of OSM
 # Features are filtered to 'Class_hydr > 12'
 gloric <- sf::st_read("~/Projects/2021-iwmi/data/mli/srtm/mli_gloric_filtered.shp")
 
-save(zoi, ext, adm, places, alt, luc, pal.luc, bmap, gloric,
+save(zoi, ext, adm, places, alt, luc, pal.luc, gloric,
   file="./_data/osm.RData")
 
 ```
@@ -365,7 +352,9 @@ Same configuration as above.
 # Convert rasters to rayshader matrix format
 srtm_array <- raster_to_matrix(alt)
 
-# Convert sat basemap to matrix (test)
+bmap <- RGB(luc, col=pal.luc$hex, breaks=c(0,pal.luc$value))
+
+# Convert land cover raster to matrix (test)
 r <- raster_to_matrix(bmap$red)
 g <- raster_to_matrix(bmap$green)
 b <- raster_to_matrix(bmap$blue)
@@ -382,18 +371,31 @@ bmap_array <- bmap_array %>%
 
 ```
 
+2D view of the generated basemap with land cover overlay.
+
+```{r, code_folding=F, eval=FALSE}
+
+base_map_luc <- srtm_array %>%
+  height_shade() %>%
+  add_overlay(bmap_array) %>%
+  add_shadow(lamb_shade(srtm_array, zscale=6), 0.5) %>%
+  add_shadow(ambient_shade(srtm_array), 0.5)
+
+saveRDS(base_map_luc, "./_data/base_map_luc_basin.rds")
+
+```
+
+```{r, rgl.margin=0, fig.cap="Hillshaded Land Cover - Niger River Basin"}
+
+base_map_luc <- readRDS("./_data/base_map_luc_basin.rds")
+plot_map(base_map_luc)
+
+```
+
 The choice of hillshading parameters below might need tweaking.
 
 ```{r, code_folding=F, eval=FALSE}
 
-base_map <- srtm_array %>% 
-  height_shade(terrain.colors(256)) %>% 
-  add_overlay(sphere_shade(srtm_array, texture="desert"), alphalayer=0.4) %>%
-  add_shadow(lamb_shade(srtm_array, zscale=6), 0.5) %>%
-  # This step takes up to 5min on 4 cores / 8GB
-  add_shadow(ambient_shade(srtm_array), 0.5)
-
-# Alternative
 base_map <- srtm_array %>%
   sphere_shade(texture="desert") %>%
   #add_shadow(ray_shade(srtm_array, zscale=50))
@@ -405,9 +407,9 @@ saveRDS(base_map, "./_data/base_map_basin.rds")
 
 ```
 
-2D view of the generated basemap.
+2D view of the generated basemap with simple texture overlay.
 
-```{r, rgl.margin=0, fig.cap="Step 1 - Hillshade Basemap Niger River Basin"}
+```{r, rgl.margin=0, fig.cap="Hillshaded Basemap - Niger River Basin"}
 
 base_map <- readRDS("./_data/base_map_basin.rds")
 plot_map(base_map)
@@ -419,7 +421,11 @@ As above, we choose to overlay place names, waterways, and level-2 administrativ
 ```{r, code_folding=FALSE, eval=FALSE}
 
 admin_layer <- generate_line_overlay(adm,
-  extent=ext, srtm_array, linewidth=3, lty=1, color=pal["light"])
+  extent=ext, srtm_array, linewidth=4, lty=1, color="white")
+
+admin_layer2 <- generate_line_overlay(adm,
+  extent=ext, srtm_array, linewidth=2, lty=1, color=pal["black"], 
+  offset=c(0, 0.03))
 
 water_layer <- generate_line_overlay(gloric, 
   extent=ext, srtm_array, linewidth=6, color=pal["light-blue"],
@@ -428,11 +434,10 @@ water_layer <- generate_line_overlay(gloric,
 place_layer <- generate_label_overlay(places,
   extent=ext, heightmap=srtm_array,
   font=2, text_size=1.6, point_size=0, color=pal["light"],
-  halo_color=pal["black"], halo_expand=3, halo_blur=3, halo_alpha=.7, seed=1,
-  data_label_column="ADM2_NAME")
+  halo_color=pal["black"], halo_expand=3, halo_blur=2, halo_alpha=.6,
+  seed=1, data_label_column="ADM2_NAME")
 
-scene <- base_map %>% 
-#scene <- basemap_luc %>%   
+scene <- base_map %>%
   add_overlay(admin_layer) %>%
   add_overlay(water_layer) %>%
   add_overlay(place_layer)
@@ -440,11 +445,20 @@ scene <- base_map %>%
 plot_map(scene)
 saveRDS(scene, "./_data/scene_basin.rds")
 
+scene_luc <- base_map_luc %>% 
+  add_overlay(admin_layer2, alphalayer=.8) %>%
+  add_overlay(admin_layer, alphalayer=.9) %>%
+  add_overlay(water_layer) %>%
+  add_overlay(place_layer)
+
+plot_map(scene_luc)
+saveRDS(scene_luc, "./_data/scene_luc_basin.rds")
+
 ```
 
-Finally we'll use WebGL to render this scene in 3D.
+Finally we'll use WebGL to render these scenes in 3D.
 
-```{r, rgl.margin=0, fig.cap="Step 2: Interactive 3D Scene of Niger River Basin"}
+```{r, rgl.margin=0, fig.cap="Interactive 3D Scene of Niger River Basin"}
 
 scene <- readRDS("./_data/scene_basin.rds")
 scene %>% plot_3d(resize_matrix(srtm_array, 1/5), zscale=40, 
@@ -457,15 +471,25 @@ rgl.close()
 
 ```
 
+```{r, rgl.margin=0, fig.cap="Interactive 3D Scene of Niger River Basin with Land Cover Basemap"}
 
-# 3D Processing with Three.js
+scene_luc <- readRDS("./_data/scene_luc_basin.rds")
+scene_luc %>% plot_3d(resize_matrix(srtm_array, 1/5), zscale=40, 
+  linewidth=0, theta=15, phi=45, fov=0, zoom=0.4, 
+  family="Roboto Condensed",
+  shadow=TRUE, shadowcolor=pal["black"], solidcolor=pal["black"])
 
-Similar implementation using **Three.js** libraries instead of WebGL. The scene is **12 MB in size** (using a low resampling rate), it was generated using the [Qgis2threejs](https://qgis2threejs.readthedocs.io/en/docs/) plugin. The main difference is we're showing **ESA CCI land cover classification** as an image overlay instead of a texture.
+rglwidget()
+rgl.close()
 
-```{r, fig.cap="3D Scene of Niger River Basin with Land Cover Overlay"}
-
-knitr::include_graphics("./fig/threejs_luc.png")
+#save_3dprint("mli_basin.stl", maxwidth="120mm", clear=TRUE)
+#save_obj("mli_basin.obj")
 
 ```
 
-This [widget is rendered](./threejs_files/) here. 
+
+# 3D Processing with Three.js
+
+For comparison's sake we build a similar scene using **Three.js** libraries instead of WebGL. The scene is **12 MB in size** (using a low resampling rate), it was generated using the [Qgis2threejs](https://qgis2threejs.readthedocs.io/en/docs/) plugin. The main difference is we're showing **ESA CCI land cover classification** as an image overlay instead of a texture.
+
+The [widget is rendered](./threejs_files/) here. 
