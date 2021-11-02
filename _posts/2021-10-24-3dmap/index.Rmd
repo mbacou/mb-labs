@@ -320,7 +320,12 @@ pal.luc[, hex := rgb(R, G, B, maxColorValue=255)]
 # Features are filtered to 'Class_hydr > 12'
 gloric <- sf::st_read("~/Projects/2021-iwmi/data/mli/srtm/mli_gloric_filtered.shp")
 
-save(zoi, ext, adm, places, alt, luc, pal.luc, gloric,
+# Country labels
+osm_place <- opq(bbox(zoi)) %>% 
+  add_osm_feature("place", "country") %>% 
+  osmdata_sf()
+
+save(zoi, ext, adm, places, alt, luc, pal.luc, gloric, osm_place,
   file="./_data/osm.RData")
 
 ```
@@ -433,9 +438,16 @@ water_layer <- generate_line_overlay(gloric,
 
 place_layer <- generate_label_overlay(places,
   extent=ext, heightmap=srtm_array,
-  font=2, text_size=1.6, point_size=0, color=pal["light"],
-  halo_color=pal["black"], halo_expand=3, halo_blur=2, halo_alpha=.6,
+  font=2, text_size=1.6, point_size=0, color="white",
+  halo_color=pal["black"], halo_expand=2, halo_blur=2, halo_alpha=.6,
   seed=1, data_label_column="ADM2_NAME")
+
+country_layer <- generate_label_overlay(osm_place$osm_points,
+  extent=ext, heightmap=srtm_array, offset=c(0.1, -0.5),
+  font=3, text_size=3, point_size=0, color=pal["light"],
+  halo_color=pal["black"], halo_expand=4, halo_blur=4, halo_alpha=.6,
+  halo_offset=c(0.1, -0.5),
+  seed=1, data_label_column="name")
 
 scene <- base_map %>%
   add_overlay(admin_layer) %>%
@@ -448,6 +460,7 @@ saveRDS(scene, "./_data/scene_basin.rds")
 scene_luc <- base_map_luc %>% 
   add_overlay(admin_layer2, alphalayer=.8) %>%
   add_overlay(admin_layer, alphalayer=.9) %>%
+  add_overlay(country_layer) %>%
   add_overlay(water_layer) %>%
   add_overlay(place_layer)
 
