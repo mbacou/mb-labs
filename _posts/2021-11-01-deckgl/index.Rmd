@@ -23,9 +23,11 @@ output:
     self_contained: false
 ---
 
-```{r setup, include=FALSE}
+Testing additional 3D mapping libraries to render river basin topography.
 
-if(interactive()) setwd("_posts/2021-11-06-deckgl/")
+```{r setup}
+
+if(interactive()) setwd("_posts/2021-11-01-deckgl/")
 
 library(knitr)
 library(scales)
@@ -44,17 +46,19 @@ par(font.main=1, cex.axis=.8)
 load("../2021-10-24-3dmap/_data/osm.RData")
 
 adm.pts <- st_centroid(adm)
-adm[, "color"] <- colour_ramp(unname(pal[1:3]))(seq(0, 1, length=nrow(adm)))
+adm[, "color"] <- colour_ramp(
+  unname(pal[1:3]))(seq(0, 1, length=nrow(adm)))
+ext <- st_bbox(adm)
 
 ```
 
 This implementation is derived from Deck.gl [terrain demo](https://github.com/visgl/deck.gl/blob/8.6-release/examples/website/terrain/app.js).
 
-Load terrain and satellite basemaps. Then we progressively add water features.
+Load terrain and satellite tilesets using R package `deckgl`.
 
 ```{r}
 
-token = Sys.getenv("MAPBOX_TOKEN")
+mb_token = Sys.getenv("MAPBOX_TOKEN")
 mapbox_api = "https://api.mapbox.com/v4/mapbox.%s/{z}/{x}/{y}.png?access_token=%s"
 terrain_img = "terrain-rgb"
 surface_img = "satellite"
@@ -71,8 +75,8 @@ props_basemap = list(
   maxZoom = 23,
   strategy = "no-overlap",
   elevationDecoder = elev_map,
-  elevationData = sprintf(mapbox_api, terrain_img, token),
-  texture = sprintf(mapbox_api, surface_img, token),
+  elevationData = sprintf(mapbox_api, terrain_img, mb_token),
+  texture = sprintf(mapbox_api, surface_img, mb_token),
   wireframe = FALSE,
   color = c(255, 255, 255)
 )
@@ -126,11 +130,9 @@ deckgl(
 
 Use **Shift + Click** to tilt the view angle.
 
-Using Mapbox experimental vector tile basemap below.
+Using Mapbox experimental vector tiles below.
 
 ```{r}
-
-surface_img = "satellite"
 
 props_admin = list(
   getPolygon = JS("d => d.geometry.coordinates"),
@@ -179,3 +181,4 @@ deckgl(
 ```
 
 Use **Shift + Click** to tilt the view angle.
+

@@ -57,7 +57,7 @@ Some inspiration below:
 - Tyler Morgan [Tutorial: Adding OSM Data to Rayshader Maps](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/)
 - [Flood depth on 3D terrain](https://observablehq.com/@sw1227/flood-depth-map-on-3d-terrain?collection=@sw1227/geo) 
 - Procedural-gl [examples](https://www.procedural.eu/)
-- [Cesium]() platform for 3D Geospatial
+- [Cesium](https://sandcastle.cesium.com/?src=Globe%20Materials.html) platform for 3D Geospatial
 - [NASA Web WorldWind](https://worldwind.arc.nasa.gov/web/examples/#anchor) 
 - [WebGL with Google Maps API](https://cloud.google.com/blog/products/maps-platform/using-new-webgl-powered-maps-features) on how to construct and render 3D scenes with WebGL.
 
