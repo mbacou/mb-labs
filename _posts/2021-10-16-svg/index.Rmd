@@ -79,8 +79,8 @@ To validate the different approaches we use sample output datasets provided by *
 ```{r, fig.cap="Kenya - List of output files"}
 
 data <- list(
-  ken = "~/Projects/2021-iwmi/data/ken/hydroloop_results/csv",
-  mli = "~/Projects/2021-iwmi/data/mli/csv_km3"
+  ken = "~/Projects/WADashboard/shared/ken/hydroloop_results/csv",
+  mli = "~/Projects/WADashboard/shared/mli/csv_km3"
 ) %>%
   lapply(list.files, pattern="*.csv", recursive=TRUE, full.names=TRUE) %>%
   lapply(data.table) %>%

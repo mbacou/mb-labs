@@ -1,7 +1,7 @@
 ---
-title: "Visualizing Water: Interactive Timelapse Map of River Basins (draft)"
+title: "Visualizing Water: Interactive 3D Map of River Basins (draft)"
 description: |
-  Part 3: how to represent water flux over 3D maps of river basins.
+  Part 3: how to represent water flux over 3D maps of river basins using WebGL.
 author:
   - name: Melanie BACOU
     email: mel@mbacou.com
@@ -56,6 +56,8 @@ Some inspiration below:
 
 - Tyler Morgan [Tutorial: Adding OSM Data to Rayshader Maps](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/)
 - [Flood depth on 3D terrain](https://observablehq.com/@sw1227/flood-depth-map-on-3d-terrain?collection=@sw1227/geo) 
+- Procedural-gl [examples](https://www.procedural.eu/)
+- [Cesium]() platform for 3D Geospatial
 - [NASA Web WorldWind](https://worldwind.arc.nasa.gov/web/examples/#anchor) 
 - [WebGL with Google Maps API](https://cloud.google.com/blog/products/maps-platform/using-new-webgl-powered-maps-features) on how to construct and render 3D scenes with WebGL.
 
@@ -80,8 +82,8 @@ We'll experiment with a smaller sample scene of the **Selingue Dam** in the Nige
 
 ```{r, layout="l-body", code_folding=F}
 
-basin <- shapefile("~/Projects/2021-iwmi/data/mli/srtm/mli_basin.shp")
-zoi <- shapefile("~/Projects/2021-iwmi/data/mli/srtm/zoi.shp")
+basin <- shapefile("~/Projects/WADashboard/shared/mli/srtm/mli_basin.shp")
+zoi <- shapefile("~/Projects/WADashboard/shared/mli/srtm/zoi.shp")
 ext <- extent(zoi)
 center <- coordinates(zoi)
 
@@ -262,7 +264,7 @@ scene %>% plot_3d(resize_matrix(srtm_array, 1/10), zscale=20,
   shadow=TRUE, shadowcolor=pal["black"], solidcolor=pal["black"])
 
 # Add polygon annotations
-xyz <- sf::read_sf("~/Projects/2021-iwmi/data/mli/srtm/xyz.shp")
+xyz <- sf::read_sf("~/Projects/WADashboard/shared/mli/srtm/xyz.shp")
 render_polygons(xyz, ext, data_column_top="z",
   scale_data=1, color=alpha(pal["orange"], 0.8), 
   lit=F, light_intensity=0.01, clear_previous=T)
@@ -283,15 +285,15 @@ Following the approach above, we experiment with a 3D scene for the entire Niger
 ```{r, code_folding=FALSE, eval=FALSE}
 
 # Basin boundaries from IWMI
-zoi <- shapefile("~/Projects/2021-iwmi/data/mli/srtm/mli_basin.shp")
+zoi <- shapefile("~/Projects/WADashboard/shared/mli/srtm/mli_basin.shp")
 ext <- extent(zoi)
 center <- coordinates(zoi)
 
 # GAUL admin-2 boundaries
 adm <- sf::st_read(
-  "~/Projects/2021-iwmi/data/mli/srtm/mli_adm2_lines.shp")
+  "~/Projects/WADashboard/shared/mli/srtm/mli_adm2_lines.shp")
 places <- sf::st_read(
-  "~/Projects/2021-iwmi/data/mli/srtm/mli_adm2_centroids.shp")
+  "~/Projects/WADashboard/shared/mli/srtm/mli_adm2_centroids.shp")
 
 # CGIAR SRTM DEM (upsampled)
 alt <- lapply(c("MLI", "GIN", "CIV"), 
@@ -301,15 +303,15 @@ alt <- lapply(c("MLI", "GIN", "CIV"),
 )
 alt <- mosaic(alt[[1]], alt[[2]], alt[[3]], fun=mean)
 alt <- mask(crop(alt, zoi), zoi)
-writeRaster(alt, "~/Projects/2021-iwmi/data/mli/srtm/mli_alt.tif",
+writeRaster(alt, "~/Projects/WADashboard/shared/mli/srtm/mli_alt.tif",
   overwrite=T)
 alt
 
 # ESA WorldCover (clipped in QGIS)
-luc <- raster("~/Projects/2021-iwmi/data/mli/srtm/ESA WorldCover clip.tiff")
+luc <- raster("~/Projects/WADashboard/shared/mli/srtm/ESA WorldCover clip.tiff")
 
 # Note that I can't find a colormap for this raster, so switching to ESA CCI instead
-luc <- raster("~/Projects/2021-iwmi/data/mli/srtm/mli_esa_cci_300m.tif")
+luc <- raster("~/Projects/WADashboard/shared/mli/srtm/mli_esa_cci_300m.tif")
 
 # And its colormap
 pal.luc <- fread("~/Maps/ESA/ESA CCI Colormap.txt")
@@ -318,7 +320,7 @@ pal.luc[, hex := rgb(R, G, B, maxColorValue=255)]
 
 # We'll use GloRIC v1.0 stream network instead of OSM
 # Features are filtered to 'Class_hydr > 12'
-gloric <- sf::st_read("~/Projects/2021-iwmi/data/mli/srtm/mli_gloric_filtered.shp")
+gloric <- sf::st_read("~/Projects/WADashboard/shared/mli/srtm/mli_gloric_filtered.shp")
 
 # Country labels
 osm_place <- opq(bbox(zoi)) %>% 
@@ -506,3 +508,5 @@ rgl.close()
 For comparison's sake we build a similar scene using **Three.js** libraries instead of WebGL. The scene is **12 MB in size** (using a low resampling rate), it was generated using the [Qgis2threejs](https://qgis2threejs.readthedocs.io/en/docs/) plugin. The main difference is we're showing **ESA CCI land cover classification** as an image overlay instead of a texture.
 
 The [widget is rendered](./threejs_files/) here. 
+
+In [Part 4](./2021-11-06-deckgl) we experiment with another WebGL-derived Javascript library [Deck.gl](https://deck.gl/) and 3D rendering of terrain layers.
