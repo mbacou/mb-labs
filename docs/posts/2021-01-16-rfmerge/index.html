@@ -1881,18 +1881,7 @@ d-appendix {
 /* Add any additional CSS rules below                      */
 </style>
 <style type="text/css">/* base variables */
-
-/* Edit the CSS properties in this file to create a custom
-   Distill theme. Only edit values in the right column
-   for each row; values shown are the CSS defaults.
-   To return any property to the default,
-   you may set its value to: unset
-   All rows must end with a semi-colon.                      */
-
-/* Optional: embed custom fonts here with `@import`          */
-/* This must remain at the top of this file.                 */
 @import url('//fonts.googleapis.com/css?family=Roboto|Roboto-Condensed:400,700');
-
 
 html {
   /*-- Main font sizes --*/
@@ -1901,15 +1890,17 @@ html {
   --code-size:       12px;
   --aside-size:      12px;
   --fig-cap-size:    13px;
+
   /*-- Main font colors --*/
-  --title-color:     rgba(17, 17, 17, .9);
-  --header-color:    rgba(17, 17, 17, .8);
-  --body-color:      rgba(17, 17, 17, 1);
-  --aside-color:     rgba(17, 17, 17, .6);
-  --fig-cap-color:   rgba(17, 17, 17, .6);
-  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --title-color:     rgba(17, 17, 17, 0.9);
+  --header-color:    rgba(17, 17, 17, 0.8);
+  --body-color:      rgba(17, 17, 17, 1.0);
+  --aside-color:     rgba(17, 17, 17, 0.6);
+  --fig-cap-color:   rgba(17, 17, 17, 0.6);
+
+  /*-- Custom fonts imported above   --*/
   --heading-font:    "Roboto Condensed", serif;
-  --mono-font:       monospace;
+  --mono-font:       "monospace";
   --body-font:       "Roboto", sans-serif;
   --navbar-font:     "Roboto", sans-serif;
 }
@@ -1928,20 +1919,18 @@ d-byline {
   --contents-size:   13px;
   --heading-font:    "Roboto Condensed", serif;
   --body-font:       "Roboto Condensed", serif;
-  --body-color:      rgba(17, 17, 17, .8);
+  --body-color:      rgba(17, 17, 17, 0.8);
 }
 
 /*-- ARTICLE APPENDIX --*/
 d-appendix {
   --heading-size:    15px;
-  --heading-color:   rgba(17, 17, 17, .65);
+  --heading-color:   rgba(17, 17, 17, 0.6);
   --text-size:       0.8em;
-  --text-color:      rgba(17, 17, 17, .5);
+  --text-color:      rgba(17, 17, 17, 0.5);
 }
 
 /*-- WEBSITE HEADER + FOOTER --*/
-/* These properties only apply to Distill sites and blogs  */
-
 .distill-site-header {
   --title-size:       18px;
   --text-color:       rgb(243, 243, 243);
@@ -1954,7 +1943,7 @@ d-appendix {
   --text-color:       rgb(243, 243, 243);
   --text-size:        13px;
   --hover-color:      white;
-  --bkgd-color:       rgba(18, 20, 39, .8);
+  --bkgd-color:       rgba(18, 20, 39, 0.8);
 }
 
 /*-- CUSTOM --*/
@@ -1970,7 +1959,8 @@ h1, h2, h3, d-title h1 {
   background-color: rgb(243, 243, 243);
 }
 .d-title {
-  background: linear-gradient(210deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
+  background: linear-gradient(210deg,
+    rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
 }
 .sourceCode {
   background-color: rgba(243, 243, 243, 0.8);
@@ -1986,7 +1976,7 @@ d-appendix .citation-appendix, .d-appendix .citation-appendix {
   font-family: "Roboto Condensed", sans-serif;
   border: none;
   color: rgb(243, 243, 243);
-  background-color: rgba(18, 20, 39, .8);
+  background-color: rgba(18, 20, 39, 0.8);
   padding: .3em .7em;
 }
 .dt-tags .dt-tag {
@@ -2183,18 +2173,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   <!--radix_placeholder_site_in_header-->
 <style type="text/css">
 /* base variables */
-
-/* Edit the CSS properties in this file to create a custom
-   Distill theme. Only edit values in the right column
-   for each row; values shown are the CSS defaults.
-   To return any property to the default,
-   you may set its value to: unset
-   All rows must end with a semi-colon.                      */
-
-/* Optional: embed custom fonts here with `@import`          */
-/* This must remain at the top of this file.                 */
 @import url('//fonts.googleapis.com/css?family=Roboto|Roboto-Condensed:400,700');
-
 
 html {
   /*-- Main font sizes --*/
@@ -2203,15 +2182,17 @@ html {
   --code-size:       12px;
   --aside-size:      12px;
   --fig-cap-size:    13px;
+
   /*-- Main font colors --*/
-  --title-color:     rgba(17, 17, 17, .9);
-  --header-color:    rgba(17, 17, 17, .8);
-  --body-color:      rgba(17, 17, 17, 1);
-  --aside-color:     rgba(17, 17, 17, .6);
-  --fig-cap-color:   rgba(17, 17, 17, .6);
-  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --title-color:     rgba(17, 17, 17, 0.9);
+  --header-color:    rgba(17, 17, 17, 0.8);
+  --body-color:      rgba(17, 17, 17, 1.0);
+  --aside-color:     rgba(17, 17, 17, 0.6);
+  --fig-cap-color:   rgba(17, 17, 17, 0.6);
+
+  /*-- Custom fonts imported above   --*/
   --heading-font:    "Roboto Condensed", serif;
-  --mono-font:       monospace;
+  --mono-font:       "monospace";
   --body-font:       "Roboto", sans-serif;
   --navbar-font:     "Roboto", sans-serif;
 }
@@ -2230,20 +2211,18 @@ d-byline {
   --contents-size:   13px;
   --heading-font:    "Roboto Condensed", serif;
   --body-font:       "Roboto Condensed", serif;
-  --body-color:      rgba(17, 17, 17, .8);
+  --body-color:      rgba(17, 17, 17, 0.8);
 }
 
 /*-- ARTICLE APPENDIX --*/
 d-appendix {
   --heading-size:    15px;
-  --heading-color:   rgba(17, 17, 17, .65);
+  --heading-color:   rgba(17, 17, 17, 0.6);
   --text-size:       0.8em;
-  --text-color:      rgba(17, 17, 17, .5);
+  --text-color:      rgba(17, 17, 17, 0.5);
 }
 
 /*-- WEBSITE HEADER + FOOTER --*/
-/* These properties only apply to Distill sites and blogs  */
-
 .distill-site-header {
   --title-size:       18px;
   --text-color:       rgb(243, 243, 243);
@@ -2256,7 +2235,7 @@ d-appendix {
   --text-color:       rgb(243, 243, 243);
   --text-size:        13px;
   --hover-color:      white;
-  --bkgd-color:       rgba(18, 20, 39, .8);
+  --bkgd-color:       rgba(18, 20, 39, 0.8);
 }
 
 /*-- CUSTOM --*/
@@ -2272,7 +2251,8 @@ h1, h2, h3, d-title h1 {
   background-color: rgb(243, 243, 243);
 }
 .d-title {
-  background: linear-gradient(210deg, rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
+  background: linear-gradient(210deg,
+    rgba(243, 243, 243, 1) 0%, rgba(243, 243, 243, 0) 100%);
 }
 .sourceCode {
   background-color: rgba(243, 243, 243, 0.8);
@@ -2288,7 +2268,7 @@ d-appendix .citation-appendix, .d-appendix .citation-appendix {
   font-family: "Roboto Condensed", sans-serif;
   border: none;
   color: rgb(243, 243, 243);
-  background-color: rgba(18, 20, 39, .8);
+  background-color: rgba(18, 20, 39, 0.8);
   padding: .3em .7em;
 }
 .dt-tags .dt-tag {
@@ -2332,6 +2312,9 @@ d-article h2 {
 <a href="../../about.html">About</a>
 <a href="../../index.xml">
 <i class="fa fa-rss" aria-hidden="true"></i>
+</a>
+<a href="https://linkedin.com/in/mbacou">
+<i class="fa fa-linkedin" aria-hidden="true"></i>
 </a>
 <a href="https://github.com/mbacou/mb-labs" aria-label="Link to source">
 <i class="fab fa-github" aria-hidden="true"></i>

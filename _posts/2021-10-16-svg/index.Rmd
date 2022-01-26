@@ -63,7 +63,7 @@ theme_mb <- function(
 ```
 
 
-This notebook is to explore multiple visualization schemes for hydrologic model simulations. It's broken down into 3 parts:
+This notebook is to explore multiple visualization schemes for hydrological model simulations. It's broken down into 3 parts:
 
 1. **Interactive SVG** (this page): add user interactivity to existing SVG sheets (or simplified) designs using low-level [D3.js](https://d3js.org/) library
 2. [Flow diagrams](../2021-10-12-highcharts/): reshape WA+ model output to create interactive Sankey diagrams with [Highcharts.js](https://www.highcharts.com/)
@@ -74,7 +74,7 @@ The **D3.js** approach is the more flexible but also the more "tedious" to imple
 
 # Data Preparation
 
-To validate the different approaches we use sample output datasets provided by **Naga Valpuri** (IWMI) for Mali (Niger river basin) and Kenya (Mara river basin). All hydrologic models are written in Python and version controlled to GitHub (e.g. [Mali notebooks](https://github.com/wateraccounting/WAPORWA)).
+To validate the different approaches we use sample output datasets provided by IWMI scientists for Mali (Niger river basin) and Kenya (Mara river basin). All hydrological models are written in Python and version controlled to GitHub (e.g. [Mali notebooks](https://github.com/wateraccounting/WAPORWA)).
 
 ```{r, fig.cap="Kenya - List of output files"}
 
