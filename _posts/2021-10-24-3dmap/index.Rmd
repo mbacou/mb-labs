@@ -38,6 +38,7 @@ library(rgl)
 setupKnitr(autoprint=TRUE)
 
 opts_chunk$set(res=220, pointsize=8)
+root <- "/media/mbacou/Backup MB/WADashboard"
 
 # Default color palette
 pal <- readRDS("../../_assets/pal_iwmi.rds")
@@ -64,7 +65,14 @@ Some inspiration below:
 
 ```{r, out.width="48%", fig.width=3, fig.show="hold"}
 
-list.files("./fig", full.names=TRUE)[c(2,7)] %>%
+list.files("./fig", full.names=TRUE)[2] %>%
+  knitr::include_graphics()
+
+```
+
+```{r, out.width="48%", fig.width=3, fig.show="hold"}
+
+list.files("./fig", full.names=TRUE)[7] %>%
   knitr::include_graphics()
 
 ```
@@ -82,8 +90,8 @@ We'll experiment with a smaller sample scene of the **Selingue Dam** in the Nige
 
 ```{r, layout="l-body", code_folding=F}
 
-basin <- shapefile("~/Projects/WADashboard/shared/mli/srtm/mli_basin.shp")
-zoi <- shapefile("~/Projects/WADashboard/shared/mli/srtm/zoi.shp")
+basin <- shapefile(file.path(root, "./mli/srtm/mli_basin.shp"))
+zoi <- shapefile(file.path(root, "./mli/srtm/zoi.shp"))
 ext <- extent(zoi)
 center <- coordinates(zoi)
 
@@ -264,7 +272,7 @@ scene %>% plot_3d(resize_matrix(srtm_array, 1/10), zscale=20,
   shadow=TRUE, shadowcolor=pal["black"], solidcolor=pal["black"])
 
 # Add polygon annotations
-xyz <- sf::read_sf("~/Projects/WADashboard/shared/mli/srtm/xyz.shp")
+xyz <- sf::read_sf(file.path(root, "./mli/srtm/xyz.shp"))
 render_polygons(xyz, ext, data_column_top="z",
   scale_data=1, color=alpha(pal["orange"], 0.8), 
   lit=F, light_intensity=0.01, clear_previous=T)
@@ -285,15 +293,13 @@ Following the approach above, we experiment with a 3D scene for the entire Niger
 ```{r, code_folding=FALSE, eval=FALSE}
 
 # Basin boundaries from IWMI
-zoi <- shapefile("~/Projects/WADashboard/shared/mli/srtm/mli_basin.shp")
+zoi <- shapefile(file.path(root, "./mli/srtm/mli_basin.shp"))
 ext <- extent(zoi)
 center <- coordinates(zoi)
 
 # GAUL admin-2 boundaries
-adm <- sf::st_read(
-  "~/Projects/WADashboard/shared/mli/srtm/mli_adm2_lines.shp")
-places <- sf::st_read(
-  "~/Projects/WADashboard/shared/mli/srtm/mli_adm2_centroids.shp")
+adm <- sf::st_read(file.path(root, "./mli/srtm/mli_adm2_lines.shp"))
+places <- sf::st_read(file.path(root, "./mli/srtm/mli_adm2_centroids.shp"))
 
 # CGIAR SRTM DEM (upsampled)
 alt <- lapply(c("MLI", "GIN", "CIV"), 
@@ -303,15 +309,14 @@ alt <- lapply(c("MLI", "GIN", "CIV"),
 )
 alt <- mosaic(alt[[1]], alt[[2]], alt[[3]], fun=mean)
 alt <- mask(crop(alt, zoi), zoi)
-writeRaster(alt, "~/Projects/WADashboard/shared/mli/srtm/mli_alt.tif",
-  overwrite=T)
+writeRaster(alt, file.path(root, "./mli/srtm/mli_alt.tif"), overwrite=T)
 alt
 
 # ESA WorldCover (clipped in QGIS)
 luc <- raster("~/Projects/WADashboard/shared/mli/srtm/ESA WorldCover clip.tiff")
 
 # Note that I can't find a colormap for this raster, so switching to ESA CCI instead
-luc <- raster("~/Projects/WADashboard/shared/mli/srtm/mli_esa_cci_300m.tif")
+luc <- raster(file.path(root, "./mli/srtm/mli_esa_cci_300m.tif"))
 
 # And its colormap
 pal.luc <- fread("~/Maps/ESA/ESA CCI Colormap.txt")
@@ -320,7 +325,7 @@ pal.luc[, hex := rgb(R, G, B, maxColorValue=255)]
 
 # We'll use GloRIC v1.0 stream network instead of OSM
 # Features are filtered to 'Class_hydr > 12'
-gloric <- sf::st_read("~/Projects/WADashboard/shared/mli/srtm/mli_gloric_filtered.shp")
+gloric <- sf::st_read(file.path(root, "./mli/srtm/mli_gloric_filtered.shp"))
 
 # Country labels
 osm_place <- opq(bbox(zoi)) %>% 
