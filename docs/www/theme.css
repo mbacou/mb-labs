@@ -65,8 +65,12 @@ d-appendix {
 }
 
 /*-- CUSTOM --*/
-h1, h2, h3, d-title h1 {
+h1, h2, h3, d-title h1, .posts-list .description h2 {
   font-weight: normal;
+}
+d-article h2 {
+  font-weight: normal;
+  font-size: 28px;
 }
 .distill-site-footer {
   margin-top: unset;
@@ -82,7 +86,7 @@ h1, h2, h3, d-title h1 {
 }
 .sourceCode {
   background-color: rgba(243, 243, 243, 0.8);
-  padding-bottom: 1em;
+  padding: 1em 0;
 }
 d-appendix .citation-appendix, .d-appendix .citation-appendix {
   background: rgb(255, 255, 255);
@@ -93,21 +97,12 @@ d-appendix .citation-appendix, .d-appendix .citation-appendix {
 .dt-tags .dt-tag, .posts-list .dt-tags .dt-tag {
   font-family: "Roboto Condensed", sans-serif;
   border: none;
-  color: rgb(243, 243, 243);
-  background-color: rgba(18, 20, 39, 0.8);
-  padding: .3em .7em;
-}
-.dt-tags .dt-tag {
-  padding: 0 .7em;
+  color: rgba(17, 17, 17, 0.5);
+  background-color: rgb(243, 243, 243);
+  padding: .4em 1em;
+  line-height: unset;
 }
 table, summary {
-  font-size: .8em;
-  font-family: "Roboto Condensed", sans-serif;
-}
-summary {
   font-size: .9em;
-}
-d-article h2 {
-  font-weight: normal;
-  font-size: 28px;
+  font-family: "Roboto Condensed", sans-serif;
 }
