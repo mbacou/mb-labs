@@ -5,6 +5,7 @@ description: |
 base_url: https://mbacou.github.io/mb-labs
 repository_url: https://github.com/mbacou/mb-labs
 favicon: www/logo_w.svg
+theme: www/theme.css
 creative_commons: CC BY
 output_dir: docs
 collections:
