@@ -1,0 +1,33 @@
+---
+title: "Melanie Bacou"
+image: www/linkedin.jpg
+about:
+  template: trestles
+  image: www/linkedin.jpg
+  links:
+    - icon: person-square
+      text: OrcID
+      href: https://orcid.org/0000-0003-1810-6818
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/mbacou
+    - icon: github
+      text: Github
+      href: https://github.com/mbacou/
+---
+
+Finley Malloc is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending  time unicycling and playing with her pet iguana.
+
+## Education
+
+University of California, San Diego | San Diego, CA
+PhD in Mathematics | Sep 2011 - June 2015
+
+Macalester College | St. Paul MA
+B.A in Economics | Sep 2007 - June 2011
+
+## Experience
+
+Wengo Analytics | Head Data Scientist | April 2018 - present
+
+GeoScynce | Chief Analyst | Spet 2012 - April 2018

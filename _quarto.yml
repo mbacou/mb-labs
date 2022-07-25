@@ -1,0 +1,47 @@
+project:
+  type: website
+
+website:
+  name: mb-labs
+  favicon: www/logo.svg
+  twitter-card: true
+  opengraph: true
+  title: Mel's Labs
+  site-url: https://mbacou.github.io/mb-labs/
+  repo-url: https://github.com/mbacou/mb-labs/
+  repo-actions: [issue]
+  description: |
+    Playground for consulting and data science projects.
+
+  search:
+    location: navbar
+    type: overlay
+
+  navbar:
+    logo: www/logo_w.svg
+    title: Mel's Labs
+    left:
+      - text: Notebooks
+        file: index.qmd
+      - text: About
+        file: about.qmd
+    right:
+      - icon: rss
+        href: index.xml
+      - icon: linkedin
+        href: https://linkedin.com/in/mbacou
+      - icon: github
+        href: https://github.com/mbacou/mb-labs
+
+  page-footer:
+    left: |
+      &copy; Copyright 2022 &mdash; BACOU, Melanie.
+      Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+    right: |
+      Site built with [Quarto](https://quarto.org/)
+
+format:
+  html:
+    theme:
+      light: www/theme-light.scss
+      dark: www/theme-dark.scss

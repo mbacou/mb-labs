@@ -1,8 +1,0 @@
----
-title: "Notebooks"
-description: |
-  A series of interactive notebooks
-site: distill::distill_website
-listing: posts
----
-

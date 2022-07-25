@@ -2,6 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
-_data/
-_posts/*/index_files
-_posts/*/*.html
+_data
+.quarto
+_freeze
+_site
+
+/.quarto/

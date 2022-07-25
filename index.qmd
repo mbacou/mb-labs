@@ -1,0 +1,13 @@
+---
+title: Welcome
+description: Latest articles.
+margin-header: _custom.html
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  categories: true
+  feed: true
+---
+
+

@@ -1,0 +1,35 @@
+# options specified here will apply to all posts in this folder
+
+# freeze computational output
+# (see https://quarto.org/docs/projects/code-execution.html#freeze)
+# freeze: true
+
+author:
+  - name: Melanie BACOU
+    email: mel@mbacou.com
+    url: https://linkedin/in/mbacou
+
+citation: true
+license: CC BY-NC
+
+freeze: false
+draft: true
+
+format:
+  html:
+    toc: true
+    toc-title: Contents
+    toc-location: left
+    link-external-icon: false
+    link-external-newwindow: true
+    highlight-style: github
+    code-fold: true
+    code-summary: Show
+    code-overflow: wrap
+    code-block-border-left: true
+    page-layout: article
+    tbl-cap-location: margin
+    reference-location: margin
+    citation-location: margin
+    fig-cap-location: margin
+    default-image-extension: svg
