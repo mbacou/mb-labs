@@ -3,10 +3,12 @@ title: Merge Ground and Satellite Observations with RFMerge
 description: |
   Recalibrate ERA5 hourly temperatures to CIMIS network ground observations.
 date: 2021-01-16
+draft: false
+freeze: true
+image: index_files/figure-html/preview-1.svg
 categories:
   - meteo
   - risk modeling
-draft: true
 ---
 
 We want to recalibrate [ERA5-LAND](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land) hourly temperatures to [CIMIS](https://cimis.water.ca.gov/) ground network observations to address ERA5-LAND model biases noted in California:
@@ -49,7 +51,8 @@ my.settings <- list(
 
 Define zone of interest and load covariate layers.
 
-```{r zoi, eval=FALSE}
+```{r zoi}
+#| eval: false
 
 # Clear workspace, keep portfolio details
 load(file.path(dir, "./tmp/2020-burn_olam_usa_04.RData"))
@@ -102,7 +105,8 @@ bad <- N[sapply(N, `!=`, integer(0))]
 
 Obtain long-term weather station records from CIMIS API.
 
-```{r cimis, eval=FALSE}
+```{r cimis}
+#| eval: false
 
 set_key("27ab5faa-abbb-475e-8af1-f380862bca61")
 item <- "hly-air-tmp"
@@ -213,7 +217,8 @@ fwrite(obs[StationNbr %in% as.character(ids)], "./out/CIMIA_OLAM3_2017.csv")
 
 Prepare DEM at ERA5 layers.
 
-```{r dem, eval=FALSE}
+```{r dem}
+#| eval: false
 
 # Prepare DEM at ERA5 extent and resolution
 dem1 <- getData("SRTM", lon=zoi[2], lat=zoi[3])
@@ -226,7 +231,8 @@ dem <- merge(dem1, dem2, dem3, dem4, ext=zoi)
 
 Format station time-series to Zoo wide arrays.
 
-```{r ts, eval=FALSE}
+```{r ts}
+#| eval: false
 
 # Prep station time-series, require ZOO wide format
 obs[, Time := paste(as.character(Date), Hour)
@@ -247,7 +253,8 @@ obs.ts <- zoo(
 
 Implement Random Forest merge algorithm.
 
-```{r rfmerge, eval=FALSE}
+```{r rfmerge}
+#| eval: false
 
 # Cut the series at Jan-Apr 2017 (time constraint)
 drange <- c("2017-01-01", "2017-04-30")
@@ -313,7 +320,8 @@ crs(rfmep)
 
 Extract recalibrated time-series across almond production sites.
 
-```{r impute, eval=FALSE}
+```{r impute}
+#| eval: false
 
 # Extract recalibrated time-series across production sites
 removeTmpFiles(h=0)
@@ -362,7 +370,8 @@ saveRDS(dt, file.path(dir, "./tmp/2020-tmean-hourly_olam_ca_almd_imputed.rds"))
 
 ```
 
-```{r save, eval=FALSE}
+```{r save}
+#| eval: false
 
 rm(x, i, j, t, tmp, dem1, dem2, dem3, dem4, n, x1, x2, dt, dtc)
 save.image(file.path(dir, "./tmp/2020-burn_olam_usa_06.RData"))
@@ -372,7 +381,8 @@ save.image(file.path(dir, "./tmp/2020-burn_olam_usa_06.RData"))
 
 Validate ZOI, DEM, and ERA5 covariates.
 
-```{r, layout="l-screen"}
+```{r}
+#| column: screen
 
 era <- brick("./out/ERA5_2m_temperature_2017.grd")
 era <- raster(era, 1)
@@ -389,7 +399,8 @@ tm_shape(era) +
 
 DEM at ERA5 extent and resolution.
 
-```{r, fig.height=5}
+```{r}
+#| fig-height: 5
 
 pts <- spTransform(pts, CRS("+init=epsg:3310"))
 
@@ -405,7 +416,8 @@ legend("topright", legend=c("Active station", "Stale station", "Production site"
 
 CIMIS station observations between Jan-Apr 2017.
 
-```{r, fig.cap="CIMIS Station Observations, Jan-Apr 2017"}
+```{r}
+#| fig-cap: CIMIS Station Observations, Jan-Apr 2017
 
 obs[, .(
   `Obs.` = comma(.N), 
@@ -430,7 +442,8 @@ grid()
 
 ```
 
-```{r, fig.height=5}
+```{r}
+#| fig-height: 5
 
 histogram(~Value|StationNbr, data=obs, 
   col=alpha(pal[1], .6), border=pal["black"],
@@ -439,7 +452,8 @@ histogram(~Value|StationNbr, data=obs,
 
 ```
 
-```{r, fig.height=5}
+```{r}
+#| fig-height: 5
 
 plot(rfmep[[1]], main="RF-MEP Temperatures", xlab=names(rfmep)[1],
   col=terrain.colors(80, alpha=1))
@@ -449,7 +463,8 @@ legend("topright", legend=c("Active station", "Production site"), pch=c("x", "o"
 
 ```
 
-```{r, fig.height=5}
+```{r}
+#| fig-height: 5
 
 plot(era[[1]], main="ERA5-LAND Temperatures", xlab=names(era)[1],
   col=terrain.colors(80, alpha=1))
@@ -487,7 +502,7 @@ wireframe(era~as.numeric(date)*time, data=dt.imp,
 
 Mean recalibration effect across production sites (after RFmerge):
 
-```{r, preview=TRUE}
+```{r preview}
 
 wireframe((value-era)~as.numeric(date)*time, data=dt.imp, 
   xlab="Date", ylab="Hour", zlab="°C",  
@@ -499,7 +514,8 @@ wireframe((value-era)~as.numeric(date)*time, data=dt.imp,
 
 FDD index across sites between Feb-01 and Mar-31, 2017 (before and after ground calibration):
 
-```{r, fig.cap="FDD across sites between Feb-01 and Mar-31, 2017"}
+```{r}
+#| fig-cap: FDD across sites between Feb-01 and Mar-31, 2017
 
 dt.imp[date %between% c("2017-02-01", "2017-03-31"), .(
   era = min(era, na.rm=T),

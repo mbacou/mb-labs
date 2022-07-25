@@ -4,6 +4,7 @@ description: |
   Part 4: how to represent water flux over 3D maps of river basins using Deck.gl.
 date: "`r Sys.Date()`"
 date_prefix: 2021-11-01
+draft: true
 preview: preview.png
 bibliography: biblio.bib
 nocite: "@*"
@@ -11,7 +12,6 @@ categories:
   - draft
   - imwi
   - hydrology
-draft: true
 ---
 
 Testing additional 3D mapping libraries to render river basin topography.

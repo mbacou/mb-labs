@@ -3,8 +3,6 @@
 .RData
 .Ruserdata
 _data
-.quarto
 _freeze
 _site
-
 /.quarto/

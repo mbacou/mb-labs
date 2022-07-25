@@ -4,6 +4,7 @@ description: |
   Part 3: how to represent water flux over 3D maps of river basins using WebGL.
 date: "`r Sys.Date()`"
 date_prefix: 2021-10-24
+draft: true
 preview: ./fig/preview.png
 bibliography: biblio.bib
 nocite: "@*"
@@ -11,7 +12,6 @@ categories:
   - draft
   - imwi
   - hydrology
-draft: true
 ---
 
 ```{r setup, include=FALSE}

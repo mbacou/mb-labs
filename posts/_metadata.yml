@@ -23,13 +23,15 @@ format:
     link-external-icon: false
     link-external-newwindow: true
     highlight-style: github
+    code-link: false
     code-fold: true
-    code-summary: Show
+    code-summary: code
     code-overflow: wrap
+    code-block-bg: false
     code-block-border-left: true
     page-layout: article
     tbl-cap-location: margin
     reference-location: margin
     citation-location: margin
     fig-cap-location: margin
-    default-image-extension: svg
+    default-image-extension: png

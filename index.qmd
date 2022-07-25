@@ -1,6 +1,7 @@
 ---
 title: Welcome
-description: Latest articles.
+description: |
+  Latest articles.
 margin-header: _custom.html
 listing:
   contents: posts

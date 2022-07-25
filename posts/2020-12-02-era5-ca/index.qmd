@@ -1,11 +1,14 @@
 ---
 title: ERA5-LAND Temperature Validation (California)
 description: |
-  Can we justify winter Y2017 corrections to ERA5-LAND temperature grids over central California?
+  Can we justify winter Y2017 corrections to ERA5-LAND temperature grids over central 
+  California?
 date: 2020-12-02
+draft: false
+freeze: true
+image: index_files/figure-html/preview-1.svg
 categories:
   - risk modeling
-draft: true
 ---
 
 - Can we justify Y2017 correction to ERA5 grids over OLAM portfolio?
@@ -160,8 +163,8 @@ save.image(file.path(dir, "./tmp/2020-burn_olam_usa_07.RData"))
 
 10-year comparisons between ERA5-LAND and GHCN station network over Feb-March risk period. 11 stations (under 30-km from production sites and with daily temperature records after 2010) are selected for the comparison.
 
-```{r}
-#| fig.height: 6
+```{r preview}
+#| fig-height: 6
 
 plot(cat[date=="2020-02-01", crop(raster(file, 1), stations.sp[stations.sp$id %in% ids,])], 
   xlab=NA, ylab=NA, main="Tmean °C", sub="ERA5 2020-02-01 00:00")
@@ -200,7 +203,7 @@ for(i in stations.dt[, unique(var)]) stations.dt[var==i, hist(value, main=i)]
 2010-2014
 
 ```{r}
-#| fig.height: 6
+#| fig-height: 6
 
 prd <- c("2020-02-01", "2020-03-31")
 dt[, sdate := as.Date(date)][, year := year(date)]
@@ -234,7 +237,7 @@ ggplot(tmp[year(date) %between% c(2010, 2014)], aes(x=sdate)) +
 2015-2020
 
 ```{r}
-#| fig.height: 6
+#| fig-height: 6
 
 ggplot(tmp[year(date) > 2014], aes(x=sdate)) +
   geom_line(aes(y=Tmin, color="ERA5 Tmin")) + 
@@ -256,7 +259,7 @@ ggplot(tmp[year(date) > 2014], aes(x=sdate)) +
 2010-2014
 
 ```{r}
-#| fig.height: 6
+#| fig-height: 6
 
 ggplot(tmp[year(date) %between% c(2010, 2014)], 
   aes(sdate, color=sign)) +
@@ -277,7 +280,7 @@ ggplot(tmp[year(date) %between% c(2010, 2014)],
 2015-2020
 
 ```{r}
-#| fig.height: 6
+#| fig-height: 6
 
 ggplot(tmp[year(date) > 2014], 
   aes(sdate, color=sign)) +

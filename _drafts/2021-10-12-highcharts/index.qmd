@@ -2,22 +2,13 @@
 title: "Visualizing Water: Sankey Diagrams (draft)"
 description: |
   Part 2: custom data-driven flow charts using Highcharts.js and networkD3 (IWMI).
-author:
-  - name: Melanie BACOU
-    email: mel@mbacou.com
-    url: https://linkedin/in/mbacou
+date: "`r Sys.Date()`"
+date_prefix: 2021-10-01
+draft: true
 categories:
   - draft
   - imwi
   - hydrology
-date: "`r Sys.Date()`"
-date_prefix: 2021-10-01
-output:
-  distill::distill_article:
-    toc: true
-    dev: svglite
-    code_folding: true
-    self_contained: false
 ---
 
 ```{r setup, include=FALSE}

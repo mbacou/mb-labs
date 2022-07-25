@@ -4,6 +4,7 @@ description: |
   Part 1: add interactivity to IWMI's printable WA+ sheets.
 date: "`r Sys.Date()`"
 date_prefix: 2021-10-01
+draft: true
 preview: ./svg/sheet_1_edited.svg
 bibliography: biblio.bib
 nocite: "@*"
@@ -11,7 +12,6 @@ categories:
   - draft
   - imwi
   - hydrology
-draft: true
 ---
 
 ```{r setup}
