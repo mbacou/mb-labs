@@ -4,16 +4,16 @@ description: |
   Latest articles.
 margin-header: _custom.html
 listing:
-  contents: posts
-  sort: "date desc"
-  sort-ui: [date]
-  filter-ui: [title, description]
-  type: grid
-  fields: [title, description, image, date, author, file-modified, categories]
-  field-display-names:
-    file-modified: "Updated"
+  contents: 
+    - "posts/*/*.qmd"
+    - "posts/2021-10-16-svg/index.html"
   categories: true
   feed: true
+  sort-ui: [date]
+  filter-ui: [title, description]
+  sort: "date desc"
+  type: grid
+  fields: [title, description, image, date, author, file-modified, categories]
 ---
 
 

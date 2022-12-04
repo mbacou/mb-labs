@@ -7,6 +7,13 @@
     "text": "https://www.arlingtoncemetery.mil/Developers/Burial-Record-Public-Service-Methods\nhttps://wspublic.eiss.army.mil/v1/IssRetrieveServices.svc/search?q=DOD=::2022,DOB=::1981&sortColumn=PrimaryLastName,PrimaryFirstName&sortOrder=asc\n\n\n\nReusehttps://creativecommons.org/licenses/by-nc/4.0/CitationBibTeX citation:@online{bacou2022,\n  author = {Melanie BACOU},\n  title = {U.S. {Veteran} {Statistics}},\n  date = {2022-12-01},\n  url = {https://mbacou.github.io/mb-labs/posts/2022-12-01-armyvet},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nMelanie BACOU. 2022. “U.S. Veteran Statistics.” December 1,\n2022. https://mbacou.github.io/mb-labs/posts/2022-12-01-armyvet."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nU.S. Veteran Statistics\n\n\n\nrisk modeling\n\n\n\nExplore 10-year trends in U.S. military casulaties.\n\n\n\nMelanie BACOU\n\n\nDec 1, 2022\n\n\n\n\n\n12/4/22, 4:51:19 AM\n\n\n\n\n\n\n\n\n\n\n\n\n\nMerge Ground and Satellite Observations with RFMerge\n\n\n\nmeteo\n\n\nrisk modeling\n\n\n\nRecalibrate ERA5 hourly temperatures to CIMIS network ground observations.\n\n\n\nMelanie BACOU\n\n\nJan 16, 2021\n\n\n\n\n\n12/4/22, 4:51:18 AM\n\n\n\n\n\n\n\n\n\n\n\n\n\nERA5-LAND Temperature Validation (California)\n\n\n\nrisk modeling\n\n\n\nCan we justify winter Y2017 corrections to ERA5-LAND temperature grids over central California?\n\n\n\nMelanie BACOU\n\n\nDec 2, 2020\n\n\n\n\n\n12/4/22, 4:51:18 AM\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/2021-01-16-rfmerge/index.html",
     "href": "posts/2021-01-16-rfmerge/index.html",
     "title": "Merge Ground and Satellite Observations with RFMerge",
@@ -33,12 +40,5 @@
     "title": "Melanie Bacou",
     "section": "",
     "text": "Finley Malloc is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana.\n\n\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sep 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sep 2007 - June 2011\n\n\n\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Spet 2012 - April 2018"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nU.S. Veteran Statistics\n\n\n\nrisk modeling\n\n\n\nExplore 10-year trends in U.S. military casulaties.\n\n\n\nMelanie BACOU\n\n\nDec 1, 2022\n\n\n\n\n\n12/4/22, 4:26:45 AM\n\n\n\n\n\n\n\n\n\n\n\n\n\nMerge Ground and Satellite Observations with RFMerge\n\n\n\nmeteo\n\n\nrisk modeling\n\n\n\nRecalibrate ERA5 hourly temperatures to CIMIS network ground observations.\n\n\n\nMelanie BACOU\n\n\nJan 16, 2021\n\n\n\n\n\n12/4/22, 4:19:36 AM\n\n\n\n\n\n\n\n\n\n\n\n\n\nERA5-LAND Temperature Validation (California)\n\n\n\nrisk modeling\n\n\n\nCan we justify winter Y2017 corrections to ERA5-LAND temperature grids over central California?\n\n\n\nMelanie BACOU\n\n\nDec 2, 2020\n\n\n\n\n\n12/4/22, 4:19:36 AM\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
