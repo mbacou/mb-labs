@@ -16,12 +16,24 @@ collections:
     feed_items_max: 50
     share: [twitter, linkedin]
     custom: _custom.html
+  portfolio:
+    categories: true
+    categories_metadata: true
+    authors_metadata: true
+    feed_items_max: 50
+    share: [twitter, linkedin]
+    custom: _custom.html
 navbar:
   search: false
   source_url: true
+  logo: www/logo_w.svg
   left:
     - text: Notebooks
       href: index.html
+    - text: About
+      href: about.html
+    - text: Portfolio
+      href: portfolio.html
     - text: About
       href: about.html
   right:
@@ -34,3 +46,6 @@ output:
     css: www/theme.css
     highlight: rstudio
     toc: true
+    dev: svglite
+    code_folding: true
+    self_contained: false

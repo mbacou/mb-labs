@@ -7,17 +7,10 @@ author:
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
 categories:
-  - draft
   - imwi
   - hydrology
 date: "`r Sys.Date()`"
 date_prefix: 2021-10-01
-output:
-  distill::distill_article:
-    toc: true
-    dev: svglite
-    code_folding: true
-    self_contained: false
 ---
 
 ```{r setup, include=FALSE}

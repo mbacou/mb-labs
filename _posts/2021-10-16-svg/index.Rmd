@@ -12,15 +12,8 @@ preview: ./svg/sheet_1_edited.svg
 bibliography: biblio.bib
 nocite: "@*"
 categories:
-  - draft
   - imwi
   - hydrology
-output:
-  distill::distill_article:
-    toc: true
-    dev: svglite
-    code_folding: true
-    self_contained: false
 ---
 
 ```{r setup}
