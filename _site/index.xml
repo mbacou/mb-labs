@@ -10,6 +10,11 @@
 <atom:link href="https://mbacou.github.io/mb-labs/index.xml" rel="self" type="application/rss+xml"/>
 <description>Latest articles.
 </description>
+<image>
+<url>https://mbacou.github.io/mb-labs/www/logo.svg</url>
+<title>Mel&#39;s Labs</title>
+<link>https://mbacou.github.io/mb-labs/index.html</link>
+</image>
 <generator>quarto-1.2.242</generator>
 <lastBuildDate>Thu, 01 Dec 2022 00:00:00 GMT</lastBuildDate>
 <item>
@@ -39,7 +44,6 @@ Melanie BACOU. 2022. <span>“U.S. Veteran Statistics.”</span> December 1,
   <category>risk modeling</category>
   <guid>https://mbacou.github.io/mb-labs/posts/2022-12-01-armyvet/index.html</guid>
   <pubDate>Thu, 01 Dec 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://mbacou.github.io/mb-labs/posts/2022-12-01-armyvet/index_files/figure-html/preview-1.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>Merge Ground and Satellite Observations with RFMerge</title>

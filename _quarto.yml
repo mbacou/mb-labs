@@ -1,8 +1,10 @@
 project:
   type: website
+  output-dir: _site
 
 website:
   favicon: www/logo.svg
+  image: www/logo.svg
   twitter-card: true
   title: Mel's Labs
   site-url: https://mbacou.github.io/mb-labs

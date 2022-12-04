@@ -5,7 +5,6 @@ description: |
 date: 2022-12-01
 draft: false
 freeze: false
-image: index_files/figure-html/preview-1.svg
 categories:
   - risk modeling
 ---
