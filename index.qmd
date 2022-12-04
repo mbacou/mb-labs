@@ -6,7 +6,12 @@ margin-header: _custom.html
 listing:
   contents: posts
   sort: "date desc"
+  sort-ui: [date]
+  filter-ui: [title, description]
   type: grid
+  fields: [title, description, image, date, author, file-modified, categories]
+  field-display-names:
+    file-modified: "Updated"
   categories: true
   feed: true
 ---

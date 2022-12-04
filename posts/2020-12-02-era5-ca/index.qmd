@@ -16,7 +16,6 @@ categories:
 
 ```{r load}
 
-library(knitr)
 library(lubridate)
 library(ggplot2)
 library(raster)

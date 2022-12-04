@@ -2,13 +2,11 @@ project:
   type: website
 
 website:
-  name: mb-labs
   favicon: www/logo.svg
   twitter-card: true
-  opengraph: true
   title: Mel's Labs
-  site-url: https://mbacou.github.io/mb-labs/
-  repo-url: https://github.com/mbacou/mb-labs/
+  site-url: https://mbacou.github.io/mb-labs
+  repo-url: https://github.com/mbacou/mb-labs
   repo-actions: [issue]
   description: |
     Playground for consulting and data science projects.
@@ -18,11 +16,12 @@ website:
     type: overlay
 
   navbar:
-    logo: www/logo_w.svg
     title: Mel's Labs
     left:
       - text: Notebooks
         file: index.qmd
+      - text: Portfolio
+        file: portfolio.qmd
       - text: About
         file: about.qmd
     right:

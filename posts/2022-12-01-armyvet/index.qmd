@@ -1,0 +1,15 @@
+---
+title: U.S. Veteran Statistics
+description: |
+  Explore 10-year trends in U.S. military casulaties.
+date: 2022-12-01
+draft: false
+freeze: false
+image: index_files/figure-html/preview-1.svg
+categories:
+  - risk modeling
+---
+
+https://www.arlingtoncemetery.mil/Developers/Burial-Record-Public-Service-Methods
+
+https://wspublic.eiss.army.mil/v1/IssRetrieveServices.svc/search?q=DOD=_:_:2022,DOB=_:_:1981&sortColumn=PrimaryLastName,PrimaryFirstName&sortOrder=asc

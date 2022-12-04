@@ -27,7 +27,7 @@ format:
     code-fold: true
     code-summary: code
     code-overflow: wrap
-    code-block-bg: false
+    code-block-bg: true
     code-block-border-left: true
     page-layout: article
     tbl-cap-location: margin

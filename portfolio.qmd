@@ -6,6 +6,7 @@ listing:
   contents: portfolio
   sort: "date desc"
   type: grid
+  date-format: medium
   categories: true
   feed: true
 ---

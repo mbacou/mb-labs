@@ -5,18 +5,18 @@ description: |
 date: "`r Sys.Date()`"
 date_prefix: 2021-10-24
 draft: true
+freeze: false
 preview: ./fig/preview.png
 bibliography: biblio.bib
 nocite: "@*"
 categories:
-  - draft
   - imwi
   - hydrology
 ---
 
 ```{r setup, include=FALSE}
 
-if(interactive()) setwd("_posts/2021-10-24-3dmap/")
+if(interactive()) setwd("posts/2021-10-24-3dmap")
 
 library(knitr)
 library(scales)
@@ -24,21 +24,25 @@ library(stringr)
 library(data.table)
 library(raster)
 library(osmdata)
+library(geodata)
 library(rayshader)
 library(rgl)
+library(thematic)
 setupKnitr(autoprint=TRUE)
 
 opts_chunk$set(res=220, pointsize=8)
 root <- "/media/mbacou/Backup MB/WADashboard"
 
 # Default color palette
-pal <- readRDS("../../_assets/pal_iwmi.rds")
+thematic_on(font=font_spec("Roboto Condensed"))
 par(font.main=1, cex.axis=.8)
+pal <- palette()
+names(pal) <- c("orange", "green", "navy", "pink", "black", "red", "yellow", "blue")
 
 ```
 
 
-This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built custom HTML widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at rendering water fluxes using Sankey diagrams. Here we test multiple libraries to generate hillshade (3D) views of river basins and water infrastructure, in particular we want to compare [Three.js](https://threejs.org/) and [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) implementations.
+This notebook is **Part 3** of an exploration to visualize results of hydrologic models. In [Part 1](../2021-10-16-svg/) we built custom HTML widgets using `D3.js`, and in [Part 2](../2021-10-12-highcharts/) we looked at rendering water fluxes using Sankey diagrams. Here we test multiple libraries to generate hill shade (3D) views of river basins and water infrastructure, in particular we want to compare [Three.js](https://threejs.org/) and [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) implementations.
 
 Aside from rendering topography and water streams in 3D (and potentially other covariate layers), our objective is to overlay custom labels to illustrate the water cycle.
 
@@ -54,17 +58,21 @@ Some inspiration below:
 - [WebGL with Google Maps API](https://cloud.google.com/blog/products/maps-platform/using-new-webgl-powered-maps-features) on how to construct and render 3D scenes with WebGL.
 
 
-```{r, out.width="48%", fig.width=3, fig.show="hold"}
+```{r}
+#| column: screen-inset-shaded
+#| layout-nrow: 1
 
 list.files("./fig", full.names=TRUE)[2] %>%
-  knitr::include_graphics()
+  include_graphics()
 
 ```
 
-```{r, out.width="48%", fig.width=3, fig.show="hold"}
+```{r}
+#| column: screen-inset-shaded
+#| layout-nrow: 1
 
 list.files("./fig", full.names=TRUE)[7] %>%
-  knitr::include_graphics()
+  include_graphics()
 
 ```
 
@@ -79,45 +87,46 @@ list.files("./fig", full.names=TRUE)[7] %>%
 We'll experiment with a smaller sample scene of the **Selingue Dam** in the Niger River basin.
 
 
-```{r, layout="l-body", code_folding=F}
+```{r}
 
 basin <- shapefile(file.path(root, "./mli/srtm/mli_basin.shp"))
 zoi <- shapefile(file.path(root, "./mli/srtm/zoi.shp"))
 ext <- extent(zoi)
-center <- coordinates(zoi)
+center <- coordinates(ext)
 
 # Get CGIAR SRTM DEM at 90m
-srtm <- getData("SRTM", lon=center[,1], lat=center[,2], path="_data") %>%
-  crop(zoi) %>%
+srtm <- raster("_data/srtm_35_10.tif") %>%
+  crop(zoi) %>% 
   mask(zoi)
 srtm
 
 # Satellite basemaps
-bmap <- maptiles::get_tiles(terra::ext(zoi), "Esri.WorldImagery", zoom=10) %>%
+bmap <- maptiles::get_tiles(terra::vect(zoi), "Esri.WorldImagery", zoom=10) %>%
   stack() %>%
   crop(zoi) %>%
   mask(zoi)
+bmap
 
 ```
 
 The basin covers a large area, so we would need 8 SRTM tiles, but 1 is enough for a proof of concept. Next we'll get a satellite basemap.
 
-```{r, out.width="33%", fig.show="hold", code_folding=F}
+```{r}
+#| column: screen-inset-shaded
+#| layout-nrow: 1
 
-plot(terra::vect(basin), col=pal[2], border=pal[1], lwd=2,
-  main="Niger River Basin (Mali)")
+plot(extent(basin), main="Niger River Basin (Mali)", xlab=NA, ylab=NA)
+plot(basin, col=alpha(pal[2], .4), border=pal[2], lwd=2, add=T)
 plot(zoi, lty=3, col=alpha(pal["red"], .6), border=pal["red"], lwd=2, add=T)
 text(-8, 10.5, "Selingue Dam\n(Mali)", col=pal["red"], cex=.7, font=2)
 grid()
 
-plot(terra::ext(zoi), 
-  main="Selingue Dam (Mali) - ESRI World Imagery")
+plot(ext, main="Selingue Dam (Mali) - ESRI World Imagery", xlab=NA, ylab=NA)
 plotRGB(bmap, add=T)
-grid(col="white")
+grid()
 
-plot(terra::rast(srtm),
-  main="Selingue Dam (Mali) - SRTM 90m")
-grid(col="white")
+plot(srtm, main="Selingue Dam (Mali) - SRTM 90m")
+grid()
 
 ```
 
@@ -144,13 +153,14 @@ bmap_array[,,3] <- b/255
 bmap_array %>%
   aperm(c(2,1,3)) %>%
   # Stretch contrast
-  rescale(to=c(0,1)) -> bmap_array
+  scales::rescale(to=c(0,1)) -> bmap_array
 
 ```
 
 2D view of the generated basemap with satellite image overlay.
 
-```{r, code_folding=F, fig.cap="Hillshaded Basemap of Selingue Dam (Niger River basin)"}
+```{r}
+#| fig-cap: "Hillshaded Basemap of Selingue Dam (Niger River basin)"
 
 srtm_water <- srtm_array
 srtm_water[srtm_water < 353] <- 0
@@ -159,7 +169,7 @@ base_map_sat <- srtm_array %>%
   height_shade() %>%
   add_overlay(bmap_array) %>%
   add_shadow(ray_shade(srtm_array, zscale=90)) %>%
-  add_water(detect_water(srtm_water), color=alpha(pal["blue"], 0.4))
+  add_water(detect_water(srtm_water), color=alpha(pal[["blue"]], 0.4))
 
 plot_map(base_map_sat)
 
@@ -167,7 +177,8 @@ plot_map(base_map_sat)
 
 That doesn't look very clear, so instead we'll create a basemap, not using the satellite image but a built-in texture.
 
-```{r, code_folding=F, eval=FALSE}
+```{r}
+#| eval: false
 
 base_map <- srtm_array %>% 
   height_shade() %>% 
@@ -176,13 +187,15 @@ base_map <- srtm_array %>%
   add_shadow(lamb_shade(srtm_array, zscale=6), 0) %>%
   add_shadow(ambient_shade(srtm_array), 0) %>%
   add_shadow(texture_shade(srtm_array, detail=8/10, contrast=9, brightness=11), 0.1) %>%
-  add_water(detect_water(srtm_water), color=alpha(pal["blue"], 0.4))
+  add_water(detect_water(srtm_water), color=alpha(pal[["blue"]], 0.4))
 
 saveRDS(base_map, "./_data/base_map.rds")
 
 ```
 
-```{r, rgl.margin=0, fig.cap="Hillshaded Basemap of Selingue Dam"}
+```{r}
+#| fig-cap: "Hillshaded Basemap of Selingue Dam"
+#| rgl-margin: 0
 
 base_map <- readRDS("./_data/base_map.rds")
 plot_map(base_map)
@@ -191,7 +204,8 @@ plot_map(base_map)
 
 Looks better, so let's acquire and overlay spatial features from OSM. Note that water-related features for Mali are scarcely available from OSM, but most waterways are recorded.
 
-```{r, code_folding=FALSE, eval=FALSE}
+```{r}
+#| eval: false
 
 osm_roads <- opq(bbox(zoi)) %>% 
   add_osm_feature("highway") %>% 
@@ -218,11 +232,15 @@ water_layer <- generate_line_overlay(
   extent=ext, srtm_array, linewidth=3, color=pal["blue"])
 
 place_layer <- generate_label_overlay(
-  dplyr::filter(osm_place$osm_points, !is.na(name) & nchar(name)<10), 
-  extent=ext, heightmap=srtm_array,
-  font=2, text_size=1.6, point_size=1.6, color=pal["black"],
-  halo_color="white", halo_expand=2, halo_blur=1, halo_alpha=.9, seed=1,
-  data_label_column="name")
+  dplyr::filter(osm_place$osm_points, !is.na(name) & (nchar(name) < 10)), 
+  extent=ext, heightmap=srtm_array, data_label_column="name",
+  font=2, text_size=1.6, point_size=1.6,
+  halo_expand=2, halo_alpha=.9, seed=1
+  )
+
+place_layer <- generate_label_overlay(
+  dplyr::filter(osm_place$osm_points, !is.na(name) & nchar(name) < 10), 
+  extent=ext, heightmap=srtm_array, data_label_column="name")
 
 scene <- base_map %>% 
 #scene <- base_map_sat %>%   
@@ -236,7 +254,8 @@ saveRDS(scene, "./_data/scene.rds")
 
 Finally we'll use WebGL to render this scene in 3D. We also test adding polygon (bar) annotations.
 
-```{r, code_folding=FALSE, eval=FALSE}
+```{r}
+#| eval: false
 
 amb_layer <- ambient_shade(srtm_array, zscale=1/5)
 
@@ -252,18 +271,20 @@ saveRDS(scene2, "./_data/scene2.rds")
 
 ```
 
-```{r, rgl.margin=0, fig.cap="Interactive 3D Scene of Selingue Dam"}
+```{r}
+#| fig-cap: "Interactive 3D Scene of Selingue Dam"
+#| rgl-margin: 0
 
 scene <- readRDS("./_data/scene.rds")
 scene2 <- readRDS("./_data/scene2.rds")
+xyz <- sf::read_sf(file.path(root, "./mli/srtm/xyz.shp"))
 
 scene %>% plot_3d(resize_matrix(srtm_array, 1/10), zscale=20, 
   theta=30, phi=20, fov=0, zoom=0.5,
   family="Roboto Condensed",
-  shadow=TRUE, shadowcolor=pal["black"], solidcolor=pal["black"])
+  shadow=T, shadowcolor=pal["black"], solidcolor=pal["black"])
 
 # Add polygon annotations
-xyz <- sf::read_sf(file.path(root, "./mli/srtm/xyz.shp"))
 render_polygons(xyz, ext, data_column_top="z",
   scale_data=1, color=alpha(pal["orange"], 0.8), 
   lit=F, light_intensity=0.01, clear_previous=T)
@@ -281,7 +302,8 @@ Following the approach above, we experiment with a 3D scene for the entire Niger
 
 ## Data Acquisition
 
-```{r, code_folding=FALSE, eval=FALSE}
+```{r}
+#| eval: false
 
 # Basin boundaries from IWMI
 zoi <- shapefile(file.path(root, "./mli/srtm/mli_basin.shp"))
@@ -328,7 +350,7 @@ save(zoi, ext, adm, places, alt, luc, pal.luc, gloric, osm_place,
 
 ```
 
-```{r, out.width="50%", fig.show="hold", code_folding=F}
+```{r}
 
 load("./_data/osm.RData")
 
@@ -376,7 +398,8 @@ bmap_array <- bmap_array %>%
 
 2D view of the generated basemap with land cover overlay.
 
-```{r, code_folding=F, eval=FALSE}
+```{r}
+#| eval: false
 
 base_map_luc <- srtm_array %>%
   height_shade() %>%
@@ -388,7 +411,10 @@ saveRDS(base_map_luc, "./_data/base_map_luc_basin.rds")
 
 ```
 
-```{r, rgl.margin=0, fig.cap="Hillshaded Land Cover - Niger River Basin"}
+```{r}
+#| fig-cap: "Hillshaded Land Cover - Niger River Basin"
+#| rgl-margin: 0
+#| layout-nrow: 1
 
 base_map_luc <- readRDS("./_data/base_map_luc_basin.rds")
 plot_map(base_map_luc)
@@ -397,7 +423,8 @@ plot_map(base_map_luc)
 
 The choice of hillshading parameters below might need tweaking.
 
-```{r, code_folding=F, eval=FALSE}
+```{r}
+#| eval: false
 
 base_map <- srtm_array %>%
   sphere_shade(texture="desert") %>%
@@ -412,7 +439,9 @@ saveRDS(base_map, "./_data/base_map_basin.rds")
 
 2D view of the generated basemap with simple texture overlay.
 
-```{r, rgl.margin=0, fig.cap="Hillshaded Basemap - Niger River Basin"}
+```{r}
+#| rgl-margin: 0 
+#| fig-cap: "Hillshaded Basemap - Niger River Basin"
 
 base_map <- readRDS("./_data/base_map_basin.rds")
 plot_map(base_map)
@@ -421,7 +450,8 @@ plot_map(base_map)
 
 As above, we choose to overlay place names, waterways, and level-2 administrative boundaries.
 
-```{r, code_folding=FALSE, eval=FALSE}
+```{r}
+#| eval: false
 
 admin_layer <- generate_line_overlay(adm,
   extent=ext, srtm_array, linewidth=4, lty=1, color="white")
@@ -469,7 +499,9 @@ saveRDS(scene_luc, "./_data/scene_luc_basin.rds")
 
 Finally we'll use WebGL to render these scenes in 3D.
 
-```{r, rgl.margin=0, fig.cap="Interactive 3D Scene of Niger River Basin"}
+```{r}
+#| rgl-margin: 0
+#| fig-cap: "Interactive 3D Scene of Niger River Basin"
 
 scene <- readRDS("./_data/scene_basin.rds")
 scene %>% plot_3d(resize_matrix(srtm_array, 1/5), zscale=40, 
@@ -482,7 +514,9 @@ rgl.close()
 
 ```
 
-```{r, rgl.margin=0, fig.cap="Interactive 3D Scene of Niger River Basin with Land Cover Basemap"}
+```{r}
+#| rgl-margin: 0
+#| fig-cap: "Interactive 3D Scene of Niger River Basin with Land Cover Basemap"
 
 scene_luc <- readRDS("./_data/scene_luc_basin.rds")
 scene_luc %>% plot_3d(resize_matrix(srtm_array, 1/5), zscale=40, 
