@@ -2,6 +2,7 @@
 title: "About this blog"
 description: |
   Some additional details about the blog
+site: distill::distill_website  
 ---
 
 ```{r setup, include=FALSE}

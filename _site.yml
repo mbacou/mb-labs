@@ -30,8 +30,6 @@ navbar:
   left:
     - text: Notebooks
       href: index.html
-    - text: About
-      href: about.html
     - text: Portfolio
       href: portfolio.html
     - text: About

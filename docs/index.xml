@@ -12,7 +12,15 @@
       <link>https://mbacou.github.io/mb-labs</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The Sharpe Ratio</title>
+      <dc:creator>Melanie Bacou</dc:creator>
+      <link>https://mbacou.github.io/mb-labs/posts/2022-12-04-the-sharpe-ratio</link>
+      <description>A short description of the post.</description>
+      <guid>https://mbacou.github.io/mb-labs/posts/2022-12-04-the-sharpe-ratio</guid>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Visualizing Water: Interactive 3D Map of River Basins (draft)</title>
       <dc:creator>Melanie BACOU</dc:creator>
@@ -48,18 +56,6 @@
       <guid>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg</guid>
       <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
       <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/./svg/sheet_1_edited.svg" medium="image" type="image/svg+xml"/>
-    </item>
-    <item>
-      <title>Visualizing Water: Sankey Diagrams (draft)</title>
-      <dc:creator>Melanie BACOU</dc:creator>
-      <link>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</link>
-      <description>Part 2: custom data-driven flow charts using Highcharts.js and networkD3 (IWMI).</description>
-      <category>draft</category>
-      <category>imwi</category>
-      <category>hydrology</category>
-      <guid>https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts</guid>
-      <pubDate>Sat, 30 Oct 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://mbacou.github.io/mb-labs/posts/2021-10-12-highcharts/fig/sankey_truthstudio_1.gif" medium="image" type="image/gif"/>
     </item>
     <item>
       <title>Merge Ground and Satellite Observations with RFMerge</title>

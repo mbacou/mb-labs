@@ -3,5 +3,6 @@ title: "Notebooks"
 description: |
   A series of interactive notebooks
 listing: posts
+site: distill::distill_website
 ---
 
