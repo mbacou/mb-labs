@@ -15,7 +15,7 @@
 <title>Mel&#39;s Labs</title>
 <link>https://mbacou.github.io/mb-labs/index.html</link>
 </image>
-<generator>quarto-1.2.269</generator>
+<generator>quarto-1.2.313</generator>
 <lastBuildDate>Thu, 01 Dec 2022 00:00:00 GMT</lastBuildDate>
 <item>
   <title>U.S. Veteran Statistics</title>
@@ -25,8 +25,46 @@
 
 
 
+
 <p>https://www.arlingtoncemetery.mil/Developers/Burial-Record-Public-Service-Methods</p>
 <p>https://wspublic.eiss.army.mil/v1/IssRetrieveServices.svc/search?q=DOD=<em>:</em>:2022,DOB=<em>:</em>:1981&amp;sortColumn=PrimaryLastName,PrimaryFirstName&amp;sortOrder=asc</p>
+<div class="cell">
+<details>
+<summary>code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(ggplot2)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;">library</span>(thematic)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;">thematic_on</span>(<span class="at" style="color: #657422;">bg=</span><span class="st" style="color: #20794D;">"#222E32"</span>, <span class="at" style="color: #657422;">fg=</span><span class="st" style="color: #20794D;">"#FCFCFD"</span>, <span class="at" style="color: #657422;">accent=</span><span class="fu" style="color: #4758AB;">c</span>(<span class="st" style="color: #20794D;">"#9ABEBE"</span>, <span class="st" style="color: #20794D;">"#789494"</span>))</span>
+<span id="cb1-4">pal <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">okabe_ito</span>()</span></code></pre></div>
+</details>
+</div>
+<div class="cell" data-fig.showtext="false">
+<details>
+<summary>code</summary>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;">plot</span>(<span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">:</span><span class="dv" style="color: #AD0000;">10</span>, <span class="dv" style="color: #AD0000;">2</span><span class="sc" style="color: #5E5E5E;">:</span><span class="dv" style="color: #AD0000;">11</span>, <span class="at" style="color: #657422;">t=</span><span class="st" style="color: #20794D;">"o"</span>, <span class="at" style="color: #657422;">col=</span><span class="dv" style="color: #AD0000;">1</span><span class="sc" style="color: #5E5E5E;">:</span><span class="dv" style="color: #AD0000;">10</span>, <span class="at" style="color: #657422;">cex=</span><span class="dv" style="color: #AD0000;">2</span>)</span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;">grid</span>()</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="https://mbacou.github.io/mb-labs/posts/2022-12-01-armyvet/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>code</summary>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">lattice<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">show.settings</span>()</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="https://mbacou.github.io/mb-labs/posts/2022-12-01-armyvet/index_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell" data-fig.showtext="false">
+<details>
+<summary>code</summary>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;">ggplot</span>(airquality, <span class="fu" style="color: #4758AB;">aes</span>(<span class="at" style="color: #657422;">x=</span>Temp, <span class="at" style="color: #657422;">fill=</span><span class="fu" style="color: #4758AB;">factor</span>(Day))) <span class="sc" style="color: #5E5E5E;">+</span> </span>
+<span id="cb4-2">  <span class="fu" style="color: #4758AB;">geom_histogram</span>(<span class="at" style="color: #657422;">color=</span><span class="st" style="color: #20794D;">"white"</span>) <span class="sc" style="color: #5E5E5E;">+</span></span>
+<span id="cb4-3">  <span class="fu" style="color: #4758AB;">scale_fill_manual</span>(<span class="at" style="color: #657422;">values=</span><span class="fu" style="color: #4758AB;">sample</span>(pal, <span class="dv" style="color: #AD0000;">31</span>, <span class="at" style="color: #657422;">replace=</span>T))</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="https://mbacou.github.io/mb-labs/posts/2022-12-01-armyvet/index_files/figure-html/cover-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 
@@ -50,6 +88,7 @@ Melanie BACOU. 2022. <span>“U.S. Veteran Statistics.”</span> December 1,
   <dc:creator>Melanie BACOU</dc:creator>
   <link>https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge/index.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -687,6 +726,7 @@ RFMerge.”</span> January 16, 2021. <a href="https://mbacou.github.io/mb-labs/p
   <dc:creator>Melanie BACOU</dc:creator>
   <link>https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca/index.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2042,7 +2082,7 @@ Melanie BACOU. 2020. <span>“ERA5-LAND Temperature Validation
   <category>risk modeling</category>
   <guid>https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca/index.html</guid>
   <pubDate>Wed, 02 Dec 2020 00:00:00 GMT</pubDate>
-  <media:content url="https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca/index_files/figure-html/preview-1.svg" medium="image" type="image/svg+xml"/>
+  <media:content url="https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca/index_files/figure-html/unnamed-chunk-16-1.svg" medium="image" type="image/svg+xml"/>
 </item>
 </channel>
 </rss>

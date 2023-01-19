@@ -1,4 +1,5 @@
 project:
+  title: mb-labs
   type: website
   output-dir: _site
 
@@ -43,6 +44,7 @@ website:
 
 format:
   html:
+    fontsize: 15.75px
     theme:
-      light: www/theme-light.scss
       dark: www/theme-dark.scss
+      light: www/theme-light.scss

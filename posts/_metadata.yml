@@ -8,30 +8,34 @@ author:
   - name: Melanie BACOU
     email: mel@mbacou.com
     url: https://linkedin/in/mbacou
+    orcid: 0000-0003-1810-6818
 
 citation: true
 license: CC BY-NC
 
-freeze: false
-draft: true
-
 format:
   html:
-    toc: true
-    toc-title: Contents
-    toc-location: left
+
+    execute:
+      echo: true
+      message: false
+      warning: false
+
+    page-layout: article
+    title-block-banner: "#789494"
     link-external-icon: false
     link-external-newwindow: true
-    highlight-style: github
-    code-link: false
-    code-fold: true
+    default-image-extension: svg
+
+    highlight-style: zenburn
+    code-block-border-left: "#789494"
     code-summary: code
     code-overflow: wrap
-    code-block-bg: true
-    code-block-border-left: true
-    page-layout: article
+    code-link: false
+    code-fold: true
+    code-block-bg: false
+
     tbl-cap-location: margin
     reference-location: margin
     citation-location: margin
     fig-cap-location: margin
-    default-image-extension: png

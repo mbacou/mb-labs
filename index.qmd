@@ -3,10 +3,9 @@ title: Welcome
 description: |
   Latest articles.
 margin-header: _custom.html
+title-block-banner: true
 listing:
-  contents: 
-    - "posts/*/*.qmd"
-    - "posts/2021-10-16-svg/index.html"
+  contents: posts
   categories: true
   feed: true
   sort-ui: [date]
