@@ -36,6 +36,11 @@ lattice::show.settings()
 
 ggplot(airquality, aes(x=Temp, fill=factor(Day))) + 
   geom_histogram(color="white") +
-  scale_fill_manual(values=sample(pal, 31, replace=T))
+  scale_fill_manual(values=sample(pal, 31, replace=T)) +
+    ggtitle("Temperature Mean of Min -- ERA5 vs. GHCN (19 WS)") +
+  theme(
+    legend.position="top", legend.justification=0, 
+    axis.text.x=element_text(angle=-90)
+  )
 
 ```
