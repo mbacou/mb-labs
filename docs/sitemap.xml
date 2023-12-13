@@ -2,38 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://mbacou.github.io/mb-labs/about.html</loc>
-    <lastmod>2022-12-04T03:00:44+00:00</lastmod>
+    <lastmod>2023-12-13T22:24:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/</loc>
-    <lastmod>2022-12-04T03:00:27+00:00</lastmod>
+    <lastmod>2023-12-13T22:24:49+00:00</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/portfolio.html</loc>
-    <lastmod>2022-12-04T03:00:32+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://mbacou.github.io/mb-labs/posts/2022-12-04-the-sharpe-ratio/</loc>
-    <lastmod>2022-12-04T03:04:34+00:00</lastmod>
+    <lastmod>2023-12-13T22:24:49+00:00</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/posts/2021-10-24-3dmap/</loc>
-    <lastmod>2022-12-04T03:15:56+00:00</lastmod>
+    <lastmod>2023-12-13T22:24:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/posts/2021-11-01-deckgl/</loc>
-    <lastmod>2022-12-04T03:15:56+00:00</lastmod>
+    <lastmod>2023-12-13T22:24:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/posts/2021-10-16-svg/</loc>
-    <lastmod>2022-12-04T03:15:56+00:00</lastmod>
+    <lastmod>2023-12-13T22:24:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge/</loc>
-    <lastmod>2022-12-04T03:15:56+00:00</lastmod>
+    <lastmod>2023-12-13T22:24:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca/</loc>
-    <lastmod>2022-12-04T03:15:56+00:00</lastmod>
+    <lastmod>2023-12-13T22:24:47+00:00</lastmod>
   </url>
 </urlset>
