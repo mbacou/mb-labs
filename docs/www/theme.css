@@ -96,7 +96,7 @@ d-appendix .citation-appendix, .d-appendix .citation-appendix {
 }
 .dt-tags .dt-tag, .posts-list .dt-tags .dt-tag {
   font-family: "Roboto Condensed", sans-serif;
-  border: solid 1px rgb(17, 17, 17);
+  border: none;
   color: rgba(17, 17, 17, 0.5);
   background-color: rgb(243, 243, 243);
   padding: .4em 1em;

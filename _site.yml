@@ -1,5 +1,5 @@
 name: mb-labs
-title: Mel's Labs
+title: "Mel's Labs"
 description: |
   My playground for consulting and data science projects.
 base_url: https://mbacou.github.io/mb-labs
@@ -28,7 +28,6 @@ collections:
 navbar:
   search: false
   source_url: true
-  logo: www/logo_w.svg
   left:
     - text: Notebooks
       href: index.html
@@ -44,7 +43,6 @@ navbar:
 
 output:
   distill::distill_article:
-    css: www/theme.css
     highlight: rstudio
     toc: true
     dev: svglite
