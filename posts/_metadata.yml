@@ -15,27 +15,10 @@ license: CC BY-NC
 
 format:
   html:
-
+    page-layout: article
+    default-image-extension: svg
     execute:
       echo: true
       message: false
       warning: false
-
-    page-layout: article
-    title-block-banner: "#789494"
-    link-external-icon: false
-    link-external-newwindow: true
-    default-image-extension: svg
-
-    highlight-style: zenburn
-    code-block-border-left: "#789494"
-    code-summary: code
-    code-overflow: wrap
-    code-link: false
-    code-fold: true
-    code-block-bg: false
-
-    tbl-cap-location: margin
-    reference-location: margin
-    citation-location: margin
-    fig-cap-location: margin
+      error: false

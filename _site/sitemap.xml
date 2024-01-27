@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge/index.html</loc>
-    <lastmod>2022-12-04T04:51:18.555Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbacou.github.io/mb-labs/posts/2022-12-01-armyvet/index.html</loc>
-    <lastmod>2023-08-09T14:01:03.803Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca/index.html</loc>
-    <lastmod>2023-01-19T00:45:20.052Z</lastmod>
+    <loc>https://mbacou.github.io/mb-labs/index.html</loc>
+    <lastmod>2024-01-27T04:18:51.532Z</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/portfolio.html</loc>
-    <lastmod>2022-12-04T04:51:18.111Z</lastmod>
+    <lastmod>2024-01-25T08:22:43.007Z</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/about.html</loc>
-    <lastmod>2022-12-04T04:51:18.111Z</lastmod>
+    <lastmod>2024-01-27T03:08:46.320Z</lastmod>
   </url>
   <url>
-    <loc>https://mbacou.github.io/mb-labs/index.html</loc>
-    <lastmod>2023-01-18T22:59:21.105Z</lastmod>
+    <loc>https://mbacou.github.io/mb-labs/license.html</loc>
+    <lastmod>2024-01-25T05:08:21.582Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.github.io/mb-labs/posts/2022-12-01-armyvet/index.html</loc>
+    <lastmod>2024-01-27T03:57:17.712Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.github.io/mb-labs/posts/2021-01-16-rfmerge/index.html</loc>
+    <lastmod>2024-01-25T04:28:51.674Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca/index.html</loc>
+    <lastmod>2024-01-25T04:28:51.522Z</lastmod>
   </url>
 </urlset>

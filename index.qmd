@@ -1,9 +1,9 @@
 ---
-title: Welcome
+title: Notebooks
 description: |
   Latest articles.
-margin-header: _custom.html
-title-block-banner: true
+margin-header: "_custom.html"
+title-block-banner: "var(--light)"
 listing:
   contents: posts
   categories: true
@@ -14,5 +14,8 @@ listing:
   type: grid
   fields: [title, description, image, date, author, file-modified, categories]
 ---
+
+
+This is content before the post listing.
 
 

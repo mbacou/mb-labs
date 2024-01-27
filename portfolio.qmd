@@ -3,9 +3,9 @@ title: Portfolio
 description: Design portfolio.
 margin-header: _custom.html
 listing:
-  contents: portfolio
+  contents: posts
   sort: "date desc"
-  type: grid
+  type: default
   date-format: medium
   categories: true
   feed: true

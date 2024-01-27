@@ -4,22 +4,31 @@ project:
   output-dir: _site
 
 website:
-  favicon: www/logo.svg
-  image: www/logo.svg
+  title: "Mel's Labs"
+  favicon: "www/logo.svg"
+  image: "www/logo.svg"
   twitter-card: true
-  title: Mel's Labs
   site-url: https://mbacou.github.io/mb-labs
   repo-url: https://github.com/mbacou/mb-labs
-  repo-actions: [issue]
+  repo-actions: []
+  page-navigation: true
+  bread-crumbs: false
   description: |
     Playground for consulting and data science projects.
 
   search:
     location: navbar
     type: overlay
+    show-item-context: true
 
   navbar:
-    title: Mel's Labs
+    title: "Mel's Labs"
+    background: dark
+    border: true
+    logo: www/linkedin.jpg
+    logo-alt: "Mel's Labs logo"
+    collapse-below: lg
+
     left:
       - text: Notebooks
         file: index.qmd
@@ -28,23 +37,48 @@ website:
       - text: About
         file: about.qmd
     right:
-      - icon: rss
-        href: index.xml
-      - icon: linkedin
-        href: https://linkedin.com/in/mbacou
       - icon: github
         href: https://github.com/mbacou/mb-labs
+      - icon: linkedin
+        href: https://linkedin.com/in/mbacou
+      - icon: rss
+        href: index.xml
 
   page-footer:
     left: |
-      &copy; Copyright 2022 &mdash; BACOU, Melanie.
+      &copy; Copyright 2024 &mdash; BACOU, Melanie.
       Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+    center:
+      - text: "About"
+        href: about.qmd
+      - text: "License"
+        href: license.qmd
     right: |
       Site built with [Quarto](https://quarto.org/)
 
+bibliography: references.bib
+
 format:
   html:
-    fontsize: 15.75px
-    theme:
-      dark: www/theme-dark.scss
-      light: www/theme-light.scss
+    toc: true
+    toc-title: Contents
+    link-external-icon: false
+    link-external-newwindow: true
+
+    highlight-style: monochrome
+    code-copy: true
+    code-overflow: wrap
+    code-block-bg: "var(--bs-white)"
+    code-block-border-left: "var(--bs-border-color)"
+    title-block-banner: "var(--bs-body-bg)"
+
+    tbl-cap-location: margin
+    reference-location: margin
+    citation-location: margin
+    fig-cap-location: margin
+
+    theme: www/theme-light.scss
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px

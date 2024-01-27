@@ -1,152 +1,204 @@
 /*-- scss:defaults --*/
 
-$primary: #789494;
-$secondary: #9ABEBE;
+$white:      #fcfcfd;
 
-$white: #FCFCFD;
-$black: #192124;
+$dark:       #212d31;
+$light:      #f0f0f0;
+$primary:    #435d64;
+$secondary:  #a4bcbf;
+$info:       #6bc48f;
+$accent1:    #54544f;
+$accent2:    #98796f;
+$accent3:    #aea39a;
+$success:    #3ab264;
+$warning:    #edcd37;
+$danger:     #f61f32;
 
-$blue: #AEDDFF;
-$green: #C3E88D;
-$yellow: #F7EB95;
-$purple: #C792EA;
-$red: #EB606B;
-$teal: #80CBC3;
-$cyan: #116095;
-$indigo: #95A1F7;
-$orange: #EB9B60;
-$pink: #EB606B;
-
-$info: $blue;
-$warning: $orange;
-
-$gray-100: #DCDFE4;
+$gray-100: $light;
 $gray-200: darken($gray-100, 4%);
 $gray-300: darken($gray-100, 8%);
 $gray-400: darken($gray-100, 12%);
 $gray-500: darken($gray-100, 16%);
 $gray-600: darken($gray-100, 20%);
-$gray-700: #6c757d;
-$gray-800: #384C52;
-$gray-900: #222E32;
+$gray-700: darken($gray-100, 24%);
+$gray-800: $dark;
+$gray-900: $primary;
 
-$body-bg: darken($white, 5%);
-$body-color: $gray-900;
+$body-color: rgb(33, 45, 49);
+$body-bg: lighten($light, 3%);
+$text-muted: rgba($body-color, 80%);
 
-$border-color: rgba($black, .125);
-$border-radius-lg: 10px;
+$border-color: rgba($gray-400, 30%);
+$border-radius: 0.25rem;
 $border-radius-sm: 0;
-$border-radius: 0;
+$border-radius-lg: 1rem;
 $enable-rounded: true;
 
+$thumbnail-border-width: 0;
+$thumbnail-border-radius: 0.25rem;
+
+$input-color: lighten($text-muted, 20%);
+$input-bg: lighten($body-bg, 20%);
+$input-placeholder-color: $input-color;
+$input-border-color: $border-color;
+$input-border-radius: 0.25rem;
+$input-disabled-bg: darken($input-bg, 4%);
+$input-group-addon-bg: darken($input-bg, 4%);
+
 $breadcrumb-active-color: $body-color;
-$card-bg: rgba(#ffffff, .4);
-$component-active-bg: rgba($primary, .5);
+$component-active-bg: rgba($secondary, 12%);
 $figure-caption-color: $text-muted;
 
-$font-family-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$headings-font-family: 'Roboto Condensed';
-$headings-font-weight: 400;
-
-$component-active-bg: rgba($secondary, .8);
-$input-color: $body-color;
-$input-bg: rgba(#ffffff, .4);
-$input-border-color: darken($body-bg, 5%);
-$input-disabled-bg: lighten($body-bg, 2%);
-$input-group-addon-bg: darken($input-bg, 15%);
-$input-placeholder-color: $gray-300;
-$jumbotron-bg: lighten($input-bg, 5%);
+$jumbotron-bg: $light;
 $label-margin-bottom: .05rem;
-$link-color: $indigo;
-$list-group-action-color: $indigo;
 $list-group-bg: $input-bg;
 $list-group-border-color: $input-border-color;
 $list-group-hover-bg: lighten($component-active-bg, 20%);
 $modal-content-bg: $input-bg;
-$modal-content-border-color: $input-border-color;
-$nav-tabs-link-active-color: $primary;
-$nav-tabs-link-active-bg: lighten($body-bg, 5%);
-$nav-tabs-border-color: $input-border-color;
+$modal-content-border-color: $border-color;
+$nav-tabs-border-color: $border-color;
+$nav-link-color: $white;
+$navbar-active-color: white;
+
 $pagination-bg: $input-bg;
-$pagination-border-color: $input-border-color;
+$pagination-border-color: $border-color;
 $pagination-color: $input-color;
 $pagination-disabled-bg: $input-disabled-bg;
 $pagination-hover-color: $white;
 $progress-bg: $input-bg;
-$thumbnail-border-color: $input-border-color;
+$thumbnail-border-color: $border-color;
+
+$card-bg: $input-bg;
+$card-cap-bg: $border-color;
+$card-border-color: $border-color;
+$card-border-radius: 0.25rem;
+
+$font-family-sans-serif: "Roboto";
+$font-monospace: "Roboto Mono";
+$headings-font-family: "Roboto Condensed";
+$headings-font-weight: 400;
 
 /*-- scss:rules --*/
 
-@import url('//fonts.googleapis.com/css?family=Roboto|Roboto-Condensed:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Roboto+Condensed:wght@400;600&family=Roboto+Mono:wght@400&display=swap');
 
-nav.sidebar.sidebar-navigation, #quarto-appendix.default {
-  background-color: transparent;
-}
-.quarto-listing-category-title, #toc-title {
-  text-transform: uppercase;
-}
-.listing-date, .quarto-title-meta-heading {
-  font-family: $headings-font-family;
-  color: $orange;
-  font-weight: 500;
-  opacity: 1;
-}
-#title-block-header.quarto-title-block.default .quarto-title-meta-heading {
-  opacity: 1;
-  font-weight: 500;
-}
-#quarto-margin-sidebar .quarto-listing-category-title, .action-links, #toc-title {
-  font-family: $headings-font-family;
-  color: $gray-600;
-  font-weight: 400;
-}
-.nav-footer {
-  font-family: $headings-font-family;
-}
-.sidebar nav#TOC>h2, .sidebar nav#TOC>.h2 {
-  color: $secondary;
+b, strong {
   font-weight: 600;
 }
+h1, h2, .quarto-title-banner .quarto-title .title {
+  font-weight: 400;
+}
+h3, h4, h5 {
+  font-weight: 600;
+}
+h2, h5 {
+  color: $secondary;
+}
+.quarto-title-banner h1 {
+  color: $body-color;
+  font-size: 2.5rem;
+  opacity: 80%;
+}
+p.subtitle {
+  margin-top: 0;
+  color: rgba($text-muted, 40%);
+}
+.abstract {
+  color: $text-muted;
+  margin-bottom: 1em;
+}
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading,
+#title-block-header.quarto-title-block.default .abstract .block-title {
+  font-family: $headings-font-family;
+  text-transform: uppercase;
+  font-size: .8em;
+  color: $accent3;
+  opacity: 1;
+}
+.abstract p {
+  color: $text-muted;
+}
 div.quarto-post .metadata {
-  font-size: .9rem;
+  font-size: .9em;
 }
-.nav-footer-left {
-  text-align: left;
+#quarto-margin-sidebar .quarto-listing-category-title, .action-links {
+  font-family: $headings-font-family;
+  color: $text-muted;
+  font-weight: 400;
 }
-.navbar-brand {
-  max-width: unset;
-  overflow: unset;
-  padding-right: 3rem;
+.navbar, .nav-footer {
+  font-family: $headings-font-family;
 }
-.panel-tabset {
-  background: lighten($body-bg, 5%);
+.quarto-grid-item .card-attribution, .listing-author, .date, .date-modified {
+  color: $text-muted;
 }
-ul.nav.nav-tabs {
-  background: $body-bg;
+.quarto-listing-category-title, #toc-title {
+  font-family: $headings-font-family;
+  font-size: .9em;
+  text-transform: uppercase;
+  color: $accent3;
 }
-div.sourceCode {
-  background: transparent !important;
-}
-pre.sourceCode {
-  border-left-color: $primary;
-}
-.listing-actions-group {
-  margin-bottom: 2rem;
-}
-.thumbnail img, .rounded {
-  border-radius: 10px;
-}
-.quarto-grid-item .card-attribution {
-  color: $gray-400;
-}
-.quarto-grid-item .listing-categories .listing-category {
-  color: $gray-400;
-  border: solid 1px $gray-400;
+.listing-date {
+  font-family: $headings-font-family;
+  font-weight: 600;
+  opacity: 1;
+  color: $accent3;
 }
 .quarto-grid-item .card-title {
-  margin-bottom: .3em;
+  margin-bottom: .8rem;
 }
-div.quarto-about-trestles .about-entity .about-link {
-  color: $primary;
+.column-margin, .margin-sidebar, .sidebar, .description {
+  color: $text-muted;
+}
+div.sourceCode, pre.sourceCode, .quarto-appendix-citeas {
+  background-color: $input-bg;
+}
+pre.sourceCode, .quarto-appendix-citeas {
+  font-family: $font-monospace;
+  font-size: .9em !important;
+  color: $text-muted !important;
+  font-weight: 400;
+}
+#quarto-appendix.default .quarto-appendix-heading {
+  font-family: $headings-font-family;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $accent3;
+}
+.quarto-title .quarto-categories .quarto-category {
+  padding: 0.25em 0.75em;
+  font-size: .8em;
+  text-transform: uppercase;
   border: none;
+  color: $text-muted;
+  background-color: $secondary;
+  opacity: .9;
+}
+
+#quarto-header>nav {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-brand {
+  margin-left: 1em;
+  font-weight: 600;
+  color: $light;
+}
+
+.quarto-title-banner {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  margin-bottom: 0;
+}
+#title-block-header {
+  background: $light;
+  padding-bottom: 0;
+  margin-block-end: 0;
+}
+#quarto-content>* {
+  padding-top: 0;
+  margin-top: 0;
+}
+main>p {
+  margin-top: 1em;
 }
