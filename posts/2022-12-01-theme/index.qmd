@@ -1,0 +1,209 @@
+---
+title: Theme Configuration
+subtitle: Boostrap 5 theme
+description: |
+  My Boostrap 5 theme customizations for this personal Quarto blog.
+date: 2022-12-01
+date-modified: last-modified
+image: thumb.png
+draft: false
+freeze: false
+categories:
+  - quarto
+abstract: |
+  This is is much longer abstract than description.
+---
+
+::: {.column-screen}
+
+```{r}
+#| echo: false
+
+library(leaflet)
+m <- leaflet(width="100%", height="10rem") %>% addTiles()
+m
+
+```
+
+:::
+
+Optional flushed banner with random static or dynamic content. Note that this will push the TOC to the top of the page until the user scrolls past the DIV.
+
+```{{r}}
+library(leaflet)
+m <- leaflet(width="100%", height="10rem") %>% addTiles()
+m
+```
+
+# Color System
+
+::: {layout-ncol=6}
+
+::: {.bg-info}
+info  
+(teal)
+:::
+
+::: {.bg-success}
+success  
+(cyan)
+:::
+
+::: {.bg-warning}
+warning (orange)
+:::
+
+::: {.bg-danger}
+danger (yellow)
+:::
+
+::: {.bg-primary}
+primary (green)
+:::
+
+::: {.card .bg-secondary}
+secondary (blue)
+:::
+
+:::
+
+::: {layout-ncol=3}
+
+::: {.bg-dark}
+dark
+:::
+
+::: {.bg-light}
+light
+:::
+
+::: {.bg-white}
+white
+:::
+
+:::
+
+::: {layout-ncol=3}
+
+::: {.bg-indigo}
+accent1 (indigo)
+:::
+
+::: {.bg-purple}
+accent2 (purple)
+:::
+
+::: {.bg-pink}
+accent3 (pink)
+:::
+
+:::
+
+Some colors are redefined to better suit the callout color logic below.
+
+# Callout Blocks
+
+::: {.callout-note}
+Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`.
+:::
+
+::: {.callout-tip}
+## Tip with Title
+
+This is an example of a callout with a title.
+:::
+
+::: {.callout-caution collapse="true" title="Cautious"}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+::: {.callout-important title="Important"}
+This is a callout with a title.
+:::
+
+::: {.callout-warning title="Warning"}
+This is a callout with a title.
+:::
+
+# Tables
+
+Simple tables.
+
+| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Default
+
+| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: borderless hover sm {.borderless .hover .sm}
+
+| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: striped hover sm {.striped .hover .sm}
+
+| fruit  | price  |
+|--------|--------|
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: striped hover sm secondary {.striped .hover .sm .secondary}
+
+```{r}
+#| column: page
+#| tbl-cap: A full-width table to increase content space
+
+knitr::kable(
+  mtcars[1:6, 1:10]
+)
+```
+
+# Code Blocks and Plots
+
+Syntax highlighting and code block layout options.
+
+```{r}
+
+library(ggplot2)
+
+
+```
+
+```{r}
+
+plot(1:8, 2:9, t="o", col=1:8, cex=2)
+grid()
+lattice::show.settings()
+
+```
+
+```{r cover}
+
+ggplot(airquality, aes(x=Temp, fill=factor(Day))) + 
+  geom_histogram(color="white") +
+    ggtitle("Temperature Mean of Min -- ERA5 vs. GHCN (19 WS)") +
+  theme(
+    legend.position="top", legend.justification=0, 
+    axis.text.x=element_text(angle=-90)
+  )
+
+```
+
+
+
+

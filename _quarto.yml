@@ -62,14 +62,13 @@ format:
   html:
     toc: true
     toc-title: Contents
+    toc-location: left
     link-external-icon: false
     link-external-newwindow: true
 
-    highlight-style: monochrome
     code-copy: true
     code-overflow: wrap
     code-block-bg: "var(--bs-white)"
-    code-block-border-left: "var(--bs-border-color)"
     title-block-banner: "var(--bs-body-bg)"
 
     tbl-cap-location: margin
@@ -78,6 +77,7 @@ format:
     fig-cap-location: margin
 
     theme: www/theme-light.scss
+
     grid:
       sidebar-width: 250px
       body-width: 900px

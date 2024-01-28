@@ -3,7 +3,8 @@ title: Notebooks
 description: |
   Latest articles.
 margin-header: "_custom.html"
-title-block-banner: "var(--light)"
+title-block-banner: "var(--bs-light)"
+page-layout: full
 listing:
   contents: posts
   categories: true
@@ -12,7 +13,7 @@ listing:
   filter-ui: [title, description]
   sort: "date desc"
   type: grid
-  fields: [title, description, image, date, author, file-modified, categories]
+  fields: [title, description, image, date, author, categories]
 ---
 
 
