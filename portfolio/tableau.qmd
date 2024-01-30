@@ -1,0 +1,12 @@
+---
+title: Tableau® Dashboards
+subtitle: My Design Portfolio
+image: fig/portfolio-tableau.png
+date: 2024-01-30
+date-modified: last-modified
+categories:
+  - design
+  - tableau
+abstract: |
+  Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.
+---

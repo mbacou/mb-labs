@@ -1,17 +1,17 @@
 ---
 title: Theme Configuration
-subtitle: Boostrap 5 theme
-description: |
-  My Boostrap 5 theme customizations for this personal Quarto blog.
+subtitle: Quarto and Boostrap 5
+description: A hotchpotch of Boostrap 5 theme customizations for this Quarto blog.
 date: 2022-12-01
 date-modified: last-modified
-image: thumb.png
+image: thumb.svg
 draft: false
 freeze: false
 categories:
   - quarto
+  - design
 abstract: |
-  This is is much longer abstract than description.
+  Random content to help me migrate this personal blog from [distill](https://rstudio.github.io/distill/) to [quarto](https://quarto.org/). Quarto uses a new templating system built on top of [Bootstrap 5](https://getbootstrap.com/docs/5.0/) with new page layout and extended publishing formats.
 ---
 
 ::: {.column-screen}
@@ -22,86 +22,48 @@ abstract: |
 library(leaflet)
 m <- leaflet(width="100%", height="10rem") %>% addTiles()
 m
-
 ```
 
 :::
 
-Optional flushed banner with random static or dynamic content. Note that this will push the TOC to the top of the page until the user scrolls past the DIV.
+Sometimes I may want an optional flushed banner with random static or dynamic content. Note that this will push and collapse the TOC to the top of the page until the user scrolls past the `<div>`. For example here is how to insert a dynamic map inside a flushed `<div class="column-screen">` element, like the one just above:
 
-```{{r}}
-library(leaflet)
-m <- leaflet(width="100%", height="10rem") %>% addTiles()
-m
+````markdown
+  ::: {.column-screen}
+  ```{{r}}
+  library(leaflet)
+  leaflet(width="100%", height="10rem") %>% addTiles()
+  ```
+  :::
+````  
+
+## Color System
+
+Standard Bootstrap 12-color palette that strives to complement my [Kubuntu desktop](https://store.kde.org/p/1980663)[^kde]. Some colors are redefined to better suit the callout color logic below.
+
+[^kde]: KDE, 30 years later, still going strong!
+![](https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png){width=80% .lightbox}
+
+
+```{r}
+#| output: asis
+
+library(htmltools)
+
+x <- c("info", "success", "warning", "danger", "primary", "secondary",
+  "dark", "light", "white", "indigo", "purple", "pink")
+y <-  c("blue", "green", "orange", "red", "teal", "cyan",
+  "#222e32", "#fefefe", "#ffffff", "#9b59b6", "#98796f", "#aea39a")
+z <- c(rep(2,6), rep(4,6))
+
+l <- lapply(1:length(x),
+  function(i) div(class=paste0("g-col-", z[i], " small p-2 bg-", x[i]), 
+    HTML(x[i], "<br/>(", y[i], ")")))
+
+div(class="grid", style="--bs-gap: .5rem;", tagList(l))
 ```
 
-# Color System
-
-::: {layout-ncol=6}
-
-::: {.bg-info}
-info  
-(teal)
-:::
-
-::: {.bg-success}
-success  
-(cyan)
-:::
-
-::: {.bg-warning}
-warning (orange)
-:::
-
-::: {.bg-danger}
-danger (yellow)
-:::
-
-::: {.bg-primary}
-primary (green)
-:::
-
-::: {.card .bg-secondary}
-secondary (blue)
-:::
-
-:::
-
-::: {layout-ncol=3}
-
-::: {.bg-dark}
-dark
-:::
-
-::: {.bg-light}
-light
-:::
-
-::: {.bg-white}
-white
-:::
-
-:::
-
-::: {layout-ncol=3}
-
-::: {.bg-indigo}
-accent1 (indigo)
-:::
-
-::: {.bg-purple}
-accent2 (purple)
-:::
-
-::: {.bg-pink}
-accent3 (pink)
-:::
-
-:::
-
-Some colors are redefined to better suit the callout color logic below.
-
-# Callout Blocks
+## Callout Blocks
 
 ::: {.callout-note}
 Note that there are five types of callouts, including:
@@ -109,13 +71,13 @@ Note that there are five types of callouts, including:
 :::
 
 ::: {.callout-tip}
-## Tip with Title
+### Tip with Title
 
 This is an example of a callout with a title.
 :::
 
 ::: {.callout-caution collapse="true" title="Cautious"}
-## Expand To Learn About Collapse
+### Expand To Learn About Collapse
 
 This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
 :::
@@ -128,7 +90,47 @@ This is a callout with a title.
 This is a callout with a title.
 :::
 
-# Tables
+## Typography
+
+Bootstrap default line-height and sizing typically work. No change here aside from using `Roboto` and `Roboto Condensed` fonts.
+
+### Heading 3
+
+Sample paragraph content with list of items:
+
+- List 1
+- List 2
+- List 3
+
+Ordered list:
+
+#. List 1  
+#. List 2  
+#. List 3
+
+#### Heading 4
+
+Sample paragraph content.
+
+> Blockquote title  
+> Blockquote content comes here...   
+> <small>-- And small description</small>
+
+##### Heading 5
+
+Sample paragraph content.
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they belong to the previous footnote.
+
+## Tables
+
+I normally like my tables slightly more condensed than Bootstrap's defaults and to resemble LaTeX typesetting, so here we go.
 
 Simple tables.
 
@@ -173,37 +175,102 @@ knitr::kable(
 )
 ```
 
-# Code Blocks and Plots
+## Code Blocks and Plots
 
-Syntax highlighting and code block layout options.
+I use `thematic` package to generate `lattice` and `ggplot` palettes that complement Bootstrap colors.
 
 ```{r}
+library(thematic)
 
+# Theme with my default sequential and qualitative palettes
+thematic_on <- function(bg="transparent", fg="#111719", accent="#789494",
+  font=thematic::font_spec("Roboto Condensed"),
+  sequential=thematic::sequential_gradient(
+    fg_weight=.5, bg_weight=.5, fg_low=FALSE),
+  qualitative=c(
+    "#789494", "#445e64", "#222e32", 
+    "#aea39a", "#98796f", "#9b59b6", "#3daee9",
+    "#27ae60", "#edcd37", "#f67400", "#da4453"),
+  ...) thematic::thematic_on(
+    bg, fg, accent, font, sequential, qualitative, ...)
+```
+
+Next I apply a few extra --opinionated-- changes to `ggthemes::theme_wsj()`, mostly no background fills and custom fonts. The final theme function is defined as `theme_mblabs()`.
+
+```{r}
 library(ggplot2)
+thematic_on()
 
+theme_mblabs <- function(
+  title = NA,
+  subtitle = NA,
+  base_size = 12,
+  base_family = "Roboto Condensed",
+  base_bg = "transparent",
+  base_color = "#111719",
+  accent_color = "#11171999", ...) ggthemes::theme_wsj(
+    base_size = base_size,
+    base_family = base_family,
+    title_family = base_family
+  ) + theme(
+    
+    text = element_text(color=base_color, lineheight=.8),
+    line = element_line(color=base_color),
+    panel.background = element_rect(fill=base_bg, color=NA),
+    plot.background = element_rect(fill=base_bg, color=NA),
+    legend.box.background = element_rect(fill=base_bg, color=NA),
+    legend.background = element_rect(fill=base_bg, color=NA),
+    
+    plot.title = element_text(
+      family=base_family, face="plain", hjust=0, size=base_size*1.25),
+    plot.subtitle = element_text(
+      family=base_family, face="plain", hjust=0, size=base_size, 
+      color=accent_color[1]),
+    strip.text = element_text(
+      family=base_family, face="bold", hjust=0, size=base_size),
+    plot.caption = element_text(size=base_size*.9, hjust=0),
+    
+    axis.text = element_text(size=base_size),
+    axis.title.x = element_text(size=base_size, face="bold", hjust=1),
+    axis.title.y = element_blank(),
+    
+    legend.title = element_text(size=base_size*0.9, hjust=0),
+    legend.margin = margin(0,0,0,1, "lines"),
+    legend.key.size = unit(1, "lines"),
+    legend.text = element_text(base_size*0.8),
+    legend.position="right", legend.justification="left",
+    legend.direction="vertical",
+    ...)
 
+# Save my defaults for reuse
+save(theme_mblabs, thematic_on, file="theme_mblabs.rda")
+
+# Apply updated ggplot theme
+theme_set(theme_mblabs())
+```
+
+Simply visualize new lattice and ggplot color palettes.
+
+```{r}
+ggplot(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col()
 ```
 
 ```{r}
+ggplot(mtcars, aes(wt, mpg, color=gear, linewidth=carb)) + 
+  geom_point() + geom_smooth() + 
+  labs(title="My Title", subtitle="My Subtitle", caption="My plot caption")
+```
 
-plot(1:8, 2:9, t="o", col=1:8, cex=2)
-grid()
+```{r}
+ggplot(faithfuld, aes(waiting, eruptions, z = density)) +
+  geom_raster(aes(fill = density)) +
+  geom_contour()
+```
+
+```{r}
+ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) + geom_point()
+```
+
+```{r}
 lattice::show.settings()
-
 ```
-
-```{r cover}
-
-ggplot(airquality, aes(x=Temp, fill=factor(Day))) + 
-  geom_histogram(color="white") +
-    ggtitle("Temperature Mean of Min -- ERA5 vs. GHCN (19 WS)") +
-  theme(
-    legend.position="top", legend.justification=0, 
-    axis.text.x=element_text(angle=-90)
-  )
-
-```
-
-
-
-

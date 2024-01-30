@@ -1,8 +1,7 @@
 ---
-title: Notebooks
-description: |
-  Latest articles.
-margin-header: "_custom.html"
+title: Econometric and Geospatial Analysis
+subtitle: ... to inform robust and equitable public policy
+margin-header: "_custom.qmd"
 title-block-banner: "var(--bs-light)"
 page-layout: full
 listing:
@@ -16,7 +15,5 @@ listing:
   fields: [title, description, image, date, author, categories]
 ---
 
-
-This is content before the post listing.
-
-
+> *" This is my favorite quote of the day "*\
+  <small class="text-muted"> ---By me </small>

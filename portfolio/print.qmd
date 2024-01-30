@@ -1,0 +1,11 @@
+---
+title: Print Design
+subtitle: My Design Portfolio
+image: fig/portfolio-print.png
+date: 2024-01-30
+date-modified: last-modified
+categories:
+  - design
+abstract: |
+  Showcase of print posters, bulletins and handouts designed for partners and clients.
+---

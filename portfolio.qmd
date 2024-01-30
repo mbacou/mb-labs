@@ -1,10 +1,10 @@
 ---
-title: Portfolio
-description: Design portfolio.
+title: Design Portfolio
+subtitle: Scientific visualization projects
 margin-header: _custom.html
 page-layout: full
 listing:
-  contents: posts
+  contents: portfolio
   sort: "date desc"
   type: default
   date-format: medium
@@ -12,6 +12,6 @@ listing:
   feed: true
 ---
 
-Content before the listing.
+An annotated collection of visuals and tools I have built in the past for research teams, partners and clients.
 
 

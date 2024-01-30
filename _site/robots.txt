@@ -1,1 +1,1 @@
-Sitemap: https://mbacou.github.io/mb-labs/sitemap.xml
+Sitemap: https://mbacou.com/sitemap.xml

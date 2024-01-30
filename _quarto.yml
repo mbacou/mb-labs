@@ -5,12 +5,11 @@ project:
 
 website:
   title: "Mel's Labs"
-  favicon: "www/logo.svg"
-  image: "www/logo.svg"
+  favicon: "www/favicon.png"
+  image: "www/favicon.png"
   twitter-card: true
-  site-url: https://mbacou.github.io/mb-labs
+  site-url: https://mbacou.com
   repo-url: https://github.com/mbacou/mb-labs
-  repo-actions: []
   page-navigation: true
   bread-crumbs: false
   description: |
@@ -22,12 +21,9 @@ website:
     show-item-context: true
 
   navbar:
-    title: "Mel's Labs"
+    title: "{{< fa regular compass-drafting >}}   Mel's Labs"
     background: dark
-    border: true
-    logo: www/linkedin.jpg
-    logo-alt: "Mel's Labs logo"
-    collapse-below: lg
+    border: false
 
     left:
       - text: Notebooks
@@ -41,20 +37,23 @@ website:
         href: https://github.com/mbacou/mb-labs
       - icon: linkedin
         href: https://linkedin.com/in/mbacou
+      - icon: telegram
+        href: t.me/mbacou
       - icon: rss
         href: index.xml
 
   page-footer:
+    background: white
     left: |
       &copy; Copyright 2024 &mdash; BACOU, Melanie.
-      Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+      Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
     center:
       - text: "About"
         href: about.qmd
       - text: "License"
         href: license.qmd
     right: |
-      Site built with [Quarto](https://quarto.org/)
+      Built with [Quarto®](https://quarto.org/).
 
 bibliography: references.bib
 
@@ -66,10 +65,14 @@ format:
     link-external-icon: false
     link-external-newwindow: true
 
+    fig-dpi: 220
+    fig-format: svg
+    fig-width: 7
+    fig-height: 4.5
+
     code-copy: true
     code-overflow: wrap
-    code-block-bg: "var(--bs-white)"
-    title-block-banner: "var(--bs-body-bg)"
+    title-block-banner: white
 
     tbl-cap-location: margin
     reference-location: margin
@@ -79,6 +82,6 @@ format:
     theme: www/theme-light.scss
 
     grid:
-      sidebar-width: 250px
-      body-width: 900px
-      margin-width: 300px
+      sidebar-width: 210px
+      body-width: 980px
+      margin-width: 260px

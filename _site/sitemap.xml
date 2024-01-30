@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mbacou.github.io/mb-labs/index.html</loc>
-    <lastmod>2024-01-27T17:09:27.881Z</lastmod>
+    <lastmod>2024-01-30T13:28:00.274Z</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/portfolio.html</loc>
-    <lastmod>2024-01-27T13:06:08.635Z</lastmod>
+    <lastmod>2024-01-30T10:39:32.595Z</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/about.html</loc>
-    <lastmod>2024-01-27T06:57:00.427Z</lastmod>
+    <lastmod>2024-01-30T11:33:42.198Z</lastmod>
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/license.html</loc>
@@ -30,6 +30,30 @@
   </url>
   <url>
     <loc>https://mbacou.github.io/mb-labs/posts/2022-12-01-theme/index.html</loc>
-    <lastmod>2024-01-27T17:08:51.465Z</lastmod>
+    <lastmod>2024-01-29T15:31:11.179Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.github.io/mb-labs/portfolio/webapps.html</loc>
+    <lastmod>2024-01-30T10:33:16.428Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.github.io/mb-labs/portfolio/tableau.html</loc>
+    <lastmod>2024-01-30T10:29:51.538Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.github.io/mb-labs/portfolio/print.html</loc>
+    <lastmod>2024-01-30T10:30:56.158Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.com/index.html</loc>
+    <lastmod>2024-01-30T14:20:54.476Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.com/about.html</loc>
+    <lastmod>2024-01-30T11:33:42.198Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mbacou.com/posts/2021-01-16-rfmerge/index.html</loc>
+    <lastmod>2024-01-25T04:28:51.674Z</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,34 @@
+---
+title: Interactive Web Applications
+subtitle: My Design Portfolio
+image: fig/portfolio-webapps.png
+date: 2024-02-01
+date-modified: last-modified
+categories:
+  - design
+  - R/Shiny
+abstract: |
+  Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.
+---
+
+Complex statistical analyses and economic models always require robust end-user design.
+
+## Water accounting Balances
+
+Model visualization for large-scale water accounting models
+
+
+## Simulating Historical Claim Costs
+
+Visual interface for agricultural insurance
+
+Real-time pricing of weather-index insurance
+
+This tool supports WorldCover PBC agricultural insurance operations.
+
+How to cite
+Confidential.
+
+Tools
+R/Shiny, bs4Dash, bslib, shinyWidgets, data.table, leaflet, highcharter, terra
+
