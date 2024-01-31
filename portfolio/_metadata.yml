@@ -21,3 +21,8 @@ format:
       message: false
       warning: false
       error: false
+
+    grid:
+      sidebar-width: 210px
+      body-width: 780px
+      margin-width: 460px

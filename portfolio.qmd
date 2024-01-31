@@ -1,13 +1,18 @@
 ---
 title: Design Portfolio
 subtitle: Scientific visualization projects
-margin-header: _custom.html
+margin-header: _custom.qmd
 page-layout: full
 listing:
   contents: portfolio
+  sort-ui: [date]
+  filter-ui: [title, description]
   sort: "date desc"
   type: default
   date-format: medium
+  image-align: right
+  image-height: 180px
+  max-items: 10
   categories: true
   feed: true
 ---

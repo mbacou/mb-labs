@@ -6,21 +6,48 @@
       version="2.0">
 <channel>
 <title>Mel&#39;s Labs</title>
-<link>https://mbacou.github.io/mb-labs/portfolio.html</link>
-<atom:link href="https://mbacou.github.io/mb-labs/portfolio.xml" rel="self" type="application/rss+xml"/>
+<link>https://mbacou.com/portfolio.html</link>
+<atom:link href="https://mbacou.com/portfolio.xml" rel="self" type="application/rss+xml"/>
 <description>Playground for consulting and data science projects.
 </description>
 <image>
-<url>https://mbacou.github.io/mb-labs/www/logo.svg</url>
+<url>https://mbacou.com/www/favicon.png</url>
 <title>Mel&#39;s Labs</title>
-<link>https://mbacou.github.io/mb-labs/portfolio.html</link>
+<link>https://mbacou.com/portfolio.html</link>
+<height>100</height>
+<width>100</width>
 </image>
 <generator>quarto-1.5.3</generator>
 <lastBuildDate>Thu, 01 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Interactive Web Applications</title>
   <dc:creator>Melanie BACOU</dc:creator>
-  <link>https://mbacou.github.io/mb-labs/portfolio/webapps.html</link>
+  <link>https://mbacou.com/portfolio/app-wadashboard.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Complex statistical analyses and economic models always require robust end-user design.</p>
+<section id="water-accounting-balances" class="level2">
+<h2 class="anchored" data-anchor-id="water-accounting-balances">Water accounting Balances</h2>
+<p>Model visualization for large-scale water accounting models</p>
+
+
+</section>
+
+ ]]></description>
+  <category>model front-end</category>
+  <category>R/Shiny</category>
+  <guid>https://mbacou.com/portfolio/app-wadashboard.html</guid>
+  <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://mbacou.com/portfolio/fig/mbacou-app-pricing.png" medium="image" type="image/png" height="173" width="144"/>
+</item>
+<item>
+  <title>Interactive Web Applications</title>
+  <dc:creator>Melanie BACOU</dc:creator>
+  <link>https://mbacou.com/portfolio/app-pricing.html</link>
   <description><![CDATA[ 
 
 
@@ -44,16 +71,16 @@
 </section>
 
  ]]></description>
-  <category>design</category>
+  <category>model front-end</category>
   <category>R/Shiny</category>
-  <guid>https://mbacou.github.io/mb-labs/portfolio/webapps.html</guid>
+  <guid>https://mbacou.com/portfolio/app-pricing.html</guid>
   <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://mbacou.github.io/mb-labs/portfolio/fig/portfolio-webapps.png" medium="image" type="image/png"/>
+  <media:content url="https://mbacou.com/portfolio/fig/mbacou-app-pricing.png" medium="image" type="image/png" height="173" width="144"/>
 </item>
 <item>
   <title>Tableau® Dashboards</title>
   <dc:creator>Melanie BACOU</dc:creator>
-  <link>https://mbacou.github.io/mb-labs/portfolio/tableau.html</link>
+  <link>https://mbacou.com/portfolio/tableau.html</link>
   <description><![CDATA[ 
 
 
@@ -66,14 +93,14 @@
  ]]></description>
   <category>design</category>
   <category>tableau</category>
-  <guid>https://mbacou.github.io/mb-labs/portfolio/tableau.html</guid>
+  <guid>https://mbacou.com/portfolio/tableau.html</guid>
   <pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://mbacou.github.io/mb-labs/portfolio/fig/portfolio-tableau.png" medium="image" type="image/png"/>
+  <media:content url="https://mbacou.com/portfolio/fig/portfolio-tableau.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Print Design</title>
   <dc:creator>Melanie BACOU</dc:creator>
-  <link>https://mbacou.github.io/mb-labs/portfolio/print.html</link>
+  <link>https://mbacou.com/portfolio/print.html</link>
   <description><![CDATA[ 
 
 
@@ -85,9 +112,9 @@
 
  ]]></description>
   <category>design</category>
-  <guid>https://mbacou.github.io/mb-labs/portfolio/print.html</guid>
+  <guid>https://mbacou.com/portfolio/print.html</guid>
   <pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://mbacou.github.io/mb-labs/portfolio/fig/portfolio-print.png" medium="image" type="image/png"/>
+  <media:content url="https://mbacou.com/portfolio/fig/portfolio-print.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>

@@ -12,6 +12,7 @@ listing:
   filter-ui: [title, description]
   sort: "date desc"
   type: grid
+  max-items: 9
   fields: [title, description, image, date, author, categories]
 ---
 

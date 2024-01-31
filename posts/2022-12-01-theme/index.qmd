@@ -37,9 +37,9 @@ Sometimes I may want an optional flushed banner with random static or dynamic co
   :::
 ````  
 
-## Color System
+# Color System
 
-Standard Bootstrap 12-color palette that strives to complement my [Kubuntu desktop](https://store.kde.org/p/1980663)[^kde]. Some colors are redefined to better suit the callout color logic below.
+I select a standard Bootstrap 12-color palette that strives to complement my [Kubuntu desktop](https://store.kde.org/p/1980663)[^kde].
 
 [^kde]: KDE, 30 years later, still going strong!
 ![](https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png){width=80% .lightbox}
@@ -63,7 +63,7 @@ l <- lapply(1:length(x),
 div(class="grid", style="--bs-gap: .5rem;", tagList(l))
 ```
 
-## Callout Blocks
+# Callout Blocks
 
 ::: {.callout-note}
 Note that there are five types of callouts, including:
@@ -90,9 +90,13 @@ This is a callout with a title.
 This is a callout with a title.
 :::
 
-## Typography
+# Typography
 
-Bootstrap default line-height and sizing typically work. No change here aside from using `Roboto` and `Roboto Condensed` fonts.
+Bootstrap default line-height and sizing typically work. No change here aside from using `Inter` and `Roboto Condensed` Google fonts.
+
+## Heading 2
+
+Sample paragraph content.
 
 ### Heading 3
 
@@ -114,7 +118,9 @@ Sample paragraph content.
 
 > Blockquote title  
 > Blockquote content comes here...   
-> <small>-- And small description</small>
+> <small>-- And small description</small>[^bad]
+
+[^bad]: HTML standards recommend placing quote sources outside the `<blockquote>` element, well...
 
 ##### Heading 5
 
@@ -130,9 +136,7 @@ Here is a footnote reference,[^1] and another.[^longnote]
 
 ## Tables
 
-I normally like my tables slightly more condensed than Bootstrap's defaults and to resemble LaTeX typesetting, so here we go.
-
-Simple tables.
+I normally like my tables slightly more condensed than Bootstrap's defaults and to resemble LaTeX typesetting, so made a few simple changes here.
 
 | fruit  | price  |
 |--------|--------|
@@ -177,98 +181,109 @@ knitr::kable(
 
 ## Code Blocks and Plots
 
-I use `thematic` package to generate `lattice` and `ggplot` palettes that complement Bootstrap colors.
+I call the `thematic::thematic_on()` function to auto-generate `lattice` and `ggplot2` palettes that complement my new Bootstrap colors.
 
 ```{r}
 library(thematic)
 
-# Theme with my default sequential and qualitative palettes
-thematic_on <- function(bg="transparent", fg="#111719", accent="#789494",
-  font=thematic::font_spec("Roboto Condensed"),
-  sequential=thematic::sequential_gradient(
-    fg_weight=.5, bg_weight=.5, fg_low=FALSE),
-  qualitative=c(
+# Specify my default sequential and qualitative palettes
+thematic_on(
+  bg="transparent", fg="#111719", accent="#789494",
+  font = font_spec("Roboto Condensed"),
+  sequential = sequential_gradient( fg_weight=.5, bg_weight=.5, fg_low=FALSE),
+  qualitative = c(
     "#789494", "#445e64", "#222e32", 
     "#aea39a", "#98796f", "#9b59b6", "#3daee9",
-    "#27ae60", "#edcd37", "#f67400", "#da4453"),
-  ...) thematic::thematic_on(
-    bg, fg, accent, font, sequential, qualitative, ...)
+    "#27ae60", "#edcd37", "#f67400", "#da4453")
+  )
 ```
 
-Next I apply a few extra --opinionated-- changes to `ggthemes::theme_wsj()`, mostly no background fills and custom fonts. The final theme function is defined as `theme_mblabs()`.
+Note that calling `thematic_on()` modifies R session  `getOption("ggplot2.discrete.colour")` and `getOption("ggplot2.discrete.fill")` -- and that's how the underlying "magic" happens.
+
+Next I apply -- opinionated -- changes to `ggthemes::theme_foundation()`, mostly transparent fills and custom fonts, etc. The final theme function is shown below.
+
+These 2 functions are further expanded and documented in `./R/utils.R`, so I can handle dependencies and use them more flexibly in my blog posts, as needed.
 
 ```{r}
 library(ggplot2)
-thematic_on()
 
-theme_mblabs <- function(
+theme_labs <- function(
   title = NA,
   subtitle = NA,
   base_size = 12,
   base_family = "Roboto Condensed",
   base_bg = "transparent",
   base_color = "#111719",
-  accent_color = "#11171999", ...) ggthemes::theme_wsj(
-    base_size = base_size,
-    base_family = base_family,
-    title_family = base_family
+  ...) ggthemes::theme_foundation(
+    base_size = base_size, base_family = base_family
   ) + theme(
-    
+
+    plot.margin = unit(c(1, 1, 1, 1), "lines"),
     text = element_text(color=base_color, lineheight=.8),
-    line = element_line(color=base_color),
-    panel.background = element_rect(fill=base_bg, color=NA),
+    line = element_line(linetype=1, color=base_color),
+    rect = element_rect(fill=NA, linetype=0, color=NA),
     plot.background = element_rect(fill=base_bg, color=NA),
-    legend.box.background = element_rect(fill=base_bg, color=NA),
-    legend.background = element_rect(fill=base_bg, color=NA),
-    
+    panel.background = element_rect(fill=base_bg, color=NA),
+    panel.grid = element_line(color=NULL, linetype=3),
+    panel.grid.major = element_line(color=base_color),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor = element_blank(),
+    strip.background = element_rect(),
+
     plot.title = element_text(
-      family=base_family, face="plain", hjust=0, size=base_size*1.25),
+      face="plain", hjust=0, size=base_size*1.25),
     plot.subtitle = element_text(
-      family=base_family, face="plain", hjust=0, size=base_size, 
-      color=accent_color[1]),
+      face="plain", hjust=0, size=base_size),
     strip.text = element_text(
-      family=base_family, face="bold", hjust=0, size=base_size),
-    plot.caption = element_text(size=base_size*.9, hjust=0),
-    
-    axis.text = element_text(size=base_size),
-    axis.title.x = element_text(size=base_size, face="bold", hjust=1),
+      face="bold", hjust=0, size=base_size),
+    plot.caption = element_text(size=base_size*0.9, hjust=0),
+
+    axis.text = element_text(size=base_size, face="bold"),
+    axis.text.y = element_text(color=NULL),
+    axis.title.x = element_text(color=base_color, size=base_size, 
+      face="bold", hjust=1),
     axis.title.y = element_blank(),
-    
+    axis.ticks = element_line(color=NULL),
+    axis.ticks.y = element_blank(),
+    axis.ticks.x = element_line(color=NULL),
+    axis.line = element_line(),
+    axis.line.y = element_blank(),
+
+    legend.background = element_rect(fill=NA, color=NA),
+    legend.box.background = element_rect(fill=NA, color=NA),
     legend.title = element_text(size=base_size*0.9, hjust=0),
     legend.margin = margin(0,0,0,1, "lines"),
-    legend.key.size = unit(1, "lines"),
+    legend.key.size = unit(.8, "lines"),
     legend.text = element_text(base_size*0.8),
     legend.position="right", legend.justification="left",
     legend.direction="vertical",
     ...)
-
-# Save my defaults for reuse
-save(theme_mblabs, thematic_on, file="theme_mblabs.rda")
-
-# Apply updated ggplot theme
-theme_set(theme_mblabs())
 ```
 
-Simply visualize new lattice and ggplot color palettes.
+Finally we generate a few sample `ggplot` and `lattice` charts below to check the results.
 
 ```{r}
+# Apply and check my new graphic theme
+theme_set(theme_labs())
+
 ggplot(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col()
 ```
 
 ```{r}
-ggplot(mtcars, aes(wt, mpg, color=gear, linewidth=carb)) + 
+ggplot(mtcars, aes(wt, mpg, color=carb)) + 
   geom_point() + geom_smooth() + 
   labs(title="My Title", subtitle="My Subtitle", caption="My plot caption")
 ```
 
 ```{r}
-ggplot(faithfuld, aes(waiting, eruptions, z = density)) +
+ggplot(faithfuld, aes(waiting, eruptions, z=density)) +
   geom_raster(aes(fill = density)) +
   geom_contour()
 ```
 
 ```{r}
-ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) + geom_point()
+ggplot(mtcars, aes(wt, mpg, color=factor(cyl))) + geom_point() +
+  labs(title="My Title", subtitle="My Subtitle", caption="My plot caption")
 ```
 
 ```{r}

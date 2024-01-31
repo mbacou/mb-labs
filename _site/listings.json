@@ -10,7 +10,8 @@
   {
     "listing": "/portfolio.html",
     "items": [
-      "/portfolio/webapps.html",
+      "/portfolio/app-wadashboard.html",
+      "/portfolio/app-pricing.html",
       "/portfolio/tableau.html",
       "/portfolio/print.html"
     ]

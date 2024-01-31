@@ -1,2 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^_
+^.quarto
+^www
+^posts
+^portfolio

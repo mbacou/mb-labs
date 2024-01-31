@@ -82,6 +82,6 @@ format:
     theme: www/theme-light.scss
 
     grid:
-      sidebar-width: 210px
-      body-width: 980px
+      sidebar-width: 200px
+      body-width: 840px
       margin-width: 260px

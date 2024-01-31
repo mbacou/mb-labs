@@ -1,11 +1,11 @@
 ---
 title: Interactive Web Applications
 subtitle: My Design Portfolio
-image: fig/portfolio-webapps.png
+image: fig/mbacou-app-pricing.png
 date: 2024-02-01
 date-modified: last-modified
 categories:
-  - design
+  - model front-end
   - R/Shiny
 abstract: |
   Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.
