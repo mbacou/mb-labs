@@ -1,17 +1,23 @@
 ---
-title: Theme Configuration
-subtitle: Quarto and Boostrap 5
-description: A hotchpotch of Boostrap 5 theme customizations for this Quarto blog.
+title: Configuring a Quarto Website
+subtitle: The best of Boostrap 5 CSS
 date: 2022-12-01
 date-modified: last-modified
 image: thumb.svg
-draft: false
-freeze: false
 categories:
   - quarto
-  - design
+  - web design
+draft: false
+freeze: false
+description: |
+  A hotchpotch of Boostrap 5 tips and theme tweaks I have made on this website -- 
+  documented here with love. Feel free to reuse my [`theme.scss`](/www/theme-light.scss).
 abstract: |
-  Random content to help me migrate this personal blog from [distill](https://rstudio.github.io/distill/) to [quarto](https://quarto.org/). Quarto uses a new templating system built on top of [Bootstrap 5](https://getbootstrap.com/docs/5.0/) with new page layout and extended publishing formats.
+  Random content to help me migrate this personal blog from
+  [distill](https://rstudio.github.io/distill/) to [quarto](https://quarto.org/). 
+  Quarto uses a new templating system built on top of 
+  [Bootstrap 5](https://getbootstrap.com/docs/5.0/) with new page layout and extended
+  publishing formats.
 ---
 
 ::: {.column-screen}
@@ -39,7 +45,7 @@ Sometimes I may want an optional flushed banner with random static or dynamic co
 
 # Color System
 
-I select a standard Bootstrap 12-color palette that strives to complement my [Kubuntu desktop](https://store.kde.org/p/1980663)[^kde].
+Choosing a color scheme is easy, you can start from your favorite photo or graphic and upload it to one of the many online palette generators to extract base and accent colors. Below I have selected a standard 12-color palette that strives to complement my decade old [Kubuntu desktop](https://store.kde.org/p/1980663)[^kde].
 
 [^kde]: KDE, 30 years later, still going strong!
 ![](https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png){width=80% .lightbox}
@@ -92,7 +98,7 @@ This is a callout with a title.
 
 # Typography
 
-Bootstrap default line-height and sizing typically work. No change here aside from using `Inter` and `Roboto Condensed` Google fonts.
+Bootstrap default line-height and sizing typically work. No change here aside from using `Inter` and `Roboto Condensed` Google fonts. This is how **bold**, *italic*, and <small>small</small> text look like. I can also play around with <span class="text-info">accented</span> text using Bootstrap CSS semantic classes.
 
 ## Heading 2
 
@@ -126,7 +132,7 @@ Sample paragraph content.
 
 Sample paragraph content.
 
-Here is a footnote reference,[^1] and another.[^longnote]
+Here is a footnote reference,[^1] and another one much longer.[^longnote]
 
 [^1]: Here is the footnote.
 
@@ -136,7 +142,7 @@ Here is a footnote reference,[^1] and another.[^longnote]
 
 ## Tables
 
-I normally like my tables slightly more condensed than Bootstrap's defaults and to resemble LaTeX typesetting, so made a few simple changes here.
+I normally like my tables slightly more condensed than Bootstrap's default and to resemble LaTeX typesetting, so made a few simple changes here.
 
 | fruit  | price  |
 |--------|--------|
@@ -179,7 +185,7 @@ knitr::kable(
 )
 ```
 
-## Code Blocks and Plots
+## Code Chunks and Plots
 
 I call the `thematic::thematic_on()` function to auto-generate `lattice` and `ggplot2` palettes that complement my new Bootstrap colors.
 
@@ -190,7 +196,7 @@ library(thematic)
 thematic_on(
   bg="transparent", fg="#111719", accent="#789494",
   font = font_spec("Roboto Condensed"),
-  sequential = sequential_gradient( fg_weight=.5, bg_weight=.5, fg_low=FALSE),
+  sequential = sequential_gradient(fg_weight=.5, bg_weight=.5, fg_low=FALSE),
   qualitative = c(
     "#789494", "#445e64", "#222e32", 
     "#aea39a", "#98796f", "#9b59b6", "#3daee9",
@@ -219,7 +225,7 @@ theme_labs <- function(
   ) + theme(
 
     plot.margin = unit(c(1, 1, 1, 1), "lines"),
-    text = element_text(color=base_color, lineheight=.8),
+    text = element_text(color=base_color, lineheight=.9),
     line = element_line(linetype=1, color=base_color),
     rect = element_rect(fill=NA, linetype=0, color=NA),
     plot.background = element_rect(fill=base_bg, color=NA),
@@ -232,16 +238,17 @@ theme_labs <- function(
 
     plot.title = element_text(
       face="plain", hjust=0, size=base_size*1.25),
-    plot.subtitle = element_text(
-      face="plain", hjust=0, size=base_size),
+    plot.subtitle = element_text(margin=margin(0,0,1,0, "lines"),
+      face="plain", size=base_size, hjust=0),
     strip.text = element_text(
       face="bold", hjust=0, size=base_size),
-    plot.caption = element_text(size=base_size*0.9, hjust=0),
+    plot.caption = element_text(margin=margin(-0.5,4,0,0, "lines"),
+      size=base_size*0.9, hjust=0),
 
     axis.text = element_text(size=base_size, face="bold"),
     axis.text.y = element_text(color=NULL),
-    axis.title.x = element_text(color=base_color, size=base_size, 
-      face="bold", hjust=1),
+    axis.title.x = element_text(color=base_color, 
+      size=base_size, face="bold", hjust=1),
     axis.title.y = element_blank(),
     axis.ticks = element_line(color=NULL),
     axis.ticks.y = element_blank(),
@@ -254,13 +261,13 @@ theme_labs <- function(
     legend.title = element_text(size=base_size*0.9, hjust=0),
     legend.margin = margin(0,0,0,1, "lines"),
     legend.key.size = unit(.8, "lines"),
-    legend.text = element_text(base_size*0.8),
+    legend.text = element_text(base_size*0.9),
     legend.position="right", legend.justification="left",
     legend.direction="vertical",
     ...)
 ```
 
-Finally we generate a few sample `ggplot` and `lattice` charts below to check the results.
+Finally we generate a few sample `ggplot` and `lattice` charts below to make sure everything looks adequate.
 
 ```{r}
 # Apply and check my new graphic theme
@@ -272,7 +279,11 @@ ggplot(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col()
 ```{r}
 ggplot(mtcars, aes(wt, mpg, color=carb)) + 
   geom_point() + geom_smooth() + 
-  labs(title="My Title", subtitle="My Subtitle", caption="My plot caption")
+  labs(
+    title="My Long and Descriptive Plot Title", 
+    subtitle="My very long subtitle with many units", 
+    caption="My very long plot caption with many references.
+             My very long plot caption with many references.")
 ```
 
 ```{r}
@@ -286,6 +297,13 @@ ggplot(mtcars, aes(wt, mpg, color=factor(cyl))) + geom_point() +
   labs(title="My Title", subtitle="My Subtitle", caption="My plot caption")
 ```
 
+Note that `thematic_on()` also does a little magic with base R graphics `par()` options. 
+
 ```{r}
 lattice::show.settings()
+
+x <- rchisq(100, df=4)
+hist(x, freq=FALSE, ylim=c(0, 0.2), col=1, border=2)
+grid(NA, NULL, col=4)
+curve(dchisq(x, df=4), col=2, lty=2, lwd=2, add=TRUE)
 ```

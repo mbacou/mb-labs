@@ -22,8 +22,9 @@ website:
 
   navbar:
     title: "{{< fa regular compass-drafting >}}   Mel's Labs"
-    background: dark
-    border: false
+    background: white
+    foreground: dark
+    border: true
 
     left:
       - text: Notebooks
@@ -35,10 +36,10 @@ website:
     right:
       - icon: github
         href: https://github.com/mbacou/mb-labs
-      - icon: linkedin
-        href: https://linkedin.com/in/mbacou
       - icon: telegram
         href: t.me/mbacou
+      - icon: linkedin
+        href: https://linkedin.com/in/mbacou
       - icon: rss
         href: index.xml
 

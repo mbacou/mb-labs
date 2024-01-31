@@ -20,7 +20,7 @@
 <generator>quarto-1.5.3</generator>
 <lastBuildDate>Thu, 01 Dec 2022 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Theme Configuration</title>
+  <title>Configuring a Quarto Website</title>
   <dc:creator>Melanie BACOU</dc:creator>
   <link>https://mbacou.com/posts/2022-12-01-theme/</link>
   <description><![CDATA[ 
@@ -32,8 +32,8 @@
 <div class="column-screen">
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-3d4fd15896d8d857e1ef" style="width:100%;height:10rem;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3d4fd15896d8d857e1ef">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0c9a3892bc7c10fb607d" style="width:100%;height:10rem;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0c9a3892bc7c10fb607d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}]},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -54,7 +54,7 @@ font-style: inherit;">  ```</span></span>
 <span id="cb1-6">  :::</span></code></pre></div>
 <section id="color-system" class="level1 page-columns page-full">
 <h1>Color System</h1>
-<p>I select a standard Bootstrap 12-color palette that strives to complement my <a href="https://store.kde.org/p/1980663">Kubuntu desktop</a><sup>1</sup>.</p>
+<p>Choosing a color scheme is easy, you can start from your favorite photo or graphic and upload it to one of the many online palette generators to extract base and accent colors. Below I have selected a standard 12-color palette that strives to complement my decade old <a href="https://store.kde.org/p/1980663">Kubuntu desktop</a><sup>1</sup>.</p>
 <div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;KDE, 30 years later, still going strong! <a href="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="img-fluid" style="width:80.0%"></a></p></div><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(htmltools)</span>
@@ -271,7 +271,7 @@ Warning
 </section>
 <section id="typography" class="level1 page-columns page-full">
 <h1>Typography</h1>
-<p>Bootstrap default line-height and sizing typically work. No change here aside from using <code>Inter</code> and <code>Roboto Condensed</code> Google fonts.</p>
+<p>Bootstrap default line-height and sizing typically work. No change here aside from using <code>Inter</code> and <code>Roboto Condensed</code> Google fonts. This is how <strong>bold</strong>, <em>italic</em>, and <small>small</small> text look like. I can also play around with <span class="text-info">accented</span> text using Bootstrap CSS semantic classes.</p>
 <section id="heading-2" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
 <p>Sample paragraph content.</p>
@@ -302,7 +302,7 @@ Blockquote content comes here…<br>
 <section id="heading-5" class="level5 page-columns page-full">
 <h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
 <p>Sample paragraph content.</p>
-<p>Here is a footnote reference,<sup>3</sup> and another.<sup>4</sup></p>
+<p>Here is a footnote reference,<sup>3</sup> and another one much longer.<sup>4</sup></p>
 <div class="no-row-height column-margin column-container"><p><sup>3</sup>&nbsp;Here is the footnote.</p><p><sup>4</sup>&nbsp;Here’s one with multiple blocks.</p>
 <p>Subsequent paragraphs are indented to show that they belong to the previous footnote.</p></div></section>
 </section>
@@ -310,7 +310,7 @@ Blockquote content comes here…<br>
 </section>
 <section id="tables" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="tables">Tables</h2>
-<p>I normally like my tables slightly more condensed than Bootstrap’s defaults and to resemble LaTeX typesetting, so made a few simple changes here.</p>
+<p>I normally like my tables slightly more condensed than Bootstrap’s default and to resemble LaTeX typesetting, so made a few simple changes here.</p>
 <table class="table">
 <caption>Default</caption>
 <thead>
@@ -538,8 +538,8 @@ font-style: inherit;">10</span>]</span>
 <div class="quarto-table-caption margin-caption">A full-width table to increase content space</div></div>
 </div>
 </section>
-<section id="code-blocks-and-plots" class="level2">
-<h2 class="anchored" data-anchor-id="code-blocks-and-plots">Code Blocks and Plots</h2>
+<section id="code-chunks-and-plots" class="level2">
+<h2 class="anchored" data-anchor-id="code-chunks-and-plots">Code Chunks and Plots</h2>
 <p>I call the <code>thematic::thematic_on()</code> function to auto-generate <code>lattice</code> and <code>ggplot2</code> palettes that complement my new Bootstrap colors.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
@@ -576,7 +576,7 @@ font-style: inherit;">"Roboto Condensed"</span>),</span>
 background-color: null;
 font-style: inherit;">sequential =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">sequential_gradient</span>( <span class="at" style="color: #657422;
+font-style: inherit;">sequential_gradient</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">fg_weight=</span>.<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -707,7 +707,7 @@ font-style: inherit;">color=</span>base_color, <span class="at" style="color: #6
 background-color: null;
 font-style: inherit;">lineheight=</span>.<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">8</span>),</span>
+font-style: inherit;">9</span>),</span>
 <span id="cb5-16">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">line =</span> <span class="fu" style="color: #4758AB;
@@ -818,18 +818,32 @@ font-style: inherit;">1.25</span>),</span>
 background-color: null;
 font-style: inherit;">plot.subtitle =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">element_text</span>(</span>
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">margin=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">margin</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lines"</span>),</span>
 <span id="cb5-29">      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">face=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plain"</span>, <span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;">size=</span>base_size, <span class="at" style="color: #657422;
+background-color: null;
 font-style: inherit;">hjust=</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">size=</span>base_size),</span>
+font-style: inherit;">0</span>),</span>
 <span id="cb5-30">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">strip.text =</span> <span class="fu" style="color: #4758AB;
@@ -852,6 +866,23 @@ font-style: inherit;">plot.caption =</span> <span class="fu" style="color: #4758
 background-color: null;
 font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;">margin=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">margin</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lines"</span>),</span>
+<span id="cb5-33">      <span class="at" style="color: #657422;
+background-color: null;
 font-style: inherit;">size=</span>base_size<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span><span class="fl" style="color: #AD0000;
@@ -861,8 +892,8 @@ background-color: null;
 font-style: inherit;">hjust=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>),</span>
-<span id="cb5-33"></span>
-<span id="cb5-34">    <span class="at" style="color: #657422;
+<span id="cb5-34"></span>
+<span id="cb5-35">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.text =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -873,7 +904,7 @@ background-color: null;
 font-style: inherit;">face=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"bold"</span>),</span>
-<span id="cb5-35">    <span class="at" style="color: #657422;
+<span id="cb5-36">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.text.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -882,16 +913,16 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NULL</span>),</span>
-<span id="cb5-36">    <span class="at" style="color: #657422;
+<span id="cb5-37">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">color=</span>base_color, <span class="at" style="color: #657422;
+font-style: inherit;">color=</span>base_color, </span>
+<span id="cb5-38">      <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">size=</span>base_size, </span>
-<span id="cb5-37">      <span class="at" style="color: #657422;
+font-style: inherit;">size=</span>base_size, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">face=</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -900,12 +931,12 @@ background-color: null;
 font-style: inherit;">hjust=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>),</span>
-<span id="cb5-38">    <span class="at" style="color: #657422;
+<span id="cb5-39">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_blank</span>(),</span>
-<span id="cb5-39">    <span class="at" style="color: #657422;
+<span id="cb5-40">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.ticks =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -914,12 +945,12 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NULL</span>),</span>
-<span id="cb5-40">    <span class="at" style="color: #657422;
+<span id="cb5-41">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.ticks.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_blank</span>(),</span>
-<span id="cb5-41">    <span class="at" style="color: #657422;
+<span id="cb5-42">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.ticks.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -928,18 +959,18 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NULL</span>),</span>
-<span id="cb5-42">    <span class="at" style="color: #657422;
+<span id="cb5-43">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.line =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_line</span>(),</span>
-<span id="cb5-43">    <span class="at" style="color: #657422;
+<span id="cb5-44">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.line.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_blank</span>(),</span>
-<span id="cb5-44"></span>
-<span id="cb5-45">    <span class="at" style="color: #657422;
+<span id="cb5-45"></span>
+<span id="cb5-46">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.background =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -952,7 +983,7 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>),</span>
-<span id="cb5-46">    <span class="at" style="color: #657422;
+<span id="cb5-47">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.box.background =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -965,7 +996,7 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>),</span>
-<span id="cb5-47">    <span class="at" style="color: #657422;
+<span id="cb5-48">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.title =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -980,7 +1011,7 @@ background-color: null;
 font-style: inherit;">hjust=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>),</span>
-<span id="cb5-48">    <span class="at" style="color: #657422;
+<span id="cb5-49">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.margin =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -995,7 +1026,7 @@ background-color: null;
 font-style: inherit;">1</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"lines"</span>),</span>
-<span id="cb5-49">    <span class="at" style="color: #657422;
+<span id="cb5-50">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.key.size =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1004,7 +1035,7 @@ background-color: null;
 font-style: inherit;">8</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"lines"</span>),</span>
-<span id="cb5-50">    <span class="at" style="color: #657422;
+<span id="cb5-51">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.text =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1012,8 +1043,8 @@ font-style: inherit;">element_text</span>(base_size<span class="sc" style="color
 background-color: null;
 font-style: inherit;">*</span><span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0.8</span>),</span>
-<span id="cb5-51">    <span class="at" style="color: #657422;
+font-style: inherit;">0.9</span>),</span>
+<span id="cb5-52">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.position=</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -1022,14 +1053,14 @@ background-color: null;
 font-style: inherit;">legend.justification=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"left"</span>,</span>
-<span id="cb5-52">    <span class="at" style="color: #657422;
+<span id="cb5-53">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.direction=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"vertical"</span>,</span>
-<span id="cb5-53">    ...)</span></code></pre></div>
+<span id="cb5-54">    ...)</span></code></pre></div>
 </div>
-<p>Finally we generate a few sample <code>ggplot</code> and <code>lattice</code> charts below to check the results.</p>
+<p>Finally we generate a few sample <code>ggplot</code> and <code>lattice</code> charts below to make sure everything looks adequate.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -1084,19 +1115,25 @@ background-color: null;
 font-style: inherit;">+</span> </span>
 <span id="cb7-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+font-style: inherit;">labs</span>(</span>
+<span id="cb7-4">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"My Title"</span>, <span class="at" style="color: #657422;
+font-style: inherit;">"My Long and Descriptive Plot Title"</span>, </span>
+<span id="cb7-5">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">subtitle=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"My Subtitle"</span>, <span class="at" style="color: #657422;
+font-style: inherit;">"My very long subtitle with many units"</span>, </span>
+<span id="cb7-6">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">caption=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"My plot caption"</span>)</span></code></pre></div>
+font-style: inherit;">"My very long plot caption with many references.</span></span>
+<span id="cb7-7"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">             My very long plot caption with many references."</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1174,6 +1211,7 @@ font-style: inherit;">"My plot caption"</span>)</span></code></pre></div>
 </div>
 </div>
 </div>
+<p>Note that <code>thematic_on()</code> also does a little magic with base R graphics <code>par()</code> options.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">lattice<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1187,6 +1225,83 @@ font-style: inherit;">show.settings</span>()</span></code></pre></div>
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">x <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rchisq</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">df=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>)</span>
+<span id="cb11-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hist</span>(x, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">freq=</span><span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ylim=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.2</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">border=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb11-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">grid</span>(<span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA</span>, <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>)</span>
+<span id="cb11-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">curve</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">dchisq</span>(x, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">df=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">lty=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">lwd=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">add=</span><span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://mbacou.com/posts/2022-12-01-theme/index_files/figure-html/unnamed-chunk-10-2.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 
 
@@ -1196,7 +1311,7 @@ font-style: inherit;">show.settings</span>()</span></code></pre></div>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2022,
   author = {BACOU, Melanie},
-  title = {Theme {Configuration}},
+  title = {Configuring a {Quarto} {Website}},
   date = {2022-12-01},
   url = {https://mbacou.com/posts/2022-12-01-theme},
   langid = {en},
@@ -1208,11 +1323,11 @@ font-style: inherit;">show.settings</span>()</span></code></pre></div>
     extended publishing formats.}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2022" class="csl-entry quarto-appendix-citeas">
-BACOU, Melanie. 2022. <span>“Theme Configuration.”</span> December 1,
-2022. <a href="https://mbacou.com/posts/2022-12-01-theme">https://mbacou.com/posts/2022-12-01-theme</a>.
+BACOU, Melanie. 2022. <span>“Configuring a Quarto Website.”</span>
+December 1, 2022. <a href="https://mbacou.com/posts/2022-12-01-theme">https://mbacou.com/posts/2022-12-01-theme</a>.
 </div></div></section></div> ]]></description>
   <category>quarto</category>
-  <category>design</category>
+  <category>web design</category>
   <guid>https://mbacou.com/posts/2022-12-01-theme/</guid>
   <pubDate>Thu, 01 Dec 2022 00:00:00 GMT</pubDate>
   <media:content url="https://mbacou.com/posts/2022-12-01-theme/thumb.svg" medium="image" type="image/svg+xml"/>

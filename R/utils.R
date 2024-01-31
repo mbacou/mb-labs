@@ -81,7 +81,7 @@ gglabs <- function(
   ) + theme(
 
     plot.margin = unit(c(1, 1, 1, 1), "lines"),
-    text = element_text(color=base_color, lineheight=.8),
+    text = element_text(color=base_color, lineheight=.9),
     line = element_line(linetype=1, color=base_color),
     rect = element_rect(fill=NA, linetype=0, color=NA),
     plot.background = element_rect(fill=base_bg, color=NA),
@@ -94,17 +94,19 @@ gglabs <- function(
 
     plot.title = element_text(
       face="plain", hjust=0, size=base_size*1.25),
-    plot.subtitle = element_text(
-      face="plain", hjust=0, size=base_size),
+    plot.subtitle = element_text(margin=margin(0,0,1,0, "lines"),
+      face="plain", size=base_size, hjust=0),
     strip.text = element_text(
       face="bold", hjust=0, size=base_size),
-    plot.caption = element_text(size=base_size*0.9, hjust=0),
+    plot.caption = element_text(margin=margin(-0.5,4,0,0, "lines"),
+      size=base_size*0.9, hjust=0),
 
     axis.text = element_text(size=base_size, face="bold"),
     axis.text.y = element_text(color=NULL),
     axis.title.x = element_text(color=base_color, size=base_size, face="bold", hjust=1),
     axis.title.y = element_blank(),
     axis.ticks = element_line(color=NULL),
+    axis.ticks.length = unit(0.25, "lines"),
     axis.ticks.y = element_blank(),
     axis.ticks.x = element_line(color=NULL),
     axis.line = element_line(),
@@ -115,7 +117,7 @@ gglabs <- function(
     legend.title = element_text(size=base_size*0.9, hjust=0),
     legend.margin = margin(0,0,0,1, "lines"),
     legend.key.size = unit(.8, "lines"),
-    legend.text = element_text(base_size*0.8),
+    legend.text = element_text(base_size*0.85),
     legend.position="right", legend.justification="left",
     legend.direction="vertical",
     ...

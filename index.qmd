@@ -2,7 +2,7 @@
 title: Econometric and Geospatial Analysis
 subtitle: ... to inform robust and equitable public policy
 margin-header: "_custom.qmd"
-title-block-banner: "var(--bs-light)"
+title-block-banner: "var(--bs-white)"
 page-layout: full
 listing:
   contents: posts
@@ -17,4 +17,4 @@ listing:
 ---
 
 > *" This is my favorite quote of the day "*\
-  <small class="text-muted"> ---By me </small>
+  <small>--- By me </small>
