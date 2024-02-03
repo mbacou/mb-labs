@@ -21,7 +21,7 @@ website:
 
   navbar:
     title: "{{< fa regular compass-drafting >}}   Mel's Labs"
-    foreground: dark
+    foreground: black
     pinned: false
     toggle-position: right
 
@@ -79,7 +79,7 @@ format:
     reference-location: margin
     citation-location: document
 
-    theme: www/theme-light.scss
+    theme: www/theme-notebook.scss
     fontsize: 16px
     title-block-banner: transparent
     grid:

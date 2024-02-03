@@ -329,10 +329,10 @@ library(ggplot2)
 
 # Specify your sequential and qualitative palettes
 thematic_on(
-  bg = "transparent", fg = "#111719", accent = pal12["cyan"],
+  bg = "transparent", fg = "#333333", accent = pal12["cyan"],
   font = font_spec("Roboto Condensed"),
   sequential = sequential_gradient(fg_weight=.5, bg_weight=.5, fg_low=FALSE),
-  qualitative = alpha(pal12, .9)
+  qualitative = alpha(pal12[1:12], .9)
   )
 ```
 
@@ -350,9 +350,9 @@ theme_labs <- function(
   title = NA,
   subtitle = NA,
   base_size = 12,
-  base_family = "Roboto Condensed",
-  base_bg = "transparent",
-  base_color = "#111719",
+  base_family = NULL,
+  base_bg = NULL,
+  base_color = NULL,
   ...) ggthemes::theme_foundation(
     base_size = base_size, base_family = base_family
   ) + theme(

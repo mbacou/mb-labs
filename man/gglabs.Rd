@@ -10,7 +10,7 @@ gglabs(
   pos_x = c("bottom", "top"),
   pos_y = c("right", "left"),
   base_size = 12,
-  base_family = "Roboto Condensed",
+  base_family = NULL,
   base_bg = NULL,
   base_color = NULL,
   ...
@@ -180,10 +180,11 @@ elements.}
 A \code{ggplot2} object with new theme elements applied
 }
 \description{
-A themed \code{ggplot} for this \code{mb-labs} website.
+A themed \code{ggplot} for \code{mblabs} website.
 }
 \examples{
 require(ggplot2)
+theme_labs_on()
 
 gglabs(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col() +
   guides(y=guide_none(), y.sec=guide_axis()) +

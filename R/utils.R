@@ -57,8 +57,8 @@ pal <- function(x, ...)  colorRampPalette(unname(pal12), ...)(x)
 #' @export
 theme_labs_on <- function(
   bg = "transparent",
-  fg = "#111719",
-  accent = pal11[["teal"]],
+  fg = "#333333",
+  accent = pal12[["teal"]],
   font = "Roboto Condensed",
   sequential = sequential_gradient(fg_weight=.5, bg_weight=.5, fg_low=FALSE),
   qualitative = alpha(pal(12), .9),
@@ -84,6 +84,7 @@ theme_labs_on <- function(
 #' @import ggplot2
 #' @examples
 #' require(ggplot2)
+#' theme_labs_on()
 #'
 #' gglabs(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col() +
 #'   guides(y=guide_none(), y.sec=guide_axis()) +
@@ -107,7 +108,7 @@ gglabs <- function(
   pos_x = c("bottom", 'top'),
   pos_y = c("right", "left"),
   base_size = 12,
-  base_family = "Roboto Condensed",
+  base_family = NULL, # use theme,
   base_bg = NULL, # use theme
   base_color = NULL, # use theme
   ...) {

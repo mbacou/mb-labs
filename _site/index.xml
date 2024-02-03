@@ -33,8 +33,8 @@
 <div class="column-screen mb-4">
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-9e7e083f05b3888a944e" style="width:100%;height:15em;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9e7e083f05b3888a944e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Me, as I'm writing this post. Read on, tips below!",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7d1c756ab73588369ff5" style="width:100%;height:15em;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7d1c756ab73588369ff5">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Me, as I'm writing this post. Read on, tips below!",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -724,7 +724,7 @@ font-style: inherit;">"transparent"</span>, <span class="at" style="color: #6574
 background-color: null;
 font-style: inherit;">fg =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#111719"</span>, <span class="at" style="color: #657422;
+font-style: inherit;">"#333333"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">accent =</span> pal12[<span class="st" style="color: #20794D;
 background-color: null;
@@ -757,7 +757,13 @@ font-style: inherit;">FALSE</span>),</span>
 background-color: null;
 font-style: inherit;">qualitative =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">alpha</span>(pal12, .<span class="dv" style="color: #AD0000;
+font-style: inherit;">alpha</span>(pal12[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>], .<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">9</span>)</span>
 <span id="cb18-10">  )</span></code></pre></div>
@@ -795,19 +801,19 @@ background-color: null;
 font-style: inherit;">12</span>,</span>
 <span id="cb19-5">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">base_family =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">base_family =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">"Roboto Condensed"</span>,</span>
+font-style: inherit;">NULL</span>,</span>
 <span id="cb19-6">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">base_bg =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">base_bg =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">"transparent"</span>,</span>
+font-style: inherit;">NULL</span>,</span>
 <span id="cb19-7">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">base_color =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">base_color =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">"#111719"</span>,</span>
+font-style: inherit;">NULL</span>,</span>
 <span id="cb19-8">  ...) ggthemes<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
