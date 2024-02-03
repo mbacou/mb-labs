@@ -7,11 +7,10 @@
 theme_labs_on(
   bg = "transparent",
   fg = "#111719",
-  accent = "#789494",
+  accent = pal11[["teal"]],
   font = "Roboto Condensed",
   sequential = sequential_gradient(fg_weight = 0.5, bg_weight = 0.5, fg_low = FALSE),
-  qualitative = c("#789494", "#445e64", "#222e32", "#aea39a", "#98796f", "#9b59b6",
-    "#3daee9", "#27ae60", "#edcd37", "#f67400", "#da4453"),
+  qualitative = alpha(pal(12), 0.9),
   ...
 )
 }
@@ -44,8 +43,8 @@ levels exceeds the max allowed colors). Defaults to \code{\link[thematic:okabe_i
 A global graphic theme
 }
 \description{
-Sets new default values to \code{thematic::thematic_on}, which modify \code{lattice}
-and \code{ggplot} color palettes and fonts.
+Sets \code{mblabs} default values to \code{thematic::thematic_on}, which modify \code{lattice} and
+\code{ggplot} color palettes and fonts.
 }
 \examples{
 theme_labs_on()

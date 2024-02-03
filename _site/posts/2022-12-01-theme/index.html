@@ -2,15 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.3">
+<meta name="generator" content="quarto-1.5.6">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Melanie BACOU">
-<meta name="dcterms.date" content="2022-12-01">
-<meta name="description" content="A hotchpotch of Boostrap 5 tips and theme tweaks I have made on this website – documented here with love. Feel free to reuse my theme.scss.">
+<meta name="dcterms.date" content="2023-10-01">
 
-<title>Mel's Labs – Configuring a Quarto Website</title>
+<title>Mel's Labs – Migrating from Distill to Quarto Publishing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,7 +56,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -112,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <style>
 
       .quarto-title-block .quarto-title-banner {
-        background: white;
+        background: transparent;
       }
 </style>
 <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
@@ -126,8 +145,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/leaflet-binding-2.2.1/leaflet.js"></script>
 
 
-<meta name="twitter:title" content="Mel’s Labs - Configuring a Quarto Website">
-<meta name="twitter:description" content="A hotchpotch of Boostrap 5 tips and theme tweaks I have made on this website – documented here with love. Feel free to reuse my theme.scss.">
+<meta name="twitter:title" content="Mel’s Labs - Migrating from Distill to Quarto Publishing">
+<meta name="twitter:description" content="A post about literate programming in general and Quarto formats in particular to help me migrate this personal blog from Distill to Quarto. Compared with J.J. Allaire’s Distill for R Markdown, Posit Quarto Markdown uses a new templating system built on top of Bootstrap v5.3.1 with new page layout, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom theme for this Quarto-powered website, and design tweaks I have made along the way.">
 <meta name="twitter:image" content="https://mbacou.com/posts/2022-12-01-theme/thumb.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -179,7 +198,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="https://www.youtube.com/@mbacou/playlists"> <i class="bi bi-youtube" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -194,16 +213,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Configuring a Quarto Website</h1>
-            <p class="subtitle lead">The best of Boostrap 5 CSS</p>
-                  <div>
-        <div class="description">
-          <p>A hotchpotch of Boostrap 5 tips and theme tweaks I have made on this website – documented here with love. Feel free to reuse my <a href="../../www/theme-light.scss"><code>theme.scss</code></a>.</p>
-        </div>
-      </div>
-                          <div class="quarto-categories">
+      <h1 class="title">Migrating from <em>Distill</em> to <em>Quarto</em> Publishing</h1>
+            <p class="subtitle lead">Mastering Quarto Markdown for Literate Programming and Web Publishing</p>
+                                <div class="quarto-categories">
                 <div class="quarto-category">quarto</div>
-                <div class="quarto-category">web design</div>
+                <div class="quarto-category">dataviz</div>
               </div>
                   </div>
   </div>
@@ -221,14 +235,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 1, 2022</p>
+        <p class="date">October 1, 2023</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">January 31, 2024</p>
+        <p class="date-modified">February 3, 2024</p>
       </div>
     </div>
       
@@ -237,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div>
     <div class="abstract">
       <div class="block-title">Abstract</div>
-      <p>Random content to help me migrate this personal blog from <a href="https://rstudio.github.io/distill/">distill</a> to <a href="https://quarto.org/">quarto</a>. Quarto uses a new templating system built on top of <a href="https://getbootstrap.com/docs/5.0/">Bootstrap 5</a> with new page layout and extended publishing formats.</p>
+      <p>A post about literate programming in general and Quarto formats in particular to help me migrate this personal blog from <a href="https://rstudio.github.io/distill/">Distill</a> to <a href="https://quarto.org/">Quarto</a>. Compared with <em>J.J. Allaire’s Distill for R Markdown</em>, <em>Posit Quarto Markdown</em> uses a new templating system built on top of <a href="https://getbootstrap.com/docs/5.3/customize/overview/">Bootstrap v5.3.1</a> with new page layout, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom theme for this Quarto-powered website, and design tweaks I have made along the way.</p>
     </div>
   </div>
   
@@ -248,8 +262,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#color-system" id="toc-color-system" class="nav-link active" data-scroll-target="#color-system">Color System</a></li>
-  <li><a href="#callout-blocks" id="toc-callout-blocks" class="nav-link" data-scroll-target="#callout-blocks">Callout Blocks</a></li>
+  <li><a href="#css-grid-system" id="toc-css-grid-system" class="nav-link active" data-scroll-target="#css-grid-system">CSS Grid System</a></li>
+  <li><a href="#color-system" id="toc-color-system" class="nav-link" data-scroll-target="#color-system">Color System</a></li>
+  <li><a href="#block-elements" id="toc-block-elements" class="nav-link" data-scroll-target="#block-elements">Block Elements</a></li>
   <li><a href="#typography" id="toc-typography" class="nav-link" data-scroll-target="#typography">Typography</a>
   <ul class="collapse">
   <li><a href="#heading-2" id="toc-heading-2" class="nav-link" data-scroll-target="#heading-2">Heading 2</a>
@@ -257,7 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#heading-3" id="toc-heading-3" class="nav-link" data-scroll-target="#heading-3">Heading 3</a></li>
   </ul></li>
   <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
-  <li><a href="#code-chunks-and-plots" id="toc-code-chunks-and-plots" class="nav-link" data-scroll-target="#code-chunks-and-plots">Code Chunks and Plots</a></li>
+  <li><a href="#apply-themed-colors-to-r-graphics" id="toc-apply-themed-colors-to-r-graphics" class="nav-link" data-scroll-target="#apply-themed-colors-to-r-graphics">Apply Themed Colors to R Graphics</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -273,54 +288,202 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="column-screen">
+<div class="column-screen mb-4">
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-0c9a3892bc7c10fb607d" style="width:100%;height:10rem;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0c9a3892bc7c10fb607d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9e7e083f05b3888a944e" style="width:100%;height:15em;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9e7e083f05b3888a944e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Me, as I'm writing this post. Read on, tips below!",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
-<p>Sometimes I may want an optional flushed banner with random static or dynamic content. Note that this will push and collapse the TOC to the top of the page until the user scrolls past the <code>&lt;div&gt;</code>. For example here is how to insert a dynamic map inside a flushed <code>&lt;div class="column-screen"&gt;</code> element, like the one just above:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  ::: {.column-screen}</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="in">```{r}</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">  library(leaflet)</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">  leaflet(width="100%", height="10rem") %&gt;% addTiles()</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">  ```</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  :::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="color-system" class="level1 page-columns page-full">
-<h1>Color System</h1>
-<p>Choosing a color scheme is easy, you can start from your favorite photo or graphic and upload it to one of the many online palette generators to extract base and accent colors. Below I have selected a standard 12-color palette that strives to complement my decade old <a href="https://store.kde.org/p/1980663">Kubuntu desktop</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;KDE, 30 years later, still going strong! <a href="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="img-fluid" style="width:80.0%"></a></p></div><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"info"</span>, <span class="st">"success"</span>, <span class="st">"warning"</span>, <span class="st">"danger"</span>, <span class="st">"primary"</span>, <span class="st">"secondary"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dark"</span>, <span class="st">"light"</span>, <span class="st">"white"</span>, <span class="st">"indigo"</span>, <span class="st">"purple"</span>, <span class="st">"pink"</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span>  <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"orange"</span>, <span class="st">"red"</span>, <span class="st">"teal"</span>, <span class="st">"cyan"</span>,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"#222e32"</span>, <span class="st">"#fefefe"</span>, <span class="st">"#ffffff"</span>, <span class="st">"#9b59b6"</span>, <span class="st">"#98796f"</span>, <span class="st">"#aea39a"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">2</span>,<span class="dv">6</span>), <span class="fu">rep</span>(<span class="dv">4</span>,<span class="dv">6</span>))</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>l <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(x),</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(i) <span class="fu">div</span>(<span class="at">class=</span><span class="fu">paste0</span>(<span class="st">"g-col-"</span>, z[i], <span class="st">" small p-2 bg-"</span>, x[i]), </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">HTML</span>(x[i], <span class="st">"&lt;br/&gt;("</span>, y[i], <span class="st">")"</span>)))</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">div</span>(<span class="at">class=</span><span class="st">"grid"</span>, <span class="at">style=</span><span class="st">"--bs-gap: .5rem;"</span>, <span class="fu">tagList</span>(l))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="grid" style="--bs-gap: .5rem;">
-<div class="g-col-2 small p-2 bg-info">info <br>( blue )</div>
-<div class="g-col-2 small p-2 bg-success">success <br>( green )</div>
-<div class="g-col-2 small p-2 bg-warning">warning <br>( orange )</div>
-<div class="g-col-2 small p-2 bg-danger">danger <br>( red )</div>
-<div class="g-col-2 small p-2 bg-primary">primary <br>( teal )</div>
-<div class="g-col-2 small p-2 bg-secondary">secondary <br>( cyan )</div>
-<div class="g-col-4 small p-2 bg-dark">dark <br>( #222e32 )</div>
-<div class="g-col-4 small p-2 bg-light">light <br>( #fefefe )</div>
-<div class="g-col-4 small p-2 bg-white">white <br>( #ffffff )</div>
-<div class="g-col-4 small p-2 bg-indigo">indigo <br>( #9b59b6 )</div>
-<div class="g-col-4 small p-2 bg-purple">purple <br>( #98796f )</div>
-<div class="g-col-4 small p-2 bg-pink">pink <br>( #aea39a )</div>
+<p>With the release of <strong>Quarto 1.4</strong>, markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based documents (such as <strong>Rmarkdown</strong> and <strong>Jupyter</strong> notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, generating, documenting, sharing and reproducing computable research experiments.</p>
+<p>Old-time researchers have long used <strong>Emacs <code>Org-Mode</code></strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> along with its wild hordes of keyboard shortcuts<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> to achieve similar results thanks to <em>Eric Schulte</em>’s incredible <strong>babel</strong> extension to <code>Org-Mode</code> <span class="citation" data-cites="schulte2012">(see <a href="#ref-schulte2012" role="doc-biblioref">Schulte et al. 2012</a>)</span> and to <em>John MacFarlane</em>’s <a href="https://pandoc.org/">Pandoc</a> document converter library – but nowadays Quarto makes use of more efficient parsers and runtime engines (Sass, Deno) and adds in-browser real-time rendering of documents.</p>
+<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;For folks born in this century, to <strong>babel</strong> (elips) or to <strong>sweave</strong> (R) is the process of compiling text documents that include both static markup and executable scripts.</p>
+<p><img src="Donald-Knuth.jpg" class="img-rounded img-fluid" style="width:10em"></p>
+<p>The concept of <strong>Literate Programming</strong> was introduced in 1984 by the mathematician <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a> and was widely popularized thereafter in the engineering community thanks to <a href="https://orgmode.org/worg/org-contrib/babel/uses.html">org-mode</a> in the Emacs editor.</p>
+<p><img src="Carsten-Dominik.jpg" class="img-rounded img-fluid" style="width:10em"></p>
+<p>Emacs <strong><code>Org-Mode</code></strong> was created by the astronomer <a href="https://en.wikipedia.org/wiki/Org-mode#:~:text=Org%20Mode%20was%20created%20by,mode%20by%20default%20since%202006">Carsten Dominik</a> in 2003 and remains to this day one of the most used and madly loved note-taking and GTD (Get-Things-Done) tools, with many of its functionality (agenda, tags, etc.) yet to be ported to any markdown engine.</p><p><sup>2</sup>&nbsp;Only keyboard, Baby!</p>
+<p><a href="real-programmers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="real-programmers.png" class="img-fluid"></a></p></div><p>While migrating my old content to the new Quarto markdown syntax, this post briefly outlines my process for creating a custom Bootstrap theme for this revamped website. Feel free to reuse my <code>theme.scss</code> Sass file.</p>
+<section id="css-grid-system" class="level1 page-columns page-full">
+<h1>CSS Grid System</h1>
+<p>Quarto uses the full flexibility of Bootstrap v5.3 grid system, with a few handy classes to help precisely position content on a page, in particular:</p>
+<ul>
+<li>2 predefined (column-based) page layouts:
+<ul>
+<li><code>page-layout: article</code> (this document), and</li>
+<li><code>page-layout: full</code></li>
+</ul></li>
+<li>6 column classes to control content width (shown below)</li>
+<li>2 margin classes to shift content into the left or right column (like that XKCD comics):
+<ul>
+<li><code>&lt;div class="column-margin"&gt;</code>, and</li>
+<li><code>&lt;span class="aside"&gt;</code></li>
+</ul></li>
+<li>8 classes to overflow content into the left or right margin</li>
+</ul>
+<p>For example I use Quarto <code>{.column-screen}</code> to place a flushed banner directly below the post header, as a way to highlight static or dynamic content. Note that this will push and collapse the TOC to the top of the page until the user scrolls past the <code>&lt;div&gt;</code>. Here is the markdown (and R) code to achieve this inside a <code>&lt;div class="column-screen"&gt;</code> element, like the map just above:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>::: {.column-screen}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">library(leaflet)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">leaflet(width="100%", height="15em") %&gt;% addTiles() %&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">  addMarkers(-8.65406047010657, 41.14426475811268, </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">    label="Me, as I'm writing this post. Read on, tips below!", </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">    labelOptions=labelOptions(textsize="1rem"))</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>There are new Quarto CSS classes to help control content width and placement.</p>
+<div class="column-body striped mb-2">
+<p>.column-body</p>
+</div>
+<div class="column-body-outset striped mb-2">
+<p>.column-body-outset</p>
+</div>
+<div class="column-page striped mb-2">
+<p>.column-page</p>
+</div>
+<div class="column-page-inset striped mb-2">
+<p>.column-page-inset</p>
+</div>
+<div class="column-screen striped mb-2">
+<p>.column-screen</p>
+</div>
+<div class="column-screen-inset striped mb-2">
+<p>.column-screen-inset-shaded</p>
+</div>
+<p>Finally any layout is achievable using stackable <code>&lt;div class="g-col-{width}"&gt;</code> columns inside a <code>&lt;div class="grid"&gt;</code> element (see color boxes below). The full system summarized here, copied straight from Quarto online documentation<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><p><sup>3</sup>&nbsp;Refer to <a href="https://quarto.org/docs/authoring/article-layout.html#available-columns">Quarto CSS classes</a> official documentation.</p></div><div class="column-page-right">
+<table class="table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Code Cell <code>column</code></th>
+<th>Class Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Body</td>
+<td><pre><code>column: body
+column: body-outset
+column: body-outset-left
+column: body-outset-right</code></pre></td>
+<td><pre><code>.column-body
+.column-body-outset
+.column-body-outset-left
+.column-body-outset-right</code></pre></td>
+</tr>
+<tr class="even">
+<td>Page Inset</td>
+<td><pre><code>column: page-inset-left
+column: page-inset-right</code></pre></td>
+<td><pre><code>.column-page-inset-left
+.column-page-inset-right</code></pre></td>
+</tr>
+<tr class="odd">
+<td>Page</td>
+<td><pre><code>column: page
+column: page-left
+column: page-right</code></pre></td>
+<td><pre><code>.column-page
+.column-page-left
+.column-page-right</code></pre></td>
+</tr>
+<tr class="even">
+<td>Screen Inset</td>
+<td><pre><code>column: screen-inset
+column: screen-inset-shaded
+column: screen-inset-left
+column: screen-inset-right</code></pre></td>
+<td><pre><code>.column-screen-inset
+.column-screen-inset-shaded
+.column-screen-inset-left
+.column-screen-inset-right</code></pre></td>
+</tr>
+<tr class="odd">
+<td>Screen</td>
+<td><pre><code>column: screen
+column: screen-left
+column: screen-right</code></pre></td>
+<td><pre><code>.column-screen
+.column-screen-left
+.column-screen-right</code></pre></td>
+</tr>
+<tr class="even">
+<td>Margin</td>
+<td><pre><code>column: margin</code></pre></td>
+<td><pre><code>.column-margin / .aside</code></pre></td>
+</tr>
+</tbody>
+</table>
 </div>
 </section>
-<section id="callout-blocks" class="level1">
-<h1>Callout Blocks</h1>
+<section id="color-system" class="level1 page-columns page-full">
+<h1>Color System</h1>
+<p>Choosing a color scheme is easy, start from your favorite photo or graphic and upload it to one of the many online color palette generators to extract base and accent colors. Below I have selected a standard 12-color palette that simply strives to complement my decade old <a href="https://store.kde.org/p/1980663">Kubuntu desktop</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> (in a light version).</p>
+<div class="no-row-height column-margin column-container"><p><sup>4</sup>&nbsp;KDE, 30 years later, still going strong! <a href="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="img-fluid"></a></p></div><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>pal12 <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">cyan   =</span> <span class="st">"#789494"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">teal   =</span> <span class="st">"#445e64"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">dark   =</span> <span class="st">"#222e32"</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">pink   =</span> <span class="st">"#aea39a"</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">purple =</span> <span class="st">"#98796f"</span>,</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">indigo =</span> <span class="st">"#9b59b6"</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">blue   =</span> <span class="st">"#3daee9"</span>,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">green  =</span> <span class="st">"#27ae60"</span>,</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">yellow =</span> <span class="st">"#edcd37"</span>,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">orange =</span> <span class="st">"#f67400"</span>,</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">red    =</span> <span class="st">"#da4453"</span>,</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">light  =</span> <span class="st">"#fefefe"</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">2</span>,<span class="dv">6</span>), <span class="fu">rep</span>(<span class="dv">4</span>,<span class="dv">6</span>))</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>l <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(pal12),</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(i) <span class="fu">div</span>(<span class="at">class=</span><span class="fu">paste0</span>(</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"g-col-"</span>, n[i], <span class="st">" small rounded text-center p-2 bg-"</span>, <span class="fu">names</span>(pal12)[i]), </span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">HTML</span>(<span class="fu">names</span>(pal12)[i], <span class="st">"&lt;br/&gt;("</span>, pal12[[i]], <span class="st">")"</span>)))</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="fu">div</span>(<span class="at">class=</span><span class="st">"grid"</span>, <span class="at">style=</span><span class="st">"--bs-gap: .5rem;"</span>, <span class="fu">tagList</span>(l))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="grid" style="--bs-gap: .5rem;">
+<div class="g-col-2 small rounded text-center p-2 bg-cyan">cyan <br>( #789494 )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-teal">teal <br>( #445e64 )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-dark">dark <br>( #222e32 )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-pink">pink <br>( #aea39a )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-purple">purple <br>( #98796f )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-indigo">indigo <br>( #9b59b6 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-blue">blue <br>( #3daee9 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-green">green <br>( #27ae60 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-yellow">yellow <br>( #edcd37 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-orange">orange <br>( #f67400 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-red">red <br>( #da4453 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-light">light <br>( #fefefe )</div>
+</div>
+</section>
+<section id="block-elements" class="level1">
+<h1>Block Elements</h1>
+<p>Simple indented blockquote with (small) source.</p>
+<blockquote class="blockquote">
+<p>Blockquote title<br>
+Blockquote content comes here…<br>
+<small>– And small description</small></p>
+</blockquote>
+<p>Bootstrap built-in <strong>callout blocks</strong> and <strong>cards</strong> components are readily available in Quarto markdown with the usual semantic colors.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Note that there are 6 types of callout blocks, including: <code>default</code>, <code>note</code>, <code>warning</code>, <code>important</code>, <code>tip</code>, and <code>caution</code>.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -331,37 +494,44 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Note that there are five types of callouts, including: <code>note</code>, <code>warning</code>, <code>important</code>, <code>tip</code>, and <code>caution</code>.</p>
+<p>This is a note.</p>
 </div>
 </div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">### Callout title</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>This is an example of a callout with a title.</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip with Title
+Callout title
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>This is an example of a callout with a title.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-caution callout-titled" title="Cautious">
+<div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-caution collapse="true"}</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">### Expand to learn about collapse</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>This is an example of a 'folded' caution callout</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Cautious
+Expand to learn about collapse
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<section id="expand-to-learn-about-collapse" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="expand-to-learn-about-collapse">Expand To Learn About Collapse</h3>
+<div class="callout-body-container callout-body">
 <p>This is an example of a ‘folded’ caution callout that can be expanded by the user. You can use <code>collapse="true"</code> to collapse it by default or <code>collapse="false"</code> to make a collapsible callout that is expanded by default.</p>
-</section>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="Important">
@@ -393,7 +563,7 @@ Warning
 </section>
 <section id="typography" class="level1 page-columns page-full">
 <h1>Typography</h1>
-<p>Bootstrap default line-height and sizing typically work. No change here aside from using <code>Inter</code> and <code>Roboto Condensed</code> Google fonts. This is how <strong>bold</strong>, <em>italic</em>, and <small>small</small> text look like. I can also play around with <span class="text-info">accented</span> text using Bootstrap CSS semantic classes.</p>
+<p>Bootstrap default line-height and font sizing typically work. No change here aside from using <code>Inter</code> and <code>Roboto Condensed</code> fonts. This is how <strong>bold</strong>, <em>italic</em>, and <small>small</small> text look like. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with <span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use <span class="shaded"><code>.shaded</code></span> and <span class="striped"><code>.striped</code></span>. I also use secondary font for all post metadata, end and margin notes, and for captioning.</p>
 <section id="heading-2" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
 <p>Sample paragraph content.</p>
@@ -416,31 +586,25 @@ Warning
 <section id="heading-4" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
 <p>Sample paragraph content.</p>
-<div class="page-columns page-full"><blockquote class="blockquote">
+<blockquote class="blockquote">
 <p>Blockquote title<br>
 Blockquote content comes here…<br>
-<small>– And small description</small><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-</blockquote><div class="no-row-height column-margin column-container"><p><sup>2</sup>&nbsp;HTML standards recommend placing quote sources outside the <code>&lt;blockquote&gt;</code> element, well…</p></div></div>
+<small>– And small source</small></p>
+</blockquote>
 <section id="heading-5" class="level5 page-columns page-full">
 <h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
 <p>Sample paragraph content.</p>
-<p>Here is a footnote reference,<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> and another one much longer.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-<div class="no-row-height column-margin column-container"><p><sup>3</sup>&nbsp;Here is the footnote.</p><p><sup>4</sup>&nbsp;Here’s one with multiple blocks.</p>
-<p>Subsequent paragraphs are indented to show that they belong to the previous footnote.</p></div></section>
+<p>Here is a footnote reference,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> and another much longer one.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or dircetly in the YAML front matter.</p>
+<div class="no-row-height column-margin column-container"><p><sup>5</sup>&nbsp;Here is the footnote.</p><p><sup>6</sup>&nbsp;Here’s one with multiple blocks.</p>
+<p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></section>
 </section>
 </section>
 </section>
 <section id="tables" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="tables">Tables</h2>
-<p>I normally like my tables slightly more condensed than Bootstrap’s default and to resemble LaTeX typesetting, so made a few simple changes here.</p>
+<p>I prefer my normal tables slightly more condensed than Bootstrap’s default and to resemble LaTeX typesetting, so made a few simple changes here.</p>
 <table class="table">
 <caption>Default</caption>
-<thead>
-<tr class="header">
-<th>fruit</th>
-<th>price</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
 <td>apple</td>
@@ -526,12 +690,12 @@ Blockquote content comes here…<br>
 </tbody>
 </table>
 <div class="cell page-columns page-full">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display column-page page-columns page-full">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display column-page">
 <table class="table table-sm table-striped small">
-
+<caption>A full-width table to increase content space</caption>
 <colgroup>
 <col style="width: 28%">
 <col style="width: 7%">
@@ -641,91 +805,101 @@ Blockquote content comes here…<br>
 </tr>
 </tbody>
 </table>
-<div class="quarto-table-caption margin-caption">A full-width table to increase content space</div></div>
+</div>
 </div>
 </section>
-<section id="code-chunks-and-plots" class="level2">
-<h2 class="anchored" data-anchor-id="code-chunks-and-plots">Code Chunks and Plots</h2>
-<p>I call the <code>thematic::thematic_on()</code> function to auto-generate <code>lattice</code> and <code>ggplot2</code> palettes that complement my new Bootstrap colors.</p>
+<section id="apply-themed-colors-to-r-graphics" class="level2">
+<h2 class="anchored" data-anchor-id="apply-themed-colors-to-r-graphics">Apply Themed Colors to R Graphics</h2>
+<p>I make use of R <code>thematic::thematic_on()</code> package to auto-generate <code>base graphics</code>, <code>lattice</code> and <code>ggplot2</code> palettes that complement my new Bootstrap color scheme.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(thematic)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify my default sequential and qualitative palettes</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">thematic_on</span>(</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg=</span><span class="st">"transparent"</span>, <span class="at">fg=</span><span class="st">"#111719"</span>, <span class="at">accent=</span><span class="st">"#789494"</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">font =</span> <span class="fu">font_spec</span>(<span class="st">"Roboto Condensed"</span>),</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">sequential =</span> <span class="fu">sequential_gradient</span>(<span class="at">fg_weight=</span>.<span class="dv">5</span>, <span class="at">bg_weight=</span>.<span class="dv">5</span>, <span class="at">fg_low=</span><span class="cn">FALSE</span>),</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">qualitative =</span> <span class="fu">c</span>(</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#789494"</span>, <span class="st">"#445e64"</span>, <span class="st">"#222e32"</span>, </span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#aea39a"</span>, <span class="st">"#98796f"</span>, <span class="st">"#9b59b6"</span>, <span class="st">"#3daee9"</span>,</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#27ae60"</span>, <span class="st">"#edcd37"</span>, <span class="st">"#f67400"</span>, <span class="st">"#da4453"</span>)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(thematic)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify your sequential and qualitative palettes</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">thematic_on</span>(</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> <span class="st">"transparent"</span>, <span class="at">fg =</span> <span class="st">"#111719"</span>, <span class="at">accent =</span> pal12[<span class="st">"cyan"</span>],</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">font =</span> <span class="fu">font_spec</span>(<span class="st">"Roboto Condensed"</span>),</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sequential =</span> <span class="fu">sequential_gradient</span>(<span class="at">fg_weight=</span>.<span class="dv">5</span>, <span class="at">bg_weight=</span>.<span class="dv">5</span>, <span class="at">fg_low=</span><span class="cn">FALSE</span>),</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">qualitative =</span> <span class="fu">alpha</span>(pal12, .<span class="dv">9</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Note that calling <code>thematic_on()</code> modifies R session <code>getOption("ggplot2.discrete.colour")</code> and <code>getOption("ggplot2.discrete.fill")</code> – and that’s how the underlying “magic” happens.</p>
-<p>Next I apply – opinionated – changes to <code>ggthemes::theme_foundation()</code>, mostly transparent fills and custom fonts, etc. The final theme function is shown below.</p>
-<p>These 2 functions are further expanded and documented in <code>./R/utils.R</code>, so I can handle dependencies and use them more flexibly in my blog posts, as needed.</p>
+<p>Next I apply (slightly opinionated) changes to <code>ggthemes::theme_foundation()</code>, mostly transparent fills, condensed font, simplified axes, and a y-axis on the right side.</p>
+<p>These graphic customizations are further documented in <code>./R/utils.R</code> in this repo, so as to handle dependencies, and because I want to use them more flexibly in my blog posts. When visualizing scientific and spatial datasets the choice of colors scales requires good care, so the use of <code>thematic_on()</code> is often not sufficient, but it’s a good start here nonetheless.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>theme_labs <span class="ot">&lt;-</span> <span class="cf">function</span>(</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="cn">NA</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">subtitle =</span> <span class="cn">NA</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_size =</span> <span class="dv">12</span>,</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_family =</span> <span class="st">"Roboto Condensed"</span>,</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_bg =</span> <span class="st">"transparent"</span>,</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_color =</span> <span class="st">"#111719"</span>,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  ...) ggthemes<span class="sc">::</span><span class="fu">theme_foundation</span>(</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_size =</span> base_size, <span class="at">base_family =</span> base_family</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="fu">theme</span>(</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="st">"lines"</span>),</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">color=</span>base_color, <span class="at">lineheight=</span>.<span class="dv">9</span>),</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">line =</span> <span class="fu">element_line</span>(<span class="at">linetype=</span><span class="dv">1</span>, <span class="at">color=</span>base_color),</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">rect =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span><span class="cn">NA</span>, <span class="at">linetype=</span><span class="dv">0</span>, <span class="at">color=</span><span class="cn">NA</span>),</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span>base_bg, <span class="at">color=</span><span class="cn">NA</span>),</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span>base_bg, <span class="at">color=</span><span class="cn">NA</span>),</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="cn">NULL</span>, <span class="at">linetype=</span><span class="dv">3</span>),</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">color=</span>base_color),</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.background =</span> <span class="fu">element_rect</span>(),</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">face=</span><span class="st">"plain"</span>, <span class="at">hjust=</span><span class="dv">0</span>, <span class="at">size=</span>base_size<span class="sc">*</span><span class="fl">1.25</span>),</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">margin=</span><span class="fu">margin</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>, <span class="st">"lines"</span>),</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>      <span class="at">face=</span><span class="st">"plain"</span>, <span class="at">size=</span>base_size, <span class="at">hjust=</span><span class="dv">0</span>),</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text =</span> <span class="fu">element_text</span>(</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">face=</span><span class="st">"bold"</span>, <span class="at">hjust=</span><span class="dv">0</span>, <span class="at">size=</span>base_size),</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">margin=</span><span class="fu">margin</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">0</span>, <span class="st">"lines"</span>),</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">size=</span>base_size<span class="sc">*</span><span class="fl">0.9</span>, <span class="at">hjust=</span><span class="dv">0</span>),</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size=</span>base_size, <span class="at">face=</span><span class="st">"bold"</span>),</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">color=</span><span class="cn">NULL</span>),</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">color=</span>base_color, </span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">size=</span>base_size, <span class="at">face=</span><span class="st">"bold"</span>, <span class="at">hjust=</span><span class="dv">1</span>),</span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="cn">NULL</span>),</span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.x =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="cn">NULL</span>),</span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(),</span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line.y =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span><span class="cn">NA</span>, <span class="at">color=</span><span class="cn">NA</span>),</span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.box.background =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span><span class="cn">NA</span>, <span class="at">color=</span><span class="cn">NA</span>),</span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span>base_size<span class="sc">*</span><span class="fl">0.9</span>, <span class="at">hjust=</span><span class="dv">0</span>),</span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.margin =</span> <span class="fu">margin</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>, <span class="st">"lines"</span>),</span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.key.size =</span> <span class="fu">unit</span>(.<span class="dv">8</span>, <span class="st">"lines"</span>),</span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(base_size<span class="sc">*</span><span class="fl">0.9</span>),</span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position=</span><span class="st">"right"</span>, <span class="at">legend.justification=</span><span class="st">"left"</span>,</span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.direction=</span><span class="st">"vertical"</span>,</span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<details class="code-fold">
+<summary>Show all code</summary>
+<div class="code-with-filename-file">
+<pre><strong>./R/utils.R</strong></pre>
 </div>
-<p>Finally we generate a few sample <code>ggplot</code> and <code>lattice</code> charts below to make sure everything looks adequate.</p>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>theme_labs <span class="ot">&lt;-</span> <span class="cf">function</span>(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="cn">NA</span>,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">subtitle =</span> <span class="cn">NA</span>,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_size =</span> <span class="dv">12</span>,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_family =</span> <span class="st">"Roboto Condensed"</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_bg =</span> <span class="st">"transparent"</span>,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_color =</span> <span class="st">"#111719"</span>,</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  ...) ggthemes<span class="sc">::</span><span class="fu">theme_foundation</span>(</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">base_size =</span> base_size, <span class="at">base_family =</span> base_family</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="fu">theme</span>(</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="st">"lines"</span>),</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">color=</span>base_color, <span class="at">lineheight=</span>.<span class="dv">9</span>),</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">line =</span> <span class="fu">element_line</span>(<span class="at">linetype=</span><span class="dv">1</span>, <span class="at">color=</span>base_color),</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">rect =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span><span class="cn">NA</span>, <span class="at">linetype=</span><span class="dv">0</span>, <span class="at">color=</span><span class="cn">NA</span>),</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span>base_bg, <span class="at">color=</span><span class="cn">NA</span>),</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span>base_bg, <span class="at">color=</span><span class="cn">NA</span>),</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="cn">NULL</span>, <span class="at">linetype=</span><span class="dv">3</span>),</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">color=</span>base_color),</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.background =</span> <span class="fu">element_rect</span>(),</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">face=</span><span class="st">"plain"</span>, <span class="at">hjust=</span><span class="dv">0</span>, <span class="at">size=</span>base_size<span class="sc">*</span><span class="fl">1.25</span>),</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">margin=</span><span class="fu">margin</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>, <span class="st">"lines"</span>),</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">face=</span><span class="st">"plain"</span>, <span class="at">size=</span>base_size, <span class="at">hjust=</span><span class="dv">0</span>),</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text =</span> <span class="fu">element_text</span>(</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>      <span class="at">face=</span><span class="st">"bold"</span>, <span class="at">hjust=</span><span class="dv">0</span>, <span class="at">size=</span>base_size),</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">margin=</span><span class="fu">margin</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">0</span>, <span class="st">"lines"</span>),</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>      <span class="at">size=</span>base_size<span class="sc">*</span><span class="fl">0.85</span>, <span class="at">hjust=</span><span class="dv">0</span>),</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size=</span>base_size, <span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">color=</span><span class="cn">NULL</span>),</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">color=</span>base_color, </span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">size=</span>base_size, <span class="at">face=</span><span class="st">"bold"</span>, <span class="at">hjust=</span><span class="dv">1</span>),</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="cn">NULL</span>),</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks.x =</span> <span class="fu">element_line</span>(<span class="at">color=</span><span class="cn">NULL</span>),</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(),</span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span><span class="cn">NA</span>, <span class="at">color=</span><span class="cn">NA</span>),</span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.box.background =</span> <span class="fu">element_rect</span>(<span class="at">fill=</span><span class="cn">NA</span>, <span class="at">color=</span><span class="cn">NA</span>),</span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span>base_size<span class="sc">*</span><span class="fl">0.9</span>, <span class="at">hjust=</span><span class="dv">0</span>),</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.margin =</span> <span class="fu">margin</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>, <span class="st">"lines"</span>),</span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.key.size =</span> <span class="fu">unit</span>(.<span class="dv">8</span>, <span class="st">"lines"</span>),</span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(base_size<span class="sc">*</span><span class="fl">0.9</span>),</span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"right"</span>, </span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.justification =</span> <span class="st">"left"</span>,</span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.direction =</span> <span class="st">"vertical"</span>,</span>
+<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>    ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</div>
+<p>Finally let’s output a couple of categorical and contnuous <code>ggplot</code> and <code>lattice</code> charts below to make sure everything looks adequate.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply and check my new graphic theme</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_labs</span>())</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), mpg, <span class="at">fill=</span><span class="fu">factor</span>(carb))) <span class="sc">+</span> <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply and check my new graphic theme</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_labs</span>())</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="fu">factor</span>(carb), mpg, <span class="at">fill=</span><span class="fu">factor</span>(carb))) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">y=</span><span class="fu">guide_none</span>(), <span class="at">y.sec=</span><span class="fu">guide_axis</span>()) <span class="sc">+</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"My Long and Descriptive Plot Title"</span>, </span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"My very long subtitle with many units"</span>, </span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"My very long plot caption with many references."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -735,13 +909,13 @@ Blockquote content comes here…<br>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(wt, mpg, <span class="at">color=</span>carb)) <span class="sc">+</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>() <span class="sc">+</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"My Long and Descriptive Plot Title"</span>, </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"My very long subtitle with many units"</span>, </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"My very long plot caption with many references.</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">             My very long plot caption with many references."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(wt, mpg, <span class="at">color=</span>carb)) <span class="sc">+</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">y=</span><span class="fu">guide_none</span>(), <span class="at">y.sec=</span><span class="fu">guide_axis</span>()) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"My Long and Descriptive Plot Title"</span>, </span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"My very long subtitle with many units"</span>, </span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"My very long plot caption with many references."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -750,21 +924,28 @@ Blockquote content comes here…<br>
 </div>
 </div>
 </div>
+<p>Note that the code chunk below produces a PNG instead of SVG file. I also set <code>knitr</code> option <code>fig-dpi: 220</code> so plots still look decent when printed to paper (though of course it’s not adequate on long pages with many plots).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(faithfuld, <span class="fu">aes</span>(waiting, eruptions, <span class="at">z=</span>density)) <span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_raster</span>(<span class="fu">aes</span>(<span class="at">fill =</span> density)) <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_contour</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig-format: png</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="in">ggplot(faithfuld, aes(waiting, eruptions, z=density)) +</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_raster(aes(fill=density)) +</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="in">  geom_contour() +</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="in">  guides(y=guide_none(), y.sec=guide_axis())</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-8-1.svg" class="img-fluid figure-img"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(wt, mpg, <span class="at">color=</span><span class="fu">factor</span>(cyl))) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"My Title"</span>, <span class="at">subtitle=</span><span class="st">"My Subtitle"</span>, <span class="at">caption=</span><span class="st">"My plot caption"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(wt, mpg, <span class="at">color=</span><span class="fu">factor</span>(cyl))) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">y=</span><span class="fu">guide_none</span>(), <span class="at">y.sec=</span><span class="fu">guide_axis</span>()) <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"My Title"</span>, <span class="at">subtitle=</span><span class="st">"My Subtitle"</span>, <span class="at">caption=</span><span class="st">"My plot caption"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -773,9 +954,9 @@ Blockquote content comes here…<br>
 </div>
 </div>
 </div>
-<p>Note that <code>thematic_on()</code> also does a little magic with base R graphics <code>par()</code> options.</p>
+<p>Note that <code>thematic_on()</code> also does a little magic with R base graphics <code>par()</code> options. This is important as many advanced statistical and spatial libraries in R continue to make use of R base <code>graphics</code> library.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>lattice<span class="sc">::</span><span class="fu">show.settings</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>lattice<span class="sc">::</span><span class="fu">show.settings</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -783,10 +964,10 @@ Blockquote content comes here…<br>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rchisq</span>(<span class="dv">100</span>, <span class="at">df=</span><span class="dv">4</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">freq=</span><span class="cn">FALSE</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.2</span>), <span class="at">col=</span><span class="dv">1</span>, <span class="at">border=</span><span class="dv">2</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>(<span class="cn">NA</span>, <span class="cn">NULL</span>, <span class="at">col=</span><span class="dv">4</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">dchisq</span>(x, <span class="at">df=</span><span class="dv">4</span>), <span class="at">col=</span><span class="dv">2</span>, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">add=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rchisq</span>(<span class="dv">100</span>, <span class="at">df=</span><span class="dv">4</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">freq=</span><span class="cn">FALSE</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.2</span>), <span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">11</span>, <span class="at">border=</span><span class="dv">12</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>(<span class="cn">NA</span>, <span class="cn">NULL</span>, <span class="at">col=</span><span class="dv">4</span>)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">dchisq</span>(x, <span class="at">df=</span><span class="dv">4</span>), <span class="at">col=</span><span class="dv">2</span>, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">add=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -797,26 +978,36 @@ Blockquote content comes here…<br>
 </div>
 
 
+
 </section>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2022,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-schulte2012" class="csl-entry" role="listitem">
+Schulte, Eric, Dan Davison, Thomas Dye, and Carsten Dominik. 2012. <span>“A Multi-Language Computing Environment for Literate Programming and Reproducible Research.”</span> <em>Journal of Statistical Software</em> 46 (3): 1–24. <a href="https://doi.org/10.18637/jss.v046.i03">https://doi.org/10.18637/jss.v046.i03</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2023,
   author = {BACOU, Melanie},
-  title = {Configuring a {Quarto} {Website}},
-  date = {2022-12-01},
+  title = {Migrating from {*Distill*} to {*Quarto*} {Publishing}},
+  date = {2023-10-01},
   url = {https://mbacou.com/posts/2022-12-01-theme},
   langid = {en},
-  abstract = {Random content to help me migrate this personal blog from
-    {[}distill{]}(https://rstudio.github.io/distill/) to
-    {[}quarto{]}(https://quarto.org/). Quarto uses a new templating
-    system built on top of {[}Bootstrap
-    5{]}(https://getbootstrap.com/docs/5.0/) with new page layout and
-    extended publishing formats.}
+  abstract = {A post about literate programming in general and Quarto
+    formats in particular to help me migrate this personal blog from
+    {[}Distill{]}(https://rstudio.github.io/distill/) to
+    {[}Quarto{]}(https://quarto.org/). Compared with *J.J. Allaire’s
+    Distill for R Markdown*, *Posit Quarto Markdown* uses a new
+    templating system built on top of {[}Bootstrap
+    v5.3.1{]}(https://getbootstrap.com/docs/5.3/customize/overview/)
+    with new page layout, extended export formats, and more flexible
+    publishing workflows. This post briefly outlines my process for
+    creating a custom theme for this Quarto-powered website, and design
+    tweaks I have made along the way.}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2022" class="csl-entry quarto-appendix-citeas" role="listitem">
-BACOU, Melanie. 2022. <span>“Configuring a Quarto Website.”</span>
-December 1, 2022. <a href="https://mbacou.com/posts/2022-12-01-theme">https://mbacou.com/posts/2022-12-01-theme</a>.
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+BACOU, Melanie. 2023. <span>“Migrating from *Distill* to *Quarto*
+Publishing.”</span> October 1, 2023. <a href="https://mbacou.com/posts/2022-12-01-theme">https://mbacou.com/posts/2022-12-01-theme</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1241,14 +1432,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>License</p>
 </a>
   </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../index.xml">
+<p>RSS</p>
+</a>
+  </li>  
 </ul>
     </div>
     <div class="nav-footer-right">
-<p>Built with <a href="https://quarto.org/">Quarto®</a>.</p>
+<p>Built with <a href="https://quarto.org/">Quarto<sup>®</sup></a></p>
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false,"closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

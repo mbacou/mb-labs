@@ -1,7 +1,9 @@
 ##### About {.quarto-listing-category-title}
 
-::: {.text-muted .small .border-bottom .mb-3}
-My code playground and annotated analyses (in the form of executable notebooks using a mix of **R**, **Python**, **JavaScript**, and **D3.js**). You'll also find book and article reviews, and the occasional opinion pieces.
+::: {.border-bottom .mb-3}
+
+My code playground (in the form of executable notebooks using a mix of **R**, **Python**, **JavaScript**, and **D3.js**). You'll also find book and article reviews, and the occasional opinion piece.
 
 <p class="small">All viewpoints here are strictly my own and do <u>not</u> reflect that of employers, project partners or clients. Refer to each article for citation, code and data reuse.</p>
+
 :::

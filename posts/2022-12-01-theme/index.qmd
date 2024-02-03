@@ -1,54 +1,153 @@
 ---
-title: Configuring a Quarto Website
-subtitle: The best of Boostrap 5 CSS
-date: 2022-12-01
+title: Migrating from *Distill* to *Quarto* Publishing
+subtitle: Mastering Quarto Markdown for Literate Programming and Web Publishing
+date: 2023-10-01
 date-modified: last-modified
 image: thumb.svg
 categories:
   - quarto
-  - web design
+  - dataviz
 draft: false
 freeze: false
-description: |
-  A hotchpotch of Boostrap 5 tips and theme tweaks I have made on this website -- 
-  documented here with love. Feel free to reuse my [`theme.scss`](/www/theme-light.scss).
 abstract: |
-  Random content to help me migrate this personal blog from
-  [distill](https://rstudio.github.io/distill/) to [quarto](https://quarto.org/). 
-  Quarto uses a new templating system built on top of 
-  [Bootstrap 5](https://getbootstrap.com/docs/5.0/) with new page layout and extended
-  publishing formats.
+  A post about literate programming in general and Quarto formats in particular to
+  help me migrate this personal blog from
+  [Distill](https://rstudio.github.io/distill/) to [Quarto](https://quarto.org/).
+  Compared with *J.J. Allaire's Distill for R Markdown*, *Posit Quarto Markdown* uses
+  a new templating system built on top of [Bootstrap
+  v5.3.1](https://getbootstrap.com/docs/5.3/customize/overview/) with new page layout,
+  extended export formats, and more flexible publishing workflows.
+  This post briefly outlines my process for creating a custom theme for this
+  Quarto-powered website, and design tweaks I have made along the way.
 ---
 
-::: {.column-screen}
+::: {.column-screen .mb-4}
 
 ```{r}
 #| echo: false
 
 library(leaflet)
-m <- leaflet(width="100%", height="10rem") %>% addTiles()
-m
+leaflet(width="100%", height="15em") %>% addTiles() %>%
+  addMarkers(-8.65406047010657, 41.14426475811268, 
+    label="Me, as I'm writing this post. Read on, tips below!", 
+    labelOptions=labelOptions(textsize="1rem"))
 ```
 
 :::
 
-Sometimes I may want an optional flushed banner with random static or dynamic content. Note that this will push and collapse the TOC to the top of the page until the user scrolls past the `<div>`. For example here is how to insert a dynamic map inside a flushed `<div class="column-screen">` element, like the one just above:
+With the release of **Quarto 1.4**, markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based documents (such as **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, generating, documenting, sharing and reproducing computable research experiments.
+
+Old-time researchers have long used **Emacs `Org-Mode`**[^sw] along with its wild hordes of keyboard shortcuts[^kb] to achieve similar results thanks to *Eric Schulte*'s incredible **babel** extension to `Org-Mode` [see @schulte2012] and to *John MacFarlane*'s [Pandoc](https://pandoc.org/) document converter library -- but nowadays Quarto makes use of more efficient parsers and runtime engines (Sass, Deno) and adds in-browser real-time rendering of documents.
+
+[^sw]: For folks born in this century, to **babel** (elips) or to **sweave** (R) is the process of compiling text documents that include both static markup and executable scripts. 
+
+    ![](Donald-Knuth.jpg){width="10em" .img-rounded}
+
+    The concept of **Literate Programming** was introduced in 1984 by the mathematician [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) and was widely popularized thereafter in the engineering community thanks to [org-mode](https://orgmode.org/worg/org-contrib/babel/uses.html) in the Emacs editor.
+
+    ![](Carsten-Dominik.jpg){width="10em" .img-rounded}
+  
+    Emacs **`Org-Mode`** was created by the astronomer [Carsten Dominik](https://en.wikipedia.org/wiki/Org-mode#:~:text=Org%20Mode%20was%20created%20by,mode%20by%20default%20since%202006) in 2003 and remains to this day one of the most used and madly loved note-taking and GTD (Get-Things-Done) tools, with many of its functionality (agenda, tags, etc.) yet to be ported to any markdown engine.
+    
+[^kb]: Only keyboard, Baby!
+
+    ![](real-programmers.png){.lightbox}
+
+While migrating my old content to the new Quarto markdown syntax, this post briefly outlines my process for creating a custom Bootstrap theme for this revamped website. Feel free to reuse my `theme.scss` Sass file.
+
+# CSS Grid System
+
+Quarto uses the full flexibility of Bootstrap v5.3 grid system, with a few handy classes to help precisely position content on a page, in particular:
+
+- 2 predefined (column-based) page layouts:
+  - `page-layout: article` (this document), and
+  - `page-layout: full`
+- 6 column classes to control content width (shown below)
+- 2 margin classes to shift content into the left or right column (like that XKCD comics):
+  - `<div class="column-margin">`, and
+  - `<span class="aside">` 
+- 8 classes to overflow content into the left or right margin
+
+For example I use Quarto `{.column-screen}` to place a flushed banner directly below the post header, as a way to highlight static or dynamic content. Note that this will push and collapse the TOC to the top of the page until the user scrolls past the `<div>`. Here is the markdown (and R) code to achieve this inside a `<div class="column-screen">` element, like the map just above:
 
 ````markdown
-  ::: {.column-screen}
-  ```{{r}}
-  library(leaflet)
-  leaflet(width="100%", height="10rem") %>% addTiles()
-  ```
-  :::
+::: {.column-screen}
+```{{r}}
+library(leaflet)
+leaflet(width="100%", height="15em") %>% addTiles() %>%
+  addMarkers(-8.65406047010657, 41.14426475811268, 
+    label="Me, as I'm writing this post. Read on, tips below!", 
+    labelOptions=labelOptions(textsize="1rem"))
+```
+:::
 ````  
+
+There are new Quarto CSS classes to help control content width and placement.
+
+:::{.column-body .striped .mb-2}
+.column-body
+:::
+
+:::{.column-body-outset .striped .mb-2}
+.column-body-outset
+:::
+
+:::{.column-page .striped .mb-2}
+.column-page
+:::
+
+:::{.column-page-inset .striped .mb-2}
+.column-page-inset
+:::
+
+:::{.column-screen .striped .mb-2}
+.column-screen
+:::
+
+:::{.column-screen-inset .striped .mb-2}
+.column-screen-inset-shaded
+:::
+
+Finally any layout is achievable using stackable `<div class="g-col-{width}">` columns inside a `<div class="grid">` element (see color boxes below). The full system summarized here, copied straight from Quarto online documentation[^doc].
+
+[^doc]: Refer to [Quarto CSS classes](https://quarto.org/docs/authoring/article-layout.html#available-columns) official documentation.
+
+::: column-page-right
++--------------+---------------------------------+---------------------------------+
+| Column       | Code Cell `column`              | Class Name                      |
++==============+=================================+=================================+
+| Body         |     column: body                |     .column-body                |
+|              |     column: body-outset         |     .column-body-outset         |
+|              |     column: body-outset-left    |     .column-body-outset-left    |
+|              |     column: body-outset-right   |     .column-body-outset-right   |
++--------------+---------------------------------+---------------------------------+
+| Page Inset   |     column: page-inset-left     |     .column-page-inset-left     |
+|              |     column: page-inset-right    |     .column-page-inset-right    |
++--------------+---------------------------------+---------------------------------+
+| Page         |     column: page                |     .column-page                |
+|              |     column: page-left           |     .column-page-left           |
+|              |     column: page-right          |     .column-page-right          |
++--------------+---------------------------------+---------------------------------+
+| Screen Inset |     column: screen-inset        |     .column-screen-inset        |
+|              |     column: screen-inset-shaded |     .column-screen-inset-shaded |
+|              |     column: screen-inset-left   |     .column-screen-inset-left   |
+|              |     column: screen-inset-right  |     .column-screen-inset-right  |
++--------------+---------------------------------+---------------------------------+
+| Screen       |     column: screen              |     .column-screen              |
+|              |     column: screen-left         |     .column-screen-left         |
+|              |     column: screen-right        |     .column-screen-right        |
++--------------+---------------------------------+---------------------------------+
+| Margin       |     column: margin              |     .column-margin / .aside     |
++--------------+---------------------------------+---------------------------------+
+:::
+
 
 # Color System
 
-Choosing a color scheme is easy, you can start from your favorite photo or graphic and upload it to one of the many online palette generators to extract base and accent colors. Below I have selected a standard 12-color palette that strives to complement my decade old [Kubuntu desktop](https://store.kde.org/p/1980663)[^kde].
+Choosing a color scheme is easy, start from your favorite photo or graphic and upload it to one of the many online color palette generators to extract base and accent colors. Below I have selected a standard 12-color palette that simply strives to complement my decade old [Kubuntu desktop](https://store.kde.org/p/1980663)[^kde] (in a light version).
 
 [^kde]: KDE, 30 years later, still going strong!
-![](https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png){width=80% .lightbox}
+![](https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png){.lightbox}
 
 
 ```{r}
@@ -56,34 +155,71 @@ Choosing a color scheme is easy, you can start from your favorite photo or graph
 
 library(htmltools)
 
-x <- c("info", "success", "warning", "danger", "primary", "secondary",
-  "dark", "light", "white", "indigo", "purple", "pink")
-y <-  c("blue", "green", "orange", "red", "teal", "cyan",
-  "#222e32", "#fefefe", "#ffffff", "#9b59b6", "#98796f", "#aea39a")
-z <- c(rep(2,6), rep(4,6))
+pal12 <- c(
+  cyan   = "#789494",
+  teal   = "#445e64",
+  dark   = "#222e32",
+  pink   = "#aea39a",
+  purple = "#98796f",
+  indigo = "#9b59b6",
+  blue   = "#3daee9",
+  green  = "#27ae60",
+  yellow = "#edcd37",
+  orange = "#f67400",
+  red    = "#da4453",
+  light  = "#fefefe"
+)
 
-l <- lapply(1:length(x),
-  function(i) div(class=paste0("g-col-", z[i], " small p-2 bg-", x[i]), 
-    HTML(x[i], "<br/>(", y[i], ")")))
+n <- c(rep(2,6), rep(4,6))
+
+l <- lapply(1:length(pal12),
+  function(i) div(class=paste0(
+    "g-col-", n[i], " small rounded text-center p-2 bg-", names(pal12)[i]), 
+    HTML(names(pal12)[i], "<br/>(", pal12[[i]], ")")))
 
 div(class="grid", style="--bs-gap: .5rem;", tagList(l))
 ```
 
-# Callout Blocks
+# Block Elements
 
-::: {.callout-note}
-Note that there are five types of callouts, including:
-`note`, `warning`, `important`, `tip`, and `caution`.
+Simple indented blockquote with (small) source.
+
+> Blockquote title  
+> Blockquote content comes here...   
+> <small>-- And small description</small>
+
+Bootstrap built-in **callout blocks** and **cards** components are readily available in Quarto markdown with the usual semantic colors.
+
+::: {.callout}
+Note that there are 6 types of callout blocks, including:
+`default`, `note`, `warning`, `important`, `tip`, and `caution`.
 :::
 
-::: {.callout-tip}
-### Tip with Title
+::: {.callout-note}
+This is a note.
+:::
 
+```markdown
+::: {.callout-tip}
+### Callout title
+This is an example of a callout with a title.
+:::
+```
+
+::: {.callout-tip}
+### Callout title
 This is an example of a callout with a title.
 :::
 
-::: {.callout-caution collapse="true" title="Cautious"}
-### Expand To Learn About Collapse
+```markdown
+::: {.callout-caution collapse="true"}
+### Expand to learn about collapse
+This is an example of a 'folded' caution callout
+:::
+```
+
+::: {.callout-caution collapse="true"}
+### Expand to learn about collapse
 
 This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
 :::
@@ -98,7 +234,7 @@ This is a callout with a title.
 
 # Typography
 
-Bootstrap default line-height and sizing typically work. No change here aside from using `Inter` and `Roboto Condensed` Google fonts. This is how **bold**, *italic*, and <small>small</small> text look like. I can also play around with <span class="text-info">accented</span> text using Bootstrap CSS semantic classes.
+Bootstrap default line-height and font sizing typically work. No change here aside from using `Inter` and `Roboto Condensed` fonts. This is how **bold**, *italic*, and <small>small</small> text look like. Here is ^superscript^ and ~subscript~ text, and ~~strikethrough~~ notes. Semantic colors with <span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use <span class="shaded">`.shaded`</span> and <span class="striped">`.striped`</span>. I also use secondary font for all post metadata, end and margin notes, and for captioning.
 
 ## Heading 2
 
@@ -124,27 +260,25 @@ Sample paragraph content.
 
 > Blockquote title  
 > Blockquote content comes here...   
-> <small>-- And small description</small>[^bad]
-
-[^bad]: HTML standards recommend placing quote sources outside the `<blockquote>` element, well...
+> <small>-- And small source</small>
 
 ##### Heading 5
 
 Sample paragraph content.
 
-Here is a footnote reference,[^1] and another one much longer.[^longnote]
+Here is a footnote reference,[^1] and another much longer one.[^longnote]. Caption and footnote placement can be controlled in the config files `_quarto_yml` and/or `_metadata.yml`, or dircetly in the YAML front matter.
 
 [^1]: Here is the footnote.
 
 [^longnote]: Here's one with multiple blocks.
 
-    Subsequent paragraphs are indented to show that they belong to the previous footnote.
+    With subsequent paragraphs indented to show that they belong to the previous footnote.
 
 ## Tables
 
-I normally like my tables slightly more condensed than Bootstrap's default and to resemble LaTeX typesetting, so made a few simple changes here.
+I prefer my normal tables slightly more condensed than Bootstrap's default and to resemble LaTeX typesetting, so made a few simple changes here.
 
-| fruit  | price  |
+|        |        |
 |--------|--------|
 | apple  | 2.05   |
 | pear   | 1.37   |
@@ -185,33 +319,32 @@ knitr::kable(
 )
 ```
 
-## Code Chunks and Plots
+## Apply Themed Colors to R Graphics
 
-I call the `thematic::thematic_on()` function to auto-generate `lattice` and `ggplot2` palettes that complement my new Bootstrap colors.
+I make use of R `thematic::thematic_on()` package to auto-generate `base graphics`, `lattice` and `ggplot2` palettes that complement my new Bootstrap color scheme.
 
 ```{r}
 library(thematic)
+library(ggplot2)
 
-# Specify my default sequential and qualitative palettes
+# Specify your sequential and qualitative palettes
 thematic_on(
-  bg="transparent", fg="#111719", accent="#789494",
+  bg = "transparent", fg = "#111719", accent = pal12["cyan"],
   font = font_spec("Roboto Condensed"),
   sequential = sequential_gradient(fg_weight=.5, bg_weight=.5, fg_low=FALSE),
-  qualitative = c(
-    "#789494", "#445e64", "#222e32", 
-    "#aea39a", "#98796f", "#9b59b6", "#3daee9",
-    "#27ae60", "#edcd37", "#f67400", "#da4453")
+  qualitative = alpha(pal12, .9)
   )
 ```
 
 Note that calling `thematic_on()` modifies R session  `getOption("ggplot2.discrete.colour")` and `getOption("ggplot2.discrete.fill")` -- and that's how the underlying "magic" happens.
 
-Next I apply -- opinionated -- changes to `ggthemes::theme_foundation()`, mostly transparent fills and custom fonts, etc. The final theme function is shown below.
+Next I apply (slightly opinionated) changes to `ggthemes::theme_foundation()`, mostly transparent fills, condensed font, simplified axes, and a y-axis on the right side.
 
-These 2 functions are further expanded and documented in `./R/utils.R`, so I can handle dependencies and use them more flexibly in my blog posts, as needed.
+These graphic customizations are further documented in `./R/utils.R` in this repo, so as to handle dependencies, and because I want to use them more flexibly in my blog posts. When visualizing scientific and spatial datasets the choice of colors scales requires good care, so the use of `thematic_on()` is often not sufficient, but it's a good start here nonetheless.
 
-```{r}
-library(ggplot2)
+```{r filename="./R/utils.R"}
+#| code-fold: true
+#| code-summary: "Show all code"
 
 theme_labs <- function(
   title = NA,
@@ -243,7 +376,7 @@ theme_labs <- function(
     strip.text = element_text(
       face="bold", hjust=0, size=base_size),
     plot.caption = element_text(margin=margin(-0.5,4,0,0, "lines"),
-      size=base_size*0.9, hjust=0),
+      size=base_size*0.85, hjust=0),
 
     axis.text = element_text(size=base_size, face="bold"),
     axis.text.y = element_text(color=NULL),
@@ -262,48 +395,61 @@ theme_labs <- function(
     legend.margin = margin(0,0,0,1, "lines"),
     legend.key.size = unit(.8, "lines"),
     legend.text = element_text(base_size*0.9),
-    legend.position="right", legend.justification="left",
-    legend.direction="vertical",
+    legend.position = "right", 
+    legend.justification = "left",
+    legend.direction = "vertical",
     ...)
 ```
 
-Finally we generate a few sample `ggplot` and `lattice` charts below to make sure everything looks adequate.
+Finally let's output a couple of categorical and contnuous `ggplot` and `lattice` charts below to make sure everything looks adequate.
 
 ```{r}
 # Apply and check my new graphic theme
 theme_set(theme_labs())
 
-ggplot(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col()
+ggplot(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col() +
+  guides(y=guide_none(), y.sec=guide_axis()) +
+  labs(
+    title="My Long and Descriptive Plot Title", 
+    subtitle="My very long subtitle with many units", 
+    caption="My very long plot caption with many references.")
 ```
 
 ```{r}
 ggplot(mtcars, aes(wt, mpg, color=carb)) + 
-  geom_point() + geom_smooth() + 
+  geom_point() + geom_smooth() +
+  guides(y=guide_none(), y.sec=guide_axis()) +
   labs(
     title="My Long and Descriptive Plot Title", 
     subtitle="My very long subtitle with many units", 
-    caption="My very long plot caption with many references.
-             My very long plot caption with many references.")
+    caption="My very long plot caption with many references.")
 ```
 
+Note that the code chunk below produces a PNG instead of SVG file. I also set `knitr` option `fig-dpi: 220` so plots still look decent when printed to paper (though of course it's not adequate on long pages with many plots). 
+
 ```{r}
+#| echo: fenced
+#| fig-format: png
+
 ggplot(faithfuld, aes(waiting, eruptions, z=density)) +
-  geom_raster(aes(fill = density)) +
-  geom_contour()
+  geom_raster(aes(fill=density)) +
+  geom_contour() +
+  guides(y=guide_none(), y.sec=guide_axis())
 ```
 
 ```{r}
 ggplot(mtcars, aes(wt, mpg, color=factor(cyl))) + geom_point() +
+  guides(y=guide_none(), y.sec=guide_axis()) +
   labs(title="My Title", subtitle="My Subtitle", caption="My plot caption")
 ```
 
-Note that `thematic_on()` also does a little magic with base R graphics `par()` options. 
+Note that `thematic_on()` also does a little magic with R base graphics `par()` options. This is important as many advanced statistical and spatial libraries in R continue to make use of R base `graphics` library.
 
 ```{r}
 lattice::show.settings()
 
 x <- rchisq(100, df=4)
-hist(x, freq=FALSE, ylim=c(0, 0.2), col=1, border=2)
+hist(x, freq=FALSE, ylim=c(0, 0.2), col=1:11, border=12)
 grid(NA, NULL, col=4)
 curve(dchisq(x, df=4), col=2, lty=2, lwd=2, add=TRUE)
 ```

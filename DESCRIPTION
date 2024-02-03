@@ -7,7 +7,7 @@ Authors@R: c(
 Description: A Quarto website for personal use
 License: file LICENSE
 Encoding: UTF-8
-Depends: R (>= 3.5.0)
+Depends: R (>= 4.1.2)
 Imports: 
     ggplot2,
     leaflet,

@@ -1,9 +1,11 @@
 ---
 title: Econometric and Geospatial Analysis
 subtitle: ... to inform robust and equitable public policy
-margin-header: "_custom.qmd"
-title-block-banner: "var(--bs-white)"
+description: |
+    > *" This is my favorite quote of the day "* \
+        <small>--- By me </small>
 page-layout: full
+margin-header: _custom.qmd
 listing:
   contents: posts
   categories: true
@@ -16,5 +18,5 @@ listing:
   fields: [title, description, image, date, author, categories]
 ---
 
-> *" This is my favorite quote of the day "*\
-  <small>--- By me </small>
+
+  

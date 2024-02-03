@@ -1,12 +1,55 @@
+#' `mblabs` 12-color palette
+#'
+#' Default named qualitative color palette with 12 hues derived from `mblabs`
+#' Bootstrap theme.
+#'
+#' @keywords datasets
+#' @name pal12
+#' @format A named character vector of hex color codes
+#' @export
+pal12 = c(
+  cyan   = "#789494",
+  teal   = "#445e64",
+  dark   = "#222e32",
+  pink   = "#aea39a",
+  purple = "#98796f",
+  indigo = "#9b59b6",
+  blue   = "#3daee9",
+  green  = "#27ae60",
+  yellow = "#edcd37",
+  orange = "#f67400",
+  red    = "#da4453",
+  light  = "#fefefe"
+)
+
+
+#' Color ramp based on `mblabs` theme colors
+#'
+#' Default qualitative color ramp derived from `mblabs` Bootstrap theme.
+#'
+#' @param x number of colors to interpolate
+#' @inheritParams grDevices::colorRamp
+#' @return A function to interpolate colors
+#' @examples
+#'
+#' x <- rchisq(100, df=4)
+#' hist(x, freq=FALSE, ylim=c(0, 0.2), col=pal(20), border=12)
+#' hist(x, freq=FALSE, ylim=c(0, 0.2), col=pal(8), border=12)
+#'
+#' @export
+pal <- function(x, ...)  colorRampPalette(unname(pal12), ...)(x)
+
+
 #' Apply graphic color palettes
 #'
-#' Sets new default values to `thematic::thematic_on`, which modify `lattice`
-#' and `ggplot` color palettes and fonts.
+#' Sets `mblabs` default values to `thematic::thematic_on`, which modify
+#' `lattice` and `ggplot` color palettes and fonts.
 #'
 #' @inheritParams thematic::thematic_on
 #' @inheritDotParams thematic::thematic_on
 #' @return A global graphic theme
 #' @importFrom thematic thematic_on font_spec sequential_gradient
+#' @importFrom scales alpha
 #' @examples
 #' theme_labs_on()
 #' lattice::show.settings()
@@ -15,20 +58,17 @@
 theme_labs_on <- function(
   bg = "transparent",
   fg = "#111719",
-  accent = "#789494",
+  accent = pal11[["teal"]],
   font = "Roboto Condensed",
   sequential = sequential_gradient(fg_weight=.5, bg_weight=.5, fg_low=FALSE),
-  qualitative = c(
-    "#789494", "#445e64", "#222e32",
-    "#aea39a", "#98796f", "#9b59b6", "#3daee9",
-    "#27ae60", "#edcd37", "#f67400", "#da4453"),
+  qualitative = alpha(pal(12), .9),
   ...) thematic_on(
-    bg, fg, accent, font_spec(font), sequential, qualitative, ...)
+    bg, fg, accent, font=font_spec(font), sequential, qualitative, ...)
 
 
 #' Themed `ggplot`
 #'
-#' A custom `ggplot` theme for posts on this website.
+#' A themed `ggplot` for `mblabs` website.
 #'
 #' @inheritParams ggplot2::ggplot
 #' @param pos_x Position of x-axis (bottom or top)
@@ -44,6 +84,13 @@ theme_labs_on <- function(
 #' @import ggplot2
 #' @examples
 #' require(ggplot2)
+#'
+#' gglabs(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col() +
+#'   guides(y=guide_none(), y.sec=guide_axis()) +
+#'   labs(
+#'     title = "My Long and Descriptive Plot Title",
+#'     subtitle = "My very long subtitle with many units",
+#'     caption = "My very long plot caption with many references.")
 #'
 #' gglabs(mtcars, aes(wt, mpg, color=carb)) +
 #'   geom_point() + geom_smooth() +
@@ -61,8 +108,8 @@ gglabs <- function(
   pos_y = c("right", "left"),
   base_size = 12,
   base_family = "Roboto Condensed",
-  base_bg = NA,
-  base_color = "#111719",
+  base_bg = NULL, # use theme
+  base_color = NULL, # use theme
   ...) {
 
   pos_x = match.arg(pos_x)
@@ -98,8 +145,8 @@ gglabs <- function(
       face="plain", size=base_size, hjust=0),
     strip.text = element_text(
       face="bold", hjust=0, size=base_size),
-    plot.caption = element_text(margin=margin(-0.5,4,0,0, "lines"),
-      size=base_size*0.9, hjust=0),
+    plot.caption = element_text(margin=margin(0,0,0,0, "lines"),
+      size=base_size*0.8, hjust=0),
 
     axis.text = element_text(size=base_size, face="bold"),
     axis.text.y = element_text(color=NULL),
@@ -115,7 +162,7 @@ gglabs <- function(
     legend.background = element_rect(fill=NA, color=NA),
     legend.box.background = element_rect(fill=NA, color=NA),
     legend.title = element_text(size=base_size*0.9, hjust=0),
-    legend.margin = margin(0,0,0,1, "lines"),
+    legend.margin = margin(0,0,0,0.5, "lines"),
     legend.key.size = unit(.8, "lines"),
     legend.text = element_text(base_size*0.85),
     legend.position="right", legend.justification="left",
@@ -136,6 +183,7 @@ gglabs <- function(
 #' @importFrom data.table fifelse
 #' @export
 pct <- function(x, ...) fifelse(is.na(x) | !is.numeric(x), "--", percent(x, ...))
+
 
 #' Format currencies
 #'

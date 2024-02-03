@@ -8,8 +8,7 @@
 <title>Mel&#39;s Labs</title>
 <link>https://mbacou.com/portfolio.html</link>
 <atom:link href="https://mbacou.com/portfolio.xml" rel="self" type="application/rss+xml"/>
-<description>Playground for consulting and data science projects.
-</description>
+<description>Playground for consulting and data science projects.</description>
 <image>
 <url>https://mbacou.com/www/favicon.png</url>
 <title>Mel&#39;s Labs</title>
@@ -17,7 +16,7 @@
 <height>100</height>
 <width>100</width>
 </image>
-<generator>quarto-1.5.3</generator>
+<generator>quarto-1.5.6</generator>
 <lastBuildDate>Thu, 01 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Interactive Web Applications</title>

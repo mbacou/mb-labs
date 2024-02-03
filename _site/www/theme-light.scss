@@ -98,7 +98,7 @@ $headings-font-weight: 400;
 
 /*-- scss:rules --*/
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Condensed:wght@400;500&family=Roboto+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Condensed:wght@400;500;600&family=Roboto+Mono:wght@400&display=swap');
 
 b, strong {
   font-weight: 600;
@@ -119,6 +119,9 @@ blockquote, .blockquote {
   color: $body-color;
   border-left: solid 5px $border-color;
   border-radius: $border-radius;
+}
+code {
+  color: unset;
 }
 pre code, .quarto-appendix-citeas {
   font-family: $font-monospace;
@@ -152,7 +155,7 @@ p.subtitle {
 }
 #title-block-header.quarto-title-block.default .quarto-title-meta-heading,
 #title-block-header.quarto-title-block.default .abstract .block-title,
-#quarto-appendix.default .quarto-appendix-heading, #toc-title {
+#quarto-appendix.default .quarto-appendix-heading, #toc-title, details>summary {
   font-family: $headings-font-family;
   text-transform: uppercase;
   font-size: .8rem;
@@ -240,8 +243,9 @@ div.quarto-post .listing-categories .listing-category {
   color: $text-muted;
   border: none;
   border-radius: 0;
-  height: line-height;
-  padding: auto .75rem;
+  height: var(--bs-line-height);
+  padding: 0 .75rem;
+  margin-bottom: 1rem;
   background-color: $gray-400;
   opacity: 1;
 }
@@ -273,15 +277,20 @@ figcaption, .column-margin figcaption,
   color: $text-muted;
 }
 caption, .table-caption {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   text-align: left;
+}
+.shaded {
+  background-color: darken($body-bg, 3%);
 }
 .img-thumbnail {
   padding: 0;
 }
 .img-fluid {
   border-radius: $border-radius;
+}
+.img-rounded {
+  border-radius: 6rem;
 }
 
 // Quarto layout fixes
@@ -329,6 +338,6 @@ nav.sidebar.sidebar-navigation:not(.rollup) {
 #quarto-margin-sidebar {
   padding-left: 1rem;
 }
-main>p, main>h2, main>section {
-  margin-top: 1rem;
+#quarto-document-content p:first-child, #quarto-document-content > section:first-child {
+  margin-top: 2rem;
 }

@@ -11,8 +11,8 @@ gglabs(
   pos_y = c("right", "left"),
   base_size = 12,
   base_family = "Roboto Condensed",
-  base_bg = NA,
-  base_color = "#111719",
+  base_bg = NULL,
+  base_color = NULL,
   ...
 )
 }
@@ -180,10 +180,17 @@ elements.}
 A \code{ggplot2} object with new theme elements applied
 }
 \description{
-A custom \code{ggplot} theme for posts on this website.
+A themed \code{ggplot} for this \code{mb-labs} website.
 }
 \examples{
 require(ggplot2)
+
+gglabs(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col() +
+  guides(y=guide_none(), y.sec=guide_axis()) +
+  labs(
+    title = "My Long and Descriptive Plot Title",
+    subtitle = "My very long subtitle with many units",
+    caption = "My very long plot caption with many references.")
 
 gglabs(mtcars, aes(wt, mpg, color=carb)) +
   geom_point() + geom_smooth() +

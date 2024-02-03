@@ -8,7 +8,7 @@ abstract: My long-form resume.
 ---
 
 ::: {.column-margin}
-![](_assets/about/profile.jpg){.img-thumbnail style="border-radius:6rem; margin-top:-4rem;" width="12em" fig-align="left"}
+![](_assets/about/profile.jpg){.img-rounded style="margin-top:-4rem;" width="12em" fig-align="left"}
 
 {{< fa brands telegram >}}    [t.me/mbacou](https://t.me/mbacou)\
 {{< fa brands linkedin >}}    [linkedin.com/in/mbacou](https://linkedin.com/in/mbacou)\

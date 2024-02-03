@@ -13,4 +13,4 @@ R -e 'roxygen2::roxygenize()'
 R -e 'devtools::load_all()'
 
 # Start preview server
-quarto preview .
+quarto preview . --port 5555

@@ -8,7 +8,8 @@
 <title>Mel&#39;s Labs</title>
 <link>https://mbacou.com/</link>
 <atom:link href="https://mbacou.com/index.xml" rel="self" type="application/rss+xml"/>
-<description>Playground for consulting and data science projects.
+<description>&gt; *&quot; This is my favorite quote of the day &quot;* \
+    &lt;small&gt;--- By me &lt;/small&gt;
 </description>
 <image>
 <url>https://mbacou.com/www/favicon.png</url>
@@ -17,10 +18,10 @@
 <height>100</height>
 <width>100</width>
 </image>
-<generator>quarto-1.5.3</generator>
-<lastBuildDate>Thu, 01 Dec 2022 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.5.6</generator>
+<lastBuildDate>Sat, 30 Sep 2023 23:00:00 GMT</lastBuildDate>
 <item>
-  <title>Configuring a Quarto Website</title>
+  <title>Migrating from Distill to Quarto Publishing</title>
   <dc:creator>Melanie BACOU</dc:creator>
   <link>https://mbacou.com/posts/2022-12-01-theme/</link>
   <description><![CDATA[ 
@@ -29,97 +30,229 @@
 
 
 
-<div class="column-screen">
+<div class="column-screen mb-4">
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-0c9a3892bc7c10fb607d" style="width:100%;height:10rem;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0c9a3892bc7c10fb607d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]}]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9e7e083f05b3888a944e" style="width:100%;height:15em;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9e7e083f05b3888a944e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"Me, as I'm writing this post. Read on, tips below!",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
-<p>Sometimes I may want an optional flushed banner with random static or dynamic content. Note that this will push and collapse the TOC to the top of the page until the user scrolls past the <code>&lt;div&gt;</code>. For example here is how to insert a dynamic map inside a flushed <code>&lt;div class="column-screen"&gt;</code> element, like the one just above:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1">  ::: {.column-screen}</span>
-<span id="cb1-2">  <span class="in" style="color: #5E5E5E;
+<p>With the release of <strong>Quarto 1.4</strong>, markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based documents (such as <strong>Rmarkdown</strong> and <strong>Jupyter</strong> notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, generating, documenting, sharing and reproducing computable research experiments.</p>
+<p>Old-time researchers have long used <strong>Emacs <code>Org-Mode</code></strong><sup>1</sup> along with its wild hordes of keyboard shortcuts<sup>2</sup> to achieve similar results thanks to <em>Eric Schulte</em>’s incredible <strong>babel</strong> extension to <code>Org-Mode</code> <span class="citation" data-cites="schulte2012">(see Schulte et al. 2012)</span> and to <em>John MacFarlane</em>’s <a href="https://pandoc.org/">Pandoc</a> document converter library – but nowadays Quarto makes use of more efficient parsers and runtime engines (Sass, Deno) and adds in-browser real-time rendering of documents.</p>
+<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;For folks born in this century, to <strong>babel</strong> (elips) or to <strong>sweave</strong> (R) is the process of compiling text documents that include both static markup and executable scripts.</p>
+<p><img src="https://mbacou.com/posts/2022-12-01-theme/Donald-Knuth.jpg" class="img-rounded img-fluid" style="width:10em"></p>
+<p>The concept of <strong>Literate Programming</strong> was introduced in 1984 by the mathematician <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a> and was widely popularized thereafter in the engineering community thanks to <a href="https://orgmode.org/worg/org-contrib/babel/uses.html">org-mode</a> in the Emacs editor.</p>
+<p><img src="https://mbacou.com/posts/2022-12-01-theme/Carsten-Dominik.jpg" class="img-rounded img-fluid" style="width:10em"></p>
+<p>Emacs <strong><code>Org-Mode</code></strong> was created by the astronomer <a href="https://en.wikipedia.org/wiki/Org-mode#:~:text=Org%20Mode%20was%20created%20by,mode%20by%20default%20since%202006">Carsten Dominik</a> in 2003 and remains to this day one of the most used and madly loved note-taking and GTD (Get-Things-Done) tools, with many of its functionality (agenda, tags, etc.) yet to be ported to any markdown engine.</p><p><sup>2</sup>&nbsp;Only keyboard, Baby!</p>
+<p><a href="real-programmers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mbacou.com/posts/2022-12-01-theme/real-programmers.png" class="img-fluid"></a></p></div><p>While migrating my old content to the new Quarto markdown syntax, this post briefly outlines my process for creating a custom Bootstrap theme for this revamped website. Feel free to reuse my <code>theme.scss</code> Sass file.</p>
+<section id="css-grid-system" class="level1 page-columns page-full">
+<h1>CSS Grid System</h1>
+<p>Quarto uses the full flexibility of Bootstrap v5.3 grid system, with a few handy classes to help precisely position content on a page, in particular:</p>
+<ul>
+<li>2 predefined (column-based) page layouts:
+<ul>
+<li><code>page-layout: article</code> (this document), and</li>
+<li><code>page-layout: full</code></li>
+</ul></li>
+<li>6 column classes to control content width (shown below)</li>
+<li>2 margin classes to shift content into the left or right column (like that XKCD comics):
+<ul>
+<li><code>&lt;div class="column-margin"&gt;</code>, and</li>
+<li><code>&lt;span class="aside"&gt;</code></li>
+</ul></li>
+<li>8 classes to overflow content into the left or right margin</li>
+</ul>
+<p>For example I use Quarto <code>{.column-screen}</code> to place a flushed banner directly below the post header, as a way to highlight static or dynamic content. Note that this will push and collapse the TOC to the top of the page until the user scrolls past the <code>&lt;div&gt;</code>. Here is the markdown (and R) code to achieve this inside a <code>&lt;div class="column-screen"&gt;</code> element, like the map just above:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1">::: {.column-screen}</span>
+<span id="cb1-2"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```{r}</span></span>
 <span id="cb1-3"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  library(leaflet)</span></span>
+font-style: inherit;">library(leaflet)</span></span>
 <span id="cb1-4"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  leaflet(width="100%", height="10rem") %&gt;% addTiles()</span></span>
+font-style: inherit;">leaflet(width="100%", height="15em") %&gt;% addTiles() %&gt;%</span></span>
 <span id="cb1-5"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">  ```</span></span>
-<span id="cb1-6">  :::</span></code></pre></div>
+font-style: inherit;">  addMarkers(-8.65406047010657, 41.14426475811268, </span></span>
+<span id="cb1-6"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    label="Me, as I'm writing this post. Read on, tips below!", </span></span>
+<span id="cb1-7"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    labelOptions=labelOptions(textsize="1rem"))</span></span>
+<span id="cb1-8"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span>
+<span id="cb1-9">:::</span></code></pre></div>
+<p>There are new Quarto CSS classes to help control content width and placement.</p>
+<div class="column-body striped mb-2">
+<p>.column-body</p>
+</div>
+<div class="column-body-outset striped mb-2">
+<p>.column-body-outset</p>
+</div>
+<div class="column-page striped mb-2">
+<p>.column-page</p>
+</div>
+<div class="column-page-inset striped mb-2">
+<p>.column-page-inset</p>
+</div>
+<div class="column-screen striped mb-2">
+<p>.column-screen</p>
+</div>
+<div class="column-screen-inset striped mb-2">
+<p>.column-screen-inset-shaded</p>
+</div>
+<p>Finally any layout is achievable using stackable <code>&lt;div class="g-col-{width}"&gt;</code> columns inside a <code>&lt;div class="grid"&gt;</code> element (see color boxes below). The full system summarized here, copied straight from Quarto online documentation<sup>3</sup>.</p>
+<div class="no-row-height column-margin column-container"><p><sup>3</sup>&nbsp;Refer to <a href="https://quarto.org/docs/authoring/article-layout.html#available-columns">Quarto CSS classes</a> official documentation.</p></div><div class="column-page-right">
+<table class="table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Code Cell <code>column</code></th>
+<th>Class Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Body</td>
+<td><pre><code>column: body
+column: body-outset
+column: body-outset-left
+column: body-outset-right</code></pre></td>
+<td><pre><code>.column-body
+.column-body-outset
+.column-body-outset-left
+.column-body-outset-right</code></pre></td>
+</tr>
+<tr class="even">
+<td>Page Inset</td>
+<td><pre><code>column: page-inset-left
+column: page-inset-right</code></pre></td>
+<td><pre><code>.column-page-inset-left
+.column-page-inset-right</code></pre></td>
+</tr>
+<tr class="odd">
+<td>Page</td>
+<td><pre><code>column: page
+column: page-left
+column: page-right</code></pre></td>
+<td><pre><code>.column-page
+.column-page-left
+.column-page-right</code></pre></td>
+</tr>
+<tr class="even">
+<td>Screen Inset</td>
+<td><pre><code>column: screen-inset
+column: screen-inset-shaded
+column: screen-inset-left
+column: screen-inset-right</code></pre></td>
+<td><pre><code>.column-screen-inset
+.column-screen-inset-shaded
+.column-screen-inset-left
+.column-screen-inset-right</code></pre></td>
+</tr>
+<tr class="odd">
+<td>Screen</td>
+<td><pre><code>column: screen
+column: screen-left
+column: screen-right</code></pre></td>
+<td><pre><code>.column-screen
+.column-screen-left
+.column-screen-right</code></pre></td>
+</tr>
+<tr class="even">
+<td>Margin</td>
+<td><pre><code>column: margin</code></pre></td>
+<td><pre><code>.column-margin / .aside</code></pre></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 <section id="color-system" class="level1 page-columns page-full">
 <h1>Color System</h1>
-<p>Choosing a color scheme is easy, you can start from your favorite photo or graphic and upload it to one of the many online palette generators to extract base and accent colors. Below I have selected a standard 12-color palette that strives to complement my decade old <a href="https://store.kde.org/p/1980663">Kubuntu desktop</a><sup>1</sup>.</p>
-<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;KDE, 30 years later, still going strong! <a href="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="img-fluid" style="width:80.0%"></a></p></div><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<p>Choosing a color scheme is easy, start from your favorite photo or graphic and upload it to one of the many online color palette generators to extract base and accent colors. Below I have selected a standard 12-color palette that simply strives to complement my decade old <a href="https://store.kde.org/p/1980663">Kubuntu desktop</a><sup>4</sup> (in a light version).</p>
+<div class="no-row-height column-margin column-container"><p><sup>4</sup>&nbsp;KDE, 30 years later, still going strong! <a href="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="img-fluid"></a></p></div><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(htmltools)</span>
-<span id="cb2-2"></span>
-<span id="cb2-3">x <span class="ot" style="color: #003B4F;
+<span id="cb14-2"></span>
+<span id="cb14-3">pal12 <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">c</span>(</span>
+<span id="cb14-4">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"info"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">cyan   =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"success"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">"#789494"</span>,</span>
+<span id="cb14-5">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"warning"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">teal   =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"danger"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">"#445e64"</span>,</span>
+<span id="cb14-6">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"primary"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">dark   =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"secondary"</span>,</span>
-<span id="cb2-4">  <span class="st" style="color: #20794D;
+font-style: inherit;">"#222e32"</span>,</span>
+<span id="cb14-7">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"dark"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">pink   =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"light"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">"#aea39a"</span>,</span>
+<span id="cb14-8">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"white"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">purple =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"indigo"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">"#98796f"</span>,</span>
+<span id="cb14-9">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"purple"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">indigo =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"pink"</span>)</span>
-<span id="cb2-5">y <span class="ot" style="color: #003B4F;
+font-style: inherit;">"#9b59b6"</span>,</span>
+<span id="cb14-10">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">&lt;-</span>  <span class="fu" style="color: #4758AB;
+font-style: inherit;">blue   =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">"#3daee9"</span>,</span>
+<span id="cb14-11">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"blue"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">green  =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"green"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">"#27ae60"</span>,</span>
+<span id="cb14-12">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"orange"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">yellow =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"red"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">"#edcd37"</span>,</span>
+<span id="cb14-13">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"teal"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">orange =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"cyan"</span>,</span>
-<span id="cb2-6">  <span class="st" style="color: #20794D;
+font-style: inherit;">"#f67400"</span>,</span>
+<span id="cb14-14">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"#222e32"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">red    =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#fefefe"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">"#da4453"</span>,</span>
+<span id="cb14-15">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">"#ffffff"</span>, <span class="st" style="color: #20794D;
+font-style: inherit;">light  =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#9b59b6"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#98796f"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#aea39a"</span>)</span>
-<span id="cb2-7">z <span class="ot" style="color: #003B4F;
+font-style: inherit;">"#fefefe"</span></span>
+<span id="cb14-16">)</span>
+<span id="cb14-17"></span>
+<span id="cb14-18">n <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -136,8 +269,8 @@ background-color: null;
 font-style: inherit;">4</span>,<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">6</span>))</span>
-<span id="cb2-8"></span>
-<span id="cb2-9">l <span class="ot" style="color: #003B4F;
+<span id="cb14-19"></span>
+<span id="cb14-20">l <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -147,29 +280,35 @@ font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">length</span>(x),</span>
-<span id="cb2-10">  <span class="cf" style="color: #003B4F;
+font-style: inherit;">length</span>(pal12),</span>
+<span id="cb14-21">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(i) <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">div</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">class=</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">paste0</span>(</span>
+<span id="cb14-22">    <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"g-col-"</span>, z[i], <span class="st" style="color: #20794D;
+font-style: inherit;">"g-col-"</span>, n[i], <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">" small p-2 bg-"</span>, x[i]), </span>
-<span id="cb2-11">    <span class="fu" style="color: #4758AB;
+font-style: inherit;">" small rounded text-center p-2 bg-"</span>, <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">HTML</span>(x[i], <span class="st" style="color: #20794D;
+font-style: inherit;">names</span>(pal12)[i]), </span>
+<span id="cb14-23">    <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">"&lt;br/&gt;("</span>, y[i], <span class="st" style="color: #20794D;
+font-style: inherit;">HTML</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">names</span>(pal12)[i], <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&lt;br/&gt;("</span>, pal12[[i]], <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">")"</span>)))</span>
-<span id="cb2-12"></span>
-<span id="cb2-13"><span class="fu" style="color: #4758AB;
+<span id="cb14-24"></span>
+<span id="cb14-25"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">div</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -183,22 +322,39 @@ font-style: inherit;">"--bs-gap: .5rem;"</span>, <span class="fu" style="color: 
 background-color: null;
 font-style: inherit;">tagList</span>(l))</span></code></pre></div>
 <div class="grid" style="--bs-gap: .5rem;">
-<div class="g-col-2 small p-2 bg-info">info <br>( blue )</div>
-<div class="g-col-2 small p-2 bg-success">success <br>( green )</div>
-<div class="g-col-2 small p-2 bg-warning">warning <br>( orange )</div>
-<div class="g-col-2 small p-2 bg-danger">danger <br>( red )</div>
-<div class="g-col-2 small p-2 bg-primary">primary <br>( teal )</div>
-<div class="g-col-2 small p-2 bg-secondary">secondary <br>( cyan )</div>
-<div class="g-col-4 small p-2 bg-dark">dark <br>( #222e32 )</div>
-<div class="g-col-4 small p-2 bg-light">light <br>( #fefefe )</div>
-<div class="g-col-4 small p-2 bg-white">white <br>( #ffffff )</div>
-<div class="g-col-4 small p-2 bg-indigo">indigo <br>( #9b59b6 )</div>
-<div class="g-col-4 small p-2 bg-purple">purple <br>( #98796f )</div>
-<div class="g-col-4 small p-2 bg-pink">pink <br>( #aea39a )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-cyan">cyan <br>( #789494 )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-teal">teal <br>( #445e64 )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-dark">dark <br>( #222e32 )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-pink">pink <br>( #aea39a )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-purple">purple <br>( #98796f )</div>
+<div class="g-col-2 small rounded text-center p-2 bg-indigo">indigo <br>( #9b59b6 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-blue">blue <br>( #3daee9 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-green">green <br>( #27ae60 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-yellow">yellow <br>( #edcd37 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-orange">orange <br>( #f67400 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-red">red <br>( #da4453 )</div>
+<div class="g-col-4 small rounded text-center p-2 bg-light">light <br>( #fefefe )</div>
 </div>
 </section>
-<section id="callout-blocks" class="level1">
-<h1>Callout Blocks</h1>
+<section id="block-elements" class="level1">
+<h1>Block Elements</h1>
+<p>Simple indented blockquote with (small) source.</p>
+<blockquote class="blockquote">
+<p>Blockquote title<br>
+Blockquote content comes here…<br>
+<small>– And small description</small></p>
+</blockquote>
+<p>Bootstrap built-in <strong>callout blocks</strong> and <strong>cards</strong> components are readily available in Quarto markdown with the usual semantic colors.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Note that there are 6 types of callout blocks, including: <code>default</code>, <code>note</code>, <code>warning</code>, <code>important</code>, <code>tip</code>, and <code>caution</code>.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -209,37 +365,48 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Note that there are five types of callouts, including: <code>note</code>, <code>warning</code>, <code>important</code>, <code>tip</code>, and <code>caution</code>.</p>
+<p>This is a note.</p>
 </div>
 </div>
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1">::: {.callout-tip}</span>
+<span id="cb15-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">### Callout title</span></span>
+<span id="cb15-3">This is an example of a callout with a title.</span>
+<span id="cb15-4">:::</span></code></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip with Title
+Callout title
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>This is an example of a callout with a title.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-caution callout-titled" title="Cautious">
+<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1">::: {.callout-caution collapse="true"}</span>
+<span id="cb16-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">### Expand to learn about collapse</span></span>
+<span id="cb16-3">This is an example of a 'folded' caution callout</span>
+<span id="cb16-4">:::</span></code></pre></div>
+<div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Cautious
+Expand to learn about collapse
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<section id="expand-to-learn-about-collapse" class="level3 callout-body-container callout-body">
-<h3 class="anchored" data-anchor-id="expand-to-learn-about-collapse">Expand To Learn About Collapse</h3>
+<div class="callout-body-container callout-body">
 <p>This is an example of a ‘folded’ caution callout that can be expanded by the user. You can use <code>collapse="true"</code> to collapse it by default or <code>collapse="false"</code> to make a collapsible callout that is expanded by default.</p>
-</section>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled" title="Important">
@@ -271,7 +438,7 @@ Warning
 </section>
 <section id="typography" class="level1 page-columns page-full">
 <h1>Typography</h1>
-<p>Bootstrap default line-height and sizing typically work. No change here aside from using <code>Inter</code> and <code>Roboto Condensed</code> Google fonts. This is how <strong>bold</strong>, <em>italic</em>, and <small>small</small> text look like. I can also play around with <span class="text-info">accented</span> text using Bootstrap CSS semantic classes.</p>
+<p>Bootstrap default line-height and font sizing typically work. No change here aside from using <code>Inter</code> and <code>Roboto Condensed</code> fonts. This is how <strong>bold</strong>, <em>italic</em>, and <small>small</small> text look like. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with <span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use <span class="shaded"><code>.shaded</code></span> and <span class="striped"><code>.striped</code></span>. I also use secondary font for all post metadata, end and margin notes, and for captioning.</p>
 <section id="heading-2" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
 <p>Sample paragraph content.</p>
@@ -294,31 +461,25 @@ Warning
 <section id="heading-4" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
 <p>Sample paragraph content.</p>
-<div class="page-columns page-full"><blockquote class="blockquote">
+<blockquote class="blockquote">
 <p>Blockquote title<br>
 Blockquote content comes here…<br>
-<small>– And small description</small><sup>2</sup></p>
-</blockquote><div class="no-row-height column-margin column-container"><p><sup>2</sup>&nbsp;HTML standards recommend placing quote sources outside the <code>&lt;blockquote&gt;</code> element, well…</p></div></div>
+<small>– And small source</small></p>
+</blockquote>
 <section id="heading-5" class="level5 page-columns page-full">
 <h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
 <p>Sample paragraph content.</p>
-<p>Here is a footnote reference,<sup>3</sup> and another one much longer.<sup>4</sup></p>
-<div class="no-row-height column-margin column-container"><p><sup>3</sup>&nbsp;Here is the footnote.</p><p><sup>4</sup>&nbsp;Here’s one with multiple blocks.</p>
-<p>Subsequent paragraphs are indented to show that they belong to the previous footnote.</p></div></section>
+<p>Here is a footnote reference,<sup>5</sup> and another much longer one.<sup>6</sup>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or dircetly in the YAML front matter.</p>
+<div class="no-row-height column-margin column-container"><p><sup>5</sup>&nbsp;Here is the footnote.</p><p><sup>6</sup>&nbsp;Here’s one with multiple blocks.</p>
+<p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></section>
 </section>
 </section>
 </section>
 <section id="tables" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="tables">Tables</h2>
-<p>I normally like my tables slightly more condensed than Bootstrap’s default and to resemble LaTeX typesetting, so made a few simple changes here.</p>
+<p>I prefer my normal tables slightly more condensed than Bootstrap’s default and to resemble LaTeX typesetting, so made a few simple changes here.</p>
 <table class="table">
 <caption>Default</caption>
-<thead>
-<tr class="header">
-<th>fruit</th>
-<th>price</th>
-</tr>
-</thead>
 <tbody>
 <tr class="odd">
 <td>apple</td>
@@ -404,12 +565,12 @@ Blockquote content comes here…<br>
 </tbody>
 </table>
 <div class="cell page-columns page-full">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">knitr<span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1">knitr<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">kable</span>(</span>
-<span id="cb3-2">  mtcars[<span class="dv" style="color: #AD0000;
+<span id="cb17-2">  mtcars[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -422,10 +583,10 @@ background-color: null;
 font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span>]</span>
-<span id="cb3-3">)</span></code></pre></div>
-<div class="cell-output-display column-page page-columns page-full">
+<span id="cb17-3">)</span></code></pre></div>
+<div class="cell-output-display column-page">
 <table class="table table-sm table-striped small">
-
+<caption>A full-width table to increase content space</caption>
 <colgroup>
 <col style="width: 28%">
 <col style="width: 7%">
@@ -535,44 +696,47 @@ font-style: inherit;">10</span>]</span>
 </tr>
 </tbody>
 </table>
-<div class="quarto-table-caption margin-caption">A full-width table to increase content space</div></div>
+</div>
 </div>
 </section>
-<section id="code-chunks-and-plots" class="level2">
-<h2 class="anchored" data-anchor-id="code-chunks-and-plots">Code Chunks and Plots</h2>
-<p>I call the <code>thematic::thematic_on()</code> function to auto-generate <code>lattice</code> and <code>ggplot2</code> palettes that complement my new Bootstrap colors.</p>
+<section id="apply-themed-colors-to-r-graphics" class="level2">
+<h2 class="anchored" data-anchor-id="apply-themed-colors-to-r-graphics">Apply Themed Colors to R Graphics</h2>
+<p>I make use of R <code>thematic::thematic_on()</code> package to auto-generate <code>base graphics</code>, <code>lattice</code> and <code>ggplot2</code> palettes that complement my new Bootstrap color scheme.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(thematic)</span>
-<span id="cb4-2"></span>
-<span id="cb4-3"><span class="co" style="color: #5E5E5E;
+<span id="cb18-2"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;"># Specify my default sequential and qualitative palettes</span></span>
-<span id="cb4-4"><span class="fu" style="color: #4758AB;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb18-3"></span>
+<span id="cb18-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Specify your sequential and qualitative palettes</span></span>
+<span id="cb18-5"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">thematic_on</span>(</span>
-<span id="cb4-5">  <span class="at" style="color: #657422;
+<span id="cb18-6">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">bg=</span><span class="st" style="color: #20794D;
+font-style: inherit;">bg =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"transparent"</span>, <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">fg=</span><span class="st" style="color: #20794D;
+font-style: inherit;">fg =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"#111719"</span>, <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">accent=</span><span class="st" style="color: #20794D;
+font-style: inherit;">accent =</span> pal12[<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#789494"</span>,</span>
-<span id="cb4-6">  <span class="at" style="color: #657422;
+font-style: inherit;">"cyan"</span>],</span>
+<span id="cb18-7">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">font =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">font_spec</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Roboto Condensed"</span>),</span>
-<span id="cb4-7">  <span class="at" style="color: #657422;
+<span id="cb18-8">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">sequential =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -589,98 +753,78 @@ background-color: null;
 font-style: inherit;">fg_low=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">FALSE</span>),</span>
-<span id="cb4-8">  <span class="at" style="color: #657422;
+<span id="cb18-9">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">qualitative =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">c</span>(</span>
-<span id="cb4-9">    <span class="st" style="color: #20794D;
+font-style: inherit;">alpha</span>(pal12, .<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">"#789494"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#445e64"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#222e32"</span>, </span>
-<span id="cb4-10">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#aea39a"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#98796f"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#9b59b6"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#3daee9"</span>,</span>
-<span id="cb4-11">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#27ae60"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#edcd37"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#f67400"</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"#da4453"</span>)</span>
-<span id="cb4-12">  )</span></code></pre></div>
+font-style: inherit;">9</span>)</span>
+<span id="cb18-10">  )</span></code></pre></div>
 </div>
 <p>Note that calling <code>thematic_on()</code> modifies R session <code>getOption("ggplot2.discrete.colour")</code> and <code>getOption("ggplot2.discrete.fill")</code> – and that’s how the underlying “magic” happens.</p>
-<p>Next I apply – opinionated – changes to <code>ggthemes::theme_foundation()</code>, mostly transparent fills and custom fonts, etc. The final theme function is shown below.</p>
-<p>These 2 functions are further expanded and documented in <code>./R/utils.R</code>, so I can handle dependencies and use them more flexibly in my blog posts, as needed.</p>
+<p>Next I apply (slightly opinionated) changes to <code>ggthemes::theme_foundation()</code>, mostly transparent fills, condensed font, simplified axes, and a y-axis on the right side.</p>
+<p>These graphic customizations are further documented in <code>./R/utils.R</code> in this repo, so as to handle dependencies, and because I want to use them more flexibly in my blog posts. When visualizing scientific and spatial datasets the choice of colors scales requires good care, so the use of <code>thematic_on()</code> is often not sufficient, but it’s a good start here nonetheless.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(ggplot2)</span>
-<span id="cb5-2"></span>
-<span id="cb5-3">theme_labs <span class="ot" style="color: #003B4F;
+<div class="code-with-filename">
+<details class="code-fold">
+<summary>Show all code</summary>
+<div class="code-with-filename-file">
+<pre><strong>./R/utils.R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1">theme_labs <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(</span>
-<span id="cb5-4">  <span class="at" style="color: #657422;
+<span id="cb19-2">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>,</span>
-<span id="cb5-5">  <span class="at" style="color: #657422;
+<span id="cb19-3">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">subtitle =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>,</span>
-<span id="cb5-6">  <span class="at" style="color: #657422;
+<span id="cb19-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">base_size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">12</span>,</span>
-<span id="cb5-7">  <span class="at" style="color: #657422;
+<span id="cb19-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">base_family =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Roboto Condensed"</span>,</span>
-<span id="cb5-8">  <span class="at" style="color: #657422;
+<span id="cb19-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">base_bg =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"transparent"</span>,</span>
-<span id="cb5-9">  <span class="at" style="color: #657422;
+<span id="cb19-7">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">base_color =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"#111719"</span>,</span>
-<span id="cb5-10">  ...) ggthemes<span class="sc" style="color: #5E5E5E;
+<span id="cb19-8">  ...) ggthemes<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_foundation</span>(</span>
-<span id="cb5-11">    <span class="at" style="color: #657422;
+<span id="cb19-9">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">base_size =</span> base_size, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">base_family =</span> base_family</span>
-<span id="cb5-12">  ) <span class="sc" style="color: #5E5E5E;
+<span id="cb19-10">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(</span>
-<span id="cb5-13"></span>
-<span id="cb5-14">    <span class="at" style="color: #657422;
+<span id="cb19-11"></span>
+<span id="cb19-12">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.margin =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -697,7 +841,7 @@ background-color: null;
 font-style: inherit;">1</span>), <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"lines"</span>),</span>
-<span id="cb5-15">    <span class="at" style="color: #657422;
+<span id="cb19-13">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">text =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -708,7 +852,7 @@ background-color: null;
 font-style: inherit;">lineheight=</span>.<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">9</span>),</span>
-<span id="cb5-16">    <span class="at" style="color: #657422;
+<span id="cb19-14">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">line =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -719,7 +863,7 @@ background-color: null;
 font-style: inherit;">1</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">color=</span>base_color),</span>
-<span id="cb5-17">    <span class="at" style="color: #657422;
+<span id="cb19-15">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">rect =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -736,7 +880,7 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>),</span>
-<span id="cb5-18">    <span class="at" style="color: #657422;
+<span id="cb19-16">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.background =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -747,7 +891,7 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>),</span>
-<span id="cb5-19">    <span class="at" style="color: #657422;
+<span id="cb19-17">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">panel.background =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -758,7 +902,7 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>),</span>
-<span id="cb5-20">    <span class="at" style="color: #657422;
+<span id="cb19-18">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">panel.grid =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -771,35 +915,35 @@ background-color: null;
 font-style: inherit;">linetype=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>),</span>
-<span id="cb5-21">    <span class="at" style="color: #657422;
+<span id="cb19-19">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">panel.grid.major =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_line</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">color=</span>base_color),</span>
-<span id="cb5-22">    <span class="at" style="color: #657422;
+<span id="cb19-20">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">panel.grid.major.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_blank</span>(),</span>
-<span id="cb5-23">    <span class="at" style="color: #657422;
+<span id="cb19-21">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">panel.grid.minor =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_blank</span>(),</span>
-<span id="cb5-24">    <span class="at" style="color: #657422;
+<span id="cb19-22">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">strip.background =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_rect</span>(),</span>
-<span id="cb5-25"></span>
-<span id="cb5-26">    <span class="at" style="color: #657422;
+<span id="cb19-23"></span>
+<span id="cb19-24">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_text</span>(</span>
-<span id="cb5-27">      <span class="at" style="color: #657422;
+<span id="cb19-25">      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">face=</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -814,7 +958,7 @@ background-color: null;
 font-style: inherit;">*</span><span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.25</span>),</span>
-<span id="cb5-28">    <span class="at" style="color: #657422;
+<span id="cb19-26">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.subtitle =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -833,7 +977,7 @@ background-color: null;
 font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"lines"</span>),</span>
-<span id="cb5-29">      <span class="at" style="color: #657422;
+<span id="cb19-27">      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">face=</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -844,12 +988,12 @@ background-color: null;
 font-style: inherit;">hjust=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>),</span>
-<span id="cb5-30">    <span class="at" style="color: #657422;
+<span id="cb19-28">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">strip.text =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_text</span>(</span>
-<span id="cb5-31">      <span class="at" style="color: #657422;
+<span id="cb19-29">      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">face=</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -860,7 +1004,7 @@ background-color: null;
 font-style: inherit;">0</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">size=</span>base_size),</span>
-<span id="cb5-32">    <span class="at" style="color: #657422;
+<span id="cb19-30">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.caption =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -881,19 +1025,19 @@ background-color: null;
 font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"lines"</span>),</span>
-<span id="cb5-33">      <span class="at" style="color: #657422;
+<span id="cb19-31">      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">size=</span>base_size<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span><span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0.9</span>, <span class="at" style="color: #657422;
+font-style: inherit;">0.85</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">hjust=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>),</span>
-<span id="cb5-34"></span>
-<span id="cb5-35">    <span class="at" style="color: #657422;
+<span id="cb19-32"></span>
+<span id="cb19-33">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.text =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -904,7 +1048,7 @@ background-color: null;
 font-style: inherit;">face=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"bold"</span>),</span>
-<span id="cb5-36">    <span class="at" style="color: #657422;
+<span id="cb19-34">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.text.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -913,14 +1057,14 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NULL</span>),</span>
-<span id="cb5-37">    <span class="at" style="color: #657422;
+<span id="cb19-35">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">color=</span>base_color, </span>
-<span id="cb5-38">      <span class="at" style="color: #657422;
+<span id="cb19-36">      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">size=</span>base_size, <span class="at" style="color: #657422;
 background-color: null;
@@ -931,12 +1075,12 @@ background-color: null;
 font-style: inherit;">hjust=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>),</span>
-<span id="cb5-39">    <span class="at" style="color: #657422;
+<span id="cb19-37">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_blank</span>(),</span>
-<span id="cb5-40">    <span class="at" style="color: #657422;
+<span id="cb19-38">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.ticks =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -945,12 +1089,12 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NULL</span>),</span>
-<span id="cb5-41">    <span class="at" style="color: #657422;
+<span id="cb19-39">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.ticks.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_blank</span>(),</span>
-<span id="cb5-42">    <span class="at" style="color: #657422;
+<span id="cb19-40">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.ticks.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -959,18 +1103,18 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NULL</span>),</span>
-<span id="cb5-43">    <span class="at" style="color: #657422;
+<span id="cb19-41">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.line =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_line</span>(),</span>
-<span id="cb5-44">    <span class="at" style="color: #657422;
+<span id="cb19-42">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.line.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_blank</span>(),</span>
-<span id="cb5-45"></span>
-<span id="cb5-46">    <span class="at" style="color: #657422;
+<span id="cb19-43"></span>
+<span id="cb19-44">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.background =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -983,7 +1127,7 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>),</span>
-<span id="cb5-47">    <span class="at" style="color: #657422;
+<span id="cb19-45">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.box.background =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -996,7 +1140,7 @@ background-color: null;
 font-style: inherit;">color=</span><span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NA</span>),</span>
-<span id="cb5-48">    <span class="at" style="color: #657422;
+<span id="cb19-46">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.title =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1011,7 +1155,7 @@ background-color: null;
 font-style: inherit;">hjust=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>),</span>
-<span id="cb5-49">    <span class="at" style="color: #657422;
+<span id="cb19-47">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.margin =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1026,7 +1170,7 @@ background-color: null;
 font-style: inherit;">1</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"lines"</span>),</span>
-<span id="cb5-50">    <span class="at" style="color: #657422;
+<span id="cb19-48">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.key.size =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1035,7 +1179,7 @@ background-color: null;
 font-style: inherit;">8</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"lines"</span>),</span>
-<span id="cb5-51">    <span class="at" style="color: #657422;
+<span id="cb19-49">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.text =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1044,34 +1188,37 @@ background-color: null;
 font-style: inherit;">*</span><span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.9</span>),</span>
-<span id="cb5-52">    <span class="at" style="color: #657422;
+<span id="cb19-50">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">legend.position=</span><span class="st" style="color: #20794D;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"right"</span>, <span class="at" style="color: #657422;
+font-style: inherit;">"right"</span>, </span>
+<span id="cb19-51">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">legend.justification=</span><span class="st" style="color: #20794D;
+font-style: inherit;">legend.justification =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"left"</span>,</span>
-<span id="cb5-53">    <span class="at" style="color: #657422;
+<span id="cb19-52">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">legend.direction=</span><span class="st" style="color: #20794D;
+font-style: inherit;">legend.direction =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"vertical"</span>,</span>
-<span id="cb5-54">    ...)</span></code></pre></div>
+<span id="cb19-53">    ...)</span></code></pre></div>
+</details>
 </div>
-<p>Finally we generate a few sample <code>ggplot</code> and <code>lattice</code> charts below to make sure everything looks adequate.</p>
+</div>
+<p>Finally let’s output a couple of categorical and contnuous <code>ggplot</code> and <code>lattice</code> charts below to make sure everything looks adequate.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Apply and check my new graphic theme</span></span>
-<span id="cb6-2"><span class="fu" style="color: #4758AB;
+<span id="cb20-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_set</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_labs</span>())</span>
-<span id="cb6-3"></span>
-<span id="cb6-4"><span class="fu" style="color: #4758AB;
+<span id="cb20-3"></span>
+<span id="cb20-4"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(mtcars, <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1085,7 +1232,40 @@ font-style: inherit;">factor</span>(carb))) <span class="sc" style="color: #5E5E
 background-color: null;
 font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">geom_col</span>()</span></code></pre></div>
+font-style: inherit;">geom_col</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb20-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guides</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guide_none</span>(), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y.sec=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guide_axis</span>()) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb20-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb20-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"My Long and Descriptive Plot Title"</span>, </span>
+<span id="cb20-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">subtitle=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"My very long subtitle with many units"</span>, </span>
+<span id="cb20-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">caption=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"My very long plot caption with many references."</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1095,7 +1275,7 @@ font-style: inherit;">geom_col</span>()</span></code></pre></div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(mtcars, <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1104,7 +1284,7 @@ background-color: null;
 font-style: inherit;">color=</span>carb)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> </span>
-<span id="cb7-2">  <span class="fu" style="color: #4758AB;
+<span id="cb21-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -1112,28 +1292,38 @@ font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_smooth</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">+</span> </span>
-<span id="cb7-3">  <span class="fu" style="color: #4758AB;
+font-style: inherit;">+</span></span>
+<span id="cb21-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guides</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guide_none</span>(), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y.sec=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guide_axis</span>()) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb21-4">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(</span>
-<span id="cb7-4">    <span class="at" style="color: #657422;
+<span id="cb21-5">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"My Long and Descriptive Plot Title"</span>, </span>
-<span id="cb7-5">    <span class="at" style="color: #657422;
+<span id="cb21-6">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">subtitle=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"My very long subtitle with many units"</span>, </span>
-<span id="cb7-6">    <span class="at" style="color: #657422;
+<span id="cb21-7">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">caption=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"My very long plot caption with many references.</span></span>
-<span id="cb7-7"><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">             My very long plot caption with many references."</span>)</span></code></pre></div>
+font-style: inherit;">"My very long plot caption with many references."</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1142,38 +1332,40 @@ font-style: inherit;">             My very long plot caption with many reference
 </div>
 </div>
 </div>
+<p>Note that the code chunk below produces a PNG instead of SVG file. I also set <code>knitr</code> option <code>fig-dpi: 220</code> so plots still look decent when printed to paper (though of course it’s not adequate on long pages with many plots).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">ggplot</span>(faithfuld, <span class="fu" style="color: #4758AB;
+font-style: inherit;">```{r}</span></span>
+<span id="cb22-2"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">aes</span>(waiting, eruptions, <span class="at" style="color: #657422;
+font-style: inherit;">#| fig-format: png</span></span>
+<span id="cb22-3"></span>
+<span id="cb22-4"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">z=</span>density)) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">ggplot(faithfuld, aes(waiting, eruptions, z=density)) +</span></span>
+<span id="cb22-5"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb8-2">  <span class="fu" style="color: #4758AB;
+font-style: inherit;">  geom_raster(aes(fill=density)) +</span></span>
+<span id="cb22-6"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">geom_raster</span>(<span class="fu" style="color: #4758AB;
+font-style: inherit;">  geom_contour() +</span></span>
+<span id="cb22-7"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+font-style: inherit;">  guides(y=guide_none(), y.sec=guide_axis())</span></span>
+<span id="cb22-8"><span class="in" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">fill =</span> density)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb8-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_contour</span>()</span></code></pre></div>
+font-style: inherit;">```</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://mbacou.com/posts/2022-12-01-theme/index_files/figure-html/unnamed-chunk-8-1.svg" class="img-fluid figure-img"></p>
+<p><img src="https://mbacou.com/posts/2022-12-01-theme/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(mtcars, <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1188,7 +1380,20 @@ background-color: null;
 font-style: inherit;">geom_point</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb9-2">  <span class="fu" style="color: #4758AB;
+<span id="cb23-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guides</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guide_none</span>(), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y.sec=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guide_axis</span>()) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb23-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -1211,9 +1416,9 @@ font-style: inherit;">"My plot caption"</span>)</span></code></pre></div>
 </div>
 </div>
 </div>
-<p>Note that <code>thematic_on()</code> also does a little magic with base R graphics <code>par()</code> options.</p>
+<p>Note that <code>thematic_on()</code> also does a little magic with R base graphics <code>par()</code> options. This is important as many advanced statistical and spatial libraries in R continue to make use of R base <code>graphics</code> library.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">lattice<span class="sc" style="color: #5E5E5E;
+<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1">lattice<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1225,7 +1430,7 @@ font-style: inherit;">show.settings</span>()</span></code></pre></div>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1">x <span class="ot" style="color: #003B4F;
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1">x <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1236,7 +1441,7 @@ background-color: null;
 font-style: inherit;">df=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>)</span>
-<span id="cb11-2"><span class="fu" style="color: #4758AB;
+<span id="cb25-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">hist</span>(x, <span class="at" style="color: #657422;
 background-color: null;
@@ -1254,12 +1459,16 @@ font-style: inherit;">0.2</span>), <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">col=</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">border=</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2</span>)</span>
-<span id="cb11-3"><span class="fu" style="color: #4758AB;
+font-style: inherit;">12</span>)</span>
+<span id="cb25-3"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">grid</span>(<span class="cn" style="color: #8f5902;
 background-color: null;
@@ -1270,7 +1479,7 @@ background-color: null;
 font-style: inherit;">col=</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>)</span>
-<span id="cb11-4"><span class="fu" style="color: #4758AB;
+<span id="cb25-4"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">curve</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1305,31 +1514,41 @@ font-style: inherit;">TRUE</span>)</span></code></pre></div>
 </div>
 
 
+
 </section>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2022,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-schulte2012" class="csl-entry">
+Schulte, Eric, Dan Davison, Thomas Dye, and Carsten Dominik. 2012. <span>“A Multi-Language Computing Environment for Literate Programming and Reproducible Research.”</span> <em>Journal of Statistical Software</em> 46 (3): 1–24. <a href="https://doi.org/10.18637/jss.v046.i03">https://doi.org/10.18637/jss.v046.i03</a>.
+</div>
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2023,
   author = {BACOU, Melanie},
-  title = {Configuring a {Quarto} {Website}},
-  date = {2022-12-01},
+  title = {Migrating from {*Distill*} to {*Quarto*} {Publishing}},
+  date = {2023-10-01},
   url = {https://mbacou.com/posts/2022-12-01-theme},
   langid = {en},
-  abstract = {Random content to help me migrate this personal blog from
-    {[}distill{]}(https://rstudio.github.io/distill/) to
-    {[}quarto{]}(https://quarto.org/). Quarto uses a new templating
-    system built on top of {[}Bootstrap
-    5{]}(https://getbootstrap.com/docs/5.0/) with new page layout and
-    extended publishing formats.}
+  abstract = {A post about literate programming in general and Quarto
+    formats in particular to help me migrate this personal blog from
+    {[}Distill{]}(https://rstudio.github.io/distill/) to
+    {[}Quarto{]}(https://quarto.org/). Compared with *J.J. Allaire’s
+    Distill for R Markdown*, *Posit Quarto Markdown* uses a new
+    templating system built on top of {[}Bootstrap
+    v5.3.1{]}(https://getbootstrap.com/docs/5.3/customize/overview/)
+    with new page layout, extended export formats, and more flexible
+    publishing workflows. This post briefly outlines my process for
+    creating a custom theme for this Quarto-powered website, and design
+    tweaks I have made along the way.}
 }
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2022" class="csl-entry quarto-appendix-citeas">
-BACOU, Melanie. 2022. <span>“Configuring a Quarto Website.”</span>
-December 1, 2022. <a href="https://mbacou.com/posts/2022-12-01-theme">https://mbacou.com/posts/2022-12-01-theme</a>.
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2023" class="csl-entry quarto-appendix-citeas">
+BACOU, Melanie. 2023. <span>“Migrating from *Distill* to *Quarto*
+Publishing.”</span> October 1, 2023. <a href="https://mbacou.com/posts/2022-12-01-theme">https://mbacou.com/posts/2022-12-01-theme</a>.
 </div></div></section></div> ]]></description>
   <category>quarto</category>
-  <category>web design</category>
+  <category>dataviz</category>
   <guid>https://mbacou.com/posts/2022-12-01-theme/</guid>
-  <pubDate>Thu, 01 Dec 2022 00:00:00 GMT</pubDate>
+  <pubDate>Sat, 30 Sep 2023 23:00:00 GMT</pubDate>
   <media:content url="https://mbacou.com/posts/2022-12-01-theme/thumb.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
@@ -1621,6 +1840,7 @@ font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sapply</span>(f, <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(x) <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">nlayers</span>(<span class="fu" style="color: #4758AB;
@@ -1649,6 +1869,7 @@ font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sapply</span>(f[bad], <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(x) <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">nlayers</span>(<span class="fu" style="color: #4758AB;
@@ -1701,6 +1922,7 @@ font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span>], <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(x) {</span>
 <span id="cb2-41">  s <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2045,6 +2267,7 @@ font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lapply</span>(obs.lst, <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(x) {</span>
 <span id="cb3-56">  date_start <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2078,6 +2301,7 @@ font-style: inherit;">2</span>]), date_end)</span>
 background-color: null;
 font-style: inherit;">=</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(date_end <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;=</span> date_start) {</span>
@@ -2094,6 +2318,7 @@ font-style: inherit;">"10 days"</span>)</span>
 background-color: null;
 font-style: inherit;">lapply</span>(s, <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(y) {</span>
 <span id="cb3-63">      t <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2125,6 +2350,7 @@ font-style: inherit;">10-1</span>))</span>
 background-color: null;
 font-style: inherit;">=</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">class</span>(t)[<span class="dv" style="color: #AD0000;
@@ -2137,6 +2363,7 @@ font-style: inherit;">"try-error"</span>) <span class="cn" style="color: #8f5902
 background-color: null;
 font-style: inherit;">NULL</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">setDT</span>(t)</span>
@@ -2146,6 +2373,7 @@ font-style: inherit;">return</span>(t)</span>
 <span id="cb3-67">    })</span>
 <span id="cb3-68">  } <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">NULL</span></span>
@@ -2984,6 +3212,7 @@ font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lapply</span>(f, <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(x) {</span>
 <span id="cb7-20">  r <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -4695,6 +4924,7 @@ font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lapply</span>(ids, <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(x) </span>
 <span id="cb3-34">  <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4715,6 +4945,7 @@ font-style: inherit;">&lt;-</span> stations.dt[<span class="fu" style="color: #4
 background-color: null;
 font-style: inherit;">sapply</span>(stations.dt, <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(x) <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">class</span>(x)<span class="sc" style="color: #5E5E5E;
@@ -4733,6 +4964,7 @@ font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lapply</span>(stations.dt, <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(x) <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">setnames</span>(x, <span class="dv" style="color: #AD0000;
@@ -4766,8 +4998,10 @@ background-color: null;
 font-style: inherit;">2</span>))</span>
 <span id="cb3-42"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span>(i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> stations.dt[, <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">unique</span>(var)]) stations.dt[var<span class="sc" style="color: #5E5E5E;
@@ -5439,8 +5673,10 @@ background-color: null;
 font-style: inherit;">2</span>))</span>
 <span id="cb8-3"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span>(i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> stations.dt[, <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">unique</span>(var)]) stations.dt[var<span class="sc" style="color: #5E5E5E;
@@ -7685,12 +7921,12 @@ font-style: italic;">## `geom_smooth()` using method = 'loess' and formula 'y ~ 
   author = {BACOU, Melanie},
   title = {ERA5-LAND {Temperature} {Validation} {(California)}},
   date = {2020-12-02},
-  url = {https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca},
+  url = {https://mbacou.com/posts/2020-12-02-era5-ca},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2020" class="csl-entry quarto-appendix-citeas">
 BACOU, Melanie. 2020. <span>“ERA5-LAND Temperature Validation
-(California).”</span> December 2, 2020. <a href="https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca">https://mbacou.github.io/mb-labs/posts/2020-12-02-era5-ca</a>.
+(California).”</span> December 2, 2020. <a href="https://mbacou.com/posts/2020-12-02-era5-ca">https://mbacou.com/posts/2020-12-02-era5-ca</a>.
 </div></div></section></div> ]]></description>
   <category>risk modeling</category>
   <guid>https://mbacou.com/posts/2020-12-02-era5-ca/</guid>
