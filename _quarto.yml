@@ -6,7 +6,6 @@ project:
   preview:
     port: 5555
 
-
 website:
   title: "Mel's Labs"
   favicon: www/favicon.png
@@ -35,7 +34,7 @@ website:
     content: "{{< bi warning >}} This blog is being migrating to [Quarto](https://quarto.org), expect quirks and dead links!"
 
   navbar:
-    title: "{{< bi compass >}}  Mel's **Labs**"
+    title: Mel B.  **Labs**
     foreground: gray-900
     background: transparent
     pinned: false
@@ -55,7 +54,7 @@ website:
       - icon: github
         href: https://github.com/mbacou/mb-labs
       - icon: telegram
-        href: t.me/mbacou
+        href: https://t.me/mbacou
       - icon: linkedin
         href: https://linkedin.com/in/mbacou
       - icon: youtube
@@ -92,7 +91,7 @@ format:
     title-block-banner: transparent
 
     fig-dpi: 220
-    fig-format: svg
+    fig-format: png
     fig-width: 7
     fig-height: 4.5
 
@@ -106,9 +105,11 @@ format:
 
     fontsize: 17px
     theme:
-      light: www/theme-mblabs.scss
+      light: 
+      - brand
+      - www/theme-mblabs.scss
     grid:
-      body-width: 880px
+      body-width: 860px
       sidebar-width: 160px
-      margin-width: 260px
+      margin-width: 280px
       gutter-width: 2em

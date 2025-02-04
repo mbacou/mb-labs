@@ -9,12 +9,14 @@ author:
     email: mel@mbacou.com
     orcid: 0000-0003-1810-6818
 
+date-modified: last-modified
+
 citation: true
 
 format:
   html:
     page-layout: article
-    default-image-extension: svg
+    default-image-extension: png
     execute:
       echo: true
       message: false

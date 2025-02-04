@@ -7,19 +7,23 @@ description: |
   I'm an applied economist with a focus on agricultural trade and development for both large- and small-holder farming systems. Over the years I have gained experience in policy formulation, monitoring & evaluation of ODA programs, climate risk and adaptation strategies, and in agricultural finance.
 page-layout: article
 image: _fig/profile.jpg
+author: ""
 date: 2024-01-01
 date-modified: last-modified
 freeze: true
 category: skip
+citation: false
 ---
 
 ::: {.column-margin}
 ![](_fig/profile.jpg){.img-rounded .d-block .mt-md-n4 width="10em"}
 
-{{< bi telegram >}}    [t.me/mbacou](https://t.me/mbacou)\
+::: {.text-dark}
 {{< bi linkedin >}}    [linkedin.com/in/mbacou](https://linkedin.com/in/mbacou)\
 {{< bi github >}}    [github.com/mbacou](https://github.com/mbacou)\
-{{< bi book >}}    [orcid.org/0000-0003-1810-6818](https://orcid.org/0000-0003-1810-6818)
+{{< bi telegram >}}    [t.me/mbacou](https://t.me/mbacou)\
+{{< bi book >}}    [orcid.org/0000-0003-1810-6818](https://orcid.org/0000-0003-1810-6818)  
+:::
 
 ##### Top Skills {.mt-3}
 
@@ -44,7 +48,7 @@ Russian (beginner)
 :::
 
 
-# Summary
+### Summary
 
 - Led research grants in the \$500K range, advised public agencies and private firms with large-scale data collection methods (incl. remote sensing), household survey design and analysis, market segmentation, agricultural value-chain analysis, pricing of (parametric) weather insurance.
 
@@ -55,12 +59,12 @@ Russian (beginner)
 - Work experience in fragile states (Mid-East, West/sub-Saharan Africa). French / U.S. citizenships.
 
 
-# Specialties
+### Specialties
 
 Quantitative and spatial analysis, cost/benefit analysis, household surveys and experimental designs, market segmentation, development of agricultural value chains, risk and impact evaluation methods, weather & climate risk and adaptation, parametric risk transfer, data visualization.
 
 *Stats*: R, R/Shiny, STATA, SAS, Tableau®, Highcharts.js, D3.js\
-*Databases*: MS SQL Server, MySQL, PostGIS, MongoDB, Elasticsearch\
+*Databases*: MS SQL Server, MySQL, PostGIS, MongoDB, Elasticsearch, DuckDB\
 *GIS*: QGIS, GRASS, GDAL, GeoServer, Mapnik, Leaflet, Kepler.gl\
 *DevOps*: CentOS, Ubuntu, AWS/Azure clouds, Docker\
 *Agile development*: Jira, Trello, Asana, Taiga.io, ClubHouse
@@ -90,7 +94,7 @@ Designed [complex ETLs](https://mbacou.github.io/WADashboard/) and [interactive 
 
 Washington DC\
 Tamale, Ghana\
-Kampala, Tanzania\
+Kampala, Uganda\
 Aug 2017 -- Apr 2021\
 3 years 9 months
 :::

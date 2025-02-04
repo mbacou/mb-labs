@@ -1,24 +1,13 @@
 ---
 title: Data, Resources, and Tools
 subtitle: A curated list of accessible resources for agricultural and agro-meteo research
+author: ""
 date: 2024-07-16
 date-modified: last-modified
-page-layout: full
-title-block-banner: url(/www/banner/dashboard.jpg) fixed
-title-block-banner-color: var(--bs-light)
+title-block-banner: var(--bs-primary-bg-subtle)
 ---
 
-
-A curated list of resources and tools, always in progress.
-
-::: {.panel-tabset .nav-fill .mt-4}
-
-## Remote Sensing
-
-[DigitalEarth Africa](https://sandbox.digitalearth.africa/) sandbox. Tutorials available on the [DE Africa](https://www.youtube.com/@digitalearthafrica) YouTube channel.
-
-[SEPAL](https://sepal.io/-/app-launch-pad)
-
+A curated list of resources and tools. This page is always in progress.
 
 
 ## Open Data
@@ -299,6 +288,13 @@ A curated list of resources and tools, always in progress.
 
 [Electricity Production | Energy-Charts](https://energy-charts.info/charts/power/chart.htm?l=en&c=DE&interval=month)
 
+
+
+## Remote Sensing
+
+[DigitalEarth Africa](https://sandbox.digitalearth.africa/) sandbox. Tutorials available on the [DE Africa](https://www.youtube.com/@digitalearthafrica) YouTube channel.
+
+[SEPAL](https://sepal.io/-/app-launch-pad)
 
 
 
@@ -711,7 +707,7 @@ A curated list of resources and tools, always in progress.
 [DigitalEarth Africa Sandbox](https://deafrica-prod-af-eks-user-auth.auth.us-west-2.amazoncognito.com/confirmForgotPassword?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.digitalearth.africa%2Foauth_callback&client_id=6vpn6tvdk35gn8b70gnjmt25od&state=eyJzdGF0ZV9pZCI6ICJmZmQ0NGYyZGVjMzQ0ODhiOGZkOGQ5ZmM5M2E5NDQ2OSJ9)
 
 
-## Risks in Agriculture
+## Risk in Agriculture
 
 [Risk Management and Monitoring - CoreLogic](https://www.corelogic.com/solutions/risk-management-and-monitoring-solutions.aspx)
 
@@ -808,5 +804,3 @@ A curated list of resources and tools, always in progress.
 [Geotribu](https://geotribu.fr/articles/2024/2024-06-18_carte-relief-ombre-avec-blender-partie-2-modelisation-reglages-cartographie/)
 
 [somethingaboutmaps](https://somethingaboutmaps.com/)
-
-:::

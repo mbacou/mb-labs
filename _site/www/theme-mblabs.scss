@@ -1,0 +1,657 @@
+/* Theme: mblabs-notebook */
+/* Author: BACOU, Melanie <mel@mbacou.com> */
+/* Version: v1.0.0 */
+/* Date: 2024-01-31 */
+
+/*-- scss:defaults --*/
+
+$theme: "mblabs" !default;
+
+$white:     #ffffff !default;
+$black:     #000000 !default;
+$cyan:      #789494 !default;
+$teal:      #445e64 !default;
+$dark:      #222e32 !default;
+$pink:      #aea39a !default;
+$purple:    #98796f !default;
+$indigo:    #9b59b6 !default;
+$blue:      #3daee9 !default;
+$green:     #27ae60 !default;
+$yellow:    #edcd37 !default;
+$orange:    #f67400 !default;
+$red:       #da4453 !default;
+$light:     #eff0f1 !default;
+$gray:      #505050 !default;
+
+$darkgray:  darken($gray, 4%)  !default;
+$gray-100:  tint-color($gray, 90%);
+$gray-200:  tint-color($gray, 80%);
+$gray-300:  tint-color($gray, 70%);
+$gray-400:  tint-color($gray, 60%);
+$gray-500:  tint-color($gray, 50%);
+$gray-600:  tint-color($gray, 40%);
+$gray-700:  tint-color($gray, 30%);
+$gray-800:  tint-color($gray, 20%);
+$gray-900:  tint-color($gray, 10%);
+
+$primary:   $purple;
+$secondary: $cyan;
+$success:   $teal;
+
+$spacer: 26px  !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * 1,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+);
+
+$font-size-base: 1rem;                         // 17px in `_quarto.yml`
+$h1-font-size:  calc($font-size-base + 15px);  // 32px
+$h2-font-size:  calc($font-size-base + 9px);   // 26px
+$h3-font-size:  calc($font-size-base + 11px);  // 28px
+$h4-font-size:  calc($font-size-base + 5px);   // 22px
+$h5-font-size:  calc($font-size-base + 3px);   // 20px
+$h6-font-size:  calc($font-size-base);
+
+$line-height-base: calc($spacer / 17px);
+$headings-line-height: $line-height-base;
+$list-inline-padding: .5* $spacer;
+
+$body-color: $gray;
+$body-bg: $white;
+$bg-opacity: 0.1;
+$link-color: $gray-700;
+$shaded: tint-color($light, 35%);
+$text-muted: rgba($body-color, 55%);
+$secondary-color: $text-muted;
+$code-color: $text-muted;
+$enable-negative-margins: true;
+
+$blockquote-font-size: 1rem;
+$blockquote-font-color: $gray-300;
+$blockquote-margin-y: 1* $spacer;
+$blockquote-small-color: $darkgray;
+
+$border-color: $gray-200;
+$border-radius-sm: 3px;
+$border-radius: 3px;
+$border-radius-lg: 0.50rem;
+$enable-rounded: true;
+$hr-border-color: $body-color;
+$hr-opacity: .75;
+
+$table-cell-padding: 0 .5em;
+$table-cell-padding-sm: 0 .25em;
+$table-striped-bg: $shaded;
+$table-border-color: $border-color;
+
+$thumbnail-border-width: 0;
+$thumbnail-border-radius: $border-radius;
+$thumbnail-border-color: $border-color;
+
+$input-color: $text-muted;
+$input-bg: rgba($shaded, 75%);
+$input-btn-padding-y: .25* $spacer;
+$input-placeholder-color: $input-color;
+$input-border-color: $border-color;
+$input-disabled-bg: darken($input-bg, 4%);
+$input-group-addon-bg: $shaded;
+
+$breadcrumb-active-color: $body-color;
+$component-active-bg: rgba($link-color, 12%);
+
+$jumbotron-bg: $shaded;
+$label-margin-bottom: .25* $spacer;
+$list-group-bg: $input-bg;
+$list-group-border-color: $input-border-color;
+$list-group-hover-bg: lighten($component-active-bg, 20%);
+$modal-content-bg: $input-bg;
+$modal-content-border-color: $border-color;
+$nav-tabs-border-color: $border-color;
+
+$pagination-bg: $input-bg;
+$pagination-border-color: $border-color;
+$pagination-color: $input-color;
+$pagination-disabled-bg: $input-disabled-bg;
+$pagination-hover-color: $link-color;
+$progress-bg: $input-bg;
+
+$card-bg: $white;
+$card-cap-bg: rgba($border-color, 10%);
+$card-spacer-x: .5* $spacer;
+$card-spacer-y: .5* $spacer;
+$card-border-width: 0;
+$card-border-color: $border-color;
+$card-border-radius: $border-radius;
+
+$font-family-base: "Source Sans 3", sans-serif;
+$headings-font-family: "Oswald", serif;
+$font-sans-serif: "Roboto Condensed", sans-serif;
+$font-monospace: "Roboto Mono", monospace;
+$headings-font-color: $darkgray;
+$headings-font-weight: 400;
+$font-weight-bold: 500;
+$small-font-size: calc(1rem - 1px);
+
+$navbar-hover-color: $primary;
+$navbar-active-color: $dark;
+$nav-link-font-family: $font-family-base;
+$nav-link-font-weight: 500;
+$nav-link-font-size: 1rem;
+$nav-link-padding-x: 0.25rem;
+$nav-link-padding-y: 0;
+$nav-link-color: $body-color;
+$nav-link-hover-color: $dark;
+
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Roboto+Condensed:wght@400;500&family=Roboto+Mono:wght@400&family=Oswald:wght@200..700&&display=swap');
+
+body {
+  font-optical-sizing: auto;
+}
+b, strong {
+  font-weight: 500;
+}
+p, div {
+  line-height: $spacer;
+}
+p {
+  margin-bottom: .5* $spacer;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-weight: $headings-font-weight;
+  margin-top: 1* $spacer;
+  margin-bottom: .5* $spacer;
+  padding: 0;
+}
+h4, .h4, h5, .h5 {
+  font-weight: 500;
+}
+h2, .h2 {
+  color: rgba($body-color, 45%);
+  font-style: normal;
+  font-weight: 300;
+  border-bottom: solid 1px $border-color;
+}
+hr {
+  border-top: dashed 1px $border-color;
+  margin: 0 0 .5* $spacer 0;
+}
+ol, ul, dl {
+  margin-bottom: .5* $spacer;
+}
+.blockquote, blockquote p {
+  font-size: 1rem;
+  line-height: 1.5* $spacer;
+  font-style: italic;
+  color: $gray-800;
+  border: none;
+}
+blockquote small, blockquote .small {
+  font-family: $font-sans-serif;
+  color: $headings-font-color;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.quarto-title-banner h1, .quarto-title-banner .h1,
+.quarto-title-banner h2, .quarto-title-banner .h2 {
+  color: $headings-font-color;
+  font-weight: 400;
+}
+.quarto-title-banner .quarto-title .title, h1.title {
+  font-family: $headings-font-family;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 2* $spacer;
+  margin-top: 1* $spacer;
+}
+.lead {
+  font-family: $font-family-base;
+  font-weight: 400;
+  color: rgba($body-color, 55%);
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1.25* $spacer;
+}
+.lead p {
+  line-height: unset;  
+}
+p.subtitle {
+  margin-top: .5* $spacer;
+  margin-bottom: 1* $spacer;
+}
+.description {
+  font-family: $font-sans-serif;
+  color: rgba($body-color, 85%);
+  font-weight: 400;
+  font-size: 1.15rem;
+  padding: .75* $spacer 2em 0;
+  border: solid 1px $border-color;
+}
+#title-block-header.quarto-title-block.default .description>p:first-child {
+  font-family: $headings-font-family;
+  font-size: 1.5rem;
+  color: $primary;
+}
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading,
+#title-block-header.quarto-title-block.default .abstract .block-title,
+#quarto-appendix.default .quarto-appendix-heading, details>summary {
+  font-family: $font-sans-serif;
+  font-size: .825rem !important;
+  color: $primary;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 0;
+  opacity: 1;
+}
+#title-block-header.quarto-title-block.default .quarto-title-meta-contents p,
+#title-block-header.quarto-title-block.default .quarto-title-authors p,
+#title-block-header.quarto-title-block.default .quarto-title-affiliations p,
+#title-block-header.quarto-title-block.default .abstract p {
+  font-size: $small-font-size;
+  color: $text-muted;
+  margin-bottom: .5* $spacer;
+}
+#title-block-header.quarto-title-block.default .keywords>p:last-of-type,
+#title-block-header.quarto-title-block.default .description>p:last-of-type,
+#title-block-header.quarto-title-block.default .abstract>p:last-of-type {
+  margin-bottom: 1* $spacer;
+}
+#quarto-appendix.default {
+  background: none;
+}
+
+.card {
+  border-bottom: solid 1px $border-color;
+}
+div.quarto-post .metadata {
+  font-size: 1rem;
+}
+.quarto-grid-item .card-attribution, .listing-author, .date, .date-modified {
+  color: $text-muted;
+}
+.quarto-grid-item .card-attribution {
+  padding-top: 1* $spacer;
+}
+.action-links {
+  font-family: $headings-font-family;
+  color: $text-muted;
+  font-weight: 400;
+}
+h5.card-title {
+  font-family: $headings-font-family;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: $headings-font-color;
+}
+h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
+#quarto-margin-sidebar .quarto-listing-category-title,
+.column-margin h5, #toc-title {
+  color: $headings-font-color;
+  font-family: $headings-font-family;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  cursor: unset;
+}
+.card:hover {
+  transition: all .4s ease-in-out;
+  transform: translateZ(0) scale(1.06);
+}
+.card-img-top {
+  background-color: $shaded;
+  border-radius: $border-radius;
+  overflow: clip;
+}
+.quarto-grid-item .card-text {
+  font-size: unset;
+  margin: 0 0 .5* $spacer;
+}
+.quarto-grid-item .card-text-small {
+  font-size: $small-font-size;
+}
+.quarto-grid-item .card-title {
+  margin: .25* $spacer 0 .5* $spacer;
+}
+.quarto-grid-item .card-attribution {
+  padding: .5* $spacer 0 0;
+  text-transform: none;
+  font-weight: 400;
+}
+.listing-date {
+  font-family: $font-sans-serif;
+  font-size: $small-font-size;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $primary;
+}
+.listing-file-modified, .listing-author {
+  font-family: $font-sans-serif;
+  font-size: $small-font-size;
+  color: $headings-font-color;
+}
+.quarto-listing-sort {
+  margin: 0 0 .5* $spacer auto;
+}
+
+pre code {
+  font-family: $font-monospace;
+  font-size: .75rem;
+  color: $text-muted;
+}
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+  font-family: $font-monospace;
+  font-size: .75rem;
+  color: $body-color;
+  background-color: transparent;
+}
+.code-with-filename .code-with-filename-file {
+  background-color: $border-color;
+}
+div.sourceCode, details {
+  margin: .5*$spacer 0 1*$spacer;
+}
+div.sourceCode, pre.sourceCode {
+  background-color: $input-bg;
+  line-height: 20px;
+}
+#quarto-appendix.default .quarto-appendix-bibtex, .sourceCode .bibtex,
+#quarto-appendix.default .quarto-appendix-citeas {
+  font-family: $font-monospace;
+  font-size: .75rem;
+  line-height: 20px;
+  color: $text-muted;
+  border: none;
+  background: transparent;
+}
+
+.quarto-title .quarto-categories {
+  padding-bottom: unset;
+  margin-top: .5* $spacer;
+}
+.quarto-title .quarto-categories .quarto-category,
+.quarto-grid-item .listing-categories .listing-category,
+div.quarto-post .listing-categories .listing-category {
+  font-family: $font-sans-serif;
+  color: $gray-700;
+  font-size: .825rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+  background: $light;
+  padding: 0 .75em;
+  margin-bottom: .5* $spacer;
+  opacity: 1;
+}
+
+thead, tbody, tfoot, tr, td, th {
+  border-color: rgba($body-color, 25%);
+}
+table, table.table, figure {
+  border-top: none;
+  border-radius: 0;
+  margin-top : .5* $spacer;
+  margin-bottom: 1* $spacer;
+}
+.table>:not(caption)>*>* {
+  padding: 0 .5em;
+}
+.table>thead {
+  border-bottom: 2px solid $primary;
+}
+.table th {
+  font-family: $font-sans-serif;
+  font-weight: 400;
+  color: $headings-font-color;
+}
+.table-sm th {
+  font-size: 1rem;
+  line-height: $spacer;
+}
+.table-sm td {
+  line-height: calc($spacer - 1px);
+}
+caption, .panel-caption, .figure-caption, .subfigure-caption, .table-caption,
+figcaption, .column-margin figcaption, .margin-caption, div.aside, aside, .column-margin {
+  font-family: $font-sans-serif;
+  font-size: $small-font-size;
+  color: $text-muted;
+  text-align: left;
+  padding: 0;
+  margin-top: .25* $spacer;
+  margin-bottom: .5* $spacer;
+}
+figcaption, .column-margin figcaption {
+  text-align: center;
+  margin-top: 0;
+}
+.figure-img {
+  margin: 0;
+}
+
+.callout.callout-style-default, .callout.callout-style-simple {
+  border: none;
+  border-left: 3px solid $primary;
+  background-color: $input-bg;
+}
+.callout.callout-style-simple .callout-body,
+.callout.callout-style-default .callout-body {
+  font-size: unset;
+}
+.callout.callout-style-default:not(.no-icon) div.callout-title-container {
+  margin-top: unset;
+}
+callout.callout-style-default>div.callout-header, .callout-title-container {
+  font-family: $font-sans-serif;
+  font-size: $small-font-size;
+  font-weight: 500;
+  border-bottom: none;
+  padding: 0 .75em;
+}
+.callout:not(.callout-titled) .callout-body>:last-child,
+.callout:not(.callout-titled) .callout-body>div>:last-child {
+  margin-bottom: unset;
+}
+.callout:not(.callout-titled) .callout-body>:first-child,
+.callout:not(.callout-titled) .callout-body>div>:first-child {
+  margin-top: unset;
+}
+#quarto-content .quarto-sidebar-toggle {
+  background: none;
+  border: none;
+}
+.quarto-sidebar-toggle-title {
+  font-family: $font-sans-serif;
+  font-size: $small-font-size;
+  background: none;
+  border-bottom: solid 1px $border-color;
+  margin-top: .5* $spacer;
+  padding: .5em;
+}
+nav.sidebar.sidebar-navigation:not(.rollup) {
+  background-color: transparent;
+}
+nav.sidebar .nav-link {
+  font-family: $font-sans-serif;
+  font-size: $small-font-size;
+}
+
+.sidebar .toc-actions h2, .sidebar .toc-actions .h2,
+.sidebar .quarto-code-links h2, .sidebar .quarto-code-links .h2,
+.sidebar .quarto-other-links h2, .sidebar .quarto-other-links .h2,
+.sidebar .quarto-alternate-notebooks h2, .sidebar .quarto-alternate-notebooks .h2,
+.sidebar .quarto-alternate-formats h2, .sidebar .quarto-alternate-formats .h2,
+.sidebar nav[role=doc-toc]>h2, .sidebar nav[role=doc-toc]>.h2 {
+  margin-top: 1* $spacer;
+  margin-bottom: .5* $spacer;
+}
+.sidebar.sidebar-navigation>* {
+  padding-top: $spacer;
+}
+.sidebar nav[role=doc-toc]>ul li a {
+  color: $text-muted;
+  border-left: solid 1px $border-color;
+}
+.sidebar nav[role=doc-toc] ul>li>a.active,
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+  border-left: solid 2px $primary;
+}
+.sidebar .toc-actions ul li a, .sidebar .quarto-code-links ul li a,
+.sidebar .quarto-other-links ul li a, .sidebar .quarto-alternate-notebooks ul li a,
+.sidebar .quarto-alternate-formats ul li a, .sidebar nav[role=doc-toc]>ul li a {
+  line-height: $spacer;
+  padding-top: .125* $spacer;
+  padding-bottom: .125* $spacer;
+}
+
+.panel-tabset > .nav-tabs, .panel-tabset > .tab-content {
+  border: none;
+}
+
+
+// Utilities
+div.separator {
+  height: .25* $spacer;
+  width: 5em;
+  background: $gray-200;
+  margin: 1 * $spacer 0 -.75* $spacer 0;
+  padding: 0;
+}
+.shaded {
+  background-color: $input-bg;
+  backdrop-filter: blur(2px);
+}
+.blurred {
+  background-color: rgba($dark, 65%);
+  backdrop-filter: blur(3px);
+}
+.striped {
+  background-image: linear-gradient(-45deg,
+  $shaded 25%, transparent 25%, transparent 50%,
+  $shaded 50%, $shaded 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+.img-thumbnail {
+  padding: 0;
+  margin-bottom: .5* $spacer;
+}
+.img-fluid {
+  border-radius: $border-radius;
+}
+.img-rounded {
+  border-radius: 6rem;
+}
+.quarto-video {
+  margin-bottom: .25* $spacer;
+  opacity: .70;
+}
+
+// Quarto layout fixes
+#quarto-content>* {
+  padding-top: 0;
+  margin-top: 0;
+}
+.page-columns .column-screen-inset-shaded {
+  padding: 1em 2em;
+  background: $shaded;
+}
+#quarto-header>nav {
+  margin-top: .25* $spacer;
+  padding: 0;
+  border-bottom: solid 1px $border-color;
+}
+#quarto-announcement {
+  font-family: $font-sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  justify-content: center;
+}
+.navbar, .panel-tabset>.nav-tabs {
+  backdrop-filter: blur(2px);
+}
+.panel-tabset>.nav-tabs {
+  line-height: 1.5* $spacer;  
+  border-bottom: solid 1px $border-color;
+}
+.quarto-title-banner {
+  padding: .5* $spacer 0 0;
+  margin: 0 0 1* $spacer;
+}
+.navbar .me-auto {
+  margin-left: auto !important;
+}
+.navbar .nav-item:not(.compact) .nav-link {
+  line-height: 1.5* $spacer;
+}
+.navbar .nav-item:not(.compact) .nav-link,
+.nav-tabs .nav-item .nav-link {
+  margin-right: .25em;
+  border: none;
+  border-top: solid 3px transparent;
+  border-bottom: solid 3px transparent;
+}
+.navbar .nav-item:not(.compact) .nav-link:hover,
+.nav-tabs .nav-item .nav-link:hover {
+  color: $dark;
+  border-bottom: solid 4px $primary;
+}
+.navbar .nav-item:not(.compact) .nav-link.active,
+.nav-tabs .nav-item .nav-link.active {
+  color: $body-color;
+  border-bottom: solid 4px $primary;
+}
+.navbar-collapse .nav-link {
+  line-height: $spacer;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.navbar-brand-container {
+  font-family: $headings-font-family;
+  font-weight: 400;
+  background: $dark;
+  margin-bottom: -.5* $spacer;
+  padding: .5* $spacer .5em .5* $spacer .75em;
+  border-radius: $border-radius;
+}
+.navbar-brand {
+  color: $white;
+  font-size: 1.25rem;
+}
+#title-block-header {
+  margin-block-end: unset;
+  margin-top: unset;
+}
+footer.footer {
+  padding-top: .75* $spacer;
+  background-image: linear-gradient(-45deg,
+  $shaded 25%, transparent 25%, transparent 50%,
+  $shaded 50%, $shaded 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}
+footer.footer .nav-footer {
+  margin: 0;
+  padding: .5* $spacer 2em $spacer;
+}
+.nav-footer .nav-footer-left,
+.nav-footer .nav-footer-right,
+.nav-footer .nav-footer-center {
+  font-family: $font-sans-serif;
+  font-size: $small-font-size;
+}
+.nav-footer-center {
+  display: none;
+}
+.sidebar-navigation {
+  padding-left: unset;
+}
+.column-margin.column-container p {
+  margin-bottom: .5* $spacer;
+}
+

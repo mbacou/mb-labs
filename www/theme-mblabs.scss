@@ -2,43 +2,51 @@
 /* Author: BACOU, Melanie <mel@mbacou.com> */
 /* Version: v1.0.0 */
 /* Date: 2024-01-31 */
+/* See _brand.yml for colors and fonts */
 
 /*-- scss:defaults --*/
 
 $theme: "mblabs" !default;
 
-$white:     #ffffff !default;
-$black:     #000000 !default;
-$cyan:      #789494 !default;
-$teal:      #445e64 !default;
-$dark:      #222e32 !default;
-$pink:      #aea39a !default;
-$purple:    #98796f !default;
-$indigo:    #9b59b6 !default;
-$blue:      #3daee9 !default;
-$green:     #27ae60 !default;
-$yellow:    #edcd37 !default;
-$orange:    #f67400 !default;
-$red:       #da4453 !default;
-$light:     #eff0f1 !default;
-$gray:      #505050 !default;
+$white:      $brand-white  !default;
+$black:      $brand-black  !default;
+$cyan:       $brand-cyan   !default;
+$teal:       $brand-teal   !default;
+$dark:       $brand-dark   !default;
+$pink:       $brand-pink   !default;
+$purple:     $brand-purple !default;
+$indigo:     $brand-indigo !default;
+$blue:       $brand-blue   !default;
+$green:      $brand-green  !default;
+$yellow:     $brand-yellow !default;
+$orange:     $brand-orange !default;
+$red:        $brand-red    !default;
+$light:      $brand-light  !default;
+$gray:       $brand-gray   !default;
 
-$darkgray:  darken($gray, 4%)  !default;
-$gray-100:  tint-color($gray, 90%);
-$gray-200:  tint-color($gray, 80%);
-$gray-300:  tint-color($gray, 70%);
-$gray-400:  tint-color($gray, 60%);
-$gray-500:  tint-color($gray, 50%);
-$gray-600:  tint-color($gray, 40%);
-$gray-700:  tint-color($gray, 30%);
-$gray-800:  tint-color($gray, 20%);
-$gray-900:  tint-color($gray, 10%);
+$body-color: $brand-foreground;
+$bg-color:   $brand-background;
+$primary:    $brand-primary;
+$secondary:  $brand-secondary;
+$success:    $brand-success;
 
-$primary:   $purple;
-$secondary: $cyan;
-$success: $teal;
+$font-family-base:     $brand-base;
+$headings-font-family: $brand-headings;
+$font-monospace:       $brand-monospace;
+$font-sans-serif:      $brand-monospace-inline;
 
-$spacer: 24px  !default;
+$darkgray:   darken($gray, 4%)  !default;
+$gray-100:   tint-color($gray, 90%);
+$gray-200:   tint-color($gray, 80%);
+$gray-300:   tint-color($gray, 70%);
+$gray-400:   tint-color($gray, 60%);
+$gray-500:   tint-color($gray, 50%);
+$gray-600:   tint-color($gray, 40%);
+$gray-700:   tint-color($gray, 30%);
+$gray-800:   tint-color($gray, 20%);
+$gray-900:   tint-color($gray, 10%);
+
+$spacer: 26px  !default;
 $spacers: (
   0: 0,
   1: $spacer * .25,
@@ -48,24 +56,22 @@ $spacers: (
   5: $spacer * 2,
 );
 
-$line-height-base: 1.6;
-$headings-line-height: 1.6;
+$font-size-base: 1rem;                         // 17px in `_quarto.yml`
+$h1-font-size:  calc($font-size-base + 15px);  // 32px
+$h2-font-size:  calc($font-size-base + 9px);   // 26px
+$h3-font-size:  calc($font-size-base + 11px);  // 28px
+$h4-font-size:  calc($font-size-base + 5px);   // 22px
+$h5-font-size:  calc($font-size-base + 3px);   // 20px
+$h6-font-size:  calc($font-size-base);
+
+$line-height-base: calc($spacer / 17px);
+$headings-line-height: $line-height-base;
 $list-inline-padding: .5* $spacer;
 
-$font-size-base: 1rem;
-$h1-font-size:  $font-size-base * 2.000 !default;
-$h2-font-size:  $font-size-base * 1.500 !default;
-$h3-font-size:  $font-size-base * 1.750 !default;
-$h4-font-size:  $font-size-base * 1.375 !default;
-$h5-font-size:  $font-size-base * 1.250 !default;
-$h6-font-size:  $font-size-base;
-
-$body-color: $gray;
-$body-bg: $white;
 $bg-opacity: 0.1;
 $link-color: $gray-700;
-$shaded: tint-color($light, 50%);
-$text-muted: rgba($body-color, 70%);
+$shaded: tint-color($light, 35%);
+$text-muted: rgba($body-color, 55%);
 $secondary-color: $text-muted;
 $code-color: $text-muted;
 $enable-negative-margins: true;
@@ -75,9 +81,9 @@ $blockquote-font-color: $gray-300;
 $blockquote-margin-y: 1* $spacer;
 $blockquote-small-color: $darkgray;
 
-$border-color: rgba($gray-300, 75%);
-$border-radius-sm: 0;
-$border-radius: 0;
+$border-color: $gray-200;
+$border-radius-sm: 3px;
+$border-radius: 3px;
 $border-radius-lg: 0.50rem;
 $enable-rounded: true;
 $hr-border-color: $body-color;
@@ -93,12 +99,12 @@ $thumbnail-border-radius: $border-radius;
 $thumbnail-border-color: $border-color;
 
 $input-color: $text-muted;
-$input-bg: $shaded;
+$input-bg: rgba($shaded, 75%);
 $input-btn-padding-y: .25* $spacer;
 $input-placeholder-color: $input-color;
 $input-border-color: $border-color;
 $input-disabled-bg: darken($input-bg, 4%);
-$input-group-addon-bg: darken($input-bg, 4%);
+$input-group-addon-bg: $shaded;
 
 $breadcrumb-active-color: $body-color;
 $component-active-bg: rgba($link-color, 12%);
@@ -120,37 +126,34 @@ $pagination-hover-color: $link-color;
 $progress-bg: $input-bg;
 
 $card-bg: $white;
-$card-cap-bg: rgba($border-color, 10%);
 $card-spacer-x: .5* $spacer;
 $card-spacer-y: .5* $spacer;
 $card-border-width: 0;
+$card-cap-bg: rgba($border-color, 10%);
 $card-border-color: $border-color;
 $card-border-radius: $border-radius;
 
-$font-family-base: "Source Pro Sans";
-$headings-font-family: "Oswald";
-$font-sans-serif: "Roboto Condensed";
-$font-monospace: "Roboto Mono";
+$navbar-hover-color: $primary;
+$navbar-active-color: $dark;
+$nav-link-color: $body-color;
+$nav-link-hover-color: $dark;
 $headings-font-color: $darkgray;
 $headings-font-weight: 400;
 $font-weight-bold: 500;
-$small-font-size: .9375rem;
+$small-font-size: calc(1rem - 1px);
 
-$navbar-hover-color: $primary;
-$navbar-active-color: $body-color;
 $nav-link-font-family: $font-family-base;
 $nav-link-font-weight: 500;
 $nav-link-font-size: 1rem;
-$nav-link-padding-x: 0.25rem;
+$nav-link-padding-x: 1em;
 $nav-link-padding-y: 0;
-$nav-link-color: $body-color;
-$nav-link-hover-color: $primary;
 
 
 /*-- scss:rules --*/
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Pro+Sans:wght@300;400;500&family=Roboto+Condensed:wght@400;500&family=Roboto+Mono:wght@400&family=Oswald:wght@400;500');
-
+body {
+  font-optical-sizing: auto;
+}
 b, strong {
   font-weight: 500;
 }
@@ -170,8 +173,9 @@ h4, .h4, h5, .h5 {
   font-weight: 500;
 }
 h2, .h2 {
-  color: $gray-500;
-  font-style: italic;
+  color: rgba($body-color, 45%);
+  font-style: normal;
+  font-weight: 300;
   border-bottom: solid 1px $border-color;
 }
 hr {
@@ -203,20 +207,24 @@ blockquote small, blockquote .small {
 .quarto-title-banner .quarto-title .title, h1.title {
   font-family: $headings-font-family;
   font-weight: 400;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   line-height: 2* $spacer;
   margin-top: 1* $spacer;
 }
 .lead {
   font-family: $font-family-base;
   font-weight: 400;
-  color: rgba($text-muted, 50%);
-  font-style: italic;
+  color: rgba($body-color, 55%);
+  font-style: normal;
   font-size: 1.5rem;
-  line-height: 1.5* $spacer;
+  line-height: 1.25* $spacer;
 }
 .lead p {
-  line-height: unset;
+  line-height: unset;  
+}
+p.subtitle {
+  margin-top: .5* $spacer;
+  margin-bottom: 1* $spacer;
 }
 .description {
   font-family: $font-sans-serif;
@@ -229,7 +237,6 @@ blockquote small, blockquote .small {
 #title-block-header.quarto-title-block.default .description>p:first-child {
   font-family: $headings-font-family;
   font-size: 1.5rem;
-  font-weight: 500;
   color: $primary;
 }
 #title-block-header.quarto-title-block.default .quarto-title-meta-heading,
@@ -238,7 +245,7 @@ blockquote small, blockquote .small {
   font-family: $font-sans-serif;
   font-size: .825rem !important;
   color: $primary;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   margin-top: 0;
   opacity: 1;
@@ -374,15 +381,17 @@ div.quarto-post .listing-categories .listing-category {
   font-family: $font-sans-serif;
   color: $gray-700;
   font-size: .825rem;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   border: none;
-  background: $shaded;
+  background: $light;
   padding: 0 .75em;
   margin-bottom: .5* $spacer;
   opacity: 1;
 }
 
+
+// Tables
 thead, tbody, tfoot, tr, td, th {
   border-color: rgba($body-color, 25%);
 }
@@ -512,12 +521,12 @@ nav.sidebar .nav-link {
 div.separator {
   height: .25* $spacer;
   width: 5em;
-  background: $gray-200;
+  background: $border-color;
   margin: 1 * $spacer 0 -.75* $spacer 0;
   padding: 0;
 }
 .shaded {
-  background-color: rgba($shaded, 90%);
+  background-color: $input-bg;
   backdrop-filter: blur(2px);
 }
 .blurred {
@@ -562,19 +571,18 @@ div.separator {
   font-family: $font-sans-serif;
   font-size: 1.25rem;
   border: none;
-  background: $dark;
   justify-content: center;
 }
 .navbar, .panel-tabset>.nav-tabs {
-  border-bottom: solid 1px $border-color;
   backdrop-filter: blur(2px);
 }
 .panel-tabset>.nav-tabs {
-  background: $shaded;
+  line-height: 1.5* $spacer;  
+  border-bottom: solid 1px $border-color;
 }
 .quarto-title-banner {
-  padding: .5* $spacer 0;
-  margin: 0 0 .5* $spacer;
+  padding: .5* $spacer 0 0;
+  margin: 0 0 1* $spacer;
 }
 .navbar .me-auto {
   margin-left: auto !important;
@@ -591,28 +599,22 @@ div.separator {
 }
 .navbar .nav-item:not(.compact) .nav-link:hover,
 .nav-tabs .nav-item .nav-link:hover {
-  color: $body-color;
-  border-bottom: solid 3px $primary;
+  color: $dark;
+  border-bottom: solid 4px $primary;
 }
 .navbar .nav-item:not(.compact) .nav-link.active,
 .nav-tabs .nav-item .nav-link.active {
   color: $body-color;
-  border-bottom: solid 3px $primary;
+  border-bottom: solid 4px $primary;
 }
-.navbar-collapse .nav-link {
-  line-height: $spacer;
-  margin: 0;
-  padding: 0;
-  border: none;
+.navbar-brand-container {
+  font-family: $headings-font-family;
+  font-weight: 400;
 }
 .navbar-brand {
-  font-family: $headings-font-family;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: $light;
-  background: $dark;
-  margin: auto 2.5em -.5* $spacer 0;
-  padding: .5* $spacer 1em .5* $spacer .75em;
+  color: $dark;
+  font-size: 1.25rem;
+  padding-left: .6rem;
 }
 #title-block-header {
   margin-block-end: unset;

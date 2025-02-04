@@ -9,7 +9,7 @@ listing:
   id: lst-portfolio
   contents: portfolio
   sort-ui: false
-  filter-ui: true
+  filter-ui: false
   sort: "date desc"
   type: default
   date-format: medium
