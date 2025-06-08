@@ -1,0 +1,48 @@
+meta:
+  name: Mel B. Labs
+  link:
+    home: https://mbacou.github.io/mb.labs
+    github: https://github.com/mbacou/mb.labs
+
+color:
+  palette:
+    white:     "#ffffff"
+    black:     "#000000"
+    cyan:      "#789494"
+    teal:      "#445e64"
+    dark:      "#222e32"
+    pink:      "#aea39a"
+    purple:    "#98796f"
+    indigo:    "#9b59b6"
+    blue:      "#3daee9"
+    green:     "#27ae60"
+    yellow:    "#eed04c"
+    orange:    "#ffac5e"
+    red:       "#da4453"
+    light:     "#eff0f1"
+    gray:      "#505050"
+  
+  foreground:   white
+  primary:      orange
+  secondary:    gray
+  success:      teal
+
+typography:
+  fonts:
+    - family: Roboto Condensed
+      source: google
+      weight: [300, 400, 500]
+    - family: Source Sans 3
+      source: google
+      weight: [400, 500]
+    - family: M PLUS Code Latin
+      source: google
+      weight: [400, 500]
+    - family: Oswald
+      source: google
+      weight: [300, 400, 500]
+  
+  base: Source Sans 3
+  headings: Oswald
+  monospace: M PLUS Code Latin
+  

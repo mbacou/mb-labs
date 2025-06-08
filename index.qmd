@@ -16,8 +16,8 @@ listing:
     sort: date desc
     type: grid
     max-items: 9
-    image-height: 132px    
-    fields: [title, description, image, date, author, categories]
+    image-height: 140px    
+    fields: [title, description, image, date, author, categories, reading-time]
     exclude: 
       category: [skip*]
   - id: lst-featured
@@ -30,28 +30,31 @@ listing:
     type: grid
     grid-columns: 2
     max-items: 2
-    image-height: 88px
+    image-height: 112px
     fields: [title, description, image]
 ---
 
-::: {.column-screen style="background: url(/www/banner/nile-valley.jpg) 0 -280px fixed;"}
+::: {.column-screen}
 
-::: {.column-page-left}
+::: {.column-body}
 
-
-::: {.h1 .title .text-light .pt-md-2}
+::: {.h1 .title .mt-4}
 People, Space, and Statistics 
 :::
 
-::: {.lead .quoted .text-light .py-md-2}
-Informed citizens make better policy choices; better policies save <span class="text-warning">lives</span> and <span class="text-warning">resources</span>.
+::: {.lead .quoted}
+Informed citizens make better policy choices; better policies save <span class="text-primary">lives</span> and <span class="text-primary">resources</span>.
 :::
 
 :::
 
-::: {.column-margin .shaded .shadow-inset .text-muted .px-3 .mt-md-4 style="background:linear-gradient(0deg, var(--bs-light) 70%, transparent 80%);"}
+::: {.column-margin .rounded .bg-white .text-muted .px-3 .mt-md-3}
+
+<p>&nbsp;</p>
 
 ![](posts/resume/_fig/profile.jpg){.img-rounded .d-block .mx-auto width="9em"}
+
+::: {.mt-3}
 
 A blog on econometrics, spatial statistics, remote sensing, and scientific visualization -- with code samples in **R**, **Python**, **JS** and **D3.js**.
 
@@ -59,7 +62,9 @@ Topics range from sustainable agriculture and food security, to policies for equ
 
 You'll also find book and article reviews, and the occasional shout-out and opinion pieces. Check out my [full Bio](./posts/resume/index.qmd) for contact details.
 
-::: {.border .striped .px-2 .pt-2}
+:::
+
+::: {.border .striped .px-2 .pt-2 .mb-2}
 ```{=html}
 
 <script type="text/javascript">
@@ -67,7 +72,7 @@ var listID = 'PLMEI8z_d3EZGRnn8nGh3f6A7zwT4wDmVU';
 var numberOfVideos = 200;
 var randomizer = Math.floor(Math.random() * numberOfVideos + 1);
 
-document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.com/embed?listType=playlist&list=' + listID + '&index=' + randomizer + '&autoplay=1&loop=0&controls=1&showinfo=0" frameborder=0 height="44" width="100%"></iframe><figcaption><em>Play to support my favorite artists.</em></figcaption>');
+document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.com/embed?listType=playlist&list=' + listID + '&index=' + randomizer + '&autoplay=1&loop=0&controls=1&showinfo=0" frameborder=0 height="44" width="100%"></iframe><figcaption><em>Support my favorite artists.</em></figcaption>');
 </script>
 ```
 :::
@@ -75,7 +80,7 @@ document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.
 :::
 :::
 
-::: {.column-screen .shaded .z-0}
+::: {.column-screen .z-0}
 ::: {.column-page-left}
 
 ::: {.separator}

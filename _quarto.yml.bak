@@ -1,0 +1,114 @@
+project:
+  title: mb-labs
+  type: website
+  execute-dir: file
+  output-dir: _site
+  preview:
+    port: 5555
+
+website:
+  title: "Mel B. Labs"
+  favicon: www/mb-square.png
+  image: www/mb-square.png
+  twitter-card: false
+  open-graph: true
+  site-url: https://mbacou.com
+  repo-url: https://github.com/mbacou/mb-labs
+  repo-branch: quarto
+  repo-actions: [edit, issue]
+  page-navigation: true
+  bread-crumbs: false
+  description: Playground for consulting and data science projects
+
+  sidebar:
+    pinned: false
+    border: false
+
+  search:
+    type: overlay
+    show-item-context: true
+
+  announcement:
+    dismissable: true
+    type: dark
+    content: "{{< bi warning >}} This blog is being migrating to [Quarto](https://quarto.org), expect quirks and dead links!"
+
+  navbar:
+    logo: www/mb-square.png
+    logo-alt: MEL B. Labs
+    title: false
+    background: white
+    pinned: false
+    toggle-position: right
+    left:
+      - text: About
+        file: about.qmd
+      - text: Notebooks
+        file: index.qmd
+      - text: Portfolio
+        file: portfolio.qmd
+      - text: Resources
+        file: posts/tools/index.qmd
+      - text: Full Bio
+        file: posts/resume/index.qmd
+    tools:
+      - icon: github
+        href: https://github.com/mbacou/mb-labs
+      - icon: telegram
+        href: https://t.me/mbacou
+      - icon: linkedin
+        href: https://linkedin.com/in/mbacou
+      - icon: youtube
+        href: https://www.youtube.com/@mbacou/playlists  
+
+  page-footer:
+    foreground: gray
+    background: light
+    left: |
+      **BACOU, Melanie &copy; 2024** /
+      Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+      All views here are strictly my own and do <u>not</u> reflect that of employers,
+      project partners or clients. Refer to each article for citation, code and data reuse.
+    right:
+      - text: About
+        href: about.qmd
+      - text: License
+        href: license.qmd
+      - text: Quarto^®^
+        href: https://quarto.org/
+      - icon: rss
+        href: index.xml      
+
+bibliography: references.bib
+
+format:
+  html:
+    toc: true
+    toc-title: Contents
+    toc-location: left
+    link-external-icon: false
+    link-external-newwindow: true
+    title-block-banner: transparent
+
+    fig-dpi: 220
+    fig-format: png
+    fig-width: 7
+    fig-height: 4.5
+
+    code-copy: true
+    code-overflow: wrap
+
+    tbl-cap-location: bottom
+    fig-cap-location: bottom
+    reference-location: margin
+    citation-location: document
+
+    fontsize: 18px
+    theme: [www/theme-mblabs.scss]
+
+    grid:
+      body-width: 870px
+      sidebar-width: 160px
+      margin-width: 270px
+      gutter-width: 2em

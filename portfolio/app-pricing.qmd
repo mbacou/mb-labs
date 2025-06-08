@@ -12,16 +12,7 @@ abstract: |
   Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.
 ---
 
-```{r}
-#| echo: false
-#| output: false
-
-svg(here::here("../_site/www/parallax.svg"), height=3)
-plot(rnorm(10), type="b")
-dev.off()
-```
-
-::: {.column-screen .parallax-container}
+::: {.column-screen .pgrarallax-container}
 ::: {.parallax-image-container style="background-image: url(../www/parallax.svg)"}
 Content there.
 :::

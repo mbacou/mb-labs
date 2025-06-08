@@ -7,9 +7,9 @@ project:
     port: 5555
 
 website:
-  title: "Mel's Labs"
-  favicon: www/favicon.png
-  image: www/favicon.png
+  title: "Mel B. Labs"
+  favicon: www/mb-square.png
+  image: www/mb-square.png
   twitter-card: false
   open-graph: true
   site-url: https://mbacou.com
@@ -34,9 +34,10 @@ website:
     content: "{{< bi warning >}} This blog is being migrating to [Quarto](https://quarto.org), expect quirks and dead links!"
 
   navbar:
-    title: Mel B.  **Labs**
-    foreground: gray-900
-    background: transparent
+    logo: www/mb-square.png
+    logo-alt: MEL B. Labs
+    title: false
+    background: white
     pinned: false
     toggle-position: right
     left:
@@ -50,7 +51,7 @@ website:
         file: posts/tools/index.qmd
       - text: Full Bio
         file: posts/resume/index.qmd
-    right:
+    tools:
       - icon: github
         href: https://github.com/mbacou/mb-labs
       - icon: telegram
@@ -58,10 +59,10 @@ website:
       - icon: linkedin
         href: https://linkedin.com/in/mbacou
       - icon: youtube
-        href: https://www.youtube.com/@mbacou/playlists
+        href: https://www.youtube.com/@mbacou/playlists  
 
   page-footer:
-    foreground: gray-700
+    foreground: gray
     background: light
     left: |
       **BACOU, Melanie &copy; 2024** /
@@ -77,7 +78,7 @@ website:
       - text: Quarto^®^
         href: https://quarto.org/
       - icon: rss
-        href: index.xml
+        href: index.xml      
 
 bibliography: references.bib
 
@@ -103,13 +104,11 @@ format:
     reference-location: margin
     citation-location: document
 
-    fontsize: 17px
-    theme:
-      light: 
-      - brand
-      - www/theme-mblabs.scss
+    fontsize: 18px
+    theme: default
+
     grid:
-      body-width: 860px
+      body-width: 870px
       sidebar-width: 160px
-      margin-width: 280px
+      margin-width: 270px
       gutter-width: 2em

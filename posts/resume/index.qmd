@@ -18,12 +18,11 @@ citation: false
 ::: {.column-margin}
 ![](_fig/profile.jpg){.img-rounded .d-block .mt-md-n4 width="10em"}
 
-::: {.text-dark}
-{{< bi linkedin >}}    [linkedin.com/in/mbacou](https://linkedin.com/in/mbacou)\
-{{< bi github >}}    [github.com/mbacou](https://github.com/mbacou)\
-{{< bi telegram >}}    [t.me/mbacou](https://t.me/mbacou)\
-{{< bi book >}}    [orcid.org/0000-0003-1810-6818](https://orcid.org/0000-0003-1810-6818)  
-:::
+{{< bi linkedin class=text-primary >}}    [linkedin.com/in/mbacou](https://linkedin.com/in/mbacou)\
+{{< bi person-circle class=text-primary >}}    [devex.com](https://www.devex.com/people/melanie-bacou-46872)\
+{{< bi github class=text-primary >}}    [github.com/mbacou](https://github.com/mbacou)\
+{{< bi telegram class=text-primary >}}    [t.me/mbacou](https://t.me/mbacou)\
+{{< bi journal-text class=text-primary >}}    [orcid.org/0000-0003-1810-6818](https://orcid.org/0000-0003-1810-6818)  
 
 ##### Top Skills {.mt-3}
 
@@ -175,7 +174,7 @@ May 2011 -- Oct 2011\
 
 The African Growth and Development Policy Modeling Consortium is a program sponsored by USAID / UKAid. Website migration to a Drupal CMS, incl. preparation of design mockups, content migration, and training of [AGRODEP](http://www.agrodep.org/) staff. Held a 3-day workshop on household survey data sampling and processing to AGRODEP awardees in Dakar, Senegal.
 
-## Bill & Melinda Gates Foundation (BMGF)
+## Gates Foundation
 
 ::: column-margin
 ![](_fig/bmgf.jpg){width="5em" fig-align="left"}
@@ -188,7 +187,7 @@ Nov 2012 -- Sep 2014\
 
 **Agricultural Economist** (contract)
 
-Country diagnostics, segmentation of farm households, and data visualization for the Foundation's Agricultural Development Program. Under a work assignment with [Spatial Development International](https://spatialdev.com/) (now Locana).
+Country diagnostics, segmentation of farm households, and data visualization for the Foundation's Agricultural Development Program. Under a work assignment with [Spatial Development International](https://spatialdev.com/) (now part of [TRC Companies, Inc](https://www.trccompanies.com/services/intelligent-grid-solutions/)).
 
 ## African Development Bank
 

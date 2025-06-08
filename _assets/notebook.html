@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notebook Background Demo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Atlas+Grotesk:wght@500;700&family=Pensum+Pro:wght@400;500&display=swap');
+    
+    body {
+      margin: 0;
+      padding: 28px;
+      font-family: 'Pensum Pro', serif;
+      font-size: 18px;
+      background-color: #fdfcf9; /* Notebook paper tone */
+      background-image:
+        linear-gradient(
+          to bottom,
+          transparent, transparent 27px, #e7e2da 27px, #e7e2da 28px, transparent 28px),
+          linear-gradient(
+              to right,
+              #fdfcf9 89px, #fca5a5 90px, #fca5a5 91px, #fdfcf9 91px)
+      ;
+      background-size: 100% 28px;
+      background-repeat: repeat-y;
+      line-height: 28px;
+    }
+
+    h1, h2 {
+      font-family: 'Atlas Grotesk', sans-serif;
+      color: #1F4174;
+      margin-bottom: 0.25em;
+    }
+
+    p {
+      max-width: 600px;
+      margin-bottom: 1.5em;
+    }
+
+    .notebook-container {
+      margin-left: 100px;
+    }
+
+.collage-image {
+  position: relative;
+  display: inline-block;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e7e2da;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.collage-image:hover {
+  transform: rotate(-1deg) scale(1.01);
+}
+
+.collage-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tape Marks (pseudo-elements) */
+.collage-image::before,
+.collage-image::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 14px;
+  background: #f8e4b2; /* tape color */
+  opacity: 0.7;
+  z-index: 1;
+  transform: rotate(-5deg);
+}
+
+/* Top left tape */
+.collage-image::before {
+  top: -6px;
+  left: 10px;
+}
+
+/* Top right tape */
+.collage-image::after {
+  top: -6px;
+  right: 10px;
+  transform: rotate(5deg);
+    }
+
+h1 {
+  position: relative;
+  display: inline-block;
+  font-family: 'Atlas Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1F4174;
+  padding-bottom: 6px;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 10px;
+  background: #f1c40f; /* Soft yellow highlighter tone */
+  opacity: 0.8;
+  z-index: -1;
+  transform: rotate(-1.5deg);
+  border-radius: 4px;
+    }
+
+.date {
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  color: #5e4b8b; /* desaturated purple ink tone */
+  padding: 4px 10px;
+  border: 2px solid #5e4b8b;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #fdfcf9;
+  box-shadow: 1px 1px 0px #5e4b8b, -1px -1px 0px #5e4b8b;
+  transform: rotate(2deg);
+  opacity: 0.85;
+  mix-blend-mode: multiply;
+    }
+
+/* Base ink border using border-image */
+.ink-border {
+  border: 2px solid #1f4174;
+  border-radius: 2px;
+  box-shadow:
+    0 0 0 1px #1f4174,
+    inset 0 0 0 1px #1f4174;
+    filter: contrast(1.1) brightness(0.95);  
+}
+
+.mycard {
+  background: #ffffff;
+  border: 2px solid #1F4174;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 2px 2px 0 #1f4174, -1px -1px 0 #1f4174;
+  transform: rotate(-0.3deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.mycard:hover {
+  transform: rotate(0.7deg);
+  box-shadow: 3px 3px 0 #1f4174, -3px -3px 0 #1f4174;
+    }
+
+.handdrawn-button {
+  background-color: #fdfcf9;
+  color: #1f4174;
+  font-family: 'Atlas Grotesk', sans-serif;
+  font-weight: 600;
+  padding: 10px 18px;
+  border: 2px solid #1f4174;
+  border-radius: 4px;
+  box-shadow:
+    1px 1px 0 #1f4174,
+    -1px -1px 0 #1f4174;
+  position: relative;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  transform: rotate(-0.5deg);
+}
+
+.handdrawn-button:hover {
+  transform: rotate(1.5deg) scale(1.01);
+  box-shadow:
+    2px 2px 0 #1f4174,
+    -2px -2px 0 #1f4174;
+    }
+
+.postit-card {
+  width: 260px;
+  padding: 1rem;
+  margin: 1.5rem;
+  background-color: #f1c40f; /* yellow sticky note */
+  font-family: 'Pensum Pro', serif;
+  border: 1px solid #e6d97c;
+  box-shadow:
+    4px 4px 10px rgba(0, 0, 0, 0.15),
+    inset -2px -2px 0 rgba(255, 255, 255, 0.4);
+  transform: rotate(-2deg);
+  border-radius: 6px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.postit-card:hover {
+  transform: rotate(0.5deg) scale(1.01);
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional top tape or pin */
+.postit-card::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 40px;
+  height: 14px;
+  background: #f3e3b0; /* tape look */
+  opacity: 0.6;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+.notebook-tabs {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+}
+
+    .tab-marker {
+    text-direction: vertical;
+  position: relative;
+  display: block;
+  width: 80px;
+  padding: 10px 12px;
+  text-align: center;
+  font-family: 'Atlas Grotesk', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1f4174;
+  background-color: #fff;
+  border: 2px solid #1f4174;
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tab-marker:hover {
+  transform: translateX(-10%);
+  box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.15);
+  background-color: #fdfcf9;
+}
+
+/* Colored tab styles */
+.tab-yellow { background-color: #fff8b3; border-color: #e0d67b; }
+.tab-blue   { background-color: #cfe8ff; border-color: #a3cbe6; }
+.tab-green  { background-color: #e2f5c3; border-color: #badc9a; }
+.tab-pink   { background-color: #ffe0e9; border-color: #e5b0be; }
+    
+  </style>
+</head>
+<body>
+
+<nav class="notebook-tabs">
+  <a href="#about" class="tab-marker tab-yellow">About</a>
+  <a href="#notebooks" class="tab-marker tab-blue">Notebooks</a>
+  <a href="#portfolio" class="tab-marker tab-green">Portfolio</a>
+  <a href="#bio" class="tab-marker tab-pink">My Bio</a>
+</nav>
+  
+  <div class="notebook-container">
+    <h1>Welcome to My Notebook</h1>
+    <span class="date">2024.12.04</span>
+    <p>This blog is styled to look like a real notebook. It features a red margin line, ruled paper gridlines, and typography using Atlas Grotesk for headings and Pensum Pro for body text.</p>
+    <h2>Notebook Section</h2>
+    <p>CSS gradients make it possible to simulate notebook lines without using any background images. You can even tweak the spacing and colors for your own personal aesthetic.</p>
+
+<figure class="collage-image">
+  <img src="mb-square.png" alt="Notebook photo example" />
+</figure>
+
+<div class="ink-border">This has an ink-style border</div>
+
+<button class="handdrawn-button">Read More</button>
+
+<div class="mycard">
+  <h2 class="blog-title">Notebook Stuff</h2>
+  <p>This card looks like it's been outlined with pen ink. Ideal for sketches, notes, or commentary blocks. Testing</p>
+</div>
+
+    <p>Testing</p>
+
+    <div class="postit-card">
+  <strong>Reminder</strong>
+  <p>Don't forget to push your update before 5 PM!</p>
+    </div>
+    
+    
+  </div>
+</body>
+</html>
+ 

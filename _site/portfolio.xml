@@ -5,18 +5,18 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Mel&#39;s Labs</title>
+<title>Mel B. Labs</title>
 <link>https://mbacou.com/portfolio.html</link>
 <atom:link href="https://mbacou.com/portfolio.xml" rel="self" type="application/rss+xml"/>
 <description>Playground for consulting and data science projects</description>
 <image>
-<url>https://mbacou.com/www/favicon.png</url>
-<title>Mel&#39;s Labs</title>
+<url>https://mbacou.com/www/mb-square.png</url>
+<title>Mel B. Labs</title>
 <link>https://mbacou.com/portfolio.html</link>
-<height>100</height>
-<width>100</width>
+<height>144</height>
+<width>144</width>
 </image>
-<generator>quarto-1.6.40</generator>
+<generator>quarto-1.8.11</generator>
 <lastBuildDate>Thu, 01 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Interactive Web Applications</title>
@@ -53,7 +53,7 @@
 
 
 
-<div class="column-screen parallax-container">
+<div class="column-screen pgrarallax-container">
 <div class="parallax-image-container" style="background-image: url(../www/parallax.svg)">
 <p>Content there.</p>
 </div>
@@ -77,7 +77,7 @@
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Test callout
+<span class="screen-reader-only">Note</span>Test callout
 </div>
 </div>
 <div class="callout-body-container callout-body">
