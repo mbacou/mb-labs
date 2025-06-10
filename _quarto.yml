@@ -98,9 +98,9 @@ format:
     citation-location: document
 
     fontsize: 18px
-    include-before-body: www/tabs.html
+    include-before-body: assets/tabs.html
     theme:
-      light: [www/theme-mblabs.scss, www/tabs.scss]
+      light: [assets/theme-mblabs.scss, assets/tabs.scss]
 
     grid:
       body-width: 860px
