@@ -1,0 +1,98 @@
+/*-- scss:rules --*/
+
+/* Tab styles */
+.nbook-tabs {
+  position: fixed;
+  bottom: $spacer;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1000;
+}
+
+.nbook-tabs a {
+  writing-mode: vertical-lr; 
+  display: block;
+  width: unset;
+  padding: .5* $spacer $spacer .5* $spacer .25* $spacer;
+  margin-right: calc(-9px - .5* $spacer);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $body-color;
+  background-color: $white;
+  border: $border-width solid $border-color;
+  border-top-width: 1px; 
+  border-right: none;
+  border-radius: $border-radius 0 0 $border-radius 0;
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+
+.nbook-tabs a:hover {
+  transform: translateX(-8px);
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Base ink border using border-image */
+.ink-border {
+  border: 2px solid #1f4174;
+  border-radius: 2px;
+  box-shadow:
+    0 0 0 1px #1f4174,
+    inset 0 0 0 1px #1f4174;
+    filter: contrast(1.1) brightness(0.95);  
+  transform: rotate(-.5deg);
+  transition: all 0.2s ease;  
+}
+
+/* Stamped tags */
+.quarto-title .quarto-categories .quarto-category,
+.quarto-grid-item .listing-categories .listing-category,
+div.quarto-post .listing-categories .listing-category {
+  display: inline-block;
+  font-family: $font-sans-serif;
+  font-size: 0.825rem;
+  color: #5e4b8b; /* desaturated purple ink tone */
+  padding: 0 10px;
+  border: 2px solid #5e4b8b;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 1px 1px 0px #5e4b8b, -1px -1px 0px #5e4b8b;
+  transform: rotate(2deg);
+  opacity: 0.85;
+  mix-blend-mode: multiply;
+}
+
+.postit {
+  margin-bottom: $spacer;
+  color: $text-muted;
+  background-color: $body-bg;
+  border: 1px solid $border-color;
+  border-radius: 0;
+  box-shadow:
+    -1px -4px 12px rgba(0, 0, 0, 0.085),
+    inset -2px -2px 0 rgba(255, 255, 255, 0.4);
+  transform: rotate(.8deg);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.postit:hover {
+  transform: rotate(0deg) scale(1.01);
+  box-shadow:
+    -1px -2px 12px rgba(0, 0, 0, 0);
+}
+
+/* Colored tab styles */
+.tab-yellow { background-color: #fff8b3; border-color: #e0d67b; 
+  transform: rotate(.8deg); }
+.tab-blue   { background-color: #cfe8ff; border-color: #a3cbe6;
+transform: rotate(-.8deg); }
+.tab-green  { background-color: #e2f5c3; border-color: #badc9a;
+transform: rotate(.6deg); }
+.tab-pink   { background-color: #ffe0e9; border-color: #e5b0be;
+transform: rotate(-.6deg); }

@@ -24,7 +24,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -40,17 +39,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-09b140d2d032adf2aedb8b099be3ee13.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-f6f7b7f94623eb8da43df507350a280a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1a6f22b9b22abb821f5a0dca2aba08a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-041a397d74464538e69e5b0694fbaf7e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
-  "type": "overlay",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -171,92 +170,76 @@ window.Quarto = {
 <meta property="og:site_name" content="Mel B. Labs">
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <div id="quarto-announcement" data-announcement-id="8ed67a3dd1b8fcb038c68509120c9059" class="alert alert-dark hidden"><div class="quarto-announcement-content">
 <p><i class="bi-warning " style="" role="img" aria-hidden="true"></i> This blog is being migrating to <a href="https://quarto.org">Quarto</a>, expect quirks and dead links!</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./www/mb-square.png" alt="MEL B. Labs" class="navbar-logo">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Blog</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Notebooks</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./portfolio.html"> 
-<span class="menu-text">Portfolio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./posts/tools/index.html"> 
-<span class="menu-text">Resources</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./posts/resume/index.html"> 
-<span class="menu-text">Full Bio</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
+        <div class="quarto-navbar-tools tools-wide tools-end">
     <a href="https://github.com/mbacou/mb-labs" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
     <a href="https://t.me/mbacou" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-telegram"></i></a>
     <a href="https://linkedin.com/in/mbacou" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
     <a href="https://www.youtube.com/@mbacou/playlists" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
 </div>
+          <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">People, Space, and Statistics</h1>
+        </a>     
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    
+</nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full column-body" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<nav class="nbook-tabs">
+  <a href="#about">About</a>
+  <a href="#notebooks">Notebooks</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#bio">My Bio</a>
+</nav>
 
 
 
 
-<div class="column-screen page-columns page-full">
-<div class="column-body">
-<div class="h1 title mt-4">
-<p>People, Space, and Statistics</p>
-</div>
-<div class="lead quoted">
+<section id="people-space-and-statistics" class="level1 title page-columns page-full">
+<h1 class="title d-none d-lg-block">People, Space, and Statistics</h1>
+<div class="lead">
 <p>Informed citizens make better policy choices; better policies save <span class="text-primary">lives</span> and <span class="text-primary">resources</span>.</p>
 </div>
-</div>
 
-<div class="no-row-height column-margin column-container"><div class="rounded bg-white text-muted px-3 mt-md-3">
-<p>
-&nbsp;
-</p>
-<p><img src="posts/resume/_fig/profile.jpg" class="img-rounded d-block mx-auto img-fluid" style="width:9em"></p>
+<div class="no-row-height column-margin column-container"><div class="postit tab-blue px-3 margin-aside">
+<p><img src="posts/resume/_fig/profile.jpg" class="img-rounded d-block mx-auto mt-n3 img-fluid" style="width:10em"></p>
 <div class="mt-3">
 <p>A blog on econometrics, spatial statistics, remote sensing, and scientific visualization – with code samples in <strong>R</strong>, <strong>Python</strong>, <strong>JS</strong> and <strong>D3.js</strong>.</p>
 <p>Topics range from sustainable agriculture and food security, to policies for equitable trade, growth and development, the geopolitics of natural resources.</p>
 <p>You’ll also find book and article reviews, and the occasional shout-out and opinion pieces. Check out my <a href="./posts/resume/index.html">full Bio</a> for contact details.</p>
 </div>
-<div class="border striped px-2 pt-2 mb-2">
+</div><div class="postit tab-yellow px-2 pt-2 margin-aside">
 
 <script type="text/javascript">
 var listID = 'PLMEI8z_d3EZGRnn8nGh3f6A7zwT4wDmVU';
@@ -265,10 +248,7 @@ var randomizer = Math.floor(Math.random() * numberOfVideos + 1);
 
 document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.com/embed?listType=playlist&list=' + listID + '&index=' + randomizer + '&autoplay=1&loop=0&controls=1&showinfo=0" frameborder=0 height="44" width="100%"></iframe><figcaption><em>Support my favorite artists.</em></figcaption>');
 </script>
-</div>
-</div></div></div>
-<div class="column-screen z-0 page-columns page-full">
-<div class="column-page-left">
+</div></div>
 <div class="separator">
 
 </div>
@@ -281,7 +261,7 @@ document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.
 <a href="./portfolio/app-wadashboard.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./portfolio/fig/mbacou-app-pricing.png" class="thumbnail-image card-img" style="height: 112px;">
+<img loading="lazy" src="./portfolio/fig/mbacou-app-pricing.png" class="thumbnail-image card-img" style="height: 196px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -297,7 +277,7 @@ Interactive Web Applications
 <a href="./portfolio/app-pricing.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./portfolio/fig/mbacou-app-pricing.png" class="thumbnail-image card-img" style="height: 112px;">
+<img loading="lazy" src="./portfolio/fig/mbacou-app-pricing.png" class="thumbnail-image card-img" style="height: 196px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -312,22 +292,20 @@ Interactive Web Applications
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-</section>
-</div>
-</div>
-<div class="column-page">
 <div class="separator">
 
 </div>
-<section id="articles-and-notebooks" class="level3">
+</section>
+<section id="articles-and-notebooks" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="articles-and-notebooks">Articles and Notebooks</h3>
 <p>Code notebooks and articles that do not find a home elsewhere. Feel free to cite, clone, comment, and raise issues.</p>
+<div class="column-page-right">
 <div id="listing-lst-posts" class="listing quarto-float quarto-figure quarto-figure-left quarto-listing quarto-listing-container-grid anchored">
 <div class="list grid quarto-listing-cols-3">
 <div class="g-col-1" data-index="0" data-listing-date-sort="1721084400000" data-listing-file-modified-sort="1738606099832" data-listing-date-modified-sort="1738606099000" data-listing-reading-time-sort="12" data-listing-word-count-sort="2246">
 <a href="./posts/tools/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 140px;">&nbsp;</div>
+<div class="listing-item-img-placeholder card-img-top" style="height: 168px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Data, Resources, and Tools
@@ -347,10 +325,10 @@ Jul 16, 2024
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="cXVhcnRvJTJDZGF0YXZpeg==" data-listing-date-sort="1696114800000" data-listing-file-modified-sort="1749237820780" data-listing-date-modified-sort="1749237820000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3766">
+<div class="g-col-1" data-index="1" data-categories="cXVhcnRvJTJDZGF0YXZpeg==" data-listing-date-sort="1696114800000" data-listing-file-modified-sort="1749503203286" data-listing-date-modified-sort="1749503203000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3766">
 <a href="./posts/2022-12-01-theme/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/2022-12-01-theme/index_files/figure-html/unnamed-chunk-11-1.png" style="height: 140px;"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts/2022-12-01-theme/index_files/figure-html/unnamed-chunk-11-1.png" style="height: 168px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Time to Migrate this Blog from <em>Distill</em> to <em>Quarto</em>
@@ -380,7 +358,7 @@ Oct 1, 2023
 <div class="g-col-1" data-index="2" data-categories="bWV0ZW8lMkNyaXNrJTIwbW9kZWxpbmc=" data-listing-date-sort="1610755200000" data-listing-file-modified-sort="1733623236960" data-listing-date-modified-sort="1733623236000" data-listing-reading-time-sort="9" data-listing-word-count-sort="1752">
 <a href="./posts/2021-01-16-rfmerge/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/2021-01-16-rfmerge/index_files/figure-html/unnamed-chunk-7-1.png" style="height: 140px;"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts/2021-01-16-rfmerge/index_files/figure-html/unnamed-chunk-7-1.png" style="height: 168px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Rainfall: Merge Ground and Satellite Observations with RFMerge
@@ -410,7 +388,7 @@ Jan 16, 2021
 <div class="g-col-1" data-index="3" data-categories="ZGF0YXZpeiUyQ2luY29tZSUyQ3J1c3NpYQ==" data-listing-date-sort="1606867200000" data-listing-file-modified-sort="1721183863379" data-listing-date-modified-sort="1721183863000" data-listing-reading-time-sort="1" data-listing-word-count-sort="145">
 <a href="./posts/2024-07-13-rus-cartogram/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 140px;">&nbsp;</div>
+<div class="listing-item-img-placeholder card-img-top" style="height: 168px;">&nbsp;</div>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Income Distribution Cartograms
@@ -442,7 +420,7 @@ Dec 2, 2020
 <div class="g-col-1" data-index="4" data-categories="bWV0ZW8lMkNyaXNrJTIwbW9kZWxpbmc=" data-listing-date-sort="1606867200000" data-listing-file-modified-sort="1719359154084" data-listing-date-modified-sort="1719359154000" data-listing-reading-time-sort="7" data-listing-word-count-sort="1210">
 <a href="./posts/2020-12-02-era5-ca/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="posts/2020-12-02-era5-ca/index_files/figure-html/unnamed-chunk-1-1.png" style="height: 140px;"  class="thumbnail-image card-img"/></p>
+<p class="card-img-top"><img src="posts/2020-12-02-era5-ca/index_files/figure-html/unnamed-chunk-1-1.png" style="height: 168px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 ERA5-LAND Temperature Validation (California)
@@ -472,12 +450,12 @@ Dec 2, 2020
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-<p>** Photo: Dawn over the Nile River basin by Aswan, Southern Egypt, 2009. Credits: author.</p>
-</section>
 </div>
 
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -489,67 +467,6 @@ Dec 2, 2020
       icon: icon
     };
     anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/mbacou\.com");

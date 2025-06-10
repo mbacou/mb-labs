@@ -6,23 +6,25 @@
 
 /*-- scss:defaults --*/
 
-$theme: "mb.labs" !default;
+$theme: "mb.labs";
 
-$black:     #000000 !default;
-$white:     #ffffff !default;
-$cyan:      #789494 !default;
-$teal:      #445e64 !default;
-$dark:      #222e32 !default;
-$pink:      #aea39a !default;
-$purple:    #98796f !default;
-$indigo:    #9b59b6 !default;
-$blue:      #3daee9 !default;
-$green:     #27ae60 !default;
-$yellow:    #eed04c !default;
-$orange:    #ffac5e !default;
-$red:       #da4453 !default;
-$light:     #E9E4D9 !default;
-$gray:      #505050 !default;
+$black:     #000000;
+$white:     #ffffff;
+$cyan:      #789494;
+$teal:      #445e64;
+$dark:      #222e32;
+$pink:      #aea39a;
+$purple:    #98796f;
+$indigo:    #9b59b6;
+$blue:      #3daee9;
+$green:     #27ae60;
+$yellow:    #eed04c;
+$orange:    #ffac5e;
+$red:       #da4453;
+$gray:      #505050;
+$light:     #fdfcf9;                        // Notebook paper tone
+$darkgray:  #e7e2da;                        // Notebook paper rules
+$ruler:     #fca5a5;                        // Notebook margin rule
 
 $gray-100:   tint-color($gray, 90%);
 $gray-200:   tint-color($gray, 80%);
@@ -33,36 +35,33 @@ $gray-600:   tint-color($gray, 40%);
 $gray-700:   tint-color($gray, 30%);
 $gray-800:   tint-color($gray, 20%);
 $gray-900:   tint-color($gray, 10%);
-$darkgray:   $gray-100  !default;
 
 $body-color: $gray;
-$body-bg:    tint-color($light, 25%);
+$body-bg:    $light;
 $bg-opacity: 1;
 
-$primary:    rgba($red, 95%);
+$primary:    rgba($ruler, 95%);
 $secondary:  rgba($body-color, 55%);
 $success:    $teal;
 
 $link-color: $gray-700;
-$shaded: tint-color($body-bg, 60%);        // see $input-bg for .shaded
+$shaded: tint-color($body-bg, 25%);         // see $input-bg for .shaded
 $text-muted: $gray-600;
 $code-color: $gray-700;
 
 $enable-rounded: true;
 $enable-negative-margins: true;
 
-$font-family-base:     "Source Sans 3";
-$headings-font-family: "Oswald";
+$font-family-base:     "Pensum Pro";
+$headings-font-family: "Atlas Grotesk";
 $font-monospace:       "M PLUS Code Latin";
-$font-sans-serif:      "Roboto Condensed";
+$font-sans-serif:      "Atlas Grotesk";
 
 $font-weight-bold: 500;
 $headings-font-weight: 400;
 $headings-font-color: $gray-900;
-$small-font-size: calc(1rem - 2px);
-$code-font-size: calc(1rem - 3px);
 
-$spacer: 28px  !default;
+$spacer: 28px ;
 $spacers: (
   0: 0,
   1: $spacer * .25,
@@ -82,17 +81,20 @@ $h6-font-size:  calc($font-size-base);
 
 $line-height-base: calc($spacer / 18px);
 $headings-line-height: $line-height-base;
+$small-font-size: calc(1rem - 3px);
+$code-font-size: calc(1rem - 3px);
 $list-inline-padding: .5* $spacer;
 
 $blockquote-font-size: 1rem;
-$blockquote-font-color: $gray-300;
+$blockquote-font-color: $gray-400;
 $blockquote-margin-y: 1* $spacer;
-$blockquote-small-color: $darkgray;
+$blockquote-small-color: $gray-900;
 
-$border-color: $gray-500;
+$border-color: $body-color;
 $border-radius-sm: 4px;
 $border-radius: 4px;
 $border-radius-lg: 0.50rem;
+$border-width: 2px;
 $hr-border-color: $body-color;
 $hr-opacity: .75;
 
@@ -106,7 +108,7 @@ $thumbnail-border-radius: $border-radius;
 $thumbnail-border-color: $border-color;
 
 $input-color: $text-muted;
-$input-bg: tint-color($body-bg, 60%);
+$input-bg: $shaded;
 $input-btn-padding-y: .25* $spacer;
 $input-placeholder-color: $input-color;
 $input-border-color: $border-color;
@@ -131,12 +133,12 @@ $pagination-disabled-bg: $input-disabled-bg;
 $pagination-hover-color: $link-color;
 $progress-bg: $input-bg;
 
-$card-bg: rgba($white, 90%);
-$card-spacer-x: .5* $spacer;
-$card-spacer-y: .5* $spacer;
-$card-border-width: 0;
-$card-cap-bg: rgba($border-color, 10%);
+$card-bg: transparent;
+$card-spacer-x: 0;
+$card-spacer-y: 0;
+$card-cap-bg: rgba($white, 90%);
 $card-border-color: $border-color;
+$card-border-width: 0;
 $card-border-radius: $border-radius;
 
 $navbar-active-color: $body-color;
@@ -158,16 +160,57 @@ $navbar-brand-font-size: 1.75rem;
 
 /*-- scss:rules --*/
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Pro+Sans:wght@300;400;500&family=Roboto+Condensed:wght@400;500&family=Oswald:wght@400;500&family=M+PLUS+Code+Latin:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@400&display=swap');
 
-body {
-  font-optical-sizing: auto;
+@font-face {
+    font-family: "Pensum Pro";
+    src: url("www/fonts/PensumPro-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: "Pensum Pro";
+    src: url("www/fonts/PensumPro-Bold.woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Atlas Grotesk";
+    src: url("www/fonts/AtlasGrotesk-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Atlas Grotesk";
+    src: url("www/fonts/AtlasGrotesk-Medium.woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+// Notebook gridlines
+#quarto-content>* {
+  padding-top: 0;
+  margin-top: 0;
+}
+body {
+  padding-right: 2em;
+  background-image: 
+    linear-gradient(to right, $body-bg, transparent 16em),
+    linear-gradient(to left, $body-bg, transparent 18em),    
+    linear-gradient(to bottom, 
+      transparent, transparent 27px, $darkgray 27px, $darkgray 28px);
+    background-size: 100% 28px;
+    background-repeat: repeat-y;
+}
+
 b, strong {
   font-weight: 500;
 }
 p, div {
-  line-height: inherit;
+  line-height: $spacer;
 }
 p {
   margin-bottom: .5* $spacer;
@@ -215,7 +258,7 @@ blockquote small, blockquote .small {
 }
 .quarto-title-banner h1, .quarto-title-banner .h1,
 .quarto-title-banner h2, .quarto-title-banner .h2 {
-  color: $gray-700;
+  color: $gray-800;
   font-weight: 400;
 }
 .quarto-title-banner .quarto-title .title, h1.title {
@@ -230,8 +273,8 @@ blockquote small, blockquote .small {
   font-weight: 400;
   color: rgba($body-color, 55%);
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: 1.25* $spacer;
+  font-size: 1.75rem;
+  line-height: 1.5* $spacer;
   margin-bottom: 1* $spacer;
 }
 .lead p {
@@ -285,9 +328,6 @@ p.subtitle {
   background: none;
 }
 
-.card {
-  border-bottom: solid 1px $border-color;
-}
 div.quarto-post .metadata {
   font-size: 1rem;
 }
@@ -318,24 +358,20 @@ h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
   font-style: italic;
   cursor: unset;
 }
-.card:hover {
-  transition: all .2s ease-in-out;
-  transform: translateZ(0) scale(1.025);
-}
-.card-img-top {
-  background-color: $shaded;
-  border-radius: $border-radius;
-  overflow: clip;
+
+// Notebook cards
+.card {
+  margin: $spacer 0;
 }
 .quarto-grid-item .card-text {
   font-size: unset;
-  margin: 0 0 .5* $spacer;
+  margin: 0;
 }
 .quarto-grid-item .card-text-small {
   font-size: $small-font-size;
 }
 .quarto-grid-item .card-title {
-  margin: .25* $spacer 0 .5* $spacer;
+  margin: $spacer 0 0 0;
 }
 .quarto-grid-item .card-attribution {
   padding: .5* $spacer 0 0;
@@ -390,25 +426,6 @@ div.sourceCode, pre.sourceCode {
   background: transparent;
 }
 
-.quarto-title .quarto-categories {
-  padding-bottom: unset;
-  margin-top: .5* $spacer;
-}
-.quarto-title .quarto-categories .quarto-category,
-.quarto-grid-item .listing-categories .listing-category,
-div.quarto-post .listing-categories .listing-category {
-  font-family: $font-sans-serif;
-  color: $gray-700;
-  font-size: .825rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  border: none;
-  background: $light;
-  padding: 0 .85em;
-  margin-bottom: .5* $spacer;
-  opacity: 1;
-}
-
 
 // Tables
 thead, tbody, tfoot, tr, td, th {
@@ -449,12 +466,57 @@ figcaption, .column-margin figcaption, .margin-caption, div.aside, aside, .colum
   margin-bottom: .5* $spacer;
 }
 figcaption, .column-margin figcaption {
-  text-align: center;
   margin-top: 0;
 }
-.figure-img {
-  margin: 0;
+
+
+// Figures
+.figure-img, .card-img-top {
+  padding: .75* $spacer;
+  margin: 0 0 .5* $spacer;
+  background: transparent url(www/frame.svg) 0 0 / cover no-repeat;
+  transition: transform 0.3s ease;
 }
+.figure-img:hover, .card-img-top:hover {
+  transform: scale(1.05);
+}
+.figure-img img, .card-img-top img {
+  border-radius: 0;
+  overflow: clip;
+  width: 100%;
+  filter: grayscale(1);
+}
+.card-img, .card-img-top, .card-img-bottom {
+  width: unset;
+}
+
+/* Tape Marks (pseudo-elements) */
+.figure-img::before, .figure-img::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 14px;
+  background: #f8e4b2; /* tape color */
+  opacity: 0.7;
+  z-index: 1;
+  transform: rotate(-5deg);
+}
+
+/* Top left tape */
+.figure-img::before {
+  top: -6px;
+  left: 10px;
+}
+
+/* Top right tape */
+.figure-img::after {
+  top: -6px;
+  right: 10px;
+  transform: rotate(5deg);
+    }
+
+
+// Callouts 
 
 .callout.callout-style-default, .callout.callout-style-simple {
   border: none;
@@ -483,6 +545,7 @@ callout.callout-style-default>div.callout-header, .callout-title-container {
 .callout:not(.callout-titled) .callout-body>div>:first-child {
   margin-top: unset;
 }
+
 #quarto-content .quarto-sidebar-toggle {
   background: none;
   border: none;
@@ -526,8 +589,7 @@ nav.sidebar .nav-link {
 .sidebar .toc-actions ul li a, .sidebar .quarto-code-links ul li a,
 .sidebar .quarto-other-links ul li a, .sidebar .quarto-alternate-notebooks ul li a,
 .sidebar .quarto-alternate-formats ul li a, .sidebar nav[role=doc-toc]>ul li a {
-  line-height: $spacer;
-  padding-top: .125* $spacer;
+  line-height: calc($spacer - .125* $spacer);
   padding-bottom: .125* $spacer;
 }
 
@@ -538,14 +600,14 @@ nav.sidebar .nav-link {
 
 // Utilities
 div.separator {
-  height: 3px;
-  width: 5em; 
-  background: $border-color; 
-  margin: 1* $spacer 0 -.75* $spacer 0;
+  height: 4px;
+  width: 270px; 
+  background: transparent url(www/stroke-01.svg) 0 0 no-repeat; 
+  margin: calc($spacer - 4px) 0 -.75* $spacer 0;
 }
 .shaded {
   background-color: $input-bg;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
 }
 .blurred {
   background-color: rgba($dark, 65%);
@@ -576,26 +638,19 @@ div.separator {
 }
 
 // Quarto layout fixes
-#quarto-content>* {
-  padding-top: 0;
-  margin-top: 0;
-}
-.page-columns .column-screen-inset-shaded {
-  padding: 1em 2em;
-  background: $shaded;
-}
-#quarto-header>nav {
-  margin-top: .25* $spacer;
-  padding: 0;
-}
 #quarto-announcement {
   font-family: $font-sans-serif;
   font-size: 1.25rem;
   border: none;
   justify-content: center;
 }
+.page-columns .column-screen-inset-shaded {
+  padding: .5* $spacer 2em;
+  background: $shaded;
+}
 .navbar, .panel-tabset>.nav-tabs {
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
+  border-bottom: solid 2px $border-color;
 }
 .panel-tabset>.nav-tabs {
   line-height: 1.5* $spacer;  
@@ -604,9 +659,6 @@ div.separator {
 .quarto-title-banner {
   padding: .5* $spacer 0 0;
   margin: 0 0 1* $spacer;
-}
-.navbar .me-auto {
-  margin-left: auto !important;
 }
 .navbar .nav-item:not(.compact) .nav-link {
   line-height: 1.5* $spacer;
@@ -654,9 +706,6 @@ footer.footer .nav-footer {
 }
 .nav-footer-center {
   display: none;
-}
-.sidebar-navigation {
-  padding-left: unset;
 }
 .column-margin.column-container p {
   margin-bottom: .5* $spacer;

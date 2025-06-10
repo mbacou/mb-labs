@@ -1,10 +1,10 @@
 ---
-page-layout: full
+page-layout: article
 toc: false
-sidebar: false
 grid:
-  body-width: 900px
-  margin-width: 360px
+    body-width: 860px
+    sidebar-width: 0px
+    margin-width: 340px
   
 listing:
   - id: lst-posts
@@ -16,10 +16,11 @@ listing:
     sort: date desc
     type: grid
     max-items: 9
-    image-height: 140px    
+    image-height: 168px    
     fields: [title, description, image, date, author, categories, reading-time]
     exclude: 
       category: [skip*]
+
   - id: lst-featured
     contents: portfolio
     categories: false
@@ -30,29 +31,19 @@ listing:
     type: grid
     grid-columns: 2
     max-items: 2
-    image-height: 112px
+    image-height: 196px
     fields: [title, description, image]
 ---
 
-::: {.column-screen}
+# People, Space, and Statistics {.title}
 
-::: {.column-body}
-
-::: {.h1 .title .mt-4}
-People, Space, and Statistics 
-:::
-
-::: {.lead .quoted}
+::: {.lead}
 Informed citizens make better policy choices; better policies save <span class="text-primary">lives</span> and <span class="text-primary">resources</span>.
 :::
 
-:::
+::: {.aside .postit .tab-blue .px-3}
 
-::: {.column-margin .rounded .bg-white .text-muted .px-3 .mt-md-3}
-
-<p>&nbsp;</p>
-
-![](posts/resume/_fig/profile.jpg){.img-rounded .d-block .mx-auto width="9em"}
+![](posts/resume/_fig/profile.jpg){.img-rounded .d-block .mx-auto .mt-n3 width="10em"}
 
 ::: {.mt-3}
 
@@ -63,8 +54,9 @@ Topics range from sustainable agriculture and food security, to policies for equ
 You'll also find book and article reviews, and the occasional shout-out and opinion pieces. Check out my [full Bio](./posts/resume/index.qmd) for contact details.
 
 :::
+:::
 
-::: {.border .striped .px-2 .pt-2 .mb-2}
+::: {.aside .postit .tab-yellow .px-2 .pt-2}
 ```{=html}
 
 <script type="text/javascript">
@@ -77,12 +69,6 @@ document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.
 ```
 :::
 
-:::
-:::
-
-::: {.column-screen .z-0}
-::: {.column-page-left}
-
 ::: {.separator}
 :::
 
@@ -93,11 +79,6 @@ The work I deliver for public agencies is to be found in [code repositories](htt
 ::: {#lst-featured .mt-3}
 :::
 
-:::
-:::
-
-::: {.column-page}
-
 ::: {.separator}
 :::
 
@@ -105,8 +86,9 @@ The work I deliver for public agencies is to be found in [code repositories](htt
 
 Code notebooks and articles that do not find a home elsewhere. Feel free to cite, clone, comment, and raise issues.
 
+::: {.column-page-right}
 ::: {#lst-posts}
 :::
-
-** Photo: Dawn over the Nile River basin by Aswan, Southern Egypt, 2009. Credits: author.
 :::
+
+

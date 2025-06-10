@@ -20,37 +20,14 @@ website:
   bread-crumbs: false
   description: Playground for consulting and data science projects
 
-  sidebar:
-    pinned: false
-    border: false
-
-  search:
-    type: overlay
-    show-item-context: true
-
-  announcement:
-    dismissable: true
-    type: dark
-    content: "{{< bi warning >}} This blog is being migrating to [Quarto](https://quarto.org), expect quirks and dead links!"
-
   navbar:
-    logo: www/mb-square.png
-    logo-alt: MEL B. Labs
-    title: false
-    background: white
-    pinned: false
+    title: Blog
+    foreground: dark
+    background: transparent
+    search: true
+    collapse: false
+    tools-collapse: false
     toggle-position: right
-    left:
-      - text: About
-        file: about.qmd
-      - text: Notebooks
-        file: index.qmd
-      - text: Portfolio
-        file: portfolio.qmd
-      - text: Resources
-        file: posts/tools/index.qmd
-      - text: Full Bio
-        file: posts/resume/index.qmd
     tools:
       - icon: github
         href: https://github.com/mbacou/mb-labs
@@ -60,10 +37,25 @@ website:
         href: https://linkedin.com/in/mbacou
       - icon: youtube
         href: https://www.youtube.com/@mbacou/playlists  
+  
+  sidebar:
+    style: docked            
+    pinned: true
+    border: false
+
+  search:
+    type: textbox
+    show-item-context: true
+
+  announcement:
+    dismissable: true
+    type: dark
+    content: "{{< bi warning >}} This blog is being migrating to [Quarto](https://quarto.org), expect quirks and dead links!"
 
   page-footer:
     foreground: gray
     background: light
+
     left: |
       **BACOU, Melanie &copy; 2024** /
       Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
@@ -87,6 +79,7 @@ format:
     toc: true
     toc-title: Contents
     toc-location: left
+    toc-expand: 2
     link-external-icon: false
     link-external-newwindow: true
     title-block-banner: transparent
@@ -96,7 +89,7 @@ format:
     fig-width: 7
     fig-height: 4.5
 
-    code-copy: true
+    code-copy: false
     code-overflow: wrap
 
     tbl-cap-location: bottom
@@ -105,10 +98,12 @@ format:
     citation-location: document
 
     fontsize: 18px
-    theme: [www/theme-mblabs.scss]
+    include-before-body: www/tabs.html
+    theme:
+      light: [www/theme-mblabs.scss, www/tabs.scss]
 
     grid:
-      body-width: 870px
-      sidebar-width: 160px
-      margin-width: 270px
-      gutter-width: 2em
+      body-width: 860px
+      sidebar-width: 150px
+      margin-width: 210px
+      gutter-width: 3em

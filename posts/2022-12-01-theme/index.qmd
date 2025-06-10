@@ -13,9 +13,12 @@ abstract: |
 ---
 
 
+With the release of **Quarto 1.4**, markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based documents (such as **Emacs org-mode**, **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.
+
+
 ```{r}
 #| echo: false
-#| column: screen
+#| column: page
 #| classe: mb-4
 
 library(leaflet)
@@ -28,13 +31,11 @@ options=leafletOptions(minZoom=11, maxZoom=13)) %>%
     labelOptions=labelOptions(textsize="1rem"))
 ```
 
-::: {.aside .shaded .p-2 .mt-md-n5 .mb-md-3}
+::: {.aside .ink-border .p-2 .mt-md-n5 .mb-md-3}
 No other reason for this map but to showcase Quarto's new content layout features -- and well, I love Soviet-era classic topo styles. Check out Russian [cartography](https://www.sovietmaps.com/), it is stunning work. 
 
 This margin also showcases a custom `DIV` with CSS classes `{.aside .shaded .mt-md-n5}` making use of Boostrap's new **negative margins** utilities and grid breakpoints.
 :::
-
-With the release of **Quarto 1.4**, markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based documents (such as **Emacs org-mode**, **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.
 
 Old-time researchers and engineers have long used **Emacs `Org-Mode`** (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to *Eric Schulte*'s incredible **Babel** extension [see @schulte2012] and to *John MacFarlane*'s [Pandoc](https://pandoc.org/) document converter library -- but nowadays Quarto makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as **in-browser real-time rendering of documents**.
 
