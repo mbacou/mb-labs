@@ -12,6 +12,7 @@ abstract: |
   A post about **literate programming** in general and Quarto formats in particular, in which I document migrating this personal blog from [Distill](https://rstudio.github.io/distill/) to [Quarto](https://quarto.org/). Compared to *J.J. Allaire's Distill for R Markdown*, **Posit® Quarto Markdown** uses a new templating system built on top of [Bootstrap v5.3.1](https://getbootstrap.com/docs/5.3/customize/overview/) with new page layout features, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and few design tweaks I made along the way.
 ---
 
+<p></p>
 
 With the release of **Quarto 1.4**, markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based documents (such as **Emacs org-mode**, **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.
 
@@ -31,15 +32,15 @@ options=leafletOptions(minZoom=11, maxZoom=13)) %>%
     labelOptions=labelOptions(textsize="1rem"))
 ```
 
-::: {.aside .ink-border .p-2 .mt-md-n5 .mb-md-3}
-No other reason for this map but to showcase Quarto's new content layout features -- and well, I love Soviet-era classic topo styles. Check out Russian [cartography](https://www.sovietmaps.com/), it is stunning work. 
+::: {.aside .ink-border .ink .p-2 .mt-md-n5}
+No other reason for this map but to showcase Quarto's new content layout features -- and well, I love Soviet-era classic topo styles. Check out Russian [cartography](https://sovietmaps.com/), it is stunning work. 
 
-This margin also showcases a custom `DIV` with CSS classes `{.aside .shaded .mt-md-n5}` making use of Boostrap's new **negative margins** utilities and grid breakpoints.
+This margin also showcases a custom `DIV` with CSS classes `{.aside .mt-md-n5}` making use of Boostrap's new **negative margins** utilities and grid breakpoints.
 :::
 
 Old-time researchers and engineers have long used **Emacs `Org-Mode`** (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to *Eric Schulte*'s incredible **Babel** extension [see @schulte2012] and to *John MacFarlane*'s [Pandoc](https://pandoc.org/) document converter library -- but nowadays Quarto makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as **in-browser real-time rendering of documents**.
 
-In the process of migrating old articles and code notebooks to the new Quarto markdown syntax, I used this post as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my `www/theme-labs.scss` Sass file and other tidbits[^1][^2].
+In the process of migrating old articles and code notebooks to the new Quarto markdown syntax, I used this post as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my `assets/theme-labs.scss` Sass file and other tidbits[^1][^2].
 
 [^1]: For folks born this century, to **babel** (elips) or to **sweave** (R) is the process of compiling text documents that include both static markup and compile-time executable scripts.
 
@@ -276,8 +277,8 @@ Bootstrap default line-height and font sizing typically work, but I like to enfo
 
 ```{scss}
 #| eval: false
-#| file: ../../www/theme-mblabs.scss
-#| filename: ./www/theme-mblabs.scss
+#| file: ../../assets/theme-mblabs.scss
+#| filename: ./assets/theme-mblabs.scss
 #| echo: !expr c(54:85)
 
 ```

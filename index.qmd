@@ -69,20 +69,14 @@ document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.
 ```
 :::
 
-::: {.separator}
-:::
-
-### Featured Projects
+### Featured Projects {.divider}
 
 The work I deliver for public agencies is to be found in [code repositories](https://github.com/mbacou/) on Github. Other (restricted or confidential) projects are outlined in the [portfolio](./portfolio.qmd) section of this website.
 
 ::: {#lst-featured .mt-3}
 :::
 
-::: {.separator}
-:::
-
-### Articles and Notebooks
+### Articles and Notebooks {.divider}
 
 Code notebooks and articles that do not find a home elsewhere. Feel free to cite, clone, comment, and raise issues.
 

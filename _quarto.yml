@@ -98,12 +98,12 @@ format:
     citation-location: document
 
     fontsize: 18px
-    include-before-body: assets/tabs.html
+    include-before-body: assets/navtabs.html
     theme:
-      light: [assets/theme-mblabs.scss, assets/tabs.scss]
+      light: [assets/theme-mblabs.scss, assets/sidebar.scss, assets/navtabs.scss]
 
     grid:
-      body-width: 860px
-      sidebar-width: 150px
+      body-width: 850px
+      sidebar-width: 160px
       margin-width: 210px
       gutter-width: 3em

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Mel B. Labs</title>
+<link>https://mbacou.com/portfolio.html</link>
+<atom:link href="https://mbacou.com/portfolio.xml" rel="self" type="application/rss+xml"/>
+<description>Playground for consulting and data science projects</description>
+<image>
+<url>https://mbacou.com/www/mb-square.png</url>
+<title>Mel B. Labs</title>
+<link>https://mbacou.com/portfolio.html</link>
+</image>
+<generator>quarto-1.8.11</generator>
+<lastBuildDate>Thu, 01 Feb 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Interactive Web Applications</title>
+  <dc:creator>Melanie BACOU</dc:creator>
+  <link>https://mbacou.com/portfolio/app-wadashboard.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>Complex statistical analyses and economic models always require robust end-user design.</p>
+<section id="water-accounting-balances" class="level2">
+<h2 class="anchored" data-anchor-id="water-accounting-balances">Water accounting Balances</h2>
+<p>Model visualization for large-scale water accounting models</p>
+
+
+</section>
+
+ ]]></description>
+  <category>model front-end</category>
+  <category>R/Shiny</category>
+  <guid>https://mbacou.com/portfolio/app-wadashboard.html</guid>
+  <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://mbacou.com/portfolio/fig/mbacou-app-pricing.png" medium="image" type="image/png" height="173" width="144"/>
+</item>
+<item>
+  <title>Interactive Web Applications</title>
+  <dc:creator>Melanie BACOU</dc:creator>
+  <link>https://mbacou.com/portfolio/app-pricing.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<div class="column-screen pgrarallax-container">
+<div class="parallax-image-container" style="background-image: url(../www/parallax.svg)">
+<p>Content there.</p>
+</div>
+</div>
+<p>Complex statistical analyses and economic models always require robust end-user design.</p>
+<section id="water-accounting-balances" class="level2">
+<h2 class="anchored" data-anchor-id="water-accounting-balances">Water accounting Balances</h2>
+<p>Model visualization for large-scale water accounting models</p>
+</section>
+<section id="simulating-historical-claim-costs" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="simulating-historical-claim-costs">Simulating Historical Claim Costs</h2>
+<p>Visual interface for agricultural insurance</p>
+<p>Real-time pricing of weather-index insurance</p>
+<p>This tool supports WorldCover PBC agricultural insurance operations.</p>
+<p>How to cite Confidential.</p>
+<p>Tools R/Shiny, bs4Dash, bslib, shinyWidgets, data.table, leaflet, highcharter, terra</p>
+<!--# some comment -->
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Test callout
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>And something important.</p>
+</div>
+</div>
+<table class="table">
+<caption>Table</caption>
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Col1</th>
+<th style="text-align: center;">Col2</th>
+<th>Col3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>aa</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>bb</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>m ultiple<br>
+lines here.</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Something in the margin now.</p>
+</div></div></section>
+
+ ]]></description>
+  <category>model front-end</category>
+  <category>R/Shiny</category>
+  <guid>https://mbacou.com/portfolio/app-pricing.html</guid>
+  <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://mbacou.com/portfolio/fig/mbacou-app-pricing.png" medium="image" type="image/png" height="173" width="144"/>
+</item>
+<item>
+  <title>Tableau® Dashboards</title>
+  <dc:creator>Melanie BACOU</dc:creator>
+  <link>https://mbacou.com/portfolio/tableau.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+ ]]></description>
+  <category>design</category>
+  <category>tableau</category>
+  <guid>https://mbacou.com/portfolio/tableau.html</guid>
+  <pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://mbacou.com/portfolio/fig/portfolio-tableau.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Print Design</title>
+  <dc:creator>Melanie BACOU</dc:creator>
+  <link>https://mbacou.com/portfolio/print.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+
+
+
+ ]]></description>
+  <category>design</category>
+  <guid>https://mbacou.com/portfolio/print.html</guid>
+  <pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://mbacou.com/portfolio/fig/portfolio-print.png" medium="image" type="image/png"/>
+</item>
+</channel>
+</rss>

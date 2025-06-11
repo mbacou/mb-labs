@@ -45,17 +45,18 @@ $secondary:  rgba($body-color, 55%);
 $success:    $teal;
 
 $link-color: $gray-700;
-$shaded: tint-color($body-bg, 25%);         // see $input-bg for .shaded
-$text-muted: $gray-600;
+$text-muted: $gray-700;
 $code-color: $gray-700;
+$shaded: tint-color($body-bg, 25%);         // see $input-bg for .shaded
 
 $enable-rounded: true;
 $enable-negative-margins: true;
 
 $font-family-base:     "Pensum Pro";
-$headings-font-family: "Atlas Grotesk";
+$headings-font-family: "M PLUS Code Latin";
 $font-monospace:       "M PLUS Code Latin";
-$font-sans-serif:      "Atlas Grotesk";
+$font-sans-serif:      "M PLUS Code Latin";
+$font-script:          "Marck Script";
 
 $font-weight-bold: 500;
 $headings-font-weight: 400;
@@ -144,68 +145,49 @@ $card-border-radius: $border-radius;
 $navbar-active-color: $body-color;
 $navbar-hover-color: $primary;
 $navbar-border-color: $border-color;
+$navbar-brand-padding-y: 0;
+$navbar-brand-font-size: 1.75rem;
+
 $nav-link-color: $body-color;
-$nav-link-hover-color: $primary;
 $nav-link-active-color: $body-color;
-$nav-link-font-family: $font-family-base;
+$nav-link-hover-color: $primary;
+$nav-link-font-family: $font-sans-serif;
 $nav-link-font-weight: 500;
 $nav-link-font-size: 1rem;
 $nav-link-padding-x: 1em;
 $nav-link-padding-y: 0;
 $nav-tabs-border-color: $border-color;
 
-$navbar-brand-padding-y: 0;
-$navbar-brand-font-size: 1.75rem;
-
 
 /*-- scss:rules --*/
 
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script&display=swap');
 
 @font-face {
     font-family: "Pensum Pro";
-    src: url("www/fonts/PensumPro-Regular.woff2");
+    src: url("assets/fonts/PensumPro-Regular.woff2");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Pensum Pro";
-    src: url("www/fonts/PensumPro-Bold.woff2");
+    src: url("assets/fonts/PensumPro-Bold.woff2");
     font-weight: 500;
     font-style: normal;
 }
 
-@font-face {
-    font-family: "Atlas Grotesk";
-    src: url("www/fonts/AtlasGrotesk-Regular.woff2");
-    font-weight: 400;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: "Atlas Grotesk";
-    src: url("www/fonts/AtlasGrotesk-Medium.woff2");
-    font-weight: 500;
-    font-style: normal;
-}
-
-// Notebook gridlines
-#quarto-content>* {
+// Quarto layout overrides
+#quarto-content>*, #quarto-header>* {
+  line-height: $spacer;
   padding-top: 0;
+  padding-bottom: 0;
   margin-top: 0;
-}
-body {
-  padding-right: 2em;
-  background-image: 
-    linear-gradient(to right, $body-bg, transparent 16em),
-    linear-gradient(to left, $body-bg, transparent 18em),    
-    linear-gradient(to bottom, 
-      transparent, transparent 27px, $darkgray 27px, $darkgray 28px);
-    background-size: 100% 28px;
-    background-repeat: repeat-y;
+  margin-bottom: 0;
 }
 
+// rules
 b, strong {
   font-weight: 500;
 }
@@ -228,6 +210,8 @@ h1, .h1 {
   line-height: 1.5* $spacer;
   margin-top: 1.75* $spacer;
   margin-bottom: .75* $spacer;
+  padding-top: .5* $spacer;
+  background: transparent url(assets/stroke-01.svg) 0 0 no-repeat;
 }
 h2, .h2 {
   color: rgba($body-color, 45%);
@@ -267,6 +251,7 @@ blockquote small, blockquote .small {
   font-size: 2.5rem;
   line-height: 2* $spacer;
   margin-top: 1* $spacer;
+  background: none;
 }
 .lead {
   font-family: $font-family-base;
@@ -402,7 +387,8 @@ pre code {
 p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   font-family: $font-monospace;
   font-size: $code-font-size;
-  color: $body-color;
+  color: inherit;
+  line-height: inherit;
   background-color: transparent;
 }
 .code-with-filename .code-with-filename-file {
@@ -427,34 +413,32 @@ div.sourceCode, pre.sourceCode {
 }
 
 
-// Tables
+/* Tables */
 thead, tbody, tfoot, tr, td, th {
   border-color: rgba($body-color, 25%);
 }
 table, table.table, figure {
   border-top: none;
-  border-radius: 0;
-  margin-top : .5* $spacer;
-  margin-bottom: 1* $spacer;
+  margin: .5* $spacer 0 1* $spacer 0;
 }
 .table>:not(caption)>*>* {
   padding: 0 .5em;
 }
 .table>thead {
-  border-bottom: 2px solid $primary;
+  border-bottom: 2px solid $border-color;
 }
 .table th {
   font-family: $font-sans-serif;
-  font-weight: 400;
   color: $headings-font-color;
+  font-weight: 400;
 }
 .table-sm th {
-  font-size: 1rem;
   line-height: $spacer;
 }
 .table-sm td {
   line-height: calc($spacer - 1px);
 }
+
 caption, .panel-caption, .figure-caption, .subfigure-caption, .table-caption,
 figcaption, .column-margin figcaption, .margin-caption, div.aside, aside, .column-margin {
   font-family: $font-sans-serif;
@@ -470,18 +454,25 @@ figcaption, .column-margin figcaption {
 }
 
 
-// Figures
+/* Figures */
 .figure-img, .card-img-top {
-  padding: .75* $spacer;
+  background-color: $shaded;
+  padding: 0;
   margin: 0 0 .5* $spacer;
-  background: transparent url(www/frame.svg) 0 0 / cover no-repeat;
+  box-shadow:
+    -1px -4px 12px rgba(0, 0, 0, 0.085),
+    inset -2px -2px 0 rgba(255, 255, 255, 0.4);  
   transition: transform 0.3s ease;
 }
-.figure-img:hover, .card-img-top:hover {
-  transform: scale(1.05);
-}
-.figure-img img, .card-img-top img {
+.card-img-top {
+  padding: calc(.5* $spacer - 2px);
+  border: 1px solid rgba($border-color, .75);
   border-radius: 0;
+}
+.card-img-top:hover {
+  transform: scale(1.025);
+}
+.card-img-top img {
   overflow: clip;
   width: 100%;
   filter: grayscale(1);
@@ -490,33 +481,33 @@ figcaption, .column-margin figcaption {
   width: unset;
 }
 
-/* Tape Marks (pseudo-elements) */
-.figure-img::before, .figure-img::after {
+// Tape marks (pseudo-elements)
+.card-img-top::after {
   content: '';
   position: absolute;
-  width: 50px;
-  height: 14px;
-  background: #f8e4b2; /* tape color */
+  width: 28px;
+  height: 42px;
+  background: $ruler;
   opacity: 0.7;
   z-index: 1;
+  top: 14px;
+  right: -14px;
   transform: rotate(-5deg);
 }
 
-/* Top left tape */
-.figure-img::before {
-  top: -6px;
-  left: 10px;
+.img-thumbnail {
+  padding: 0;
+  margin-bottom: .5* $spacer;
+}
+.img-fluid {
+  border-radius: $border-radius;
+}
+.img-rounded {
+  border-radius: 6rem;
 }
 
-/* Top right tape */
-.figure-img::after {
-  top: -6px;
-  right: 10px;
-  transform: rotate(5deg);
-    }
 
-
-// Callouts 
+/* Callouts  */
 
 .callout.callout-style-default, .callout.callout-style-simple {
   border: none;
@@ -546,119 +537,52 @@ callout.callout-style-default>div.callout-header, .callout-title-container {
   margin-top: unset;
 }
 
-#quarto-content .quarto-sidebar-toggle {
-  background: none;
-  border: none;
-}
-.quarto-sidebar-toggle-title {
-  font-family: $font-sans-serif;
-  font-size: $small-font-size;
-  background: none;
-  border-bottom: solid 1px $border-color;
-  margin-top: .5* $spacer;
-  padding: .5em;
-}
-nav.sidebar.sidebar-navigation:not(.rollup) {
-  background-color: transparent;
-}
-nav.sidebar .nav-link {
-  font-family: $font-sans-serif;
-  font-size: $small-font-size;
-}
-
-.sidebar .toc-actions h2, .sidebar .toc-actions .h2,
-.sidebar .quarto-code-links h2, .sidebar .quarto-code-links .h2,
-.sidebar .quarto-other-links h2, .sidebar .quarto-other-links .h2,
-.sidebar .quarto-alternate-notebooks h2, .sidebar .quarto-alternate-notebooks .h2,
-.sidebar .quarto-alternate-formats h2, .sidebar .quarto-alternate-formats .h2,
-.sidebar nav[role=doc-toc]>h2, .sidebar nav[role=doc-toc]>.h2 {
-  margin-top: 1* $spacer;
-  margin-bottom: .5* $spacer;
-}
-.sidebar.sidebar-navigation>* {
-  padding-top: $spacer;
-}
-.sidebar nav[role=doc-toc]>ul li a {
-  color: $text-muted;
-  border-left: solid 1px $border-color;
-}
-.sidebar nav[role=doc-toc] ul>li>a.active,
-.sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
-  border-left: solid 2px $primary;
-}
-.sidebar .toc-actions ul li a, .sidebar .quarto-code-links ul li a,
-.sidebar .quarto-other-links ul li a, .sidebar .quarto-alternate-notebooks ul li a,
-.sidebar .quarto-alternate-formats ul li a, .sidebar nav[role=doc-toc]>ul li a {
-  line-height: calc($spacer - .125* $spacer);
-  padding-bottom: .125* $spacer;
-}
-
 .panel-tabset > .nav-tabs, .panel-tabset > .tab-content {
   border: none;
 }
 
 
-// Utilities
-div.separator {
-  height: 4px;
-  width: 270px; 
-  background: transparent url(www/stroke-01.svg) 0 0 no-repeat; 
-  margin: calc($spacer - 4px) 0 -.75* $spacer 0;
+/* Quarto layout fixes */
+
+// Notebook gridlines
+#quarto-content {
+  margin-right: 1em;                   // space for navtabs
+  background-image:
+    linear-gradient(to right, $darkgray, transparent 1px, transparent),
+    linear-gradient(to bottom, $darkgray, transparent 1px, transparent);
+    background-size: 14px 14px;
+    background-position: 12px 12px;
+    background-repeat: repeat;
 }
-.shaded {
-  background-color: $input-bg;
-  backdrop-filter: blur(3px);
-}
-.blurred {
-  background-color: rgba($dark, 65%);
-  backdrop-filter: blur(3px);
-}
-.striped {
-  background-image: linear-gradient(-45deg,
-  $shaded 25%, transparent 25%, transparent 50%,
-  $shaded 50%, $shaded 75%, transparent 75%, transparent);
-  background-size: 1rem 1rem;
-}
-.img-thumbnail {
-  padding: 0;
-  margin-bottom: .5* $spacer;
-}
-.img-fluid {
-  border-radius: $border-radius;
-}
-.img-rounded {
-  border-radius: 6rem;
-}
-.quarto-video {
-  margin-bottom: .25* $spacer;
-  opacity: .70;
-}
-.graded { 
-  background-image: linear-gradient(0deg, $white 80%, transparent 90%);
+#quarto-sidebar {
+  background-color: $body-bg;
+  border-right: 1px solid $darkgray;
 }
 
-// Quarto layout fixes
 #quarto-announcement {
   font-family: $font-sans-serif;
   font-size: 1.25rem;
   border: none;
   justify-content: center;
 }
+#title-block-header {
+  margin-block-end: unset;
+  margin-top: unset;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $darkgray;  
+}
 .page-columns .column-screen-inset-shaded {
   padding: .5* $spacer 2em;
   background: $shaded;
 }
-.navbar, .panel-tabset>.nav-tabs {
+.navbar {
+  height: 2.5* $spacer;
   backdrop-filter: blur(6px);
-  border-bottom: solid 2px $border-color;
+  border-bottom: 1px solid $border-color;  
 }
 .panel-tabset>.nav-tabs {
   line-height: 1.5* $spacer;  
   border-bottom: solid 1px $border-color;
-}
-.quarto-title-banner {
-  padding: .5* $spacer 0 0;
-  margin: 0 0 1* $spacer;
 }
 .navbar .nav-item:not(.compact) .nav-link {
   line-height: 1.5* $spacer;
@@ -678,14 +602,14 @@ div.separator {
 .nav-tabs .nav-item .nav-link.active {
   border-bottom: solid 3px $border-color;
 }
+.navbar-title {
+  font-family: $headings-font-family;
+  line-height: 1.5* $spacer;
+}
 .navbar-logo {
   max-height: 3.5* $spacer;
   position: absolute;
   top: .5* $spacer;
-}
-#title-block-header {
-  margin-block-end: unset;
-  margin-top: unset;
 }
 footer.footer {
   padding-top: .75* $spacer;
@@ -706,8 +630,5 @@ footer.footer .nav-footer {
 }
 .nav-footer-center {
   display: none;
-}
-.column-margin.column-container p {
-  margin-bottom: .5* $spacer;
 }
 
