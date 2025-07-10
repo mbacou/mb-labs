@@ -1,0 +1,41 @@
+/* Theme: mb-labs Bootstrap color theme */
+/* Author: BACOU, Melanie <mel@mbacou.com> */
+/* Version: v1.0.0 */
+/* Date: 2024-01-31 */
+
+/*-- scss:defaults --*/
+
+$theme: 'mb-labs';
+
+$blue:      #3daee9;
+$purple:    #9b59b6;
+$indigo:    #98796f;
+$pink:      #aea39a;
+$red:       #da4453;
+$orange:    #ffac5e;
+$yellow:    #eed04c;
+$green:     #27ae60;
+$teal:      #445e64;
+$cyan:      #789494;
+
+$dark:      #222e32;
+$gray:      #505050;
+$light:     #fdfcf9;                             // Notebook paper tone
+
+$body-color:   $gray;
+$body-bg:      $light;
+$primary:   #fca5a5;
+$darkgray:  #e7e2da;                             // Notebook paper rules
+
+$font-family-base:     "Crimson Pro";
+$headings-font-family: "M PLUS Code Latin";
+$font-monospace:       "M PLUS Code Latin";
+$font-sans-serif:      "M PLUS Code Latin";
+$font-script:          "Marck Script";
+
+@import '_theme';
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Criumson+Pro:wght@400..500&family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script&display=swap');
+

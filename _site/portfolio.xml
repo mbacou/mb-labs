@@ -5,16 +5,18 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Mel B. Labs</title>
+<title>Mel B. my-blog</title>
 <link>https://mbacou.com/portfolio.html</link>
 <atom:link href="https://mbacou.com/portfolio.xml" rel="self" type="application/rss+xml"/>
 <description>Playground for consulting and data science projects</description>
 <image>
-<url>https://mbacou.com/www/mb-square.png</url>
-<title>Mel B. Labs</title>
+<url>https://mbacou.com/assets/mb-square.png</url>
+<title>Mel B. my-blog</title>
 <link>https://mbacou.com/portfolio.html</link>
+<height>144</height>
+<width>144</width>
 </image>
-<generator>quarto-1.8.11</generator>
+<generator>quarto-1.8.14</generator>
 <lastBuildDate>Thu, 01 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Interactive Web Applications</title>

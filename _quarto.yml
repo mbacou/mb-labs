@@ -7,9 +7,9 @@ project:
     port: 5555
 
 website:
-  title: "Mel B. Labs"
-  favicon: www/mb-square.png
-  image: www/mb-square.png
+  title: "Mel B. my-blog"
+  favicon: assets/mb-square.png
+  image: assets/mb-square.png
   twitter-card: false
   open-graph: true
   site-url: https://mbacou.com
@@ -21,7 +21,7 @@ website:
   description: Playground for consulting and data science projects
 
   navbar:
-    title: Blog
+    title: Mel B. my-blog
     foreground: dark
     background: transparent
     search: true
@@ -39,7 +39,7 @@ website:
         href: https://www.youtube.com/@mbacou/playlists  
   
   sidebar:
-    style: docked            
+    style: docked
     pinned: true
     border: false
 
@@ -79,10 +79,18 @@ format:
     toc: true
     toc-title: Contents
     toc-location: left
-    toc-expand: 2
+    toc-depth: 3
+    toc-expand: true
     link-external-icon: false
     link-external-newwindow: true
     title-block-banner: transparent
+
+    tbl-cap-location: bottom
+    fig-cap-location: bottom
+    reference-location: margin
+    citation-location: document
+    citations-hover: true
+    footnotes-hover: false
 
     fig-dpi: 220
     fig-format: png
@@ -91,19 +99,16 @@ format:
 
     code-copy: false
     code-overflow: wrap
+    highlight-style: solarized
 
-    tbl-cap-location: bottom
-    fig-cap-location: bottom
-    reference-location: margin
-    citation-location: document
-
-    fontsize: 18px
-    include-before-body: assets/navtabs.html
+    fontsize: 15px
+    include-before-body: assets/scss/navtabs.html
+    brand: false
     theme:
-      light: [assets/theme-mblabs.scss, assets/sidebar.scss, assets/navtabs.scss]
+      light: assets/scss/theme.scss
 
     grid:
-      body-width: 850px
-      sidebar-width: 160px
-      margin-width: 210px
-      gutter-width: 3em
+      body-width: 840px
+      sidebar-width: 180px
+      margin-width: 180px
+      gutter-width: 30px

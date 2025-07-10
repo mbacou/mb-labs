@@ -1,0 +1,706 @@
+/* Theme: mb-labs Bootstrap theme */
+/* Author: BACOU, Melanie <mel@mbacou.com> */
+/* Version: v1.0.0 */
+/* Date: 2024-01-31 */
+/* Boostrap customizations for Mel B. Labs */
+
+/*-- scss:defaults --*/
+
+$theme: 'mb-labs';
+
+$blue:      #3daee9;
+$purple:    #9b59b6;
+$indigo:    #98796f;
+$pink:      #aea39a;
+$red:       #da4453;
+$orange:    #ffac5e;
+$yellow:    #eed04c;
+$green:     #27ae60;
+$teal:      #445e64;
+$cyan:      #789494;
+
+$dark:      #222e32;
+$gray:      #505050;
+$light:     #fdfcf9;                             // Notebook paper tone
+
+$primary:   tint-color($red, 45%);
+$secondary: tint-color($gray, 50%);  
+$info:      $purple;
+$darkgray:  #e7e2da;                             // Notebook paper rules
+
+$font-family-base:     "Crimson Text";
+$headings-font-family: "M PLUS Code Latin";
+$font-monospace:       "M PLUS Code Latin";
+$font-sans-serif:      "M PLUS Code Latin";
+$font-serif:           "Marck Script";
+
+
+// Other defaults (generally no need to modify below)
+
+$black:     #000000;
+$white:     #ffffff;
+
+$gray-100:   tint-color($gray, 90%);
+$gray-200:   tint-color($gray, 80%);
+$gray-300:   tint-color($gray, 70%);
+$gray-400:   tint-color($gray, 60%);
+$gray-500:   tint-color($gray, 50%);
+$gray-600:   tint-color($gray, 40%);
+$gray-700:   tint-color($gray, 30%);
+$gray-800:   tint-color($gray, 20%);
+$gray-900:   tint-color($gray, 10%);
+
+$body-color: $gray;
+$body-bg:    $light;
+$link-color: $gray-700;
+$text-muted: $gray-800;
+$code-color: $gray-600;
+$shaded: rgba(tint-color($body-bg, 75%), 75%);   // see $input-bg for .shaded
+
+$font-weight-bold: 600;
+$headings-font-weight: 400;
+$headings-font-color: $gray-900;
+
+$spacer: 2rem;                                   // 30px line-height
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * 1,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+);
+
+$font-size-base:  20/15 * 1rem;                   // 15px in `_quarto.yml`
+$small-font-size: 18/15 * 1rem;
+$code-font-size:  15/15 * 1rem;
+$sub-sup-font-size: 1rem;
+
+$h1-font-size:  calc($font-size-base + 16px);    // 34px
+$h2-font-size:  calc($font-size-base +  8px);    // 26px
+$h3-font-size:  calc($font-size-base +  6px);    // 28px
+$h4-font-size:  calc($font-size-base +  4px);    // 24px
+$h5-font-size:  calc($font-size-base +  2px);    // 22px
+$h6-font-size:  calc($font-size-base -  1px);
+
+$line-height-base: calc($spacer / $font-size-base);
+$list-inline-padding: .25em;
+
+$enable-rounded: true;
+$enable-negative-margins: true;
+
+$border-color: $body-color;
+$border-radius-sm: 4px;
+$border-radius: 4px;
+$border-radius-lg: 0.50rem;
+$border-width: 2px;
+$hr-border-color: $body-color;
+$hr-opacity: .75;
+
+$table-cell-padding: 0 .5em;
+$table-cell-padding-sm: 0 .5em;
+$table-striped-bg: $shaded;
+$table-border-color: rgba($body-color, .5);
+
+$thumbnail-border-width: 0;
+$thumbnail-border-radius: $border-radius;
+$thumbnail-border-color: $border-color;
+
+$input-color: $text-muted;
+$input-bg: $shaded;
+$input-btn-padding-y: .5rem;
+$input-placeholder-color: $input-color;
+$input-border-color: $border-color;
+$input-disabled-bg: darken($input-bg, 4%);
+$input-group-addon-bg: $shaded;
+
+$breadcrumb-active-color: $body-color;
+$component-active-bg: rgba($link-color, 12%);
+
+$jumbotron-bg: $shaded;
+$label-margin-bottom: .5rem;
+$list-group-bg: $input-bg;
+$list-group-border-color: $input-border-color;
+$list-group-hover-bg: lighten($component-active-bg, 20%);
+$modal-content-bg: $input-bg;
+$modal-content-border-color: $border-color;
+
+$pagination-bg: $input-bg;
+$pagination-border-color: $border-color;
+$pagination-color: $input-color;
+$pagination-disabled-bg: $input-disabled-bg;
+$pagination-hover-color: $link-color;
+$progress-bg: $input-bg;
+
+$card-spacer-x: 0;
+$card-spacer-y: 0;
+$card-title-spacer-x: 0;
+$card-title-spacer-y: .5rem;
+$card-title-color: $headings-font-color;
+$card-bg: transparent;
+$card-cap-bg: rgba($white, 90%);
+$card-border-color: $border-color;
+$card-border-width: 0;
+$card-border-radius: $border-radius;
+
+$callout-margin-y:  2rem;
+$callout-margin-x:  0;
+$callout-padding-y: .5rem;
+$callout-padding-x: 1em;
+$callout-border-width: 0;
+$callout-border-left-width: 3px;
+$callout-border-radius: $border-radius;
+$callout-border-color: $border-color;
+
+$navbar-active-color: $body-color;
+$navbar-hover-color: $primary;
+$navbar-border-color: $border-color;
+$navbar-brand-padding-y: 0;
+$navbar-brand-font-size: 2rem;
+
+$nav-link-color: $body-color;
+$nav-link-active-color: $body-color;
+$nav-link-hover-color: $primary;
+$nav-link-font-family: $font-sans-serif;
+$nav-link-font-weight: 500;
+$nav-link-font-size: 1.2rem;
+$nav-link-padding-x: 1em;
+$nav-link-padding-y: 0;
+$nav-tabs-border-color: $border-color;
+
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script&display=swap');
+
+// Quarto layout overrides for vertical rhythm
+#quarto-content>*, #quarto-header>*, .quarto-title-banner>* {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+a.footnote-ref {
+  color: $primary;
+}
+b, strong {
+  font-weight: $font-weight-bold;
+}
+p, div, li, dd {
+  line-height: 2rem;
+}
+p, ol, ul, dl, .cell {
+  margin-bottom: 1rem;
+}
+.content > p:first-of-type {
+  margin-top: 2rem;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: $headings-font-color;
+  font-weight: $headings-font-weight;
+  line-height: 3rem;
+  padding: 0;
+}
+h1:not(.quarto-secondary-nav-title), .h1:not(.quarto-secondary-nav-title),
+#title-block-header.quarto-title-block.default .quarto-title .title {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.level1 h1:not(.title) {
+}
+h1.quarto-secondary-nav-title {
+  font-size: $navbar-brand-font-size;
+}
+h2, .h2 {
+  color: $primary;
+  margin-top: 2rem;
+  border-bottom: none;
+}
+h3, .h3 {
+  margin-top: 2rem;  
+}
+h4, .h4, h5, .h5, h6, .h6 {
+  line-height: 2rem;
+  margin-top: 2rem;
+}
+h6, .h6 {
+  color: $primary;
+  font-size: $h6-font-size;
+  font-weight: 500;;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0;  
+}
+h6::after, .h6::after {
+  content: '---';
+}
+hr {
+  border-top: dashed 1px $border-color;
+  margin: 0 0 calc(1rem - 1px) 0;
+}
+.blockquote, blockquote p {
+  color: $gray-500;
+  font-size: 1.75rem;
+  font-style: italic;
+  text-align: right;
+  border: none;
+  padding: 0;
+  margin: 0 0 2rem 2em;
+}
+blockquote small, blockquote .small {
+  color: $headings-font-color;
+  font-family: $font-sans-serif;
+  font-size: $code-font-size;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem;
+}
+ul li ul li {
+  line-height: calc(2rem - 2px);                   // weird bug
+}
+.quarto-title-banner .quarto-title .title, h1.title {
+  color: $body-color;
+  font-family: $headings-font-family;
+  font-weight: 400;
+  font-size: 2.75rem;
+  margin-top: 3rem;
+}
+.lead, p.lead {
+  font-family: $font-family-base;
+  font-weight: 400;
+  color: $gray-500;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  margin-bottom: 1.5rem;
+}
+.lead p {
+  line-height: unset;  
+}
+p.subtitle {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.deserifion {
+  color: $gray-700;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 1.5rem 1em 0;
+  border: solid 1px $border-color;
+  transform: rotate(.9deg);
+}
+.deserifion::before {
+  content: 'In short ...' ;
+  color: $primary;
+  font-family: $font-serif;
+  display: flex;
+}
+
+// Article pages
+.quarto-title-meta-heading, .abstract .block-title, 
+.quarto-appendix-heading, details>summary {
+  font-family: $font-sans-serif;
+  font-size: $code-font-size !important;
+  color: $primary;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+  opacity: 1;
+}
+.quarto-title-meta-heading {
+  display: none;
+}
+#title-block-header.quarto-title-block.default .quarto-title-meta-contents p, 
+#title-block-header.quarto-title-block.default .quarto-title-authors p,
+#title-block-header.quarto-title-block.default .quarto-title-affiliations p,
+#title-block-header.quarto-title-block.default .abstract p {
+  font-size: $small-font-size;
+  color: $text-muted;
+  margin-bottom: 1rem;
+}
+.abstract p {
+  text-align: justify; 
+}
+#title-block-header.quarto-title-block.default .keywords p:last-of-type, 
+#title-block-header.quarto-title-block.default .deserifion p:last-of-type, 
+#title-block-header.quarto-title-block.default .abstract p:last-of-type {
+  margin-bottom: 2rem;
+}
+.quarto-title-meta-contents p {
+  border-bottom: 2px solid rgba($primary, .45);
+  width: 17rem;
+}
+.quarto-title-meta-contents p::before {
+  content: 'Author:';
+  font-family: $font-sans-serif;
+  font-size: $code-font-size;
+  color: $primary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: .5em; 
+}
+p.date::before {
+  content: 'Published:';
+}
+p.date-modified::before {
+  content: 'Modified:';
+}
+#quarto-appendix.default {
+  background: none;
+}
+
+/* Listing pages */
+div.quarto-post .metadata {
+  font-size: $small-font-size;
+}
+h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
+#quarto-margin-sidebar .quarto-listing-category-title,
+.column-margin h5, #toc-title  {
+  color: $primary;
+  font-family: $headings-font-family;
+  font-size: $small-font-size;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 2rem;
+  cursor: unset;
+  transform: rotate(-.8deg);
+  border-bottom: 2px solid rgba($primary, .45);
+  max-width: 18rem;
+  opacity: 1;
+}
+#toc-title {
+  border: none;
+  transform: rotate(0);
+}
+
+/* Boostrap and listing cards */
+.card {
+  margin: 2rem 0 0;
+}
+.quarto-grid-item p.card-img-top {
+  margin-bottom: 1rem;
+}
+.quarto-grid-item .card-title {
+  color: $card-title-color;
+  font-size: unset;
+  padding: 0;
+  margin: $card-title-spacer-y $card-title-spacer-x;
+} 
+.quarto-grid-item .card-text {
+  font-size: unset;
+  margin: $card-spacer-y $card-spacer-x;
+} 
+.quarto-grid-item .card-text-small {
+  font-size: $code-font-size;
+}
+.quarto-grid-item .card-attribution {
+  padding: 1rem 0 0;
+  text-transform: none;
+  font-weight: 400;
+}
+.quarto-grid-item .card-attribution, .listing-author, .date, .date-modified {
+  color: $text-muted;
+}
+.listing-date {
+  font-family: $font-sans-serif;
+  font-size: $code-font-size;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $primary;
+}
+.listing-file-modified, .listing-author {
+  font-family: $font-sans-serif;
+  font-size: $code-font-size;
+  color: $headings-font-color;
+}
+.quarto-listing-sort {
+  margin: 0 0 1rem auto;
+}
+.quarto-grid-item .listing-categories {
+  margin: 1rem .5em 1rem 0;
+  padding: 0;
+}
+
+/* Code blocks */
+pre, pre code {
+  font-family: $font-monospace;
+  font-size: $code-font-size;
+  color: $text-muted;
+  padding: 0;
+}
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+  color: inherit;
+  font-family: $font-monospace;
+  font-size: $code-font-size;
+  line-height: inherit;
+  background: none;
+  padding: 0 .25rem;
+}
+.code-with-filename .code-with-filename-file {
+  color: $headings-font-color;
+  font-size: $code-font-size;
+  font-weight: 400;
+  background: $shaded;
+  border: none;
+  border-bottom: 1px solid $border-color;
+}
+div.sourceCode, details {
+  margin: 1rem 0 2rem;
+}
+div.sourceCode {
+  padding: 1rem 1em 0; 
+  background-color: $shaded;
+  border: none;
+  padding: 1rem 1em .5rem;
+}
+pre.sourceCode {
+  font-size: $code-font-size;
+  line-height: 1.5rem;
+  background: none;
+  padding: 0;
+}
+#quarto-appendix.default .quarto-appendix-bibtex, .sourceCode .bibtex,
+#quarto-appendix.default .quarto-appendix-citeas {
+  font-family: $font-monospace;
+  font-size: $code-font-size;
+  line-height: 1.5rem;
+  color: $text-muted;
+  border: none;
+  background: none;
+}
+
+
+/* Tables */
+table, table.table {
+  margin: 1rem 0 2rem;
+  border: none;
+  border-top: 1px solid $border-color;
+  background-color: $shaded;  
+}
+.table>:not(caption)>*>* {
+  padding: 0 .5em;
+}
+.table>thead {
+  border-bottom: 1px solid $border-color;
+}
+.table th {
+  line-height: 2rem;
+  font-family: $font-family-base;
+  color: $headings-font-color;
+  font-weight: 500;
+  border: none;
+}
+.table tbody {
+  border-bottom: 2px solid $border-color;
+}
+.table td {
+  line-height: calc(2rem - 1px);
+  border: none;
+  border-bottom: 1px solid rgba($darkgray, .95);  
+}
+.table-borderless td, .table tr:last-of-type td, .table-secondary td {
+  border-bottom: 1px solid transparent;
+}
+
+
+/* Margin notes and captions */
+caption, .panel-caption, .figure-caption, .subfigure-caption, .table-caption,
+figcaption, .column-margin figcaption, .margin-caption, 
+div.aside, aside, .column-margin {
+  font-family: $font-sans-serif;
+  font-size: $code-font-size;
+  color: $text-muted;
+  text-align: left;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+caption, .panel-caption, .figure-caption, .subfigure-caption, .table-caption,
+figcaption, .column-margin figcaption, .margin-caption {
+  margin-top: .5rem;
+  margin-bottom: 1rem;  
+}
+.column-margin.column-container p {
+  margin-bottom: 1rem;
+}
+div.aside, aside, .column-margin {
+  font-family: $font-family-base;
+  font-size: $small-font-size;
+}
+
+
+/* Figures */
+.figure-img, .card-img-top {
+  padding: 0;
+  margin: 0 0 1rem;
+}
+.card-img-top {
+  background-color: $shaded;
+  padding: calc(1rem - 1px);
+  border: 1px solid rgba($border-color, .75);
+  border-radius: 0;
+  box-shadow:
+  -1px -4px 12px rgba(0, 0, 0, 0.085),
+  inset -2px -2px 0 rgba(255, 255, 255, 0.4);  
+  transition: transform 0.3s ease;
+}
+.card-img-top:hover {
+  transform: scale(1.025);
+}
+.card-img-top img {
+  overflow: clip;
+  width: 100%;
+  filter: grayscale(1);
+}
+.card-img, .card-img-top, .card-img-bottom {
+  width: unset;
+}
+
+// Tape marks (pseudo-elements)
+.card-img-top::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 42px;
+  background: $darkgray;
+  opacity: 0.9;
+  z-index: 1;
+  top: 14px;
+  right: -14px;
+  transform: rotate(-5deg);
+}
+
+.img-thumbnail {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.img-fluid {
+  border-radius: $border-radius;
+}
+.img-rounded {
+  border-radius: 6rem;
+}
+
+
+/* Callouts  */
+.callout.callout-style-simple, .callout.callout-style-default {
+  border: none;
+  border-width: $callout-border-width;
+  border-left-width: $callout-border-left-width;
+  border-radius: $callout-border-radius;
+  margin: $callout-margin-y $callout-margin-x;
+}
+.callout.callout-style-simple .callout-body {
+  padding: $callout-padding-y $callout-padding-x;
+  margin: 0;
+}
+.callout.callout-style-simple .callout-body,
+.callout.callout-style-simple .callout-body p,
+.callout.callout-style-default .callout-body p {
+  font-size: unset;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0;
+}
+.callout:not(.callout-titled) .callout-body>:first-child, .callout:not(.callout-titled) .callout-body>div>:first-child {
+  margin-top: 0;
+}
+.panel-tabset > .nav-tabs, .panel-tabset > .tab-content {
+  border: none;
+}
+
+
+/* Quarto layout fixes */
+
+// Notebook gridlines
+#quarto-content {
+  background-image:
+    linear-gradient(to right, $darkgray, transparent 1px, transparent),
+    linear-gradient(to bottom, $darkgray, transparent 1px, transparent);
+    background-color: $body-bg;;
+    background-size: 2rem 2rem ;
+    background-position: -1px -5px;
+    background-repeat: repeat;
+}
+#quarto-search input {
+  font-size: unset;
+}
+#quarto-announcement {
+  font-family: $font-sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  justify-content: center;
+}
+body.nav-sidebar .quarto-title-banner {
+  margin-bottom: 2rem;
+  padding: 0;
+}
+#title-block-header {
+  background-color: $body-bg;
+  margin-block-end: unset;
+  margin-top: unset; 
+}
+.page-columns .column-screen-inset-shaded {
+  padding: .5* 2rem 2em;
+  background: $shaded;
+}
+.navbar, .quarto-banner nav.quarto-secondary-nav {
+  min-height: 2.5* 2rem;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid $border-color;  
+}
+.navbar #quarto-search {
+  margin: 0 0 0 1rem;
+}
+.panel-tabset>.nav-tabs {
+  line-height: 1.5* 2rem;  
+  border-bottom: solid 1px $border-color;
+}
+.navbar .nav-item:not(.compact) .nav-link {
+  line-height: 1.5* 2rem;
+}
+.navbar .nav-item:not(.compact) .nav-link,
+.nav-tabs .nav-item .nav-link {
+  margin-right: .25em;
+  border: none;
+  border-top: solid 3px transparent;
+  border-bottom: solid 3px transparent;
+}
+.navbar .nav-item:not(.compact) .nav-link:hover,
+.nav-tabs .nav-item .nav-link:hover {
+  border-bottom: solid 3px $primary;
+}
+.navbar .nav-item:not(.compact) .nav-link.active,
+.nav-tabs .nav-item .nav-link.active {
+  border-bottom: solid 3px $border-color;
+}
+.navbar-title {
+  font-family: $headings-font-family;
+  line-height: 1.5* 2rem;
+}
+.navbar-logo {
+  max-height: 3.5* 2rem;
+  position: absolute;
+  top: 1rem;
+}
+footer.footer {
+  padding-top: 1rem;
+}
+footer.footer .nav-footer {
+  margin: 0;
+  padding: 1rem 2em 2rem;
+}
+.nav-footer .nav-footer-left,
+.nav-footer .nav-footer-right,
+.nav-footer .nav-footer-center {
+  font-family: $font-sans-serif;
+  font-size: $code-font-size;
+}
+.nav-footer-center {
+  display: none;
+}
+
+@import '_navtabs', '_extra';
+

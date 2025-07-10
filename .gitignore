@@ -7,5 +7,6 @@ _data
 _extensions
 _drafts
 _assets
+_site/
 .quarto/
 /.quarto/

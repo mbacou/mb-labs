@@ -1,48 +1,47 @@
 meta:
   name: Mel B. Labs
   link:
-    home: https://mbacou.github.io/mb.labs
-    github: https://github.com/mbacou/mb.labs
+    home: https://mbacou.github.io/mb-labs
+    github: https://github.com/mbacou/mb-labs
 
 color:
   palette:
     white:     "#ffffff"
     black:     "#000000"
-    cyan:      "#789494"
-    teal:      "#445e64"
-    dark:      "#222e32"
-    pink:      "#aea39a"
-    purple:    "#98796f"
-    indigo:    "#9b59b6"
     blue:      "#3daee9"
-    green:     "#27ae60"
-    yellow:    "#eed04c"
-    orange:    "#ffac5e"
+    purple:    "#9b59b6"
+    indigo:    "#98796f"
+    pink:      "#aea39a"
     red:       "#da4453"
-    light:     "#eff0f1"
+    orange:    "#ffac5e"
+    yellow:    "#eed04c"
+    green:     "#27ae60"
+    teal:      "#445e64"
+    cyan:      "#789494"
+    dark:      "#222e32"
+    light:     "#fdfcf9"
     gray:      "#505050"
+    darkgray:  "#e7e2da"   
   
-  foreground:   white
-  primary:      orange
-  secondary:    gray
-  success:      teal
+  foreground:   gray
+  background:   light
+  primary:      "#fca5a5"
 
 typography:
   fonts:
-    - family: Roboto Condensed
-      source: google
-      weight: [300, 400, 500]
-    - family: Source Sans 3
+    - family: Crimson Pro
       source: google
       weight: [400, 500]
     - family: M PLUS Code Latin
       source: google
       weight: [400, 500]
-    - family: Oswald
+    - family: Marck Script
       source: google
-      weight: [300, 400, 500]
+      weight: [400]
   
-  base: Source Sans 3
-  headings: Oswald
-  monospace: M PLUS Code Latin
+  base: Crimson Pro
+  headings: 
+    family: M PLUS Code Latin
+  monospace: 
+    family: M PLUS Code Latin
   

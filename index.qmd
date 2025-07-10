@@ -2,9 +2,9 @@
 page-layout: article
 toc: false
 grid:
-    body-width: 860px
-    sidebar-width: 0px
-    margin-width: 340px
+    body-width: 836px
+    sidebar-width: 4px
+    margin-width: 360px
   
 listing:
   - id: lst-posts
@@ -41,7 +41,7 @@ listing:
 Informed citizens make better policy choices; better policies save <span class="text-primary">lives</span> and <span class="text-primary">resources</span>.
 :::
 
-::: {.aside .postit .tab-blue .px-3}
+::: {.aside .postit .tab-blue .px-2}
 
 ![](posts/resume/_fig/profile.jpg){.img-rounded .d-block .mx-auto .mt-n3 width="10em"}
 
@@ -69,14 +69,14 @@ document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.
 ```
 :::
 
-### Featured Projects {.divider}
+## Featured Projects
 
 The work I deliver for public agencies is to be found in [code repositories](https://github.com/mbacou/) on Github. Other (restricted or confidential) projects are outlined in the [portfolio](./portfolio.qmd) section of this website.
 
-::: {#lst-featured .mt-3}
+::: {#lst-featured}
 :::
 
-### Articles and Notebooks {.divider}
+## Articles and Notebooks
 
 Code notebooks and articles that do not find a home elsewhere. Feel free to cite, clone, comment, and raise issues.
 

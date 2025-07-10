@@ -1,0 +1,75 @@
+/*-- scss:rules --*/
+
+#quarto-sidebar, #quarto-sidebar-toc-left {
+  padding-left: 1em;
+  margin-left: -2em;
+  margin-right: 1em;
+  border-right: none;
+  background: rgba($body-bg, .75);
+}
+#quarto-content .quarto-sidebar-toggle {
+  background: none;
+  border: none;
+}
+.quarto-sidebar-toggle-title {
+  font-family: $font-sans-serif;
+  font-size: $small-font-size;
+  background: none;
+  border-bottom: solid 1px $primary;
+  margin-top: 1rem;
+  padding: .5rem;
+}
+.sidebar.sidebar-navigation:not(.rollup) {
+  background-color: transparent;
+}
+.sidebar .nav-link, .toc-action {
+  font-family: $font-sans-serif;
+  font-size: $code-font-size;
+}
+.toc-action {
+  font-family: $font-family-base;
+  font-size: $small-font-size;
+}
+
+.sidebar .toc-actions h2, .sidebar .toc-actions .h2,
+.sidebar .quarto-code-links h2, .sidebar .quarto-code-links .h2,
+.sidebar .quarto-other-links h2, .sidebar .quarto-other-links .h2,
+.sidebar .quarto-alternate-notebooks h2, .sidebar .quarto-alternate-notebooks .h2,
+.sidebar .quarto-alternate-formats h2, .sidebar .quarto-alternate-formats .h2,
+.sidebar nav[role=doc-toc]>h2, .sidebar nav[role=doc-toc]>.h2 {
+  margin: 8rem 1em 1rem;
+  text-align: right;
+  border-top: 1px solid $primary;
+}
+.sidebar.sidebar-navigation>* {
+  padding-top: 0;
+}
+.sidebar nav[role=doc-toc]>ul {
+  padding: 0;
+  margin: 0 0 2rem;
+  border-right: solid 1px $primary;
+}
+.sidebar .toc-actions ul li a, .sidebar .quarto-code-links ul li a,
+.sidebar .quarto-other-links ul li a, .sidebar .quarto-alternate-notebooks ul li a,
+.sidebar .quarto-alternate-formats ul li a, .sidebar nav[role=doc-toc]>ul li a {
+  color: $text-muted;
+  line-height: 1.5rem;
+  text-align: right;
+  padding: 0 1em 1rem 0;
+  border: none;
+}
+.sidebar nav[role=doc-toc]>ul li a.nav-link,
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link {
+  border: none;
+  border-right: solid 3px transparent;
+}
+.sidebar nav[role=doc-toc] ul>li>a.nav-link.active,
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link.active {
+  color: $body-color;
+  border-right: solid 3px $primary;
+}
+.sidebar nav[role=doc-toc] ul>li>a.nav-link:hover,
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link:hover {
+  color: $body-color;
+  border-right: solid 3px $border-color;
+}

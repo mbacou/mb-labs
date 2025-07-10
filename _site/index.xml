@@ -5,16 +5,18 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Mel B. Labs</title>
+<title>Mel B. my-blog</title>
 <link>https://mbacou.com/</link>
 <atom:link href="https://mbacou.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>Playground for consulting and data science projects</description>
 <image>
-<url>https://mbacou.com/www/mb-square.png</url>
-<title>Mel B. Labs</title>
+<url>https://mbacou.com/assets/mb-square.png</url>
+<title>Mel B. my-blog</title>
 <link>https://mbacou.com/</link>
+<height>144</height>
+<width>144</width>
 </image>
-<generator>quarto-1.8.11</generator>
+<generator>quarto-1.8.14</generator>
 <lastBuildDate>Mon, 15 Jul 2024 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Data, Resources, and Tools</title>
@@ -618,21 +620,19 @@ lines here.</td>
 
 
 
-<p>
-</p>
-<p>With the release of <strong>Quarto 1.4</strong>, markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based documents (such as <strong>Emacs org-mode</strong>, <strong>Rmarkdown</strong> and <strong>Jupyter</strong> notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.</p>
-<div class="cell page-columns page-full" data-classe="mb-4">
+<p>With the release of <strong>Quarto 1.4</strong> (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as <strong>Emacs org-mode</strong>, <strong>Rmarkdown</strong> and <strong>Jupyter</strong> notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.</p>
+<div class="column-page-inset-right d-flex ink ink-box p-2">
+<p>No other reason for this map below but to showcase Quarto’s new content layout features – and well, I love Soviet-era classic topo styles. Check out Russian <a href="https://sovietmaps.com/">cartography</a>, it is stunning work.</p>
+<p>This margin note uses a custom <code>&lt;div&gt;</code> with CSS classes <code>.column-page-inset-right .d-flex</code> making use of Boostrap’s and Quarto utilities.</p>
+</div>
+<div class="cell page-columns page-full">
 <div class="cell-output-display column-page">
-<div id="htmlwidget-4732839480b06c020e0d" style="width:100%;height:17rem;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4732839480b06c020e0d">{"x":{"options":{"minZoom":11,"maxZoom":13,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://proxy.nakarte.me/http/88.99.52.155/tmg/{z}/{x}/{y}",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"sovietmap.com"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below...",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-062244c1fa1a16b68dc8" style="width:100%;height:17rem;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-062244c1fa1a16b68dc8">{"x":{"options":{"minZoom":11,"maxZoom":13,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://proxy.nakarte.me/http/88.99.52.155/tmg/{z}/{x}/{y}",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"sovietmap.com"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below...",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="ink-border ink p-2 mt-md-n5 margin-aside">
-<p>No other reason for this map but to showcase Quarto’s new content layout features – and well, I love Soviet-era classic topo styles. Check out Russian <a href="https://sovietmaps.com/">cartography</a>, it is stunning work.</p>
-<p>This margin also showcases a custom <code>DIV</code> with CSS classes <code>{.aside .mt-md-n5}</code> making use of Boostrap’s new <strong>negative margins</strong> utilities and grid breakpoints.</p>
-</div></div><p>Old-time researchers and engineers have long used <strong>Emacs <code>Org-Mode</code></strong> (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to <em>Eric Schulte</em>’s incredible <strong>Babel</strong> extension <span class="citation" data-cites="schulte2012">(see Schulte et al. 2012)</span> and to <em>John MacFarlane</em>’s <a href="https://pandoc.org/">Pandoc</a> document converter library – but nowadays Quarto makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as <strong>in-browser real-time rendering of documents</strong>.</p>
-<p>In the process of migrating old articles and code notebooks to the new Quarto markdown syntax, I used this post as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my <code>assets/theme-labs.scss</code> Sass file and other tidbits<sup>1</sup><sup>2</sup>.</p>
+<p>Old-time researchers and engineers have long used <a href="https://orgmode.org/">Emacs <code>Org-Mode</code></a> (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to <em>Eric Schulte</em>’s incredible <strong>Babel</strong> extension <span class="citation" data-cites="schulte2012">(see Schulte et al. 2012)</span> and to <em>John MacFarlane</em>’s <a href="https://pandoc.org/">Pandoc</a> document converter library – but nowadays <strong>Quarto</strong> makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as <strong>in-browser real-time rendering of documents</strong>.</p>
+<p>In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my <code>assets/scss/theme.scss</code> Sass file and other tidbits<sup>1</sup><sup>2</sup>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;For folks born this century, to <strong>babel</strong> (elips) or to <strong>sweave</strong> (R) is the process of compiling text documents that include both static markup and compile-time executable scripts.</p>
 <p><img src="https://mbacou.com/posts/2022-12-01-theme/Donald-Knuth.jpg" class="img-rounded img-fluid" style="width:10em"></p>
 <p>The concept of <strong>Literate programming</strong> was introduced in 1984 by the mathematician <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a> and was widely popularized thereafter in the engineering community thanks to <a href="https://orgmode.org/worg/org-contrib/babel/uses.html">org-mode</a> in the Emacs editor.</p>
@@ -640,7 +640,7 @@ lines here.</td>
 <p>Emacs <strong><code>Org-Mode</code></strong> was created by the astronomer <a href="https://en.wikipedia.org/wiki/Org-mode#:~:text=Org%20Mode%20was%20created%20by,mode%20by%20default%20since%202006">Carsten Dominik</a> in 2003 and remains to this day one of the most used and madly loved note-taking and GTD (Get-Things-Done) tools, with many of its functionality (agenda, tags, etc.) yet to be ported to any markdown engine.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Only keyboard, Baby!</p>
 <p><a href="real-programmers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mbacou.com/posts/2022-12-01-theme/real-programmers.png" class="img-fluid"></a></p></div></div><section id="css-grid-system" class="level1 page-columns page-full">
 <h1>CSS Grid System</h1>
-<p>One of Quarto’s many great features is the full flexibility of the Bootstrap v5.3 grid system, with a few handy classes to help precisely position content in a document or web page, in particular:</p>
+<p>One of Quarto’s many great features is the full flexibility of the <a href="https://getbootstrap.com/docs/5.3/getting-started/">Bootstrap v5.3</a> responsive grid system, with a few handy classes to help precisely position content in a document or on a web page. In particular Quarto now provides:</p>
 <ul>
 <li>3 predefined (column-based) page layouts:
 <ul>
@@ -656,13 +656,13 @@ lines here.</td>
 </ul></li>
 <li>8 classes to overflow content into the left or right column</li>
 </ul>
-<p>For example I use Quarto <code>{.column-screen}</code> CSS class to place a flushed banner directly below the post header section, as a way to highlight static or dynamic content. Here is the R code chunk to achieve this, which generates a <code>&lt;div class="column-screen"&gt;</code> element, like the map above.</p>
+<p>For example I use Quarto <code>.column-page</code> CSS class to place a flushed banner directly below the post header section, as a way to highlight static or dynamic content. Here is the R code chunk to achieve this, which generates a <code>&lt;div class="column-page"&gt;</code> element, similar to the map above.</p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><span class="in" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">```{r}</span></span>
 <span id="cb1-2"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">#| column: screen</span></span>
+font-style: inherit;">#| column: page</span></span>
 <span id="cb1-3"></span>
 <span id="cb1-4"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -720,25 +720,25 @@ font-style: inherit;">```</span></span></code></pre></div>
 <span id="cb2-7">  margin-width: 240px</span>
 <span id="cb2-8">  gutter-width: 2em</span></code></pre></div>
 <p>There are new Quarto CSS classes to help control content width and placement.</p>
-<div class="column-body striped mb-2">
+<div class="column-body shaded mb-2">
 <p><code>.column-body .striped</code></p>
 </div>
-<div class="column-body-outset striped mb-2">
+<div class="column-body-outset shaded mb-2">
 <p><code>.column-body-outset .striped</code></p>
 </div>
 <div class="column-page striped mb-2">
 <p><code>.column-page .striped</code></p>
 </div>
-<div class="column-page-inset striped mb-2">
+<div class="column-page-inset shaded mb-2">
 <p><code>.column-page-inset .striped</code></p>
 </div>
-<div class="column-screen striped mb-2">
+<div class="column-screen shaded mb-2">
 <p><code>.column-screen .striped</code></p>
 </div>
 <div class="column-screen-inset-shaded mb-4">
 <p><code>.column-screen-inset-shaded</code></p>
 </div>
-<p>Finally any layout is achievable using stackable <code>&lt;div class="g-col-{width}"&gt;</code> CSS-Grid columns inside <code>&lt;div class="grid"&gt;</code> elements (see color boxes below). The full system summarized here, copied straight from Quarto online reference<sup>3</sup>.</p>
+<p>Finally any layout is achievable using stackable <code>&lt;div class="g-col-{width}"&gt;</code> CSS-Grid columns inside <code>&lt;div class="grid"&gt;</code> elements (see color boxes below). The full system summarized here, copied straight from Quarto’s online reference<sup>3</sup>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Refer to <a href="https://quarto.org/docs/authoring/article-layout.html#available-columns">Quarto CSS classes</a> official documentation.</p></div></div><div class="column-page-right">
 <table class="table">
 <colgroup>
@@ -814,10 +814,11 @@ column: screen-right</code></pre></td>
 <section id="color-scheme" class="level1 page-columns page-full">
 <h1>Color Scheme</h1>
 <p>Choosing a color scheme is relatively easy – you can for example start from your favorite photo or graphic and upload it to one of the many on-line <strong>color palette generators</strong> to extract dominant colors. Below I selected a standard 12-color palette that simply matches my decade-old <a href="https://store.kde.org/p/1980663">Kubuntu desktop</a><sup>4</sup>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;KDE, 30 years later, still going strong!</p>
-<p><a href="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="img-fluid"></a></p></div><div id="fn5"><p><sup>5</sup>&nbsp;Development environment theme creator</p>
-<p><a href="themer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://mbacou.com/posts/2022-12-01-theme/themer.png" class="img-fluid"></a></p></div></div><p>Another remarkable tool I have used in the past to generate sensible UI color schemes is <a href="https://themer.dev/">themer.dev</a><sup>5</sup> – this online masterpiece will generate consistent color schemes for Linux desktops and for many consoles, text editors, and IDEs. Check it out!</p>
-<p>Moreover as of <code>Quarto v1.6</code>, the engine now allows for standard branding elements (colors, fonts) to be defined in a standalone <code>_brand.yml</code> file on a per-project basis<sup>6</sup>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;KDE, 30 years later, still going strong! This same color scheme selected in VSCode and Positron.</p>
+<p><a href="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="img-fluid"></a></p>
+<p><a href="vscode.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://mbacou.com/posts/2022-12-01-theme/vscode.png" class="img-fluid"></a></p></div><div id="fn5"><p><sup>5</sup>&nbsp;Development environment theme creator</p>
+<p><a href="themer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://mbacou.com/posts/2022-12-01-theme/themer.png" class="img-fluid"></a></p></div></div><p>Another remarkable tool I have used in the past to generate sensible UI color schemes is <a href="https://themer.dev/">themer.dev</a><sup>5</sup> – this masterpiece of a library will generate consistent color schemes for Linux desktops and for many consoles, text editors, and IDEs. Check it out!</p>
+<p>Moreover as of <code>Quarto v1.6</code>, the engine now allows for standard branding elements (colors, fonts) to be defined in standalone <code>_brand.yml</code> files on a per-document or per-project basis<sup>6</sup>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;The good folks at Posit further documented this <a href="https://posit-dev.github.io/brand-yml/">new feature</a>.</p></div></div><p>Note that <code>brand.yml</code> can also apply branding to <code>ggplot2</code> and <code>lattice</code> graphs and charts via the <code>thematic</code> R package. This is the approach used in this blog. Below is the <code>_brand.yml</code> definition I created for this website.</p>
 <div class="cell">
 <div class="code-with-filename">
@@ -857,7 +858,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> https://mbacou.github.io/mb.labs</span></span>
+font-style: inherit;"> https://mbacou.github.io/mb-labs</span></span>
 <span id="cb15-5"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
@@ -867,7 +868,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> https://github.com/mbacou/mb.labs</span></span>
+font-style: inherit;"> https://github.com/mbacou/mb-labs</span></span>
 <span id="cb15-6"></span>
 <span id="cb15-7"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -911,38 +912,38 @@ font-style: inherit;">"#000000"</span></span>
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">cyan</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">blue</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">      </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#789494"</span></span>
+font-style: inherit;">"#3daee9"</span></span>
 <span id="cb15-12"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">teal</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">purple</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">      </span><span class="st" style="color: #20794D;
+font-style: inherit;">    </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#445e64"</span></span>
+font-style: inherit;">"#9b59b6"</span></span>
 <span id="cb15-13"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">dark</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">indigo</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">      </span><span class="st" style="color: #20794D;
+font-style: inherit;">    </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#222e32"</span></span>
+font-style: inherit;">"#98796f"</span></span>
 <span id="cb15-14"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
@@ -959,38 +960,38 @@ font-style: inherit;">"#aea39a"</span></span>
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">purple</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">red</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">    </span><span class="st" style="color: #20794D;
+font-style: inherit;">       </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#98796f"</span></span>
+font-style: inherit;">"#da4453"</span></span>
 <span id="cb15-16"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">indigo</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">orange</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#9b59b6"</span></span>
+font-style: inherit;">"#ffac5e"</span></span>
 <span id="cb15-17"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">blue</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">yellow</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">      </span><span class="st" style="color: #20794D;
+font-style: inherit;">    </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#3daee9"</span></span>
+font-style: inherit;">"#eed04c"</span></span>
 <span id="cb15-18"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
@@ -1007,38 +1008,38 @@ font-style: inherit;">"#27ae60"</span></span>
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">yellow</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">teal</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">    </span><span class="st" style="color: #20794D;
+font-style: inherit;">      </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#eed04c"</span></span>
+font-style: inherit;">"#445e64"</span></span>
 <span id="cb15-20"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">orange</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">cyan</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">    </span><span class="st" style="color: #20794D;
+font-style: inherit;">      </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#ffac5e"</span></span>
+font-style: inherit;">"#789494"</span></span>
 <span id="cb15-21"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">red</span><span class="kw" style="color: #003B4F;
+font-style: inherit;">dark</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">       </span><span class="st" style="color: #20794D;
+font-style: inherit;">      </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#da4453"</span></span>
+font-style: inherit;">"#222e32"</span></span>
 <span id="cb15-22"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
@@ -1050,7 +1051,7 @@ font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">     </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"#eff0f1"</span></span>
+font-style: inherit;">"#fdfcf9"</span></span>
 <span id="cb15-23"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
@@ -1065,8 +1066,22 @@ background-color: null;
 font-style: inherit;">"#505050"</span></span>
 <span id="cb15-24"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">  </span></span>
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">darkgray</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#e7e2da"</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">   </span></span>
 <span id="cb15-25"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span></span>
+<span id="cb15-26"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1075,8 +1090,18 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">   white</span></span>
-<span id="cb15-26"><span class="at" style="color: #657422;
+font-style: inherit;">   gray</span></span>
+<span id="cb15-27"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">background</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">   light</span></span>
+<span id="cb15-28"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1085,27 +1110,9 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">      orange</span></span>
-<span id="cb15-27"><span class="at" style="color: #657422;
+font-style: inherit;">      </span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">secondary</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    gray</span></span>
-<span id="cb15-28"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">success</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      teal</span></span>
+font-style: inherit;">"#fca5a5"</span></span>
 <span id="cb15-29"></span>
 <span id="cb15-30"><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1135,7 +1142,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> Roboto Condensed</span></span>
+font-style: inherit;"> Crimson Pro</span></span>
 <span id="cb15-33"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
@@ -1159,13 +1166,6 @@ font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">[</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">300</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">,</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">400</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -1192,7 +1192,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> Source Sans 3</span></span>
+font-style: inherit;"> M PLUS Code Latin</span></span>
 <span id="cb15-36"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
@@ -1242,7 +1242,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> M PLUS Code Latin</span></span>
+font-style: inherit;"> Marck Script</span></span>
 <span id="cb15-39"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
@@ -1270,75 +1270,11 @@ background-color: null;
 font-style: inherit;">400</span><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">,</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">500</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
 font-style: inherit;">]</span></span>
 <span id="cb15-41"><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">    </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">family</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Oswald</span></span>
-<span id="cb15-42"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">source</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> google</span></span>
-<span id="cb15-43"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">weight</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">[</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">300</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">,</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">400</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">,</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">500</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">]</span></span>
-<span id="cb15-44"><span class="at" style="color: #657422;
-background-color: null;
 font-style: inherit;">  </span></span>
-<span id="cb15-45"><span class="at" style="color: #657422;
+<span id="cb15-42"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1347,8 +1283,8 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> Source Sans 3</span></span>
-<span id="cb15-46"><span class="at" style="color: #657422;
+font-style: inherit;"> Crimson Pro</span></span>
+<span id="cb15-43"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1357,8 +1293,18 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;"> Oswald</span></span>
-<span id="cb15-47"><span class="at" style="color: #657422;
+font-style: inherit;"> </span></span>
+<span id="cb15-44"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">family</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> M PLUS Code Latin</span></span>
+<span id="cb15-45"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -1367,13 +1313,23 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
+font-style: inherit;"> </span></span>
+<span id="cb15-46"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">family</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
 font-style: inherit;"> M PLUS Code Latin</span></span>
-<span id="cb15-48"><span class="at" style="color: #657422;
+<span id="cb15-47"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span></span></code></pre></div>
 </div>
 </div>
-<p>The active Bootstrap color palette is shown below.</p>
+<p>The active Bootstrap color palette is rendered below.</p>
 <div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(htmltools)</span>
@@ -1440,34 +1396,34 @@ font-style: inherit;">"grid"</span>, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">style=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"--bs-gap: .5rem;"</span>)</span></code></pre></div>
-<div class="grid" style="--bs-gap: .5rem;">
+font-style: inherit;">"--bs-gap: .5em;"</span>)</span></code></pre></div>
+<div class="grid" style="--bs-gap: .5em;">
 <div class="g-col-3 small rounded text-center p-2 bg-white">white <br>( #ffffff )</div>
 <div class="g-col-3 small rounded text-center p-2 bg-black">black <br>( #000000 )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-cyan">cyan <br>( #789494 )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-teal">teal <br>( #445e64 )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-dark">dark <br>( #222e32 )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-pink">pink <br>( #aea39a )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-purple">purple <br>( #98796f )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-indigo">indigo <br>( #9b59b6 )</div>
 <div class="g-col-3 small rounded text-center p-2 bg-blue">blue <br>( #3daee9 )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-green">green <br>( #27ae60 )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-yellow">yellow <br>( #eed04c )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-orange">orange <br>( #ffac5e )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-purple">purple <br>( #9b59b6 )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-indigo">indigo <br>( #98796f )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-pink">pink <br>( #aea39a )</div>
 <div class="g-col-3 small rounded text-center p-2 bg-red">red <br>( #da4453 )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-light">light <br>( #eff0f1 )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-orange">orange <br>( #ffac5e )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-yellow">yellow <br>( #eed04c )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-green">green <br>( #27ae60 )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-teal">teal <br>( #445e64 )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-cyan">cyan <br>( #789494 )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-dark">dark <br>( #222e32 )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-light">light <br>( #fdfcf9 )</div>
 <div class="g-col-3 small rounded text-center p-2 bg-gray">gray <br>( #505050 )</div>
+<div class="g-col-3 small rounded text-center p-2 bg-darkgray">darkgray <br>( #e7e2da )</div>
 </div>
 </section>
 <section id="block-elements" class="level1">
 <h1>Block Elements</h1>
 <p>Simple indented blockquote with end credits.</p>
 <blockquote class="blockquote">
-<p>Blockquote title<br>
-Blockquote content comes here…<br>
-<small>– Author</small></p>
+<p>“L’avenir nous tourmente, le passé nous retient. C’est pour ces raisons que le présent nous échappe.”<br>
+<small>– Gustave Flaubert</small></p>
 </blockquote>
-<p>Bootstrap built-in <strong>callout block</strong> and <strong>card</strong> components are readily available in Quarto Markdown with the usual semantic colors.</p>
+<p>Bootstrap built-in <strong>callout block</strong> and <strong>card</strong> components are readily available in Quarto Markdown with the standard 6 semantic colors.</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1561,91 +1517,98 @@ font-style: inherit;">### Expand to learn about collapse</span></span>
 </section>
 <section id="typography" class="level1 page-columns page-full">
 <h1>Typography</h1>
-<p>Bootstrap default line-height and font sizing typically work, but I like to enforce a strict vertical grid whenever possible, so I make sure to define all vertical spacing and padding as multiple of a standard line height of <code>$spacer</code>.</p>
-<div class="cell">
+<p>Bootstrap default line-height and font sizing typically work, but I like to enforce a strict vertical baseline whenever possible<sup>7</sup>, so I make sure to define all vertical spacing and padding as multiple of a standard line height of <code>$spacer</code>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;About <strong>vertical rhythm</strong> amd why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div></div><div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>./assets/theme-mblabs.scss</strong></pre>
+<pre><strong>./assets/scss/theme.scss</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode scss"><code class="sourceCode scss"><span id="cb19-1"></span>
+<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode scss"><code class="sourceCode scss"><span id="cb19-1"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$text-muted</span>: <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$gray-700</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb19-2"><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">$font-family-base</span>:     <span class="st" style="color: #20794D;
+font-style: inherit;">$code-color</span>: <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">"Pensum Pro"</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">$gray-700</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb19-3"><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">$headings-font-family</span>: <span class="st" style="color: #20794D;
+font-style: inherit;">$shaded</span>: <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">"M PLUS Code Latin"</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">rgba(tint-color(</span><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb19-4"><span class="va" style="color: #111111;
+font-style: inherit;">$body-bg</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">$font-monospace</span>:       <span class="st" style="color: #20794D;
+font-style: inherit;">,</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">"M PLUS Code Latin"</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">75</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">;</span></span>
+font-style: inherit;">%</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">75</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">%</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span>   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// see $input-bg for .shaded</span></span>
+<span id="cb19-4"></span>
 <span id="cb19-5"><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">$font-sans-serif</span>:      <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"M PLUS Code Latin"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb19-6"><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">$font-script</span>:          <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Marck Script"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb19-7"></span>
-<span id="cb19-8"><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$font-weight-bold</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">500</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb19-9"><span class="va" style="color: #111111;
+<span id="cb19-6"><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$headings-font-weight</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">400</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb19-10"><span class="va" style="color: #111111;
+<span id="cb19-7"><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$headings-font-color</span>: <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$gray-900</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb19-11"></span>
-<span id="cb19-12"><span class="va" style="color: #111111;
+<span id="cb19-8"></span>
+<span id="cb19-9"><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$spacer</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">28</span><span class="dt" style="color: #AD0000;
+font-style: inherit;">2</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">px</span> <span class="op" style="color: #5E5E5E;
+font-style: inherit;">rem</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb19-13"><span class="va" style="color: #111111;
+font-style: inherit;">;</span>                                   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// 30px line-height</span></span>
+<span id="cb19-10"><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$spacers</span>: (</span>
-<span id="cb19-14">  <span class="dv" style="color: #AD0000;
+<span id="cb19-11">  <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
-<span id="cb19-15">  <span class="dv" style="color: #AD0000;
+<span id="cb19-12">  <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>: <span class="va" style="color: #111111;
 background-color: null;
@@ -1656,7 +1619,7 @@ background-color: null;
 font-style: inherit;">.25</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
-<span id="cb19-16">  <span class="dv" style="color: #AD0000;
+<span id="cb19-13">  <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>: <span class="va" style="color: #111111;
 background-color: null;
@@ -1667,7 +1630,7 @@ background-color: null;
 font-style: inherit;">.5</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
-<span id="cb19-17">  <span class="dv" style="color: #AD0000;
+<span id="cb19-14">  <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>: <span class="va" style="color: #111111;
 background-color: null;
@@ -1678,7 +1641,7 @@ background-color: null;
 font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
-<span id="cb19-18">  <span class="dv" style="color: #AD0000;
+<span id="cb19-15">  <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>: <span class="va" style="color: #111111;
 background-color: null;
@@ -1689,7 +1652,7 @@ background-color: null;
 font-style: inherit;">1.5</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
-<span id="cb19-19">  <span class="dv" style="color: #AD0000;
+<span id="cb19-16">  <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>: <span class="va" style="color: #111111;
 background-color: null;
@@ -1700,21 +1663,64 @@ background-color: null;
 font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">,</span></span>
-<span id="cb19-20">)<span class="op" style="color: #5E5E5E;
+<span id="cb19-17">)<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
-<span id="cb19-21"></span>
-<span id="cb19-22"><span class="va" style="color: #111111;
+<span id="cb19-18"></span>
+<span id="cb19-19"><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">$font-size-base</span>: <span class="dv" style="color: #AD0000;
+font-style: inherit;">$font-size-base</span>:  <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">rem</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span>                         <span class="co" style="color: #5E5E5E;
+font-style: inherit;">;</span>                   <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">// 18px in `_quarto.yml`</span></span>
+font-style: inherit;">// 15px in `_quarto.yml`</span></span>
+<span id="cb19-20"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$small-font-size</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">rem</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb19-21"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$code-font-size</span>:  <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">14</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">rem</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb19-22"></span>
 <span id="cb19-23"><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$h1-font-size</span>:  <span class="fu" style="color: #4758AB;
@@ -1731,7 +1737,7 @@ font-style: inherit;">px</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span>  <span class="co" style="color: #5E5E5E;
+font-style: inherit;">;</span>    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">// 34px</span></span>
 <span id="cb19-24"><span class="va" style="color: #111111;
@@ -1742,17 +1748,17 @@ font-style: inherit;">calc(</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$font-size-base</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">+</span>  <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">10</span><span class="dt" style="color: #AD0000;
+font-style: inherit;">8</span><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">px</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span>  <span class="co" style="color: #5E5E5E;
+font-style: inherit;">;</span>    <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">// 28px</span></span>
+font-style: inherit;">// 26px</span></span>
 <span id="cb19-25"><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$h3-font-size</span>:  <span class="fu" style="color: #4758AB;
@@ -1769,7 +1775,7 @@ font-style: inherit;">px</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span>  <span class="co" style="color: #5E5E5E;
+font-style: inherit;">;</span>    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">// 28px</span></span>
 <span id="cb19-26"><span class="va" style="color: #111111;
@@ -1780,7 +1786,7 @@ font-style: inherit;">calc(</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$font-size-base</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">+</span>  <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">6</span><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -1788,7 +1794,7 @@ font-style: inherit;">px</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span>   <span class="co" style="color: #5E5E5E;
+font-style: inherit;">;</span>    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">// 24px</span></span>
 <span id="cb19-27"><span class="va" style="color: #111111;
@@ -1799,7 +1805,7 @@ font-style: inherit;">calc(</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$font-size-base</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">+</span>  <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -1807,7 +1813,7 @@ font-style: inherit;">px</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span>   <span class="co" style="color: #5E5E5E;
+font-style: inherit;">;</span>    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">// 22px</span></span>
 <span id="cb19-28"><span class="va" style="color: #111111;
@@ -1816,11 +1822,19 @@ font-style: inherit;">$h6-font-size</span>:  <span class="fu" style="color: #475
 background-color: null;
 font-style: inherit;">calc(</span><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">$font-size-base</span><span class="fu" style="color: #4758AB;
+font-style: inherit;">$font-size-base</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span>  <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">px</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">;</span></span>
+font-style: inherit;">;</span>    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// 16px</span></span>
 <span id="cb19-29"></span>
 <span id="cb19-30"><span class="va" style="color: #111111;
 background-color: null;
@@ -1830,45 +1844,26 @@ font-style: inherit;">calc(</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">$spacer</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">/</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">18</span><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">px</span><span class="fu" style="color: #4758AB;
+font-style: inherit;">$font-size-base</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb19-31"><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">$headings-line-height</span>: <span class="va" style="color: #111111;
+font-style: inherit;">$list-inline-padding</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">$line-height-base</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">.25</span><span class="dt" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb19-32"><span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">$small-font-size</span>: <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">calc(</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">rem</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">px</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">em</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span></code></pre></div>
 </div>
 </div>
-<p>No additional changes to font definitions aside from using <code>Source Sans</code>, <code>Oswald</code>, and <code>Roboto Condensed</code> fonts. This is how <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred <span class="shaded"><code>.shaded</code></span> and a <span class="striped"><code>.striped</code></span>. I use <span class="text-muted">.text-muted</span> for all post metadata, for end- and margin-notes, and for captioning.</p>
-<section id="heading-2" class="level2 page-columns page-full">
+<p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<sup>8</sup>. Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred <span class="shaded"><code>.shaded</code></span> and a <span class="striped"><code>.striped</code></span>. This theme uses <span class="text-muted">.text-muted</span> for all post metadata, for end- and margin-notes, and for captioning.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;M+ font system was designed by Japanese artist <a href="https://mplusfonts.github.io/">Coji Morishita</a> with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.</p></div></div><section id="heading-2" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
 <p>Sample paragraph content.</p>
 <section id="heading-3" class="level3 page-columns page-full">
@@ -1885,32 +1880,32 @@ font-style: inherit;">;</span></span></code></pre></div>
 <li>List 2</li>
 <li>List 3</li>
 </ol>
-<p>Below a normal rule <code>&lt;hr/&gt;</code> and a section <code>div.separator</code> elements.</p>
+<p>Finally a normal rule <code>&lt;hr/&gt;</code> element.</p>
 <hr>
-<div class="separator">
-
-</div>
+<p>And a paragraph after the rule.</p>
 <section id="heading-4" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
 <p>Sample paragraph content.</p>
 <blockquote class="blockquote">
-<p>Blockquote title<br>
-Blockquote content comes here…<br>
-<small>– Quote source / author or reference</small></p>
+<p>Blockquote title Blockquote content comes here… <small>– Quote source / author or reference</small></p>
 </blockquote>
 <p>Sample paragraph content after blockquote.</p>
 <section id="heading-5" class="level5 page-columns page-full">
 <h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
-<p>Here is a footnote reference<sup>7</sup> and another much longer one<sup>8</sup>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the YAML front matter.</p>
-<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;Here is a short margin note (footnote).</p></div><div id="fn8"><p><sup>8</sup>&nbsp;Here’s one with multiple paragraph blocks.</p>
-<p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></div></section>
+<p>Here is a footnote reference<sup>9</sup> and another much longer one<sup>10</sup>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the YAML front matter.</p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Here is a short margin note (footnote).</p></div><div id="fn10"><p><sup>10</sup>&nbsp;Here’s one with multiple paragraph blocks.</p>
+<p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></div><section id="section-6" class="level6">
+<h6 class="anchored" data-anchor-id="section-6">Section 6</h6>
+<p>Headers at level 6 used as section dividers.</p>
+</section>
+</section>
 </section>
 </section>
 </section>
 </section>
 <section id="tables" class="level1 page-columns page-full">
 <h1>Tables</h1>
-<p>I prefer my tables slightly more condensed than Bootstrap default settings and to resemble LaTeX typesetting, so a few simple changes here.</p>
+<p>I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.</p>
 <table class="table">
 <caption>Caption: my default table spacing</caption>
 <tbody>
@@ -1929,7 +1924,7 @@ Blockquote content comes here…<br>
 </tbody>
 </table>
 <table class="table-borderless table-hover table-sm small table">
-<caption>Caption: Smaller spacing borderless hover sm</caption>
+<caption>Caption: smaller spacing borderless hover sm</caption>
 <thead>
 <tr class="header">
 <th>fruit</th>
@@ -2132,7 +2127,7 @@ font-style: inherit;">10</span>])</span></code></pre></div>
 </section>
 <section id="apply-themed-colors-to-r-graphics" class="level1">
 <h1>Apply Themed Colors to R Graphics</h1>
-<p>Quarto won’t (as of writing) automatically apply Bootstrap theme colors to dynamic graphics, so instead I defined custom discrete and continuous scales for ggplot2.</p>
+<p>As of writing, Quarto won’t automatically apply Bootstrap theme colors to dynamic graphics, so instead I define my own custom discrete and continuous scales for ggplot2 in an easy-to-share R package.</p>
 <div class="cell">
 <div class="code-with-filename">
 <details class="code-fold">
@@ -2370,7 +2365,7 @@ font-style: inherit;">"green"</span>), ...) {</span></code></pre></div>
 </div>
 </div>
 <p>Next I applied (slightly opinionated) changes to <code>ggthemes::theme_foundation()</code>, mostly transparent fills, condensed font, simplified axes, and a default y-axis on the right side.</p>
-<p>These graphic customizations are documented in my own <a href="https://mbacou.github.io/mb.themes/">mb.themes</a> R package. This helps with handling dependencies, code reproducibility, and because I want to use themes more flexibly across projects and clients. Obviously when visualizing scientific and spatial datasets the choice of color scales would require additional care.</p>
+<p>These graphic customizations are documented in my own <a href="https://mbacou.github.io/mb.themes/">mb.themes</a> R package. This helps with handling dependencies, code reproducibility, and because I want to use themes more flexibly across projects and clients. Obviously when visualizing scientific and spatial datasets the choice of color scales requires additional care.</p>
 <div class="cell">
 <div class="code-with-filename">
 <details class="code-fold">
@@ -2485,7 +2480,7 @@ font-style: inherit;">library</span>(mb.themes)</span>
 <span id="cb23-4"></span>
 <span id="cb23-5"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Load my palette from Boostrap theme</span></span>
+font-style: inherit;"># Load my (global) palette from Boostrap theme</span></span>
 <span id="cb23-6">p <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
@@ -3151,12 +3146,11 @@ Schulte, Eric, Dan Davison, Thomas Dye, and Carsten Dominik. 2012. <span>“A Mu
     personal blog from {[}Distill{]}(https://rstudio.github.io/distill/)
     to {[}Quarto{]}(https://quarto.org/). Compared to *J.J. Allaire’s
     Distill for R Markdown*, **Posit® Quarto Markdown** uses a new
-    templating system built on top of {[}Bootstrap
-    v5.3.1{]}(https://getbootstrap.com/docs/5.3/customize/overview/)
-    with new page layout features, extended export formats, and more
-    flexible publishing workflows. This post briefly outlines my process
-    for creating a custom Bootstrap theme for this revamped website, and
-    few design tweaks I made along the way.}
+    templating system built on top of Bootstrap v5.3.1 with new page and
+    content layouts, extended export formats, and more flexible
+    publishing workflows. This post briefly outlines my process for
+    creating a custom Bootstrap theme for this revamped website, and
+    design tweaks I made along the way.}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2023" class="csl-entry quarto-appendix-citeas">
 BACOU, Melanie. 2023. <span>“Time to Migrate This Blog from *Distill* to

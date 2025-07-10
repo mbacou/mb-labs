@@ -1,0 +1,55 @@
+/* Theme: solarized Bootstrap color theme */
+/* Author: BACOU, Melanie <mel@mbacou.com> */
+/* Version: v1.0.0 */
+/* Date: 2025-07-04 */
+/* This theme uses the Solarized Light color palette */
+/* See https://ethanschoonover.com/solarized/ */
+
+/*-- scss:defaults --*/
+
+$theme: 'solarized';
+
+/* Solizared palette */
+
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+
+$blue:      #268bd2;
+$indigo:    #d33682;
+$purple:    #6c71c4;
+$red:       #dc322f;
+$orange:    #cb4b16;
+$yellow:    #b58900;
+$green:     #859900;
+$cyan:      #2aa198;
+$pink:        $base2;
+$teal:        $base00;
+
+$dark:        $base02;
+$light:       $base3;                             // Notebook paper tone
+$gray:        $base02;
+
+$body-color:  $gray;
+$body-bg:     $light;
+$primary:     $base0;
+$darkgray:    $base2;                             // Notebook paper rules
+
+$font-family-base:     "Crimson Pro";
+$headings-font-family: "M PLUS Code Latin";
+$font-monospace:       "M PLUS Code Latin";
+$font-sans-serif:      "M PLUS Code Latin";
+$font-script:          "Marck Script";
+
+@import '_theme';
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Criumson+Pro:wght@400..500&family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script&display=swap');
+
+

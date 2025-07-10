@@ -9,18 +9,21 @@ categories:
 draft: false
 freeze: false
 abstract: |
-  A post about **literate programming** in general and Quarto formats in particular, in which I document migrating this personal blog from [Distill](https://rstudio.github.io/distill/) to [Quarto](https://quarto.org/). Compared to *J.J. Allaire's Distill for R Markdown*, **Posit® Quarto Markdown** uses a new templating system built on top of [Bootstrap v5.3.1](https://getbootstrap.com/docs/5.3/customize/overview/) with new page layout features, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and few design tweaks I made along the way.
+  A post about **literate programming** in general and Quarto formats in particular, in which I document migrating this personal blog from [Distill](https://rstudio.github.io/distill/) to [Quarto](https://quarto.org/). Compared to *J.J. Allaire's Distill for R Markdown*, **Posit® Quarto Markdown** uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way.
 ---
 
-<p></p>
+With the release of **Quarto 1.4** (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as **Emacs org-mode**, **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.
 
-With the release of **Quarto 1.4**, markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based documents (such as **Emacs org-mode**, **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.
+::: {.column-page-inset-right .d-flex .ink .ink-box .p-2}
+No other reason for this map below but to showcase Quarto's new content layout features -- and well, I love Soviet-era classic topo styles. Check out Russian [cartography](https://sovietmaps.com/), it is stunning work. 
+
+This margin note uses a custom `<div>` with CSS classes `.column-page-inset-right .d-flex` making use of Boostrap's and Quarto utilities.
+:::
 
 
 ```{r}
 #| echo: false
 #| column: page
-#| classe: mb-4
 
 library(leaflet)
 leaflet(width="100%", height="17rem", 
@@ -32,15 +35,10 @@ options=leafletOptions(minZoom=11, maxZoom=13)) %>%
     labelOptions=labelOptions(textsize="1rem"))
 ```
 
-::: {.aside .ink-border .ink .p-2 .mt-md-n5}
-No other reason for this map but to showcase Quarto's new content layout features -- and well, I love Soviet-era classic topo styles. Check out Russian [cartography](https://sovietmaps.com/), it is stunning work. 
 
-This margin also showcases a custom `DIV` with CSS classes `{.aside .mt-md-n5}` making use of Boostrap's new **negative margins** utilities and grid breakpoints.
-:::
+Old-time researchers and engineers have long used [Emacs `Org-Mode`](https://orgmode.org/) (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to *Eric Schulte*'s incredible **Babel** extension [see @schulte2012] and to *John MacFarlane*'s [Pandoc](https://pandoc.org/) document converter library -- but nowadays **Quarto** makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as **in-browser real-time rendering of documents**.
 
-Old-time researchers and engineers have long used **Emacs `Org-Mode`** (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to *Eric Schulte*'s incredible **Babel** extension [see @schulte2012] and to *John MacFarlane*'s [Pandoc](https://pandoc.org/) document converter library -- but nowadays Quarto makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as **in-browser real-time rendering of documents**.
-
-In the process of migrating old articles and code notebooks to the new Quarto markdown syntax, I used this post as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my `assets/theme-labs.scss` Sass file and other tidbits[^1][^2].
+In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my `assets/scss/theme.scss` Sass file and other tidbits[^1][^2].
 
 [^1]: For folks born this century, to **babel** (elips) or to **sweave** (R) is the process of compiling text documents that include both static markup and compile-time executable scripts.
 
@@ -59,22 +57,24 @@ In the process of migrating old articles and code notebooks to the new Quarto ma
 
 # CSS Grid System
 
-One of Quarto's many great features is the full flexibility of the Bootstrap v5.3 grid system, with a few handy classes to help precisely position content in a document or web page, in particular:
+One of Quarto's many great features is the full flexibility of the [Bootstrap v5.3](https://getbootstrap.com/docs/5.3/getting-started/) responsive grid system, with a few handy classes to help precisely position content in a document or on a web page. In particular Quarto now provides:
 
 -   3 predefined (column-based) page layouts:
     -   `page-layout: full` (home page)
     -   `page-layout: article` (this document), and
     -   `page-layout: custom` to use Boostrap CSS grid system
+
 -   6 column classes to control content width (shown below)
 -   2 margin classes to shift content into the left or right column (like that XKCD comics):
     -   `<div class="column-margin">`, and
     -   `<span class="aside">`
+
 -   8 classes to overflow content into the left or right column
 
-For example I use Quarto `{.column-screen}` CSS class to place a flushed banner directly below the post header section, as a way to highlight static or dynamic content. Here is the R code chunk to achieve this, which generates a `<div class="column-screen">` element, like the map above.
+For example I use Quarto `.column-page` CSS class to place a flushed banner directly below the post header section, as a way to highlight static or dynamic content. Here is the R code chunk to achieve this, which generates a `<div class="column-page">` element, similar to the map above.
 
 ```{{r}}
-#| column: screen
+#| column: page
 
 library(leaflet)
 leaflet(width="100%", height="15em") %>% addTiles() %>%
@@ -98,11 +98,11 @@ grid:
 
 There are new Quarto CSS classes to help control content width and placement.
 
-::: {.column-body .striped .mb-2}
+::: {.column-body .shaded .mb-2}
 `.column-body .striped`
 :::
 
-::: {.column-body-outset .striped .mb-2}
+::: {.column-body-outset .shaded .mb-2}
 `.column-body-outset .striped`
 :::
 
@@ -110,11 +110,11 @@ There are new Quarto CSS classes to help control content width and placement.
 `.column-page .striped`
 :::
 
-::: {.column-page-inset .striped .mb-2}
+::: {.column-page-inset .shaded .mb-2}
 `.column-page-inset .striped`
 :::
 
-::: {.column-screen .striped .mb-2}
+::: {.column-screen .shaded .mb-2}
 `.column-screen .striped`
 :::
 
@@ -122,7 +122,7 @@ There are new Quarto CSS classes to help control content width and placement.
 `.column-screen-inset-shaded`
 :::
 
-Finally any layout is achievable using stackable `<div class="g-col-{width}">` CSS-Grid columns inside `<div class="grid">` elements (see color boxes below). The full system summarized here, copied straight from Quarto online reference[^3].
+Finally any layout is achievable using stackable `<div class="g-col-{width}">` CSS-Grid columns inside `<div class="grid">` elements (see color boxes below). The full system summarized here, copied straight from Quarto's online reference[^3].
 
 [^3]: Refer to [Quarto CSS classes](https://quarto.org/docs/authoring/article-layout.html#available-columns) official documentation.
 
@@ -175,19 +175,21 @@ Note that this table stretches across the right column thanks to Quarto `column-
 
 Choosing a color scheme is relatively easy -- you can for example start from your favorite photo or graphic and upload it to one of the many on-line **color palette generators** to extract dominant colors. Below I selected a standard 12-color palette that simply matches my decade-old [Kubuntu desktop](https://store.kde.org/p/1980663)[^4].
 
-[^4]: KDE, 30 years later, still going strong!
+[^4]: KDE, 30 years later, still going strong! This same color scheme selected in VSCode and Positron.
 
     ![](https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png){.lightbox}
 
+    ![](vscode.png){.lightbox}
 
-Another remarkable tool I have used in the past to generate sensible UI color schemes is [themer.dev](https://themer.dev/)[^5] -- this online masterpiece will generate consistent color schemes for Linux desktops and for many consoles, text editors, and IDEs. Check it out!
+
+Another remarkable tool I have used in the past to generate sensible UI color schemes is [themer.dev](https://themer.dev/)[^5] -- this masterpiece of a library will generate consistent color schemes for Linux desktops and for many consoles, text editors, and IDEs. Check it out!
 
 [^5]: Development environment theme creator
 
     ![](themer.png){.lightbox}
 
 
-Moreover as of `Quarto v1.6`, the engine now allows for standard branding elements (colors, fonts) to be defined in a standalone `_brand.yml` file on a per-project basis[^brand]. 
+Moreover as of `Quarto v1.6`, the engine now allows for standard branding elements (colors, fonts) to be defined in standalone `_brand.yml` files on a per-document or per-project basis[^brand]. 
 
 [^brand]: The good folks at Posit further documented this [new feature](https://posit-dev.github.io/brand-yml/). 
 
@@ -196,11 +198,10 @@ Note that `brand.yml` can also apply branding to `ggplot2` and `lattice` graphs 
 ```{yaml}
 #| eval: false
 #| file: ../../_brand.yml 
-#| filename: _brand.yml
-
+#| filename: _brand.yml 
 ```
 
-The active Bootstrap color palette is shown below.
+The active Bootstrap color palette is rendered below.
 
 ```{r}
 #| output: asis
@@ -214,7 +215,7 @@ names(pal) |>
     "g-col-3 small rounded text-center p-2 bg-", i), 
     HTML(i, "<br/>(", pal[[i]], ")"))) |> 
   tagList() |> 
-  div(class="grid", style="--bs-gap: .5rem;")
+  div(class="grid", style="--bs-gap: .5em;")
 ```
 
 
@@ -222,11 +223,10 @@ names(pal) |>
 
 Simple indented blockquote with end credits.
 
-> Blockquote title\
-> Blockquote content comes here...\
-> <small>-- Author</small>
+> "L'avenir nous tourmente, le passé nous retient. C'est pour ces raisons que le présent nous échappe."\
+> <small>-- Gustave Flaubert</small>
 
-Bootstrap built-in **callout block** and **card** components are readily available in Quarto Markdown with the usual semantic colors.
+Bootstrap built-in **callout block** and **card** components are readily available in Quarto Markdown with the standard 6 semantic colors.
 
 ::: callout
 Note that there are 6 types of callout blocks, including: `default`, `note`, `warning`, `important`, `tip`, and `caution`. This is the **default** callout style.
@@ -273,17 +273,22 @@ This is an **important** callout with a title.
 
 # Typography
 
-Bootstrap default line-height and font sizing typically work, but I like to enforce a strict vertical grid whenever possible, so I make sure to define all vertical spacing and padding as multiple of a standard line height of `$spacer`.
+Bootstrap default line-height and font sizing typically work, but I like to enforce a strict vertical baseline whenever possible[^vr], so I make sure to define all vertical spacing and padding as multiple of a standard line height of `$spacer`.
+
+[^vr]: About **vertical rhythm** amd why it matters for content readability, see [Klaas Leussink](https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css) article on his personal blog.
 
 ```{scss}
 #| eval: false
-#| file: ../../assets/theme-mblabs.scss
-#| filename: ./assets/theme-mblabs.scss
+#| file: ../../assets/scss/theme.scss
+#| filename: ./assets/scss/theme.scss
 #| echo: !expr c(54:85)
 
 ```
 
-No additional changes to font definitions aside from using `Source Sans`, `Oswald`, and `Roboto Condensed` fonts. This is how **bold**, *italic*, and <small>smaller</small> text spans. Here is ^superscript^ and ~subscript~ text, and ~~strikethrough~~ notes. Semantic colors with e.g. [.text-info]{.text-info} provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred [`.shaded`]{.shaded} and a [`.striped`]{.striped}. I use [.text-muted]{.text-muted} for all post metadata, for end- and margin-notes, and for captioning.
+No additional changes to font definitions aside from using `Crimson Pro` and `M+ Code` fonts[^mplus]. Here are **bold**, *italic*, and <small>smaller</small> text spans. Here is ^superscript^ and ~subscript~ text, and ~~strikethrough~~ notes. Semantic colors with e.g. [.text-info]{.text-info} provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred [`.shaded`]{.shaded} and a [`.striped`]{.striped}. This theme uses [.text-muted]{.text-muted} for all post metadata, for end- and margin-notes, and for captioning.
+
+[^mplus]: M+ font system was designed by Japanese artist [Coji Morishita](https://mplusfonts.github.io/) with extended support for Latin, Japanese, Cyrillic.  It is an excellent monospace font for smaller display sizes.
+
 
 ## Heading 2
 
@@ -303,22 +308,22 @@ Ordered list:
 2.  List 2
 3.  List 3
 
-Below a normal rule `<hr/>` and a section `div.separator` elements.
+Finally a normal rule `<hr/>` element.
 
 --------------------------------------------------------------------------------------
 
-::: separator
-:::
+And a paragraph after the rule.
 
 #### Heading 4
 
 Sample paragraph content.
 
-> Blockquote title\
-> Blockquote content comes here...\
+> Blockquote title
+> Blockquote content comes here...
 > <small>-- Quote source / author or reference</small>
 
 Sample paragraph content after blockquote.
+
 
 ##### Heading 5
 
@@ -330,10 +335,13 @@ Here is a footnote reference[^6] and another much longer one[^7]. Caption and fo
 
     With subsequent paragraphs indented to show that they belong to the previous footnote.
 
+###### Section 6
+
+Headers at level 6 used as section dividers.
 
 # Tables
 
-I prefer my tables slightly more condensed than Bootstrap default settings and to resemble LaTeX typesetting, so a few simple changes here.
+I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 
 |        |      |
 |--------|------|
@@ -349,7 +357,7 @@ I prefer my tables slightly more condensed than Bootstrap default settings and t
 | pear   | 1.37  |
 | orange | 3.09  |
 
-: Caption: Smaller spacing borderless hover sm {.borderless .hover .sm}
+: Caption: smaller spacing borderless hover sm {.borderless .hover .sm}
 
 | fruit  | price |
 |--------|-------|
@@ -377,7 +385,7 @@ knitr::kable(mtcars[1:6, 1:10])
 
 # Apply Themed Colors to R Graphics
 
-Quarto won't (as of writing) automatically apply Bootstrap theme colors to dynamic graphics, so instead I defined custom discrete and continuous scales for ggplot2.
+As of writing, Quarto won't automatically apply Bootstrap theme colors to dynamic graphics, so instead I define my own custom discrete and continuous scales for ggplot2 in an easy-to-share R package.
 
 ```{r}
 #| eval: false
@@ -391,7 +399,7 @@ Quarto won't (as of writing) automatically apply Bootstrap theme colors to dynam
 
 Next I applied (slightly opinionated) changes to `ggthemes::theme_foundation()`, mostly transparent fills, condensed font, simplified axes, and a default y-axis on the right side.
 
-These graphic customizations are documented in my own [mb.themes](https://mbacou.github.io/mb.themes/) R package. This helps with handling dependencies, code reproducibility, and because I want to use themes more flexibly across projects and clients. Obviously when visualizing scientific and spatial datasets the choice of color scales would require additional care.
+These graphic customizations are documented in my own [mb.themes](https://mbacou.github.io/mb.themes/) R package. This helps with handling dependencies, code reproducibility, and because I want to use themes more flexibly across projects and clients. Obviously when visualizing scientific and spatial datasets the choice of color scales requires additional care.
 
 ```{r}
 #| eval: false
@@ -410,10 +418,9 @@ Below we generate a couple of categorical and continuous `ggplot2` and `lattice`
 library(ggplot2)
 library(mb.themes)
 
-# Load my palette from Boostrap theme
+# Load my (global) palette from Boostrap theme
 p <- pal("../../_brand.yml")
 scales::show_col(pal())
-
 ```
 
 ```{r}
