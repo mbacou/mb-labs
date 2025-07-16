@@ -14,16 +14,18 @@ abstract: |
 
 With the release of **Quarto 1.4** (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as **Emacs org-mode**, **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.
 
-::: {.column-page-inset-right .d-flex .ink .ink-box .p-2}
-No other reason for this map below but to showcase Quarto's new content layout features -- and well, I love Soviet-era classic topo styles. Check out Russian [cartography](https://sovietmaps.com/), it is stunning work. 
+::: {.column-margin .bg-info-subtle .text-info .text-serif .px-2 .pt-2}
+No other reason for this map below but to showcase Quarto's new content layout features -- I am a fan of Soviet-era classic topo styles. Check out Russian [cartography](https://sovietmaps.com/), it is stunning work. 
 
-This margin note uses a custom `<div>` with CSS classes `.column-page-inset-right .d-flex` making use of Boostrap's and Quarto utilities.
+This margin note uses a custom `<div class="column-margin bg-info-subtle text-info px-2">` making use of both Quarto and Boostrap's CSS utilities.
+
+The margin column is **responsive**, content will be moved to the body column on smaller display sizes.
 :::
 
 
 ```{r}
 #| echo: false
-#| column: page
+#| column: page-left
 
 library(leaflet)
 leaflet(width="100%", height="17rem", 
@@ -89,33 +91,35 @@ Grid sizing and spacing are defined in `_quarto.yml` and may also be modified on
 #| filename: ./_quarto.yml
 #| eval: false 
 
-grid:
-  body-width: 900px
-  sidebar-width: 160px
-  margin-width: 240px
-  gutter-width: 2em
+format:
+  html:
+    grid:
+      body-width: 840px
+      sidebar-width: 180px
+      margin-width: 240px
+      gutter-width: 30px
 ```
 
 There are new Quarto CSS classes to help control content width and placement.
 
-::: {.column-body .shaded .mb-2}
-`.column-body .striped`
+::: {.column-body .bg-secondary-subtle .mb-2}
+`.column-body`
 :::
 
-::: {.column-body-outset .shaded .mb-2}
-`.column-body-outset .striped`
+::: {.column-body-outset .bg-secondary-subtle .mb-2}
+`.column-body-outset`
 :::
 
-::: {.column-page .striped .mb-2}
-`.column-page .striped`
+::: {.column-page .bg-secondary-subtle .mb-2}
+`.column-page`
 :::
 
-::: {.column-page-inset .shaded .mb-2}
-`.column-page-inset .striped`
+::: {.column-page-inset .bg-secondary-subtle .mb-2}
+`.column-page-inset`
 :::
 
-::: {.column-screen .shaded .mb-2}
-`.column-screen .striped`
+::: {.column-screen .bg-secondary-subtle .mb-2}
+`.column-screen`
 :::
 
 ::: {.column-screen-inset-shaded .mb-4}
@@ -175,7 +179,7 @@ Note that this table stretches across the right column thanks to Quarto `column-
 
 Choosing a color scheme is relatively easy -- you can for example start from your favorite photo or graphic and upload it to one of the many on-line **color palette generators** to extract dominant colors. Below I selected a standard 12-color palette that simply matches my decade-old [Kubuntu desktop](https://store.kde.org/p/1980663)[^4].
 
-[^4]: KDE, 30 years later, still going strong! This same color scheme selected in VSCode and Positron.
+[^4]: KDE, 30 years later, still going strong! My personal KDE color scheme in QGIS and VSCode.
 
     ![](https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png){.lightbox}
 
@@ -534,7 +538,5 @@ Finally, the latest Quarto release adds perfectly sensible options to optimize e
     Tells Quarto to only re-tangle a document on content change, and
     not every time a site is rebuilt.
 
-::: {.lead}
-Happy publishing, Everyone!
-:::
+
 

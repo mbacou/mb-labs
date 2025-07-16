@@ -1,6 +1,6 @@
 /* Theme: mb-labs Bootstrap theme */
 /* Author: BACOU, Melanie <mel@mbacou.com> */
-/* Version: v1.0.0 */
+/* Version: v2.0.0 */
 /* Date: 2024-01-31 */
 /* Boostrap customizations for Mel B. Labs */
 
@@ -22,11 +22,11 @@ $cyan:      #789494;
 $dark:      #222e32;
 $gray:      #505050;
 $light:     #fdfcf9;                             // Notebook paper tone
+$darkgray:  #e7e2da;                             // Notebook paper rules
 
 $primary:   tint-color($red, 45%);
-$secondary: tint-color($gray, 50%);  
+$secondary: $cyan; 
 $info:      $purple;
-$darkgray:  #e7e2da;                             // Notebook paper rules
 
 $font-family-base:     "Crimson Text";
 $headings-font-family: "M PLUS Code Latin";
@@ -55,7 +55,7 @@ $body-bg:    $light;
 $link-color: $gray-700;
 $text-muted: $gray-800;
 $code-color: $gray-600;
-$shaded: rgba(tint-color($body-bg, 75%), 75%);   // see $input-bg for .shaded
+$shaded: rgba($body-bg, 75%);                     // also $input-bg
 
 $font-weight-bold: 600;
 $headings-font-weight: 400;
@@ -71,20 +71,20 @@ $spacers: (
   5: $spacer * 2,
 );
 
-$font-size-base:  20/15 * 1rem;                   // 15px in `_quarto.yml`
+$font-size-base:  20/15 * 1rem;                   // 1rem = 15px in `_quarto.yml`
 $small-font-size: 18/15 * 1rem;
 $code-font-size:  15/15 * 1rem;
 $sub-sup-font-size: 1rem;
 
-$h1-font-size:  calc($font-size-base + 16px);    // 34px
-$h2-font-size:  calc($font-size-base +  8px);    // 26px
-$h3-font-size:  calc($font-size-base +  6px);    // 28px
+$h1-font-size:  calc($font-size-base + 14px);    // 34px
+$h2-font-size:  calc($font-size-base +  8px);    // 28px
+$h3-font-size:  calc($font-size-base +  6px);    // 26px
 $h4-font-size:  calc($font-size-base +  4px);    // 24px
 $h5-font-size:  calc($font-size-base +  2px);    // 22px
-$h6-font-size:  calc($font-size-base -  1px);
+$h6-font-size:  calc($font-size-base -  0px);
 
 $line-height-base: calc($spacer / $font-size-base);
-$list-inline-padding: .25em;
+$list-inline-padding: .25rem;
 
 $enable-rounded: true;
 $enable-negative-margins: true;
@@ -92,15 +92,15 @@ $enable-negative-margins: true;
 $border-color: $body-color;
 $border-radius-sm: 4px;
 $border-radius: 4px;
-$border-radius-lg: 0.50rem;
-$border-width: 2px;
-$hr-border-color: $body-color;
+$border-radius-lg: .5rem;
+$border-width: 1px;
+$hr-border-color: $border-color;
 $hr-opacity: .75;
 
-$table-cell-padding: 0 .5em;
-$table-cell-padding-sm: 0 .5em;
+$table-cell-padding: 0 .5rem;
+$table-cell-padding-sm: 0 .5rem;
 $table-striped-bg: $shaded;
-$table-border-color: rgba($body-color, .5);
+$table-border-color: rgba($darkgray, .95);
 
 $thumbnail-border-width: 0;
 $thumbnail-border-radius: $border-radius;
@@ -108,14 +108,14 @@ $thumbnail-border-color: $border-color;
 
 $input-color: $text-muted;
 $input-bg: $shaded;
-$input-btn-padding-y: .5rem;
+$input-btn-padding-y: .25rem;
 $input-placeholder-color: $input-color;
 $input-border-color: $border-color;
 $input-disabled-bg: darken($input-bg, 4%);
 $input-group-addon-bg: $shaded;
 
 $breadcrumb-active-color: $body-color;
-$component-active-bg: rgba($link-color, 12%);
+$component-active-bg: rgba($primary, 12%);
 
 $jumbotron-bg: $shaded;
 $label-margin-bottom: .5rem;
@@ -137,16 +137,16 @@ $card-spacer-y: 0;
 $card-title-spacer-x: 0;
 $card-title-spacer-y: .5rem;
 $card-title-color: $headings-font-color;
-$card-bg: transparent;
-$card-cap-bg: rgba($white, 90%);
-$card-border-color: $border-color;
+$card-bg: $shaded;
+$card-cap-bg: $shaded;
 $card-border-width: 0;
+$card-border-color: $border-color;
 $card-border-radius: $border-radius;
 
-$callout-margin-y:  2rem;
 $callout-margin-x:  0;
+$callout-margin-y:  2rem;
+$callout-padding-x: 1rem;
 $callout-padding-y: .5rem;
-$callout-padding-x: 1em;
 $callout-border-width: 0;
 $callout-border-left-width: 3px;
 $callout-border-radius: $border-radius;
@@ -164,7 +164,7 @@ $nav-link-hover-color: $primary;
 $nav-link-font-family: $font-sans-serif;
 $nav-link-font-weight: 500;
 $nav-link-font-size: 1.2rem;
-$nav-link-padding-x: 1em;
+$nav-link-padding-x: 1rem;
 $nav-link-padding-y: 0;
 $nav-tabs-border-color: $border-color;
 
@@ -200,43 +200,29 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: $headings-font-weight;
   line-height: 3rem;
   padding: 0;
+  margin-top: 2rem;
 }
-h1:not(.quarto-secondary-nav-title), .h1:not(.quarto-secondary-nav-title),
+h1.title:not(.quarto-secondary-nav-title), .h1.title:not(.quarto-secondary-nav-title),
 #title-block-header.quarto-title-block.default .quarto-title .title {
+  font-size: calc($h1-font-size + .5rem);  
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
 .level1 h1:not(.title) {
+  margin-top: 2rem;  
 }
 h1.quarto-secondary-nav-title {
   font-size: $navbar-brand-font-size;
 }
 h2, .h2 {
   color: $primary;
-  margin-top: 2rem;
   border-bottom: none;
-}
-h3, .h3 {
-  margin-top: 2rem;  
 }
 h4, .h4, h5, .h5, h6, .h6 {
   line-height: 2rem;
-  margin-top: 2rem;
-}
-h6, .h6 {
-  color: $primary;
-  font-size: $h6-font-size;
-  font-weight: 500;;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0;  
-}
-h6::after, .h6::after {
-  content: '---';
 }
 hr {
-  border-top: dashed 1px $border-color;
-  margin: 0 0 calc(1rem - 1px) 0;
+  border-top: dotted 1px $hr-border-color;
 }
 .blockquote, blockquote p {
   color: $gray-500;
@@ -245,7 +231,7 @@ hr {
   text-align: right;
   border: none;
   padding: 0;
-  margin: 0 0 2rem 2em;
+  margin: 0 0 2rem 2rem;
 }
 blockquote small, blockquote .small {
   color: $headings-font-color;
@@ -256,60 +242,72 @@ blockquote small, blockquote .small {
   line-height: 2rem;
 }
 ul li ul li {
-  line-height: calc(2rem - 2px);                   // weird bug
+  margin-bottom: -1px;
+}
+ul li ul li:last-child {
+  margin-bottom: calc(.5rem - 1px);
 }
 .quarto-title-banner .quarto-title .title, h1.title {
-  color: $body-color;
   font-family: $headings-font-family;
   font-weight: 400;
   font-size: 2.75rem;
   margin-top: 3rem;
 }
-.lead, p.lead {
+.lead, .lead p {
   font-family: $font-family-base;
   font-weight: 400;
-  color: $gray-500;
+  color: rgba($body-color, 45%);
   font-style: normal;
   font-size: 2rem;
   line-height: 2.75rem;
   margin-bottom: 1.5rem;
 }
-.lead p {
-  line-height: unset;  
-}
 p.subtitle {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-.deserifion {
-  color: $gray-700;
+.description {
+  color: $secondary;
   font-weight: 400;
-  font-size: 1.5rem;
-  padding: 1.5rem 1em 0;
-  border: solid 1px $border-color;
-  transform: rotate(.9deg);
+  padding: 1rem 1rem 1rem 1.5rem;
+  background-color: $shaded;
+  backdrop-filter: blur(6px);  
 }
-.deserifion::before {
-  content: 'In short ...' ;
-  color: $primary;
+.description::before {
+  content: 'In short...' ;
+  color: $secondary;
+  font-size: 2.5rem;
   font-family: $font-serif;
   display: flex;
+  margin: 0 0 1rem -.25rem;
+  transform: rotate(-3deg);
+}
+mark {
+  color: inherit;
 }
 
 // Article pages
+h6, .h6, 
 .quarto-title-meta-heading, .abstract .block-title, 
-.quarto-appendix-heading, details>summary {
+#quarto-appendix.default .quarto-appendix-heading, details>summary {
   font-family: $font-sans-serif;
   font-size: $code-font-size !important;
   color: $primary;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 0;
-  opacity: 1;
+  line-height: 2rem;
+  margin: 1rem 0 .5rem;
+  padding-left: .5rem;
+  border-bottom: 2px solid rgba($primary, .45);
+  max-width: 17rem;  
+  opacity: 1 !important;
 }
 .quarto-title-meta-heading {
   display: none;
+}
+.abstract .block-title {
+
 }
 #title-block-header.quarto-title-block.default .quarto-title-meta-contents p, 
 #title-block-header.quarto-title-block.default .quarto-title-authors p,
@@ -321,6 +319,7 @@ p.subtitle {
 }
 .abstract p {
   text-align: justify; 
+  padding: 0 .5rem;
 }
 #title-block-header.quarto-title-block.default .keywords p:last-of-type, 
 #title-block-header.quarto-title-block.default .deserifion p:last-of-type, 
@@ -329,7 +328,7 @@ p.subtitle {
 }
 .quarto-title-meta-contents p {
   border-bottom: 2px solid rgba($primary, .45);
-  width: 17rem;
+  max-width: 17rem;
 }
 .quarto-title-meta-contents p::before {
   content: 'Author:';
@@ -338,7 +337,8 @@ p.subtitle {
   color: $primary;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-right: .5em; 
+  padding-left: .5rem;
+  margin-right: 1rem; 
 }
 p.date::before {
   content: 'Published:';
@@ -347,7 +347,10 @@ p.date-modified::before {
   content: 'Modified:';
 }
 #quarto-appendix.default {
-  background: none;
+  background: $body-bg;
+  padding: 1rem 2rem 0;
+  margin: 2rem 0 0;
+  border: none;
 }
 
 /* Listing pages */
@@ -356,7 +359,7 @@ div.quarto-post .metadata {
 }
 h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
 #quarto-margin-sidebar .quarto-listing-category-title,
-.column-margin h5, #toc-title  {
+.column-margin h5, #toc-title {
   color: $primary;
   font-family: $headings-font-family;
   font-size: $small-font-size;
@@ -367,17 +370,17 @@ h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
   cursor: unset;
   transform: rotate(-.8deg);
   border-bottom: 2px solid rgba($primary, .45);
-  max-width: 18rem;
+  max-width: 15rem;
   opacity: 1;
 }
 #toc-title {
   border: none;
-  transform: rotate(0);
+  transform: rotate(0deg);
 }
 
 /* Boostrap and listing cards */
 .card {
-  margin: 2rem 0 0;
+  margin: 1rem 1rem 0 0;
 }
 .quarto-grid-item p.card-img-top {
   margin-bottom: 1rem;
@@ -424,10 +427,11 @@ h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
 }
 
 /* Code blocks */
-pre, pre code {
+pre, code, pre code {
+  color: $text-muted;
   font-family: $font-monospace;
   font-size: $code-font-size;
-  color: $text-muted;
+  background: none;
   padding: 0;
 }
 p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
@@ -441,19 +445,19 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
 .code-with-filename .code-with-filename-file {
   color: $headings-font-color;
   font-size: $code-font-size;
-  font-weight: 400;
-  background: $shaded;
-  border: none;
-  border-bottom: 1px solid $border-color;
+  line-height: 2rem;
+  background-color: $gray-100;
+  padding: 0 1rem;
+  border: 1px solid $gray-100;
+  border-radius: $border-radius $border-radius 0 0;
 }
-div.sourceCode, details {
-  margin: 1rem 0 2rem;
+div.sourceCode, details, .cell {
+  margin: 1rem 0;
 }
 div.sourceCode {
-  padding: 1rem 1em 0; 
   background-color: $shaded;
   border: none;
-  padding: 1rem 1em .5rem;
+  padding: 1rem 1rem .5rem;
 }
 pre.sourceCode {
   font-size: $code-font-size;
@@ -474,25 +478,24 @@ pre.sourceCode {
 
 /* Tables */
 table, table.table {
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 calc(2rem - 3px);
   border: none;
   border-top: 1px solid $border-color;
   background-color: $shaded;  
 }
 .table>:not(caption)>*>* {
-  padding: 0 .5em;
-}
-.table>thead {
-  border-bottom: 1px solid $border-color;
+  padding: 0 .5rem;
 }
 .table th {
-  line-height: 2rem;
-  font-family: $font-family-base;
   color: $headings-font-color;
+  font-family: $font-sans-serif;
+  font-size: $code-font-size;
   font-weight: 500;
+  line-height: 2rem;
   border: none;
 }
 .table tbody {
+  border-top: 1px solid $border-color;  
   border-bottom: 2px solid $border-color;
 }
 .table td {
@@ -501,7 +504,8 @@ table, table.table {
   border-bottom: 1px solid rgba($darkgray, .95);  
 }
 .table-borderless td, .table tr:last-of-type td, .table-secondary td {
-  border-bottom: 1px solid transparent;
+  line-height: 2rem;
+  border: none;
 }
 
 
@@ -517,15 +521,10 @@ div.aside, aside, .column-margin {
   margin-top: 0;
   margin-bottom: 2rem;
 }
-caption, .panel-caption, .figure-caption, .subfigure-caption, .table-caption,
-figcaption, .column-margin figcaption, .margin-caption {
-  margin-top: .5rem;
-  margin-bottom: 1rem;  
-}
 .column-margin.column-container p {
   margin-bottom: 1rem;
 }
-div.aside, aside, .column-margin {
+.aside, .column-margin {
   font-family: $font-family-base;
   font-size: $small-font-size;
 }
@@ -533,45 +532,24 @@ div.aside, aside, .column-margin {
 
 /* Figures */
 .figure-img, .card-img-top {
+  background-color: $shaded;
   padding: 0;
-  margin: 0 0 1rem;
 }
 .card-img-top {
-  background-color: $shaded;
-  padding: calc(1rem - 1px);
-  border: 1px solid rgba($border-color, .75);
-  border-radius: 0;
-  box-shadow:
-  -1px -4px 12px rgba(0, 0, 0, 0.085),
-  inset -2px -2px 0 rgba(255, 255, 255, 0.4);  
   transition: transform 0.3s ease;
 }
 .card-img-top:hover {
   transform: scale(1.025);
 }
-.card-img-top img {
+.card-img-top img, .figure-img img {
   overflow: clip;
   width: 100%;
-  filter: grayscale(1);
+  filter: drop-shadow(.5rem .5rem .25rem $shaded) drop-shadow(-.5rem -.5rem .25rem $shaded);  
+  margin: 0 0 .5rem;  
 }
 .card-img, .card-img-top, .card-img-bottom {
   width: unset;
 }
-
-// Tape marks (pseudo-elements)
-.card-img-top::after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 42px;
-  background: $darkgray;
-  opacity: 0.9;
-  z-index: 1;
-  top: 14px;
-  right: -14px;
-  transform: rotate(-5deg);
-}
-
 .img-thumbnail {
   padding: 0;
   margin-bottom: 1rem;
@@ -581,10 +559,13 @@ div.aside, aside, .column-margin {
 }
 .img-rounded {
   border-radius: 6rem;
+  display: block;
+  margin: 2rem auto 0 auto;
+  width: 9rem;
 }
 
 
-/* Callouts  */
+/* Callouts (Quarto bloody mess)  */
 .callout.callout-style-simple, .callout.callout-style-default {
   border: none;
   border-width: $callout-border-width;
@@ -604,15 +585,16 @@ div.aside, aside, .column-margin {
   line-height: 1.5rem;
   margin: 0;
 }
-.callout:not(.callout-titled) .callout-body>:first-child, .callout:not(.callout-titled) .callout-body>div>:first-child {
+.callout:not(.callout-titled) .callout-body>:first-child, 
+.callout:not(.callout-titled) .callout-body>div>:first-child {
   margin-top: 0;
 }
-.panel-tabset > .nav-tabs, .panel-tabset > .tab-content {
+.panel-tabset>.nav-tabs, .panel-tabset>.tab-content {
   border: none;
 }
 
 
-/* Quarto layout fixes */
+/* Quarto page layout fixes */
 
 // Notebook gridlines
 #quarto-content {
@@ -621,7 +603,7 @@ div.aside, aside, .column-margin {
     linear-gradient(to bottom, $darkgray, transparent 1px, transparent);
     background-color: $body-bg;;
     background-size: 2rem 2rem ;
-    background-position: -1px -5px;
+    background-position: -.5rem -.5rem;
     background-repeat: repeat;
 }
 #quarto-search input {
@@ -638,32 +620,32 @@ body.nav-sidebar .quarto-title-banner {
   padding: 0;
 }
 #title-block-header {
-  background-color: $body-bg;
   margin-block-end: unset;
-  margin-top: unset; 
+  margin-top: unset;
+  border-top: 1px solid $border-color;
 }
-.page-columns .column-screen-inset-shaded {
-  padding: .5* 2rem 2em;
+.column-screen-inset-shaded {
+  padding: 1rem 2em;
   background: $shaded;
 }
 .navbar, .quarto-banner nav.quarto-secondary-nav {
-  min-height: 2.5* 2rem;
+  min-height: 5rem;
   backdrop-filter: blur(6px);
   border-bottom: 1px solid $border-color;  
 }
 .navbar #quarto-search {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 1em;
 }
 .panel-tabset>.nav-tabs {
-  line-height: 1.5* 2rem;  
+  line-height: 3rem;  
   border-bottom: solid 1px $border-color;
 }
 .navbar .nav-item:not(.compact) .nav-link {
-  line-height: 1.5* 2rem;
+  line-height: 3rem;
 }
 .navbar .nav-item:not(.compact) .nav-link,
 .nav-tabs .nav-item .nav-link {
-  margin-right: .25em;
+  margin-right: .25rem;
   border: none;
   border-top: solid 3px transparent;
   border-bottom: solid 3px transparent;
@@ -678,10 +660,10 @@ body.nav-sidebar .quarto-title-banner {
 }
 .navbar-title {
   font-family: $headings-font-family;
-  line-height: 1.5* 2rem;
+  line-height: 3rem;
 }
 .navbar-logo {
-  max-height: 3.5* 2rem;
+  max-height: 7rem;
   position: absolute;
   top: 1rem;
 }
@@ -690,7 +672,8 @@ footer.footer {
 }
 footer.footer .nav-footer {
   margin: 0;
-  padding: 1rem 2em 2rem;
+  padding: 1rem 2rem;
+  border-top: 1px solid $darkgray;
 }
 .nav-footer .nav-footer-left,
 .nav-footer .nav-footer-right,
@@ -702,5 +685,5 @@ footer.footer .nav-footer {
   display: none;
 }
 
-@import '_navtabs', '_extra';
+@import '_navtabs', '_sidebar';
 

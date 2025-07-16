@@ -29,7 +29,7 @@ color:
 
 typography:
   fonts:
-    - family: Crimson Pro
+    - family: Crimson Text
       source: google
       weight: [400, 500]
     - family: M PLUS Code Latin
@@ -39,7 +39,7 @@ typography:
       source: google
       weight: [400]
   
-  base: Crimson Pro
+  base: Crimson Text
   headings: 
     family: M PLUS Code Latin
   monospace: 

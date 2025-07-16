@@ -32,7 +32,7 @@
     "href": "index.html#articles-and-notebooks",
     "title": "People, Space, and Statistics",
     "section": "Articles and Notebooks",
-    "text": "Articles and Notebooks\nCode notebooks and articles that do not find a home elsewhere. Feel free to cite, clone, comment, and raise issues.\n\n\n\n\n\n\n\n\n\nData, Resources, and Tools\n\n12 min\n\n\n\n\n\nMelanie BACOU\n\n\nJul 16, 2024\n\n\n\n\n\n\n\n\n\n\n\nTime to Migrate this Blog from Distill to Quarto\n\n20 min\n\n\nquarto\n\ndataviz\n\n\n\nA post about literate programming in general and Quarto formats in particular, in which I document migrating this personal blog from…\n\n\n\nMelanie BACOU\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\n\n\n\nRainfall: Merge Ground and Satellite Observations with RFMerge\n\n9 min\n\n\nmeteo\n\nrisk modeling\n\n\n\n\n\n\n\nMelanie BACOU\n\n\nJan 16, 2021\n\n\n\n\n\n\n\n\n\n\n\nIncome Distribution Cartograms\n\n1 min\n\n\ndataviz\n\nincome\n\nrussia\n\n\n\n\n\n\n\nMelanie BACOU\n\n\nDec 2, 2020\n\n\n\n\n\n\n\n\n\n\n\nERA5-LAND Temperature Validation (California)\n\n7 min\n\n\nmeteo\n\nrisk modeling\n\n\n\n\n\n\n\nMelanie BACOU\n\n\nDec 2, 2020\n\n\n\n\n\n\nNo matching items"
+    "text": "Articles and Notebooks\nCode notebooks and articles that do not find a home elsewhere. Feel free to cite, clone, comment, and raise issues.\n\n\n\n\n\n\n\n\n\nData, Resources, and Tools\n\n12 min\n\nA nice description down here.\n\n\n\nMelanie BACOU\n\n\nJul 16, 2024\n\n\n\n\n\n\n\n\n\n\n\nTime to Migrate this Blog from Distill to Quarto\n\n20 min\n\n\nquarto\n\ndataviz\n\n\n\nA post about literate programming in general and Quarto formats in particular, in which I document migrating this personal blog from…\n\n\n\nMelanie BACOU\n\n\nOct 1, 2023\n\n\n\n\n\n\n\n\n\n\n\nRainfall: Merge Ground and Satellite Observations with RFMerge\n\n9 min\n\n\nmeteo\n\nrisk modeling\n\n\n\n\n\n\n\nMelanie BACOU\n\n\nJan 16, 2021\n\n\n\n\n\n\n\n\n\n\n\nIncome Distribution Cartograms\n\n1 min\n\n\ndataviz\n\nincome\n\nrussia\n\n\n\n\n\n\n\nMelanie BACOU\n\n\nDec 2, 2020\n\n\n\n\n\n\n\n\n\n\n\nERA5-LAND Temperature Validation (California)\n\n7 min\n\n\nmeteo\n\nrisk modeling\n\n\n\n\n\n\n\nMelanie BACOU\n\n\nDec 2, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "license.html",
@@ -334,5 +334,19 @@
     "title": "Interactive Web Applications",
     "section": "Simulating Historical Claim Costs",
     "text": "Simulating Historical Claim Costs\nVisual interface for agricultural insurance\nReal-time pricing of weather-index insurance\nThis tool supports WorldCover PBC agricultural insurance operations.\nHow to cite Confidential.\nTools R/Shiny, bs4Dash, bslib, shinyWidgets, data.table, leaflet, highcharter, terra\n\n\n\n\n\n\n\nNoteTest callout\n\n\n\nAnd something important.\n\n\n\nTable\n\n\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\naa\n\n\n\n\nbb\n\n\n\n\nm ultiple\nlines here.\n\n\n\n\n\n\n\n\n\nSomething in the margin now."
+  },
+  {
+    "objectID": "posts/resume/index.html#summary",
+    "href": "posts/resume/index.html#summary",
+    "title": "BACOU, Melanie (CV)",
+    "section": "Summary",
+    "text": "Summary\n\nLed research grants in the $500K range, advised public agencies and private firms with large-scale data collection methods (incl. remote sensing and mobile field surveying), household survey design and analysis, market segmentation, agricultural value-chain analysis, pricing of (parametric) weather insurance.\nStrong quantitative, analytic, writing and presentation skills acquired over 20 years of collaboration with leading economic research institutes and consulting firms.\nMultidisciplinary background with ability to communicate efficiently with farmers, government officials, private sector partners, technical experts, and researchers.\nWork experience in fragile states (Mid-East, West/sub-Saharan Africa). French / U.S. citizenships."
+  },
+  {
+    "objectID": "posts/resume/index.html#specialties",
+    "href": "posts/resume/index.html#specialties",
+    "title": "BACOU, Melanie (CV)",
+    "section": "Specialties",
+    "text": "Specialties\nQuantitative and spatial analysis, cost/benefit analysis, household surveys and experimental designs, market segmentation, development of agricultural value chains, risk and impact evaluation methods, weather & climate risk and adaptation, parametric risk transfer, data visualization.\nStats: R, R/Shiny, STATA, SAS, Tableau®, Highcharts.js, D3.js\nDatabases: MS SQL Server, MySQL, PostGIS, MongoDB, Elasticsearch, DuckDB\nGIS: QGIS, GRASS, GDAL, GeoServer, Mapnik, Leaflet, Kepler.gl\nSurveying: ODK, CSPro, SurveyCTO, Fulcrum, GISCloud, CKAN, DataHub\nDevOps: CentOS, Ubuntu, AWS and Azure cloud deployment and containerization, Docker\nAgile development: Jira, Trello, Asana, Taiga.io, ClubHouse"
   }
 ]

@@ -80,10 +80,9 @@ format:
     toc-title: Contents
     toc-location: left
     toc-depth: 3
-    toc-expand: true
     link-external-icon: false
     link-external-newwindow: true
-    title-block-banner: transparent
+    title-block-banner: var(--bs-light)
 
     tbl-cap-location: bottom
     fig-cap-location: bottom
@@ -100,15 +99,15 @@ format:
     code-copy: false
     code-overflow: wrap
     highlight-style: solarized
+    brand: false
 
     fontsize: 15px
     include-before-body: assets/scss/navtabs.html
-    brand: false
     theme:
       light: assets/scss/theme.scss
 
     grid:
-      body-width: 840px
-      sidebar-width: 180px
-      margin-width: 180px
-      gutter-width: 30px
+      body-width: 780px
+      sidebar-width: 150px
+      margin-width: 240px
+      gutter-width: 60px

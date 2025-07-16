@@ -1,10 +1,20 @@
 ---
-page-layout: article
+title: People, Space, and Statistics
+subtitle: Informed citizens make better policy choices; better policies save <span class="text-primary">lives</span> and <span class="text-primary">resources</span>.
+date: 2010-05-01
+date-modified: last-modified
+categories:
+  - econ
+  - stats
+  - dataviz
 toc: false
 grid:
-    body-width: 836px
-    sidebar-width: 4px
-    margin-width: 360px
+  sidebar-width: 0px
+  margin-width: 390px
+  gutter-width: 60px
+brand:
+  color:
+    primary: blue
   
 listing:
   - id: lst-posts
@@ -16,7 +26,7 @@ listing:
     sort: date desc
     type: grid
     max-items: 9
-    image-height: 168px    
+    image-height: 210px    
     fields: [title, description, image, date, author, categories, reading-time]
     exclude: 
       category: [skip*]
@@ -31,32 +41,27 @@ listing:
     type: grid
     grid-columns: 2
     max-items: 2
-    image-height: 196px
+    image-height: 180px
     fields: [title, description, image]
 ---
 
-# People, Space, and Statistics {.title}
 
-::: {.lead}
-Informed citizens make better policy choices; better policies save <span class="text-primary">lives</span> and <span class="text-primary">resources</span>.
-:::
+::: {.aside .bg-secondary-subtle .pt-2 .px-2 .mt-md-n5 .mt-5 .mb-2 .rot}
 
-::: {.aside .postit .tab-blue .px-2}
+![](posts/resume/_fig/profile.jpg){.img-rounded .shadow-sm .mt-n5}
 
-![](posts/resume/_fig/profile.jpg){.img-rounded .d-block .mx-auto .mt-n3 width="10em"}
+::: {.text-serif .text-secondary}
+A blog on econometrics, spatial statistics, remote sensing, and scientific visualization -- with code samples in <mark>`R, Python, JS`</mark> and <mark>`D3.js`</mark>.
 
-::: {.mt-3}
+Topics range from sustainable agriculture and food security, to policies for equitable trade, growth and development, and the geopolitics of natural resources.
 
-A blog on econometrics, spatial statistics, remote sensing, and scientific visualization -- with code samples in **R**, **Python**, **JS** and **D3.js**.
+You will also find book and article reviews, and the occasional shout-out and opinion pieces. 
 
-Topics range from sustainable agriculture and food security, to policies for equitable trade, growth and development, the geopolitics of natural resources.
-
-You'll also find book and article reviews, and the occasional shout-out and opinion pieces. Check out my [full Bio](./posts/resume/index.qmd) for contact details.
-
+Check out my [full bio](./posts/resume/index.qmd) for contact details.
 :::
 :::
 
-::: {.aside .postit .tab-yellow .px-2 .pt-2}
+::: {.aside .bg-warning-subtle .px-2}
 ```{=html}
 
 <script type="text/javascript">
@@ -64,10 +69,11 @@ var listID = 'PLMEI8z_d3EZGRnn8nGh3f6A7zwT4wDmVU';
 var numberOfVideos = 200;
 var randomizer = Math.floor(Math.random() * numberOfVideos + 1);
 
-document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.com/embed?listType=playlist&list=' + listID + '&index=' + randomizer + '&autoplay=1&loop=0&controls=1&showinfo=0" frameborder=0 height="44" width="100%"></iframe><figcaption><em>Support my favorite artists.</em></figcaption>');
+document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.com/embed?listType=playlist&list=' + listID + '&index=' + randomizer + '&autoplay=1&loop=0&controls=1&showinfo=0" frameborder=0 height="44" width="100%"></iframe>Play to support my favorite artists.');
 </script>
 ```
 :::
+
 
 ## Featured Projects
 

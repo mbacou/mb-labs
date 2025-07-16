@@ -97,7 +97,7 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-710c27272266bbb8e3680908660a8b9b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6a2713c0d949a684eb7a9c6e0b09fced.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-b412c6cceb3deddeff68198aa7466022.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
@@ -132,7 +132,7 @@ div.csl-indent {
 <style>
 
       .quarto-title-block .quarto-title-banner {
-        background: transparent;
+        background: var(--bs-light);
       }
 </style>
 <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
@@ -221,7 +221,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">July 6, 2025</p>
+        <p class="date-modified">July 11, 2025</p>
       </div>
     </div>
       
@@ -237,7 +237,7 @@ div.csl-indent {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
+    <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
   <ul>
@@ -276,14 +276,15 @@ div.csl-indent {
 
 
 <p>With the release of <strong>Quarto 1.4</strong> (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as <strong>Emacs org-mode</strong>, <strong>Rmarkdown</strong> and <strong>Jupyter</strong> notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.</p>
-<div class="column-page-inset-right d-flex ink ink-box p-2">
-<p>No other reason for this map below but to showcase Quarto’s new content layout features – and well, I love Soviet-era classic topo styles. Check out Russian <a href="https://sovietmaps.com/">cartography</a>, it is stunning work.</p>
-<p>This margin note uses a custom <code>&lt;div&gt;</code> with CSS classes <code>.column-page-inset-right .d-flex</code> making use of Boostrap’s and Quarto utilities.</p>
-</div>
-<div class="cell page-columns page-full">
-<div class="cell-output-display column-page">
-<div id="htmlwidget-062244c1fa1a16b68dc8" style="width:100%;height:17rem;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-062244c1fa1a16b68dc8">{"x":{"options":{"minZoom":11,"maxZoom":13,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://proxy.nakarte.me/http/88.99.52.155/tmg/{z}/{x}/{y}",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"sovietmap.com"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below...",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
+
+<div class="no-row-height column-margin column-container"><div class="bg-info-subtle text-info text-serif px-2 pt-2">
+<p>No other reason for this map below but to showcase Quarto’s new content layout features – I am a fan of Soviet-era classic topo styles. Check out Russian <a href="https://sovietmaps.com/">cartography</a>, it is stunning work.</p>
+<p>This margin note uses a custom <code>&lt;div class="column-margin bg-info-subtle text-info px-2"&gt;</code> making use of both Quarto and Boostrap’s CSS utilities.</p>
+<p>The margin column is <strong>responsive</strong>, content will be moved to the body column on smaller display sizes.</p>
+</div></div><div class="cell page-columns page-full">
+<div class="cell-output-display column-page-left">
+<div id="htmlwidget-96a48453591961368c5f" style="width:100%;height:17rem;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-96a48453591961368c5f">{"x":{"options":{"minZoom":11,"maxZoom":13,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://proxy.nakarte.me/http/88.99.52.155/tmg/{z}/{x}/{y}",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"sovietmap.com"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below...",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Old-time researchers and engineers have long used <a href="https://orgmode.org/">Emacs <code>Org-Mode</code></a> (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to <em>Eric Schulte</em>’s incredible <strong>Babel</strong> extension <span class="citation" data-cites="schulte2012">(see <a href="#ref-schulte2012" role="doc-biblioref">Schulte et al. 2012</a>)</span> and to <em>John MacFarlane</em>’s <a href="https://pandoc.org/">Pandoc</a> document converter library – but nowadays <strong>Quarto</strong> makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as <strong>in-browser real-time rendering of documents</strong>.</p>
@@ -325,26 +326,28 @@ div.csl-indent {
 <div class="sourceCode" id="cb2"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>#| filename: ./_quarto.yml</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>#| eval: false </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>grid:</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  body-width: 900px</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  sidebar-width: 160px</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  margin-width: 240px</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  gutter-width: 2em</span></code></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>format:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  html:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    grid:</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      body-width: 840px</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      sidebar-width: 180px</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      margin-width: 240px</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>      gutter-width: 30px</span></code></pre></div>
 <p>There are new Quarto CSS classes to help control content width and placement.</p>
-<div class="column-body shaded mb-2">
-<p><code>.column-body .striped</code></p>
+<div class="column-body bg-secondary-subtle mb-2">
+<p><code>.column-body</code></p>
 </div>
-<div class="column-body-outset shaded mb-2">
-<p><code>.column-body-outset .striped</code></p>
+<div class="column-body-outset bg-secondary-subtle mb-2">
+<p><code>.column-body-outset</code></p>
 </div>
-<div class="column-page striped mb-2">
-<p><code>.column-page .striped</code></p>
+<div class="column-page bg-secondary-subtle mb-2">
+<p><code>.column-page</code></p>
 </div>
-<div class="column-page-inset shaded mb-2">
-<p><code>.column-page-inset .striped</code></p>
+<div class="column-page-inset bg-secondary-subtle mb-2">
+<p><code>.column-page-inset</code></p>
 </div>
-<div class="column-screen shaded mb-2">
-<p><code>.column-screen .striped</code></p>
+<div class="column-screen bg-secondary-subtle mb-2">
+<p><code>.column-screen</code></p>
 </div>
 <div class="column-screen-inset-shaded mb-4">
 <p><code>.column-screen-inset-shaded</code></p>
@@ -425,7 +428,7 @@ column: screen-right</code></pre></td>
 <section id="color-scheme" class="level1 page-columns page-full">
 <h1>Color Scheme</h1>
 <p>Choosing a color scheme is relatively easy – you can for example start from your favorite photo or graphic and upload it to one of the many on-line <strong>color palette generators</strong> to extract dominant colors. Below I selected a standard 12-color palette that simply matches my decade-old <a href="https://store.kde.org/p/1980663">Kubuntu desktop</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;KDE, 30 years later, still going strong! This same color scheme selected in VSCode and Positron.</p>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;KDE, 30 years later, still going strong! My personal KDE color scheme in QGIS and VSCode.</p>
 <p><a href="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="img-fluid"></a></p>
 <p><a href="vscode.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="vscode.png" class="img-fluid"></a></p></div><div id="fn5"><p><sup>5</sup>&nbsp;Development environment theme creator</p>
 <p><a href="themer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="themer.png" class="img-fluid"></a></p></div></div><p>Another remarkable tool I have used in the past to generate sensible UI color schemes is <a href="https://themer.dev/">themer.dev</a><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> – this masterpiece of a library will generate consistent color schemes for Linux desktops and for many consoles, text editors, and IDEs. Check it out!</p>
@@ -467,7 +470,7 @@ column: screen-right</code></pre></td>
 <span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="fu">typography</span><span class="kw">:</span></span>
 <span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">fonts</span><span class="kw">:</span></span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Crimson Pro</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
 <span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
 <span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">,</span><span class="at"> </span><span class="dv">500</span><span class="kw">]</span></span>
 <span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> M PLUS Code Latin</span></span>
@@ -477,7 +480,7 @@ column: screen-right</code></pre></td>
 <span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
 <span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">]</span></span>
 <span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="at">  </span></span>
-<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> Crimson Pro</span></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
 <span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">headings</span><span class="kw">:</span><span class="at"> </span></span>
 <span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">family</span><span class="kw">:</span><span class="at"> M PLUS Code Latin</span></span>
 <span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">monospace</span><span class="kw">:</span><span class="at"> </span></span>
@@ -618,37 +621,37 @@ Note
 <div class="code-with-filename-file">
 <pre><strong>./assets/scss/theme.scss</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode scss"><code class="sourceCode scss"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="va">$text-muted</span>: <span class="va">$gray-700</span><span class="op">;</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="va">$code-color</span>: <span class="va">$gray-700</span><span class="op">;</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="va">$shaded</span>: <span class="fu">rgba(tint-color(</span><span class="va">$body-bg</span><span class="op">,</span> <span class="dv">75</span><span class="dt">%</span><span class="fu">)</span><span class="op">,</span> <span class="dv">75</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span>   <span class="co">// see $input-bg for .shaded</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="va">$font-weight-bold</span>: <span class="dv">500</span><span class="op">;</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="va">$headings-font-weight</span>: <span class="dv">400</span><span class="op">;</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="va">$headings-font-color</span>: <span class="va">$gray-900</span><span class="op">;</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="va">$spacer</span>: <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span>                                   <span class="co">// 30px line-height</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="va">$spacers</span>: (</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0</span>: <span class="dv">0</span><span class="op">,</span></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">.25</span><span class="op">,</span></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">.5</span><span class="op">,</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="dv">3</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="dv">4</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">1.5</span><span class="op">,</span></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="dv">5</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="va">$font-size-base</span>:  <span class="dv">20</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span>                   <span class="co">// 15px in `_quarto.yml`</span></span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="va">$small-font-size</span>: <span class="dv">18</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="va">$code-font-size</span>:  <span class="dv">14</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="va">$h1-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span> <span class="dv">16</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 34px</span></span>
-<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="va">$h2-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">8</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 26px</span></span>
-<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="va">$h3-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span> <span class="dv">10</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 28px</span></span>
-<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a><span class="va">$h4-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">6</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 24px</span></span>
-<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="va">$h5-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">4</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 22px</span></span>
-<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="va">$h6-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">1</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 16px</span></span>
-<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="va">$line-height-base</span>: <span class="fu">calc(</span><span class="va">$spacer</span> <span class="op">/</span> <span class="va">$font-size-base</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="va">$list-inline-padding</span>: <span class="dv">.25</span><span class="dt">em</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode scss"><code class="sourceCode scss"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="va">$body-bg</span>:    <span class="va">$light</span><span class="op">;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="va">$link-color</span>: <span class="va">$gray-700</span><span class="op">;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="va">$text-muted</span>: <span class="va">$gray-800</span><span class="op">;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="va">$code-color</span>: <span class="va">$gray-600</span><span class="op">;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="va">$shaded</span>: <span class="fu">rgba(</span><span class="va">$body-bg</span><span class="op">,</span> <span class="dv">75</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span>                     <span class="co">// also $input-bg</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="va">$font-weight-bold</span>: <span class="dv">600</span><span class="op">;</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="va">$headings-font-weight</span>: <span class="dv">400</span><span class="op">;</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="va">$headings-font-color</span>: <span class="va">$gray-900</span><span class="op">;</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="va">$spacer</span>: <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span>                                   <span class="co">// 30px line-height</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="va">$spacers</span>: (</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0</span>: <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">.25</span><span class="op">,</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">.5</span><span class="op">,</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="dv">3</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>  <span class="dv">4</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">1.5</span><span class="op">,</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>  <span class="dv">5</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="va">$font-size-base</span>:  <span class="dv">20</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span>                   <span class="co">// 1rem = 15px in `_quarto.yml`</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="va">$small-font-size</span>: <span class="dv">18</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="va">$code-font-size</span>:  <span class="dv">15</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="va">$sub-sup-font-size</span>: <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a><span class="va">$h1-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span> <span class="dv">14</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 34px</span></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="va">$h2-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">8</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 28px</span></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="va">$h3-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">6</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 26px</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a><span class="va">$h4-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">4</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 24px</span></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="va">$h5-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">2</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 22px</span></span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="va">$h6-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">-</span>  <span class="dv">0</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span></code></pre></div>
 </div>
 </div>
 <p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>. Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred <span class="shaded"><code>.shaded</code></span> and a <span class="striped"><code>.striped</code></span>. This theme uses <span class="text-muted">.text-muted</span> for all post metadata, for end- and margin-notes, and for captioning.</p>
@@ -1176,9 +1179,6 @@ Tells Quarto that a document may (or may not) be listed / accessible to viewers,
 <li><p><code>freeze: true</code><br>
 Tells Quarto to only re-tangle a document on content change, and not every time a site is rebuilt.</p></li>
 </ul>
-<div class="lead">
-<p>Happy publishing, Everyone!</p>
-</div>
 
 
 
