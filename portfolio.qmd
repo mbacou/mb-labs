@@ -1,10 +1,19 @@
 ---
-title: Design Portfolio
+title: Mel's Design Portfolio
 subtitle: A collection of visuals.
-page-layout: full
+date: 2010-05-01
+date-modified: last-modified
+categories:
+  - econ
+  - stats
+  - dataviz
 title-block-banner: url(/www/banner/dashboard.jpg) fixed
-title-block-banner-color: var(--bs-light)
 toc: false
+grid:
+  body-width: 850px
+  sidebar-width: 0px
+  margin-width: 210px
+
 listing:
   id: lst-portfolio
   contents: portfolio
@@ -20,12 +29,10 @@ listing:
   feed: true
 ---
 
-::: {.column-page .mt-3}
 
 An annotated collection of visuals and tools I have built in the past for research teams, partners and clients.
 
 ::: {#lst-portfolio .mt-3}
-:::
 :::
 
 

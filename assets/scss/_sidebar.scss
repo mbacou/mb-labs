@@ -3,7 +3,7 @@
 #quarto-sidebar, #quarto-sidebar-toc-left {
   padding-left: 1rem;
   border-right: none;
-  background: $shaded;
+  background-image: linear-gradient(to right, $body-bg, transparent);
 }
 #quarto-content .quarto-sidebar-toggle {
   background: $shaded;
@@ -37,7 +37,7 @@
 .sidebar .quarto-alternate-formats h2, .sidebar .quarto-alternate-formats .h2,
 .sidebar nav[role=doc-toc]>h2, .sidebar nav[role=doc-toc]>.h2 {
   margin: 8rem 1rem 1rem 0;
-  text-align: right;
+  text-align: end;
   border-top: 1px solid $primary;
 }
 .sidebar.sidebar-navigation>* {
@@ -53,7 +53,7 @@
 .sidebar .quarto-alternate-formats ul li a, .sidebar nav[role=doc-toc]>ul li a {
   color: $text-muted;
   line-height: 1.5rem;
-  text-align: right;
+  text-align: end;
   padding: .25rem 1rem .25rem 0;
   border: none;
 }

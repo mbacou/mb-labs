@@ -6,8 +6,6 @@ meta:
 
 color:
   palette:
-    white:     "#ffffff"
-    black:     "#000000"
     blue:      "#3daee9"
     purple:    "#9b59b6"
     indigo:    "#98796f"
@@ -25,13 +23,14 @@ color:
   
   foreground:   gray
   background:   light
-  primary:      "#fca5a5"
+  primary:      tint-color(red, 25%)
+  secondary:    purple
 
 typography:
   fonts:
     - family: Crimson Text
       source: google
-      weight: [400, 500]
+      weight: [400, 500, 600]
     - family: M PLUS Code Latin
       source: google
       weight: [400, 500]
@@ -40,8 +39,7 @@ typography:
       weight: [400]
   
   base: Crimson Text
-  headings: 
-    family: M PLUS Code Latin
-  monospace: 
-    family: M PLUS Code Latin
+  headings: M PLUS Code Latin
+  monospace: M PLUS Code Latin
+
   

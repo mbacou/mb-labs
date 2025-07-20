@@ -1,4 +1,4 @@
-// quarto-scss-analysis-annotation { "quarto-version": "1.8.14" }
+// quarto-scss-analysis-annotation { "quarto-version": "1.8.17" }
 
 // quarto-scss-analysis-annotation { "origin": "'use' section from format" }
 
@@ -42,8 +42,7 @@
 
 // quarto-scss-analysis-annotation { "origin": "'use' section from user-defined SCSS" }
 
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:ital,wght@0,400;0,500;1,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
 
 // quarto-scss-analysis-annotation { "origin": "'functions' section from format" }
 
@@ -1049,31 +1048,31 @@ $theme-name: null !default;
 
 $theme: 'mb-labs';
 
-$blue:      #3daee9;
-$purple:    #9b59b6;
-$indigo:    #98796f;
-$pink:      #aea39a;
-$red:       #da4453;
-$orange:    #ffac5e;
-$yellow:    #eed04c;
-$green:     #27ae60;
-$teal:      #445e64;
-$cyan:      #789494;
+// Turbo color palette
+$indigo:    #30123B;
+$blue:      #466BE3;
+$cyan:      #28BBEC;
+$green:     #31F299;
+$teal:      #A2FC3C;
+$yellow:    #EDD03A;
+$orange:    #FB8022;
+$red:       #D23105;
+$purple:    #7A0403;
 
-$dark:      #222e32;
 $gray:      #505050;
+$dark:         darken($gray, 10%);
 $light:     #fdfcf9;                             // Notebook paper tone
 $darkgray:  #e7e2da;                             // Notebook paper rules
 
-$primary:   tint-color($red, 45%);
-$secondary: $cyan; 
-$info:      $purple;
+$primary:     mix(mix($purple, $red, 15%), $light, 65%);
+$secondary:   mix(mix($indigo, $blue, 50%), $light, 65%);
+$info:        mix($blue, $light, 75%);
 
 $font-family-base:     "Crimson Text";
 $headings-font-family: "M PLUS Code Latin";
 $font-monospace:       "M PLUS Code Latin";
 $font-sans-serif:      "M PLUS Code Latin";
-$font-serif:           "Marck Script";
+$font-serif:           "Caveat";
 
 
 // Other defaults (generally no need to modify below)
@@ -1091,18 +1090,18 @@ $gray-700:   tint-color($gray, 30%);
 $gray-800:   tint-color($gray, 20%);
 $gray-900:   tint-color($gray, 10%);
 
-$body-color: $gray;
+$body-color: $gray-900;
 $body-bg:    $light;
 $link-color: $gray-700;
-$text-muted: $gray-800;
+$text-muted: $gray-700;
 $code-color: $gray-600;
-$shaded: rgba($body-bg, 75%);                     // also $input-bg
+$shaded: rgba($white, 75%);             // also $input-bg
 
 $font-weight-bold: 600;
 $headings-font-weight: 400;
-$headings-font-color: $gray-900;
+$headings-font-color: $gray;
 
-$spacer: 2rem;                                   // 30px line-height
+$spacer: 2rem;                           // 30px line-height
 $spacers: (
   0: 0,
   1: $spacer * .25,
@@ -1112,36 +1111,37 @@ $spacers: (
   5: $spacer * 2,
 );
 
-$font-size-base:  20/15 * 1rem;                   // 1rem = 15px in `_quarto.yml`
+$font-size-base:  20/15 * 1rem;          // 1rem = 15px in `_quarto.yml`
 $small-font-size: 18/15 * 1rem;
 $code-font-size:  15/15 * 1rem;
 $sub-sup-font-size: 1rem;
 
 $h1-font-size:  calc($font-size-base + 14px);    // 34px
-$h2-font-size:  calc($font-size-base +  8px);    // 28px
-$h3-font-size:  calc($font-size-base +  6px);    // 26px
-$h4-font-size:  calc($font-size-base +  4px);    // 24px
+$h2-font-size:  calc($font-size-base + 10px);    // 30px
+$h3-font-size:  calc($font-size-base +  4px);    // 26px
+$h4-font-size:  calc($font-size-base +  3px);    // 24px
 $h5-font-size:  calc($font-size-base +  2px);    // 22px
-$h6-font-size:  calc($font-size-base -  0px);
+$h6-font-size:  calc($font-size-base + 15px);    // 35px
 
 $line-height-base: calc($spacer / $font-size-base);
-$list-inline-padding: .25em;
+$list-inline-padding: .25rem;
 
 $enable-rounded: true;
 $enable-negative-margins: true;
 
 $border-color: $body-color;
-$border-radius-sm: 4px;
-$border-radius: 4px;
+$border-radius-sm: 0;
+$border-radius: .25rem;
 $border-radius-lg: .5rem;
 $border-width: 1px;
 $hr-border-color: $border-color;
-$hr-opacity: .75;
+$hr-opacity: 1;
 
-$table-cell-padding: 0 .5em;
-$table-cell-padding-sm: 0 .5em;
-$table-striped-bg: $shaded;
-$table-border-color: rgba($darkgray, .95);
+$table-cell-padding: 0 .5rem;
+$table-cell-padding-sm: 0 .5rem;
+$table-striped-bg: tint-color($darkgray, 55%);
+$table-border-color: tint-color($darkgray, 55%);
+$table-hover-bg: rgba($darkgray, .75);
 
 $thumbnail-border-width: 0;
 $thumbnail-border-radius: $border-radius;
@@ -1173,20 +1173,20 @@ $pagination-disabled-bg: $input-disabled-bg;
 $pagination-hover-color: $link-color;
 $progress-bg: $input-bg;
 
-$card-spacer-x: 0;
+$card-spacer-x: 1rem;
 $card-spacer-y: 0;
 $card-title-spacer-x: 0;
 $card-title-spacer-y: .5rem;
 $card-title-color: $headings-font-color;
-$card-bg: $shaded;
+$card-bg: transparent;
 $card-cap-bg: $shaded;
 $card-border-width: 0;
-$card-border-color: $border-color;
+$card-border-color: $darkgray;
 $card-border-radius: $border-radius;
 
 $callout-margin-x:  0;
 $callout-margin-y:  2rem;
-$callout-padding-x: 1em;
+$callout-padding-x: 1rem;
 $callout-padding-y: .5rem;
 $callout-border-width: 0;
 $callout-border-left-width: 3px;
@@ -1205,7 +1205,7 @@ $nav-link-hover-color: $primary;
 $nav-link-font-family: $font-sans-serif;
 $nav-link-font-weight: 500;
 $nav-link-font-size: 1.2rem;
-$nav-link-padding-x: 1em;
+$nav-link-padding-x: 1rem;
 $nav-link-padding-y: 0;
 $nav-tabs-border-color: $border-color;
 
@@ -1269,41 +1269,6 @@ $title-banner-image: null !default;
 $code-block-bg: #fdf6e3 !default;
 $btn-code-copy-color: #93a1a1 !default;
 $btn-code-copy-color-active: #268bd2 !default;
-/* typography variables from _brand.yml */
-// quarto-scss-analysis-annotation { "action": "push", "origin": "_brand.yml typography" }
-$font-family-monospace: M PLUS Code Latin !default;
-$headings-font-family: M PLUS Code Latin !default;
-$presentation-heading-font: M PLUS Code Latin !default;
-$font-family-base: Crimson Text !default;
-$mainFont: Crimson Text !default;
-$mermaid-font-family: Crimson Text !default;
-// quarto-scss-analysis-annotation { "action": "pop" }
-/* color variables from _brand.yml */
-// quarto-scss-analysis-annotation { "action": "push", "origin": "_brand.yml color" }
-$brand-white: #ffffff !default;
-$brand-black: #000000 !default;
-$brand-blue: #3daee9 !default;
-$brand-purple: #9b59b6 !default;
-$brand-indigo: #98796f !default;
-$brand-pink: #aea39a !default;
-$brand-red: #da4453 !default;
-$brand-orange: #ffac5e !default;
-$brand-yellow: #eed04c !default;
-$brand-green: #27ae60 !default;
-$brand-teal: #445e64 !default;
-$brand-cyan: #789494 !default;
-$brand-dark: #222e32 !default;
-$brand-light: #fdfcf9 !default;
-$brand-gray: #505050 !default;
-$brand-darkgray: #e7e2da !default;
-$foreground: #505050 !default;
-$background: #fdfcf9 !default;
-$primary: #fca5a5 !default;
-$pre-color: #505050 !default;
-$body-bg: #fdfcf9 !default;
-$body-color: #505050 !default;
-// quarto-scss-analysis-annotation { "action": "pop" }
-$theme: "brand" !default;
 
 // quarto-scss-analysis-annotation { "origin": "Defaults from Quarto's SCSS" }
 
@@ -1311,10 +1276,7 @@ $code-copy-selector: "" !default;
 $code-white-space: pre-wrap !default;
 $tbl-cap-location: bottom !default;
 $dark: #212529 !default;
-$light: #f8f9fa !default;
 $footer-border: true !default;
-$footer-fg: gray !default;
-$footer-bg: $light !default;
 $sidebar-border: false !default;
 $sidebar-bg: if(variable-exists(body-bg), $body-bg, #fff) !default;
 $navbar-toggle-position: right !default;
@@ -3429,8 +3391,8 @@ $pre-color:                         $body-emphasis-color !default;
 $pre-line-height:                   $line-height-base !default;
 $font-size-root: 15px;
 $grid-sidebar-width: 0px;
-$grid-margin-width: 390px;
-$grid-body-width: 780px;
+$grid-margin-width: 250px;
+$grid-body-width: 810px;
 $grid-column-gutter-width: 60px;
 
 
@@ -9994,7 +9956,7 @@ details > summary > p:only-child {
 }
 
 // codeCopy
-div.sourceCode {
+div.code-copy-outer-scaffold {
   position: relative;
 }
 
@@ -11401,7 +11363,8 @@ pre.sourceCode {
     border: none;
   }
   font-size: $code-block-font-size;
-  overflow-y: auto !important;
+  overflow-y: visible !important;
+  // overflow-y: auto !important;
   @if $code-block-bg {
     padding: $code-block-bg-padding;
   }
@@ -11414,7 +11377,8 @@ pre.sourceCode > code.sourceCode {
 }
 
 div.sourceCode {
-  position: relative;
+  overflow-y: hidden;
+  // position: relative;
 }
 
 .callout div.sourceCode {
@@ -12802,27 +12766,6 @@ a.external:after:hover {
 
 // quarto-scss-analysis-annotation { "origin": "'rules' section from user-defined SCSS" }
 
-/* color CSS variables from _brand.yml */
-// quarto-scss-analysis-annotation { "action": "push", "origin": "_brand.yml color" }
-:root {
-  --brand-white: #ffffff;
-  --brand-black: #000000;
-  --brand-blue: #3daee9;
-  --brand-purple: #9b59b6;
-  --brand-indigo: #98796f;
-  --brand-pink: #aea39a;
-  --brand-red: #da4453;
-  --brand-orange: #ffac5e;
-  --brand-yellow: #eed04c;
-  --brand-green: #27ae60;
-  --brand-teal: #445e64;
-  --brand-cyan: #789494;
-  --brand-dark: #222e32;
-  --brand-light: #fdfcf9;
-  --brand-gray: #505050;
-  --brand-darkgray: #e7e2da;
-}
-// quarto-scss-analysis-annotation { "action": "pop" }
 
 /* Title Banner */
 .quarto-title-banner {
@@ -13022,26 +12965,27 @@ main.quarto-banner-title-block > section:first-child > h4 {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=M+PLUS+Code+Latin:wght@400..500&family=Caveat:wght@400&display=swap');
 
 // Quarto layout overrides for vertical rhythm
 #quarto-content>*, #quarto-header>*, .quarto-title-banner>* {
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
 }
 a.footnote-ref {
-  color: $primary;
+  font-weight: 500;
+}
+div.quarto-post a {
+  color: inherit;
 }
 b, strong {
   font-weight: $font-weight-bold;
 }
-p, div, li, dd {
+p, div, li, dd, blockquote{
   line-height: 2rem;
 }
-p, ol, ul, dl, .cell {
-  margin-bottom: 1rem;
+p, ol, ul, dl, .quarto-video {
+  margin: 0 0 1rem 0;
 }
 .content > p:first-of-type {
   margin-top: 2rem;
@@ -13069,11 +13013,15 @@ h2, .h2 {
   color: $primary;
   border-bottom: none;
 }
-h4, .h4, h5, .h5, h6, .h6 {
+h4, .h4 {
+  color: $gray-500;
+}
+h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   line-height: 2rem;
 }
 hr {
-  border-top: dotted 1px $hr-border-color;
+  border-top: double .25rem $hr-border-color;
+  margin: .5rem 0 2.25rem;
 }
 .blockquote, blockquote p {
   color: $gray-500;
@@ -13082,7 +13030,7 @@ hr {
   text-align: right;
   border: none;
   padding: 0;
-  margin: 0 0 2rem 2em;
+  margin: 2rem 0 2rem 2rem;
 }
 blockquote small, blockquote .small {
   color: $headings-font-color;
@@ -13093,7 +13041,7 @@ blockquote small, blockquote .small {
   line-height: 2rem;
 }
 ul li ul li {
-  margin-bottom: -1px;
+  margin-bottom: -1px;                   // bug?
 }
 ul li ul li:last-child {
   margin-bottom: calc(.5rem - 1px);
@@ -13107,7 +13055,7 @@ ul li ul li:last-child {
 .lead, .lead p {
   font-family: $font-family-base;
   font-weight: 400;
-  color: rgba($body-color, 45%);
+  color: $gray-500;
   font-style: normal;
   font-size: 2rem;
   line-height: 2.75rem;
@@ -13118,28 +13066,29 @@ p.subtitle {
   margin-bottom: 2rem;
 }
 .description {
-  color: $secondary;
+  font-size: $h4-font-size;
   font-weight: 400;
-  padding: 1rem 1em 1rem 1.5em;
-  background-color: $shaded;
-  backdrop-filter: blur(6px);  
+  padding: 1rem 1rem 1.5rem 1rem;
+  background-color: transparent;
+  backdrop-filter: blur(6px);
+  width: 80%;
+  margin-left: auto;
 }
 .description::before {
   content: 'In short...' ;
-  color: $secondary;
+  color: $primary;
   font-size: 2.5rem;
   font-family: $font-serif;
   display: flex;
-  margin: 0 0 1rem -.25em;
+  margin: 0 0 1.25rem -.25rem;
   transform: rotate(-3deg);
 }
 mark {
-  filter: contrast(.;);
   color: inherit;
+  padding: 0 .25rem; 
 }
 
 // Article pages
-h6, .h6, 
 .quarto-title-meta-heading, .abstract .block-title, 
 #quarto-appendix.default .quarto-appendix-heading, details>summary {
   font-family: $font-sans-serif;
@@ -13150,10 +13099,16 @@ h6, .h6,
   letter-spacing: 1px;
   line-height: 2rem;
   margin: 1rem 0 .5rem;
-  padding-left: .5em;
+  padding-left: .5rem;
   border-bottom: 2px solid rgba($primary, .45);
   max-width: 17rem;  
   opacity: 1 !important;
+}
+h6, .h6 {
+  color: $primary;
+  font-family: $font-serif;
+  margin: 0 0 1.5rem -.25rem;
+  transform: rotate(-3deg);
 }
 .quarto-title-meta-heading {
   display: none;
@@ -13168,7 +13123,7 @@ h6, .h6,
 }
 .abstract p {
   text-align: justify; 
-  padding: 0 .5em;
+  padding: 0 .5rem;
 }
 #title-block-header.quarto-title-block.default .keywords p:last-of-type, 
 #title-block-header.quarto-title-block.default .deserifion p:last-of-type, 
@@ -13186,8 +13141,8 @@ h6, .h6,
   color: $primary;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-left: .5em;
-  margin-right: 1em; 
+  padding-left: .5rem;
+  margin-right: 1rem; 
 }
 p.date::before {
   content: 'Published:';
@@ -13197,7 +13152,7 @@ p.date-modified::before {
 }
 #quarto-appendix.default {
   background: $body-bg;
-  padding: 1rem 2em 0;
+  padding: 1rem 2rem 0;
   margin: 2rem 0 0;
   border: none;
 }
@@ -13218,7 +13173,7 @@ h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
   line-height: 2rem;
   cursor: unset;
   transform: rotate(-.8deg);
-  border-bottom: 2px solid rgba($primary, .45);
+  border-bottom: 3px solid rgba($primary, .25);
   max-width: 15rem;
   opacity: 1;
 }
@@ -13229,20 +13184,37 @@ h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
 
 /* Boostrap and listing cards */
 .card {
-  margin: 1rem 1em 0 0;
+  margin: 1rem 1rem 0 0;
 }
-.quarto-grid-item p.card-img-top {
-  margin-bottom: 1rem;
+.quarto-grid-item p.card-img-top, .thumbnail p.card-img-top {
+  overflow: clip; 
+  padding: .75rem .75rem 1rem .75rem;
+  margin: 0 0 1rem 0;
+  background-color: rgba($white, .85);
+  box-shadow: rgba($gray, 0.04) 0px 0px 0px 1px, rgba($darkgray, 0.04) 0px 1px 1px -0.5px, rgba($darkgray, 0.04) 0px 3px 3px -1.5px, rgba($darkgray, 0.04) 0px 6px 6px -3px, rgba($gray, 0.04) 0px 12px 12px -6px, rgba($gray, 0.04) 0px 24px 24px -12px;  
 }
-.quarto-grid-item .card-title {
+img.card-img {
+  width: 100%; 
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+img.card-img::before {
+  content: url(../staple.svg);
+  display: absolute;
+  width: 1rem;
+  top: 1rem;
+  right: 1rem;
+}
+img.card-img:hover {
+  transform: scale(1.25);
+}
+.quarto-grid-item h5.card-title, h3.listing-title {
   color: $card-title-color;
-  font-size: unset;
-  padding: 0;
-  margin: $card-title-spacer-y $card-title-spacer-x;
+  font-size: $h5-font-size;
+  margin: 1rem 0;
 } 
 .quarto-grid-item .card-text {
   font-size: unset;
-  margin: $card-spacer-y $card-spacer-x;
 } 
 .quarto-grid-item .card-text-small {
   font-size: $code-font-size;
@@ -13274,6 +13246,9 @@ h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
   margin: 1rem .5em 1rem 0;
   padding: 0;
 }
+.list {
+  margin: 1rem 0;
+}
 
 /* Code blocks */
 pre, code, pre code {
@@ -13292,21 +13267,23 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   padding: 0 .25rem;
 }
 .code-with-filename .code-with-filename-file {
-  color: $headings-font-color;
-  font-size: $code-font-size;
-  line-height: 2rem;
-  background-color: $gray-100;
-  padding: 0 1em;
-  border: 1px solid $gray-100;
+  background-color: $table-striped-bg;
+  padding: 0 1rem;
+  border: 1px solid $table-striped-bg;
   border-radius: $border-radius $border-radius 0 0;
 }
+.code-with-filename pre {
+  color: $headings-font-color;
+  font-size: $code-font-size;
+  line-height: calc(2rem - 2px);
+}
 div.sourceCode, details, .cell {
-  margin: 1rem 0;
+  margin: 0 0 2rem 0;
 }
 div.sourceCode {
   background-color: $shaded;
   border: none;
-  padding: 1rem 1em .5rem;
+  padding: 1rem 1rem .5rem;
 }
 pre.sourceCode {
   font-size: $code-font-size;
@@ -13327,20 +13304,20 @@ pre.sourceCode {
 
 /* Tables */
 table, table.table {
-  margin: 1rem 0 calc(2rem - 3px);
+  margin: .5rem 0;
   border: none;
   border-top: 1px solid $border-color;
   background-color: $shaded;  
 }
 .table>:not(caption)>*>* {
-  padding: 0 .5em;
+  padding: 0 .5rem;
 }
 .table th {
   color: $headings-font-color;
   font-family: $font-sans-serif;
   font-size: $code-font-size;
   font-weight: 500;
-  line-height: 2rem;
+  line-height: calc(2rem - 1px);
   border: none;
 }
 .table tbody {
@@ -13350,11 +13327,10 @@ table, table.table {
 .table td {
   line-height: calc(2rem - 1px);
   border: none;
-  border-bottom: 1px solid rgba($darkgray, .95);  
+  border-bottom: 1px solid $darkgray;  
 }
-.table-borderless td, .table tr:last-of-type td, .table-secondary td {
-  line-height: 2rem;
-  border: none;
+.table-borderless td, .table tr:last-of-type td, .table-striped td {
+  border-bottom: none; 
 }
 
 
@@ -13368,36 +13344,25 @@ div.aside, aside, .column-margin {
   text-align: left;
   padding: 0;
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .column-margin.column-container p {
   margin-bottom: 1rem;
 }
-.aside, .column-margin {
+.aside, .column-margin, .aside p, .column-margin p {
   font-family: $font-family-base;
   font-size: $small-font-size;
+  line-height: 1.75rem;
 }
 
 
 /* Figures */
-.figure-img, .card-img-top {
+.figure {
+  margin: 0;
+}
+.figure-img {
   background-color: $shaded;
   padding: 0;
-}
-.card-img-top {
-  transition: transform 0.3s ease;
-}
-.card-img-top:hover {
-  transform: scale(1.025);
-}
-.card-img-top img, .figure-img img {
-  overflow: clip;
-  width: 100%;
-  filter: drop-shadow(.5rem .5rem .25rem $shaded) drop-shadow(-.5rem -.5rem .25rem $shaded);  
-  margin: 0 0 .5rem;  
-}
-.card-img, .card-img-top, .card-img-bottom {
-  width: unset;
 }
 .img-thumbnail {
   padding: 0;
@@ -13410,7 +13375,7 @@ div.aside, aside, .column-margin {
   border-radius: 6rem;
   display: block;
   margin: 2rem auto 0 auto;
-  width: 9em;
+  width: 9rem;
 }
 
 
@@ -13452,10 +13417,27 @@ div.aside, aside, .column-margin {
     linear-gradient(to bottom, $darkgray, transparent 1px, transparent);
     background-color: $body-bg;;
     background-size: 2rem 2rem ;
-    background-position: -.5rem -.5rem;
+    background-position: 0 -.5rem;
     background-repeat: repeat;
 }
-#quarto-search input {
+.navbar, .quarto-banner nav.quarto-secondary-nav {
+  padding: 0;
+  margin: 0 1rem;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid $border-color;   
+}
+body.nav-sidebar .quarto-title-banner {
+  padding: 0 !important;
+  margin: 1px 0 0 0  !important;
+  border-top: 1px solid $border-color;
+}
+.quarto-title-meta {
+  padding: 1rem 0 0 0;
+}
+.navbar #quarto-search {
+  margin: 0 0 0 2rem;
+}
+.navbar #quarto-search input {
   font-size: unset;
 }
 #quarto-announcement {
@@ -13468,22 +13450,12 @@ body.nav-sidebar .quarto-title-banner {
   margin-bottom: 2rem;
   padding: 0;
 }
-#title-block-header {
-  margin-block-end: unset;
-  margin-top: unset;
-  border-top: 1px solid $border-color;
+.page-columns .column-screen-inset-shaded {
+  padding: 1rem 1rem .5rem 1rem;
+  background-color: $shaded;
 }
-.column-screen-inset-shaded {
-  padding: 1rem 2em;
-  background: $shaded;
-}
-.navbar, .quarto-banner nav.quarto-secondary-nav {
-  min-height: 5rem;
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid $border-color;  
-}
-.navbar #quarto-search {
-  margin: 0 0 0 1em;
+.column-margin.column-container>*:not(.collapse):first-child {
+  padding-bottom: unset;
 }
 .panel-tabset>.nav-tabs {
   line-height: 3rem;  
@@ -13494,7 +13466,7 @@ body.nav-sidebar .quarto-title-banner {
 }
 .navbar .nav-item:not(.compact) .nav-link,
 .nav-tabs .nav-item .nav-link {
-  margin-right: .25em;
+  margin-right: .25rem;
   border: none;
   border-top: solid 3px transparent;
   border-bottom: solid 3px transparent;
@@ -13509,7 +13481,7 @@ body.nav-sidebar .quarto-title-banner {
 }
 .navbar-title {
   font-family: $headings-font-family;
-  line-height: 3rem;
+  line-height: 4rem;
 }
 .navbar-logo {
   max-height: 7rem;
@@ -13517,18 +13489,19 @@ body.nav-sidebar .quarto-title-banner {
   top: 1rem;
 }
 footer.footer {
-  padding-top: 1rem;
+  padding: 0 4rem 0 0;
 }
 footer.footer .nav-footer {
+  border-top: 1px solid $border-color;
   margin: 0;
-  padding: 1rem 2em;
-  border-top: 1px solid $darkgray;
+  padding: 1rem 0 1rem 2rem;
 }
-.nav-footer .nav-footer-left,
-.nav-footer .nav-footer-right,
-.nav-footer .nav-footer-center {
+.nav-footer .nav-footer-left p,
+.nav-footer .nav-footer-right p,
+.nav-footer .nav-footer-center p {
   font-family: $font-sans-serif;
   font-size: $code-font-size;
+  line-height: 1.5rem;
 }
 .nav-footer-center {
   display: none;

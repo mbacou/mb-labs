@@ -1,6 +1,6 @@
 ---
 title: People, Space, and Statistics
-subtitle: Informed citizens make better policy choices; better policies save <span class="text-primary">lives</span> and <span class="text-primary">resources</span>.
+subtitle: Informed citizens make better policy choices; better policies save [***lives***]{.bg-warning-subtle .px-1} and [***resources***.]{.bg-warning-subtle .px-1}
 date: 2010-05-01
 date-modified: last-modified
 categories:
@@ -9,12 +9,9 @@ categories:
   - dataviz
 toc: false
 grid:
+  body-width: 810px
   sidebar-width: 0px
-  margin-width: 390px
-  gutter-width: 60px
-brand:
-  color:
-    primary: blue
+  margin-width: 250px
   
 listing:
   - id: lst-posts
@@ -24,9 +21,10 @@ listing:
     filter-ui: false
     sort-ui: false
     sort: date desc
-    type: grid
+    type: default
     max-items: 9
-    image-height: 210px    
+    image-align: right
+    image-height: 210px
     fields: [title, description, image, date, author, categories, reading-time]
     exclude: 
       category: [skip*]
@@ -46,38 +44,29 @@ listing:
 ---
 
 
-::: {.aside .bg-secondary-subtle .pt-2 .px-2 .mt-md-n5 .mt-5 .mb-2 .rot}
+::: {.aside .bg-info-subtle .p-2 .mt-md-n5 .mt-5 .mb-2 .rot .bg-shadow}
 
 ![](posts/resume/_fig/profile.jpg){.img-rounded .shadow-sm .mt-n5}
 
-::: {.text-serif .text-secondary}
-A blog on econometrics, spatial statistics, remote sensing, and scientific visualization -- with code samples in <mark>`R, Python, JS`</mark> and <mark>`D3.js`</mark>.
+::: {.text-serif .text-info}
+A blog on econometrics, spatial statistics, remote sensing, and scientific visualization -- with code samples mostly in `R`, `Python`, `JS` and `D3.js`.
 
 Topics range from sustainable agriculture and food security, to policies for equitable trade, growth and development, and the geopolitics of natural resources.
 
 You will also find book and article reviews, and the occasional shout-out and opinion pieces. 
 
-Check out my [full bio](./posts/resume/index.qmd) for contact details.
+Check out my full bio for contact details.
 :::
 :::
 
 ::: {.aside .bg-warning-subtle .px-2}
-```{=html}
-
-<script type="text/javascript">
-var listID = 'PLMEI8z_d3EZGRnn8nGh3f6A7zwT4wDmVU';
-var numberOfVideos = 200;
-var randomizer = Math.floor(Math.random() * numberOfVideos + 1);
-
-document.writeln('<iframe id="yt-video" class="quarto-video" src="//www.youtube.com/embed?listType=playlist&list=' + listID + '&index=' + randomizer + '&autoplay=1&loop=0&controls=1&showinfo=0" frameborder=0 height="44" width="100%"></iframe>Play to support my favorite artists.');
-</script>
-```
+{{< video https://youtube.com/watch?v=gtqj8HuN1hs&list=PLMEI8z_d3EZGRnn8nGh3f6A7zwT4wDmVU height='46px' width='100%' >}} [{{< bi music-note-list >}} Play to support my favorite artists.]{.text-serif}
 :::
 
 
 ## Featured Projects
 
-The work I deliver for public agencies is to be found in [code repositories](https://github.com/mbacou/) on Github. Other (restricted or confidential) projects are outlined in the [portfolio](./portfolio.qmd) section of this website.
+Statistical work I deliver for public agencies typically lives in [code repositories](https://github.com/mbacou/) on Github. Other projects (sometimes restricted or confidential) are showcased in the [portfolio](./portfolio.qmd) section of this website.
 
 ::: {#lst-featured}
 :::

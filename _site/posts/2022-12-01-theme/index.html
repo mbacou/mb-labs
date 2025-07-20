@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.14">
+<meta name="generator" content="quarto-1.8.17">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Melanie BACOU">
 <meta name="dcterms.date" content="2023-10-01">
 
-<title>Time to Migrate this Blog from Distill to Quarto – Mel B. my-blog</title>
+<title>Time to Migrate this Blog from Distill to Quarto – Mel B. mb-labs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,10 +94,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-710c27272266bbb8e3680908660a8b9b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-68ad290c126038dee0303365d657d768.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b412c6cceb3deddeff68198aa7466022.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-89abb8facb2787ad7fe9566e32ac7001.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
@@ -132,7 +132,7 @@ div.csl-indent {
 <style>
 
       .quarto-title-block .quarto-title-banner {
-        background: var(--bs-light);
+        background: var(--bs-shaded);
       }
 </style>
 <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
@@ -146,10 +146,10 @@ div.csl-indent {
 <script src="../../site_libs/leaflet-binding-2.2.2.9000/leaflet.js"></script>
 
 
-<meta property="og:title" content="Time to Migrate this Blog from Distill to Quarto – Mel B. my-blog">
+<meta property="og:title" content="Time to Migrate this Blog from Distill to Quarto – Mel B. mb-labs">
 <meta property="og:description" content="A post about literate programming in general and Quarto formats in particular, in which I document migrating this personal blog from Distill to Quarto. Compared to J.J. Allaire’s Distill for R Markdown, Posit® Quarto Markdown uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way.">
 <meta property="og:image" content="https://mbacou.com/posts/2022-12-01-theme/index_files/figure-html/unnamed-chunk-11-1.png">
-<meta property="og:site_name" content="Mel B. my-blog">
+<meta property="og:site_name" content="Mel B. mb-labs">
 <meta property="og:image:height" content="990">
 <meta property="og:image:width" content="1540">
 </head>
@@ -164,8 +164,10 @@ div.csl-indent {
     <nav class="navbar navbar-expand " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Mel B. my-blog</span>
+    <span class="navbar-title">mb-labs</span>
     </a>
   </div>
         <div class="quarto-navbar-tools tools-wide tools-end">
@@ -221,7 +223,7 @@ div.csl-indent {
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">July 11, 2025</p>
+        <p class="date-modified">July 20, 2025</p>
       </div>
     </div>
       
@@ -237,6 +239,10 @@ div.csl-indent {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
@@ -277,14 +283,14 @@ div.csl-indent {
 
 <p>With the release of <strong>Quarto 1.4</strong> (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as <strong>Emacs org-mode</strong>, <strong>Rmarkdown</strong> and <strong>Jupyter</strong> notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.</p>
 
-<div class="no-row-height column-margin column-container"><div class="bg-info-subtle text-info text-serif px-2 pt-2">
+<div class="no-row-height column-margin column-container"><div class="rot bg-info-subtle text-info text-serif p-2 mt-md-2">
 <p>No other reason for this map below but to showcase Quarto’s new content layout features – I am a fan of Soviet-era classic topo styles. Check out Russian <a href="https://sovietmaps.com/">cartography</a>, it is stunning work.</p>
-<p>This margin note uses a custom <code>&lt;div class="column-margin bg-info-subtle text-info px-2"&gt;</code> making use of both Quarto and Boostrap’s CSS utilities.</p>
+<p>This margin note uses a custom <code>&lt;div class="column-margin bg-info-subtle text-info p-2"&gt;</code> making use of both Quarto and Boostrap’s CSS utilities.</p>
 <p>The margin column is <strong>responsive</strong>, content will be moved to the body column on smaller display sizes.</p>
 </div></div><div class="cell page-columns page-full">
 <div class="cell-output-display column-page-left">
-<div id="htmlwidget-96a48453591961368c5f" style="width:100%;height:17rem;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-96a48453591961368c5f">{"x":{"options":{"minZoom":11,"maxZoom":13,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://proxy.nakarte.me/http/88.99.52.155/tmg/{z}/{x}/{y}",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"sovietmap.com"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below...",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-290f99b47da83d3a5bef" style="width:100%;height:17rem;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-290f99b47da83d3a5bef">{"x":{"options":{"minZoom":11,"maxZoom":13,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://proxy.nakarte.me/http/88.99.52.155/tmg/{z}/{x}/{y}",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"sovietmap.com"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below...",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Old-time researchers and engineers have long used <a href="https://orgmode.org/">Emacs <code>Org-Mode</code></a> (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to <em>Eric Schulte</em>’s incredible <strong>Babel</strong> extension <span class="citation" data-cites="schulte2012">(see <a href="#ref-schulte2012" role="doc-biblioref">Schulte et al. 2012</a>)</span> and to <em>John MacFarlane</em>’s <a href="https://pandoc.org/">Pandoc</a> document converter library – but nowadays <strong>Quarto</strong> makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as <strong>in-browser real-time rendering of documents</strong>.</p>
@@ -356,7 +362,7 @@ div.csl-indent {
 <div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;Refer to <a href="https://quarto.org/docs/authoring/article-layout.html#available-columns">Quarto CSS classes</a> official documentation.</p></div></div><div class="column-page-right">
 <table class="table">
 <colgroup>
-<col style="width: 22%">
+<col style="width: 21%">
 <col style="width: 38%">
 <col style="width: 38%">
 </colgroup>
@@ -447,52 +453,50 @@ column: screen-right</code></pre></td>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="fu">color</span><span class="kw">:</span></span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">palette</span><span class="kw">:</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">white</span><span class="kw">:</span><span class="at">     </span><span class="st">"#ffffff"</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">black</span><span class="kw">:</span><span class="at">     </span><span class="st">"#000000"</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">blue</span><span class="kw">:</span><span class="at">      </span><span class="st">"#3daee9"</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">purple</span><span class="kw">:</span><span class="at">    </span><span class="st">"#9b59b6"</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">indigo</span><span class="kw">:</span><span class="at">    </span><span class="st">"#98796f"</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pink</span><span class="kw">:</span><span class="at">      </span><span class="st">"#aea39a"</span></span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">red</span><span class="kw">:</span><span class="at">       </span><span class="st">"#da4453"</span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">orange</span><span class="kw">:</span><span class="at">    </span><span class="st">"#ffac5e"</span></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">yellow</span><span class="kw">:</span><span class="at">    </span><span class="st">"#eed04c"</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">green</span><span class="kw">:</span><span class="at">     </span><span class="st">"#27ae60"</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">teal</span><span class="kw">:</span><span class="at">      </span><span class="st">"#445e64"</span></span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">cyan</span><span class="kw">:</span><span class="at">      </span><span class="st">"#789494"</span></span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">dark</span><span class="kw">:</span><span class="at">      </span><span class="st">"#222e32"</span></span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">light</span><span class="kw">:</span><span class="at">     </span><span class="st">"#fdfcf9"</span></span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">gray</span><span class="kw">:</span><span class="at">      </span><span class="st">"#505050"</span></span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">darkgray</span><span class="kw">:</span><span class="at">  </span><span class="st">"#e7e2da"</span><span class="at">   </span></span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span></span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">foreground</span><span class="kw">:</span><span class="at">   gray</span></span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">background</span><span class="kw">:</span><span class="at">   light</span></span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at">      </span><span class="st">"#fca5a5"</span></span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="fu">typography</span><span class="kw">:</span></span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">fonts</span><span class="kw">:</span></span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
-<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
-<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">,</span><span class="at"> </span><span class="dv">500</span><span class="kw">]</span></span>
-<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> M PLUS Code Latin</span></span>
-<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">,</span><span class="at"> </span><span class="dv">500</span><span class="kw">]</span></span>
-<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Marck Script</span></span>
-<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">]</span></span>
-<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="at">  </span></span>
-<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
-<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">headings</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">family</span><span class="kw">:</span><span class="at"> M PLUS Code Latin</span></span>
-<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">monospace</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">family</span><span class="kw">:</span><span class="at"> M PLUS Code Latin</span></span>
-<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="at">  </span></span></code></pre></div>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">blue</span><span class="kw">:</span><span class="at">      </span><span class="st">"#3daee9"</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">purple</span><span class="kw">:</span><span class="at">    </span><span class="st">"#9b59b6"</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">indigo</span><span class="kw">:</span><span class="at">    </span><span class="st">"#98796f"</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pink</span><span class="kw">:</span><span class="at">      </span><span class="st">"#aea39a"</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">red</span><span class="kw">:</span><span class="at">       </span><span class="st">"#da4453"</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">orange</span><span class="kw">:</span><span class="at">    </span><span class="st">"#ffac5e"</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">yellow</span><span class="kw">:</span><span class="at">    </span><span class="st">"#eed04c"</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">green</span><span class="kw">:</span><span class="at">     </span><span class="st">"#27ae60"</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">teal</span><span class="kw">:</span><span class="at">      </span><span class="st">"#445e64"</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">cyan</span><span class="kw">:</span><span class="at">      </span><span class="st">"#789494"</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">dark</span><span class="kw">:</span><span class="at">      </span><span class="st">"#222e32"</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">light</span><span class="kw">:</span><span class="at">     </span><span class="st">"#fdfcf9"</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">gray</span><span class="kw">:</span><span class="at">      </span><span class="st">"#505050"</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">darkgray</span><span class="kw">:</span><span class="at">  </span><span class="st">"#e7e2da"</span><span class="at">   </span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">foreground</span><span class="kw">:</span><span class="at">   gray</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">background</span><span class="kw">:</span><span class="at">   light</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at">      tint-color(red, 25%)</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">secondary</span><span class="kw">:</span><span class="at">    purple</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="fu">typography</span><span class="kw">:</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">fonts</span><span class="kw">:</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">,</span><span class="at"> </span><span class="dv">500</span><span class="kw">,</span><span class="at"> </span><span class="dv">600</span><span class="kw">]</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> M PLUS Code Latin</span></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">,</span><span class="at"> </span><span class="dv">500</span><span class="kw">]</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Marck Script</span></span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">]</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="at">  </span></span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">headings</span><span class="kw">:</span><span class="at"> M PLUS Code Latin</span></span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">monospace</span><span class="kw">:</span><span class="at"> M PLUS Code Latin</span></span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="at">  </span></span></code></pre></div>
 </div>
 </div>
 <p>The active Bootstrap color palette is rendered below.</p>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(yaml)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">&lt;-</span> <span class="fu">read_yaml</span>(<span class="st">"../../_brand.yml"</span>)<span class="sc">$</span>color<span class="sc">$</span>palette <span class="sc">|&gt;</span> <span class="fu">unlist</span>()</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">&lt;-</span> <span class="fu">read_yaml</span>(<span class="st">"../../assets/scss/_brand.yml"</span>)<span class="sc">$</span>color<span class="sc">$</span>palette <span class="sc">|&gt;</span> <span class="fu">unlist</span>()</span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(pal) <span class="sc">|&gt;</span></span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lapply</span>(<span class="cf">function</span>(i) <span class="fu">div</span>(<span class="at">class=</span><span class="fu">paste0</span>(</span>
 <span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"g-col-3 small rounded text-center p-2 bg-"</span>, i), </span>
@@ -500,8 +504,6 @@ column: screen-right</code></pre></td>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tagList</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">div</span>(<span class="at">class=</span><span class="st">"grid"</span>, <span class="at">style=</span><span class="st">"--bs-gap: .5em;"</span>)</span></code></pre></div>
 <div class="grid" style="--bs-gap: .5em;">
-<div class="g-col-3 small rounded text-center p-2 bg-white">white <br>( #ffffff )</div>
-<div class="g-col-3 small rounded text-center p-2 bg-black">black <br>( #000000 )</div>
 <div class="g-col-3 small rounded text-center p-2 bg-blue">blue <br>( #3daee9 )</div>
 <div class="g-col-3 small rounded text-center p-2 bg-purple">purple <br>( #9b59b6 )</div>
 <div class="g-col-3 small rounded text-center p-2 bg-indigo">indigo <br>( #98796f )</div>
@@ -532,7 +534,7 @@ column: screen-right</code></pre></td>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Note that there are 6 types of callout blocks, including: <code>default</code>, <code>note</code>, <code>warning</code>, <code>important</code>, <code>tip</code>, and <code>caution</code>. This is the <strong>default</strong> callout style.</p>
+<p>Note that there are 6 styles of callout blocks, including: <code>default</code>, <code>note</code>, <code>warning</code>, <code>important</code>, <code>tip</code>, and <code>caution</code>. This block is a <code>default</code> callout.</p>
 </div>
 </div>
 </div>
@@ -546,12 +548,12 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is a <strong>note</strong>.</p>
+<p>This is a simple <strong>note</strong> with no title.</p>
 </div>
 </div>
 <div class="sourceCode" id="cb17"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>::: callout-tip</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">### Callout title</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>This is an example of a **tip** callout with a title.</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">### Callout tip</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>Below is an example of a **tip** callout with a title (h3).</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -559,16 +561,16 @@ Note
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Callout title
+<span class="screen-reader-only">Tip</span>Callout tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is an example of a <strong>tip</strong> with a title.</p>
+<p>This is an example of a <strong>tip</strong> block with a title.</p>
 </div>
 </div>
 <div class="sourceCode" id="cb18"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>::: callout-caution collapse="true"</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">### Expand to learn about collapse</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>This is an example of a 'collapsible' **caution** callout</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>Below is an example of a 'collapsible' **caution** callout.</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -582,7 +584,7 @@ Note
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This is an example of a collapsible <strong>caution</strong> callout box. You can use <code>collapse="true"</code> to collapse it by default or <code>collapse="false"</code> to make a collapsible callout that is expanded by default.</p>
+<p>This is an example of a collapsible <strong>caution</strong> callout block. You can use <code>collapse="true"</code> to collapse it by default or <code>collapse="false"</code> for a callout that is expanded by default.</p>
 </div>
 </div>
 </div>
@@ -596,7 +598,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is a callout with a header title.</p>
+<p>This is an <strong>important</strong> callout with a title.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled" title="Warning">
@@ -609,52 +611,48 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is an <strong>important</strong> callout with a title.</p>
+<p>This is an <strong>warning</strong> callout with a title.</p>
 </div>
 </div>
 </section>
 <section id="typography" class="level1 page-columns page-full">
 <h1>Typography</h1>
-<p>Bootstrap default line-height and font sizing typically work, but I like to enforce a strict vertical baseline whenever possible<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, so I make sure to define all vertical spacing and padding as multiple of a standard line height of <code>$spacer</code>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;About <strong>vertical rhythm</strong> amd why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div></div><div class="cell">
+<p>Bootstrap default line-height and font sizing typically work, but I like to enforce a strict vertical rhythm whenever possible<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, so I make sure to define all vertical spacing and padding as multiples of a standard line height of <code>$spacer</code>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;About <strong>vertical rhythm</strong> and why it matters for content readability, see <a href="https://hnldesign.hashnode.dev/setting-a-flexible-baseline-grid-in-css">Klaas Leussink</a> article on his personal blog.</p></div></div><div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>./assets/scss/theme.scss</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode scss"><code class="sourceCode scss"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="va">$body-bg</span>:    <span class="va">$light</span><span class="op">;</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="va">$link-color</span>: <span class="va">$gray-700</span><span class="op">;</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="va">$text-muted</span>: <span class="va">$gray-800</span><span class="op">;</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="va">$code-color</span>: <span class="va">$gray-600</span><span class="op">;</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="va">$shaded</span>: <span class="fu">rgba(</span><span class="va">$body-bg</span><span class="op">,</span> <span class="dv">75</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span>                     <span class="co">// also $input-bg</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="va">$font-weight-bold</span>: <span class="dv">600</span><span class="op">;</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="va">$headings-font-weight</span>: <span class="dv">400</span><span class="op">;</span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="va">$headings-font-color</span>: <span class="va">$gray-900</span><span class="op">;</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="va">$spacer</span>: <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span>                                   <span class="co">// 30px line-height</span></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="va">$spacers</span>: (</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0</span>: <span class="dv">0</span><span class="op">,</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">.25</span><span class="op">,</span></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">.5</span><span class="op">,</span></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>  <span class="dv">3</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>  <span class="dv">4</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">1.5</span><span class="op">,</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>  <span class="dv">5</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="va">$font-size-base</span>:  <span class="dv">20</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span>                   <span class="co">// 1rem = 15px in `_quarto.yml`</span></span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="va">$small-font-size</span>: <span class="dv">18</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="va">$code-font-size</span>:  <span class="dv">15</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="va">$sub-sup-font-size</span>: <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
-<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a><span class="va">$h1-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span> <span class="dv">14</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 34px</span></span>
-<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="va">$h2-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">8</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 28px</span></span>
-<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="va">$h3-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">6</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 26px</span></span>
-<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a><span class="va">$h4-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">4</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 24px</span></span>
-<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="va">$h5-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">2</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 22px</span></span>
-<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="va">$h6-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">-</span>  <span class="dv">0</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode scss"><code class="sourceCode scss"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="va">$font-weight-bold</span>: <span class="dv">500</span><span class="op">;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="va">$headings-font-weight</span>: <span class="dv">400</span><span class="op">;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="va">$headings-font-color</span>: <span class="va">$dark</span><span class="op">;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="va">$spacer</span>: <span class="dv">2</span><span class="dt">rem</span><span class="op">;</span>                           <span class="co">// 30px line-height</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="va">$spacers</span>: (</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0</span>: <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">.25</span><span class="op">,</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">.5</span><span class="op">,</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="dv">3</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="dv">4</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">1.5</span><span class="op">,</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="dv">5</span>: <span class="va">$spacer</span> <span class="op">*</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="va">$font-size-base</span>:  <span class="dv">20</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span>          <span class="co">// 1rem = 15px in `_quarto.yml`</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="va">$small-font-size</span>: <span class="dv">18</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="va">$code-font-size</span>:  <span class="dv">15</span><span class="op">/</span><span class="dv">15</span> <span class="op">*</span> <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="va">$sub-sup-font-size</span>: <span class="dv">1</span><span class="dt">rem</span><span class="op">;</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="va">$h1-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span> <span class="dv">14</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 34px</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="va">$h2-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">8</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 28px</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="va">$h3-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">6</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 26px</span></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="va">$h4-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">4</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 24px</span></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a><span class="va">$h5-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">+</span>  <span class="dv">2</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span>    <span class="co">// 22px</span></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="va">$h6-font-size</span>:  <span class="fu">calc(</span><span class="va">$font-size-base</span> <span class="op">-</span>  <span class="dv">0</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="va">$line-height-base</span>: <span class="fu">calc(</span><span class="va">$spacer</span> <span class="op">/</span> <span class="va">$font-size-base</span><span class="fu">)</span><span class="op">;</span></span></code></pre></div>
 </div>
 </div>
-<p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>. Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred <span class="shaded"><code>.shaded</code></span> and a <span class="striped"><code>.striped</code></span>. This theme uses <span class="text-muted">.text-muted</span> for all post metadata, for end- and margin-notes, and for captioning.</p>
+<p>No additional changes to font definitions aside from using <code>Crimson Pro</code> and <code>M+ Code</code> fonts<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>. Here are <strong>bold</strong>, <em>italic</em>, and <small>smaller</small> text spans. Here is <sup>superscript</sup> and <sub>subscript</sub> text, and <del>strikethrough</del> notes. Semantic colors with e.g.&nbsp;<span class="text-info">.text-info</span> provide accented text. I have added 2 background classes for my own use, a semi-transparent and blurred <span class="bg-shaded"><code>.bg-shaded</code></span> and a <span class="bg-striped"><code>.bg-striped</code></span>. This theme uses <span class="text-muted">.text-muted</span> for all post metadata, margin notes, and captioning.</p>
 <div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;M+ font system was designed by Japanese artist <a href="https://mplusfonts.github.io/">Coji Morishita</a> with extended support for Latin, Japanese, Cyrillic. It is an excellent monospace font for smaller display sizes.</p></div></div><section id="heading-2" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="heading-2">Heading 2</h2>
 <p>Sample paragraph content.</p>
@@ -662,7 +660,11 @@ Note
 <h3 class="anchored" data-anchor-id="heading-3">Heading 3</h3>
 <p>Sample paragraph content with list of items:</p>
 <ul>
-<li>List 1</li>
+<li>List 1
+<ul>
+<li>List 1.1</li>
+<li>List 1.2</li>
+</ul></li>
 <li>List 2</li>
 <li>List 3</li>
 </ul>
@@ -672,23 +674,26 @@ Note
 <li>List 2</li>
 <li>List 3</li>
 </ol>
-<p>Finally a normal rule <code>&lt;hr/&gt;</code> element.</p>
+<p>Finally a normal rule <code>hr</code> element.</p>
 <hr>
 <p>And a paragraph after the rule.</p>
 <section id="heading-4" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="heading-4">Heading 4</h4>
 <p>Sample paragraph content.</p>
 <blockquote class="blockquote">
-<p>Blockquote title Blockquote content comes here… <small>– Quote source / author or reference</small></p>
+<p>Blockquote title<br>
+Blockquote content here…<br>
+<small>– Quote source / author or reference</small></p>
 </blockquote>
 <p>Sample paragraph content after blockquote.</p>
 <section id="heading-5" class="level5 page-columns page-full">
 <h5 class="anchored" data-anchor-id="heading-5">Heading 5</h5>
-<p>Here is a footnote reference<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> and another much longer one<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the YAML front matter.</p>
-<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Here is a short margin note (footnote).</p></div><div id="fn10"><p><sup>10</sup>&nbsp;Here’s one with multiple paragraph blocks.</p>
+<p>Here is a long footnote reference<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. Caption and footnote placement can be controlled in the config files <code>_quarto_yml</code> and/or <code>_metadata.yml</code>, or directly in the YAML front matter.</p>
+<div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;Here’s a margin note with multiple paragraph blocks and a fancy section header.</p>
+<h5 id="heading-5-1" class="anchored">Heading 5</h5>
 <p>With subsequent paragraphs indented to show that they belong to the previous footnote.</p></div></div><section id="section-6" class="level6">
 <h6 class="anchored" data-anchor-id="section-6">Section 6</h6>
-<p>Headers at level 6 used as section dividers.</p>
+<p>Finally, headers at level 6 are used here as section dividers.</p>
 </section>
 </section>
 </section>
@@ -763,6 +768,29 @@ Note
 </table>
 <table class="table-striped table-hover table-sm table-secondary small table">
 <caption>Caption: striped hover sm secondary</caption>
+<thead>
+<tr class="header">
+<th>fruit</th>
+<th>price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>apple</td>
+<td>2.05</td>
+</tr>
+<tr class="even">
+<td>pear</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>orange</td>
+<td>3.09</td>
+</tr>
+</tbody>
+</table>
+<table class="table-striped table-sm table-primary small table">
+<caption>Caption: sm primary</caption>
 <thead>
 <tr class="header">
 <th>fruit</th>
@@ -1016,7 +1044,7 @@ Note
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mb.themes)</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load my (global) palette from Boostrap theme</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">pal</span>(<span class="st">"../../_brand.yml"</span>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">pal</span>(<span class="st">"../../assets/scss/_brand.yml"</span>)</span>
 <span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>scales<span class="sc">::</span><span class="fu">show_col</span>(<span class="fu">pal</span>())</span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -1542,7 +1570,7 @@ BACOU, Melanie. 2023. <span>“Time to Migrate This Blog from *Distill* to
   <div class="nav-footer">
     <div class="nav-footer-left">
 <p><strong>BACOU, Melanie © 2024</strong> / Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.</p>
-<p>All views here are strictly my own and do <u>not</u> reflect that of employers, project partners or clients. Refer to each article for citation, code and data reuse.</p>
+<p><span>All views here are strictly my own and do <u>not</u> reflect that of employers, project partners or clients. Refer to each article for citation, code and data reuse.</span>.text-muted}</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
