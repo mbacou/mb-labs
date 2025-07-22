@@ -7,6 +7,7 @@ image: _fig/profile.jpg
 date: 2024-01-01
 date-modified: last-modified
 toc-depth: 2
+title-block-banner: _fig/banner.svg
 freeze: true
 category: skip
 citation: false
@@ -75,7 +76,7 @@ Quantitative and spatial analysis, cost/benefit analysis, household surveys and 
 ### International Water Management Institute (IWMI)
 
 ::: aside
-![](_fig/iwmi.jpg){.mt-md-2 width="6em"}
+![](_fig/iwmi.jpg){.mt-2 width="6em"}
 
 Porto, Portugal\
 Aug 2021 -- Jan 2022\
@@ -89,7 +90,7 @@ Designed [complex ETLs](https://mbacou.github.io/WADashboard/) and [interactive 
 ### WorldCover PBC
 
 ::: aside
-![](_fig/wc.jpg){.mt-md-2 width="5em"}
+![](_fig/wc.jpg){.mt-2 width="5em"}
 
 Washington DC\
 Tamale, Ghana\
@@ -105,7 +106,7 @@ WorldCover engineers solutions to better design, target, and deliver affordable 
 ### Bill & Melinda Gates Foundation (BMGF)
 
 ::: aside
-![](_fig/bmgf.jpg){.mt-md-2 width="5em"}
+![](_fig/bmgf.jpg){.mt-2 width="5em"}
 
 Washington DC\
 Seattle WA\
@@ -120,7 +121,7 @@ Business-oriented typologies and characterization of small-holder farming system
 ### Abt Associates Inc.
 
 ::: aside
-![](_fig/abt.svg){.mt-md-2 width="6em"}
+![](_fig/abt.svg){.mt-2 width="6em"}
 
 Washington DC\
 Jun 2017 -- Jul 2017\
@@ -134,7 +135,7 @@ Geospatial analysis to support [USAID AgResults](https://agresults.org/) program
 ### International Food Policy Research Institute (IFPRI)
 
 ::: aside
-![](_fig/ifpri.jpg){.mt-md-2 width="5em"}
+![](_fig/ifpri.jpg){.mt-2 width="5em"}
 
 Washington DC\
 Sep 2014 -- Dec 2016\
@@ -148,7 +149,7 @@ Generated subnational socio-economic and biophysical datasets to inform and upsc
 ### IFPRI -- HarvestChoice Program
 
 ::: aside
-![](_fig/hc.jpg){.mt-md-2 width="5em"}
+![](_fig/hc.jpg){.mt-2 width="5em"}
 
 Washington DC\
 May 2010 -- Aug 2014\
@@ -162,7 +163,7 @@ Research, data and analytics in support of the Global Development Program of the
 ### IFPRI -- AGRODEP Program
 
 ::: aside
-![](_fig/agrodep.jpg){.mt-md-2 width="5em"}
+![](_fig/agrodep.jpg){.mt-2 width="5em"}
 
 Washington DC\
 Dakar, Senegal\
@@ -177,7 +178,7 @@ The African Growth and Development Policy Modeling Consortium is a program spons
 ### Gates Foundation
 
 ::: aside
-![](_fig/bmgf.jpg){.mt-md-2 width="5em"}
+![](_fig/bmgf.jpg){.mt-2 width="5em"}
 
 Washington DC\
 Seattle WA\
@@ -192,7 +193,7 @@ Country diagnostics, segmentation of farm households, and data visualization for
 ### African Development Bank
 
 ::: aside
-![](_fig/afdb.svg){.mt-md-2 width="9em"}
+![](_fig/afdb.svg){.mt-2 width="9em"}
 
 Tunis, Tunisia\
 Oct 2008 -- Jan 2009\
@@ -206,7 +207,7 @@ Led a 4-month ICT project for the Bank’s Procurement and Fiduciary Services di
 ### Development Gateway Foundation
 
 ::: aside
-![](_fig/dgf.jpg){.mt-md-2 width="5em"}
+![](_fig/dgf.jpg){.mt-2 width="5em"}
 
 Washington DC\
 May 2008 -- Sep 2008\
@@ -220,7 +221,7 @@ Helped conduct a 5-month evaluation of the relevance, effectiveness and impact, 
 ### Abt Associates Inc.
 
 ::: aside
-![](_fig/abt.svg){.mt-md-2 width="6em"}
+![](_fig/abt.svg){.mt-2 width="6em"}
 
 Washington DC\
 Sana'a, Yemen\
@@ -241,7 +242,7 @@ Managed environmental cost-benefit and regulatory analyses, and program evaluati
 ### Center for Global Trade Analysis (GTAP)
 
 ::: aside
-![](_fig/gtap.png){.mt-md-2 width="9em"}
+![](_fig/gtap.png){.mt-2 width="9em"}
 
 West Lafayette IN\
 2001 -- 2005\
@@ -259,7 +260,7 @@ West Lafayette IN\
 ### Landbouw Economisch Instituut -- Wageningen UR (LEI)
 
 ::: aside
-![](_fig/lei.jpg){.mt-md-2 width="6em"}
+![](_fig/lei.jpg){.mt-2 width="6em"}
 
 Den Haag, The Netherlands\
 Jan 2000 -- Aug 2000\
@@ -274,7 +275,7 @@ Jan 2000 -- Aug 2000\
 ### Purdue University -- Dpt of Agricultural Economics
 
 ::: aside
-![](_fig/purdue.jpg){.mt-md-2 width="5em"}
+![](_fig/purdue.jpg){.mt-2 width="5em"}
 
 West Lafayette IN\
 Harare, Zimbabwe\
@@ -291,7 +292,7 @@ Sep 1998 -- Dec 1999\
 ### Société Générale Emerging Europe Asset Management (SGEEAM)
 
 ::: aside
-![](_fig/sg.jpg){.mt-md-2 width="5em"}
+![](_fig/sg.jpg){.mt-2 width="5em"}
 
 London, UK\
 Jan 1996 -- May 1996\
@@ -307,7 +308,7 @@ Jan 1996 -- May 1996\
 ### FIMATEX S.A.
 
 ::: aside
-![](_fig/fimatex.jpg){.mt-md-2 width="6em"}
+![](_fig/fimatex.jpg){.mt-2 width="6em"}
 
 Paris, France\
 Jul 1995 -- Oct 1995\
@@ -324,7 +325,7 @@ Jul 1995 -- Oct 1995\
 ### SEAT France S.A.
 
 ::: aside
-![](_fig/seat.png){.mt-md-2 width="6em"}
+![](_fig/seat.png){.mt-2 width="6em"}
 
 Cergy Pontoise, France\
 Jan 1995 -- Apr 1995\

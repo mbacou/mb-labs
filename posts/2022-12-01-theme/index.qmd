@@ -1,15 +1,16 @@
 ---
 title: Time to Migrate this Blog from *Distill* to *Quarto*
-subtitle: Mastering Quarto Markdown for literate programming, technical writing, and web publishing
+subtitle: Mastering <mark>Quarto</mark> Markdown for literate programming, technical writing, and web publishing
 date: 2023-10-01
 date-modified: last-modified
+title-block-banner: _fig/banner-02.svg
 categories:
   - quarto
   - dataviz
 draft: false
 freeze: false
 abstract: |
-  A post about **literate programming** in general and Quarto formats in particular, in which I document migrating this personal blog from [Distill](https://rstudio.github.io/distill/) to [Quarto](https://quarto.org/). Compared to *J.J. Allaire's Distill for R Markdown*, **Posit® Quarto Markdown** uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way.
+  A post about **literate programming** in general and Quarto formats in particular, in which I document migrating this personal blog from **Distill** to **Quarto**. Compared to *J.J. Allaire's Distill for R Markdown*, **Posit® Quarto Markdown** uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way.
 ---
 
 With the release of **Quarto 1.4** (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as **Emacs org-mode**, **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.
@@ -42,17 +43,17 @@ In the process of migrating old articles and code notebooks to the Quarto markdo
 
 [^1]: For folks born this century, to **babel** (elips) or to **sweave** (R) is the process of compiling text documents that include both static markup and compile-time executable scripts.
 
-    ![](Donald-Knuth.jpg){.img-rounded width="10em"}
+    ![](_fig/Donald-Knuth.jpg){.img-rounded width="10em"}
 
     The concept of **Literate programming** was introduced in 1984 by the mathematician [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) and was widely popularized thereafter in the engineering community thanks to [org-mode](https://orgmode.org/worg/org-contrib/babel/uses.html) in the Emacs editor.
 
-    ![](Carsten-Dominik.jpg){.img-rounded width="10em"}
+    ![](_fig/Carsten-Dominik.jpg){.img-rounded width="10em"}
 
     Emacs **`Org-Mode`** was created by the astronomer [Carsten Dominik](https://en.wikipedia.org/wiki/Org-mode#:~:text=Org%20Mode%20was%20created%20by,mode%20by%20default%20since%202006) in 2003 and remains to this day one of the most used and madly loved note-taking and GTD (Get-Things-Done) tools, with many of its functionality (agenda, tags, etc.) yet to be ported to any markdown engine.
 
 [^2]: Only keyboard, Baby!
 
-    ![](real-programmers.png){.lightbox}
+    ![](_fig/real-programmers.png){.lightbox}
 
 # CSS Grid System
 
@@ -170,25 +171,29 @@ Note that this table stretches across the right column thanks to Quarto `column-
 
 # Color Scheme
 
-Choosing a color scheme is relatively easy -- you can for example start from your favorite photo or graphic and upload it to one of the many on-line **color palette generators** to extract dominant colors. Below I selected a standard 12-color palette that simply matches my decade-old [Kubuntu desktop](https://store.kde.org/p/1980663)[^4].
+Bootstrap works best with a limited set of **8 semantic color names**. These are well known to Web designers, and for portability's sake it is advised to work within this standard and thus avoid complex naming. Optionally Bootstrap provides classes for an additional [10 + 4 colors](https://getbootstrap.com/docs/5.3/customize/color/#theme-colors) in both **opaque** and **subtle** variants. Most corporate brands stick to a handful of colors, but having a complete categorical palette is useful for more intricate graphical elements and for plots.
+
+Choosing a color scheme is relatively easy -- for example start from your favorite photo or graphic and upload it to one of the many on-line **color palette generators** to extract dominant shades. An alternative is to use a professionally curated **R palette**, such as one available in the `paletteer`, `RBrewer` or `viridis` packages. See [r-charts.com](https://r-charts.com/color-palettes/) for many such examples.
+
+Below I settled for a 12-color palette that simply matches my decade-old [Kubuntu desktop](https://store.kde.org/p/1980663)[^4].
 
 [^4]: KDE, 30 years later, still going strong! My personal KDE color scheme in QGIS and VSCode.
 
     ![](https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png){.lightbox}
 
-    ![](vscode.png){.lightbox}
+    ![](_fig/vscode.png){.lightbox}
 
-Another remarkable tool I have used in the past to generate sensible UI color schemes is [themer.dev](https://themer.dev/)[^5] -- this masterpiece of a library will generate consistent color schemes for Linux desktops and for many consoles, text editors, and IDEs. Check it out!
+Another remarkable tool I have used to generate sensible UI color schemes is [themer.dev](https://themer.dev/)[^5] -- this masterpiece of a library is designed to generate consistent color schemes across Linux desktops and for many consoles, text editors, and IDEs. Check it out!
 
 [^5]: Development environment theme creator
 
-    ![](themer.png){.lightbox}
+    ![](_fig/themer.png){.lightbox}
 
-Moreover as of `Quarto v1.6`, the engine now allows for standard branding elements (colors, fonts) to be defined in standalone `_brand.yml` files on a per-document or per-project basis[^6].
+Moreover as of **Quarto v1.6**, the engine now supports externally-defined branding elements (colors, fonts, etc.) provided in standalone `_brand.yml` files. This is a more unified and flexible approach to organizing document- and project-level branding across multiple output formats[^6].
 
 [^6]: The good folks at Posit further documented this [new feature](https://posit-dev.github.io/brand-yml/).
 
-Note that `brand.yml` can also apply branding to `ggplot2` and `lattice` graphs and charts via the `thematic` R package. This is the approach used in this blog. Below is the `_brand.yml` definition I created for this website.
+Note that `_brand.yml` can also apply branding to `ggplot2`, `base R`, and `lattice` plots via the `thematic` R package. We test this approach here in subsequent sections. Below is the `_brand.yml` definition file created for this website.
 
 ```{yaml}
 #| eval: false
@@ -196,22 +201,14 @@ Note that `brand.yml` can also apply branding to `ggplot2` and `lattice` graphs 
 #| filename: _brand.yml 
 ```
 
-The active Bootstrap color palette is rendered below.
+My active Bootstrap color palette rendered below.
 
 ```{r}
-#| output: asis
-
-library(htmltools)
-library(yaml)
-
-pal <- read_yaml("../../assets/scss/_brand.yml")$color$palette |> unlist()
-names(pal) |>
-  lapply(function(i) div(class=paste0(
-    "g-col-3 small rounded text-center p-2 bg-", i), 
-    HTML(i, "<br/>(", pal[[i]], ")"))) |> 
-  tagList() |> 
-  div(class="grid", style="--bs-gap: .5em;")
+par(bg="transparent")
+yaml::read_yaml("../../assets/scss/_brand.yml")$color$palette |>
+  unname() |> unlist() |> scales::show_col()
 ```
+
 
 # Block Elements
 
@@ -313,12 +310,6 @@ And a paragraph after the rule.
 
 Sample paragraph content.
 
-> Blockquote title\
-  Blockquote content here... \
-  <small>-- Quote source / author or reference</small>
-
-Sample paragraph content after blockquote.
-
 ##### Heading 5
 
 Here is a long footnote reference[^10]. Caption and footnote placement can be controlled in the config files `_quarto_yml` and/or `_metadata.yml`, or directly in the YAML front matter.
@@ -331,7 +322,7 @@ Here is a long footnote reference[^10]. Caption and footnote placement can be co
 
 ###### Section 6
 
-Finally, headers at level 6 are used here as section dividers.
+Finally, headers at level 6 are used as section dividers.
 
 
 # Tables
@@ -385,143 +376,152 @@ I prefer my tables to resemble LaTeX typesetting, so a few simple changes here.
 knitr::kable(mtcars[1:6, 1:10])
 ```
 
-# Apply Themed Colors to R Graphics
 
-As of writing, Quarto won't automatically apply Bootstrap theme colors to dynamic graphics, so instead I define my own custom discrete and continuous scales for ggplot2 in an easy-to-share R package.
+# Apply Boostrap Theme to R Graphics
+
+As of writing, Quarto (and/or Thematic) won't automatically apply Bootstrap branding elements to dynamic graphics. Instead I defined my own utility functions in a separate `mblabs` R package.
 
 ```{r}
-#| eval: false
-#| file: ../../../mblabs/R/theme.R
 #| filename: ./R/theme.R
-#| echo: !expr c(84:140)
 #| code-fold: true
-#| code-summary: "Show functions"
+#| code-summary: "Show function"
+#| echo: !expr mblabs::brand.colors
 
 ```
 
-Next I applied (slightly opinionated) changes to `ggthemes::theme_foundation()`, mostly transparent fills, condensed font, simplified axes, and a default y-axis on the right side.
-
-These graphic customizations are documented in my own [mb.themes](https://mbacou.github.io/mb.themes/) R package. This helps with handling dependencies, code reproducibility, and because I want to use themes more flexibly across projects and clients. Obviously when visualizing scientific and spatial datasets the choice of color scales requires additional care.
-
 ```{r}
-#| eval: false
-#| file: ../../../mblabs/R/theme.R
 #| filename: ./R/theme.R
-#| echo: !expr c(241:267)
 #| code-fold: true
 #| code-summary: "Show function"
+#| echo: !expr mblabs::scale_brand_dc
+
+```
+
+Next I applied (slightly opinionated) changes to `ggthemes::theme_foundation()`, i.e. simplified axes and a default vertical axis on the right side.
+
+These graphic customizations are documented in my [mblabs](https://mbacou.github.io/mblabs/) R package. This helps with handling dependencies, with code reproducibility, and because I want to use themes more flexibly across projects and clients.
+
+```{r}
+#| filename: ./R/theme.R
+#| code-fold: true
+#| code-summary: "Show function"
+#| echo: !expr mblabs::theme_brand
 
 ```
 
 Below we generate a couple of categorical and continuous `ggplot2` and `lattice` plots using multiple Bootstrap color schemes (found in `_brand.yml` configs or modified here on-the-fly).
 
 ```{r}
-# Apply and check my new graphic theme
+# Apply and check my new branding utilities
 library(ggplot2)
-library(mb.themes)
+library(mblabs)
+library(thematic)
 
-# Load my (global) palette from Boostrap theme
-p <- pal("../../assets/scss/_brand.yml")
-scales::show_col(pal())
+# Load my Bootstrap brand for this website, 
+# choosing one of the standard font families and primary shades
+b1 <- brand_theme(
+  file="../../assets/scss/_brand.yml", 
+  fg="gray", bg="light", accent=c("dark", "teal"), font="monospace",
+  gradient=c("cyan", "light", "purple"))
+
+# Use thematic to modify the active graphic environment
+thematic::thematic_set_theme(b1)
+
+# view settings
+lattice::show.settings()
 ```
 
 ```{r}
-# Use this Boostrap palette with ggplot2
+# Simple branded ggplot
 ggplot(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col() +
-  scale_brand_df(name="carb") +
+  labs(title="Default ggplot with Bootstrap brand")
+```
+
+Fonts and colors are used as expected. Further, using my own `theme_brand()` below, I can customize additional plot elements, per my liking.
+
+```{r}
+ggplot(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + 
+  geom_col() +
+  guides(fill=guide_legend(nrow=1)) +
   labs(
-    title="My Long and Descriptive Plot Title", 
-    subtitle="My very long subtitle with many units", 
-    caption="My very long plot caption with many references.") +
+    title="Custom ggplot with Bootstrap brand", 
+    subtitle="Theme provided by R package `mblabs`", 
+    caption="A long plot caption with many references
+    over multiples lines.") +
   theme_brand()
 ```
 
 ```{r}
 ggplot(mtcars, aes(wt, mpg)) + 
-  geom_smooth(color=pal("orange"), fill=pal("pink")) +
+  geom_smooth(color=pal("orange"), fill=pal("blue")) +
   geom_point(size=3, aes(color=carb)) + 
   scale_brand_cc() +
+  guides(
+    y = guide_axis(position="right"),    
+    color = guide_legend(nrow=1)) +
   labs(
-    title="My Long and Descriptive Plot Title", 
-    subtitle="My very long subtitle with many units", 
-    caption="My very long plot caption with many references.") +
+    title="Custom ggplot with Bootstrap brand", 
+    subtitle="Theme provided by R package `mblabs`") +
   theme_brand()
 ```
 
-Instead of applyng `theme_set(theme_labs())` globally, I prefer to use a custom ggplot function `gglabs()` that also modifies X and Y guides.
+Instead of applyng `thematic::theme_set(theme_brand())` globally, there is also the option to use a custom ggplot function `gglabs()` in one call.
 
-Note that the code chunk below will produce a PNG instead of SVG file. I also set a resolution of `knitr fig-dpi: 220` globally in `_quarto.yml` so plots still look adequate when printed to paper.
+Note that I also instruct the code chunk below to produce a PNG instead of SVG file. I also set a resolution of `knitr fig-dpi: 110` globally in `_quarto.yml` so plots still look adequate when printed to paper.
 
 ```{r}
 #| echo: fenced
 #| fig-format: png
 #| classes: preview-image
 
+# Modify branding
+b2 <- brand_theme(
+  file="../../assets/scss/_brand.yml", 
+  fg="gray", bg="light", font="headings")
+
+# Use thematic to modify the active graphic environment
+thematic::thematic_set_theme(b2)
+
 gglabs(faithfuld, aes(waiting, eruptions, z=density), grid="XY") +
   geom_raster(aes(fill=density)) +
   geom_contour() +
-  scale_brand_cf() +
+  scale_brand_cf(c("orange", "light", "green")) +
   labs(
-    title="Branded Contour Plot", 
+    title="Contour Plot with Bootstrap brand", 
     subtitle="Moved Y-axis to the right, use Bootstrap-derived fill scale", 
-    caption="A very long plot caption with many notes and references."
+    caption="A very long plot caption with many notes and references
+    over multiple lines."
   )
 ```
 
 ```{r}
+# Modify branding on-the-fly without using thematic
+brand(font="headings")
+
 gglabs(mtcars, aes(wt, mpg, color=factor(cyl))) + 
   geom_point(size=4) +
   scale_brand_dc(name="cyl") +  
   labs(
-    title="Branded Dot Plot", 
+    title="Dot Plot with Bootstrap brand", 
     subtitle="Moved Y-axis to the right, use Bootstrap-derived color scale"
-    )
+    ) +
+  theme_brand(base_color="light", base_bg="dark")
 ```
 
-Similarly we make changes to lattice `par()` options. This is important as many advanced statistical and spatial libraries continue to favor base R `graphics` library.
+However, using `thematic` is handy to mofify lattice `par()` options in the current device. This is important as many advanced statistical and spatial libraries continue to favor base R over ggplot.
 
 ```{r}
-#| fig-cap: A sample histogram in base R to demo my new color scheme
+#| fig-cap: A sample branded histogram in base R
 
-#brand_on("../../_brand.yml")
-thematic::thematic_on(
-  bg="transparent", fg=pal("gray"),
-  qualitative=brand.colors(), 
-  sequential=brand.colors(30, colors=pal(c("blue", "yellow", "purple", "red"))))
-
-lattice::show.settings()
-
-hist(rchisq(100, df=4), freq=FALSE, ylim=c(0, 0.2), col=1:11, 
-  border=12, xlab="Density", ylab=NA)
-grid(NA, NULL, col=4)
-curve(dchisq(x, df=4), col=2, lty=2, lwd=2, add=TRUE)
-```
-
-```{r}
-ggplot(faithfuld, aes(waiting, eruptions, z=density)) +
-  geom_raster(aes(fill=density)) +
-  geom_contour() +
-  guides(y=guide_axis(position="right")) +
-  labs(
-    title="Branded Contour Plot", 
-    subtitle="Combined with thematic_on()", 
-    caption="A very long plot caption with many notes and references."
-  ) + theme_brand()
-```
-
-```{r}
-#| fig-cap: A sample histogram in base R to demo my new color scheme
-
-#brand_on(bg="dark", fg="light")
-thematic::thematic_on(
-  bg=pal("gray"), fg=pal("light"), 
-  qualitative=brand.colors(), sequential=brand.colors(30))
+thematic::thematic_set_theme(brand_theme(
+  fg="gray", bg="light", accent="teal", font="m"))
 
 hist(rchisq(100, df=4), freq=FALSE, ylim=c(0, 0.2), col=1:11, 
   border=pal("light"), xlab="Density", ylab=NA)
-grid(NA, NULL, col=pal("light"))
-curve(dchisq(x, df=4), col=pal("light"), lty=2, lwd=2, add=TRUE)
+grid(NA, NULL, col=pal("gray"))
+curve(dchisq(x, df=4), col=pal("red"), lty=2, lwd=2, add=TRUE)
 ```
+
 
 # Publishing Workflow
 

@@ -1,6 +1,6 @@
 ---
 title: People, Space, and Statistics
-subtitle: Informed citizens make better policy choices; better policies save [***lives***]{.bg-warning-subtle .px-1} and [***resources***.]{.bg-warning-subtle .px-1}
+subtitle: Informed citizens make better policy choices; better policies save [lives]{.mark} and [resources.]{.mark}
 date: 2010-05-01
 date-modified: last-modified
 categories:
@@ -9,7 +9,7 @@ categories:
   - dataviz
 toc: false
 grid:
-  body-width: 810px
+  body-width: 780px
   sidebar-width: 0px
   margin-width: 250px
   

@@ -1048,35 +1048,34 @@ $theme-name: null !default;
 
 $theme: 'mb-labs';
 
-// Turbo color palette
-$indigo:    #30123B;
-$blue:      #466BE3;
-$cyan:      #28BBEC;
-$green:     #31F299;
-$teal:      #A2FC3C;
-$yellow:    #EDD03A;
-$orange:    #FB8022;
-$red:       #D23105;
-$purple:    #7A0403;
+$teal:      #445e64;
+$cyan:      #789494;
+$green:     #27ae60;
+$blue:      #3daee9;
+$purple:    #9b59b6;
+$pink:      #aea39a;
+$indigo:    #98796f;
+$red:       #da4453;
+$orange:    #ffac5e;
+$yellow:    #eed04c;
 
 $gray:      #505050;
-$dark:         darken($gray, 10%);
-$light:     #fdfcf9;                             // Notebook paper tone
-$darkgray:  #e7e2da;                             // Notebook paper rules
+$dark:      #222e32;
+$light:     #fdfcf9;                   // Notebook paper tone
+$darkgray:  #e7e2da;                   // Notebook paper rules
 
-$primary:     mix(mix($purple, $red, 15%), $light, 65%);
-$secondary:   mix(mix($indigo, $blue, 50%), $light, 65%);
-$info:        mix($blue, $light, 75%);
+$primary:     mix($red, $light, 75%);
+$secondary:   $purple;
+$info:        mix($blue, $dark);
 
 $font-family-base:     "Crimson Text";
 $headings-font-family: "M PLUS Code Latin";
 $font-monospace:       "M PLUS Code Latin";
 $font-sans-serif:      "M PLUS Code Latin";
-$font-serif:           "Caveat";
+$font-serif:           "Marck Script";
 
 
 // Other defaults (generally no need to modify below)
-
 $black:     #000000;
 $white:     #ffffff;
 
@@ -1093,15 +1092,15 @@ $gray-900:   tint-color($gray, 10%);
 $body-color: $gray-900;
 $body-bg:    $light;
 $link-color: $gray-700;
-$text-muted: $gray-700;
-$code-color: $gray-600;
-$shaded: rgba($white, 75%);             // also $input-bg
+$text-muted: rgba($body-color, .85);
+$code-color: $gray-700;
+$shaded:     rgba($body-bg, .65);        // also $input-bg
 
 $font-weight-bold: 600;
 $headings-font-weight: 400;
-$headings-font-color: $gray;
+$headings-font-color: $gray;           // darker than normal text
 
-$spacer: 2rem;                           // 30px line-height
+$spacer: 2rem;                         // 30px line-height
 $spacers: (
   0: 0,
   1: $spacer * .25,
@@ -1111,17 +1110,21 @@ $spacers: (
   5: $spacer * 2,
 );
 
-$font-size-base:  20/15 * 1rem;          // 1rem = 15px in `_quarto.yml`
-$small-font-size: 18/15 * 1rem;
-$code-font-size:  15/15 * 1rem;
-$sub-sup-font-size: 1rem;
+$font-size-base:    20/15 * 1rem;      // 1rem = 15px in `_quarto.yml`
+$small-font-size:   18/15 * 1rem;
+$code-font-size:    15/15 * 1rem;
+$sub-sup-font-size: 15/15 * 1rem;
+
+$lead-font-size:         2rem;
+$lead-font-weight:       300;
+$blockquote-font-size:   1.75rem;
 
 $h1-font-size:  calc($font-size-base + 14px);    // 34px
-$h2-font-size:  calc($font-size-base + 10px);    // 30px
-$h3-font-size:  calc($font-size-base +  4px);    // 26px
-$h4-font-size:  calc($font-size-base +  3px);    // 24px
-$h5-font-size:  calc($font-size-base +  2px);    // 22px
-$h6-font-size:  calc($font-size-base + 15px);    // 35px
+$h2-font-size:  calc($font-size-base + 12px);    // 30px
+$h3-font-size:  calc($font-size-base + 10px);    // 26px
+$h4-font-size:  calc($font-size-base +  8px);    // 24px
+$h5-font-size:  calc($font-size-base +  6px);    // 22px
+$h6-font-size:  calc($font-size-base + 16px);    // 35px alt font
 
 $line-height-base: calc($spacer / $font-size-base);
 $list-inline-padding: .25rem;
@@ -1173,7 +1176,7 @@ $pagination-disabled-bg: $input-disabled-bg;
 $pagination-hover-color: $link-color;
 $progress-bg: $input-bg;
 
-$card-spacer-x: 1rem;
+$card-spacer-x: .5rem;
 $card-spacer-y: 0;
 $card-title-spacer-x: 0;
 $card-title-spacer-y: .5rem;
@@ -1266,9 +1269,9 @@ $title-banner-color: null !default;
 $title-banner-bg: null !default;
 $title-banner-image: null !default;
 
-$code-block-bg: #fdf6e3 !default;
-$btn-code-copy-color: #93a1a1 !default;
-$btn-code-copy-color-active: #268bd2 !default;
+$code-block-bg: #f8f8f8 !default;
+$btn-code-copy-color: #8f5902 !default;
+$btn-code-copy-color-active: #204a87 !default;
 
 // quarto-scss-analysis-annotation { "origin": "Defaults from Quarto's SCSS" }
 
@@ -3390,9 +3393,9 @@ $pre-bg:                            $code-bg  !default;
 $pre-color:                         $body-emphasis-color !default;
 $pre-line-height:                   $line-height-base !default;
 $font-size-root: 15px;
-$grid-sidebar-width: 0px;
-$grid-margin-width: 250px;
-$grid-body-width: 810px;
+$grid-sidebar-width: 120px;
+$grid-margin-width: 210px;
+$grid-body-width: 740px;
 $grid-column-gutter-width: 60px;
 
 
@@ -12965,14 +12968,15 @@ main.quarto-banner-title-block > section:first-child > h4 {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=M+PLUS+Code+Latin:wght@400..500&family=Caveat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,300;0,600;1,400;1,600&family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script:wght@400&display=swap');
 
 // Quarto layout overrides for vertical rhythm
-#quarto-content>*, #quarto-header>*, .quarto-title-banner>* {
+#quarto-content>*, #quarto-header>*, .quarto-title-banner>*, #quarto-sidebar>* {
   padding: 0;
   margin: 0;
 }
 a.footnote-ref {
+  color: $secondary;
   font-weight: 500;
 }
 div.quarto-post a {
@@ -12984,7 +12988,7 @@ b, strong {
 p, div, li, dd, blockquote{
   line-height: 2rem;
 }
-p, ol, ul, dl, .quarto-video {
+p, ol, ul, dl {
   margin: 0 0 1rem 0;
 }
 .content > p:first-of-type {
@@ -12999,12 +13003,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 h1.title:not(.quarto-secondary-nav-title), .h1.title:not(.quarto-secondary-nav-title),
 #title-block-header.quarto-title-block.default .quarto-title .title {
-  font-size: calc($h1-font-size + .5rem);  
+  font-size: calc($h1-font-size + .5rem);
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
 .level1 h1:not(.title) {
-  margin-top: 2rem;  
+  margin-top: 3rem;  
 }
 h1.quarto-secondary-nav-title {
   font-size: $navbar-brand-font-size;
@@ -13019,13 +13023,18 @@ h4, .h4 {
 h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   line-height: 2rem;
 }
+h6, .h6 {
+  color: $primary;
+  font-family: $font-serif;
+  margin: 0 0 1.5rem -.5rem;
+  transform: rotate(-2deg);
+}
 hr {
   border-top: double .25rem $hr-border-color;
   margin: .5rem 0 2.25rem;
 }
-.blockquote, blockquote p {
+.blockquote {
   color: $gray-500;
-  font-size: 1.75rem;
   font-style: italic;
   text-align: right;
   border: none;
@@ -13041,7 +13050,7 @@ blockquote small, blockquote .small {
   line-height: 2rem;
 }
 ul li ul li {
-  margin-bottom: -1px;                   // bug?
+  margin-bottom: -1px;                 // bug?
 }
 ul li ul li:last-child {
   margin-bottom: calc(.5rem - 1px);
@@ -13055,9 +13064,8 @@ ul li ul li:last-child {
 .lead, .lead p {
   font-family: $font-family-base;
   font-weight: 400;
-  color: $gray-500;
+  color: $text-muted;
   font-style: normal;
-  font-size: 2rem;
   line-height: 2.75rem;
   margin-bottom: 1.5rem;
 }
@@ -13083,46 +13091,42 @@ p.subtitle {
   margin: 0 0 1.25rem -.25rem;
   transform: rotate(-3deg);
 }
-mark {
+mark, .mark {
   color: inherit;
+  font-weight: 500;
   padding: 0 .25rem; 
 }
 
 // Article pages
-.quarto-title-meta-heading, .abstract .block-title, 
-#quarto-appendix.default .quarto-appendix-heading, details>summary {
+#quarto-appendix.default .quarto-appendix-heading, .quarto-title-meta-heading, 
+#title-block-header.quarto-title-block.default .abstract .block-title,
+details>summary {
   font-family: $font-sans-serif;
   font-size: $code-font-size !important;
-  color: $primary;
+  color: darken($darkgray, 25%);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 2rem;
-  margin: 1rem 0 .5rem;
+  margin: 0 0 .5rem;
   padding-left: .5rem;
-  border-bottom: 2px solid rgba($primary, .45);
+  border-bottom: 2px solid $darkgray;
   max-width: 17rem;  
   opacity: 1 !important;
-}
-h6, .h6 {
-  color: $primary;
-  font-family: $font-serif;
-  margin: 0 0 1.5rem -.25rem;
-  transform: rotate(-3deg);
 }
 .quarto-title-meta-heading {
   display: none;
 }
 #title-block-header.quarto-title-block.default .quarto-title-meta-contents p, 
 #title-block-header.quarto-title-block.default .quarto-title-authors p,
-#title-block-header.quarto-title-block.default .quarto-title-affiliations p,
-#title-block-header.quarto-title-block.default .abstract p {
-  font-size: $small-font-size;
-  color: $text-muted;
-  margin-bottom: 1rem;
+#title-block-header.quarto-title-block.default .quarto-title-affiliations p {
+  color: $body-color;
+  margin: 0 0 1rem 0;
 }
-.abstract p {
+#title-block-header.quarto-title-block.default .abstract p {
+  color: $info;
   text-align: justify; 
+  font-size: $small-font-size;
   padding: 0 .5rem;
 }
 #title-block-header.quarto-title-block.default .keywords p:last-of-type, 
@@ -13131,14 +13135,14 @@ h6, .h6 {
   margin-bottom: 2rem;
 }
 .quarto-title-meta-contents p {
-  border-bottom: 2px solid rgba($primary, .45);
+  border-bottom: 2px solid $darkgray;
   max-width: 17rem;
 }
 .quarto-title-meta-contents p::before {
   content: 'Author:';
+  color: darken($darkgray, 25%);
   font-family: $font-sans-serif;
   font-size: $code-font-size;
-  color: $primary;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-left: .5rem;
@@ -13178,6 +13182,8 @@ h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
   opacity: 1;
 }
 #toc-title {
+  text-align: end;
+  margin: 2rem 1rem .5rem 0;  
   border: none;
   transform: rotate(0deg);
 }
@@ -13187,26 +13193,31 @@ h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
   margin: 1rem 1rem 0 0;
 }
 .quarto-grid-item p.card-img-top, .thumbnail p.card-img-top {
-  overflow: clip; 
-  padding: .75rem .75rem 1rem .75rem;
+  position: relative;
+  overflow: clip;
+  padding: .5rem;
   margin: 0 0 1rem 0;
-  background-color: rgba($white, .85);
-  box-shadow: rgba($gray, 0.04) 0px 0px 0px 1px, rgba($darkgray, 0.04) 0px 1px 1px -0.5px, rgba($darkgray, 0.04) 0px 3px 3px -1.5px, rgba($darkgray, 0.04) 0px 6px 6px -3px, rgba($gray, 0.04) 0px 12px 12px -6px, rgba($gray, 0.04) 0px 24px 24px -12px;  
+  background-color: $body-bg;
 }
 img.card-img {
   width: 100%; 
   object-fit: contain;
-  transition: transform 0.2s ease;
-}
-img.card-img::before {
-  content: url(../staple.svg);
-  display: absolute;
-  width: 1rem;
-  top: 1rem;
-  right: 1rem;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+  mix-blend-mode: darken;
+
+  &:after {
+    content: '';
+    background: inherit;
+    position: absolute;
+    top: 0;
+    filter: grayscale(100%) invert(100%) blur(5px) contrast(1.3);
+    mix-blend-mode: color-dodge;
+  }  
 }
 img.card-img:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
+  filter: none;
 }
 .quarto-grid-item h5.card-title, h3.listing-title {
   color: $card-title-color;
@@ -13234,10 +13245,15 @@ img.card-img:hover {
   font-weight: 500;
   color: $primary;
 }
-.listing-file-modified, .listing-author {
+.listing-file-modified, .listing-author, .listing-reading-time {
   font-family: $font-sans-serif;
   font-size: $code-font-size;
   color: $headings-font-color;
+}
+.listing-reading-time::before {
+   content: "\F293";
+   font-family: 'bootstrap-icons';
+   margin-right: .5rem;
 }
 .quarto-listing-sort {
   margin: 0 0 1rem auto;
@@ -13252,11 +13268,14 @@ img.card-img:hover {
 
 /* Code blocks */
 pre, code, pre code {
-  color: $text-muted;
+  color: $code-color;
   font-family: $font-monospace;
   font-size: $code-font-size;
   background: none;
   padding: 0;
+}
+code span.fu, code span.sc {
+  font-weight: 400;
 }
 p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   color: inherit;
@@ -13273,7 +13292,7 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   border-radius: $border-radius $border-radius 0 0;
 }
 .code-with-filename pre {
-  color: $headings-font-color;
+  color: $code-color;
   font-size: $code-font-size;
   line-height: calc(2rem - 2px);
 }
@@ -13285,7 +13304,7 @@ div.sourceCode {
   border: none;
   padding: 1rem 1rem .5rem;
 }
-pre.sourceCode {
+pre.sourceCode, pre > code.sourceCode > span {
   font-size: $code-font-size;
   line-height: 1.5rem;
   background: none;
@@ -13303,11 +13322,12 @@ pre.sourceCode {
 
 
 /* Tables */
-table, table.table {
+table, .table {
   margin: .5rem 0;
   border: none;
   border-top: 1px solid $border-color;
-  background-color: $shaded;  
+  background-color: $shaded;
+  backdrop-filter: blur(3px);   
 }
 .table>:not(caption)>*>* {
   padding: 0 .5rem;
@@ -13354,6 +13374,9 @@ div.aside, aside, .column-margin {
   font-size: $small-font-size;
   line-height: 1.75rem;
 }
+table caption {
+  padding: .5rem;
+}
 
 
 /* Figures */
@@ -13375,9 +13398,8 @@ div.aside, aside, .column-margin {
   border-radius: 6rem;
   display: block;
   margin: 2rem auto 0 auto;
-  width: 9rem;
+  width: 10rem;
 }
-
 
 /* Callouts (Quarto bloody mess)  */
 .callout.callout-style-simple, .callout.callout-style-default {
@@ -13417,7 +13439,7 @@ div.aside, aside, .column-margin {
     linear-gradient(to bottom, $darkgray, transparent 1px, transparent);
     background-color: $body-bg;;
     background-size: 2rem 2rem ;
-    background-position: 0 -.5rem;
+    background-position: 0 calc(-.5rem + 1px);
     background-repeat: repeat;
 }
 .navbar, .quarto-banner nav.quarto-secondary-nav {
@@ -13428,8 +13450,10 @@ div.aside, aside, .column-margin {
 }
 body.nav-sidebar .quarto-title-banner {
   padding: 0 !important;
-  margin: 1px 0 0 0  !important;
-  border-top: 1px solid $border-color;
+  margin: 0  !important;
+  background-repeat: none;
+  background-position: right top;
+  background-size; 12rem auto;
 }
 .quarto-title-meta {
   padding: 1rem 0 0 0;

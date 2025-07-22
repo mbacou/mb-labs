@@ -5,13 +5,13 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Mel B. my-blog</title>
+<title>Mel B. mb-labs</title>
 <link>https://mbacou.com/portfolio.html</link>
 <atom:link href="https://mbacou.com/portfolio.xml" rel="self" type="application/rss+xml"/>
 <description>Playground for consulting and data science projects</description>
 <image>
 <url>https://mbacou.com/assets/mb-square.png</url>
-<title>Mel B. my-blog</title>
+<title>Mel B. mb-labs</title>
 <link>https://mbacou.com/portfolio.html</link>
 <height>144</height>
 <width>144</width>

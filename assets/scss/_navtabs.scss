@@ -28,8 +28,8 @@
   border-right: none;
   border-radius: $border-radius 0 0 $border-radius;
   box-shadow: 
-    rgba($darkgray, 0.25) 0px 30px 60px -12px inset, 
-    rgba($gray, 0.3) 0px 18px 36px -18px inset;
+    rgba($darkgray, 0.25) 10px 18px 20px -10px inset, 
+    rgba($gray, 0.3) 10px 18px 26px -8px inset;
   transition: all 0.1s ease; 
 }
 .nbook-tabs a:hover { 
@@ -68,6 +68,7 @@ div.quarto-post .listing-categories .listing-category {
 div.quarto-post .listing-categories .listing-category {
   font-size: calc($code-font-size - 2px); 
   box-shadow: 1px 1px 0px $secondary, -1px -1px 0px $secondary;
+  transform: rotate(0deg);
 }
 .quarto-title .quarto-categories .quarto-category:hover,
 .quarto-grid-item .listing-categories .listing-category:hover,
@@ -80,7 +81,7 @@ div.quarto-post .listing-categories .listing-category {
 /* Utilities */
 .text-serif, .text-serif p, .text-serif p code {
   font-family: $font-serif;
-  font-size: calc($font-size-base + 4px);
+  font-size: calc($font-size-base + 1px);
 }
 .text-serif strong, .text-serif p code {
   font-weight: 400;

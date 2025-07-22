@@ -14,7 +14,7 @@
   font-family: $font-sans-serif;
   font-size: $code-font-size;
   background: none;
-  border-bottom: solid 1px $primary;
+  border-bottom: solid 1px $darkgray;
   margin-top: 1rem;
   padding: .5rem;
 }
@@ -29,24 +29,13 @@
   font-family: $font-family-base;
   font-size: $code-font-size;
 }
-
-.sidebar .toc-actions h2, .sidebar .toc-actions .h2,
-.sidebar .quarto-code-links h2, .sidebar .quarto-code-links .h2,
-.sidebar .quarto-other-links h2, .sidebar .quarto-other-links .h2,
-.sidebar .quarto-alternate-notebooks h2, .sidebar .quarto-alternate-notebooks .h2,
-.sidebar .quarto-alternate-formats h2, .sidebar .quarto-alternate-formats .h2,
-.sidebar nav[role=doc-toc]>h2, .sidebar nav[role=doc-toc]>.h2 {
-  margin: 8rem 1rem 1rem 0;
-  text-align: end;
-  border-top: 1px solid $primary;
-}
 .sidebar.sidebar-navigation>* {
   padding-top: 0;
 }
 .sidebar nav[role=doc-toc]>ul {
   padding: 0;
   margin: 0 0 2rem 0;
-  border-right: solid 1px $primary;
+  border-right: solid 1px rgba($primary, .85);
 }
 .sidebar .toc-actions ul li a, .sidebar .quarto-code-links ul li a,
 .sidebar .quarto-other-links ul li a, .sidebar .quarto-alternate-notebooks ul li a,

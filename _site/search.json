@@ -32,7 +32,7 @@
     "href": "index.html#articles-and-notebooks",
     "title": "People, Space, and Statistics",
     "section": "Articles and Notebooks",
-    "text": "Articles and Notebooks\nCode notebooks and articles that do not find a home elsewhere. Feel free to cite, clone, comment, and raise issues.\n\n\n\n\n\n\n\n\n\n\n\nData, Resources, and Tools\n\n\nA nice description down here.\n\n\n\n\n\nJul 16, 2024\n\n\nMelanie BACOU\n\n12 min\n\n\n\n\n\n\n\n\n\n\n\nTime to Migrate this Blog from Distill to Quarto\n\n\n\nquarto\n\ndataviz\n\n\n\nA post about literate programming in general and Quarto formats in particular, in which I document migrating this personal blog from Distill to Quarto. Compared to J.J. Allaire’s Distill for R Markdown, Posit® Quarto Markdown uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way.\n\n\n\n\n\nOct 1, 2023\n\n\nMelanie BACOU\n\n19 min\n\n\n\n\n\n\n\n\n\n\n\nRainfall: Merge Ground and Satellite Observations with RFMerge\n\n\n\nmeteo\n\nrisk modeling\n\n\n\n\n\n\n\n\n\nJan 16, 2021\n\n\nMelanie BACOU\n\n9 min\n\n\n\n\n\n\n\n\n\n\n\nIncome Distribution Cartograms\n\n\n\ndataviz\n\nincome\n\nrussia\n\n\n\n\n\n\n\n\n\nDec 2, 2020\n\n\nMelanie BACOU\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nERA5-LAND Temperature Validation (California)\n\n\n\nmeteo\n\nrisk modeling\n\n\n\n\n\n\n\n\n\nDec 2, 2020\n\n\nMelanie BACOU\n\n7 min\n\n\n\n\nNo matching items"
+    "text": "Articles and Notebooks\nCode notebooks and articles that do not find a home elsewhere. Feel free to cite, clone, comment, and raise issues.\n\n\n\n\n\n\n\n\n\n\n\nData, Resources, and Tools\n\n\nA nice description down here.\n\n\n\n\n\nJul 16, 2024\n\n\nMelanie BACOU\n\n12 min\n\n\n\n\n\n\n\n\n\n\n\nTime to Migrate this Blog from Distill to Quarto\n\n\n\nquarto\n\ndataviz\n\n\n\nA post about literate programming in general and Quarto formats in particular, in which I document migrating this personal blog from Distill to Quarto. Compared to J.J. Allaire’s Distill for R Markdown, Posit® Quarto Markdown uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way.\n\n\n\n\n\nOct 1, 2023\n\n\nMelanie BACOU\n\n20 min\n\n\n\n\n\n\n\n\n\n\n\nRainfall: Merge Ground and Satellite Observations with RFMerge\n\n\n\nmeteo\n\nrisk modeling\n\n\n\n\n\n\n\n\n\nJan 16, 2021\n\n\nMelanie BACOU\n\n9 min\n\n\n\n\n\n\n\n\n\n\n\nIncome Distribution Cartograms\n\n\n\ndataviz\n\nincome\n\nrussia\n\n\n\n\n\n\n\n\n\nDec 2, 2020\n\n\nMelanie BACOU\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\nERA5-LAND Temperature Validation (California)\n\n\n\nmeteo\n\nrisk modeling\n\n\n\n\n\n\n\n\n\nDec 2, 2020\n\n\nMelanie BACOU\n\n7 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "license.html",
@@ -137,7 +137,7 @@
     "href": "posts/2022-12-01-theme/index.html#heading-2",
     "title": "Time to Migrate this Blog from Distill to Quarto",
     "section": "Heading 2",
-    "text": "Heading 2\nSample paragraph content.\n\nHeading 3\nSample paragraph content with list of items:\n\nList 1\n\nList 1.1\nList 1.2\n\nList 2\nList 3\n\nOrdered list:\n\nList 1\nList 2\nList 3\n\nFinally a normal rule hr element.\n\nAnd a paragraph after the rule.\n\nHeading 4\nSample paragraph content.\n\nBlockquote title\nBlockquote content here…\n– Quote source / author or reference\n\nSample paragraph content after blockquote.\n\nHeading 5\nHere is a long footnote reference9. Caption and footnote placement can be controlled in the config files _quarto_yml and/or _metadata.yml, or directly in the YAML front matter.\n9 Here’s a margin note with multiple paragraph blocks and a fancy section header.\nHeading 5\nWith subsequent paragraphs indented to show that they belong to the previous footnote.\nSection 6\nFinally, headers at level 6 are used here as section dividers."
+    "text": "Heading 2\nSample paragraph content.\n\nHeading 3\nSample paragraph content with list of items:\n\nList 1\n\nList 1.1\nList 1.2\n\nList 2\nList 3\n\nOrdered list:\n\nList 1\nList 2\nList 3\n\nFinally a normal rule hr element.\n\nAnd a paragraph after the rule.\n\nHeading 4\nSample paragraph content.\n\nHeading 5\nHere is a long footnote reference9. Caption and footnote placement can be controlled in the config files _quarto_yml and/or _metadata.yml, or directly in the YAML front matter.\n9 Here’s a margin note with multiple paragraph blocks and a fancy section header.\nHeading 5\nWith subsequent paragraphs indented to show that they belong to the previous footnote.\nSection 6\nFinally, headers at level 6 are used as section dividers."
   },
   {
     "objectID": "posts/resume/index.html",
@@ -147,144 +147,18 @@
     "text": "My Bio\n  Notebooks\n  Portfolio\n  Ressources  \n  About"
   },
   {
-    "objectID": "posts/resume/index.html#international-water-management-institute-iwmi",
-    "href": "posts/resume/index.html#international-water-management-institute-iwmi",
+    "objectID": "posts/resume/index.html#summary",
+    "href": "posts/resume/index.html#summary",
     "title": "BACOU, Melanie (CV)",
-    "section": "International Water Management Institute (IWMI)",
-    "text": "International Water Management Institute (IWMI)\n\n\n\n\n\n\n\nPorto, Portugal\nAug 2021 – Jan 2022\n6 months\nScientific Modeling and Visualization (contract)\nDesigned complex ETLs and interactive tools to track changes in water budgets and water productivity across multiple river basins. Part of FAO Water Secure Africa initiative (WASA) to inform equitable and sustainable water use policies."
+    "section": "Summary",
+    "text": "Summary\n\nLed research grants in the $500K range, advised public agencies and private firms with large-scale data collection methods (incl. remote sensing and mobile field surveying), household survey design and analysis, market segmentation, agricultural value-chain analysis, pricing of (parametric) weather insurance.\nStrong quantitative, analytic, writing and presentation skills acquired over 20 years of collaboration with leading economic research institutes and consulting firms.\nMultidisciplinary background with ability to communicate efficiently with farmers, government officials, private sector partners, technical experts, and researchers.\nWork experience in fragile states (Mid-East, West/sub-Saharan Africa). French / U.S. citizenships."
   },
   {
-    "objectID": "posts/resume/index.html#worldcover-pbc",
-    "href": "posts/resume/index.html#worldcover-pbc",
+    "objectID": "posts/resume/index.html#specialties",
+    "href": "posts/resume/index.html#specialties",
     "title": "BACOU, Melanie (CV)",
-    "section": "WorldCover PBC",
-    "text": "WorldCover PBC\n\n\n\n\n\n\n\nWashington DC\nTamale, Ghana\nKampala, Uganda\nAug 2017 – Apr 2021\n3 years 9 months\nHead of Research\nWorldCover engineers solutions to better design, target, and deliver affordable (parametric) weather insurance to small-scale farmers (Ghana, Togo, Kenya, Uganda), and to large-scale fruit and nut tree growers, and to protect entire agricultural value chains against climate risks. Led agrometeorological research across 20 value-chains and agroclimatic zones. Rolled out a real-time pricing engine and multiple APIs on AWS cloud. (technical platform acquired in April 2021)."
-  },
-  {
-    "objectID": "posts/resume/index.html#bill-melinda-gates-foundation-bmgf",
-    "href": "posts/resume/index.html#bill-melinda-gates-foundation-bmgf",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Bill & Melinda Gates Foundation (BMGF)",
-    "text": "Bill & Melinda Gates Foundation (BMGF)\n\n\n\n\n\n\n\nWashington DC\nSeattle WA\nApr 2017 – Dec 2017\n9 months\nAgricultural Economist (contract)\nBusiness-oriented typologies and characterization of small-holder farming systems in Ghana, Ethiopia, Tanzania, and Nigeria. Under a work assignment with Spatial Development International (now Locana)."
-  },
-  {
-    "objectID": "posts/resume/index.html#abt-associates-inc.",
-    "href": "posts/resume/index.html#abt-associates-inc.",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Abt Associates Inc.",
-    "text": "Abt Associates Inc.\n\n\n\n\n\n\n\nWashington DC\nJun 2017 – Jul 2017\n2 months\nGeospatial Analyst (contract)\nGeospatial analysis to support USAID AgResults program evaluation in Nigeria, Kenya, and Uganda."
-  },
-  {
-    "objectID": "posts/resume/index.html#international-food-policy-research-institute-ifpri",
-    "href": "posts/resume/index.html#international-food-policy-research-institute-ifpri",
-    "title": "BACOU, Melanie (CV)",
-    "section": "International Food Policy Research Institute (IFPRI)",
-    "text": "International Food Policy Research Institute (IFPRI)\n\n\n\n\n\n\n\nWashington DC\nSep 2014 – Dec 2016\n2 years 4 months\nSnr. Program Manager\nGenerated subnational socio-economic and biophysical datasets to inform and upscale agricultural research investments in sub-Saharan Africa, track adoption of new agricultural technologies, track CGIAR research investments around the globe, and monitor the impact of policies and investments on small farm-holder livelihoods."
-  },
-  {
-    "objectID": "posts/resume/index.html#ifpri-harvestchoice-program",
-    "href": "posts/resume/index.html#ifpri-harvestchoice-program",
-    "title": "BACOU, Melanie (CV)",
-    "section": "IFPRI – HarvestChoice Program",
-    "text": "IFPRI – HarvestChoice Program\n\n\n\n\n\n\n\nWashington DC\nMay 2010 – Aug 2014\n4 years 4 months\nAgricultural Economist\nResearch, data and analytics in support of the Global Development Program of the Bill & Melinda Gates Foundation, USAID Feed the Future Africa RISING, the G-8 New Alliance for Food Security and Nutrition, the Alliance for a Green Revolution in Africa (AGRA), and several CGIAR programs focused on agricultural productivity improvement, food security, and poverty reduction in sub-Saharan Africa. In charge of HarvestChoice data releases."
-  },
-  {
-    "objectID": "posts/resume/index.html#ifpri-agrodep-program",
-    "href": "posts/resume/index.html#ifpri-agrodep-program",
-    "title": "BACOU, Melanie (CV)",
-    "section": "IFPRI – AGRODEP Program",
-    "text": "IFPRI – AGRODEP Program\n\n\n\n\n\n\n\nWashington DC\nDakar, Senegal\nMay 2011 – Oct 2011\n6 months\nInstructor / Web Developer\nThe African Growth and Development Policy Modeling Consortium is a program sponsored by USAID / UKAid. Website migration to a Drupal CMS, incl. preparation of design mockups, content migration, and training of AGRODEP staff. Held a 3-day workshop on household survey data sampling and processing to AGRODEP awardees in Dakar, Senegal."
-  },
-  {
-    "objectID": "posts/resume/index.html#gates-foundation",
-    "href": "posts/resume/index.html#gates-foundation",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Gates Foundation",
-    "text": "Gates Foundation\n\n\n\n\n\n\n\nWashington DC\nSeattle WA\nNov 2012 – Sep 2014\n1 year 11 months\nAgricultural Economist (contract)\nCountry diagnostics, segmentation of farm households, and data visualization for the Foundation’s Agricultural Development Program. Under a work assignment with Spatial Development International (now part of TRC Companies, Inc)."
-  },
-  {
-    "objectID": "posts/resume/index.html#african-development-bank",
-    "href": "posts/resume/index.html#african-development-bank",
-    "title": "BACOU, Melanie (CV)",
-    "section": "African Development Bank",
-    "text": "African Development Bank\n\n\n\n\n\n\n\nTunis, Tunisia\nOct 2008 – Jan 2009\n4 months\nTeam Lead - Procurement (contract)\nLed a 4-month ICT project for the Bank’s Procurement and Fiduciary Services division aimed at a complete upgrade of its internal SAP® modules (procurement workflow and reporting tools) and external Web portal (procurement tools and information for borrowing governments and the business community). Under a work assignment with Crown Agents UK."
-  },
-  {
-    "objectID": "posts/resume/index.html#development-gateway-foundation",
-    "href": "posts/resume/index.html#development-gateway-foundation",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Development Gateway Foundation",
-    "text": "Development Gateway Foundation\n\n\n\n\n\n\n\nWashington DC\nMay 2008 – Sep 2008\n5 months\nMonitoring & Evaluation of ICT Programs (contract)\nHelped conduct a 5-month evaluation of the relevance, effectiveness and impact, sustainability, governance and management structure of DGF (5 international programs and staff of 84). The evaluation was forward-looking and provided substantial strategic recommendations to DGF in the areas of ICT4D and aid effectiveness. Data collection included desk review, on-line surveys, usage analysis from DGF servers, phone and in-person stakeholder interviews with over 45 individuals. Under a work assignment with AMEX International."
-  },
-  {
-    "objectID": "posts/resume/index.html#abt-associates-inc.-1",
-    "href": "posts/resume/index.html#abt-associates-inc.-1",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Abt Associates Inc.",
-    "text": "Abt Associates Inc.\n\n\n\n\n\n\n\nWashington DC\nSana’a, Yemen\nOct 2005 – Sep 2007\n2 years\nSenior Analyst\nManaged environmental cost-benefit and regulatory analyses, and program evaluations for the U.S. EPA Office of Air Quality and Office of Pesticide Programs (multi-year $200K-$500K task orders). Advised and led digital solutions for USAID, MCC, and WTO-funded projects. Supervised analysts, designers, and content experts:\n\nUSAID Global Business, Trade & Investment Services IQC, gbti2.info.\nUSAID Health Systems 20/20, Yemen, mophp-ye.org. Trained the Yemen Ministry of Health on ICT policy and strategy.\nHealth Systems Action Network (HSAN), hsanet.org.\nU.S. EPA Office of Emergency Management, epa.gov/emergencies/. 8-month support to OEM Evaluation and Communication Division on information design."
-  },
-  {
-    "objectID": "posts/resume/index.html#center-for-global-trade-analysis-gtap",
-    "href": "posts/resume/index.html#center-for-global-trade-analysis-gtap",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Center for Global Trade Analysis (GTAP)",
-    "text": "Center for Global Trade Analysis (GTAP)\n\n\n\n\n\n\n\nWest Lafayette IN\n2001 – 2005\n4 years\nICT and Data Specialist\n\nCoordinated all distance learning activities on Computable General Equilibrium modeling\nAdministered Web and database servers in support of the GTAP Network (over 8,000 researchers in 110 countries)\nCarried out vendor reviews and supervised all aspects of website rollouts\nBuilt web-based tools to streamline conference organization\nScreened funding opportunities for the Center, prepared research proposals and progress reports"
-  },
-  {
-    "objectID": "posts/resume/index.html#landbouw-economisch-instituut-wageningen-ur-lei",
-    "href": "posts/resume/index.html#landbouw-economisch-instituut-wageningen-ur-lei",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Landbouw Economisch Instituut – Wageningen UR (LEI)",
-    "text": "Landbouw Economisch Instituut – Wageningen UR (LEI)\n\n\n\n\n\n\n\nDen Haag, The Netherlands\nJan 2000 – Aug 2000\n8 months\nInformation Management Specialist (contract)\n\nPlanned and coordinated a first on-line training program on horticultural systems between WUR and agricultural academies in China\nDelivered initial training of trainers to Dutch content experts"
-  },
-  {
-    "objectID": "posts/resume/index.html#purdue-university-dpt-of-agricultural-economics",
-    "href": "posts/resume/index.html#purdue-university-dpt-of-agricultural-economics",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Purdue University – Dpt of Agricultural Economics",
-    "text": "Purdue University – Dpt of Agricultural Economics\n\n\n\n\n\n\n\nWest Lafayette IN\nHarare, Zimbabwe\nSep 1998 – Dec 1999\n1 year 4 months\nResearch Assistant\n\nWebmaster and technical adviser for a 6-month distance learning project for the Zimbabwean Tariff Commission sponsored by the World Bank\nDeveloped distance learning programs focusing on General Equilibrium theories and applications, sponsored by the United Nations Economic Commission for Africa\nDesigned all educational websites, multimedia content, and CD-ROMs."
-  },
-  {
-    "objectID": "posts/resume/index.html#société-générale-emerging-europe-asset-management-sgeeam",
-    "href": "posts/resume/index.html#société-générale-emerging-europe-asset-management-sgeeam",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Société Générale Emerging Europe Asset Management (SGEEAM)",
-    "text": "Société Générale Emerging Europe Asset Management (SGEEAM)\n\n\n\n\n\n\n\nLondon, UK\nJan 1996 – May 1996\n5 months\nMarketing and Technical Assistant\n\nAssisted the initial release of high-risk investment funds on Eastern European markets\nPerformed ratio analysis and financial reporting (translation of Polish and Czech accounting standards into IAS)\nBuilt financial databases and automated reports to assist market analysts in monitoring daily fund performance."
-  },
-  {
-    "objectID": "posts/resume/index.html#fimatex-s.a.",
-    "href": "posts/resume/index.html#fimatex-s.a.",
-    "title": "BACOU, Melanie (CV)",
-    "section": "FIMATEX S.A.",
-    "text": "FIMATEX S.A.\n\n\n\n\n\n\n\nParis, France\nJul 1995 – Oct 1995\n4 months\nMarketing and Sales Assistant\n\nTook part in a strategic diversification from commodity to index derivatives markets\nNegotiated new marketing partnerships with the financial press and software vendors\nCollaborated with traders to produce daily market reports on French MATIF and MONEP bond and index futures and options\nDesigned first business website, see Fimatex (now Boursorama)"
-  },
-  {
-    "objectID": "posts/resume/index.html#seat-france-s.a.",
-    "href": "posts/resume/index.html#seat-france-s.a.",
-    "title": "BACOU, Melanie (CV)",
-    "section": "SEAT France S.A.",
-    "text": "SEAT France S.A.\n\n\n\n\n\n\n\nCergy Pontoise, France\nJan 1995 – Apr 1995\n4 months\nMarketing and Sales Intern\nContributed to monthly promotional campaigns with advertising agencies and tracked all merchandising programs with SEAT auto dealers across France."
-  },
-  {
-    "objectID": "posts/resume/index.html#purdue-university",
-    "href": "posts/resume/index.html#purdue-university",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Purdue University",
-    "text": "Purdue University\n\n\n\n\n\n\n\nWest Lafayette IN\n1997 – 2001\nM.Sc. Agricultural Economics\nThesis: Economy-wide Effects of Climate Variability and Climate Prediction in Mozambique, under the supervision of Dr. Channing Arndt, awarded outstanding M.Sc. thesis\nActivities: started and taught Purdue’s Argentine tango student organization"
-  },
-  {
-    "objectID": "posts/resume/index.html#escp-europe-eap",
-    "href": "posts/resume/index.html#escp-europe-eap",
-    "title": "BACOU, Melanie (CV)",
-    "section": "ESCP Europe (EAP)",
-    "text": "ESCP Europe (EAP)\n\n\n\n\n\n\n\nParis, France\nOxford, UK\nBerlin, Germany\n1994 – 1997\nDiplôme de Grande École de Commerce\nDiplom-Kaufmann, MA International Management\nPreviously EAP (European Advanced Program) 3-year/3-country program.\nThesis: Agricultural Derivatives Markets – A Substitute to the Common Agricultural Policy Support Price Mechanisms"
-  },
-  {
-    "objectID": "posts/resume/index.html#lycée-louis-le-grand",
-    "href": "posts/resume/index.html#lycée-louis-le-grand",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Lycée Louis-le-Grand",
-    "text": "Lycée Louis-le-Grand\n\n\n\n\n\n\n\nParis, France\n1992 – 1994\nClasse Prépa HEC (2-year B.Sc. equivalent) business mathematics and statistics, contemporary history, philosophy."
+    "section": "Specialties",
+    "text": "Specialties\nQuantitative and spatial analysis, cost/benefit analysis, household surveys and experimental designs, market segmentation, development of agricultural value chains, risk and impact evaluation methods, weather & climate risk and adaptation, parametric risk transfer, data visualization.\nStats: R, R/Shiny, STATA, SAS, Tableau®, Highcharts.js, D3.js\nDatabases: MS SQL Server, MySQL, PostGIS, MongoDB, Elasticsearch, DuckDB\nGIS: QGIS, GRASS, GDAL, GeoServer, Mapnik, Leaflet, Kepler.gl\nSurveying: ODK, CSPro, SurveyCTO, Fulcrum, GISCloud, CKAN, DataHub\nDevOps: CentOS, Ubuntu, AWS and Azure cloud deployment and containerization, Docker\nAgile development: Jira, Trello, Asana, Taiga.io, ClubHouse"
   },
   {
     "objectID": "portfolio.html",
@@ -334,47 +208,5 @@
     "title": "Interactive Web Applications",
     "section": "Simulating Historical Claim Costs",
     "text": "Simulating Historical Claim Costs\nVisual interface for agricultural insurance\nReal-time pricing of weather-index insurance\nThis tool supports WorldCover PBC agricultural insurance operations.\nHow to cite Confidential.\nTools R/Shiny, bs4Dash, bslib, shinyWidgets, data.table, leaflet, highcharter, terra\n\n\n\n\n\n\n\nNoteTest callout\n\n\n\nAnd something important.\n\n\n\nTable\n\n\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\naa\n\n\n\n\nbb\n\n\n\n\nm ultiple\nlines here.\n\n\n\n\n\n\n\n\n\nSomething in the margin now."
-  },
-  {
-    "objectID": "posts/resume/index.html#summary",
-    "href": "posts/resume/index.html#summary",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Summary",
-    "text": "Summary\n\nLed research grants in the $500K range, advised public agencies and private firms with large-scale data collection methods (incl. remote sensing and mobile field surveying), household survey design and analysis, market segmentation, agricultural value-chain analysis, pricing of (parametric) weather insurance.\nStrong quantitative, analytic, writing and presentation skills acquired over 20 years of collaboration with leading economic research institutes and consulting firms.\nMultidisciplinary background with ability to communicate efficiently with farmers, government officials, private sector partners, technical experts, and researchers.\nWork experience in fragile states (Mid-East, West/sub-Saharan Africa). French / U.S. citizenships."
-  },
-  {
-    "objectID": "posts/resume/index.html#specialties",
-    "href": "posts/resume/index.html#specialties",
-    "title": "BACOU, Melanie (CV)",
-    "section": "Specialties",
-    "text": "Specialties\nQuantitative and spatial analysis, cost/benefit analysis, household surveys and experimental designs, market segmentation, development of agricultural value chains, risk and impact evaluation methods, weather & climate risk and adaptation, parametric risk transfer, data visualization.\nStats: R, R/Shiny, STATA, SAS, Tableau®, Highcharts.js, D3.js\nDatabases: MS SQL Server, MySQL, PostGIS, MongoDB, Elasticsearch, DuckDB\nGIS: QGIS, GRASS, GDAL, GeoServer, Mapnik, Leaflet, Kepler.gl\nSurveying: ODK, CSPro, SurveyCTO, Fulcrum, GISCloud, CKAN, DataHub\nDevOps: CentOS, Ubuntu, AWS and Azure cloud deployment and containerization, Docker\nAgile development: Jira, Trello, Asana, Taiga.io, ClubHouse"
-  },
-  {
-    "objectID": "posts/2022-12-01-theme/index.html#this-is-a-note-with-simple-appearance.",
-    "href": "posts/2022-12-01-theme/index.html#this-is-a-note-with-simple-appearance.",
-    "title": "Time to Migrate this Blog from Distill to Quarto",
-    "section": "This is a note with `simple` appearance.",
-    "text": "This is a note with `simple` appearance."
-  },
-  {
-    "objectID": "posts/resume/index.html#clients-projects",
-    "href": "posts/resume/index.html#clients-projects",
-    "title": "BACOU, Melanie (CV)",
-    "section": " Clients & Projects",
-    "text": "Clients & Projects\n\nInternational Water Management Institute (IWMI)\n\n\n\nPorto, Portugal\nAug 2021 – Jan 2022\n6 months\nScientific Modeling and Visualization (contract)\nDesigned complex ETLs and interactive tools to track changes in water budgets and water productivity across multiple river basins. Part of FAO Water Secure Africa initiative (WASA) to inform equitable and sustainable water use policies.\n\n\nWorldCover PBC\n\n\n\nWashington DC\nTamale, Ghana\nKampala, Uganda\nAug 2017 – Apr 2021\n3 years 9 months\nHead of Research\nWorldCover engineers solutions to better design, target, and deliver affordable (parametric) weather insurance to small-scale farmers (Ghana, Togo, Kenya, Uganda), and to large-scale fruit and nut tree growers, and to protect entire agricultural value chains against climate risks. Led agrometeorological research across 20 value-chains and agroclimatic zones. Rolled out a real-time pricing engine and multiple APIs on AWS cloud. (technical platform sold in April 2021).\n\n\nBill & Melinda Gates Foundation (BMGF)\n\n\n\nWashington DC\nSeattle WA\nApr 2017 – Dec 2017\n9 months\nAgricultural Economist (contract)\nBusiness-oriented typologies and characterization of small-holder farming systems in Ghana, Ethiopia, Tanzania, and Nigeria. Under a work assignment with Spatial Development International (now Locana).\n\n\nAbt Associates Inc.\n\n\n\nWashington DC\nJun 2017 – Jul 2017\n2 months\nGeospatial Analyst (contract)\nGeospatial analysis to support USAID AgResults program evaluation in Nigeria, Kenya, and Uganda.\n\n\nInternational Food Policy Research Institute (IFPRI)\n\n\n\nWashington DC\nSep 2014 – Dec 2016\n2 years 4 months\nSnr. Program Manager\nGenerated subnational socio-economic and biophysical datasets to inform and upscale agricultural research investments in sub-Saharan Africa, track adoption of new agricultural technologies, track CGIAR research investments around the globe, and monitor the impact of policies and investments on small farm-holder livelihoods.\n\n\nIFPRI – HarvestChoice Program\n\n\n\nWashington DC\nMay 2010 – Aug 2014\n4 years 4 months\nAgricultural Economist\nResearch, data and analytics in support of the Global Development Program of the Bill & Melinda Gates Foundation, USAID Feed the Future Africa RISING, the G-8 New Alliance for Food Security and Nutrition, the Alliance for a Green Revolution in Africa (AGRA), and several CGIAR programs focused on agricultural productivity improvement, food security, and poverty reduction in sub-Saharan Africa. In charge of HarvestChoice data releases.\n\n\nIFPRI – AGRODEP Program\n\n\n\nWashington DC\nDakar, Senegal\nMay 2011 – Oct 2011\n6 months\nInstructor / Web Developer\nThe African Growth and Development Policy Modeling Consortium is a program sponsored by USAID / UKAid. Website migration to a Drupal CMS, incl. preparation of design mockups, content migration, and training of AGRODEP staff. Held a 3-day workshop on household survey data sampling and processing to AGRODEP awardees in Dakar, Senegal.\n\n\nGates Foundation\n\n\n\nWashington DC\nSeattle WA\nNov 2012 – Sep 2014\n1 year 11 months\nAgricultural Economist (contract)\nCountry diagnostics, segmentation of farm households, and data visualization for the Foundation’s Agricultural Development Program. Under a work assignment with Spatial Development International (now part of TRC Companies, Inc).\n\n\nAfrican Development Bank\n\n\n\nTunis, Tunisia\nOct 2008 – Jan 2009\n4 months\nTeam Lead - Procurement (contract)\nLed a 4-month ICT project for the Bank’s Procurement and Fiduciary Services division aimed at a complete upgrade of its internal SAP® modules (procurement workflow and reporting tools) and external Web portal (procurement tools and information for borrowing governments and the business community). Under a work assignment with Crown Agents UK.\n\n\nDevelopment Gateway Foundation\n\n\n\nWashington DC\nMay 2008 – Sep 2008\n5 months\nMonitoring & Evaluation of ICT Programs (contract)\nHelped conduct a 5-month evaluation of the relevance, effectiveness and impact, sustainability, governance and management structure of DGF (5 international programs and staff of 84). The evaluation was forward-looking and provided substantial strategic recommendations to DGF in the areas of ICT4D and aid effectiveness. Data collection included desk review, on-line surveys, usage analysis from DGF servers, phone and in-person stakeholder interviews with over 45 individuals. Under a work assignment with AMEX International.\n\n\nAbt Associates Inc.\n\n\n\nWashington DC\nSana’a, Yemen\nOct 2005 – Sep 2007\n2 years\nSenior Analyst\nManaged environmental cost-benefit and regulatory analyses, and program evaluations for the U.S. EPA Office of Air Quality and Office of Pesticide Programs (multi-year $200K-$500K task orders). Advised and led digital solutions for USAID, MCC, and WTO-funded projects. Supervised analysts, designers, and content experts:\n\nUSAID Global Business, Trade & Investment Services IQC, gbti2.info.\nUSAID Health Systems 20/20, Yemen, mophp-ye.org. Trained the Yemen Ministry of Health on ICT policy and strategy.\nHealth Systems Action Network (HSAN), hsanet.org.\nU.S. EPA Office of Emergency Management, epa.gov/emergencies/. 8-month support to OEM Evaluation and Communication Division on information design.\n\n\n\nCenter for Global Trade Analysis (GTAP)\n\n\n\nWest Lafayette IN\n2001 – 2005\n4 years\nICT and Data Specialist\n\nCoordinated all distance learning activities on Computable General Equilibrium modeling\nAdministered Web and database servers in support of the GTAP Network (over 8,000 researchers in 110 countries)\nCarried out vendor reviews and supervised all aspects of website rollouts\nBuilt web-based tools to streamline conference organization\nScreened funding opportunities for the Center, prepared research proposals and progress reports\n\n\n\nLandbouw Economisch Instituut – Wageningen UR (LEI)\n\n\n\nDen Haag, The Netherlands\nJan 2000 – Aug 2000\n8 months\nInformation Management Specialist (contract)\n\nPlanned and coordinated a first on-line training program on horticultural systems between WUR and agricultural academies in China\nDelivered initial training of trainers to Dutch content experts\n\n\n\nPurdue University – Dpt of Agricultural Economics\n\n\n\nWest Lafayette IN\nHarare, Zimbabwe\nSep 1998 – Dec 1999\n1 year 4 months\nResearch Assistant\n\nWebmaster and technical adviser for a 6-month distance learning project for the Zimbabwean Tariff Commission sponsored by the World Bank\nDeveloped distance learning programs focusing on General Equilibrium theories and applications, sponsored by the United Nations Economic Commission for Africa\nDesigned all educational websites, multimedia content, and CD-ROMs.\n\n\n\nSociété Générale Emerging Europe Asset Management (SGEEAM)\n\n\n\nLondon, UK\nJan 1996 – May 1996\n5 months\nMarketing and Technical Assistant\n\nAssisted the initial release of high-risk investment funds on Eastern European markets\nPerformed ratio analysis and financial reporting (translation of Polish and Czech accounting standards into IAS)\nBuilt financial databases and automated reports to assist market analysts in monitoring daily fund performance.\n\n\n\nFIMATEX S.A.\n\n\n\nParis, France\nJul 1995 – Oct 1995\n4 months\nMarketing and Sales Assistant\n\nTook part in a strategic diversification from commodity to index derivatives markets\nNegotiated new marketing partnerships with the financial press and software vendors\nCollaborated with traders to produce daily market reports on French MATIF and MONEP bond and index futures and options\nDesigned first business website, see Fimatex (now Boursorama)\n\n\n\nSEAT France S.A.\n\n\n\nCergy Pontoise, France\nJan 1995 – Apr 1995\n4 months\nMarketing and Sales Intern\nContributed to monthly promotional campaigns with advertising agencies and tracked all merchandising programs with SEAT auto dealers across France."
-  },
-  {
-    "objectID": "posts/resume/index.html#education",
-    "href": "posts/resume/index.html#education",
-    "title": "BACOU, Melanie (CV)",
-    "section": " Education",
-    "text": "Education\n\nPurdue University\n\n\n\nWest Lafayette IN\n1997 – 2001\nM.Sc. Agricultural Economics\nThesis: Economy-wide Effects of Climate Variability and Climate Prediction in Mozambique, under the supervision of Dr. Channing Arndt, awarded outstanding M.Sc. thesis\nActivities: started and taught Purdue’s Argentine tango student organization\n\n\nESCP Europe (EAP)\n\n\n\nParis, France\nOxford, UK\nBerlin, Germany\n1994 – 1997\nDiplôme de Grande École de Commerce\nDiplom-Kaufmann, MA International Management\nPreviously EAP (European Advanced Program) 3-year/3-country program.\nThesis: Agricultural Derivatives Markets – A Substitute to the Common Agricultural Policy Support Price Mechanisms\n\n\nLycée Louis-le-Grand\n\n\n\nParis, France\n1992 – 1994\nClasse Prépa HEC (2-year B.Sc. equivalent) business mathematics and statistics, contemporary history, philosophy."
-  },
-  {
-    "objectID": "posts/resume/index.html#publications",
-    "href": "posts/resume/index.html#publications",
-    "title": "BACOU, Melanie (CV)",
-    "section": " Publications",
-    "text": "Publications\nPoverty, Land, and Climate in Africa South of the Sahara: an empirical analysis, International Food Policy Research Institute. Presented at CSAE 2016.\n\n\nDec 2016\nview\nCELL5M: A Geospatial Database of Agricultural Indicators for Africa South of the Sahara, F1000Research 2016, 5:2490.\n\n\nOct 2016\nview\nSubnational Socio-Economic Dataset Availability, Nature Climate Change 6:115-116. DOI: 10.1038/nclimate2842\n\n\nJan, 2016\nview\nCharacterization of Smallholder Households in Ethiopia - A household level summary of the context of smallholder agricultural production, HarvestChoice, International Food Policy Research Institute.\n\n\nAug 2010\nview\nTechnical Report on Ozone Exposure, Risk, and Impact Assessments for Vegetation, Prepared for the Office of Air Quality Planning and Standards, U.S. Environmental Protection Agency.\n\n\nJan 2007\nview\nClimate Forecasts in Mozambique: an Economic Perspective, in Karen L. O’Brien and Vogel, Coleen H. (eds.) Climate Forecasts in Southern Africa. Aldershot, U.K. Ashgate.\n\n\nApr 2005\nview\nEconomy-Wide Effects of Climate Variability and Climate Prediction in Mozambique, American Journal of Agricultural Economics 82 (3) 750-754.\n\n\n\n\nAug 2000\nview"
   }
 ]

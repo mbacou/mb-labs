@@ -6,25 +6,25 @@ meta:
 
 color:
   palette:
+    cyan:      "#789494"
+    teal:      "#445e64"
+    dark:      "#222e32"
+    green:     "#27ae60"
     blue:      "#3daee9"
     purple:    "#9b59b6"
-    indigo:    "#98796f"
     pink:      "#aea39a"
-    red:       "#da4453"
-    orange:    "#ffac5e"
+    indigo:    "#98796f"
     yellow:    "#eed04c"
-    green:     "#27ae60"
-    teal:      "#445e64"
-    cyan:      "#789494"
-    dark:      "#222e32"
+    orange:    "#ffac5e"
+    red:       "#da4453"
     light:     "#fdfcf9"
     gray:      "#505050"
-    darkgray:  "#e7e2da"   
   
   foreground:   gray
   background:   light
-  primary:      tint-color(red, 25%)
+  primary:      mix(red, light, 75%)
   secondary:    purple
+  info:         mix(blue, dark, 50%)
 
 typography:
   fonts:
@@ -39,7 +39,7 @@ typography:
       weight: [400]
   
   base: Crimson Text
-  headings: M PLUS Code Latin
+  headings: Marck Script
   monospace: M PLUS Code Latin
 
   
