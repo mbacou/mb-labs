@@ -28,13 +28,21 @@ The margin column is **responsive**, content will be moved to the body column on
 #| column: page-left
 
 library(leaflet)
-leaflet(width="100%", height="17rem", 
-options=leafletOptions(minZoom=11, maxZoom=13)) %>% 
-  addTiles("https://proxy.nakarte.me/http/88.99.52.155/tmg/{z}/{x}/{y}",
-    "sovietmap.com") %>%
-  addMarkers(-8.65406047010657, 41.14426475811268, 
-    label="In Porto while <br/>working on migration.<br/> Read on, tips below...", 
-    labelOptions=labelOptions(textsize="1rem"))
+leaflet(
+  width = "100%",
+  height = "17rem",
+  options = leafletOptions(minZoom = 11, maxZoom = 13)
+) %>%
+  addTiles(
+    "https://proxy.nakarte.me/http/88.99.52.155/tmg/{z}/{x}/{y}",
+    "sovietmap.com"
+  ) %>%
+  addMarkers(
+    -8.65406047010657,
+    41.14426475811268,
+    label = "In Porto while <br/>working on migration.<br/> Read on, tips below...",
+    labelOptions = labelOptions(textsize = "1rem")
+  )
 ```
 
 Old-time researchers and engineers have long used [Emacs `Org-Mode`](https://orgmode.org/) (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to *Eric Schulte*'s incredible **Babel** extension [see @schulte2012] and to *John MacFarlane*'s [Pandoc](https://pandoc.org/) document converter library -- but nowadays **Quarto** makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as **in-browser real-time rendering of documents**.
@@ -204,9 +212,11 @@ Note that `_brand.yml` can also apply branding to `ggplot2`, `base R`, and `latt
 My active Bootstrap color palette rendered below.
 
 ```{r}
-par(bg="transparent")
+par(bg = "transparent")
 yaml::read_yaml("../../assets/scss/_brand.yml")$color$palette |>
-  unname() |> unlist() |> scales::show_col()
+  unname() |>
+  unlist() |>
+  scales::show_col()
 ```
 
 
@@ -379,13 +389,15 @@ knitr::kable(mtcars[1:6, 1:10])
 
 # Apply Boostrap Theme to R Graphics
 
-As of writing, Quarto (and/or Thematic) won't automatically apply Bootstrap branding elements to dynamic graphics. Instead I defined my own utility functions in a separate `mblabs` R package.
+As of writing, Quarto won't automatically apply Bootstrap branding to dynamic plots, however R package `quarto` (as of v1.5.0) provides [helper functions](https://quarto-dev.github.io/quarto-r/articles/theme-helpers.html) to modify plot colors at run time. 
+
+Alternatively, and because I tend to use more advanced plot customizaions, I prefer to use my own utility functions sourced from a stand-alone `mbutils` R package.
 
 ```{r}
 #| filename: ./R/theme.R
 #| code-fold: true
 #| code-summary: "Show function"
-#| echo: !expr mblabs::brand.colors
+#| echo: !expr mbutils::brand.colors
 
 ```
 
@@ -393,36 +405,40 @@ As of writing, Quarto (and/or Thematic) won't automatically apply Bootstrap bran
 #| filename: ./R/theme.R
 #| code-fold: true
 #| code-summary: "Show function"
-#| echo: !expr mblabs::scale_brand_dc
+#| echo: !expr mbutils::scale_brand_dc
 
 ```
 
 Next I applied (slightly opinionated) changes to `ggthemes::theme_foundation()`, i.e. simplified axes and a default vertical axis on the right side.
 
-These graphic customizations are documented in my [mblabs](https://mbacou.github.io/mblabs/) R package. This helps with handling dependencies, with code reproducibility, and because I want to use themes more flexibly across projects and clients.
+These plot customizations are documented in my [mbutils](https://mbacou.github.io/mbutils/) R package. This helps with handling dependencies, with code reproducibility, and because I want to use Bootstrap themes more flexibly across projects and clients.
 
 ```{r}
 #| filename: ./R/theme.R
 #| code-fold: true
 #| code-summary: "Show function"
-#| echo: !expr mblabs::theme_brand
+#| echo: !expr mbutils::brand_on
 
 ```
 
-Below we generate a couple of categorical and continuous `ggplot2` and `lattice` plots using multiple Bootstrap color schemes (found in `_brand.yml` configs or modified here on-the-fly).
+Below we generate a couple of categorical and continuous `ggplot2` and `lattice` plots using multiple Bootstrap color schemes (found in `_brand.yml` config or modified here on-the-fly).
 
 ```{r}
 # Apply and check my new branding utilities
 library(ggplot2)
-library(mblabs)
+library(mbutils)
 library(thematic)
 
-# Load my Bootstrap brand for this website, 
+# Load my Bootstrap brand for this website,
 # choosing one of the standard font families and primary shades
-b1 <- brand_theme(
-  file="../../assets/scss/_brand.yml", 
-  fg="gray", bg="light", accent=c("dark", "teal"), font="monospace",
-  gradient=c("cyan", "light", "purple"))
+b1 <- brand_on(
+  file = "../../assets/scss/_brand.yml",
+  fg = "gray",
+  bg = "light",
+  accent = c("dark", "teal"),
+  font = "monospace",
+  gradient = c("cyan", "light", "purple")
+)
 
 # Use thematic to modify the active graphic environment
 thematic::thematic_set_theme(b1)
@@ -433,35 +449,39 @@ lattice::show.settings()
 
 ```{r}
 # Simple branded ggplot
-ggplot(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + geom_col() +
-  labs(title="Default ggplot with Bootstrap brand")
+ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
+  geom_col() +
+  labs(title = "Default ggplot with Bootstrap brand")
 ```
 
 Fonts and colors are used as expected. Further, using my own `theme_brand()` below, I can customize additional plot elements, per my liking.
 
 ```{r}
-ggplot(mtcars, aes(factor(carb), mpg, fill=factor(carb))) + 
+ggplot(mtcars, aes(factor(carb), mpg, fill = factor(carb))) +
   geom_col() +
-  guides(fill=guide_legend(nrow=1)) +
+  guides(fill = guide_legend(nrow = 1)) +
   labs(
-    title="Custom ggplot with Bootstrap brand", 
-    subtitle="Theme provided by R package `mblabs`", 
-    caption="A long plot caption with many references
-    over multiples lines.") +
+    title = "Custom ggplot with Bootstrap brand",
+    subtitle = "Theme provided by R package `mblabs`",
+    caption = "A long plot caption with many references
+    over multiples lines."
+  ) +
   theme_brand()
 ```
 
 ```{r}
-ggplot(mtcars, aes(wt, mpg)) + 
-  geom_smooth(color=pal("orange"), fill=pal("blue")) +
-  geom_point(size=3, aes(color=carb)) + 
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_smooth(color = pal("orange"), fill = pal("blue")) +
+  geom_point(size = 3, aes(color = carb)) +
   scale_brand_cc() +
   guides(
-    y = guide_axis(position="right"),    
-    color = guide_legend(nrow=1)) +
+    y = guide_axis(position = "right"),
+    color = guide_legend(nrow = 1)
+  ) +
   labs(
-    title="Custom ggplot with Bootstrap brand", 
-    subtitle="Theme provided by R package `mblabs`") +
+    title = "Custom ggplot with Bootstrap brand",
+    subtitle = "Theme provided by R package `mblabs`"
+  ) +
   theme_brand()
 ```
 
@@ -475,37 +495,40 @@ Note that I also instruct the code chunk below to produce a PNG instead of SVG f
 #| classes: preview-image
 
 # Modify branding
-b2 <- brand_theme(
-  file="../../assets/scss/_brand.yml", 
-  fg="gray", bg="light", font="headings")
+b2 <- brand_on(
+  file = "../../assets/scss/_brand.yml",
+  fg = "gray",
+  bg = "light",
+  font = "headings"
+)
 
 # Use thematic to modify the active graphic environment
 thematic::thematic_set_theme(b2)
 
-gglabs(faithfuld, aes(waiting, eruptions, z=density), grid="XY") +
-  geom_raster(aes(fill=density)) +
+gglabs(faithfuld, aes(waiting, eruptions, z = density), grid = "XY") +
+  geom_raster(aes(fill = density)) +
   geom_contour() +
   scale_brand_cf(c("orange", "light", "green")) +
   labs(
-    title="Contour Plot with Bootstrap brand", 
-    subtitle="Moved Y-axis to the right, use Bootstrap-derived fill scale", 
-    caption="A very long plot caption with many notes and references
+    title = "Contour Plot with Bootstrap brand",
+    subtitle = "Moved Y-axis to the right, use Bootstrap-derived fill scale",
+    caption = "A very long plot caption with many notes and references
     over multiple lines."
   )
 ```
 
 ```{r}
 # Modify branding on-the-fly without using thematic
-brand(font="headings")
+brand_on(font = "headings")
 
-gglabs(mtcars, aes(wt, mpg, color=factor(cyl))) + 
-  geom_point(size=4) +
-  scale_brand_dc(name="cyl") +  
+gglabs(mtcars, aes(wt, mpg, color = factor(cyl))) +
+  geom_point(size = 4) +
+  scale_brand_dc(name = "cyl") +
   labs(
-    title="Dot Plot with Bootstrap brand", 
-    subtitle="Moved Y-axis to the right, use Bootstrap-derived color scale"
-    ) +
-  theme_brand(base_color="light", base_bg="dark")
+    title = "Dot Plot with Bootstrap brand",
+    subtitle = "Moved Y-axis to the right, use Bootstrap-derived color scale"
+  ) +
+  theme_brand(base_color = "light", base_bg = "dark")
 ```
 
 However, using `thematic` is handy to mofify lattice `par()` options in the current device. This is important as many advanced statistical and spatial libraries continue to favor base R over ggplot.
@@ -514,12 +537,23 @@ However, using `thematic` is handy to mofify lattice `par()` options in the curr
 #| fig-cap: A sample branded histogram in base R
 
 thematic::thematic_set_theme(brand_theme(
-  fg="gray", bg="light", accent="teal", font="m"))
+  fg = "gray",
+  bg = "light",
+  accent = "teal",
+  font = "m"
+))
 
-hist(rchisq(100, df=4), freq=FALSE, ylim=c(0, 0.2), col=1:11, 
-  border=pal("light"), xlab="Density", ylab=NA)
-grid(NA, NULL, col=pal("gray"))
-curve(dchisq(x, df=4), col=pal("red"), lty=2, lwd=2, add=TRUE)
+hist(
+  rchisq(100, df = 4),
+  freq = FALSE,
+  ylim = c(0, 0.2),
+  col = 1:11,
+  border = pal("light"),
+  xlab = "Density",
+  ylab = NA
+)
+grid(NA, NULL, col = pal("gray"))
+curve(dchisq(x, df = 4), col = pal("red"), lty = 2, lwd = 2, add = TRUE)
 ```
 
 
