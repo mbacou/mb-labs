@@ -105,7 +105,7 @@ format:
     fontsize: 15px
     include-before-body: assets/scss/navtabs.html
     theme:
-      light: assets/scss/theme.scss
+      light: assets/scss/mb-labs.scss
 
     grid:
       body-width: 740px

@@ -6,36 +6,7 @@
 
 /*-- scss:defaults --*/
 
-$theme: 'mb-labs';
-
-$teal:      #445e64;
-$cyan:      #789494;
-$green:     #27ae60;
-$blue:      #3daee9;
-$purple:    #9b59b6;
-$pink:      #aea39a;
-$indigo:    #98796f;
-$red:       #da4453;
-$orange:    #ffac5e;
-$yellow:    #eed04c;
-
-$gray:      #505050;
-$dark:      #222e32;
-$light:     #fdfcf9;                   // Notebook paper tone
-$darkgray:  #e7e2da;                   // Notebook paper rules
-
-$primary:     mix($red, $light, 75%);
-$secondary:   $purple;
-$info:        mix($blue, $dark);
-
-$font-family-base:     "Crimson Text";
-$headings-font-family: "M PLUS Code Latin";
-$font-monospace:       "M PLUS Code Latin";
-$font-sans-serif:      "M PLUS Code Latin";
-$font-serif:           "Marck Script";
-
-
-// Other defaults (generally no need to modify below)
+// Generally no need to modify below this line
 $black:     #000000;
 $white:     #ffffff;
 
@@ -54,11 +25,11 @@ $body-bg:    $light;
 $link-color: $gray-700;
 $text-muted: rgba($body-color, .85);
 $code-color: $gray-700;
-$shaded:     rgba($body-bg, .65);        // also $input-bg
+$shaded:     rgba($body-bg, .65);      // also $input-bg
 
-$font-weight-bold: 600;
+$headings-font-color: $gray;           // darker than normal
 $headings-font-weight: 400;
-$headings-font-color: $gray;           // darker than normal text
+$font-weight-bold: 600;
 
 $spacer: 2rem;                         // 30px line-height
 $spacers: (
@@ -161,7 +132,7 @@ $navbar-brand-font-size: 2rem;
 $nav-link-color: $body-color;
 $nav-link-active-color: $body-color;
 $nav-link-hover-color: $primary;
-$nav-link-font-family: $font-sans-serif;
+$nav-link-font-family: $font-family-sans-serif;
 $nav-link-font-weight: 500;
 $nav-link-font-size: 1.2rem;
 $nav-link-padding-x: 1rem;
@@ -170,8 +141,6 @@ $nav-tabs-border-color: $border-color;
 
 
 /*-- scss:rules --*/
-
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,300;0,600;1,300;1,400;1,600&family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script:wght@400&display=swap');
 
 // Quarto layout overrides for vertical rhythm
 #quarto-content>*, #quarto-header>*, .quarto-title-banner>*, #quarto-sidebar>* {
@@ -250,7 +219,7 @@ hr {
 }
 blockquote small, blockquote .small {
   color: $headings-font-color;
-  font-family: $font-sans-serif;
+  font-family: $font-family-sans-serif;
   font-size: $code-font-size;
   font-style: normal;
   font-weight: 500;
@@ -309,7 +278,7 @@ mark, .mark {
 #quarto-appendix.default .quarto-appendix-heading, .quarto-title-meta-heading, 
 #title-block-header.quarto-title-block.default .abstract .block-title,
 details>summary {
-  font-family: $font-sans-serif;
+  font-family: $font-family-sans-serif;
   font-size: $code-font-size !important;
   color: darken($darkgray, 25%);
   font-weight: 400;
@@ -352,7 +321,7 @@ details>summary {
 .quarto-title-meta-contents p::before {
   content: 'Author:';
   color: darken($darkgray, 25%);
-  font-family: $font-sans-serif;
+  font-family: $font-family-sans-serif;
   font-size: $code-font-size;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -450,14 +419,14 @@ img.card-img:hover {
   color: $text-muted;
 }
 .listing-date {
-  font-family: $font-sans-serif;
+  font-family: $font-family-sans-serif;
   font-size: $code-font-size;
   text-transform: uppercase;
   font-weight: 500;
   color: $primary;
 }
 .listing-file-modified, .listing-author, .listing-reading-time {
-  font-family: $font-sans-serif;
+  font-family: $font-family-sans-serif;
   font-size: $code-font-size;
   color: $headings-font-color;
 }
@@ -545,7 +514,7 @@ table, .table {
 }
 .table th {
   color: $headings-font-color;
-  font-family: $font-sans-serif;
+  font-family: $font-family-sans-serif;
   font-size: $code-font-size;
   font-weight: 500;
   line-height: calc(2rem - 1px);
@@ -569,7 +538,7 @@ table, .table {
 caption, .panel-caption, .figure-caption, .subfigure-caption, .table-caption,
 figcaption, .column-margin figcaption, .margin-caption, 
 div.aside, aside, .column-margin {
-  font-family: $font-sans-serif;
+  font-family: $font-family-sans-serif;
   font-size: $code-font-size;
   color: $text-muted;
   text-align: left;
@@ -678,7 +647,7 @@ table caption {
   font-size: unset;
 }
 #quarto-announcement {
-  font-family: $font-sans-serif;
+  font-family: $font-family-sans-serif;
   font-size: 1.25rem;
   border: none;
   justify-content: center;
@@ -736,7 +705,7 @@ footer.footer .nav-footer {
 .nav-footer .nav-footer-left p,
 .nav-footer .nav-footer-right p,
 .nav-footer .nav-footer-center p {
-  font-family: $font-sans-serif;
+  font-family: $font-family-sans-serif;
   font-size: $code-font-size;
   line-height: 1.5rem;
 }

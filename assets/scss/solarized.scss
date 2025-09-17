@@ -46,10 +46,6 @@ $font-monospace:       "M PLUS Code Latin";
 $font-sans-serif:      "M PLUS Code Latin";
 $font-script:          "Marck Script";
 
-@import '_theme';
-
-/*-- scss:rules --*/
-
 @import url('https://fonts.googleapis.com/css2?family=Criumson+Pro:wght@400..500&family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script&display=swap');
 
-
+@import '_theme';
