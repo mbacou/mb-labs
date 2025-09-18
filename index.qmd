@@ -1,15 +1,13 @@
 ---
 title: People, Space, and Statistics
 subtitle: Informed citizens make better policy choices; better policies save [lives]{.mark} and [resources.]{.mark}
-date: 2010-05-01
-date-modified: last-modified
 categories:
   - econ
   - stats
   - dataviz
 toc: false
 grid:
-  body-width: 880px
+  body-width: 720px
   sidebar-width: 0px
   margin-width: 240px  
   
@@ -43,7 +41,7 @@ listing:
     fields: [title, description, image]
 ---
 
-::: {.description .mt-5 .mx-md-2}
+::: {.description .mt-n3 .mb-md-2 .mr-md-3}
 ![](posts/resume/_fig/profile.jpg){.img-rounded .d-block .mx-auto .shadow-md .float-md-end .mt-n5 .mb-2 .me-md-n4 .ms-md-3 .rot-n}
 
 [Hi, my name is Melanie]{.fs-3} &mdash;
@@ -60,7 +58,7 @@ I code mostly in [R]{.bg-info-subtle}, [Python]{.bg-info-subtle}, [JavaScript]{.
 :::
 
 ::: {.aside .bg-shaded .p-2}
-{{< video https://youtube.com/watch?v=gtqj8HuN1hs&list=PLMEI8z_d3EZGRnn8nGh3f6A7zwT4wDmVU height='150px' width='100%' >}} {{< bi music-note-list class='float-start me-2 mb-2' >}} Play to support my favorite artists.
+{{< video https://youtube.com/watch?v=gtqj8HuN1hs&list=PLMEI8z_d3EZGRnn8nGh3f6A7zwT4wDmVU height='120px' width='100%' >}} {{< bi music-note-list class='float-start me-2 mb-2' >}} Play to support my favorite artists.
 :::
 
 

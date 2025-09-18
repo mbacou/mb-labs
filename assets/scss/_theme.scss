@@ -1,6 +1,6 @@
 /* Theme: mb-labs Bootstrap theme */
 /* Author: BACOU, Melanie <mel@mbacou.com> */
-/* Version: v2.1.0 */
+/* Version: v2.1.1 */
 /* Date: 2024-01-31 */
 /* Boostrap customizations for Mel B. Labs */
 
@@ -312,7 +312,7 @@ details>summary {
   opacity: 1 !important;
 }
 .quarto-title-meta {
-  padding: 0;
+  padding: 1rem 0;
 }
 .quarto-title-meta-heading {
   display: none;
@@ -336,7 +336,7 @@ details>summary {
 }
 .quarto-title-meta-contents p {
   border-bottom: 2px solid $darkgray;
-  max-width: 15rem;
+  max-width: 16rem;
 }
 .quarto-title-meta-contents p::before {
   content: 'Author:';
@@ -635,6 +635,9 @@ table caption {
 /* Quarto page layout fixes */
 
 // Notebook gridlines
+body {
+  padding: 0 2rem;
+}
 #quarto-content {
   border-top: solid 1px $darkgray;
   background-image:
@@ -645,11 +648,9 @@ table caption {
     background-position: 0 calc(-.5rem + 1px);
     background-repeat: repeat;
 }
-#quarto-header {
-  padding: 0 2rem;
-}
-footer.footer .nav-footer, #quarto-header>nav {
+#quarto-header>nav {
   padding: 0;
+  margin: 0 2rem;
 }
 .navbar, .quarto-banner nav.quarto-secondary-nav {
   padding: 0;
@@ -660,8 +661,8 @@ footer.footer .nav-footer, #quarto-header>nav {
 .quarto-title-block .quarto-title-banner  {
   padding: 0 0 1rem 0 !important;
   margin: 0  !important;
-  background-size: 20vw auto !important;
-  background-position: top 2rem right 2rem;
+  background-size: 100vw auto !important;
+  background-position: top 0 right 0;
   background-repeat: no-repeat;
 }
 .navbar #quarto-search {
@@ -718,12 +719,9 @@ body.nav-sidebar .quarto-title-banner {
 .tools-wide {
   padding: 0 2rem;
 }
-footer.footer {
-  padding: 0 2rem;
-}
 footer.footer .nav-footer {
   margin: 0;
-  padding: 1rem;
+  padding: 2rem 0;
 }
 .nav-footer .nav-footer-left p,
 .nav-footer .nav-footer-right p,
@@ -740,15 +738,15 @@ footer.footer .nav-footer {
 }
 
 @media (max-width: 992px) {
-  #quarto-header {
+  body {
     padding: 0;
   }
-  .quarto-title-block .quarto-title-banner {
-    background: none !important;
+  #quarto-header>nav {
+    margin: 0;
   }
-  footer.footer {
-    padding: 0;
-  }
+  footer.footer .nav-footer {
+    padding: 2rem;
+  }  
 }
 
 @import '_extra';
