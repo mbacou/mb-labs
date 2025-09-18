@@ -10,3 +10,5 @@ _assets
 _site/
 .quarto/
 /.quarto/
+
+**/*.quarto_ipynb

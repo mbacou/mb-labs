@@ -2,12 +2,10 @@
 title: BACOU, Melanie (CV)
 subtitle: Agro-economist, agri-meteo, and geospatial analyst
 author: ""
-description: I am an applied economist with a focus on public-sector strategies for sustainable agriculture and food security. 25+ years experience in program and policy design, monitoring & evaluation (M&E), climate risk assessment, and rural finance. 
+date-modified: ""
+description: I am an applied economist with a focus on public-sector strategies for sustainable agriculture and food security. 25+ years experience in program and policy design, monitoring & evaluation (M&E), climate risk assessment, and rural finance.
 image: _fig/profile.jpg
-date: 2024-01-01
-date-modified: last-modified
 toc-depth: 2
-title-block-banner: _fig/banner.svg
 freeze: true
 category: skip
 citation: false
@@ -17,14 +15,14 @@ citation: false
 ![](_fig/profile.jpg){.img-rounded .mt-md-n5}
 
 ::: {.small .my-3}
-{{< bi linkedin class=text-primary >}}    [linkedin.com/in/mbacou](https://linkedin.com/in/mbacou)\
-{{< bi github class=text-primary >}}    [github.com/mbacou](https://github.com/mbacou)\
-{{< bi person-circle class=text-primary >}}    [devex.com](https://www.devex.com/people/melanie-bacou-46872)\
-{{< bi journal-text class=text-primary >}}    [orcid.org](https://orcid.org/0000-0003-1810-6818)  
-{{< bi telegram class=text-primary >}}    [t.me/mbacou](https://t.me/mbacou)\
+{{< bi linkedin >}}    [linkedin.com/in/mbacou](https://linkedin.com/in/mbacou)\
+{{< bi github >}}    [github.com/mbacou](https://github.com/mbacou)\
+{{< bi person-circle >}}    [devex.com](https://www.devex.com/people/melanie-bacou-46872)\
+{{< bi journal-text >}}    [orcid.org](https://orcid.org/0000-0003-1810-6818)  
+{{< bi telegram >}}    [t.me/mbacou](https://t.me/mbacou)\
 :::
 
-##### <mark>Top Skills</mark>
+##### Top Skills
 
 Cost/benefit analysis\
 Economic impact evaluation\
@@ -34,14 +32,14 @@ Weather risk and adaptation\
 Parametric risk transfer\
 R, STATA, QGIS
 
-##### <mark>Languages</mark>
+##### Languages
 
 French (native)\
 English (bilingual)\
 German (limited working)\
 Russian (beginner)
 
-##### <mark>Certifications</mark>
+##### Certifications
 
 [SAS® Programming III](https://learn.sas.com/course/view.php?id=211)
 :::

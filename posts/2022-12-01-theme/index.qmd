@@ -15,10 +15,10 @@ abstract: |
 
 With the release of **Quarto 1.4** (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as **Emacs org-mode**, **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.
 
-::: {.column-margin .rot .bg-info-subtle .text-info .text-serif .p-2 .mt-md-2}
-No other reason for this map below but to showcase Quarto's new content layout features -- I am a fan of Soviet-era classic topo styles. Check out Russian [cartography](https://sovietmaps.com/), it is stunning work.
+::: {.aside .description .mt-md-2}
+No other reason for this map but to showcase Quarto's new content layout features -- I am a fan of Soviet-era classic topo styles. Check out Russian [cartography](https://sovietmaps.com/), it is stunning work.
 
-This margin note uses a custom `<div class="column-margin bg-info-subtle text-info p-2">` making use of both Quarto and Boostrap's CSS utilities.
+This margin note uses `<div class="aside description">` making use of both Quarto and Boostrap's CSS utilities.
 
 The margin column is **responsive**, content will be moved to the body column on smaller display sizes.
 :::
@@ -47,15 +47,15 @@ leaflet(
 
 Old-time researchers and engineers have long used [Emacs `Org-Mode`](https://orgmode.org/) (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to *Eric Schulte*'s incredible **Babel** extension [see @schulte2012] and to *John MacFarlane*'s [Pandoc](https://pandoc.org/) document converter library -- but nowadays **Quarto** makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as **in-browser real-time rendering of documents**.
 
-In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my `assets/scss/theme.scss` Sass file and other tidbits[^1][^2].
+In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my `assets/scss/_theme.scss` Sass file and other tidbits[^1][^2].
 
 [^1]: For folks born this century, to **babel** (elips) or to **sweave** (R) is the process of compiling text documents that include both static markup and compile-time executable scripts.
 
-    ![](_fig/Donald-Knuth.jpg){.img-rounded width="10em"}
+    ![](_fig/Donald-Knuth.jpg){.img-rounded .d-block .mx-auto}
 
     The concept of **Literate programming** was introduced in 1984 by the mathematician [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) and was widely popularized thereafter in the engineering community thanks to [org-mode](https://orgmode.org/worg/org-contrib/babel/uses.html) in the Emacs editor.
 
-    ![](_fig/Carsten-Dominik.jpg){.img-rounded width="10em"}
+    ![](_fig/Carsten-Dominik.jpg){.img-rounded .d-block .mx-auto}
 
     Emacs **`Org-Mode`** was created by the astronomer [Carsten Dominik](https://en.wikipedia.org/wiki/Org-mode#:~:text=Org%20Mode%20was%20created%20by,mode%20by%20default%20since%202006) in 2003 and remains to this day one of the most used and madly loved note-taking and GTD (Get-Things-Done) tools, with many of its functionality (agenda, tags, etc.) yet to be ported to any markdown engine.
 
@@ -106,23 +106,23 @@ format:
 
 There are new Quarto CSS classes to help control content width and placement.
 
-::: {.column-body .bg-secondary-subtle .mb-2}
+::: {.column-body .bg-info-subtle .mb-2}
 `.column-body`
 :::
 
-::: {.column-body-outset .bg-secondary-subtle .mb-2}
+::: {.column-body-outset .bg-info-subtle .mb-2}
 `.column-body-outset`
 :::
 
-::: {.column-page .bg-secondary-subtle .mb-2}
+::: {.column-page .bg-info-subtle .mb-2}
 `.column-page`
 :::
 
-::: {.column-page-inset .bg-secondary-subtle .mb-2}
+::: {.column-page-inset .bg-info-subtle .mb-2}
 `.column-page-inset`
 :::
 
-::: {.column-screen .bg-secondary-subtle .mb-2}
+::: {.column-screen .bg-info-subtle .mb-2}
 `.column-screen`
 :::
 
@@ -205,7 +205,7 @@ Note that `_brand.yml` can also apply branding to `ggplot2`, `base R`, and `latt
 
 ```{yaml}
 #| eval: false
-#| file: ../../assets/scss/_brand.yml 
+#| file: ../../_brand.yml 
 #| filename: _brand.yml 
 ```
 
@@ -213,7 +213,7 @@ My active Bootstrap color palette rendered below.
 
 ```{r}
 par(bg = "transparent")
-yaml::read_yaml("../../assets/scss/_brand.yml")$color$palette |>
+yaml::read_yaml("../../_brand.yml")$color$palette |>
   unname() |>
   unlist() |>
   scales::show_col()
@@ -280,8 +280,8 @@ Bootstrap default line-height and font sizing typically work, but I like to enfo
 
 ```{scss}
 #| eval: false
-#| file: ../../assets/scss/theme.scss
-#| filename: ./assets/scss/theme.scss
+#| file: ../../assets/scss/_theme.scss
+#| filename: ./assets/scss/_theme.scss
 #| echo: !expr c(60:86)
 
 ```
@@ -427,21 +427,11 @@ Below we generate a couple of categorical and continuous `ggplot2` and `lattice`
 # Apply and check my new branding utilities
 library(ggplot2)
 library(mbutils)
-library(thematic)
 
-# Load my Bootstrap brand for this website,
-# choosing one of the standard font families and primary shades
-b1 <- brand_on(
-  file = "../../assets/scss/_brand.yml",
-  fg = "gray",
-  bg = "light",
-  accent = c("dark", "teal"),
-  font = "monospace",
-  gradient = c("cyan", "light", "purple")
-)
+pal <- pal.brand
 
 # Use thematic to modify the active graphic environment
-thematic::thematic_set_theme(b1)
+quarto::theme_colors_thematic()
 
 # view settings
 lattice::show.settings()
@@ -494,18 +484,7 @@ Note that I also instruct the code chunk below to produce a PNG instead of SVG f
 #| fig-format: png
 #| classes: preview-image
 
-# Modify branding
-b2 <- brand_on(
-  file = "../../assets/scss/_brand.yml",
-  fg = "gray",
-  bg = "light",
-  font = "headings"
-)
-
-# Use thematic to modify the active graphic environment
-thematic::thematic_set_theme(b2)
-
-gglabs(faithfuld, aes(waiting, eruptions, z = density), grid = "XY") +
+ggplot(faithfuld, aes(waiting, eruptions, z = density), grid = "XY") +
   geom_raster(aes(fill = density)) +
   geom_contour() +
   scale_brand_cf(c("orange", "light", "green")) +
@@ -519,9 +498,9 @@ gglabs(faithfuld, aes(waiting, eruptions, z = density), grid = "XY") +
 
 ```{r}
 # Modify branding on-the-fly without using thematic
-brand_on(font = "headings")
+#brand_on(font = "headings")
 
-gglabs(mtcars, aes(wt, mpg, color = factor(cyl))) +
+ggplot(mtcars, aes(wt, mpg, color = factor(cyl))) +
   geom_point(size = 4) +
   scale_brand_dc(name = "cyl") +
   labs(
@@ -535,13 +514,6 @@ However, using `thematic` is handy to mofify lattice `par()` options in the curr
 
 ```{r}
 #| fig-cap: A sample branded histogram in base R
-
-thematic::thematic_set_theme(brand_theme(
-  fg = "gray",
-  bg = "light",
-  accent = "teal",
-  font = "m"
-))
 
 hist(
   rchisq(100, df = 4),

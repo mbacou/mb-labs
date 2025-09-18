@@ -7,25 +7,25 @@
 
 $theme: 'mb-labs';
 
-$teal:      #445e64;
-$cyan:      #789494;
-$green:     #27ae60;
-$blue:      #3daee9;
-$purple:    #9b59b6;
-$pink:      #aea39a;
-$indigo:    #98796f;
-$red:       #da4453;
-$orange:    #ffac5e;
-$yellow:    #eed04c;
+$teal:      #8E8467;
+$indigo:    #79799C;
+$blue:      #00839E;
+$cyan:      #05D5FF;
+$green:     #73842A;
+$purple:    #8D46C1;
+$pink:      #C6A5E8;
+$red:       #B54D4D;
+$orange:    #A1713C;
+$yellow:    #E0D1A4;
+$gray:      #212120;                   // Typography
+$darkgray:  #E2D4F4;                   // Paper rules
 
-$light:     #fdfcf9;                   // Notebook paper tone
-$dark:      #222e32;                   // Dark or contrasting background
-$gray:      #505050;                   // Typography
-$darkgray:  #e7e2da;                   // Notebook paper rules
+$light:     #FCFAF5;                   // Paper tone
+$dark:      #003946;                   // Contrasting background
 
-$primary:     mix($red, $light, 75%);
+$primary:     #D47979;
 $secondary:   $purple;
-$info:        mix($blue, $dark);
+$info:        $blue;
 
 $font-family-base:       "Crimson Text";
 $font-family-sans-serif: "M PLUS Code Latin";
@@ -33,6 +33,6 @@ $font-family-serif:      "Marck Script";
 $font-monospace:         "M PLUS Code Latin";
 $headings-font-family:   "M PLUS Code Latin";
 
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,300;0,600;1,300;1,400;1,600&family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@300..500&family=M+PLUS+Code+Latin:wght@400..500&family=Marck+Script:wght@400&display=swap');
 
 @import '_theme';

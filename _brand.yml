@@ -1,0 +1,44 @@
+meta:
+  name: Mel B. Labs
+  link:
+    home: https://mbacou.github.io/mb-labs
+    github: https://github.com/mbacou/mb-labs
+
+color:
+  palette:
+    teal:      "#8E8467"
+    indigo:    "#79799C"
+    blue:      "#00839E"
+    cyan:      "#05D5FF"
+    green:     "#73842A"
+    purple:    "#8D46C1"
+    pink:      "#C6A5E8"
+    red:       "#B54D4D"
+    orange:    "#A1713C"
+    yellow:    "#E0D1A4"
+    gray:      "#212120"
+    darkgray:  "#e7e2da"
+    light:     "#FCFAF5"
+    dark:      "#003946"
+
+  primary:     "#D47979"
+  secondary:   purple
+  info:        blue 
+
+typography:
+  fonts:
+    - family: Crimson Text
+      source: google
+      weight: [400, 500]
+    - family: M PLUS Code Latin
+      source: google
+      weight: [400, 500]
+    - family: Marck Script
+      source: google
+      weight: [400]
+  
+  base: Crimson Text
+  headings: Marck Script
+  monospace: M PLUS Code Latin
+  
+

@@ -1,10 +1,34 @@
 /* Theme: mb-labs Bootstrap theme */
 /* Author: BACOU, Melanie <mel@mbacou.com> */
-/* Version: v2.0.0 */
+/* Version: v2.1.0 */
 /* Date: 2024-01-31 */
 /* Boostrap customizations for Mel B. Labs */
 
 /*-- scss:defaults --*/
+
+$theme: 'mb-labs';
+
+$teal:      $brand-teal;
+$indigo:    $brand-indigo;
+$blue:      $brand-blue;
+$cyan:      $brand-cyan;
+$green:     $brand-green;
+$purple:    $brand-purple;
+$pink:      $brand-pink;
+$red:       $brand-red;
+$orange:    $brand-orange;
+$yellow:    $brand-yellow;
+$gray:      $brand-gray;
+$darkgray:  $brand-darkgray;
+
+$light:     $brand-light;
+$dark:      $brand-dark;
+
+$font-family-base:       "Crimson Text";
+$font-family-sans-serif: "M PLUS Code Latin";
+$font-family-serif:      "Marck Script";
+$font-monospace:         "M PLUS Code Latin";
+$headings-font-family:   "M PLUS Code Latin";
 
 // Generally no need to modify below this line
 $black:     #000000;
@@ -20,16 +44,16 @@ $gray-700:   tint-color($gray, 30%);
 $gray-800:   tint-color($gray, 20%);
 $gray-900:   tint-color($gray, 10%);
 
-$body-color: $gray-900;
+$body-color: $gray-800;
 $body-bg:    $light;
 $link-color: $gray-700;
 $text-muted: rgba($body-color, .85);
 $code-color: $gray-700;
 $shaded:     rgba($body-bg, .65);      // also $input-bg
 
-$headings-font-color: $gray;           // darker than normal
+$headings-font-color: $gray-900;       // darker than normal
 $headings-font-weight: 400;
-$font-weight-bold: 600;
+$font-weight-bold: 500;
 
 $spacer: 2rem;                         // 30px line-height
 $spacers: (
@@ -128,13 +152,14 @@ $navbar-hover-color: $primary;
 $navbar-border-color: $border-color;
 $navbar-brand-padding-y: 0;
 $navbar-brand-font-size: 2rem;
+$navbar-toggler-font-size: $small-font-size;
 
 $nav-link-color: $body-color;
 $nav-link-active-color: $body-color;
 $nav-link-hover-color: $primary;
 $nav-link-font-family: $font-family-sans-serif;
-$nav-link-font-weight: 500;
-$nav-link-font-size: 1.2rem;
+$nav-link-font-size: $small-font-size;
+$nav-link-font-weight: 400;
 $nav-link-padding-x: 1rem;
 $nav-link-padding-y: 0;
 $nav-tabs-border-color: $border-color;
@@ -168,7 +193,7 @@ p, ol, ul, dl {
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: $headings-font-color;
-  font-weight: $headings-font-weight;
+  font-weight: $headings-font-weight !important;
   line-height: 3rem;
   padding: 0;
   margin-top: 2rem;
@@ -177,7 +202,7 @@ h1.title:not(.quarto-secondary-nav-title), .h1.title:not(.quarto-secondary-nav-t
 #title-block-header.quarto-title-block.default .quarto-title .title {
   font-size: calc($h1-font-size + .5rem);
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .level1 h1:not(.title) {
   margin-top: 3rem;  
@@ -200,7 +225,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 h6, .h6 {
   color: $primary;
-  font-family: $font-serif;
+  font-family: $font-family-serif;
   margin: 0 0 1.5rem -.5rem;
   transform: rotate(-2deg);
 }
@@ -247,31 +272,26 @@ ul li ul li:last-child {
   margin-bottom: 1.5rem;
 }
 p.subtitle {
+  color: $gray-500;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 .description {
-  font-size: $h4-font-size;
-  font-weight: 400;
-  padding: 1rem 1rem 1.5rem 1rem;
-  background-color: transparent;
+  display: block;
+  color: $info;
+  font-family: $font-family-serif;
+  font-size: calc($font-size-base + 2px);
+  padding: 1rem 2rem 0;
+  background-color: rgba($info, 10%);
   backdrop-filter: blur(6px);
-  width: 80%;
-  margin-left: auto;
-}
-.description::before {
-  content: 'In short...' ;
-  color: $primary;
-  font-size: 2.5rem;
-  font-family: $font-serif;
-  display: flex;
-  margin: 0 0 1.25rem -.25rem;
-  transform: rotate(-3deg);
+  transform: rotate(.6deg);  
 }
 mark, .mark {
   color: inherit;
   font-weight: 500;
   padding: 0 .25rem; 
+  background-color: rgba($primary, 10%);
+  border-radius: $border-radius;
 }
 
 // Article pages
@@ -304,7 +324,7 @@ details>summary {
   margin: 0 0 1rem 0;
 }
 #title-block-header.quarto-title-block.default .abstract p {
-  color: $info;
+  color: $text-muted;
   text-align: justify; 
   font-size: $small-font-size;
   padding: 0 .5rem;
@@ -316,7 +336,7 @@ details>summary {
 }
 .quarto-title-meta-contents p {
   border-bottom: 2px solid $darkgray;
-  max-width: 17rem;
+  max-width: 15rem;
 }
 .quarto-title-meta-contents p::before {
   content: 'Author:';
@@ -363,7 +383,7 @@ h5.quarto-listing-category-title, #quarto-margin-sidebar h5,
 }
 #toc-title {
   text-align: end;
-  margin: 2rem 1rem .5rem 0;  
+  margin: 0 1rem .5rem 0;  
   border: none;
   transform: rotate(0deg);
 }
@@ -421,19 +441,21 @@ img.card-img:hover {
 .listing-date {
   font-family: $font-family-sans-serif;
   font-size: $code-font-size;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: $primary;
+  font-weight: $font-weight-bold;
+  color: tint-color($secondary, 20%);
 }
 .listing-file-modified, .listing-author, .listing-reading-time {
   font-family: $font-family-sans-serif;
   font-size: $code-font-size;
-  color: $headings-font-color;
+  color: $text-muted;
 }
 .listing-reading-time::before {
    content: "\F293";
    font-family: 'bootstrap-icons';
    margin-right: .5rem;
+}
+div.quarto-post .listing-description {
+  margin-bottom: calc(1rem - 2px);
 }
 .quarto-listing-sort {
   margin: 0 0 1rem auto;
@@ -451,7 +473,7 @@ pre, code, pre code {
   color: $code-color;
   font-family: $font-monospace;
   font-size: $code-font-size;
-  background: none;
+  background-color: none;
   padding: 0;
 }
 code span.fu, code span.sc {
@@ -462,8 +484,8 @@ p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
   font-family: $font-monospace;
   font-size: $code-font-size;
   line-height: inherit;
-  background: none;
-  padding: 0 .25rem;
+  background-color: $shaded;
+  padding: 0 .25rem !important;
 }
 .code-with-filename .code-with-filename-file {
   background-color: $table-striped-bg;
@@ -480,7 +502,7 @@ div.sourceCode, details, .cell {
   margin: 0 0 2rem 0;
 }
 div.sourceCode {
-  background-color: $shaded;
+  background-color: $shaded !important;
   border: none;
   padding: 1rem 1rem .5rem;
 }
@@ -541,18 +563,20 @@ div.aside, aside, .column-margin {
   font-family: $font-family-sans-serif;
   font-size: $code-font-size;
   color: $text-muted;
-  text-align: left;
   padding: 0;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
-.column-margin.column-container p {
-  margin-bottom: 1rem;
-}
-.aside, .column-margin, .aside p, .column-margin p {
+.aside, .column-margin {
   font-family: $font-family-base;
   font-size: $small-font-size;
   line-height: 1.75rem;
+  margin: 0;
+}
+.aside p, .column-margin p {
+  margin-bottom: 1rem;
+  line-height: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 table caption {
   padding: .5rem;
@@ -576,9 +600,7 @@ table caption {
 }
 .img-rounded {
   border-radius: 6rem;
-  display: block;
-  margin: 2rem auto 0 auto;
-  width: 10rem;
+  max-width: 10rem;
 }
 
 /* Callouts (Quarto bloody mess)  */
@@ -614,6 +636,7 @@ table caption {
 
 // Notebook gridlines
 #quarto-content {
+  border-top: solid 1px $darkgray;
   background-image:
     linear-gradient(to right, $darkgray, transparent 1px, transparent),
     linear-gradient(to bottom, $darkgray, transparent 1px, transparent);
@@ -622,11 +645,17 @@ table caption {
     background-position: 0 calc(-.5rem + 1px);
     background-repeat: repeat;
 }
+#quarto-header {
+  padding: 0 2rem;
+}
+footer.footer .nav-footer, #quarto-header>nav {
+  padding: 0;
+}
 .navbar, .quarto-banner nav.quarto-secondary-nav {
   padding: 0;
-  margin: 0 1rem;
+  margin: 0;
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid $border-color;   
+  border-bottom: 1px solid $navbar-border-color;   
 }
 .quarto-title-block .quarto-title-banner  {
   padding: 0 0 1rem 0 !important;
@@ -635,13 +664,8 @@ table caption {
   background-position: top 2rem right 2rem;
   background-repeat: no-repeat;
 }
-@media (max-width: 767.98px) {
-  .quarto-title-block .quarto-title-banner {
-    background: none !important;
-  }
-}
 .navbar #quarto-search {
-  margin: 0 0 0 2rem;
+  margin: 0;
 }
 .navbar #quarto-search input {
   font-size: unset;
@@ -650,7 +674,6 @@ table caption {
   font-family: $font-family-sans-serif;
   font-size: 1.25rem;
   border: none;
-  justify-content: center;
 }
 body.nav-sidebar .quarto-title-banner {
   margin-bottom: 2rem;
@@ -660,47 +683,47 @@ body.nav-sidebar .quarto-title-banner {
   padding: 1rem 1rem .5rem 1rem;
   background-color: $shaded;
 }
-.column-margin.column-container>*:not(.collapse):first-child {
-  padding-bottom: unset;
-}
-.panel-tabset>.nav-tabs {
-  line-height: 3rem;  
-  border-bottom: solid 1px $border-color;
-}
-.navbar .nav-item:not(.compact) .nav-link {
-  line-height: 3rem;
-}
-.navbar .nav-item:not(.compact) .nav-link,
+.navbar .nav-item:not(.compact.collapse) .nav-link,
 .nav-tabs .nav-item .nav-link {
-  margin-right: .25rem;
+  text-transform: uppercase;
+  line-height: 4rem;
+  margin-bottom: -3px;
   border: none;
-  border-top: solid 3px transparent;
+  border-right: solid 1px $darkgray;
   border-bottom: solid 3px transparent;
 }
-.navbar .nav-item:not(.compact) .nav-link:hover,
+.navbar .nav-item:not(.compact.collapse) .nav-link.active,
+.nav-tabs .nav-item .nav-link.active {
+  border-bottom: solid 3px transparent;
+}
+.navbar .nav-item:not(.compact.collapse) .nav-link:hover,
 .nav-tabs .nav-item .nav-link:hover {
   border-bottom: solid 3px $primary;
+  background-color: rgba($primary, 10%);
 }
-.navbar .nav-item:not(.compact) .nav-link.active,
-.nav-tabs .nav-item .nav-link.active {
-  border-bottom: solid 3px $border-color;
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-family: $headings-font-family;
+  padding-left: $nav-link-padding-x;
+  padding-right: $nav-link-padding-x;
 }
 .navbar-title {
   font-family: $headings-font-family;
-  line-height: 4rem;
+  line-height: 3rem;
 }
 .navbar-logo {
   max-height: 7rem;
   position: absolute;
   top: 1rem;
 }
+.tools-wide {
+  padding: 0 2rem;
+}
 footer.footer {
-  padding: 0 4rem 0 0;
+  padding: 0 2rem;
 }
 footer.footer .nav-footer {
-  border-top: 1px solid $border-color;
   margin: 0;
-  padding: 1rem 0 1rem 2rem;
+  padding: 1rem;
 }
 .nav-footer .nav-footer-left p,
 .nav-footer .nav-footer-right p,
@@ -712,6 +735,21 @@ footer.footer .nav-footer {
 .nav-footer-center {
   display: none;
 }
+.nav-footer .nav-footer-right p {
+  font-size: $font-size-base;
+}
 
-@import '_navtabs', '_sidebar';
+@media (max-width: 992px) {
+  #quarto-header {
+    padding: 0;
+  }
+  .quarto-title-block .quarto-title-banner {
+    background: none !important;
+  }
+  footer.footer {
+    padding: 0;
+  }
+}
+
+@import '_extra';
 

@@ -6,6 +6,8 @@ project:
   preview:
     port: 5555
 
+highlight-style: tango    
+
 website:
   title: "Mel B. mb-labs"
   favicon: assets/mb-square.png
@@ -23,12 +25,21 @@ website:
 
   navbar:
     title: mb-labs
-    foreground: dark
+    foreground: gray-700
     background: transparent
     search: true
-    collapse: false
+    collapse: true
     tools-collapse: false
-    toggle-position: right
+    toggle-position: left
+    right: 
+      - text: Notebooks
+        href: index.qmd
+      - text: Portfolio
+        href: portfolio.qmd
+      - text: Ressources
+        href: /posts/tools/
+      - text: Bio / CV
+        href: /posts/resume/
     tools:
       - icon: github
         href: https://github.com/mbacou/mb-labs
@@ -36,13 +47,12 @@ website:
         href: https://t.me/mbacou
       - icon: linkedin
         href: https://linkedin.com/in/mbacou
-      - icon: youtube
-        href: https://www.youtube.com/@mbacou/playlists  
   
   sidebar:
     style: docked
     pinned: true
-    border: false      
+    border: false
+    alignment: right   
 
   search:
     type: textbox
@@ -56,18 +66,22 @@ website:
   page-footer:
     left: |
       **Mel B. Labs** -- a personal blog about econometrics and statistics.<br/>
-      BACOU, Melanie&copy; 2024 /
-      Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+      BACOU, Melanie &copy; 2024 /
+      Licensed under [CC BY-NC 4.0](/license.qmd).
 
       [All views here are strictly my own and do <u>not</u> reflect that of employers,
       project partners or clients. Refer to each article for citation, code and data reuse.]{.text-muted}
+
+      This site is generated using [Quarto&reg;](https://quarto.org).
     right:
-      - text: About
-        href: about.qmd
-      - text: License
-        href: license.qmd
-      - text: Quarto^®^
-        href: https://quarto.org/
+      - icon: github
+        href: https://github.com/mbacou
+      - icon: telegram
+        href: https://t.me/mbacou
+      - icon: linkedin
+        href: https://linkedin.com/in/mbacou
+      - icon: youtube
+        href: https://www.youtube.com/@mbacou/playlists  
       - icon: rss
         href: index.xml      
 
@@ -80,6 +94,7 @@ format:
     toc-location: left
     toc-depth: 3
     smooth-scroll: true
+    date-format: medium
 
     link-external-icon: false
     link-external-newwindow: true
@@ -99,16 +114,15 @@ format:
 
     code-copy: false
     code-overflow: wrap
-    highlight-style: tango
-    brand: false
 
     fontsize: 15px
-    include-before-body: assets/scss/navtabs.html
     theme:
-      light: assets/scss/mb-labs.scss
+      light:
+        - ./assets/scss/_theme.scss
+        - brand
 
     grid:
-      body-width: 740px
-      sidebar-width: 120px
+      body-width: 720px
+      sidebar-width: 190px
       margin-width: 210px
-      gutter-width: 60px
+      gutter-width: 30px
