@@ -23,16 +23,17 @@ website:
   page-navigation: true
   bread-crumbs: false
 
-  navbar:
-    title: mb-labs
-    foreground: gray-700
+  navbar: 
+    title: "**mb-labs** --- A personal blog <br/>about People, Space, and Statistics"
+    logo: assets/mb-square.png
+    foreground: dark
     background: transparent
-    search: true
+    search: false
     collapse: true
     tools-collapse: false
     toggle-position: left
     right: 
-      - text: Notebooks
+      - text: My Blog
         href: index.qmd
       - text: Portfolio
         href: portfolio.qmd
@@ -50,18 +51,21 @@ website:
   
   sidebar:
     style: docked
-    pinned: true
-    border: false
-    alignment: right   
+    alignment: right
+    border: false      
+    header: _meta.qmd
+    footer: _footer.qmd
 
   search:
     type: textbox
     show-item-context: true
+    location: sidebar
 
   announcement:
     dismissable: true
-    type: dark
-    content: "{{< bi warning >}} This blog is being migrating to [Quarto](https://quarto.org), expect quirks and dead links!"
+    type: light
+    content: |
+      {{< bi warning >}} This blog is being migrating to [Quarto](https://quarto.org), expect quirks and dead links!
 
   page-footer:
     left: |
@@ -73,6 +77,7 @@ website:
       project partners or clients. Refer to each article for citation, code and data reuse.]{.text-muted}
 
       This site is generated using [Quarto&reg;](https://quarto.org).
+
     right:
       - icon: github
         href: https://github.com/mbacou
@@ -98,7 +103,6 @@ format:
 
     link-external-icon: false
     link-external-newwindow: true
-    title-block-banner: var(--bs-shaded)
 
     tbl-cap-location: bottom
     fig-cap-location: bottom
@@ -118,11 +122,11 @@ format:
     fontsize: 15px
     theme:
       light:
-        - ./assets/scss/_theme.scss
+        - assets/scss/_base.scss
         - brand
 
     grid:
       body-width: 660px
-      sidebar-width: 190px
+      sidebar-width: 210px
       margin-width: 210px
       gutter-width: 30px

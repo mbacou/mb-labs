@@ -1,15 +1,33 @@
 ---
 title: People, Space, and Statistics
 subtitle: Informed citizens make better policy choices; better policies save [lives]{.mark} and [resources.]{.mark}
+date: last-modified
+date-modified: last-modified
+author:
+  - name: Melanie BACOU
+    email: mel@mbacou.com
+    orcid: 0000-0003-1810-6818
+  - name: Melanie2 BACOU
+    email: mel2@mbacou.com
+    orcid: 0000-0003-1810-6819    
 categories:
   - econ
   - stats
   - dataviz
-toc: false
-grid:
-  body-width: 720px
-  sidebar-width: 0px
-  margin-width: 240px  
+abstract: Abstract --  On this blog I write about sustainable agriculture and food security, policies for equitable trade and development, and about the geopolitics of natural resources. You will also find book and article reviews, and the occasional shout-out and opinion pieces.
+description: Description -- On this blog I write about sustainable agriculture and food security, policies for equitable trade and development, and about the geopolitics of natural resources. You will also find book and article reviews, and the occasional shout-out and opinion pieces.
+
+affiliation: Purdue University
+funding: Purdue University
+thanks: Purdue University
+abstract-title: My Abstract
+appendix-style: plain
+appendix-cite-as: bibtex
+
+page-layout: article
+title-block-banner: var(--bs-info-rgb)
+title-block-style: none
+toc: true
   
 listing:
   - id: lst-posts
@@ -21,7 +39,7 @@ listing:
     sort: date desc
     type: default
     max-items: 9
-    image-align: right
+    image-align: left
     image-height: 210px
     fields: [title, description, image, date, author, categories, reading-time]
     exclude: 
@@ -41,8 +59,8 @@ listing:
     fields: [title, description, image]
 ---
 
-::: {.description .mt-n3 .mb-md-2 .mr-md-3}
-![](posts/resume/_fig/profile.jpg){.img-rounded .d-block .mx-auto .shadow-md .float-md-end .mt-n5 .mb-2 .me-md-n4 .ms-md-3 .rot-n}
+::: {.description .mb-md-2 .mr-md-3}
+<!-- ![](posts/resume/_fig/profile.jpg){.img-rounded .d-block .mx-auto .shadow-md .float-md-end .mt-n5 .mb-2 .me-md-n4 .ms-md-3 .rot-n} -->
 
 [Hi, my name is Melanie]{.fs-3} &mdash;
 On this blog I write about sustainable agriculture and food security, policies for equitable trade and development, and about the geopolitics of natural resources. You will also find book and article reviews, and the occasional shout-out and opinion pieces. 
@@ -75,3 +93,5 @@ Code notebooks and articles that do not find a home elsewhere. Feel free to cite
 
 ::: {#lst-posts .column-page-right}
 :::
+
+And some appendix contents below normally.

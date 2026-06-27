@@ -26,7 +26,7 @@ $dark:      $brand-dark;
 
 $font-family-base:       "Crimson Text";
 $font-family-sans-serif: "M PLUS Code Latin";
-$font-family-serif:      "Marck Script";
+$font-family-serif:      "Story Script";
 $font-monospace:         "M PLUS Code Latin";
 $headings-font-family:   "M PLUS Code Latin";
 
@@ -152,13 +152,13 @@ $navbar-hover-color: $primary;
 $navbar-border-color: $border-color;
 $navbar-brand-padding-y: 0;
 $navbar-brand-font-size: 2rem;
-$navbar-toggler-font-size: $small-font-size;
+$navbar-toggler-font-size: $code-font-size;
 
 $nav-link-color: $body-color;
 $nav-link-active-color: $body-color;
 $nav-link-hover-color: $primary;
 $nav-link-font-family: $font-family-sans-serif;
-$nav-link-font-size: $small-font-size;
+$nav-link-font-size: calc($code-font-size + 1px);
 $nav-link-font-weight: 400;
 $nav-link-padding-x: 1rem;
 $nav-link-padding-y: 0;
@@ -277,10 +277,9 @@ p.subtitle {
   margin-bottom: 2rem;
 }
 .description {
-  display: block;
   color: $info;
   font-family: $font-family-serif;
-  font-size: calc($font-size-base + 2px);
+  font-size: $small-font-size;
   padding: 1rem 2rem 0;
   background-color: rgba($info, 10%);
   backdrop-filter: blur(6px);
@@ -635,9 +634,6 @@ table caption {
 /* Quarto page layout fixes */
 
 // Notebook gridlines
-body {
-  padding: 0 2rem;
-}
 #quarto-content {
   border-top: solid 1px $darkgray;
   background-image:
@@ -686,30 +682,34 @@ body.nav-sidebar .quarto-title-banner {
 }
 .navbar .nav-item:not(.compact.collapse) .nav-link,
 .nav-tabs .nav-item .nav-link {
+  font-family: $nav-link-font-family;
+  font-size: $nav-link-font-size;
+  font-weight: $nav-link-font-weight;
   text-transform: uppercase;
+  letter-spacing: 1px;
   line-height: 4rem;
+  padding: $nav-link-padding-y $nav-link-padding-x;  
   margin-bottom: -3px;
   border: none;
-  border-right: solid 1px $darkgray;
   border-bottom: solid 3px transparent;
 }
 .navbar .nav-item:not(.compact.collapse) .nav-link.active,
 .nav-tabs .nav-item .nav-link.active {
-  border-bottom: solid 3px transparent;
+  color: $nav-link-active-color;
 }
 .navbar .nav-item:not(.compact.collapse) .nav-link:hover,
 .nav-tabs .nav-item .nav-link:hover {
-  border-bottom: solid 3px $primary;
-  background-color: rgba($primary, 10%);
+  border-bottom: solid 3px $nav-link-hover-color;
+  background-color: rgba($nav-link-hover-color, 10%);
 }
 .navbar-expand-lg .navbar-nav .nav-link {
-  font-family: $headings-font-family;
-  padding-left: $nav-link-padding-x;
-  padding-right: $nav-link-padding-x;
+  font-family: $nav-link-font-family;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+  line-height: 2rem;
 }
 .navbar-title {
   font-family: $headings-font-family;
-  line-height: 3rem;
+  line-height: 4rem;
 }
 .navbar-logo {
   max-height: 7rem;
@@ -719,9 +719,11 @@ body.nav-sidebar .quarto-title-banner {
 .tools-wide {
   padding: 0 2rem;
 }
+
+/* Footer */
 footer.footer .nav-footer {
   margin: 0;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 .nav-footer .nav-footer-left p,
 .nav-footer .nav-footer-right p,
@@ -735,18 +737,6 @@ footer.footer .nav-footer {
 }
 .nav-footer .nav-footer-right p {
   font-size: $font-size-base;
-}
-
-@media (max-width: 992px) {
-  body {
-    padding: 0;
-  }
-  #quarto-header>nav {
-    margin: 0;
-  }
-  footer.footer .nav-footer {
-    padding: 2rem;
-  }  
 }
 
 @import '_extra';

@@ -1,0 +1,198 @@
+/* Theme: mb-labs Bootstrap theme */
+/* Author: BACOU, Melanie <mel@mbacou.com> */
+/* Version: v2.1.1 */
+/* Date: 2024-01-31 */
+/* Boostrap customizations for Mel B. Labs */
+
+/*-- scss:defaults --*/
+
+$theme: 'mb-labs';
+
+$teal:      $brand-teal;
+$indigo:    $brand-indigo;
+$blue:      $brand-blue;
+$cyan:      $brand-cyan;
+$green:     $brand-green;
+$purple:    $brand-purple;
+$pink:      $brand-pink;
+$red:       $brand-red;
+$orange:    $brand-orange;
+$yellow:    $brand-yellow;
+$gray:      $brand-gray;
+$darkgray:  $brand-darkgray;
+
+$light:     $brand-light;
+$dark:      $brand-dark;
+
+$font-family-base:       "Crimson Text";
+$font-family-sans-serif: "M PLUS Code Latin";
+$font-family-serif:      "Story Script";
+$font-monospace:         "M PLUS Code Latin";
+$headings-font-family:   "M PLUS Code Latin";
+
+// Generally no need to modify below this line
+$black:     #000000;
+$white:     #ffffff;
+
+$gray-100:   tint-color($gray, 90%);
+$gray-200:   tint-color($gray, 80%);
+$gray-300:   tint-color($gray, 70%);
+$gray-400:   tint-color($gray, 60%);
+$gray-500:   tint-color($gray, 50%);
+$gray-600:   tint-color($gray, 40%);
+$gray-700:   tint-color($gray, 30%);
+$gray-800:   tint-color($gray, 20%);
+$gray-900:   tint-color($gray, 10%);
+
+$body-color: $gray-800;
+$body-bg:    $light;
+$link-color: $gray-700;
+$text-muted: rgba($body-color, .85);
+$code-color: $gray-700;
+$shaded:     rgba($body-bg, .65);      // also $input-bg
+
+$headings-font-color: $gray-900;       // darker than normal
+$headings-font-weight: 400;
+$font-weight-bold: 500;
+
+$spacer: 2rem;                         // 30px line-height
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * 1,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+);
+
+$font-size-base:    20/15 * 1rem;      // 1rem = 15px in `_quarto.yml`
+$small-font-size:   18/15 * 1rem;
+$code-font-size:    15/15 * 1rem;
+$sub-sup-font-size: 15/15 * 1rem;
+
+$h1-font-size:  calc($font-size-base + 14px);    // 34px
+$h2-font-size:  calc($font-size-base + 12px);    // 30px
+$h3-font-size:  calc($font-size-base + 10px);    // 26px
+$h4-font-size:  calc($font-size-base +  8px);    // 24px
+$h5-font-size:  calc($font-size-base +  6px);    // 22px
+$h6-font-size:  calc($font-size-base + 16px);    // 35px alt font
+
+$line-height-base: calc($spacer / $font-size-base);
+$list-inline-padding: .25rem;
+
+$enable-rounded: true;
+$enable-negative-margins: true;
+
+$border-color: $body-color;
+$border-radius-sm: 0;
+$border-radius: .25rem;
+$border-radius-lg: .5rem;
+$border-width: 1px;
+$hr-border-color: $border-color;
+$hr-opacity: 1;
+
+$table-cell-padding: 0 .5rem;
+$table-cell-padding-sm: 0 .5rem;
+$table-striped-bg: tint-color($darkgray, 55%);
+$table-border-color: tint-color($darkgray, 55%);
+$table-hover-bg: rgba($darkgray, .75);
+
+$thumbnail-border-width: 0;
+$thumbnail-border-radius: $border-radius;
+$thumbnail-border-color: $border-color;
+
+$input-color: $text-muted;
+$input-bg: $shaded;
+$input-btn-padding-y: .25rem;
+$input-placeholder-color: $input-color;
+$input-border-color: $border-color;
+$input-disabled-bg: darken($input-bg, 4%);
+$input-group-addon-bg: $shaded;
+
+$breadcrumb-active-color: $body-color;
+$component-active-bg: rgba($primary, 12%);
+
+$jumbotron-bg: $shaded;
+$label-margin-bottom: .5rem;
+$list-group-bg: $input-bg;
+$list-group-border-color: $input-border-color;
+$list-group-hover-bg: lighten($component-active-bg, 20%);
+$modal-content-bg: $input-bg;
+$modal-content-border-color: $border-color;
+
+$pagination-bg: $input-bg;
+$pagination-border-color: $border-color;
+$pagination-color: $input-color;
+$pagination-disabled-bg: $input-disabled-bg;
+$pagination-hover-color: $link-color;
+$progress-bg: $input-bg;
+
+$card-spacer-x: .5rem;
+$card-spacer-y: 0;
+$card-title-spacer-x: 0;
+$card-title-spacer-y: .5rem;
+$card-title-color: $headings-font-color;
+$card-bg: transparent;
+$card-cap-bg: $shaded;
+$card-border-width: 0;
+$card-border-color: $darkgray;
+$card-border-radius: $border-radius;
+
+$callout-margin-x:  0;
+$callout-margin-y:  2rem;
+$callout-padding-x: 1rem;
+$callout-padding-y: .5rem;
+$callout-border-width: 0;
+$callout-border-left-width: 3px;
+$callout-border-radius: $border-radius;
+$callout-border-color: $border-color;
+
+$navbar-active-color: $body-color;
+$navbar-hover-color: $primary;
+$navbar-border-color: $border-color;
+$navbar-brand-padding-y: 0;
+$navbar-brand-font-size: $font-size-base;
+$navbar-toggler-font-size: $code-font-size;
+
+$nav-link-color: $body-color;
+$nav-link-active-color: $body-color;
+$nav-link-hover-color: $primary;
+$nav-link-font-family: $font-family-sans-serif;
+$nav-link-font-size: calc($code-font-size + 1px);
+$nav-link-font-weight: 400;
+$nav-link-padding-x: 2rem;
+$nav-link-padding-y: 0;
+$nav-tabs-border-color: $border-color;
+
+
+/*-- scss:rules --*/
+
+.navbar-brand.navbar-brand-logo {
+  padding: 0;
+  margin: 0 2rem 0 2rem;
+}
+.navbar-logo {
+  max-height: 8rem;
+}
+.tools-wide {
+  display: flex;
+  flex-direction: column;
+}
+nav .nav-item:not(.compact) {
+  padding-top: 0;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-family: $nav-link-font-family;
+  font-size: $nav-link-font-size;
+  font-weight: $nav-link-font-weight;
+  line-height: $line-height-base;
+  text-align: end;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+}

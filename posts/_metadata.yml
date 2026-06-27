@@ -12,6 +12,8 @@ author:
 date-modified: last-modified
 
 citation: true
+appendix-style: default
+appendix-cite-as: bibtex
 
 format:
   html:

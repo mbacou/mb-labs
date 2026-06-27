@@ -29,11 +29,11 @@ typography:
   fonts:
     - family: Crimson Text
       source: google
-      weight: [400, 500]
+      weight: [400, 600]
     - family: M PLUS Code Latin
       source: google
       weight: [400, 500]
-    - family: Marck Script
+    - family: Story Script
       source: google
       weight: [400]
   

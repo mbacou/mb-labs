@@ -1,7 +1,0 @@
-##### About 
-
-This Blog is a my personal code playground in the form of executable notebooks using a mix of **R**, **Python**, **JavaScript**, and **D3.js**.
-
-::: {.small .text-shaded .mb-4 .border-bottom}
-All viewpoints here are strictly my own and do <u>not</u> reflect that of employers, project partners or clients. Refer to each article for citation, code and data reuse.</p>
-:::
