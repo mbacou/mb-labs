@@ -1,0 +1,44 @@
+<nav id="$idprefix$TOC" role="doc-toc"
+  class="d-flex flex-column justify-content-around h-100 pt-5 px-2">
+
+  <!-- Fixed article meta -->
+  <div class="mb-meta mt-2 mt-md-4 mb-3">
+
+    <p class="fs-0">$date-modified$ <i class="bi bi-clock ms-1"></i></p>
+
+    $if(description)$
+    <div class="lh-sm fs-2 text-muted"><em>$description$</em></div>
+    $endif$
+
+  </div>
+
+  <!-- Quarto TOC -->
+  $if(toc-title)$
+  <label class="text-primary">$toc-title$</label>
+  $table-of-contents$
+
+  <!-- Back to top -->
+  <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 border-grid mb-4">
+    <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
+    $if(citation)$
+    <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
+    $endif$
+    <a class="mt-1 border-grid pt-1 text-muted" href="#mb-title-block">Back
+      to top <i class="bi bi-arrow-up ms-1"></i></a>
+  </div>
+  $endif$
+
+  <div class="d-none d-lg-block mt-auto">
+    <!-- Optional sidebar logo -->
+    $if(logo)$
+    <a href="$logo-href$"><img src="$logo$" alt="$logo-alt$"
+        class="mb-logo img-fluid"></a>
+    $endif$
+    <!-- Copyright -->
+    $if(copyright)$
+    <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
+    </div>
+    $endif$
+  </div>
+
+</nav>

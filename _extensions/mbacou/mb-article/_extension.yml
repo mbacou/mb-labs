@@ -1,0 +1,62 @@
+title: mb-article
+author: Melanie Bacou
+version: 1.9.5
+quarto-required: ">=1.8.1"
+contributes:
+  formats:
+    html:
+      date-format: medium
+      date-modified: last-modified
+      search: true
+      smooth-scroll: true
+      link-external-icon: false
+      link-external-newwindow: true
+
+      tbl-cap-location: bottom
+      fig-cap-location: margin
+      fig-numbering: true
+      citation: true
+      citation-location: document
+      reference-location: margin
+      citations-hover: true
+      footnotes-hover: false
+      
+      abstract-title: Abstract
+      description-title: Summary
+      appendix-style: plain
+
+      lightbox: true
+      fig-dpi: 120
+      fig-format: svg
+
+      code-copy: true
+      code-overflow: wrap
+      code-annotations: hover
+
+      toc: true
+      toc-depth: 3
+      toc-expand: true
+      toc-location: left
+      toc-title: Content
+
+      filters:
+        - slug.lua
+      include-after-body:
+        - file: hacks.html      
+      template-partials:
+        - header.html
+        - title-block.html
+        - title-meta-author.html
+        - toc.html
+      theme:
+        light:
+          - defaults.scss
+          - rules.scss
+          - brand      
+
+      grid:
+        body-width: 700px
+        sidebar-width: 200px
+        margin-width: 210px
+        gutter-width: 2rem
+

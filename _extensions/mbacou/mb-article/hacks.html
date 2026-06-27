@@ -1,0 +1,32 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const t1 = document.getElementById('mb-reuse');
+    const s1 = document.querySelector('[rel="license"]');
+
+    if (t1 && s1) {
+      t1.appendChild(s1);
+    }
+
+    const t2 = document.getElementById('mb-copyright');
+    const s2 = document.querySelector('#quarto-copyright div div').innerHTML;
+
+    if (t2 && s2) {
+      t2.innerHTML = s2;
+    }
+
+    const t3 = document.querySelector('.mb-toc-actions');
+    const s3 = document.querySelectorAll('a.toc-action')
+    const a3 = Array.from(s3).slice(0, 2);
+
+    if (a3) {
+      a3.forEach(el => {
+        t3.appendChild(el);
+      });
+    }
+  });
+</script>
+
+<!-- Quarto TOC Actions -->
+<div
+  class="mb-toc-actions bg-shaded border-grid d-flex justify-content-center gap-3 text-sans text-muted lh-sm py-2">
+</div>

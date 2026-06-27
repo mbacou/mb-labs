@@ -1,0 +1,18 @@
+$if(it.orcid)$
+<a href="https://orcid.org/$it.orcid$">
+  <i class="bi bi-person-circle me-1"></i></a>
+$endif$
+
+$if(it.linkedin)$
+<a href="https://linkedin.com/in/$it.linkedin$">
+  <i class="bi bi-linkedin me-1"></i></a>
+$endif$
+
+$if(it.url)$<a href="$it.url$" class="text-decoration-none">$endif$
+  <span class="me-1">$it.name.literal$ </span>
+  $if(it.url)$</a>$endif$
+
+$if(it.email)$
+<a class="fs-4" href="mailto:$it.email$">
+  <i class="bi bi-envelope"></i></a>
+$endif$

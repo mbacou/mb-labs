@@ -1,0 +1,107 @@
+<!-- article title header -->
+<header id="mb-header" class="column-page-right sticky-top">
+  $header.html()$
+
+  <div class="border-top $if(title-block-banner)$ pt-4 $endif$"
+    $if(title-block-banner)$ style="background: $title-block-banner$;" $endif$>
+
+    <!-- Optional brand color palette -->
+    $if(header.palette)$
+    <div class="d-flex justify-content-end">
+      <div class="p-1 text-bg-primary"></div>
+      <div class="p-1 text-bg-secondary"></div>
+      <div class="p-1 text-bg-tertiary"></div>
+      <div class="p-1 text-bg-info"></div>
+      <div class="p-1 text-bg-success"></div>
+      <div class="p-1 text-bg-warning"></div>
+      <div class="p-1 text-bg-danger"></div>
+      <div class="p-1 text-bg-light"></div>
+      <div class="p-1 text-bg-dark"></div>
+    </div>
+    $endif$
+
+  </div>
+</header>
+
+<header id="mb-title-block" class="bg-light py-2 mb-3">
+
+  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
+    $for(categories)$
+    <li class="nav-item fs-3 text-primary fw-bold pt-2">$it$</li>
+    $endfor$
+    <li class="nav-item ms-auto">
+      <label class="$if(draft)$text-warning$endif$">Draft
+        $if(draft)$&#9745;$else$&#9744;$endif$
+      </label>
+    </li>
+    <li class="nav-item">
+      <label class="$if(freeze)$text-warning$endif$">Frozen
+        $if(freeze)$&#9745;$else$&#9744;$endif$
+      </label>
+    </li>
+  </ul>
+
+  $if(title)$ <p class="title">$title$</p> $endif$
+  <p class="subtitle">$if(subtitle)$ $subtitle$ $endif$</p>
+
+  $if(author)$
+  <div class="column-margin">
+
+    $for(by-author)$
+    <p class="lh-sm fs-0 mb-3 text-body">$title-meta-author.html()$
+      $if(by-author.affiliations)$
+      $for(by-author.affiliations)$
+      <br />
+      $if(it.url)$<a href="$it.url$">$endif$
+        <em class="ms-3 fs-2 text-muted">$it.name$</em>
+        $if(it.url)$</a>$endif$
+      $endfor$
+      $endif$
+    </p>
+    $endfor$
+
+    $if(date)$
+    <label>First published</label>
+    <p class="lh-lg text-body">$date$</p>
+    $endif$
+
+    $if(status)$
+    <label>Status</label>
+    <p class="lh-lg text-body">$status$</p>
+    $endif$
+
+    $if(thanks)$
+    <label>Credits</label>
+    <p class="lh-lg text-body">$thanks$</p>
+    $endif$
+
+    $if(license)$
+    <label>Reuse</label>
+    <p id="mb-reuse" class="lh-lg text-body"></p>
+    $endif$
+
+    $if(format-links)$
+    $for(format-links)$
+    <a role="button" class="btn btn-success mb-2" href="$it.href$">
+      <i class="bi bi-$it.icon$"></i>$it.text$</a>
+    $endfor$
+    $endif$
+
+  </div>
+  $endif$
+
+  <div class="mx-lg-3">
+    $if(abstract)$
+    <label>$abstract-title$</label>
+    <div class="lh-lg fs-1 text-muted">$abstract$</div>
+    $endif$
+
+    $if(keywords)$
+    <ul class="navbar-nav d-flex flex-row gap-1">
+      <li class="nav-item fs-1 text-muted me-1">Keywords: </li>
+      $for(keywords)$ <li class="nav-item fs-1">$it$;</span></li>
+      $endfor$
+    </ul>
+    $endif$
+
+</header>

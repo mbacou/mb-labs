@@ -1,0 +1,86 @@
+/*-- scss:rules --*/
+
+/* Navigation */
+nav .nav-item .nav-link,
+.nav-tabs .nav-item .nav-link {
+  font-family: $nav-link-font-family;
+  font-size: $nav-link-font-size;
+  font-weight: $nav-link-font-weight;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 3rem;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+}
+nav .nav-item .nav-link.active,
+.nav-tabs .nav-item .nav-link.active {
+  color: $nav-link-active-color;
+}
+nav .nav-item .nav-link:hover,
+.nav-tabs .nav-item .nav-link:hover {
+  color: $nav-link-hover-color;
+  background-color: $nav-link-hover-bg;
+}
+nav .nav-item .bi {
+  font-size: $font-size-base;
+}
+.btn, a[role='button'] {
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: $line-height-lg;
+}
+
+/* Misc */
+.quarto-video {
+  margin: 0;
+  padding: 0;
+}
+.column-screen-inset-shaded {
+  padding: 0 1rem 0 1rem;
+  background-color: $shaded;
+}
+
+/* Helper classes */
+.bg-shaded {
+  background-color: $shaded;
+  backdrop-filter: blur(3px);
+}
+.border-grid {
+  border-top: solid 1px $grid;
+}
+.text-muted {
+  color: $text-muted !important;
+}
+.text-sans {
+  font-family: $font-family-sans-serif;
+  font-size: $code-font-size;
+}
+.text-serif {
+  font-family: $font-family-serif;
+  font-size: calc($font-size-base + 2px);
+}
+
+// notes
+.note {
+  color: $secondary;
+  background-color: tint-color($secondary, 85%);
+  padding: 1rem 1rem 0;
+  margin-bottom: 1rem;
+  border-radius: $border-radius;
+  line-height: $line-height-lg;
+}
+.info {
+  color: $info;
+  background-color: tint-color($info, 85%);  
+}
+.success {
+  color: $success;
+  background-color: tint-color($success, 85%);  
+}
+.warning {
+  color: $warning;
+  background-color: tint-color($warning, 85%);  
+}
+.danger {
+  color: $danger;
+  background-color: tint-color($danger, 85%);  
+}

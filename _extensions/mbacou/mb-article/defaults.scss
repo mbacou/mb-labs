@@ -1,0 +1,580 @@
+/* Theme: mb-labs Bootstrap theme */
+/* Author: BACOU, Melanie <mel@mbacou.com> */
+/* Version: v2.2.0 */
+/* Date: 2024-01-31 */
+/* Boostrap customizations for Mel B. Labs */
+
+/*-- scss:defaults --*/
+
+$theme: 'mb-article';
+
+// Extra colors from _brand.yml
+$gray:  $brand-gray;      // base darkest gray
+$grid:  $brand-grid;      // gridline color
+
+// Use _brand.yml fonts
+$font-family-sans-serif:  $font-family-monospace;
+$font-family-serif:       $headings-font-family;
+$headings-font-family:    $font-family-monospace;
+
+// Generally no need to modify below (unless dark theme maybe)
+$black: #000000;
+$white: #ffffff;
+
+$gray-100: tint-color($gray, 90%);
+$gray-200: tint-color($gray, 80%);
+$gray-300: tint-color($gray, 70%);
+$gray-400: tint-color($gray, 60%);
+$gray-500: tint-color($gray, 50%);
+$gray-600: tint-color($gray, 40%);
+$gray-700: tint-color($gray, 30%);
+$gray-800: tint-color($gray, 20%);
+$gray-900: tint-color($gray, 10%);
+
+$body-color: $gray-800;
+$body-bg: $light;
+$link-hover-color: $gray;
+$text-muted: rgba($body-color, .80);
+$code-color: inherit;
+$shaded: rgba(tint-color($body-bg, 85%), .85);  // also $input-bg
+$min-contrast-ratio: 4;
+
+$headings-font-color: $gray-700;  // lighter than body text
+$headings-font-weight: 400;
+$font-weight-bold: 500;
+
+$font-size-root: 14px !default;   // hardcoded to enforce vertical rythm
+$font-size-sm: .9em;
+$font-size-lg: 1.25em;
+$lead-font-size: 1.3em;
+$sub-sup-font-size: calc($font-size-base - 5px);
+
+$font-sizes: (
+  0: 1.1em,
+  1: calc($font-size-base - 0px),
+  2: calc($font-size-base - 1px),
+  3: calc($font-size-base - 2px),
+  4: calc($font-size-base - 3px),
+  5: calc($font-size-base - 4px)
+);
+
+$spacer: 2rem;  // 2*15px in _quarto.yml
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * 1,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+);
+
+$line-height-sm: 1.5rem;
+$line-height-lg: 1.75rem;
+$list-inline-padding: .25rem;
+
+$h1-font-size: calc($font-size-base + 15px);  // 34px
+$h2-font-size: calc($font-size-base + 11px);  // 30px
+$h3-font-size: calc($font-size-base +  9px);  // 26px
+$h4-font-size: calc($font-size-base +  7px);  // 24px
+$h5-font-size: calc($font-size-base +  5px);  // 22px
+$h6-font-size: calc($font-size-base -  5px);
+
+$enable-rounded: true;
+$enable-negative-margins: true;
+
+$border-color: $gray-600;
+$border-radius-sm: 0;
+$border-radius: .25rem;
+$border-radius-lg: .25rem;
+$border-width: 1px;
+$hr-border-color: $border-color;
+$hr-opacity: 1;
+
+$grid-columns: 12;
+$grid-gutter-width: 0;
+
+$table-cell-padding: 0 .5rem;
+$table-cell-padding-sm: 0 .5rem;
+$table-striped-bg: tint-color($grid, 55%);
+$table-border-color: tint-color($grid, 55%);
+$table-hover-bg: rgba($grid, .75);
+
+$thumbnail-border-width: 0;
+$thumbnail-border-radius: $border-radius;
+$thumbnail-border-color: $border-color;
+
+$icon-link-gap: .5rem;
+$icon-link-icon-size: $font-size-base;
+
+$input-color: $text-muted;
+$input-bg: $shaded;
+$input-placeholder-color: $input-color;
+$input-border-color: $border-color;
+$input-disabled-bg: darken($input-bg, 4%);
+$input-group-addon-bg: $shaded;
+$input-btn-font-family: $font-family-sans-serif;
+$input-btn-font-size: calc($code-font-size + 3px);
+$input-btn-font-size-sm: calc($code-font-size + 0px);
+$input-btn-font-size-lg: calc($code-font-size + 5px);
+$input-btn-padding-x: 1rem;
+$input-btn-padding-y: .25rem;
+$input-btn-padding-x-sm: .5rem;
+$input-btn-padding-y-sm: .25rem;
+$input-btn-padding-x-lg: 1rem;
+$input-btn-padding-y-lg: .5rem;
+
+$jumbotron-bg: $shaded;
+$breadcrumb-active-color: $body-color;
+$component-active-bg: rgba($primary, 12%);
+
+$form-label-margin-top: 0rem;
+$form-label-margin-bottom: 0.5rem;
+$form-label-color: $gray-500;
+$form-label-font-size: $h6-font-size;
+$form-label-font-weight: 400;
+$list-group-bg: $input-bg;
+$list-group-border-color: $input-border-color;
+$list-group-hover-bg: lighten($component-active-bg, 20%);
+$modal-content-bg: $input-bg;
+$modal-content-border-color: $border-color;
+
+$pagination-bg: $input-bg;
+$pagination-border-color: $border-color;
+$pagination-color: $input-color;
+$pagination-disabled-bg: $input-disabled-bg;
+$pagination-hover-color: $link-hover-color;
+$progress-bg: $input-bg;
+
+$card-spacer-x: .5rem;
+$card-spacer-y: 0;
+$card-title-spacer-x: 0;
+$card-title-spacer-y: .5rem;
+$card-title-color: $headings-font-color;
+$card-bg: transparent;
+$card-cap-bg: $shaded;
+$card-border-width: 0;
+$card-border-color: $grid;
+$card-border-radius: $border-radius;
+
+$callout-margin-x: 0;
+$callout-margin-y: 2rem;
+$callout-padding-x: 1rem;
+$callout-padding-y: .5rem;
+$callout-border-width: 0;
+$callout-border-left-width: 3px;
+$callout-border-radius: $border-radius;
+$callout-border-color: $border-color;
+
+$navbar-active-color: $body-color;
+$navbar-hover-color: $primary;
+$navbar-border-color: transparent;
+$navbar-brand-padding-y: 0;
+$navbar-brand-font-size: 1.5rem;
+$navbar-brand-margin-start: 2rem;
+$navbar-brand-margin-end: 2rem;
+$navbar-toggler-font-size: $code-font-size;
+
+$nav-link-color: $body-color;
+$nav-link-active-color: $gray;
+$nav-link-hover-color: $primary;
+$nav-link-hover-bg: rgba($primary, .1);
+$nav-link-font-family: $font-family-sans-serif;
+$nav-link-font-size: $code-font-size;
+$nav-link-font-weight: 500;
+$nav-link-padding-x: 1rem;
+$nav-link-padding-y: 0;
+$nav-tabs-border-color: $border-color;
+
+// Sidebar variables
+$sidebar-font-size: $font-size-sm;
+$sidebar-font-size-section: $font-size-sm;
+$sidebar-font-size-collapse: $font-size-sm;
+$sidebar-font-size-section-collapse: $font-size-sm;
+
+
+/*-- scss:rules --*/
+body {
+  font-size: $font-size-base;
+  line-height: 2rem;
+}
+p, ol, ul {
+  margin: 0 0 1rem 0;
+}
+ul li::marker {
+  font-size: .85em;
+}
+hr {
+  border-top: double .25rem $hr-border-color;
+  margin: .5rem 0 2.25rem;
+}
+a {
+  text-decoration: none;
+}
+a.url:hover {
+  filter: darken($link-color, 1);
+  text-decoration: underline;
+}
+a.uri, a.url, .citation a, a[target="_blank"] {
+  text-decoration: underline;
+}
+label, .label, #toc-title, #quarto-appendix h2, h6, .h6 {
+  display: block;
+  color: $form-label-color;
+  font-size: $form-label-font-size;
+  font-family: $font-family-sans-serif;
+  font-weight: $form-label-font-weight;
+  text-transform: uppercase;
+  line-height: 1.75rem;
+  padding-bottom: .25rem;
+}
+#toc-title {
+  font-size: $font-size-base;
+  font-weight: 500;
+}
+mark, .mark {
+  color: inherit;
+  font-weight: $font-weight-bold;
+  padding: 0 .25rem;
+  background-color: rgba($primary, 10%);
+  border-radius: $border-radius;
+}
+small, .small {
+  font-size: $font-size-sm;
+  line-height: 1.75rem;
+}
+
+// Headings
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .title {
+  font-weight: $headings-font-weight;
+  line-height: 2.5rem;
+  padding: 0;
+  margin: 2rem 0 1rem 0;
+}
+h1.title, p.title {
+  font-family: $headings-font-family;
+  font-size: calc($h1-font-size + 6px);
+  line-height: 3rem;
+  margin: .25rem 0 1.25rem 0 !important;
+}
+h1.quarto-secondary-nav-title {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 1rem 0;
+  padding: 0;
+}
+h2, .h2 {
+  color: $primary;
+  border-bottom: none;
+}
+h4, .h4 {
+  color: $gray-500;
+}
+h4, .h4, h5, .h5 {
+  line-height: 2rem;
+}
+h5, .h5 {
+  color: $primary;
+}
+h6, .h6 {
+  font-size: $h6-font-size;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+p.subtitle {
+  font-family: $font-family-base;
+  font-size: $lead-font-size;
+  font-weight: 300;
+  letter-spacing: 90%;
+  color: $gray-500;
+  font-style: normal;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+.blockquote {
+  font-family: $font-family-serif;
+  font-size: 2.5rem;
+  color: rgba($text-muted, 50%);
+  text-align: center;
+  padding: 0 2rem;
+  border: none;
+}
+.blockquote .small {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: 500;
+  color: $body-color;
+}
+
+// Code blocks
+pre, code, pre code {
+  color: $code-color;
+  font-family: $font-family-monospace;
+  font-size: $code-font-size;
+  background-color: none;
+  padding: 0;
+}
+code span.fu, code span.sc {
+  font-weight: 400;
+}
+p code:not(.sourceCode), li code:not(.sourceCode), 
+td code:not(.sourceCode) {
+  font-family: $font-family-monospace;
+  line-height: inherit;
+  background-color: $shaded;
+  padding: 0 .25rem !important;
+}
+.code-with-filename .code-with-filename-file {
+  background-color: $table-striped-bg;
+  padding: 0 1rem;
+  border: 1px solid $table-striped-bg;
+  border-radius: $border-radius $border-radius 0 0;
+}
+.code-with-filename pre {
+  color: $code-color;
+  font-size: $code-font-size;
+  line-height: calc(2rem - 2px);
+}
+div.sourceCode, details, .cell {
+  margin: 0 0 2rem 0;
+}
+div.sourceCode {
+  background-color: $shaded !important;
+  border: none;
+  padding: 1rem 1rem .5rem;
+}
+pre.sourceCode, pre>code.sourceCode>span {
+  font-size: calc($code-font-size - 1px);
+  line-height: 1.5rem;
+  background: none;
+  padding: 0 0 .25rem 0;
+}
+
+// Tables
+table, .table {
+  margin: .5rem 0;
+  border: none;
+  border-top: 1px solid $border-color;
+  background-color: $shaded;
+  backdrop-filter: blur(3px);
+}
+.table>:not(caption)>*>* {
+  padding: 0 .5rem;
+}
+.table th {
+  color: $headings-font-color;
+  font-family: $font-family-sans-serif;
+  font-size: $code-font-size;
+  font-weight: 500;
+  line-height: calc(2rem - 1px);
+  border: none;
+}
+.table tbody {
+  border-top: 1px solid $border-color;
+  border-bottom: 2px solid $border-color;
+}
+.table td {
+  line-height: calc(2rem - 1px);
+  border: none;
+  border-bottom: 1px solid $grid;
+}
+.table-borderless td,
+.table tr:last-of-type td,
+.table-striped td {
+  border-bottom: none;
+}
+
+// Margin notes and captions
+caption, .panel-caption, .figure-caption, .subfigure-caption, 
+.table-caption, 
+figcaption, .column-margin figcaption, .margin-caption {
+  font-family: $font-family-sans-serif;
+  font-size: $code-font-size;
+  color: $text-muted;
+  text-align: left;
+  padding: 0;
+  margin: .5rem 0 1rem 0;
+}
+.column-margin, .column-sidebar {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  color: $text-muted;
+  line-height: 1.75rem;
+  margin: 0;
+}
+.aside p, .column-margin p, .column-margin.column-container p {
+  margin-bottom: 1rem;
+  line-height: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+// Figures and images
+.figure {
+  margin: 0;
+}
+.figure-img {
+  background-color: $shaded;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.img-thumbnail {
+  padding: 0;
+  margin-bottom: 1rem;
+  border-radius: $border-radius;
+}
+.img-fluid {
+  border-radius: $border-radius;
+}
+.img-zoom {
+  transition: transform .25s ease-in-out;
+  transform-origin: center center;
+}
+.img-zoom:hover {
+  transform: scale(1.3);
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/* Quarto page layout fixes                                                         */
+/* -------------------------------------------------------------------------------- */
+
+#quarto-content>* {
+  padding: 0;
+  margin: 0;
+}
+// Gridlines
+#quarto-content {
+  border-top: solid 1px $grid;
+  background-image:
+    linear-gradient(to right, $grid, transparent 1px, transparent),
+    linear-gradient(to bottom, $grid, transparent 1px, transparent);
+  background-size: 2rem 2rem;
+  background-position: 0 calc(-.5rem + 1px);
+  background-repeat: repeat;
+}
+main {
+  background-image:
+  linear-gradient(to right, $body-bg, transparent, $body-bg);
+}
+#quarto-announcement {
+  font-family: $font-family-sans-serif;
+  font-size: 1.25rem;
+  border: none;
+}
+#quarto-header, #title-block-header, footer,
+#quarto-sidebarnav-toggle, .quarto-alternate-formats,
+#quarto-copyright, #quarto-reuse, div.toc-actions {
+  display: none;
+}
+#quarto-appendix {
+  color: $text-muted;
+  background-color: $body-bg;
+  font-size: $font-size-sm;
+  margin-top: 2rem;
+  padding: 0 0 2rem 0;
+}
+.quarto-appendix-heading {
+  border-top: solid 1px $border-color;
+}
+.quarto-appendix-citeas, .csl-entry span {
+  color: $body-color;
+  font-style: italic;
+}
+#quarto-citation>div pre {
+  margin: 1rem 2rem;
+}
+.csl-entry {
+  margin-left: 3rem !important;
+  margin-right: 1rem !important;
+  text-indent: -2rem !important;
+  line-height: $line-height-lg;
+}
+.quarto-appendix-citeas {
+  margin-top: 1rem;
+}
+
+#mb-header nav {
+  z-index: 1300;
+  background-color: rgba($body-bg, .65);  
+  backdrop-filter: blur(4px);  
+}
+.mb-header-logo {
+  height: 3rem;
+  width: 3rem;
+}
+.mb-logo {
+  max-height: 11vh;
+}
+
+
+/* Quarto TOC on the left */
+#quarto-sidebar>* {
+  text-align: end;
+}
+#quarto-sidebar {
+  margin: 0;
+  padding: 0; 
+  max-width: 35vw;
+  overflow: hidden;
+  background-color: rgba($body-bg, .85);
+  backdrop-filter: blur(3px);
+}
+#quarto-sidebar ul {              
+  overflow-y: scroll;                            // hide TOC scrollbars
+  scrollbar-width: none;  
+}
+.sidebar.sidebar-navigation:not(.rollup) {
+  background-color: transparent;
+}
+.sidebar nav[role=doc-toc]>ul {
+  border-right: 1px solid $primary;
+  padding: 0;
+}
+.sidebar nav[role=doc-toc]>ul li a {
+  color: $nav-link-color !important;
+  text-align: end;
+  line-height: 1.5rem;
+  font-family: $nav-link-font-family;
+  font-size: $code-font-size;
+  border: none;
+  border-right: solid 4px transparent;
+  padding: 0.25rem 1rem 0.25rem 0;
+}
+.sidebar nav[role=doc-toc]>ul li a.nav-link,
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link {
+  color: $nav-link-color !important;
+  border: none;
+  border-right: solid 4px transparent;
+}
+.sidebar nav[role=doc-toc] ul>li>a.nav-link.active,
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link.active {
+  color: $nav-link-active-color !important;
+  border: none;
+  border-right: solid 4px $primary;
+}
+.sidebar nav[role=doc-toc] ul>li>a.nav-link:hover,
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.nav-link:hover {
+  color: $nav-link-hover-color !important;
+  border: none;
+  border-right: solid 4px tint-color($primary, 50%);
+  background-color: $nav-link-hover-bg;
+}
+.sidebar nav[role=doc-toc] ul>li>ul {
+  margin-bottom: .25rem;
+}
+.sidebar nav[role=doc-toc] ul>li>ul a {
+  padding-right: 1.5rem;
+}
+.toc-action i {
+  margin-right: .5rem;
+}
+
+#quarto-search {
+  margin: 0;
+}
+#quarto-search input {
+  font-size: unset;
+}
+#quarto-search .aa-Autocomplete {
+  display: none;
+}
