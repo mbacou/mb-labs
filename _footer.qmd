@@ -1,5 +1,0 @@
-<!-- Sidebar footer -->
-
-**Mel B. Labs** -- a personal blog about econometrics and statistics.
-BACOU, Melanie &copy; 2024
-Licensed under [CC BY-NC 4.0](/license.qmd).

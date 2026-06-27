@@ -8,50 +8,95 @@
 <title>Mel B. mb-labs</title>
 <link>https://mbacou.com/portfolio.html</link>
 <atom:link href="https://mbacou.com/portfolio.xml" rel="self" type="application/rss+xml"/>
-<description>Playground for consulting and data science projects</description>
+<description>![](posts/resume/_fig/profile.jpg){width=&quot;9em&quot; .rounded-circle .shadow-md .mt-2}
+**ABOUT**&lt;br/&gt;A personal blog and playground for statistical and geospatial analyses using a mix of R, Python, and JavaScript notebooks -- and a home for poorly researched topics.
+</description>
 <image>
-<url>https://mbacou.com/assets/mb-square.png</url>
+<url>https://mbacou.com/assets/mb-square.svg</url>
 <title>Mel B. mb-labs</title>
 <link>https://mbacou.com/portfolio.html</link>
-<height>144</height>
-<width>144</width>
 </image>
-<generator>quarto-1.8.24</generator>
+<generator>quarto-1.9.38</generator>
 <lastBuildDate>Thu, 01 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Interactive Web Applications</title>
-  <dc:creator>Melanie BACOU</dc:creator>
-  <link>https://mbacou.com/portfolio/app-wadashboard.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-<p>Complex statistical analyses and economic models always require robust end-user design.</p>
-<section id="water-accounting-balances" class="level2">
-<h2 class="anchored" data-anchor-id="water-accounting-balances">Water accounting Balances</h2>
-<p>Model visualization for large-scale water accounting models</p>
-
-
-</section>
-
- ]]></description>
-  <category>model front-end</category>
-  <category>R/Shiny</category>
-  <guid>https://mbacou.com/portfolio/app-wadashboard.html</guid>
-  <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://mbacou.com/portfolio/fig/mbacou-app-pricing.png" medium="image" type="image/png" height="173" width="144"/>
-</item>
-<item>
-  <title>Interactive Web Applications</title>
+  <title></title>
   <dc:creator>Melanie BACOU</dc:creator>
   <link>https://mbacou.com/portfolio/app-pricing.html</link>
   <description><![CDATA[ 
 
+<!-- article title header -->
+<header id="mb-header" class="column-page-right sticky-top">
+  <!-- mb-navbar -->
+  
+  <div class="border-top  pt-4 " style="background: var(–bs-shaded);">
+
+    <!-- Optional brand color palette -->
+        <div class="d-flex justify-content-end">
+      <div class="p-1 text-bg-primary"></div>
+      <div class="p-1 text-bg-secondary"></div>
+      <div class="p-1 text-bg-tertiary"></div>
+      <div class="p-1 text-bg-info"></div>
+      <div class="p-1 text-bg-success"></div>
+      <div class="p-1 text-bg-warning"></div>
+      <div class="p-1 text-bg-danger"></div>
+      <div class="p-1 text-bg-light"></div>
+      <div class="p-1 text-bg-dark"></div>
+    </div>
+    
+  </div>
+</header>
+
+<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+
+  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
+        <li class="nav-item fs-3 text-primary fw-bold">model front-end</li>
+        <li class="nav-item fs-3 text-primary fw-bold">R/Shiny</li>
+        <li class="nav-item ms-auto">
+      <label class="">Draft <i class="bi bi-square"></i>
+      </label>
+    </li>
+    <li class="nav-item">
+      <label class="">Frozen <i class="bi bi-square"></i>
+      </label>
+    </li>
+  </ul>
+
+   <p class="title display-7">Interactive Web Applications</p> 
+  <p class="subtitle lead"> My Design Portfolio </p>
+
+    
+  
+  <div class="no-row-height column-margin column-container"><div class="">
+
+        <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6818">
+  <i class="bi bi-person-circle me-1"></i></a>
 
 
+<a href="https://linkedin/in/mbacou" class="text-decoration-none">
+  <span class="me-1">Melanie BACOU </span>
+  </a>
+
+<a class="fs-4" href="mailto:mel@mbacou.com">
+  <i class="bi bi-envelope"></i></a>
+
+          </p>
+    
+        <label>First published</label>
+    <p class="lh-lg text-body">Feb 1, 2024</p>
+    
+    
+    
+        <label>Reuse</label>
+    <p id="mb-reuse" class="lh-lg text-body"></p>
+    
+    
+  </div></div><div class="mx-lg-3 mb-2">
+        <label>Abstract</label>
+    <div class="lh-lg fs-1 text-muted"><p>Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.</p></div>
+    
+    
+  </div>
+</header>
 
 
 <div class="column-screen pgrarallax-container">
@@ -125,7 +170,19 @@ lines here.</td>
 <p>Something in the margin now.</p>
 </div></div></section>
 
- ]]></description>
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
+  author = {BACOU, Melanie},
+  title = {Interactive {Web} {Applications}},
+  date = {2024-02-01},
+  url = {https://mbacou.com/portfolio/app-pricing.html},
+  langid = {en},
+  abstract = {Showcase of interactive statistical dashboards and
+    decision-support tools designed for partners and clients.}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2024" class="csl-entry quarto-appendix-citeas">
+BACOU, Melanie. 2024. <span>“Interactive Web Applications.”</span>
+February 1. <a href="https://mbacou.com/portfolio/app-pricing.html">https://mbacou.com/portfolio/app-pricing.html</a>.
+</div></div></section></div> ]]></description>
   <category>model front-end</category>
   <category>R/Shiny</category>
   <guid>https://mbacou.com/portfolio/app-pricing.html</guid>
@@ -133,45 +190,314 @@ lines here.</td>
   <media:content url="https://mbacou.com/portfolio/fig/mbacou-app-pricing.png" medium="image" type="image/png" height="173" width="144"/>
 </item>
 <item>
-  <title>Tableau® Dashboards</title>
+  <title></title>
+  <dc:creator>Melanie BACOU</dc:creator>
+  <link>https://mbacou.com/portfolio/app-wadashboard.html</link>
+  <description><![CDATA[ 
+
+<!-- article title header -->
+<header id="mb-header" class="column-page-right sticky-top">
+  <!-- mb-navbar -->
+  
+  <div class="border-top ">
+
+    <!-- Optional brand color palette -->
+        <div class="d-flex justify-content-end">
+      <div class="p-1 text-bg-primary"></div>
+      <div class="p-1 text-bg-secondary"></div>
+      <div class="p-1 text-bg-tertiary"></div>
+      <div class="p-1 text-bg-info"></div>
+      <div class="p-1 text-bg-success"></div>
+      <div class="p-1 text-bg-warning"></div>
+      <div class="p-1 text-bg-danger"></div>
+      <div class="p-1 text-bg-light"></div>
+      <div class="p-1 text-bg-dark"></div>
+    </div>
+    
+  </div>
+</header>
+
+<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+
+  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
+        <li class="nav-item fs-3 text-primary fw-bold">model front-end</li>
+        <li class="nav-item fs-3 text-primary fw-bold">R/Shiny</li>
+        <li class="nav-item ms-auto">
+      <label class="">Draft <i class="bi bi-square"></i>
+      </label>
+    </li>
+    <li class="nav-item">
+      <label class="">Frozen <i class="bi bi-square"></i>
+      </label>
+    </li>
+  </ul>
+
+   <p class="title display-7">Interactive Web Applications</p> 
+  <p class="subtitle lead"> My Design Portfolio </p>
+
+    
+  
+  <div class="no-row-height column-margin column-container"><div class="">
+
+        <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6818">
+  <i class="bi bi-person-circle me-1"></i></a>
+
+
+<a href="https://linkedin/in/mbacou" class="text-decoration-none">
+  <span class="me-1">Melanie BACOU </span>
+  </a>
+
+<a class="fs-4" href="mailto:mel@mbacou.com">
+  <i class="bi bi-envelope"></i></a>
+
+          </p>
+    
+        <label>First published</label>
+    <p class="lh-lg text-body">Feb 1, 2024</p>
+    
+    
+    
+        <label>Reuse</label>
+    <p id="mb-reuse" class="lh-lg text-body"></p>
+    
+    
+  </div></div><div class="mx-lg-3 mb-2">
+        <label>Abstract</label>
+    <div class="lh-lg fs-1 text-muted"><p>Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.</p></div>
+    
+    
+  </div>
+</header>
+
+
+<p>Complex statistical analyses and economic models always require robust end-user design.</p>
+<section id="water-accounting-balances" class="level2">
+<h2 class="anchored" data-anchor-id="water-accounting-balances">Water accounting Balances</h2>
+<p>Model visualization for large-scale water accounting models</p>
+
+
+</section>
+
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
+  author = {BACOU, Melanie},
+  title = {Interactive {Web} {Applications}},
+  date = {2024-02-01},
+  url = {https://mbacou.com/portfolio/app-wadashboard.html},
+  langid = {en},
+  abstract = {Showcase of interactive statistical dashboards and
+    decision-support tools designed for partners and clients.}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2024" class="csl-entry quarto-appendix-citeas">
+BACOU, Melanie. 2024. <span>“Interactive Web Applications.”</span>
+February 1. <a href="https://mbacou.com/portfolio/app-wadashboard.html">https://mbacou.com/portfolio/app-wadashboard.html</a>.
+</div></div></section></div> ]]></description>
+  <category>model front-end</category>
+  <category>R/Shiny</category>
+  <guid>https://mbacou.com/portfolio/app-wadashboard.html</guid>
+  <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://mbacou.com/portfolio/fig/mbacou-app-pricing.png" medium="image" type="image/png" height="173" width="144"/>
+</item>
+<item>
+  <title></title>
+  <dc:creator>Melanie BACOU</dc:creator>
+  <link>https://mbacou.com/portfolio/print.html</link>
+  <description><![CDATA[ 
+
+<!-- article title header -->
+<header id="mb-header" class="column-page-right sticky-top">
+  <!-- mb-navbar -->
+  
+  <div class="border-top ">
+
+    <!-- Optional brand color palette -->
+        <div class="d-flex justify-content-end">
+      <div class="p-1 text-bg-primary"></div>
+      <div class="p-1 text-bg-secondary"></div>
+      <div class="p-1 text-bg-tertiary"></div>
+      <div class="p-1 text-bg-info"></div>
+      <div class="p-1 text-bg-success"></div>
+      <div class="p-1 text-bg-warning"></div>
+      <div class="p-1 text-bg-danger"></div>
+      <div class="p-1 text-bg-light"></div>
+      <div class="p-1 text-bg-dark"></div>
+    </div>
+    
+  </div>
+</header>
+
+<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+
+  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
+        <li class="nav-item fs-3 text-primary fw-bold">design</li>
+        <li class="nav-item ms-auto">
+      <label class="">Draft <i class="bi bi-square"></i>
+      </label>
+    </li>
+    <li class="nav-item">
+      <label class="">Frozen <i class="bi bi-square"></i>
+      </label>
+    </li>
+  </ul>
+
+   <p class="title display-7">Print Design</p> 
+  <p class="subtitle lead"> My Design Portfolio </p>
+
+    
+  
+  <div class="no-row-height column-margin column-container"><div class="">
+
+        <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6818">
+  <i class="bi bi-person-circle me-1"></i></a>
+
+
+<a href="https://linkedin/in/mbacou" class="text-decoration-none">
+  <span class="me-1">Melanie BACOU </span>
+  </a>
+
+<a class="fs-4" href="mailto:mel@mbacou.com">
+  <i class="bi bi-envelope"></i></a>
+
+          </p>
+    
+        <label>First published</label>
+    <p class="lh-lg text-body">Jan 30, 2024</p>
+    
+    
+    
+        <label>Reuse</label>
+    <p id="mb-reuse" class="lh-lg text-body"></p>
+    
+    
+  </div></div><div class="mx-lg-3 mb-2">
+        <label>Abstract</label>
+    <div class="lh-lg fs-1 text-muted"><p>Showcase of print posters, bulletins and handouts designed for partners and clients.</p></div>
+    
+    
+  </div>
+</header>
+
+
+
+
+
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
+  author = {BACOU, Melanie},
+  title = {Print {Design}},
+  date = {2024-01-30},
+  url = {https://mbacou.com/portfolio/print.html},
+  langid = {en},
+  abstract = {Showcase of print posters, bulletins and handouts designed
+    for partners and clients.}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2024" class="csl-entry quarto-appendix-citeas">
+BACOU, Melanie. 2024. <span>“Print Design.”</span> January 30. <a href="https://mbacou.com/portfolio/print.html">https://mbacou.com/portfolio/print.html</a>.
+</div></div></section></div> ]]></description>
+  <category>design</category>
+  <guid>https://mbacou.com/portfolio/print.html</guid>
+  <pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://mbacou.com/portfolio/fig/portfolio-print.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title></title>
   <dc:creator>Melanie BACOU</dc:creator>
   <link>https://mbacou.com/portfolio/tableau.html</link>
   <description><![CDATA[ 
 
+<!-- article title header -->
+<header id="mb-header" class="column-page-right sticky-top">
+  <!-- mb-navbar -->
+  
+  <div class="border-top ">
+
+    <!-- Optional brand color palette -->
+        <div class="d-flex justify-content-end">
+      <div class="p-1 text-bg-primary"></div>
+      <div class="p-1 text-bg-secondary"></div>
+      <div class="p-1 text-bg-tertiary"></div>
+      <div class="p-1 text-bg-info"></div>
+      <div class="p-1 text-bg-success"></div>
+      <div class="p-1 text-bg-warning"></div>
+      <div class="p-1 text-bg-danger"></div>
+      <div class="p-1 text-bg-light"></div>
+      <div class="p-1 text-bg-dark"></div>
+    </div>
+    
+  </div>
+</header>
+
+<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+
+  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
+        <li class="nav-item fs-3 text-primary fw-bold">design</li>
+        <li class="nav-item fs-3 text-primary fw-bold">tableau</li>
+        <li class="nav-item ms-auto">
+      <label class="">Draft <i class="bi bi-square"></i>
+      </label>
+    </li>
+    <li class="nav-item">
+      <label class="">Frozen <i class="bi bi-square"></i>
+      </label>
+    </li>
+  </ul>
+
+   <p class="title display-7">Tableau® Dashboards</p> 
+  <p class="subtitle lead"> My Design Portfolio </p>
+
+    
+  
+  <div class="no-row-height column-margin column-container"><div class="">
+
+        <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6818">
+  <i class="bi bi-person-circle me-1"></i></a>
+
+
+<a href="https://linkedin/in/mbacou" class="text-decoration-none">
+  <span class="me-1">Melanie BACOU </span>
+  </a>
+
+<a class="fs-4" href="mailto:mel@mbacou.com">
+  <i class="bi bi-envelope"></i></a>
+
+          </p>
+    
+        <label>First published</label>
+    <p class="lh-lg text-body">Jan 30, 2024</p>
+    
+    
+    
+        <label>Reuse</label>
+    <p id="mb-reuse" class="lh-lg text-body"></p>
+    
+    
+  </div></div><div class="mx-lg-3 mb-2">
+        <label>Abstract</label>
+    <div class="lh-lg fs-1 text-muted"><p>Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.</p></div>
+    
+    
+  </div>
+</header>
 
 
 
 
 
-
-
-
- ]]></description>
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
+  author = {BACOU, Melanie},
+  title = {Tableau® {Dashboards}},
+  date = {2024-01-30},
+  url = {https://mbacou.com/portfolio/tableau.html},
+  langid = {en},
+  abstract = {Showcase of interactive statistical dashboards and
+    decision-support tools designed for partners and clients.}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2024" class="csl-entry quarto-appendix-citeas">
+BACOU, Melanie. 2024. <span>“Tableau® Dashboards.”</span> January 30. <a href="https://mbacou.com/portfolio/tableau.html">https://mbacou.com/portfolio/tableau.html</a>.
+</div></div></section></div> ]]></description>
   <category>design</category>
   <category>tableau</category>
   <guid>https://mbacou.com/portfolio/tableau.html</guid>
   <pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate>
   <media:content url="https://mbacou.com/portfolio/fig/portfolio-tableau.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Print Design</title>
-  <dc:creator>Melanie BACOU</dc:creator>
-  <link>https://mbacou.com/portfolio/print.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-
-
-
- ]]></description>
-  <category>design</category>
-  <guid>https://mbacou.com/portfolio/print.html</guid>
-  <pubDate>Tue, 30 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://mbacou.com/portfolio/fig/portfolio-print.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>

@@ -1,12 +1,9 @@
 ---
 title: Data, Resources, and Tools
 subtitle: A curated list of accessible resources for agricultural and agro-meteo research
-author: ""
-date: 2024-07-16
-date-modified: last-modified
+date: last-modified
 description: A nice description down here.
-title-block-banner: dashboard.jpg
-title-block-banner-color: var(--bs-light)
+category: skip
 ---
 
 A curated list of resources and tools. This page is always in progress.

@@ -2,17 +2,23 @@
 title: BACOU, Melanie (CV)
 subtitle: Agro-economist, agri-meteo, and geospatial analyst
 author: ""
-date-modified: ""
-description: I am an applied economist with a focus on public-sector strategies for sustainable agriculture and food security. 25+ years experience in program and policy design, monitoring & evaluation (M&E), climate risk assessment, and rural finance.
+abstract-title: Summary
+abstract: |
+  Economist with 20+ years in public-sector consulting. Led economic development programs and research grants in the $500K range. Advised government agencies and multilateral donors with large-scale data collection methods (field-based, mobile, and remote sensing), household survey design and analysis, market segmentation, agricultural value-chain analysis, rural finance, climate risk assessment, and risk transfer.
 image: _fig/profile.jpg
 toc-depth: 2
-freeze: true
-category: skip
+freeze: false
 citation: false
+category: skip
+lightbox: false
+format-links: 
+  - text: Download PDF
+    href: BACOU-Melanie-CV.pdf
+    icon: file-pdf
 ---
 
-::: {.aside}
-![](_fig/profile.jpg){.img-rounded .mt-md-n5}
+::: {.aside .mt-md-5}
+![](_fig/profile.jpg){width="9em" .rounded-circle}
 
 ::: {.small .my-3}
 {{< bi linkedin >}}    [linkedin.com/in/mbacou](https://linkedin.com/in/mbacou)\
@@ -20,9 +26,10 @@ citation: false
 {{< bi person-circle >}}    [devex.com](https://www.devex.com/people/melanie-bacou-46872)\
 {{< bi journal-text >}}    [orcid.org](https://orcid.org/0000-0003-1810-6818)  
 {{< bi telegram >}}    [t.me/mbacou](https://t.me/mbacou)\
+{{< bi chat >}}    [zoom.us/mbacou](https://us05web.zoom.us/j/6857815367?pwd=eXdteU9QdWhsM1hwTXZGTFdVL0d6dz09)\
 :::
 
-##### Top Skills
+###### Top Skills
 
 Cost/benefit analysis\
 Economic impact evaluation\
@@ -32,46 +39,45 @@ Weather risk and adaptation\
 Parametric risk transfer\
 R, STATA, QGIS
 
-##### Languages
+###### Languages
 
 French (native)\
 English (bilingual)\
 German (limited working)\
 Russian (beginner)
 
-##### Certifications
+###### Certifications
 
 [SAS® Programming III](https://learn.sas.com/course/view.php?id=211)
+
+<a role="button" class="btn btn-success" href="BACOU-Melanie-CV.pdf" target="_blank"><i class="bi bi-file-pdf"></i> Download PDF</a>
+
 :::
 
 
-## Summary
+##### I bring in... 
 
-- Led research grants in the \$500K range, advised public agencies and private firms with large-scale data collection methods (incl. remote sensing and mobile field surveying), household survey design and analysis, market segmentation, agricultural value-chain analysis, pricing of (parametric) weather insurance.
-
-- Strong quantitative, analytic, writing and presentation skills acquired over 20 years of collaboration with leading economic research institutes and consulting firms.
-
-- Multidisciplinary background with ability to communicate efficiently with farmers, government officials, private sector partners, technical experts, and researchers.
-
-- Work experience in fragile states (Mid-East, West/sub-Saharan Africa). French / U.S. citizenships.
+- Strong quantitative, analytical, and data modeling skills acquired in collaboration with top-rank economic research teams and consulting firms
+- Multi-stakeholder (public-private) project management, fundraising, budgeting, forecasting, resource and cost tracking
+- A multidisciplinary background with ability to liaise efficiently with investors, government officials, private-sector partners, technical experts, researchers, and beneficiaries
+- 3+ years field experience in fragile states (Mid-East, West/subSaharan Africa)
 
 
-## Specialties
+##### Tech Skills
 
-Quantitative and spatial analysis, cost/benefit analysis, household surveys and experimental designs, market segmentation, development of agricultural value chains, risk and impact evaluation methods, weather & climate risk and adaptation, parametric risk transfer, data visualization.
-
-*Stats*: R, R/Shiny, STATA, SAS, Tableau®, Highcharts.js, D3.js\
-*Databases*: MS SQL Server, MySQL, PostGIS, MongoDB, Elasticsearch, DuckDB\
-*GIS*: QGIS, GRASS, GDAL, GeoServer, Mapnik, Leaflet, Kepler.gl\
-*Surveying*: ODK, CSPro, SurveyCTO, Fulcrum, GISCloud, CKAN, DataHub\
-*DevOps*: CentOS, Ubuntu, AWS and Azure cloud deployment and containerization, Docker\
-*Agile development*: Jira, Trello, Asana, Taiga.io, ClubHouse
+*Statistics* -- R, STATA, SAS, GAMS / LaTeX, Quarto, Typst\
+*Survey* -- ODK, CSPro, SurveyCTO, CommCare, Fulcrum, GISCloud\
+*Data viz* --  Shiny, Tableau®, Highcharts.js, D3.js, Superset, Grafana\
+*GIS* -- QGIS, GRASS, GDAL, GeoServer, Carto, Mapnik, Leaflet, Kepler.gl, Google Earth Engine\
+*Databases* -- MS SQL Server, MySQL, PostGIS, MongoDB, MariaDB, Elasticsearch, DuckDB\
+*DevOps* -- Linux (Ubuntu, Arch), Git, CI/CD, Docker, AWS cloud deployment, containerization, orchestration (Airflow)\
+*Agile development* -- Jira, Trello, Asana, Taiga.io, ClubHouse
 
 {{< pagebreak >}}
 
-# {{< bi briefcase >}}<br/>Clients & Projects
+## {{< bi briefcase >}} Clients & Projects
 
-### International Water Management Institute (IWMI)
+#### International Water Management Institute (IWMI)
 
 ::: aside
 ![](_fig/iwmi.jpg){.mt-2 width="6em"}
@@ -85,7 +91,7 @@ Aug 2021 -- Jan 2022\
 
 Designed [complex ETLs](https://mbacou.github.io/WADashboard/) and [interactive tools](http://3.224.92.203:3838/WADashboard) to track changes in water budgets and water productivity across multiple river basins. Part of FAO Water Secure Africa initiative ([WASA](https://wateraccounting.org/)) to inform equitable and sustainable water use policies.
 
-### WorldCover PBC
+#### WorldCover PBC
 
 ::: aside
 ![](_fig/wc.jpg){.mt-2 width="5em"}
@@ -101,7 +107,7 @@ Aug 2017 -- Apr 2021\
 
 WorldCover engineers solutions to better design, target, and deliver affordable (parametric) weather insurance to small-scale farmers (Ghana, Togo, Kenya, Uganda), and to large-scale fruit and nut tree growers, and to protect entire agricultural value chains against climate risks. Led agrometeorological research across 20 value-chains and agroclimatic zones. Rolled out a real-time pricing engine and multiple APIs on AWS cloud. ([technical platform](http://3.224.92.203:3838/app-pricing/) sold in April 2021).
 
-### Bill & Melinda Gates Foundation (BMGF)
+#### Bill & Melinda Gates Foundation (BMGF)
 
 ::: aside
 ![](_fig/bmgf.jpg){.mt-2 width="5em"}
@@ -116,7 +122,7 @@ Apr 2017 -- Dec 2017\
 
 Business-oriented typologies and characterization of small-holder farming systems in Ghana, Ethiopia, Tanzania, and Nigeria. Under a work assignment with [Spatial Development International](https://spatialdev.com/) (now Locana).
 
-### Abt Associates Inc.
+#### Abt Associates Inc.
 
 ::: aside
 ![](_fig/abt.svg){.mt-2 width="6em"}
@@ -130,7 +136,7 @@ Jun 2017 -- Jul 2017\
 
 Geospatial analysis to support [USAID AgResults](https://agresults.org/) program evaluation in Nigeria, Kenya, and Uganda.
 
-### International Food Policy Research Institute (IFPRI)
+#### International Food Policy Research Institute (IFPRI)
 
 ::: aside
 ![](_fig/ifpri.jpg){.mt-2 width="5em"}
@@ -144,7 +150,7 @@ Sep 2014 -- Dec 2016\
 
 Generated subnational socio-economic and biophysical datasets to inform and upscale agricultural research investments in sub-Saharan Africa, track adoption of new agricultural technologies, track CGIAR research investments around the globe, and monitor the impact of policies and investments on small farm-holder livelihoods.
 
-### IFPRI -- HarvestChoice Program
+#### IFPRI -- HarvestChoice Program
 
 ::: aside
 ![](_fig/hc.jpg){.mt-2 width="5em"}
@@ -158,7 +164,7 @@ May 2010 -- Aug 2014\
 
 Research, data and analytics in support of the Global Development Program of the Bill & Melinda Gates Foundation, USAID Feed the Future Africa RISING, the G-8 New Alliance for Food Security and Nutrition, the Alliance for a Green Revolution in Africa (AGRA), and several CGIAR programs focused on agricultural productivity improvement, food security, and poverty reduction in sub-Saharan Africa. In charge of [HarvestChoice](https://ifpri.org/project/harvestchoice) data releases.
 
-### IFPRI -- AGRODEP Program
+#### IFPRI -- AGRODEP Program
 
 ::: aside
 ![](_fig/agrodep.jpg){.mt-2 width="5em"}
@@ -173,7 +179,7 @@ May 2011 -- Oct 2011\
 
 The African Growth and Development Policy Modeling Consortium is a program sponsored by USAID / UKAid. Website migration to a Drupal CMS, incl. preparation of design mockups, content migration, and training of [AGRODEP](http://www.agrodep.org/) staff. Held a 3-day workshop on household survey data sampling and processing to AGRODEP awardees in Dakar, Senegal.
 
-### Gates Foundation
+#### Gates Foundation
 
 ::: aside
 ![](_fig/bmgf.jpg){.mt-2 width="5em"}
@@ -188,7 +194,7 @@ Nov 2012 -- Sep 2014\
 
 Country diagnostics, segmentation of farm households, and data visualization for the Foundation's Agricultural Development Program. Under a work assignment with [Spatial Development International](https://spatialdev.com/) (now part of [TRC Companies, Inc](https://www.trccompanies.com/services/intelligent-grid-solutions/)).
 
-### African Development Bank
+#### African Development Bank
 
 ::: aside
 ![](_fig/afdb.svg){.mt-2 width="9em"}
@@ -202,7 +208,7 @@ Oct 2008 -- Jan 2009\
 
 Led a 4-month ICT project for the Bank’s Procurement and Fiduciary Services division aimed at a complete upgrade of its internal SAP® modules (procurement workflow and reporting tools) and external Web portal (procurement tools and information for borrowing governments and the business community). Under a work assignment with [Crown Agents UK](https://crownagents.com/).
 
-### Development Gateway Foundation
+#### Development Gateway Foundation
 
 ::: aside
 ![](_fig/dgf.jpg){.mt-2 width="5em"}
@@ -216,7 +222,7 @@ May 2008 -- Sep 2008\
 
 Helped conduct a 5-month evaluation of the relevance, effectiveness and impact, sustainability, governance and management structure of DGF (5 international programs and staff of 84). The evaluation was forward-looking and provided substantial strategic recommendations to DGF in the areas of ICT4D and aid effectiveness. Data collection included desk review, on-line surveys, usage analysis from DGF servers, phone and in-person stakeholder interviews with over 45 individuals. Under a work assignment with [AMEX International](http://amexdc.com/).
 
-### Abt Associates Inc.
+#### Abt Associates Inc.
 
 ::: aside
 ![](_fig/abt.svg){.mt-2 width="6em"}
@@ -237,7 +243,7 @@ Managed environmental cost-benefit and regulatory analyses, and program evaluati
     [hsanet.org](https://www.abtassociates.com/projects/partners-for-health-reform-plus).
 - U.S. EPA Office of Emergency Management, [epa.gov/emergencies/](https://epa.gov/emergency-response). 8-month support to OEM Evaluation and Communication Division on information design.
 
-### Center for Global Trade Analysis (GTAP)
+#### Center for Global Trade Analysis (GTAP)
 
 ::: aside
 ![](_fig/gtap.png){.mt-2 width="9em"}
@@ -255,7 +261,7 @@ West Lafayette IN\
 - Built web-based tools to streamline conference organization
 - Screened funding opportunities for the Center, prepared research proposals and progress reports
 
-### Landbouw Economisch Instituut -- Wageningen UR (LEI)
+#### Landbouw Economisch Instituut -- Wageningen UR (LEI)
 
 ::: aside
 ![](_fig/lei.jpg){.mt-2 width="6em"}
@@ -270,7 +276,7 @@ Jan 2000 -- Aug 2000\
 - Planned and coordinated a first on-line training program on horticultural systems between WUR and agricultural academies in China
 - Delivered initial training of trainers to Dutch content experts
 
-### Purdue University -- Dpt of Agricultural Economics
+#### Purdue University -- Dpt of Agricultural Economics
 
 ::: aside
 ![](_fig/purdue.jpg){.mt-2 width="5em"}
@@ -287,7 +293,7 @@ Sep 1998 -- Dec 1999\
 - Developed distance learning programs focusing on General Equilibrium theories and applications, sponsored by the United Nations Economic Commission for Africa
 - Designed all educational websites, multimedia content, and CD-ROMs.
 
-### Société Générale Emerging Europe Asset Management (SGEEAM)
+#### Société Générale Emerging Europe Asset Management (SGEEAM)
 
 ::: aside
 ![](_fig/sg.jpg){.mt-2 width="5em"}
@@ -303,7 +309,7 @@ Jan 1996 -- May 1996\
 - Performed ratio analysis and financial reporting (translation of Polish and Czech accounting standards into IAS)
 - Built financial databases and automated reports to assist market analysts in monitoring daily fund performance.
 
-### FIMATEX S.A.
+#### FIMATEX S.A.
 
 ::: aside
 ![](_fig/fimatex.jpg){.mt-2 width="6em"}
@@ -320,7 +326,7 @@ Jul 1995 -- Oct 1995\
 - Collaborated with traders to produce daily market reports on French MATIF and MONEP bond and index futures and options
 - Designed first business website, see [Fimatex](https://fr.wikipedia.org/wiki/Fimatex) (now Boursorama)
 
-### SEAT France S.A.
+#### SEAT France S.A.
 
 ::: aside
 ![](_fig/seat.png){.mt-2 width="6em"}
@@ -335,9 +341,9 @@ Jan 1995 -- Apr 1995\
 Contributed to monthly promotional campaigns with advertising agencies and tracked all merchandising programs with SEAT auto dealers across France.
 
 
-# {{< bi award >}}<br/>Education
+## {{< bi award >}} Education
 
-### Purdue University
+#### Purdue University
 
 ::: aside
 ![](_fig/purdue.jpg){width="5em"}
@@ -351,7 +357,7 @@ West Lafayette IN\
 Thesis: *Economy-wide Effects of Climate Variability and Climate Prediction in Mozambique*, under the supervision of Dr. Channing Arndt, awarded outstanding M.Sc. thesis\
 Activities: started and taught Purdue's Argentine tango student organization
 
-### ESCP Europe (EAP)
+#### ESCP Europe (EAP)
 
 ::: aside
 ![](_fig/escp.jpg){width="5em"}
@@ -362,13 +368,14 @@ Berlin, Germany\
 1994 -- 1997
 :::
 
+**MA International Management**\
 **Diplôme de Grande École de Commerce**\
-**Diplom-Kaufmann, MA International Management**
+**Diplom-Kaufmann**
 
 Previously EAP (European Advanced Program) 3-year/3-country program.\
 Thesis: *Agricultural Derivatives Markets – A Substitute to the Common Agricultural Policy Support Price Mechanisms*
 
-### Lycée Louis-le-Grand
+#### Lycée Louis-le-Grand
 
 ::: aside
 ![](_fig/llg.jpg){width="6em"}
@@ -379,9 +386,21 @@ Paris, France\
 
 **Classe Prépa HEC** (2-year B.Sc. equivalent) business mathematics and statistics, contemporary history, philosophy.
 
+#### Herzen State University
+
+::: aside
+![](_fig/herzen.jpg){width="6em"}
+
+St Petersburg, Russia\
+Jun-Sep 2023
+:::
+
+**Intensive summer course in Russian language, culture, and literature**. Grant recipient of the Russian Ministry of Education.
+
+
 {{< pagebreak >}}
 
-# {{< bi journal-text >}}<br/>Publications
+## {{< bi journal-text >}} Publications {.mt-md-4}
 
 *Poverty, Land, and Climate in Africa South of the Sahara: an empirical analysis*, International Food Policy Research Institute. Presented at CSAE 2016.
 

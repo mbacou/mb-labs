@@ -3,130 +3,57 @@ project:
   type: website
   execute-dir: file
   output-dir: _site
+  render:
+    - "**/*.qmd"
+    - "**/*.ipynb"
+    - "!ejs/**"
   preview:
-    port: 5555
-
-highlight-style: tango    
+    port: 5555 
 
 website:
-  title: "Mel B. mb-labs"
-  favicon: assets/mb-square.png
-  image: assets/mb-square.png
-  twitter-card: false
+  title: Mel B. mb-labs
   description: Playground for consulting and data science projects
-  open-graph: true
   site-url: https://mbacou.com
   repo-url: https://github.com/mbacou/mb-labs
+  favicon: assets/favicon.svg
+  image: assets/mb-square.svg
+  twitter-card: false
+  open-graph: true
   repo-branch: quarto
   repo-actions: [edit, issue]
   back-to-top-navigation: false
-  page-navigation: true
+  page-navigation: false
   bread-crumbs: false
 
-  navbar: 
-    title: "**mb-labs** --- A personal blog <br/>about People, Space, and Statistics"
-    logo: assets/mb-square.png
-    foreground: dark
-    background: transparent
-    search: false
-    collapse: true
-    tools-collapse: false
-    toggle-position: left
-    right: 
-      - text: My Blog
-        href: index.qmd
-      - text: Portfolio
-        href: portfolio.qmd
-      - text: Ressources
-        href: /posts/tools/
-      - text: Bio / CV
-        href: /posts/resume/
-    tools:
-      - icon: github
-        href: https://github.com/mbacou/mb-labs
-      - icon: telegram
-        href: https://t.me/mbacou
-      - icon: linkedin
-        href: https://linkedin.com/in/mbacou
-  
-  sidebar:
-    style: docked
-    alignment: right
-    border: false      
-    header: _meta.qmd
-    footer: _footer.qmd
-
-  search:
-    type: textbox
-    show-item-context: true
-    location: sidebar
-
-  announcement:
-    dismissable: true
-    type: light
-    content: |
-      {{< bi warning >}} This blog is being migrating to [Quarto](https://quarto.org), expect quirks and dead links!
-
-  page-footer:
-    left: |
-      **Mel B. Labs** -- a personal blog about econometrics and statistics.<br/>
-      BACOU, Melanie &copy; 2024 /
-      Licensed under [CC BY-NC 4.0](/license.qmd).
-
-      [All views here are strictly my own and do <u>not</u> reflect that of employers,
-      project partners or clients. Refer to each article for citation, code and data reuse.]{.text-muted}
-
-      This site is generated using [Quarto&reg;](https://quarto.org).
-
-    right:
-      - icon: github
-        href: https://github.com/mbacou
-      - icon: telegram
-        href: https://t.me/mbacou
-      - icon: linkedin
-        href: https://linkedin.com/in/mbacou
-      - icon: youtube
-        href: https://www.youtube.com/@mbacou/playlists  
-      - icon: rss
-        href: index.xml      
-
-bibliography: references.bib
-
 format:
-  html:
-    toc: true
-    toc-title: Contents
-    toc-location: left
-    toc-depth: 3
-    smooth-scroll: true
-    date-format: medium
-
-    link-external-icon: false
-    link-external-newwindow: true
-
-    tbl-cap-location: bottom
-    fig-cap-location: bottom
-    reference-location: margin
-    citation-location: document
-    citations-hover: true
-    footnotes-hover: false
-
-    fig-dpi: 110
-    fig-format: png
-    fig-width: 7
-    fig-height: 5
-
-    code-copy: false
-    code-overflow: wrap
-
-    fontsize: 15px
-    theme:
-      light:
-        - assets/scss/_base.scss
-        - brand
-
-    grid:
-      body-width: 660px
-      sidebar-width: 210px
-      margin-width: 210px
-      gutter-width: 30px
+  mb-article-html:
+    logo: assets/mb-square.png
+    logo-href: /
+    logo-alt: Mel B. mb-labs
+    license: CC BY-NC 4.0
+    copyright: © Mel B. Labs - a personal blog about statistics and spatial econometrics.
+    bibliography: references.bib
+    header:
+      palette: true
+      left: 
+        - text: My Blog
+          href: index.qmd
+          icon: substack
+        - text: Portfolio
+          href: portfolio.qmd
+          icon: briefcase
+        - text: Ressources
+          href: /posts/tools/
+          icon: tools
+        - text: Bio / CV
+          href: /posts/resume/
+          icon: person-circle
+      right:
+        - icon: github
+          href: https://github.com/mbacou/mb-labs
+        - icon: telegram
+          href: https://t.me/mbacou
+        - icon: linkedin
+          href: https://linkedin.com/in/mbacou
+        - icon: youtube
+          href: https://youtube.com/\@mbacou/playlists        

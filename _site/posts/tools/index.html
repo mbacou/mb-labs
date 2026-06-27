@@ -2,16 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="">
-<meta name="dcterms.date" content="2024-07-16">
+<meta name="author" content="Melanie BACOU">
 <meta name="description" content="A nice description down here.">
 
 <title>Data, Resources, and Tools – Mel B. mb-labs</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -32,28 +34,26 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../assets/mb-square.png" rel="icon" type="image/png">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-30209fdd86031f5fcf4ae5607179802d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-30209fdd86031f5fcf4ae5607179802d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-30209fdd86031f5fcf4ae5607179802d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-746460a2f44fae2b83e2f14b2a1a127a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-91cc23eb53af2de3465a7a7af9f0a586.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-d6987c503047c4bfbaa23e32595164a4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-91cc23eb53af2de3465a7a7af9f0a586.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0dfeddb783db43e03baada5433767f10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-65ad67f7a8ec059766e3bcd39f5568ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0dfeddb783db43e03baada5433767f10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
+  "panel-placement": "start",
   "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
@@ -61,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
     "/",
     "s"
   ],
-  "show-item-context": true,
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -77,135 +77,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<style>
-
-      .quarto-title-block .quarto-title-banner h1,
-      .quarto-title-block .quarto-title-banner h2,
-      .quarto-title-block .quarto-title-banner h3,
-      .quarto-title-block .quarto-title-banner h4,
-      .quarto-title-block .quarto-title-banner h5,
-      .quarto-title-block .quarto-title-banner h6
-      {
-        color: var(--bs-light);
-      }
-
-      .quarto-title-block .quarto-title-banner {
-        color: var(--bs-light);
-background-image: url(dashboard.jpg);
-background-size: cover;
-      }
-</style>
 
 
 <meta property="og:title" content="Data, Resources, and Tools – Mel B. mb-labs">
 <meta property="og:description" content="A nice description down here.">
-<meta property="og:image" content="https://mbacou.com/posts/tools/assets/mb-square.png">
+<meta property="og:image" content="https://mbacou.com/assets/mb-square.png">
 <meta property="og:site_name" content="Mel B. mb-labs">
+<meta property="og:image:alt" content="Mel B. mb-labs">
+<meta property="og:image:height" content="574">
+<meta property="og:image:width" content="574">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <div id="quarto-announcement" data-announcement-id="8ed67a3dd1b8fcb038c68509120c9059" class="alert alert-dark hidden"><div class="quarto-announcement-content">
-<p><i class="bi-warning " style="" role="img" aria-hidden="true"></i> This blog is being migrating to <a href="https://quarto.org">Quarto</a>, expect quirks and dead links!</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">mb-labs</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
-<span class="menu-text">Notebooks</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../portfolio.html"> 
-<span class="menu-text">Portfolio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../posts/tools/"> 
-<span class="menu-text">Ressources</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../posts/resume/"> 
-<span class="menu-text">Bio / CV</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
-    <a href="https://github.com/mbacou/mb-labs" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
-    <a href="https://t.me/mbacou" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-telegram"></i></a>
-    <a href="https://linkedin.com/in/mbacou" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Data, Resources, and Tools</h1>
-        </a>     
-    </div>
-  </nav>
-</header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">Data, Resources, and Tools</h1>
-            <p class="subtitle lead">A curated list of accessible resources for agricultural and agro-meteo research</p>
-                  <div>
-        <div class="description">
-          A nice description down here.
-        </div>
-      </div>
-                </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">July 16, 2024</p>
-      </div>
-    </div>
-    
-      <div>
-      <div class="quarto-title-meta-heading">Modified</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date-modified">July 19, 2025</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-end sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="d-flex flex-column justify-content-around h-100 pt-5 px-2 toc-active" data-toc-expanded="99">
+
+  <!-- Fixed article meta -->
+  <div class="mb-meta mt-2 mt-md-4 mb-3">
+
+    <p class="fs-0">Jun 27, 2026 <i class="bi bi-clock ms-1"></i></p>
+
+        <div class="lh-sm fs-2 text-muted"><em>A nice description down here.</em></div>
+    
+  </div>
+
+  <!-- Quarto TOC -->
+    <label class="text-primary">Content</label>
   <ul>
   <li><a href="#open-data" id="toc-open-data" class="nav-link active" data-scroll-target="#open-data">Open Data</a></li>
   <li><a href="#remote-sensing" id="toc-remote-sensing" class="nav-link" data-scroll-target="#remote-sensing">Remote Sensing</a></li>
@@ -215,6 +117,23 @@ background-size: cover;
   <li><a href="#risk-in-agriculture" id="toc-risk-in-agriculture" class="nav-link" data-scroll-target="#risk-in-agriculture">Risk in Agriculture</a></li>
   <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a></li>
   </ul>
+
+  <!-- Back to top -->
+  <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 border-grid mb-4">
+    <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
+        <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
+        <a class="mt-1 border-grid pt-1 text-muted" href="#mb-title-block">Back
+      to top <i class="bi bi-arrow-up ms-1"></i></a>
+  </div>
+  
+  <div class="d-none d-lg-block mt-auto">
+    <!-- Optional sidebar logo -->
+        <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
+        <!-- Copyright -->
+        <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
+    </div>
+      </div>
+
 <div class="toc-actions"><ul><li><a href="https://github.com/mbacou/mb-labs/edit/quarto/posts/tools/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mbacou/mb-labs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
@@ -222,10 +141,164 @@ background-size: cover;
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+<!-- article title header -->
+<header id="mb-header" class="column-page-right sticky-top">
+  <!-- mb-navbar -->
+  <nav class="d-flex align-items-end 
+  ">
+
+    <!-- logo -->
+      <div class="d-lg-none mb-n1">
+      <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
+    </div>
+    
+    <!-- left links -->
+    <ul class="navbar-nav d-none d-md-flex flex-row w-100 me-2">
+
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="../../index.html">
+          <span class="menu-text">My Blog</span></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="../../portfolio.html">
+          <span class="menu-text">Portfolio</span></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="../../posts/tools/">
+          <span class="menu-text">Ressources</span></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="../../posts/resume/">
+          <span class="menu-text">Bio / CV</span></a>
+      </li>
+        </ul>
+
+    <!-- left icons -->
+    <ul class="navbar-nav d-flex d-md-none flex-row w-100">
+
+          <li class="nav-item flex-fill text-center">
+        <a class="nav-link" href="../../index.html">
+          <i class="bi bi-substack"></i></a>
+      </li>
+          <li class="nav-item flex-fill text-center">
+        <a class="nav-link" href="../../portfolio.html">
+          <i class="bi bi-briefcase"></i></a>
+      </li>
+          <li class="nav-item flex-fill text-center">
+        <a class="nav-link" href="../../posts/tools/">
+          <i class="bi bi-tools"></i></a>
+      </li>
+          <li class="nav-item flex-fill text-center">
+        <a class="nav-link" href="../../posts/resume/">
+          <i class="bi bi-person-circle"></i></a>
+      </li>
+        </ul>
+
+    <!-- right tools -->
+    <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
+
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://github.com/mbacou/mb-labs">
+          <i class="bi bi-github" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://t.me/mbacou">
+          <i class="bi bi-telegram" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://linkedin.com/in/mbacou">
+          <i class="bi bi-linkedin" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://youtube.com/@mbacou/playlists">
+          <i class="bi bi-youtube" role="img"></i></a>
+      </li>
+        </ul>
+
+    <!-- Quarto buttons -->
+    <ul class="navbar-nav flex-row ms-2 justify-content-end">
+      <li class="nav-item d-lg-none">
+        <a class="nav-link px-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-layout-text-sidebar-reverse"></i>
+        </a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" role="button" aria-label="Search" onclick="window.quartoOpenSearch();">
+          <i class="bi bi-search"></i>
+        </a>
+      </li>
+        </ul>
+
+      <div id="quarto-search"></div>
+    
+  </nav>
+  <div class="border-top ">
+
+    <!-- Optional brand color palette -->
+        <div class="d-flex justify-content-end">
+      <div class="p-1 text-bg-primary"></div>
+      <div class="p-1 text-bg-secondary"></div>
+      <div class="p-1 text-bg-tertiary"></div>
+      <div class="p-1 text-bg-info"></div>
+      <div class="p-1 text-bg-success"></div>
+      <div class="p-1 text-bg-warning"></div>
+      <div class="p-1 text-bg-danger"></div>
+      <div class="p-1 text-bg-light"></div>
+      <div class="p-1 text-bg-dark"></div>
+    </div>
+    
+  </div>
+</header>
+
+<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+
+  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
+        <li class="nav-item ms-auto">
+      <label class="">Draft <i class="bi bi-square"></i>
+      </label>
+    </li>
+    <li class="nav-item">
+      <label class="">Frozen <i class="bi bi-square"></i>
+      </label>
+    </li>
+  </ul>
+
+   <p class="title display-7">Data, Resources, and Tools</p> 
+  <p class="subtitle lead"> A curated list of accessible resources for agricultural and agro-meteo research </p>
+
+    
+  
+  <div class="no-row-height column-margin column-container"><div class="">
+
+        <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6818">
+  <i class="bi bi-person-circle me-1"></i></a>
 
 
 
+  <span class="me-1">Melanie BACOU </span>
+  
+
+<a class="fs-4" href="mailto:mel@mbacou.com">
+  <i class="bi bi-envelope"></i></a>
+
+          </p>
+    
+        <label>First published</label>
+    <p class="lh-lg text-body">Jun 27, 2026</p>
+    
+    
+    
+        <label>Reuse</label>
+    <p id="mb-reuse" class="lh-lg text-body"></p>
+    
+    
+  </div></div><div class="mx-lg-3 mb-2">
+    
+    
+  </div>
+</header>
 
 
 <p>A curated list of resources and tools. This page is always in progress.</p>
@@ -638,16 +711,16 @@ background-size: cover;
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2026,
   author = {BACOU, Melanie},
   title = {Data, {Resources,} and {Tools}},
-  date = {2024-07-16},
+  date = {2026-06-27},
   url = {https://mbacou.com/posts/tools/},
   langid = {en}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2024" class="csl-entry quarto-appendix-citeas" role="listitem">
-BACOU, Melanie. 2024. <span>“Data, Resources, and Tools.”</span> July
-16, 2024. <a href="https://mbacou.com/posts/tools/">https://mbacou.com/posts/tools/</a>.
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2026" class="csl-entry quarto-appendix-citeas" role="listitem">
+BACOU, Melanie. 2026. <span>“Data, Resources, and Tools.”</span> June
+27. <a href="https://mbacou.com/posts/tools/">https://mbacou.com/posts/tools/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -658,6 +731,68 @@ BACOU, Melanie. 2024. <span>“Data, Resources, and Tools.”</span> July
       icon: icon
     };
     anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/mbacou\.com");
@@ -917,25 +1052,64 @@ BACOU, Melanie. 2024. <span>“Data, Resources, and Tools.”</span> July
           }
         };
       }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
             }
-          });
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
         }
     const findCites = (el) => {
       const parentEl = el.parentElement;
@@ -977,52 +1151,37 @@ BACOU, Melanie. 2024. <span>“Data, Resources, and Tools.”</span> July
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p><strong>Mel B. Labs</strong> – a personal blog about econometrics and statistics.<br> BACOU, Melanie © 2024 / Licensed under <a href="license.qmd">CC BY-NC 4.0</a>.</p>
-<p><span class="text-muted">All views here are strictly my own and do <u>not</u> reflect that of employers, project partners or clients. Refer to each article for citation, code and data reuse.</span></p>
-<p>This site is generated using <a href="https://quarto.org">Quarto®</a>.</p>
-</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mbacou/mb-labs/edit/quarto/posts/tools/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mbacou/mb-labs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
-    <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/mbacou">
-      <i class="bi bi-github" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://t.me/mbacou">
-      <i class="bi bi-telegram" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/mbacou">
-      <i class="bi bi-linkedin" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/@mbacou/playlists">
-      <i class="bi bi-youtube" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml">
-      <i class="bi bi-rss" role="img">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
-  </div>
-</footer>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mbacou/mb-labs/edit/quarto/posts/tools/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mbacou/mb-labs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const t1 = document.getElementById('mb-reuse');
+    const s1 = document.querySelector('[rel="license"]');
+
+    if (t1 && s1) {
+      t1.appendChild(s1);
+    }
+
+    const t2 = document.getElementById('mb-copyright');
+    const s2 = document.querySelector('#quarto-copyright div div').innerHTML;
+
+    if (t2 && s2) {
+      t2.innerHTML = s2;
+    }
+
+    const t3 = document.querySelector('.mb-toc-actions');
+    const s3 = document.querySelectorAll('a.toc-action')
+    const a3 = Array.from(s3).slice(0, 2);
+
+    if (a3) {
+      a3.forEach(el => {
+        t3.appendChild(el);
+      });
+    }
+  });
+</script>
+
+<!-- Quarto TOC Actions -->
+<div class="mb-toc-actions bg-shaded border-grid d-flex justify-content-center gap-3 text-sans text-muted lh-sm py-2">
+</div>
 
 
 

@@ -1,30 +1,30 @@
 ---
 title: Mel's Design Portfolio
 subtitle: A collection of visuals.
-date: 2010-05-01
-date-modified: last-modified
+author: []
+toc-title: ""
+citation: false
 categories:
   - econ
   - stats
   - dataviz
-title-block-banner: url(/www/banner/dashboard.jpg) fixed
-toc: false
-grid:
-  body-width: 850px
-  sidebar-width: 0px
-  margin-width: 210px
+description: |
+  ![](posts/resume/_fig/profile.jpg){width="9em" .rounded-circle .shadow-md .mt-2}
+
+  **ABOUT**<br/>A personal blog and playground for statistical and geospatial analyses using a mix of R, Python, and JavaScript notebooks -- and a home for poorly researched topics.
 
 listing:
   id: lst-portfolio
   contents: portfolio
+  template: _ejs/listing-list.ejs.md
   sort-ui: false
   filter-ui: false
   sort: "date desc"
-  type: default
   date-format: medium
-  image-align: left
-  image-height: 180px
-  max-items: 10
+  template-params:
+    image-placeholder: assets/placeholder.svg
+    image-height: 14rem
+  max-items: 8
   categories: true
   feed: true
 ---
@@ -32,7 +32,9 @@ listing:
 
 An annotated collection of visuals and tools I have built in the past for research teams, partners and clients.
 
-::: {#lst-portfolio .mt-3}
+## Examples
+
+::: {#lst-portfolio .column-page-right}
 :::
 
 

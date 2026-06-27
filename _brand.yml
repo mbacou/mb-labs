@@ -1,5 +1,6 @@
 meta:
   name: Mel B. Labs
+  logo: assets/mb-square.svg
   link:
     home: https://mbacou.github.io/mb-labs
     github: https://github.com/mbacou/mb-labs
@@ -13,32 +14,46 @@ color:
     green:     "#73842A"
     purple:    "#8D46C1"
     pink:      "#C6A5E8"
+    brick:     "#D47979"
     red:       "#B54D4D"
     orange:    "#A1713C"
     yellow:    "#E0D1A4"
     gray:      "#212120"
-    darkgray:  "#e7e2da"
     light:     "#FCFAF5"
     dark:      "#003946"
+    grid:      "#e7e2da"
 
-  primary:     "#D47979"
+  foreground:  gray
+  background:  light
+  primary:     brick
   secondary:   purple
-  info:        blue 
+  tertiary:    gray
+  info:        blue
+  success:     green
+  warning:     orange
+  danger:      red
+  light:       light
+  dark:        dark
 
 typography:
   fonts:
     - family: Crimson Text
       source: google
-      weight: [400, 600]
-    - family: M PLUS Code Latin
+      weight: [400, 500, 600]
+    - family: Iosevka Charon Mono
       source: google
       weight: [400, 500]
-    - family: Story Script
+    - family: Caveat
       source: google
       weight: [400]
+
+  base: 
+    family: Crimson Text
+    size: 20px
+  headings: Caveat
+  monospace: 
+    family: Iosevka Charon Mono
+    size: 14px
   
-  base: Crimson Text
-  headings: Marck Script
-  monospace: M PLUS Code Latin
-  
+ 
 

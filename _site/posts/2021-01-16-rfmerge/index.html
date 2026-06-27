@@ -2,15 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.24">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Melanie BACOU">
-<meta name="dcterms.date" content="2021-01-16">
 
 <title>Rainfall: Merge Ground and Satellite Observations with RFMerge – Mel B. mb-labs</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -66,24 +68,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../assets/mb-square.png" rel="icon" type="image/png">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15ea27bac76f9890c21e80949f497921.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-746460a2f44fae2b83e2f14b2a1a127a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e57903e44daeffb415a5ad3de0fae80b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/quarto-contrib/bootstrap-icons-1.11.1/all.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0dfeddb783db43e03baada5433767f10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-65ad67f7a8ec059766e3bcd39f5568ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0dfeddb783db43e03baada5433767f10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
+  "panel-placement": "start",
   "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
@@ -91,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "/",
     "s"
   ],
-  "show-item-context": true,
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -107,12 +114,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<style>
-
-      .quarto-title-block .quarto-title-banner {
-        background: var(--bs-shaded);
-      }
-</style>
 <link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
@@ -125,124 +126,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:image:width" content="1540">
 </head>
 
-<body class="nav-sidebar docked nav-fixed slimcontent quarto-light">
+<body class="floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <div id="quarto-announcement" data-announcement-id="8ed67a3dd1b8fcb038c68509120c9059" class="alert alert-dark hidden"><div class="quarto-announcement-content">
-<p><i class="bi-warning " style="" role="img" aria-hidden="true"></i> This blog is being migrating to <a href="https://quarto.org">Quarto</a>, expect quirks and dead links!</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">mb-labs</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../posts/resume/"> 
-<span class="menu-text">My Bio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
-<span class="menu-text">Notebooks</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../portfolio.html"> 
-<span class="menu-text">Portfolio</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../posts/tools/"> 
-<span class="menu-text">Ressources</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
-    <a href="https://github.com/mbacou/mb-labs" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
-    <a href="https://t.me/mbacou" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-telegram"></i></a>
-    <a href="https://linkedin.com/in/mbacou" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
-    <a href="https://www.youtube.com/@mbacou/playlists" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Rainfall: Merge Ground and Satellite Observations with RFMerge</h1>
-        </a>     
-    </div>
-  </nav>
-</header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">Rainfall: Merge Ground and Satellite Observations with RFMerge</h1>
-            <p class="subtitle lead">Recalibrate ERA5 hourly temperatures to CIMIS network ground observations.</p>
-                                <div class="quarto-categories">
-                <div class="quarto-category">meteo</div>
-                <div class="quarto-category">risk modeling</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Melanie BACOU <a href="mailto:mel@mbacou.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-1810-6818" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">January 16, 2021</p>
-      </div>
-    </div>
-    
-      <div>
-      <div class="quarto-title-meta-heading">Modified</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date-modified">December 8, 2024</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="d-flex flex-column justify-content-around h-100 pt-5 px-2 toc-active" data-toc-expanded="99">
+
+  <!-- Fixed article meta -->
+  <div class="mb-meta mt-2 mt-md-4 mb-3">
+
+    <p class="fs-0">Dec 8, 2024 <i class="bi bi-clock ms-1"></i></p>
+
+    
+  </div>
+
+  <!-- Quarto TOC -->
+    <label class="text-primary">Content</label>
   <ul>
   <li><a href="#covariate-layers" id="toc-covariate-layers" class="nav-link active" data-scroll-target="#covariate-layers">Covariate Layers</a></li>
   <li><a href="#recalibrate-hourly-temperature-estimates-using-randon-forest" id="toc-recalibrate-hourly-temperature-estimates-using-randon-forest" class="nav-link" data-scroll-target="#recalibrate-hourly-temperature-estimates-using-randon-forest">Recalibrate Hourly Temperature Estimates using Randon Forest</a></li>
   <li><a href="#explore-results" id="toc-explore-results" class="nav-link" data-scroll-target="#explore-results">Explore Results</a></li>
   </ul>
+
+  <!-- Back to top -->
+  <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 border-grid mb-4">
+    <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
+        <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
+        <a class="mt-1 border-grid pt-1 text-muted" href="#mb-title-block">Back
+      to top <i class="bi bi-arrow-up ms-1"></i></a>
+  </div>
+  
+  <div class="d-none d-lg-block mt-auto">
+    <!-- Optional sidebar logo -->
+        <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
+        <!-- Copyright -->
+        <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
+    </div>
+      </div>
+
 <div class="toc-actions"><ul><li><a href="https://github.com/mbacou/mb-labs/edit/quarto/posts/2021-01-16-rfmerge/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mbacou/mb-labs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
@@ -250,10 +174,166 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+<!-- article title header -->
+<header id="mb-header" class="column-page-right sticky-top">
+  <!-- mb-navbar -->
+  <nav class="d-flex align-items-end 
+  ">
+
+    <!-- logo -->
+      <div class="d-lg-none mb-n1">
+      <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
+    </div>
+    
+    <!-- left links -->
+    <ul class="navbar-nav d-none d-md-flex flex-row w-100 me-2">
+
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="../../index.html">
+          <span class="menu-text">My Blog</span></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="../../portfolio.html">
+          <span class="menu-text">Portfolio</span></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="../../posts/tools/">
+          <span class="menu-text">Ressources</span></a>
+      </li>
+          <li class="nav-item flex-fill">
+        <a class="nav-link" href="../../posts/resume/">
+          <span class="menu-text">Bio / CV</span></a>
+      </li>
+        </ul>
+
+    <!-- left icons -->
+    <ul class="navbar-nav d-flex d-md-none flex-row w-100">
+
+          <li class="nav-item flex-fill text-center">
+        <a class="nav-link" href="../../index.html">
+          <i class="bi bi-substack"></i></a>
+      </li>
+          <li class="nav-item flex-fill text-center">
+        <a class="nav-link" href="../../portfolio.html">
+          <i class="bi bi-briefcase"></i></a>
+      </li>
+          <li class="nav-item flex-fill text-center">
+        <a class="nav-link" href="../../posts/tools/">
+          <i class="bi bi-tools"></i></a>
+      </li>
+          <li class="nav-item flex-fill text-center">
+        <a class="nav-link" href="../../posts/resume/">
+          <i class="bi bi-person-circle"></i></a>
+      </li>
+        </ul>
+
+    <!-- right tools -->
+    <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
+
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://github.com/mbacou/mb-labs">
+          <i class="bi bi-github" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://t.me/mbacou">
+          <i class="bi bi-telegram" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://linkedin.com/in/mbacou">
+          <i class="bi bi-linkedin" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="https://youtube.com/@mbacou/playlists">
+          <i class="bi bi-youtube" role="img"></i></a>
+      </li>
+        </ul>
+
+    <!-- Quarto buttons -->
+    <ul class="navbar-nav flex-row ms-2 justify-content-end">
+      <li class="nav-item d-lg-none">
+        <a class="nav-link px-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-layout-text-sidebar-reverse"></i>
+        </a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" role="button" aria-label="Search" onclick="window.quartoOpenSearch();">
+          <i class="bi bi-search"></i>
+        </a>
+      </li>
+        </ul>
+
+      <div id="quarto-search"></div>
+    
+  </nav>
+  <div class="border-top ">
+
+    <!-- Optional brand color palette -->
+        <div class="d-flex justify-content-end">
+      <div class="p-1 text-bg-primary"></div>
+      <div class="p-1 text-bg-secondary"></div>
+      <div class="p-1 text-bg-tertiary"></div>
+      <div class="p-1 text-bg-info"></div>
+      <div class="p-1 text-bg-success"></div>
+      <div class="p-1 text-bg-warning"></div>
+      <div class="p-1 text-bg-danger"></div>
+      <div class="p-1 text-bg-light"></div>
+      <div class="p-1 text-bg-dark"></div>
+    </div>
+    
+  </div>
+</header>
+
+<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+
+  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
+        <li class="nav-item fs-3 text-primary fw-bold">meteo</li>
+        <li class="nav-item fs-3 text-primary fw-bold">risk modeling</li>
+        <li class="nav-item ms-auto">
+      <label class="">Draft <i class="bi bi-square"></i>
+      </label>
+    </li>
+    <li class="nav-item">
+      <label class="">Frozen <i class="bi bi-square"></i>
+      </label>
+    </li>
+  </ul>
+
+   <p class="title display-7">Rainfall: Merge Ground and Satellite Observations with RFMerge</p> 
+  <p class="subtitle lead"> Recalibrate ERA5 hourly temperatures to CIMIS network ground observations. </p>
+
+    
+  
+  <div class="no-row-height column-margin column-container"><div class="">
+
+        <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6818">
+  <i class="bi bi-person-circle me-1"></i></a>
 
 
 
+  <span class="me-1">Melanie BACOU </span>
+  
+
+<a class="fs-4" href="mailto:mel@mbacou.com">
+  <i class="bi bi-envelope"></i></a>
+
+          </p>
+    
+        <label>First published</label>
+    <p class="lh-lg text-body">Jan 16, 2021</p>
+    
+    
+    
+        <label>Reuse</label>
+    <p id="mb-reuse" class="lh-lg text-body"></p>
+    
+    
+  </div></div><div class="mx-lg-3 mb-2">
+    
+    
+  </div>
+</header>
 
 
 <hr>
@@ -267,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;See Baez-Villanueva, O. M., Zambrano-Bigiarini, M., Diego, J., Osorio, G.-, &amp; Mcnamara, I. (2020). <em>Tutorial for merging satellite-based precipitation datasets with ground observations using RFmerge</em>.</p></div></div><p>This work was initially performed for <strong>WorldCover PBC</strong> and <strong>OLAM US</strong> in early 2021, and redacted here to omit confidential details.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lattice)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
@@ -287,13 +367,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">strip.background=</span><span class="fu">list</span>(<span class="at">col=</span>pal[<span class="st">"light"</span>])</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">font.main=</span><span class="dv">1</span>, <span class="at">font.sub=</span><span class="dv">1</span>, <span class="at">adj.main=</span><span class="dv">0</span>, <span class="at">adj.sub=</span><span class="dv">0</span>)</span></code></pre></div>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">font.main=</span><span class="dv">1</span>, <span class="at">font.sub=</span><span class="dv">1</span>, <span class="at">adj.main=</span><span class="dv">0</span>, <span class="at">adj.sub=</span><span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <section id="covariate-layers" class="level1">
 <h1>Covariate Layers</h1>
 <p>Define zone of interest (ZOI), load and verify covariate layers.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear workspace, keep portfolio details</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear workspace, keep portfolio details</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">here</span>(<span class="st">"./tmp/2020-burn_olam_usa_04.RData"</span>))</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="fu">c</span>(<span class="st">"dir"</span>, <span class="st">"pts.dt"</span>)))</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -339,12 +419,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">=</span> <span class="fu">minValue</span>(s) <span class="sc">==</span> <span class="fu">maxValue</span>(s)</span>
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">which</span>(s)</span>
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>bad <span class="ot">&lt;-</span> N[<span class="fu">sapply</span>(N, <span class="st">`</span><span class="at">!=</span><span class="st">`</span>, <span class="fu">integer</span>(<span class="dv">0</span>))]</span></code></pre></div>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>bad <span class="ot">&lt;-</span> N[<span class="fu">sapply</span>(N, <span class="st">`</span><span class="at">!=</span><span class="st">`</span>, <span class="fu">integer</span>(<span class="dv">0</span>))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>We note that <strong>6 days</strong> on records do not include 24 hourly series.</p>
 <p>Next we obtain long-term weather station records from CIMIS API.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set_key</span>(<span class="st">"27ab5faa-abbb-475e-8af1-f380862bca61"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set_key</span>(<span class="st">"27ab5faa-abbb-475e-8af1-f380862bca61"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>item <span class="ot">&lt;-</span> <span class="st">"hly-air-tmp"</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep all CIMIS stations inside ZOI</span></span>
@@ -447,20 +527,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep stations nearest to OLAM3 site portfolio</span></span>
 <span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>ids <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">168</span>, <span class="dv">206</span>, <span class="dv">145</span>, <span class="dv">188</span>, <span class="dv">148</span>)</span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="fu">fwrite</span>(obs[StationNbr <span class="sc">%in%</span> <span class="fu">as.character</span>(ids)], <span class="fu">here</span>(<span class="st">"./out/CIMIA_OLAM3_2017.csv"</span>))</span></code></pre></div>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="fu">fwrite</span>(obs[StationNbr <span class="sc">%in%</span> <span class="fu">as.character</span>(ids)], <span class="fu">here</span>(<span class="st">"./out/CIMIA_OLAM3_2017.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Prepare DEM over ERA5 extent.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare DEM at ERA5 extent and resolution</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare DEM at ERA5 extent and resolution</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dem1 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon=</span>zoi[<span class="dv">2</span>], <span class="at">lat=</span>zoi[<span class="dv">3</span>])</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dem2 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon=</span>zoi[<span class="dv">1</span>], <span class="at">lat=</span>zoi[<span class="dv">4</span>])</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>dem3 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon=</span>zoi[<span class="dv">2</span>], <span class="at">lat=</span>zoi[<span class="dv">4</span>])</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dem4 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon=</span>zoi[<span class="dv">1</span>], <span class="at">lat=</span>zoi[<span class="dv">3</span>])</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>dem <span class="ot">&lt;-</span> <span class="fu">merge</span>(dem1, dem2, dem3, dem4, <span class="at">ext=</span>zoi)</span></code></pre></div>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>dem <span class="ot">&lt;-</span> <span class="fu">merge</span>(dem1, dem2, dem3, dem4, <span class="at">ext=</span>zoi)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Convert station time-series to <code>zoo</code> wide arrays.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prep station time-series, require ZOO wide format</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prep station time-series, require ZOO wide format</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>obs[, Time <span class="sc">:</span><span class="er">=</span> <span class="fu">paste</span>(<span class="fu">as.character</span>(Date), Hour)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>][, <span class="fu">c</span>(<span class="st">"Date"</span>, <span class="st">"Time"</span>) <span class="sc">:</span><span class="er">=</span> <span class="fu">IDateTime</span>(</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.POSIXlt</span>(Time, <span class="at">format=</span><span class="st">"%Y-%m-%d %H%M"</span>, <span class="at">tz=</span><span class="st">"America/Los_Angeles"</span>))]</span>
@@ -473,14 +553,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>obs.ts <span class="ot">&lt;-</span> <span class="fu">zoo</span>(</span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  obs.ts[, .SD, <span class="at">.SDcols=</span><span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)], </span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">order.by=</span>obs.ts[, <span class="fu">as.POSIXlt</span>(<span class="fu">paste</span>(Date, Time, <span class="at">tz=</span><span class="st">"America/Los_Angeles"</span>))]</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="recalibrate-hourly-temperature-estimates-using-randon-forest" class="level1">
 <h1>Recalibrate Hourly Temperature Estimates using Randon Forest</h1>
 <p>Implement Random Forest merge algorithm.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cut the series at Jan-Apr 2017 (time constraint)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cut the series at Jan-Apr 2017 (time constraint)</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>drange <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"2017-01-01"</span>, <span class="st">"2017-04-30"</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="fu">which</span>(f <span class="sc">%like%</span> drange[<span class="dv">1</span>])</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">which</span>(f <span class="sc">%like%</span> drange[<span class="dv">2</span>])</span>
@@ -538,11 +618,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(rfmep)[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="fu">nlayers</span>(rfmep))]</span>
 <span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "X2017.01.01.01.00.00" "X2017.01.01.02.00.00" "X2017.05.01.00.00.00"</span></span>
 <span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="fu">crs</span>(rfmep)</span></code></pre></div>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="fu">crs</span>(rfmep)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Extract recalibrated time-series across almond production sites.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract recalibrated time-series across production sites</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract recalibrated time-series across production sites</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">removeTmpFiles</span>(<span class="at">h=</span><span class="dv">0</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>dt.imp <span class="ot">&lt;-</span> <span class="fu">extract</span>(rfmep, pts)</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>dt.imp <span class="ot">=</span> <span class="fu">as.data.table</span>(dt.imp, <span class="at">keep.rownames=</span><span class="cn">TRUE</span>)</span>
@@ -585,17 +665,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> dt[<span class="sc">!</span>dt.imp, on<span class="ot">=</span>.(loc_id, date, time)]</span>
 <span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="fu">rbind</span>(dt, dt.imp[, .SD, <span class="at">.SDcols=</span><span class="fu">names</span>(dt)])</span>
 <span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a><span class="fu">setorder</span>(dt, loc_id, date, time)</span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(dt, <span class="fu">here</span>(<span class="st">"./tmp/2020-tmean-hourly_olam_ca_almd_imputed.rds"</span>))</span></code></pre></div>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(dt, <span class="fu">here</span>(<span class="st">"./tmp/2020-tmean-hourly_olam_ca_almd_imputed.rds"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x, i, j, t, tmp, dem1, dem2, dem3, dem4, n, x1, x2, dt, dtc)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="fu">here</span>(<span class="st">"./tmp/2020-burn_olam_usa_06.RData"</span>))</span></code></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x, i, j, t, tmp, dem1, dem2, dem3, dem4, n, x1, x2, dt, dtc)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="fu">here</span>(<span class="st">"./tmp/2020-burn_olam_usa_06.RData"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="explore-results" class="level1 page-columns page-full">
 <h1>Explore Results</h1>
 <p>Validate ZOI, DEM, and ERA5 covariates.</p>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot with package `terra` (instead of deprecated `raster`)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot with package `terra` (instead of deprecated `raster`)</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="fu">here</span>(<span class="st">"./_out/ERA5_2m_temperature_2017.grd"</span>))</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -628,14 +708,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations, <span class="at">add=</span>T, <span class="at">col=</span>pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"red"</span>)][<span class="dv">1</span><span class="sc">+</span>(obs.gis<span class="sc">$</span>IsActive<span class="sc">==</span><span class="st">"True"</span>)], <span class="at">pch=</span><span class="st">"x"</span>)</span>
 <span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottom"</span>, <span class="at">ncol=</span><span class="dv">3</span>, <span class="at">bg=</span>pal[<span class="st">"light"</span>],</span>
 <span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Active station"</span>, <span class="st">"Stale station"</span>, <span class="st">"Production site"</span>),</span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span>pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"red"</span>, <span class="st">"dark"</span>)], <span class="at">pch=</span><span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"x"</span>, <span class="st">"o"</span>))</span></code></pre></div>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span>pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"red"</span>, <span class="st">"dark"</span>)], <span class="at">pch=</span><span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"x"</span>, <span class="st">"o"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid"></a></p>
 </div>
 </div>
 <div class="quarto-layout-row">
@@ -643,20 +723,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-1-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
 <p>CIMIS station observations between Jan-Apr 2017.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>obs[, .(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>obs[, .(</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Obs.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">comma</span>(.N), </span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">NA</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">percent</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(Value))<span class="sc">/</span>.N), </span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Min.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">min</span>(Value, <span class="at">na.rm=</span>T), </span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Max.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">max</span>(Value, <span class="at">na.rm=</span>T),</span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Date Range</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">paste</span>(<span class="fu">range</span>(Date, <span class="at">na.rm=</span>T), <span class="at">collapse=</span><span class="st">" - "</span>)</span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>), keyby<span class="ot">=</span>.(StationNbr)] <span class="sc">%&gt;%</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>()</span></code></pre></div>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
 <script data-pagedtable-source="" type="application/json">
@@ -666,19 +746,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>CIMIS Station Observations, Jan-Apr 2017</p>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(obs.ts[,<span class="dv">1</span>], <span class="at">col=</span><span class="fu">alpha</span>(pal[<span class="dv">1</span>], .<span class="dv">7</span>),</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(obs.ts[,<span class="dv">1</span>], <span class="at">col=</span><span class="fu">alpha</span>(pal[<span class="dv">1</span>], .<span class="dv">7</span>),</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub=</span><span class="fu">paste</span>(<span class="st">"Station"</span>, <span class="fu">names</span>(obs.ts)[<span class="dv">1</span>]), <span class="at">xlab=</span><span class="st">"CIMIS Hourly Temp. °C"</span>, <span class="at">ylab=</span><span class="cn">NA</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(obs.ts[,<span class="dv">20</span>], <span class="at">col=</span><span class="fu">alpha</span>(pal[<span class="dv">1</span>], .<span class="dv">7</span>),</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub=</span><span class="fu">paste</span>(<span class="st">"Station"</span>, <span class="fu">names</span>(obs.ts)[<span class="dv">20</span>]), <span class="at">xlab=</span><span class="st">"CIMIS Hourly Temp. °C"</span>, <span class="at">ylab=</span><span class="cn">NA</span>)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span></code></pre></div>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid"></a></p>
 </div>
 </div>
 <div class="quarto-layout-row">
@@ -686,21 +766,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-3-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">histogram</span>(<span class="sc">~</span>Value<span class="sc">|</span>StationNbr, <span class="at">data=</span>obs, <span class="at">breaks=</span><span class="dv">20</span>,</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">histogram</span>(<span class="sc">~</span>Value<span class="sc">|</span>StationNbr, <span class="at">data=</span>obs, <span class="at">breaks=</span><span class="dv">20</span>,</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">alpha</span>(pal[<span class="dv">1</span>], .<span class="dv">6</span>), <span class="at">border=</span>pal[<span class="st">"light"</span>], <span class="at">layout=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">6</span>),</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">par.settings=</span>my.settings,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Jan-Apr 2017 - CIMIS Hourly Temp. °C across meteo stations"</span>)</span></code></pre></div>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Jan-Apr 2017 - CIMIS Hourly Temp. °C across meteo stations"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid"></a></p>
 </div>
 </div>
 <div class="quarto-layout-row">
@@ -708,7 +788,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-4-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="index_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid"></a></p>
 </div>
 </div>
 <div class="quarto-layout-row">
@@ -716,7 +796,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-4-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="index_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid"></a></p>
 </div>
 </div>
 <div class="quarto-layout-row">
@@ -724,11 +804,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-4-4.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-4-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="index_files/figure-html/unnamed-chunk-4-4.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rfmep, <span class="at">ext=</span>zoi, <span class="at">ylab=</span><span class="fu">names</span>(rfmep)[<span class="dv">1</span>], </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rfmep, <span class="at">ext=</span>zoi, <span class="at">ylab=</span><span class="fu">names</span>(rfmep)[<span class="dv">1</span>], </span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">terrain.colors</span>(<span class="dv">80</span>), <span class="at">breaks=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">11</span>,</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"RF-MEP Temperatures °C"</span>)</span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
@@ -745,14 +825,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations[stations<span class="sc">$</span>StationNbr <span class="sc">%in%</span> <span class="fu">names</span>(obs.ts),], </span>
 <span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch=</span><span class="st">"x"</span>, <span class="at">col=</span>pal[[<span class="st">"dark"</span>]], <span class="at">add=</span>T)</span>
 <span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottom"</span>, <span class="at">ncol=</span><span class="dv">2</span>, <span class="at">bg=</span>pal[<span class="st">"light"</span>],</span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Active station"</span>, <span class="st">"Production site"</span>), <span class="at">pch=</span><span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"o"</span>))</span></code></pre></div>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Active station"</span>, <span class="st">"Production site"</span>), <span class="at">pch=</span><span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"o"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid"></a></p>
 </div>
 </div>
 <div class="quarto-layout-row">
@@ -760,12 +840,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-5-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="index_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
 <p>Hourly time-series from nearest CIMIS ground stations compared to hourly time-series at production sites from ERA5-LAND.</p>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>(Value<span class="sc">~</span><span class="fu">as.numeric</span>(Date)<span class="sc">*</span>Time, <span class="at">data=</span>obs, </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>(Value<span class="sc">~</span><span class="fu">as.numeric</span>(Date)<span class="sc">*</span>Time, <span class="at">data=</span>obs, </span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Date"</span>, <span class="at">ylab=</span><span class="st">"Hour"</span>, <span class="at">sub=</span><span class="st">"Nearest CIMIS Stations - Hourly Temp. °C"</span>,</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="cn">NA</span>, <span class="at">col.regions=</span><span class="fu">terrain.colors</span>(<span class="dv">100</span>, <span class="at">alpha=</span>.<span class="dv">4</span>), <span class="at">drape=</span>T,</span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">at=</span><span class="fu">do.breaks</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">35</span>), <span class="dv">100</span>)</span>
@@ -775,14 +855,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub=</span><span class="st">"Production Sites - Hourly Temp. °C (ERA5-LAND)"</span>,</span>
 <span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="cn">NA</span>, <span class="at">col.regions=</span><span class="fu">terrain.colors</span>(<span class="dv">100</span>, <span class="at">alpha=</span>.<span class="dv">4</span>), <span class="at">drape=</span>T,</span>
 <span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">at=</span><span class="fu">do.breaks</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">30</span>), <span class="dv">100</span>)</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid"></a></p>
 </div>
 </div>
 <div class="quarto-layout-row">
@@ -790,31 +870,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="index_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-6-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="index_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
 <p>Mean recalibration effect across production sites (after RFmerge procedure):</p>
 <div class="cell preview-image">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>((value<span class="sc">-</span>era)<span class="sc">~</span><span class="fu">as.numeric</span>(date)<span class="sc">*</span>time, <span class="at">data=</span>dt.imp, </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>((value<span class="sc">-</span>era)<span class="sc">~</span><span class="fu">as.numeric</span>(date)<span class="sc">*</span>time, <span class="at">data=</span>dt.imp, </span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Date"</span>, <span class="at">ylab=</span><span class="st">"Hour"</span>, <span class="at">zlab=</span><span class="st">"°C"</span>,  </span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub=</span><span class="st">"ERA5-LAND Mean Recalibration Effect</span><span class="sc">\n</span><span class="st">across Production Sites</span><span class="sc">\n</span><span class="st">Hourly Temp. °C"</span>,</span>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="cn">NA</span>, <span class="at">col.regions=</span><span class="fu">terrain.colors</span>(<span class="dv">100</span>, <span class="at">alpha=</span>.<span class="dv">4</span>), <span class="at">drape=</span>T</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img"></p>
+<p><a href="index_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>FDD index across sites between Feb-01 and Mar-31, 2017 (before and after ground calibration):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>dt.imp[date <span class="sc">%between%</span> <span class="fu">c</span>(<span class="st">"2017-02-01"</span>, <span class="st">"2017-03-31"</span>), .(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>dt.imp[date <span class="sc">%between%</span> <span class="fu">c</span>(<span class="st">"2017-02-01"</span>, <span class="st">"2017-03-31"</span>), .(</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">era =</span> <span class="fu">min</span>(era, <span class="at">na.rm=</span>T),</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">era_valid =</span> <span class="fu">min</span>(era_valid, <span class="at">na.rm=</span>T),</span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">min</span>(value, <span class="at">na.rm=</span>T)</span>
@@ -823,7 +903,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">FDD (validate)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">fifelse</span>(era_valid<span class="sc">&lt;</span><span class="dv">0</span>, <span class="fu">pmax</span>(era_valid, <span class="sc">-</span><span class="dv">4</span>, <span class="at">na.rm=</span>T), <span class="dv">0</span>), <span class="at">na.rm=</span>T),</span>
 <span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">FDD (after)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">fifelse</span>(value<span class="sc">&lt;</span><span class="dv">0</span>, <span class="fu">pmax</span>(value, <span class="sc">-</span><span class="dv">4</span>, <span class="at">na.rm=</span>T), <span class="dv">0</span>), <span class="at">na.rm=</span>T)</span>
 <span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>), keyby<span class="ot">=</span>.(loc_id)]<span class="sc">%&gt;%</span></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>()</span></code></pre></div>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
 <script data-pagedtable-source="" type="application/json">
@@ -838,7 +918,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2021,
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2021,
   author = {BACOU, Melanie},
   title = {Rainfall: {Merge} {Ground} and {Satellite} {Observations}
     with {RFMerge}},
@@ -848,7 +928,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2021" class="csl-entry quarto-appendix-citeas" role="listitem">
 BACOU, Melanie. 2021. <span>“Rainfall: Merge Ground and Satellite
-Observations with RFMerge.”</span> January 16, 2021. <a href="https://mbacou.com/posts/2021-01-16-rfmerge/">https://mbacou.com/posts/2021-01-16-rfmerge/</a>.
+Observations with RFMerge.”</span> January 16. <a href="https://mbacou.com/posts/2021-01-16-rfmerge/">https://mbacou.com/posts/2021-01-16-rfmerge/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -859,6 +939,68 @@ Observations with RFMerge.”</span> January 16, 2021. <a href="https://mbacou.c
       icon: icon
     };
     anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/mbacou\.com");
@@ -1118,25 +1260,64 @@ Observations with RFMerge.”</span> January 16, 2021. <a href="https://mbacou.c
           }
         };
       }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
+        const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+        for (let i=0; i<annoteTargets.length; i++) {
+          const annoteTarget = annoteTargets[i];
+          const targetCell = annoteTarget.getAttribute("data-target-cell");
+          const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+          const contentFn = () => {
+            const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            if (content) {
+              const tipContent = content.cloneNode(true);
+              tipContent.classList.add("code-annotation-tip-content");
+              return tipContent.outerHTML;
             }
-          });
+          }
+          const config = {
+            allowHTML: true,
+            content: contentFn,
+            onShow: (instance) => {
+              selectCodeLines(instance.reference);
+              instance.reference.classList.add('code-annotation-active');
+              window.tippy.hideAll();
+            },
+            onHide: (instance) => {
+              unselectCodeLines();
+              instance.reference.classList.remove('code-annotation-active');
+            },
+            maxWidth: 300,
+            delay: [50, 0],
+            duration: [200, 0],
+            offset: [5, 10],
+            arrow: true,
+            appendTo: function(el) {
+              return el.parentElement.parentElement.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'quarto',
+            placement: 'right',
+            popperOptions: {
+              modifiers: [
+              {
+                name: 'flip',
+                options: {
+                  flipVariations: false, // true by default
+                  allowedAutoPlacements: ['right'],
+                  fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                },
+              },
+              {
+                name: 'preventOverflow',
+                options: {
+                  mainAxis: false,
+                  altAxis: false
+                }
+              }
+              ]        
+            }      
+          };
+          window.tippy(annoteTarget, config); 
         }
     const findCites = (el) => {
       const parentEl = el.parentElement;
@@ -1178,42 +1359,69 @@ Observations with RFMerge.”</span> January 16, 2021. <a href="https://mbacou.c
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p><strong>Mel B. Labs</strong> – a personal blog about econometrics and statistics.<br> BACOU, Melanie© 2024 / Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.</p>
-<p><span class="text-muted">All views here are strictly my own and do <u>not</u> reflect that of employers, project partners or clients. Refer to each article for citation, code and data reuse.</span></p>
-</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mbacou/mb-labs/edit/quarto/posts/2021-01-16-rfmerge/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mbacou/mb-labs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
-    <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
-<p>About</p>
-</a>
-  </li>  
-    <li class="nav-item">
-    <a class="nav-link" href="../../license.html">
-<p>License</p>
-</a>
-  </li>  
-    <li class="nav-item">
-    <a class="nav-link" href="https://quarto.org/">
-<p>Quarto<sup>®</sup></p>
-</a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml">
-      <i class="bi bi-rss" role="img">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
-  </div>
-</footer>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mbacou/mb-labs/edit/quarto/posts/2021-01-16-rfmerge/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mbacou/mb-labs/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const t1 = document.getElementById('mb-reuse');
+    const s1 = document.querySelector('[rel="license"]');
+
+    if (t1 && s1) {
+      t1.appendChild(s1);
+    }
+
+    const t2 = document.getElementById('mb-copyright');
+    const s2 = document.querySelector('#quarto-copyright div div').innerHTML;
+
+    if (t2 && s2) {
+      t2.innerHTML = s2;
+    }
+
+    const t3 = document.querySelector('.mb-toc-actions');
+    const s3 = document.querySelectorAll('a.toc-action')
+    const a3 = Array.from(s3).slice(0, 2);
+
+    if (a3) {
+      a3.forEach(el => {
+        t3.appendChild(el);
+      });
+    }
+  });
+</script>
+
+<!-- Quarto TOC Actions -->
+<div class="mb-toc-actions bg-shaded border-grid d-flex justify-content-center gap-3 text-sans text-muted lh-sm py-2">
+</div>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

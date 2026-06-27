@@ -1,84 +1,71 @@
 ---
 title: People, Space, and Statistics
 subtitle: Informed citizens make better policy choices; better policies save [lives]{.mark} and [resources.]{.mark}
-date: last-modified
-date-modified: last-modified
-author:
-  - name: Melanie BACOU
-    email: mel@mbacou.com
-    orcid: 0000-0003-1810-6818
-  - name: Melanie2 BACOU
-    email: mel2@mbacou.com
-    orcid: 0000-0003-1810-6819    
+author: []
+toc-title: ""
+abstract-title: ""
+citation: false
 categories:
   - econ
   - stats
   - dataviz
-abstract: Abstract --  On this blog I write about sustainable agriculture and food security, policies for equitable trade and development, and about the geopolitics of natural resources. You will also find book and article reviews, and the occasional shout-out and opinion pieces.
-description: Description -- On this blog I write about sustainable agriculture and food security, policies for equitable trade and development, and about the geopolitics of natural resources. You will also find book and article reviews, and the occasional shout-out and opinion pieces.
+description: |
+  ![](posts/resume/_fig/profile.jpg){width="9em" .rounded-circle .shadow-md .mt-2}
 
-affiliation: Purdue University
-funding: Purdue University
-thanks: Purdue University
-abstract-title: My Abstract
-appendix-style: plain
-appendix-cite-as: bibtex
+  **ABOUT**<br/>A personal blog and playground for statistical and geospatial analyses using a mix of R, Python, and JavaScript notebooks -- and a home for poorly researched topics.
 
-page-layout: article
-title-block-banner: var(--bs-info-rgb)
-title-block-style: none
-toc: true
-  
 listing:
   - id: lst-posts
     contents: posts
+    template: _ejs/listing-list.ejs.md
     categories: false
     feed: true
     filter-ui: false
     sort-ui: false
     sort: date desc
-    type: default
     max-items: 9
-    image-align: left
-    image-height: 210px
     fields: [title, description, image, date, author, categories, reading-time]
+    template-params:
+      image-placeholder: assets/placeholder.svg
+      image-height: 14rem
     exclude: 
       category: [skip*]
 
   - id: lst-featured
     contents: portfolio
+    template: _ejs/listing-card.ejs.md    
     categories: false
     feed: false
     filter-ui: false
     sort-ui: false
     sort: date desc
-    type: grid
-    grid-columns: 2
     max-items: 2
-    image-height: 180px
-    fields: [title, description, image]
+    template-params:
+      grid-columns: 2
+      image-placeholder: assets/placeholder.svg    
+      image-height: 13rem
+    fields: [title, description, image, keywords]
 ---
 
-::: {.description .mb-md-2 .mr-md-3}
-<!-- ![](posts/resume/_fig/profile.jpg){.img-rounded .d-block .mx-auto .shadow-md .float-md-end .mt-n5 .mb-2 .me-md-n4 .ms-md-3 .rot-n} -->
+::: {.mx-lg-3}
+[Hi, my name is Mel --- ]{.text-serif .text-muted .me-2 style="font-size:1.75em;"} On this blog I write about sustainable agriculture and food security, policies for equitable trade and development, and about the geopolitics of natural resources. You will also find book and article reviews, and the occasional shout-out and opinion pieces.
 
-[Hi, my name is Melanie]{.fs-3} &mdash;
-On this blog I write about sustainable agriculture and food security, policies for equitable trade and development, and about the geopolitics of natural resources. You will also find book and article reviews, and the occasional shout-out and opinion pieces. 
+As a [consultant]{.mark}, [designer]{.mark}, and [instructor]{.mark}, I specialize in helping research teams and businesses effectively harness data, build  models, and communicate insights through engaging visuals
 
-As a [consultant]{.mark .bg-info-subtle}, [designer]{.mark .bg-info-subtle}, and [instructor]{.mark .bg-info-subtle}, I specialize in helping research teams and businesses effectively harness data, build  models, and communicate insights through engaging visuals.
-
-I code mostly in [R]{.bg-info-subtle}, [Python]{.bg-info-subtle}, [JavaScript]{.bg-info-subtle} and [D3.js]{.bg-info-subtle}. Check out my [full bio](./posts/resume/) for contact details.
+I code mostly in [R]{.mark}, [Python]{.mark}, [JavaScript]{.mark} and [D3.js]{.mark}. Check out my full bio for contact details.
 :::
 
-::: {.aside .mt-md-5 .fs-5}
-→  Read more about me  
-→  Schedule a discovery call
+::: {.aside .my-2 .lh-sm .text-serif}
+I am a fan of classic rock from all around the world.
+{{< video https://youtube.com/watch?v=3aIiBG3s4co&list=PLMEI8z_d3EZGRnn8nGh3f6A7zwT4wDmVU&index=4 height='140px' width='100%' >}}
+{{< bi music-note-list class='float-start me-1 mb-3' >}}
+Play to support my favorite artists.
 :::
 
-::: {.aside .bg-shaded .p-2}
-{{< video https://youtube.com/watch?v=gtqj8HuN1hs&list=PLMEI8z_d3EZGRnn8nGh3f6A7zwT4wDmVU height='120px' width='100%' >}} {{< bi music-note-list class='float-start me-2 mb-2' >}} Play to support my favorite artists.
+::: {.ms-md-3 .my-md-2 .d-md-block .d-grid .gap-2}
+<button type="button" class="btn btn-outline-warning btn-light me-md-2" href="about.qmd"><i class="bi bi-arrow-right"></i> Read more about me</button>
+<button type="button" class="btn btn-outline-warning btn-light " href="about.qmd"><i class="bi bi-arrow-right"></i> Schedule a discovery call</button>
 :::
-
 
 ## Featured Projects {.mt-2}
 

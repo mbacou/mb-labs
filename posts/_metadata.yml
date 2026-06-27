@@ -1,26 +1,13 @@
 # options specified here will apply to all posts in this folder
 
-# freeze computational output
-# (see https://quarto.org/docs/projects/code-execution.html#freeze)
-# freeze: true
-
+date-modified: last-modified
 author:
   - name: Melanie BACOU
     email: mel@mbacou.com
     orcid: 0000-0003-1810-6818
 
-date-modified: last-modified
-
-citation: true
-appendix-style: default
-appendix-cite-as: bibtex
-
-format:
-  html:
-    page-layout: article
-    default-image-extension: png
-    execute:
-      echo: true
-      message: false
-      warning: false
-      error: false
+execute:
+  echo: true
+  message: false
+  warning: false
+  error: false
