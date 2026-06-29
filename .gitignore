@@ -1,6 +1,7 @@
 .Rproj.user
 .Rhistory
 .Ruserdata
+global.bib
 *.RData
 *.zip
 _data

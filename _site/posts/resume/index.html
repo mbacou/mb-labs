@@ -38,16 +38,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-746460a2f44fae2b83e2f14b2a1a127a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-bac8fe6acf79b2017e7154f11a73c8a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-a4603f228267c45f3f49e5914c477eca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-bac8fe6acf79b2017e7154f11a73c8a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9161184c1009bd6b6b31ce38d15b85f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/bootstrap-icons-1.13.1/bootstrap-icons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
@@ -97,8 +96,7 @@ ul.task-list li input[type="checkbox"] {
   <!-- Fixed article meta -->
   <div class="mb-meta mt-2 mt-md-4 mb-3">
 
-    <p class="fs-0">Jun 27, 2026 <i class="bi bi-clock ms-1"></i></p>
-
+    
     
   </div>
 
@@ -119,9 +117,10 @@ ul.task-list li input[type="checkbox"] {
   
   <div class="d-none d-lg-block mt-auto">
     <!-- Optional sidebar logo -->
-        <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
+        <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
         <!-- Copyright -->
         <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
+      true
     </div>
       </div>
 
@@ -142,14 +141,14 @@ ul.task-list li input[type="checkbox"] {
 
     <!-- logo -->
       <div class="d-lg-none mb-n1">
-      <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
+      <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
     </div>
     
     <!-- left links -->
     <ul class="navbar-nav d-none d-md-flex flex-row w-100 me-2">
 
           <li class="nav-item flex-fill">
-        <a class="nav-link" href="../../index.html">
+        <a class="nav-link" href="../../blog.html">
           <span class="menu-text">My Blog</span></a>
       </li>
           <li class="nav-item flex-fill">
@@ -170,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="navbar-nav d-flex d-md-none flex-row w-100">
 
           <li class="nav-item flex-fill text-center">
-        <a class="nav-link" href="../../index.html">
+        <a class="nav-link" href="../../blog.html">
           <i class="bi bi-substack"></i></a>
       </li>
           <li class="nav-item flex-fill text-center">
@@ -190,6 +189,10 @@ ul.task-list li input[type="checkbox"] {
     <!-- right tools -->
     <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
 
+          <li class="nav-item">
+        <a class="nav-link px-1" href="index.xml">
+          <i class="bi bi-feed" role="img"></i></a>
+      </li>
           <li class="nav-item">
         <a class="nav-link px-1" href="https://github.com/mbacou/mb-labs">
           <i class="bi bi-github" role="img"></i></a>
@@ -245,16 +248,16 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="mb-title-block" class="bg-light py-2 mb-3">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
-        <li class="nav-item ms-auto">
-      <label class="">Draft
+  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+        <li class="nav-item px-2 secondary ms-auto">
+      <span>Draft
         ☐
-      </label>
+      </span>
     </li>
-    <li class="nav-item">
-      <label class="">Frozen
+    <li class="nav-item px-2 secondary">
+      <span>Frozen
         ☐
-      </label>
+      </span>
     </li>
   </ul>
 
@@ -279,10 +282,11 @@ ul.task-list li input[type="checkbox"] {
 <i class="bi-person-circle " style="" role="img" aria-hidden="true"></i> &nbsp;&nbsp; <a href="https://www.devex.com/people/melanie-bacou-46872">devex.com</a><br>
 <i class="bi-journal-text " style="" role="img" aria-hidden="true"></i> &nbsp;&nbsp; <a href="https://orcid.org/0000-0003-1810-6818">orcid.org</a><br>
 <i class="bi-telegram " style="" role="img" aria-hidden="true"></i> &nbsp;&nbsp; <a href="https://t.me/mbacou">t.me/mbacou</a><br>
+<i class="bi-chat " style="" role="img" aria-hidden="true"></i> &nbsp;&nbsp; <a href="https://us05web.zoom.us/j/6857815367?pwd=eXdteU9QdWhsM1hwTXZGTFdVL0d6dz09">zoom.us/mbacou</a><br>
 </p>
 </div>
 <section id="top-skills" class="level6">
-<h6 class="anchored" data-anchor-id="top-skills">Top Skills</h6>
+<h6 data-anchor-id="top-skills">Top Skills</h6>
 <p>Cost/benefit analysis<br>
 Economic impact evaluation<br>
 Spatial econometrics<br>
@@ -292,19 +296,19 @@ Parametric risk transfer<br>
 R, STATA, QGIS</p>
 </section>
 <section id="languages" class="level6">
-<h6 class="anchored" data-anchor-id="languages">Languages</h6>
+<h6 data-anchor-id="languages">Languages</h6>
 <p>French (native)<br>
 English (bilingual)<br>
 German (limited working)<br>
 Russian (beginner)</p>
 </section>
 <section id="certifications" class="level6">
-<h6 class="anchored" data-anchor-id="certifications">Certifications</h6>
+<h6 data-anchor-id="certifications">Certifications</h6>
 <p><a href="https://learn.sas.com/course/view.php?id=211">SAS® Programming III</a></p>
 <p><a role="button" class="btn btn-success" href="BACOU-Melanie-CV.pdf" target="_blank"><i class="bi bi-file-pdf"></i> Download PDF</a></p>
 </section>
 </div></div><section id="i-bring-in" class="level5">
-<h5 class="anchored" data-anchor-id="i-bring-in">I bring in…</h5>
+<h5 data-anchor-id="i-bring-in">I bring in…</h5>
 <ul>
 <li>Strong quantitative, analytical, and data modeling skills acquired in collaboration with top-rank economic research teams and consulting firms</li>
 <li>Multi-stakeholder (public-private) project management, fundraising, budgeting, forecasting, resource and cost tracking</li>
@@ -313,7 +317,7 @@ Russian (beginner)</p>
 </ul>
 </section>
 <section id="tech-skills" class="level5">
-<h5 class="anchored" data-anchor-id="tech-skills">Tech Skills</h5>
+<h5 data-anchor-id="tech-skills">Tech Skills</h5>
 <p><em>Statistics</em> – R, STATA, SAS, GAMS / LaTeX, Quarto, Typst<br>
 <em>Survey</em> – ODK, CSPro, SurveyCTO, CommCare, Fulcrum, GISCloud<br>
 <em>Data viz</em> – Shiny, Tableau®, Highcharts.js, D3.js, Superset, Grafana<br>
@@ -324,9 +328,9 @@ Russian (beginner)</p>
 <div style="page-break-after: always;"></div>
 </section>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20626920627269656663617365203e7d7d-clients-projects" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20626920627269656663617365203e7d7d-clients-projects"><i class="bi-briefcase " style="" role="img" aria-hidden="true"></i> Clients &amp; Projects</h2>
+<h2 data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20626920627269656663617365203e7d7d-clients-projects"><i class="bi-briefcase " style="" role="img" aria-hidden="true"></i> Clients &amp; Projects</h2>
 <section id="international-water-management-institute-iwmi" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="international-water-management-institute-iwmi">International Water Management Institute (IWMI)</h4>
+<h4 data-anchor-id="international-water-management-institute-iwmi">International Water Management Institute (IWMI)</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/iwmi.jpg" class="mt-2 img-fluid" style="width:6em"></p>
@@ -337,7 +341,7 @@ Aug 2021 – Jan 2022<br>
 <p>Designed <a href="https://mbacou.github.io/WADashboard/">complex ETLs</a> and <a href="http://3.224.92.203:3838/WADashboard">interactive tools</a> to track changes in water budgets and water productivity across multiple river basins. Part of FAO Water Secure Africa initiative (<a href="https://wateraccounting.org/">WASA</a>) to inform equitable and sustainable water use policies.</p>
 </section>
 <section id="worldcover-pbc" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="worldcover-pbc">WorldCover PBC</h4>
+<h4 data-anchor-id="worldcover-pbc">WorldCover PBC</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/wc.jpg" class="mt-2 img-fluid" style="width:5em"></p>
@@ -350,7 +354,7 @@ Aug 2017 – Apr 2021<br>
 <p>WorldCover engineers solutions to better design, target, and deliver affordable (parametric) weather insurance to small-scale farmers (Ghana, Togo, Kenya, Uganda), and to large-scale fruit and nut tree growers, and to protect entire agricultural value chains against climate risks. Led agrometeorological research across 20 value-chains and agroclimatic zones. Rolled out a real-time pricing engine and multiple APIs on AWS cloud. (<a href="http://3.224.92.203:3838/app-pricing/">technical platform</a> sold in April 2021).</p>
 </section>
 <section id="bill-melinda-gates-foundation-bmgf" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="bill-melinda-gates-foundation-bmgf">Bill &amp; Melinda Gates Foundation (BMGF)</h4>
+<h4 data-anchor-id="bill-melinda-gates-foundation-bmgf">Bill &amp; Melinda Gates Foundation (BMGF)</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/bmgf.jpg" class="mt-2 img-fluid" style="width:5em"></p>
@@ -362,7 +366,7 @@ Apr 2017 – Dec 2017<br>
 <p>Business-oriented typologies and characterization of small-holder farming systems in Ghana, Ethiopia, Tanzania, and Nigeria. Under a work assignment with <a href="https://spatialdev.com/">Spatial Development International</a> (now Locana).</p>
 </section>
 <section id="abt-associates-inc." class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="abt-associates-inc.">Abt Associates Inc.</h4>
+<h4 data-anchor-id="abt-associates-inc.">Abt Associates Inc.</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/abt.svg" class="mt-2 img-fluid" style="width:6em"></p>
@@ -373,7 +377,7 @@ Jun 2017 – Jul 2017<br>
 <p>Geospatial analysis to support <a href="https://agresults.org/">USAID AgResults</a> program evaluation in Nigeria, Kenya, and Uganda.</p>
 </section>
 <section id="international-food-policy-research-institute-ifpri" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="international-food-policy-research-institute-ifpri">International Food Policy Research Institute (IFPRI)</h4>
+<h4 data-anchor-id="international-food-policy-research-institute-ifpri">International Food Policy Research Institute (IFPRI)</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/ifpri.jpg" class="mt-2 img-fluid" style="width:5em"></p>
@@ -384,7 +388,7 @@ Sep 2014 – Dec 2016<br>
 <p>Generated subnational socio-economic and biophysical datasets to inform and upscale agricultural research investments in sub-Saharan Africa, track adoption of new agricultural technologies, track CGIAR research investments around the globe, and monitor the impact of policies and investments on small farm-holder livelihoods.</p>
 </section>
 <section id="ifpri-harvestchoice-program" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="ifpri-harvestchoice-program">IFPRI – HarvestChoice Program</h4>
+<h4 data-anchor-id="ifpri-harvestchoice-program">IFPRI – HarvestChoice Program</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/hc.jpg" class="mt-2 img-fluid" style="width:5em"></p>
@@ -395,7 +399,7 @@ May 2010 – Aug 2014<br>
 <p>Research, data and analytics in support of the Global Development Program of the Bill &amp; Melinda Gates Foundation, USAID Feed the Future Africa RISING, the G-8 New Alliance for Food Security and Nutrition, the Alliance for a Green Revolution in Africa (AGRA), and several CGIAR programs focused on agricultural productivity improvement, food security, and poverty reduction in sub-Saharan Africa. In charge of <a href="https://ifpri.org/project/harvestchoice">HarvestChoice</a> data releases.</p>
 </section>
 <section id="ifpri-agrodep-program" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="ifpri-agrodep-program">IFPRI – AGRODEP Program</h4>
+<h4 data-anchor-id="ifpri-agrodep-program">IFPRI – AGRODEP Program</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/agrodep.jpg" class="mt-2 img-fluid" style="width:5em"></p>
@@ -407,7 +411,7 @@ May 2011 – Oct 2011<br>
 <p>The African Growth and Development Policy Modeling Consortium is a program sponsored by USAID / UKAid. Website migration to a Drupal CMS, incl.&nbsp;preparation of design mockups, content migration, and training of <a href="http://www.agrodep.org/">AGRODEP</a> staff. Held a 3-day workshop on household survey data sampling and processing to AGRODEP awardees in Dakar, Senegal.</p>
 </section>
 <section id="gates-foundation" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="gates-foundation">Gates Foundation</h4>
+<h4 data-anchor-id="gates-foundation">Gates Foundation</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/bmgf.jpg" class="mt-2 img-fluid" style="width:5em"></p>
@@ -419,7 +423,7 @@ Nov 2012 – Sep 2014<br>
 <p>Country diagnostics, segmentation of farm households, and data visualization for the Foundation’s Agricultural Development Program. Under a work assignment with <a href="https://spatialdev.com/">Spatial Development International</a> (now part of <a href="https://www.trccompanies.com/services/intelligent-grid-solutions/">TRC Companies, Inc</a>).</p>
 </section>
 <section id="african-development-bank" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="african-development-bank">African Development Bank</h4>
+<h4 data-anchor-id="african-development-bank">African Development Bank</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/afdb.svg" class="mt-2 img-fluid" style="width:9em"></p>
@@ -430,7 +434,7 @@ Oct 2008 – Jan 2009<br>
 <p>Led a 4-month ICT project for the Bank’s Procurement and Fiduciary Services division aimed at a complete upgrade of its internal SAP® modules (procurement workflow and reporting tools) and external Web portal (procurement tools and information for borrowing governments and the business community). Under a work assignment with <a href="https://crownagents.com/">Crown Agents UK</a>.</p>
 </section>
 <section id="development-gateway-foundation" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="development-gateway-foundation">Development Gateway Foundation</h4>
+<h4 data-anchor-id="development-gateway-foundation">Development Gateway Foundation</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/dgf.jpg" class="mt-2 img-fluid" style="width:5em"></p>
@@ -441,7 +445,7 @@ May 2008 – Sep 2008<br>
 <p>Helped conduct a 5-month evaluation of the relevance, effectiveness and impact, sustainability, governance and management structure of DGF (5 international programs and staff of 84). The evaluation was forward-looking and provided substantial strategic recommendations to DGF in the areas of ICT4D and aid effectiveness. Data collection included desk review, on-line surveys, usage analysis from DGF servers, phone and in-person stakeholder interviews with over 45 individuals. Under a work assignment with <a href="http://amexdc.com/">AMEX International</a>.</p>
 </section>
 <section id="abt-associates-inc.-1" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="abt-associates-inc.-1">Abt Associates Inc.</h4>
+<h4 data-anchor-id="abt-associates-inc.-1">Abt Associates Inc.</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/abt.svg" class="mt-2 img-fluid" style="width:6em"></p>
@@ -459,7 +463,7 @@ Oct 2005 – Sep 2007<br>
 </ul>
 </section>
 <section id="center-for-global-trade-analysis-gtap" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="center-for-global-trade-analysis-gtap">Center for Global Trade Analysis (GTAP)</h4>
+<h4 data-anchor-id="center-for-global-trade-analysis-gtap">Center for Global Trade Analysis (GTAP)</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/gtap.png" class="mt-2 img-fluid" style="width:9em"></p>
@@ -476,7 +480,7 @@ Oct 2005 – Sep 2007<br>
 </ul>
 </section>
 <section id="landbouw-economisch-instituut-wageningen-ur-lei" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="landbouw-economisch-instituut-wageningen-ur-lei">Landbouw Economisch Instituut – Wageningen UR (LEI)</h4>
+<h4 data-anchor-id="landbouw-economisch-instituut-wageningen-ur-lei">Landbouw Economisch Instituut – Wageningen UR (LEI)</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/lei.jpg" class="mt-2 img-fluid" style="width:6em"></p>
@@ -490,7 +494,7 @@ Jan 2000 – Aug 2000<br>
 </ul>
 </section>
 <section id="purdue-university-dpt-of-agricultural-economics" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="purdue-university-dpt-of-agricultural-economics">Purdue University – Dpt of Agricultural Economics</h4>
+<h4 data-anchor-id="purdue-university-dpt-of-agricultural-economics">Purdue University – Dpt of Agricultural Economics</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/purdue.jpg" class="mt-2 img-fluid" style="width:5em"></p>
@@ -506,7 +510,7 @@ Sep 1998 – Dec 1999<br>
 </ul>
 </section>
 <section id="société-générale-emerging-europe-asset-management-sgeeam" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="société-générale-emerging-europe-asset-management-sgeeam">Société Générale Emerging Europe Asset Management (SGEEAM)</h4>
+<h4 data-anchor-id="société-générale-emerging-europe-asset-management-sgeeam">Société Générale Emerging Europe Asset Management (SGEEAM)</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/sg.jpg" class="mt-2 img-fluid" style="width:5em"></p>
@@ -521,7 +525,7 @@ Jan 1996 – May 1996<br>
 </ul>
 </section>
 <section id="fimatex-s.a." class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="fimatex-s.a.">FIMATEX S.A.</h4>
+<h4 data-anchor-id="fimatex-s.a.">FIMATEX S.A.</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/fimatex.jpg" class="mt-2 img-fluid" style="width:6em"></p>
@@ -537,7 +541,7 @@ Jul 1995 – Oct 1995<br>
 </ul>
 </section>
 <section id="seat-france-s.a." class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="seat-france-s.a.">SEAT France S.A.</h4>
+<h4 data-anchor-id="seat-france-s.a.">SEAT France S.A.</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/seat.png" class="mt-2 img-fluid" style="width:6em"></p>
@@ -549,9 +553,9 @@ Jan 1995 – Apr 1995<br>
 </section>
 </section>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206269206177617264203e7d7d-education" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206269206177617264203e7d7d-education"><i class="bi-award " style="" role="img" aria-hidden="true"></i> Education</h2>
+<h2 data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206269206177617264203e7d7d-education"><i class="bi-award " style="" role="img" aria-hidden="true"></i> Education</h2>
 <section id="purdue-university" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="purdue-university">Purdue University</h4>
+<h4 data-anchor-id="purdue-university">Purdue University</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/purdue.jpg" class="img-fluid" style="width:5em"></p>
@@ -562,7 +566,7 @@ Jan 1995 – Apr 1995<br>
 Activities: started and taught Purdue’s Argentine tango student organization</p>
 </section>
 <section id="escp-europe-eap" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="escp-europe-eap">ESCP Europe (EAP)</h4>
+<h4 data-anchor-id="escp-europe-eap">ESCP Europe (EAP)</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/escp.jpg" class="img-fluid" style="width:5em"></p>
@@ -577,7 +581,7 @@ Berlin, Germany<br>
 Thesis: <em>Agricultural Derivatives Markets – A Substitute to the Common Agricultural Policy Support Price Mechanisms</em></p>
 </section>
 <section id="lycée-louis-le-grand" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="lycée-louis-le-grand">Lycée Louis-le-Grand</h4>
+<h4 data-anchor-id="lycée-louis-le-grand">Lycée Louis-le-Grand</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/llg.jpg" class="img-fluid" style="width:6em"></p>
@@ -586,7 +590,7 @@ Thesis: <em>Agricultural Derivatives Markets – A Substitute to the Common Agri
 </div></div><p><strong>Classe Prépa HEC</strong> (2-year B.Sc. equivalent) business mathematics and statistics, contemporary history, philosophy.</p>
 </section>
 <section id="herzen-state-university" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="herzen-state-university">Herzen State University</h4>
+<h4 data-anchor-id="herzen-state-university">Herzen State University</h4>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><img src="_fig/herzen.jpg" class="img-fluid" style="width:6em"></p>
@@ -597,7 +601,7 @@ Jun-Sep 2023</p>
 </section>
 </section>
 <section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206269206a6f75726e616c2d74657874203e7d7d-publications" class="level2 mt-md-4 page-columns page-full">
-<h2 class="mt-md-4 anchored" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206269206a6f75726e616c2d74657874203e7d7d-publications"><i class="bi-journal-text " style="" role="img" aria-hidden="true"></i> Publications</h2>
+<h2 class="mt-md-4" data-anchor-id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206269206a6f75726e616c2d74657874203e7d7d-publications"><i class="bi-journal-text " style="" role="img" aria-hidden="true"></i> Publications</h2>
 <p><em>Poverty, Land, and Climate in Africa South of the Sahara: an empirical analysis</em>, International Food Policy Research Institute. Presented at CSAE 2016.</p>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
@@ -637,16 +641,9 @@ Jun-Sep 2023</p>
 <a href="http://www.jstor.org/discover/10.2307/1244637">view</a></p>
 </div></div></section>
 
-<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section></div></main> <!-- /main -->
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

@@ -1,0 +1,6 @@
+[format]
+line-width = 86
+indent-width = 2
+indent-style = "space"
+persistent-line-breaks = true
+skip = ["data.table", "tribble", "fcase"]

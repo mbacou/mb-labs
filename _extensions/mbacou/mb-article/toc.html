@@ -4,7 +4,9 @@
   <!-- Fixed article meta -->
   <div class="mb-meta mt-2 mt-md-4 mb-3">
 
+    $if(date)$
     <p class="fs-0">$date-modified$ <i class="bi bi-clock ms-1"></i></p>
+    $endif$
 
     $if(description)$
     <div class="lh-sm fs-2 text-muted"><em>$description$</em></div>
@@ -37,6 +39,7 @@
     <!-- Copyright -->
     $if(copyright)$
     <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
+      $copyright$
     </div>
     $endif$
   </div>

@@ -2,7 +2,7 @@
 
 date-modified: last-modified
 author:
-  - name: Melanie BACOU
+  - name: BACOU, Melanie
     email: mel@mbacou.com
     orcid: 0000-0003-1810-6818
 
@@ -10,4 +10,4 @@ execute:
   echo: true
   message: false
   warning: false
-  error: false
+  error: true

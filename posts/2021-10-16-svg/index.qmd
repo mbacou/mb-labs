@@ -1,8 +1,10 @@
 ---
-title: "Visualizing Water: Interactive SVG with D3.js (draft)"
-description: |
-  Part 1: add interactivity to IWMI's printable WA+ sheets.
+title: "Visualizing Water: Interactive SVG with D3.js"
 date: 2021-10-01
+description: |
+  Part 1: add interactivity to IWMI's printable WA+ water balance sheets.
+abstract: |
+  An exploration of multiple dynamic visualization schemes for hydrological model simulations. This work is part of IWMI WA Dashboard assignment.
 draft: false
 freeze: true
 image: svg/sheet_1_edited.svg
@@ -10,29 +12,54 @@ bibliography: biblio.bib
 nocite: "@*"
 citation: false
 status: DRAFT, do not cite
+thanks: 2021 Water Accounting (IWMI, FAO)
 categories:
   - imwi
   - hydrology
+  - dataviz
+keywords:
+  - r2d3
+  - ggalluvial
+  - D3.js
 ---
 
-```{r setup}
+::: {.note .text-serif}
+This notebook was first generated in 2021 using R package `r2d3` to pass objects between R and the JavaScript DOM. It was re-rendered using Quarto in 2026. Quarto now natively supports `D3.js` through its integration with **Observable JS** (OJS), which was created by **Mike Bostock**, the original author of D3. OJS allows to seamlessly mix D3 visualizations with reactive data exploration.
+:::
 
-library(here)
+This notebook is to explore multiple visualization schemes for hydrological model simulations. It's broken down into 3 parts:
+
+1. **Interactive SVG** (this page): add user interactivity to existing SVG sheets (or simplified) designs using low-level [D3.js](https://d3js.org/) library
+
+2. [Flow diagrams](../2021-10-12-highcharts/): reshape WA+ model output to create interactive Sankey diagrams with [Highcharts.js](https://highcharts.com/)
+
+3. [Interactive 3D timelapse of river basins](../2021-10-24-3dmap/): create a 3D map of basin landscape with SVG annotation layers (arrows, etc.)
+
+The **D3.js** approach is the more flexible but also the more "tedious" to implement. Other approaches will be developed in separate notebooks.
+
+
+# Data Preparation
+
+To validate the different approaches we use sample output datasets provided by IWMI scientists for Mali (Niger river basin) and Kenya (Mara river basin). All hydrological models are written in Python and version controlled to GitHub (e.g. [Mali notebooks](https://github.com/wateraccounting/WAPORWA)).
+
+
+```{r setup}
 library(rmarkdown)
-library(jsonlite)
 library(ggplot2)
 library(scales)
 library(stringr)
 library(data.table)
-library(r2d3)
-library(crosstalk)
+
+if (interactive()) {
+  setwd("posts/2021-10-16-svg/")
+}
 
 # IMWI color palette
-tmp <- fread(here("data/IWMI.gpl"), skip = 4, header = F)
+tmp <- fread("./data/IWMI.gpl", skip = 4, header = F)
 pal <- grDevices::rgb(tmp[, .(V1, V2, V3)], maxColorValue = 255)
 names(pal) <- tmp[, V4]
 # Save for reuse
-saveRDS(pal, here("data/pal_iwmi.rds"))
+saveRDS(pal, "./data/pal_iwmi.rds")
 
 # Default plot theme
 options(ggplot2.discrete.color = pal)
@@ -58,22 +85,9 @@ theme_mb <- function(
 }
 ```
 
-
-This notebook is to explore multiple visualization schemes for hydrological model simulations. It's broken down into 3 parts:
-
-1. **Interactive SVG** (this page): add user interactivity to existing SVG sheets (or simplified) designs using low-level [D3.js](https://d3js.org/) library
-2. [Flow diagrams](../2021-10-12-highcharts/): reshape WA+ model output to create interactive Sankey diagrams with [Highcharts.js](https://highcharts.com/)
-3. [Interactive 3D timelapse of river basins](../2021-10-24-3dmap/): create a 3D map of basin landscape with SVG annotation layers (arrows, etc.)
-
-The **D3.js** approach is the more flexible but also the more "tedious" to implement. Other approaches will be developed in separate notebooks.
-
-
-# Data Preparation
-
-To validate the different approaches we use sample output datasets provided by IWMI scientists for Mali (Niger river basin) and Kenya (Mara river basin). All hydrological models are written in Python and version controlled to GitHub (e.g. [Mali notebooks](https://github.com/wateraccounting/WAPORWA)).
-
 ```{r}
 #| fig-cap: Kenya - List of output files
+#| column: page-right
 
 data <- list(
   ken = "/run/media/mbacou/Backup MB/WADashboard/ken/hydroloop_results/csv",
@@ -101,6 +115,7 @@ data[iso3 == "ken", .(iso3, file, sheet, year, month)] |>
 
 ```{r}
 #| fig-cap: Mali - List of output files
+#| column: page-right
 
 data[iso3 == "mli", .(iso3, file, sheet, year, month)] |>
   paged_table()
@@ -112,6 +127,7 @@ Let's load a sample model output for Kenya for the year 2017.
 
 ```{r}
 #| fig-cap: sheet1_2017.csv
+#| column: page-right
 
 f <- "sheet1_2017.csv"
 ken <- data[iso3 == "ken" & file == f][1, fread(path)]
@@ -121,6 +137,9 @@ ken |> paged_table()
 This file lists `r nrow(ken)` output variables grouped into `CLASS` and `SUBCLASS`. Units are in **km³/year**. This categorical data can be represented in a Sankey diagram but not very useful as-is (see [next](../2021-10-12-highcharts) section for more work on this).
 
 ```{r}
+#| column: page-right
+#| fig-cap: Sankey diagram of water balances
+
 library(ggalluvial)
 
 ggplot(
@@ -153,6 +172,7 @@ And monthly time-series of **Incremental ET** by land-use classes:
 
 ```{r}
 #| fig-cap: sheet1_basin_etincr_monthly.csv
+#| column: page-right
 
 f <- "sheet1_basin_etincr_monthly.csv"
 ken.ts <- data[iso3 == "ken" & file == f][1, fread(path)]
@@ -162,8 +182,9 @@ ken.ts |> paged_table()
 We'll gather all the **yearly** budgets for now into a long table, and simply visualize the time-series.
 
 ```{r}
-f <- data[sheet == "sheet1" & is.na(month) & !is.na(year)]
+#| column: page-right
 
+f <- data[sheet == "sheet1" & is.na(month) & !is.na(year)]
 data <- lapply(1:nrow(f), function(x) {
   fread(f[x, path])[, `:=`(
     iso3 = f[x, iso3],
@@ -189,21 +210,10 @@ ggplot(
 
 We pass this yearly dataset to the client (web browser) as a JSON array named `data`. We also pass a default color palette `pal` (declared above) for convenience.
 
-
 ```{r}
-#| output: asis
-
-cat(
-  sprintf(
-    "
-  <script> 
-  var data = %s;
-  var pal = %s;
-  </script>",
-    toJSON(data[iso3 == "ken" & year == 2017]),
-    toJSON(pal)
-  )
-)
+# Send to OJS runtime
+ojs_define(data = data[iso3 == "ken" & year == 2017])
+ojs_define(pal = pal)
 ```
 
 
@@ -215,8 +225,9 @@ There are multiple SVG templates provided in the Kenya code repository (under `.
 
 ```{r}
 #| layout-ncol: 3
+#| column: page-right
 
-list.files(here("./svg"), pattern = "*.svg", full.names = TRUE)[
+list.files("./svg", pattern = "*.svg", full.names = TRUE)[
   -c(1:3, 7, 9)
 ] |>
   knitr::include_graphics()
@@ -226,44 +237,48 @@ These sheets incorporate a quantity of domain-specific knowledge, they are used 
 
 Note that the original templates were created in Inkscape with **SVG 1.1** specifications. They are professional printable designs and not optimized for rendering in a browser, so we start by testing whether we can interact and modify these designs using D3. We focus on the **Resource Base** sheet first. 
 
-> <u>Note</u>: Inkscape provides multiple templating utilities to "merge" SVG files (with template fields declared in the form `%VAR_name%` with CSV data in order to batch generate PNG or PDF documents. That system is not limited to merging text labels, colors and sizes can also be read in from an external CSV source[^ink].
+::: {.note .aside}
+Inkscape provides multiple templating utilities to "merge" SVG files (with template fields declared in the form `%VAR_name%` with CSV data in order to batch generate PNG or PDF documents. That system is not limited to merging text labels, colors and sizes can also be read in from an external CSV source[^ink].
+:::
 
 [^ink]: For example [inkscape_merge](https://github.com/borgand/inkscape_merge) tool.
 
 Below we load the sheet and proceed to map each box height/width and label to an output variable. We also create a dummy SVG barchart widget to make sure that data is read in and rendered in the browser as we expect.
 
-And we need to import `D3.js` as an external dependency in this notebook:
-
-```{r}
-# Import D3.js lib
-htmltools::tags$script(src = "https://cdn.jsdelivr.net/npm/d3@6")
-```
+And we need to import `D3.js` as an external dependency in this notebook.
 
 Click to render a dummy SVG widget using the sample Kenya data for 2017 (to make sure libraries are loaded).
 
 ::: {#d3ex1}
 :::
 
-::: {.aside}
-<button onclick="fun_barchart();">Dummy Widget</button>
-:::
+```{ojs}
+//| column: margin
 
-```{js}
+viewof btn1 = d3.select("#d3ex1")
+  .append("button")
+  .html("Load Dummy Widget")
+  .attr("class", "btn btn-outline-primary")
+  .on("click",  () => fun_barchart());
+```
 
+```{ojs}
 // Keep only non-null variables
-var dd = data.filter((d) => (d.VALUE !== 0));
+dd = transpose(data).filter(d => d.VALUE !== 0);
 
-function fun_barchart(data=dd, el="#d3ex1") {
-
+async function fun_barchart(data=dd, el="#d3ex1") {
+  
   d3.select(el).selectAll("svg").remove();
 
-  var width = $(el).width() - 10;
+  var width = 740;
   var box = 0.6 * width/18;
   var height = box * 21;
   
-  var svg = d3.select(el)
+  const svg = d3.select(el)
     .append("svg")
     .attr("viewBox", [0, 0, width, height])
+    .style("width", "100%") 
+    .style("height", "auto")
     .append("g")
       .attr("transform", "translate(10, 10)");  
     
@@ -285,15 +300,15 @@ function fun_barchart(data=dd, el="#d3ex1") {
     .on("mouseover", handleMouseOver)
     .on("mouseout", handleMouseOut);
     
-svg.selectAll("mybar")
-    .data(data)
-    .enter()
-    .append("text")
-    .attr("x", d => x(0)+10)
-    .attr("y", (_, i) => (i * (box+5) + box)  )
-    .style("font-size", box*0.6 + "px")
-    .attr("text-anchor", "start")
-    .text(d => (d.VALUE.toFixed(2) + " km³/year"));
+  svg.selectAll("mybar")
+      .data(data)
+      .enter()
+      .append("text")
+      .attr("x", d => x(0)+10)
+      .attr("y", (_, i) => (i * (box+5) + box)  )
+      .style("font-size", box*0.6 + "px")
+      .attr("text-anchor", "start")
+      .text(d => (d.VALUE.toFixed(2) + " km³/year"));
     
   svg
     .append("g")
@@ -329,27 +344,16 @@ function handleMouseOut(d, i) {
 
 D3 is incredibly wordy, but then again it's flexible! Then we load the original SVG design and progressively add visual effects and data bindings.
 
-::: {#d3ex2}
-:::
+```{ojs}
+async function fun_reset(src="./svg/sheet_1.svg", el="d3ex2", hw=740) {
+  var div = d3.select("#" + el);
 
-:::{.aside}
-<button onclick="fun_color();">Change Text Color</button>
-<button onclick="fun_fill();">Change Fill Color</button>
-<button onclick="fun_group();">Show Groups</button>
-<button onclick="fun_reset();">Reset Widget</button>
-:::
+  var svg = div
+    .append("svg")
+    .attr("viewBox", [0, 0, hw, hw*0.8])
+    .insert("svg:g")
+    .attr("class", el); 
 
-```{js}
-
-var hw = $("#d3ex2").width();
-var div = d3.select("#d3ex2");
-var svg = div
-  .append("svg")
-  .attr("viewBox", [0, 0, hw, hw*0.8])
-  .insert("svg:g")
-  .attr("class", "d3ex2");  
-
-function fun_reset(src="./svg/sheet_1.svg", el="d3ex2") {
   var s = d3.select("." + el);
   s.selectAll("svg").remove();
 
@@ -363,22 +367,11 @@ function fun_reset(src="./svg/sheet_1.svg", el="d3ex2") {
         .on("mouseout", handleMouseOut); 
     });
 };
-
-fun_reset();
 ```
 
-Now that we have the SVG DOM loaded, we can do silly things, like change the text color or highlight some elements. We can also list and return object attributes, which we'll use later to bind visual elements to the underlying data.
+Now that we have the SVG DOM loaded, we can do silly things, like change the text color or highlight some elements. We can also list and return object attributes, which we'll use later to bind visual elements to their underlying data.
 
-```{js}
-
-d3.selection.prototype.move = function(x, y) {
-  this
-    .transition()
-    .duration(800)
-    .attr("transform", "translate(" + x + "," + y + ")");
-  return this;
-};
-
+```{ojs}
 function fun_color(el="d3ex2") {
   d3.select("." + el)
   .select("svg")
@@ -420,30 +413,74 @@ function fun_group(el="d3ex2", group="") {
 };
 ```
 
+::: {#d3ex2}
+:::
+
+```{ojs}
+//| column: margin
+
+viewof btn5 = d3.select("#d3ex2")
+  .append("button")
+  .html("Reset Widget")
+  .attr("class", "btn btn-outline-secondary me-1")
+  .on("click", () => fun_reset());
+
+viewof btn2 = d3.select("#d3ex2")
+  .append("button")
+  .html("Change Text Color")
+  .attr("class", "btn btn-outline-primary me-1")
+  .on("click", () => fun_color());
+
+viewof btn3 = d3.select("#d3ex2")
+  .append("button")
+  .html("Change Fill Color")
+  .attr("class", "btn btn-outline-primary me-1")
+  .on("click", () => fun_fill());
+
+viewof btn4 = d3.select("#d3ex2")
+  .append("button")
+  .html("Show Groups")
+  .attr("class", "btn btn-outline-primary me-1")
+  .on("click", () => fun_group());
+```
+
 ## Optimized SVG
 
 At this point, we need to manually modify (simplify) the original SVG design to clean up paths and to make it easier to select and manipulate (drill through) logical layers and groups of elements. We can create a useful hierarchy in Inkscape and then re-import the modified design here.
 
-> Note: make sure to remove attributes `<svg width="" height="">` from the SVG file produced by Inkscape for the design to size properly in its DOM container.
+::: {.aside .note}
+Make sure to remove attributes `<svg width="" height="">` from the SVG file produced by Inkscape for the design to size properly in its DOM container.
+:::
 
 ::: {#d3ex3}
 :::
 
-:::{.aside}
-<button onclick="fun_color('d3ex3');">Highlight Data</button>
-<button onclick="fun_group('d3ex3', 'ginflow');">Show Inflows</button>
-<button onclick="fun_group('d3ex3', 'goutflow');">Show Outflows</button>
-<button onclick="fun_reset('./svg/sheet_1_edited.svg', 'd3ex3');">Reset Design</button>
-:::
+```{ojs}
+//| column: margin
 
-```{js}
-d3.select("#d3ex3")
-  .append("svg")
-  .attr("viewBox", [0, 0, hw, hw*0.8])
-  .insert("svg:g")
-  .attr("class", "d3ex3");
+viewof btn9 = d3.select("#d3ex3")
+  .append("button")
+  .html("Reset Widget")
+  .attr("class", "btn btn-outline-secondary me-1")
+  .on("click", () => fun_reset('./svg/sheet_1_edited.svg', 'd3ex3'));
 
-fun_reset("./svg/sheet_1_edited.svg", "d3ex3");
+viewof btn6 = d3.select("#d3ex3")
+  .append("button")
+  .html("Highlight Data")
+  .attr("class", "btn btn-outline-primary me-1")
+  .on("click", () => fun_color('d3ex3'));
+
+viewof btn7 = d3.select("#d3ex3")
+  .append("button")
+  .html("Show Inflows")
+  .attr("class", "btn btn-outline-primary me-1")
+  .on("click", () => fun_group('d3ex3', 'ginflow'));
+
+viewof btn8 = d3.select("#d3ex3")
+  .append("button")
+  .html("Show Outflows")
+  .attr("class", "btn btn-outline-primary me-1")
+  .on("click", () => fun_group('d3ex3', 'goutflow'));
 ```
 
 Next step is to map text labels and possible cell height to data variables.
@@ -452,21 +489,17 @@ Next step is to map text labels and possible cell height to data variables.
 
 When bound with the yearly model simulation dataset assembled above, the HTML widget now behaves as follows (src: [shinyapps.io](https://mbacou.shinyapps.io/iwmi_app/)).
 
-::: {.page-right}
+::: {.column-page-right}
 <iframe src="https://mbacou.shinyapps.io/iwmi_app/" height="660" width="100%" style="border:none;">
 <p>Your browser does not support iframes</p>
 </iframe>
 :::
 
-```{js}
-//| eval: false
-//| code: xfun::read_utf8("./js/sheet_1.js")
-
-```
-
 Object model for **Sheet #1** is shown in the table below. 
 
 ```{r}
+#| column: page-right
+
 model <- fread("./data/sheet_1_schema.csv")
 model[, .(id, class, subclass, variable)] |> paged_table()
 ```

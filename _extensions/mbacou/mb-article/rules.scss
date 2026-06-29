@@ -39,6 +39,41 @@ nav .nav-item .bi {
   background-color: $shaded;
 }
 
+// notes
+.note {
+  color: $secondary;
+  font-size: calc($font-size-base - 2px);
+  background-color: tint-color($secondary, 85%);
+  padding: 1rem 1rem 0;
+  margin-bottom: 2rem;
+  border-radius: $border-radius;
+  line-height: $line-height-lg;
+}
+.primary {
+  color: $primary;
+  background-color: tint-color($primary, 85%);  
+}
+.secondary {
+  color: $secondary;
+  background-color: tint-color($secondary, 85%);  
+}
+.info {
+  color: $info;
+  background-color: tint-color($info, 85%);  
+}
+.success {
+  color: $success;
+  background-color: tint-color($success, 85%);  
+}
+.warning {
+  color: $warning;
+  background-color: tint-color($warning, 85%);  
+}
+.danger {
+  color: $danger;
+  background-color: tint-color($danger, 85%);  
+}
+
 /* Helper classes */
 .bg-shaded {
   background-color: $shaded;
@@ -57,30 +92,4 @@ nav .nav-item .bi {
 .text-serif {
   font-family: $font-family-serif;
   font-size: calc($font-size-base + 2px);
-}
-
-// notes
-.note {
-  color: $secondary;
-  background-color: tint-color($secondary, 85%);
-  padding: 1rem 1rem 0;
-  margin-bottom: 1rem;
-  border-radius: $border-radius;
-  line-height: $line-height-lg;
-}
-.info {
-  color: $info;
-  background-color: tint-color($info, 85%);  
-}
-.success {
-  color: $success;
-  background-color: tint-color($success, 85%);  
-}
-.warning {
-  color: $warning;
-  background-color: tint-color($warning, 85%);  
-}
-.danger {
-  color: $danger;
-  background-color: tint-color($danger, 85%);  
 }

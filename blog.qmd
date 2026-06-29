@@ -1,0 +1,45 @@
+---
+title: People, Space, and Statistics
+subtitle: Blog Articles & Notebooks
+author: []
+date: ""
+toc-title: ""
+abstract-title: ""
+citation: false
+categories:
+  - econ
+  - stats
+  - dataviz
+description: |
+  ![](posts/resume/_fig/profile.jpg){width="9em" .rounded-circle .shadow-md .mt-2}
+
+  **ABOUT**<br/>A personal blog and playground for statistical and geospatial analyses -- and a home for other random explorations and poorly researched topics.  
+
+listing:
+  - id: lst-posts
+    contents: posts
+    template: _ejs/listing-list.ejs.md
+    max-description-length: 200
+    categories: false
+    feed: true
+    filter-ui: false
+    sort-ui: false
+    sort: date desc
+    template-params: 
+      image-height: 9rem
+      image-placeholder: assets/placeholder.svg
+    fields: [title, description, image, date, author, categories, reading-time]
+    exclude: 
+      category: [skip*]
+---
+
+::: {.mx-lg-3 .mb-2}
+[Hi, my name is Mel --- ]{.text-serif .text-muted .me-2 style="font-size:1.75em;"} On this blog I write about sustainable agriculture and food security, policies for equitable trade and development, and about the geopolitics of natural resources. You will also find book and article reviews, and the occasional shout-out and opinion pieces. Check out my [full bio](./posts/resume/) for contact details.
+:::
+
+All blog entries are listed below.
+
+::: {#lst-posts .column-page-right}
+:::
+
+# 

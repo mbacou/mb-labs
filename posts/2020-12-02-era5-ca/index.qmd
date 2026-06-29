@@ -1,14 +1,21 @@
 ---
 title: ERA5-LAND Temperature Validation (California)
 subtitle: Can we justify winter Y2017 corrections to ERA5-LAND temperature grids over central California?
-description : ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations.
-date: 2020-12-02
+description: |
+  ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations.
+abstract: |
+  This notebook is a sample model bias correction for WorldCover PBC.
+date: 2020-12-03
+image: preview-image.png
 draft: false
 freeze: true
 fig-format: png
 categories:
   - meteo
   - risk modeling
+keywords:
+  - random forest
+  - ERA5
 ---
 
 While estimating winter season frost risk for almond orchards over Central California, project partners reported significant discrepancies between modeled-based temperature estimates provided by **ERA5-LAND Reanalysis** dataset and ground observations from meteo stations. These biases impact the calculation of daily **Frost-Degree-Day** index (FDD) used to price insurance coverage.
@@ -22,28 +29,30 @@ This work was initially produced for **WorldCover PBC** and **OLAM US** in early
 
 
 ```{r load}
-
-library(here)
-library(mblabs)
+library(mbutils)
 library(lubridate)
 library(ggplot2)
 library(raster)
 library(scales)
 library(data.table)
 library(zoo)
-library(rnoaa)
+#library(rnoaa)
 
-theme_labs_on()
+if (interactive()) {
+  setwd("./posts/2020-12-02-era5-ca/")
+}
+
+brand_on("../../_brand.yml")
+pal <- pal()
 pal2 <- alpha(unname(pal[c("blue", "purple")]), .8)
-
-load(here("./_data/2020-burn_olam_usa_07.RData"))
+load("./_data/2020-burn_olam_usa_07.RData")
 ```
 
 ```{r zoi}
 #| eval: false
 
 # Clear workspace, keep only portfolio details
-load(here("./_data/2020-burn_olam_usa_06.RData"))
+load("./_data/2020-burn_olam_usa_06.RData")
 rm(list = setdiff(ls(), c("dir", "pts.dt", "dt.era", "dt.imp")))
 
 pts <- SpatialPointsDataFrame(
@@ -182,7 +191,7 @@ dt[
 #| eval: false
 
 rm(x, i, j, t, tmp)
-save.image(here("./_data/2020-burn_olam_usa_07.RData"))
+save.image("./_data/2020-burn_olam_usa_07.RData")
 ```
 
 
@@ -195,12 +204,10 @@ save.image(here("./_data/2020-burn_olam_usa_07.RData"))
 #| fig-height: 7
 
 library(terra)
-r <- rast(here("_data/daily_2020-02-01.nc"))
-
+r <- rast("_data/daily_2020-02-01.nc")
+e <- ext(stations.sp[stations.sp$id %in% ids, ]) + c(1, 1, 0, 0)
 plot(
-  r[[1]],
-  ext = ext(stations.sp[stations.sp$id %in% ids, ]) + c(1, 1, 0, 0),
-  col = terrain.colors(20),
+  crop(r[[1]], e),
   ylab = names(r)[1],
   main = "Hourly Tmean (°C) - ERA5 2020-02-01 00:00"
 )
@@ -215,6 +222,8 @@ plot(pts, col = pal["blue"], pch = "*", add = T)
 plot(pts[pts$loc_id == 25, ], col = pal["blue"], pch = 1, cex = 2, add = T)
 legend(
   "bottom",
+  horiz = T,
+  xpd = T,
   bg = pal["light"],
   cex = .8,
   legend = c(
@@ -231,6 +240,7 @@ legend(
 List of GHCN stations retained in the analysis.
 
 ```{r}
+#| column: page-right
 
 stations[
   id %in% ids & element %in% c("TMIN", "TAVG"),
@@ -246,7 +256,7 @@ stations[
 10-year summary.
 
 ```{r}
-#| column: screen
+#| column: page-right
 #| layout-ncol: 2
 #| fig-height: 3
 
@@ -263,7 +273,7 @@ for (i in stations.dt[, unique(var)]) {
 2010-2014 and 2015-2020.
 
 ```{r}
-#| column: screen
+#| column: page-right
 #| layout-ncol: 2 
 #| fig-height: 8
 
@@ -282,7 +292,7 @@ tmp <- dt[
   by = .(year, date, sdate)
 ][, sign := diff_Tmin > 0]
 
-gglabs(tmp[year(date) %between% c(2010, 2014)], aes(x = sdate)) +
+ggbrand(tmp[year(date) %between% c(2010, 2014)], aes(x = sdate)) +
   geom_line(aes(y = Tmin, color = "ERA5 Tmin")) +
   geom_point(aes(y = Tmin, color = "ERA5 Tmin"), size = .5) +
   geom_line(aes(y = GHCN_Tmin, color = "GHCN Tmin")) +
@@ -294,7 +304,7 @@ gglabs(tmp[year(date) %between% c(2010, 2014)], aes(x = sdate)) +
   ggtitle("Temperature Mean of Min (°C) -- ERA5 vs. GHCN (19 WS)") +
   theme(axis.text.x = element_text(angle = -90))
 
-gglabs(tmp[year(date) > 2014], aes(x = sdate)) +
+ggbrand(tmp[year(date) > 2014], aes(x = sdate)) +
   geom_line(aes(y = Tmin, color = "ERA5 Tmin")) +
   geom_point(aes(y = Tmin, color = "ERA5 Tmin"), size = .5) +
   geom_line(aes(y = GHCN_Tmin, color = "GHCN Tmin")) +
@@ -310,11 +320,11 @@ gglabs(tmp[year(date) > 2014], aes(x = sdate)) +
 2010-2014 and 2015-2020.
 
 ```{r}
-#| column: screen
+#| column: page-right
 #| fig-height: 8
 #| layout-ncol: 2
 
-gglabs(tmp[year(date) %between% c(2010, 2014)], aes(sdate, color = sign)) +
+ggbrand(tmp[year(date) %between% c(2010, 2014)], aes(sdate, color = sign)) +
   geom_segment(
     aes(xend = sdate, y = Tmin, yend = GHCN_Tmin),
     size = .8,
@@ -332,7 +342,7 @@ gglabs(tmp[year(date) %between% c(2010, 2014)], aes(sdate, color = sign)) +
   ggtitle("Temperature Mean of Min (°C) -- ERA5 vs. GHCN WS") +
   theme(axis.text.x = element_text(angle = -90))
 
-gglabs(tmp[year(date) > 2014], aes(sdate, color = sign)) +
+ggbrand(tmp[year(date) > 2014], aes(sdate, color = sign)) +
   geom_segment(
     aes(xend = sdate, y = Tmin, yend = GHCN_Tmin),
     size = .8,
@@ -395,6 +405,7 @@ summary(tmp$cor)
 ERA5 bias along GHCN ground temperatures:
 
 ```{r}
+#| column: page-inset-right
 
 tmp <- dt[
   !is.na(GHCN_Tmin),
@@ -406,7 +417,7 @@ tmp <- dt[
   )
 ]
 
-gglabs(tmp) +
+ggbrand(tmp) +
   geom_smooth(aes(x = GHCN_Tmean, y = Tmean_bias, color = "Bias (Tmean)")) +
   geom_smooth(aes(x = GHCN_Tmin, y = Tmin_bias, color = "Bias (Tmin)")) +
   geom_hline(aes(yintercept = 0), color = pal["dark"], linetype = 1) +
@@ -453,11 +464,12 @@ idx <- dt[
 ```
 
 ```{r}
+#| column: page-inset-right
 
 tmp <- melt(idx, id.vars = c("loc_id", "year"))
 tmp <- tmp[, .(value = mean(value, na.rm = T)), by = .(year, variable)]
 
-gglabs(
+ggbrand(
   tmp[variable %in% c("idx", "idx_ghcn")],
   aes(year, value, fill = variable)
 ) +
@@ -475,11 +487,12 @@ gglabs(
 ```
 
 ```{r}
+#| column: page-inset-right
 
-gglabs(idx[idx_ghcn > 0], aes(idx_ghcn, idx)) +
-  geom_abline(linetype = 3) +
+ggbrand(idx[idx_ghcn > 0], aes(idx_ghcn, idx)) +
+  geom_abline(color = pal["red"]) +
   geom_smooth(aes(color = "ERA5 non-adjusted")) +
-  geom_point(shape = "+", color = pal["dark"], size = 4) +
+  geom_point(shape = "+", color = pal["red"], size = 4) +
   scale_color_discrete(NULL, type = pal2[1]) +
   xlab("GHCN FDD") +
   ylab("ERA5 FDD") +

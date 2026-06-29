@@ -37,7 +37,7 @@ $link-hover-color: $gray;
 $text-muted: rgba($body-color, .80);
 $code-color: inherit;
 $shaded: rgba(tint-color($body-bg, 85%), .85);  // also $input-bg
-$min-contrast-ratio: 4;
+//$min-contrast-ratio: 4;
 
 $headings-font-color: $gray-700;  // lighter than body text
 $headings-font-weight: 400;
@@ -335,7 +335,7 @@ td code:not(.sourceCode) {
   line-height: calc(2rem - 2px);
 }
 div.sourceCode, details, .cell {
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
 }
 div.sourceCode {
   background-color: $shaded !important;
@@ -493,10 +493,13 @@ main {
   margin-top: 1rem;
 }
 
+#mb-header {
+  z-index: 1500;
+  background: none;
+  backdrop-filter: blur(4px);
+}
 #mb-header nav {
-  z-index: 1300;
-  background-color: rgba($body-bg, .65);  
-  backdrop-filter: blur(4px);  
+  background-color: rgba($body-bg, .75);
 }
 .mb-header-logo {
   height: 3rem;
@@ -504,6 +507,9 @@ main {
 }
 .mb-logo {
   max-height: 11vh;
+}
+.mb-toc-actions a {
+  color: $text-muted;
 }
 
 

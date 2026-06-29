@@ -3,11 +3,12 @@ title: "Visualizing Water: Sankey Diagrams (draft)"
 description: |
   Part 2: custom data-driven flow charts using Highcharts.js and networkD3 (IWMI).
 date: 2021-10-01
+image: _fig/sankey_truthstudio_2.gif
 status: DRAFT (do not cite)
 citation: false
 funding: IWMI
-draft: true
-freeze: true
+draft: false
+freeze: false
 categories:
   - imwi
   - hydrology
@@ -15,7 +16,6 @@ categories:
 
 ```{r setup, include=FALSE}
 
-library(here)
 library(knitr)
 library(jsonlite)
 library(scales)
@@ -23,10 +23,12 @@ library(stringr)
 library(data.table)
 library(highcharter)
 
-opts_chunk$set(res = 220, pointsize = 8)
+if (interactive()) {
+  setwd("./posts/2021-10-12-highcharts/")
+}
 
 # Default color palette
-pal <- readRDS(here("pal_iwmi.rds"))
+pal <- readRDS("pal_iwmi.rds")
 ```
 
 

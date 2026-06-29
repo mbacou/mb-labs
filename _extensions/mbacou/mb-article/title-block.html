@@ -25,19 +25,21 @@
 
 <header id="mb-title-block" class="bg-light py-2 mb-3">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
+  <ul
+    class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
     $for(categories)$
-    <li class="nav-item fs-3 text-primary fw-bold pt-2">$it$</li>
+    <li class="nav-item pt-2 fs-3 text-primary fw-bold">$it$</li>
     $endfor$
-    <li class="nav-item ms-auto">
-      <label class="$if(draft)$text-warning$endif$">Draft
+    <li
+      class="nav-item px-2 $if(draft)$text-bg-secondary$else$secondary$endif$ ms-auto">
+      <span>Draft
         $if(draft)$&#9745;$else$&#9744;$endif$
-      </label>
+      </span>
     </li>
-    <li class="nav-item">
-      <label class="$if(freeze)$text-warning$endif$">Frozen
+    <li class="nav-item px-2 $if(freeze)$text-bg-secondary$else$secondary$endif$">
+      <span>Frozen
         $if(freeze)$&#9745;$else$&#9744;$endif$
-      </label>
+      </span>
     </li>
   </ul>
 
@@ -60,9 +62,9 @@
     </p>
     $endfor$
 
-    $if(date)$
-    <label>First published</label>
-    <p class="lh-lg text-body">$date$</p>
+    $if(thanks)$
+    <label>Project</label>
+    <p class="lh-lg text-secondary fw-bold">$thanks$</p>
     $endif$
 
     $if(status)$
@@ -70,9 +72,9 @@
     <p class="lh-lg text-body">$status$</p>
     $endif$
 
-    $if(thanks)$
-    <label>Credits</label>
-    <p class="lh-lg text-body">$thanks$</p>
+    $if(date)$
+    <label>First published</label>
+    <p class="lh-lg text-body">$date$</p>
     $endif$
 
     $if(license)$

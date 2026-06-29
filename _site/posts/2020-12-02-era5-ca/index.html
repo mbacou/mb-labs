@@ -6,7 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Melanie BACOU">
+<meta name="author" content="BACOU, Melanie">
+<meta name="keywords" content="random forest, ERA5">
 <meta name="description" content="ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations.">
 
 <title>ERA5-LAND Temperature Validation (California) – Mel B. mb-labs</title>
@@ -74,16 +75,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-746460a2f44fae2b83e2f14b2a1a127a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0dfeddb783db43e03baada5433767f10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-65ad67f7a8ec059766e3bcd39f5568ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-0dfeddb783db43e03baada5433767f10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9161184c1009bd6b6b31ce38d15b85f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -119,10 +119,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="ERA5-LAND Temperature Validation (California) – Mel B. mb-labs">
 <meta property="og:description" content="ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations.">
-<meta property="og:image" content="https://mbacou.com/posts/2020-12-02-era5-ca/index_files/figure-html/unnamed-chunk-1-1.png">
+<meta property="og:image" content="https://mbacou.com/posts/2020-12-02-era5-ca/preview-image.png">
 <meta property="og:site_name" content="Mel B. mb-labs">
-<meta property="og:image:height" content="1540">
-<meta property="og:image:width" content="1540">
+<meta property="og:image:height" content="840">
+<meta property="og:image:width" content="840">
 </head>
 
 <body class="floating slimcontent quarto-light">
@@ -137,9 +137,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <!-- Fixed article meta -->
   <div class="mb-meta mt-2 mt-md-4 mb-3">
 
-    <p class="fs-0">Jun 27, 2026 <i class="bi bi-clock ms-1"></i></p>
-
-        <div class="lh-sm fs-2 text-muted"><em>ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations.</em></div>
+        <p class="fs-0">Jun 29, 2026 <i class="bi bi-clock ms-1"></i></p>
+    
+        <div class="lh-sm fs-2 text-muted"><em><p>ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations.</p></em></div>
     
   </div>
 
@@ -161,9 +161,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   <div class="d-none d-lg-block mt-auto">
     <!-- Optional sidebar logo -->
-        <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
+        <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
         <!-- Copyright -->
         <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
+      true
     </div>
       </div>
 
@@ -184,14 +185,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     <!-- logo -->
       <div class="d-lg-none mb-n1">
-      <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
+      <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
     </div>
     
     <!-- left links -->
     <ul class="navbar-nav d-none d-md-flex flex-row w-100 me-2">
 
           <li class="nav-item flex-fill">
-        <a class="nav-link" href="../../index.html">
+        <a class="nav-link" href="../../blog.html">
           <span class="menu-text">My Blog</span></a>
       </li>
           <li class="nav-item flex-fill">
@@ -212,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="navbar-nav d-flex d-md-none flex-row w-100">
 
           <li class="nav-item flex-fill text-center">
-        <a class="nav-link" href="../../index.html">
+        <a class="nav-link" href="../../blog.html">
           <i class="bi bi-substack"></i></a>
       </li>
           <li class="nav-item flex-fill text-center">
@@ -232,6 +233,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <!-- right tools -->
     <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
 
+          <li class="nav-item">
+        <a class="nav-link px-1" href="index.xml">
+          <i class="bi bi-feed" role="img"></i></a>
+      </li>
           <li class="nav-item">
         <a class="nav-link px-1" href="https://github.com/mbacou/mb-labs">
           <i class="bi bi-github" role="img"></i></a>
@@ -285,18 +290,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+<header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
-        <li class="nav-item fs-3 text-primary fw-bold">meteo</li>
-        <li class="nav-item fs-3 text-primary fw-bold">risk modeling</li>
-        <li class="nav-item ms-auto">
-      <label class="">Draft <i class="bi bi-square"></i>
-      </label>
+  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">meteo</li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">risk modeling</li>
+        <li class="nav-item px-2 secondary ms-auto">
+      <span>Draft
+        ☐
+      </span>
     </li>
-    <li class="nav-item">
-      <label class="">Frozen <i class="bi bi-square"></i>
-      </label>
+    <li class="nav-item px-2 secondary">
+      <span>Frozen
+        ☐
+      </span>
     </li>
   </ul>
 
@@ -312,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-  <span class="me-1">Melanie BACOU </span>
+  <span class="me-1">BACOU, Melanie </span>
   
 
 <a class="fs-4" href="mailto:mel@mbacou.com">
@@ -320,23 +327,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
           </p>
     
+    
+    
         <label>First published</label>
-    <p class="lh-lg text-body">Dec 2, 2020</p>
-    
-    
+    <p class="lh-lg text-body">Dec 3, 2020</p>
     
         <label>Reuse</label>
     <p id="mb-reuse" class="lh-lg text-body"></p>
     
     
-  </div></div><div class="mx-lg-3 mb-2">
+  </div></div><div class="mx-lg-3">
+        <label>Abstract</label>
+    <div class="lh-lg fs-1 text-muted"><p>This notebook is a sample model bias correction for WorldCover PBC.</p></div>
     
+        <ul class="navbar-nav d-flex flex-row gap-1">
+      <li class="nav-item fs-1 text-muted me-1">Keywords: </li>
+       <li class="nav-item fs-1">random forest;</li>
+       <li class="nav-item fs-1">ERA5;</li>
+      
+    </ul>
     
-  </div>
-</header>
+</div></header>
 
 
-<hr>
 <p>While estimating winter season frost risk for almond orchards over Central California, project partners reported significant discrepancies between modeled-based temperature estimates provided by <strong>ERA5-LAND Reanalysis</strong> dataset and ground observations from meteo stations. These biases impact the calculation of daily <strong>Frost-Degree-Day</strong> index (FDD) used to price insurance coverage.</p>
 <p>In this analysis we look into more details at ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations. In particular:</p>
 <ul>
@@ -345,147 +358,194 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>This work was initially produced for <strong>WorldCover PBC</strong> and <strong>OLAM US</strong> in early 2021, and redacted here to omit confidential details.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mblabs)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zoo)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnoaa)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_labs_on</span>()</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>pal2 <span class="ot">&lt;-</span> <span class="fu">alpha</span>(<span class="fu">unname</span>(pal[<span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"purple"</span>)]), .<span class="dv">8</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mbutils)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zoo)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#library(rnoaa)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>()) {</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setwd</span>(<span class="st">"./posts/2020-12-02-era5-ca/"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">here</span>(<span class="st">"./_data/2020-burn_olam_usa_07.RData"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">brand_on</span>(<span class="st">"../../_brand.yml"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">&lt;-</span> <span class="fu">pal</span>()</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>pal2 <span class="ot">&lt;-</span> <span class="fu">alpha</span>(<span class="fu">unname</span>(pal[<span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"purple"</span>)]), .<span class="dv">8</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"./_data/2020-burn_olam_usa_07.RData"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear workspace, keep only portfolio details</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">here</span>(<span class="st">"./_data/2020-burn_olam_usa_06.RData"</span>))</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="fu">c</span>(<span class="st">"dir"</span>, <span class="st">"pts.dt"</span>, <span class="st">"dt.era"</span>, <span class="st">"dt.imp"</span>)))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"./_data/2020-burn_olam_usa_06.RData"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="fu">c</span>(<span class="st">"dir"</span>, <span class="st">"pts.dt"</span>, <span class="st">"dt.era"</span>, <span class="st">"dt.imp"</span>)))</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">SpatialPointsDataFrame</span>(pts.dt[, .(X,Y)], <span class="fu">data.frame</span>(pts.dt), </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">proj4string=</span><span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">SpatialPointsDataFrame</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  pts.dt[, .(X, Y)],</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(pts.dt),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">proj4string =</span> <span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get GHCN ground obs across ZOI</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>stations <span class="ot">&lt;-</span> <span class="fu">ghcnd_stations</span>()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setDT</span>(stations)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>vars <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"PRCP"</span>, <span class="st">"TAVG"</span>, <span class="st">"TMAX"</span>, <span class="st">"TMIN"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>stations[element <span class="sc">%in%</span> vars, .N, by<span class="ot">=</span>element]</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>stations <span class="ot">&lt;-</span> stations[state<span class="sc">==</span><span class="st">"CA"</span> <span class="sc">&amp;</span> element <span class="sc">%in%</span> vars]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>stations[element <span class="sc">%in%</span> vars, .N, by <span class="ot">=</span> element]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>stations <span class="ot">&lt;-</span> stations[state <span class="sc">==</span> <span class="st">"CA"</span> <span class="sc">&amp;</span> element <span class="sc">%in%</span> vars]</span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to spatial</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>stations.sp <span class="ot">&lt;-</span> <span class="fu">SpatialPointsDataFrame</span>(stations[, .(longitude, latitude)], stations,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">proj4string=</span><span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>))</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only stations within 30 km of any OLAM site</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(pts, <span class="fu">CRS</span>(<span class="st">"+init=epsg:3310"</span>))</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>stations.sp <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(stations.sp, <span class="fu">CRS</span>(<span class="st">"+init=epsg:3310"</span>))</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>dist <span class="ot">&lt;-</span> rgeos<span class="sc">::</span><span class="fu">gWithinDistance</span>(stations.sp, pts, <span class="at">dist=</span><span class="dv">30</span><span class="sc">*</span><span class="dv">1000</span>, <span class="at">byid=</span><span class="cn">TRUE</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>dist <span class="ot">&lt;-</span> <span class="fu">colSums</span>(dist)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(dist) <span class="ot">&lt;-</span> stations.sp<span class="sc">$</span>id</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>dist <span class="ot">&lt;-</span> dist[dist<span class="sc">&gt;</span><span class="dv">0</span>]</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>ids <span class="ot">&lt;-</span> <span class="fu">names</span>(dist)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(pts, <span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>))</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>stations.sp <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(stations.sp, <span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>))</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>stations.sp <span class="ot">&lt;-</span> <span class="fu">SpatialPointsDataFrame</span>(</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  stations[, .(longitude, latitude)],</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  stations,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">proj4string =</span> <span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only stations within 30 km of any OLAM site</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(pts, <span class="fu">CRS</span>(<span class="st">"+init=epsg:3310"</span>))</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>stations.sp <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(stations.sp, <span class="fu">CRS</span>(<span class="st">"+init=epsg:3310"</span>))</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>dist <span class="ot">&lt;-</span> rgeos<span class="sc">::</span><span class="fu">gWithinDistance</span>(stations.sp, pts, <span class="at">dist =</span> <span class="dv">30</span> <span class="sc">*</span> <span class="dv">1000</span>, <span class="at">byid =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>dist <span class="ot">&lt;-</span> <span class="fu">colSums</span>(dist)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(dist) <span class="ot">&lt;-</span> stations.sp<span class="sc">$</span>id</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>dist <span class="ot">&lt;-</span> dist[dist <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>ids <span class="ot">&lt;-</span> <span class="fu">names</span>(dist)</span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">extent</span>(pts), <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="cn">NA</span>, <span class="at">xlab=</span><span class="cn">NA</span>, <span class="at">ylab=</span><span class="cn">NA</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations.sp[stations.sp<span class="sc">$</span>id <span class="sc">%in%</span> ids,], <span class="at">col=</span><span class="st">"black"</span>, <span class="at">add=</span>T)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">col=</span><span class="st">"blue"</span>, <span class="at">pch=</span><span class="st">"*"</span>, <span class="at">add=</span>T)</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>ids <span class="ot">&lt;-</span> stations[id <span class="sc">%in%</span> ids <span class="sc">&amp;</span> element <span class="sc">%in%</span> vars <span class="sc">&amp;</span> last_year <span class="sc">&gt;</span> <span class="dv">2009</span>, <span class="fu">unique</span>(id)]</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>stations[id <span class="sc">%in%</span> ids <span class="sc">&amp;</span> element <span class="sc">%in%</span> vars]</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(pts, <span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>))</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>stations.sp <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(stations.sp, <span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>))</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">extent</span>(pts), <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="cn">NA</span>, <span class="at">xlab =</span> <span class="cn">NA</span>, <span class="at">ylab =</span> <span class="cn">NA</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations.sp[stations.sp<span class="sc">$</span>id <span class="sc">%in%</span> ids, ], <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">add =</span> T)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">pch =</span> <span class="st">"*"</span>, <span class="at">add =</span> T)</span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Get daily station time-series for the 29 selected</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Request seems to time out when too large so let's batch it</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> <span class="fu">lapply</span>(ids, <span class="cf">function</span>(x) </span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">try</span>(<span class="fu">ghcnd_search</span>(x, <span class="at">var=</span>vars, <span class="at">date_min=</span><span class="st">"2010-01-01"</span>, <span class="at">refresh=</span>T)))</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> stations.dt[<span class="fu">sapply</span>(stations.dt, <span class="cf">function</span>(x) <span class="fu">class</span>(x)<span class="sc">!=</span><span class="st">"try-error"</span>)]</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> <span class="fu">do.call</span>(c, stations.dt)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> <span class="fu">lapply</span>(stations.dt, <span class="cf">function</span>(x) <span class="fu">setnames</span>(x, <span class="dv">2</span>, <span class="st">"value"</span>))</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(stations.dt, <span class="at">idcol=</span><span class="st">"var"</span>)</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>stations.dt[, .N, by<span class="ot">=</span>var]</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> stations.dt[, <span class="fu">unique</span>(var)]) stations.dt[var<span class="sc">==</span>i, <span class="fu">hist</span>(value, <span class="at">main=</span>i)]</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert tenths of degrees Celsius to °C</span></span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>stations.dt[, value <span class="sc">:</span><span class="er">=</span> <span class="fu">as.numeric</span>(value)</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>][var <span class="sc">%in%</span> <span class="fu">tolower</span>(vars[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]), value <span class="sc">:</span><span class="er">=</span> value<span class="sc">/</span><span class="dv">10</span>]</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>ids <span class="ot">&lt;-</span> stations.dt[, <span class="fu">unique</span>(id)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>ids <span class="ot">&lt;-</span> stations[id <span class="sc">%in%</span> ids <span class="sc">&amp;</span> element <span class="sc">%in%</span> vars <span class="sc">&amp;</span> last_year <span class="sc">&gt;</span> <span class="dv">2009</span>, <span class="fu">unique</span>(id)]</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>stations[id <span class="sc">%in%</span> ids <span class="sc">&amp;</span> element <span class="sc">%in%</span> vars]</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Get daily station time-series for the 29 selected</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Request seems to time out when too large so let's batch it</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> <span class="fu">lapply</span>(ids, <span class="cf">function</span>(x) {</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">try</span>(<span class="fu">ghcnd_search</span>(x, <span class="at">var =</span> vars, <span class="at">date_min =</span> <span class="st">"2010-01-01"</span>, <span class="at">refresh =</span> T))</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> stations.dt[<span class="fu">sapply</span>(stations.dt, <span class="cf">function</span>(x) {</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">class</span>(x) <span class="sc">!=</span> <span class="st">"try-error"</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>})]</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> <span class="fu">do.call</span>(c, stations.dt)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> <span class="fu">lapply</span>(stations.dt, <span class="cf">function</span>(x) <span class="fu">setnames</span>(x, <span class="dv">2</span>, <span class="st">"value"</span>))</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>stations.dt <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(stations.dt, <span class="at">idcol =</span> <span class="st">"var"</span>)</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>stations.dt[, .N, by <span class="ot">=</span> var]</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> stations.dt[, <span class="fu">unique</span>(var)]) {</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>  stations.dt[var <span class="sc">==</span> i, <span class="fu">hist</span>(value, <span class="at">main =</span> i)]</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert tenths of degrees Celsius to °C</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>stations.dt[, value <span class="sc">:</span><span class="er">=</span> <span class="fu">as.numeric</span>(value)][</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>  var <span class="sc">%in%</span> <span class="fu">tolower</span>(vars[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]),</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>  value <span class="sc">:</span><span class="er">=</span> value <span class="sc">/</span> <span class="dv">10</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>ids <span class="ot">&lt;-</span> stations.dt[, <span class="fu">unique</span>(id)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract ERA5 at stations coordinates</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"2010-01-01"</span>, <span class="st">"2020-07-31"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>cat <span class="ot">&lt;-</span> <span class="fu">wc_catalog</span>(x, <span class="at">code=</span><span class="st">"era5_temp_h_usa_ca"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>cat <span class="ot">&lt;-</span> <span class="fu">wc_catalog</span>(x, <span class="at">code =</span> <span class="st">"era5_temp_h_usa_ca"</span>)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="fu">wc_extract</span>(</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  stations[id <span class="sc">%in%</span> ids, .N, <span class="at">by=</span>.(<span class="at">loc_id=</span>id, <span class="at">X=</span>longitude, <span class="at">Y=</span>latitude)][, <span class="at">N:=</span><span class="cn">NULL</span>], </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">catalog=</span>cat)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify sequence</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>dt[<span class="fu">c</span>(<span class="dv">1</span>, .N), .(date, time)]</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>dt[, .N, by<span class="ot">=</span>.(<span class="at">y=</span><span class="fu">year</span>(date), loc_id)][N<span class="sc">!=</span><span class="dv">8760</span> <span class="sc">&amp;</span> N<span class="sc">!=</span><span class="dv">8784</span> <span class="sc">&amp;</span> N<span class="sc">!=</span><span class="dv">5112</span>]</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># =&gt; OK</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>dt[,</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Apply timezone</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  time <span class="sc">:</span><span class="er">=</span> <span class="fu">with_tz</span>(<span class="fu">as.POSIXct</span>(<span class="fu">paste</span>(date, time, <span class="at">sep=</span><span class="st">" "</span>)), <span class="at">tzone=</span><span class="st">"America/Los_Angeles"</span>)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>][, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert to IDate</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">date =</span> <span class="fu">as.IDate</span>(time),</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">time =</span> <span class="fu">as.ITime</span>(time)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>)]</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>dt[<span class="fu">c</span>(<span class="dv">1</span>, .N), .(date, time)]</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>dt[, .N, by<span class="ot">=</span>loc_id][, <span class="fu">uniqueN</span>(N)]</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>dt[, <span class="fu">hist</span>(value)]</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>dt[, <span class="fu">summary</span>(value)]</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co">#   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co"># -6.623  10.852  17.053  17.939  24.544  43.893  </span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Daily</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> dt[, .(</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tmean =</span> <span class="fu">mean</span>(value, <span class="at">na.rm=</span>T),</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tmin =</span> <span class="fu">min</span>(value, <span class="at">na.rm=</span>T),</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tmax =</span> <span class="fu">max</span>(value, <span class="at">na.rm=</span>T)</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>), keyby<span class="ot">=</span>.(loc_id, date)]</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine with GHCN</span></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">dcast</span>(stations.dt, id<span class="sc">+</span>date<span class="sc">~</span>var, <span class="at">value.var=</span><span class="st">"value"</span>)</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>dt[tmp, on<span class="ot">=</span>.(<span class="at">loc_id=</span>id, <span class="at">date=</span>date), <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">GHCN_Tmean =</span> i.tavg,</span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>  <span class="at">GHCN_Tmin =</span> i.tmin,</span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>  <span class="at">GHCN_Tmax =</span> i.tmax</span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  stations[id <span class="sc">%in%</span> ids, .N, <span class="at">by =</span> .(<span class="at">loc_id =</span> id, <span class="at">X =</span> longitude, <span class="at">Y =</span> latitude)][,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">N :=</span> <span class="cn">NULL</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  ],</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">catalog =</span> cat</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify sequence</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>dt[<span class="fu">c</span>(<span class="dv">1</span>, .N), .(date, time)]</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>dt[, .N, by <span class="ot">=</span> .(<span class="at">y =</span> <span class="fu">year</span>(date), loc_id)][N <span class="sc">!=</span> <span class="dv">8760</span> <span class="sc">&amp;</span> N <span class="sc">!=</span> <span class="dv">8784</span> <span class="sc">&amp;</span> N <span class="sc">!=</span> <span class="dv">5112</span>]</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># =&gt; OK</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>dt[,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Apply timezone</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  time <span class="sc">:</span><span class="er">=</span> <span class="fu">with_tz</span>(</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.POSIXct</span>(<span class="fu">paste</span>(date, time, <span class="at">sep =</span> <span class="st">" "</span>)),</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">tzone =</span> <span class="st">"America/Los_Angeles"</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>][, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert to IDate</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">date =</span> <span class="fu">as.IDate</span>(time),</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">time =</span> <span class="fu">as.ITime</span>(time)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>)]</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>dt[<span class="fu">c</span>(<span class="dv">1</span>, .N), .(date, time)]</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>dt[, .N, by <span class="ot">=</span> loc_id][, <span class="fu">uniqueN</span>(N)]</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>dt[, <span class="fu">hist</span>(value)]</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>dt[, <span class="fu">summary</span>(value)]</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="co">#   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co"># -6.623  10.852  17.053  17.939  24.544  43.893</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Daily</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> dt[,</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>  .(</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">Tmean =</span> <span class="fu">mean</span>(value, <span class="at">na.rm =</span> T),</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">Tmin =</span> <span class="fu">min</span>(value, <span class="at">na.rm =</span> T),</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">Tmax =</span> <span class="fu">max</span>(value, <span class="at">na.rm =</span> T)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>  keyby <span class="ot">=</span> .(loc_id, date)</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine with GHCN</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">dcast</span>(stations.dt, id <span class="sc">+</span> date <span class="sc">~</span> var, <span class="at">value.var =</span> <span class="st">"value"</span>)</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>dt[</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>  tmp,</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>  on <span class="ot">=</span> .(<span class="at">loc_id =</span> id, <span class="at">date =</span> date),</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">GHCN_Tmean =</span> i.tavg,</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">GHCN_Tmin =</span> i.tmin,</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">GHCN_Tmax =</span> i.tmax</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x, i, j, t, tmp)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="fu">here</span>(<span class="st">"./_data/2020-burn_olam_usa_07.RData"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="st">"./_data/2020-burn_olam_usa_07.RData"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <section id="results" class="level1 page-columns page-full">
 <h1>Results</h1>
 <p>10-year comparisons between ERA5-LAND and GHCN station network observations over Feb-March risk period. 11 stations (under 30-km from almond production sites and with daily temperature records after 2010) are selected for this comparison.</p>
 <div class="cell preview-image">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="fu">here</span>(<span class="st">"_data/daily_2020-02-01.nc"</span>))</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(r[[<span class="dv">1</span>]], <span class="at">ext=</span><span class="fu">ext</span>(stations.sp[stations.sp<span class="sc">$</span>id <span class="sc">%in%</span> ids,]) <span class="sc">+</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>),</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">terrain.colors</span>(<span class="dv">20</span>), <span class="at">ylab=</span><span class="fu">names</span>(r)[<span class="dv">1</span>],</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"Hourly Tmean (°C) - ERA5 2020-02-01 00:00"</span>)</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">crop</span>(stations.sp[<span class="sc">!</span>stations.sp<span class="sc">$</span>id <span class="sc">%in%</span> ids,], pts), <span class="at">col=</span>pal[<span class="st">"dark"</span>], <span class="at">add=</span>T)</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations.sp[stations.sp<span class="sc">$</span>id <span class="sc">%in%</span> ids,], <span class="at">col=</span><span class="st">"red"</span>, <span class="at">add=</span>T)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">col=</span>pal[<span class="st">"blue"</span>], <span class="at">pch=</span><span class="st">"*"</span>, <span class="at">add=</span>T)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts[pts<span class="sc">$</span>loc_id<span class="sc">==</span><span class="dv">25</span>,], <span class="at">col=</span>pal[<span class="st">"blue"</span>], <span class="at">pch=</span><span class="dv">1</span>, <span class="at">cex=</span><span class="dv">2</span>, <span class="at">add=</span>T)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottom"</span>, <span class="at">bg=</span>pal[<span class="st">"light"</span>], <span class="at">cex=</span>.<span class="dv">8</span>,</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"GHCN station"</span>, <span class="st">"GHCN station ≤ 30-km"</span>, <span class="st">"OLAM production site"</span>, <span class="st">"Main site"</span>),</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span>pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"blue"</span>)], <span class="at">pch=</span><span class="fu">c</span>(<span class="st">"+"</span>, <span class="st">"+"</span>, <span class="st">"*"</span>, <span class="st">"o"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="st">"_data/daily_2020-02-01.nc"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>e <span class="ot">&lt;-</span> <span class="fu">ext</span>(stations.sp[stations.sp<span class="sc">$</span>id <span class="sc">%in%</span> ids, ]) <span class="sc">+</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">crop</span>(r[[<span class="dv">1</span>]], e),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="fu">names</span>(r)[<span class="dv">1</span>],</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Hourly Tmean (°C) - ERA5 2020-02-01 00:00"</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">crop</span>(stations.sp[<span class="sc">!</span>stations.sp<span class="sc">$</span>id <span class="sc">%in%</span> ids, ], pts),</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> pal[<span class="st">"dark"</span>],</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">add =</span> T</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations.sp[stations.sp<span class="sc">$</span>id <span class="sc">%in%</span> ids, ], <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">add =</span> T)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">col =</span> pal[<span class="st">"blue"</span>], <span class="at">pch =</span> <span class="st">"*"</span>, <span class="at">add =</span> T)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts[pts<span class="sc">$</span>loc_id <span class="sc">==</span> <span class="dv">25</span>, ], <span class="at">col =</span> pal[<span class="st">"blue"</span>], <span class="at">pch =</span> <span class="dv">1</span>, <span class="at">cex =</span> <span class="dv">2</span>, <span class="at">add =</span> T)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bottom"</span>,</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">horiz =</span> T,</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">xpd =</span> T,</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> pal[<span class="st">"light"</span>],</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">cex =</span> .<span class="dv">8</span>,</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GHCN station"</span>,</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GHCN station ≤ 30-km"</span>,</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"OLAM production site"</span>,</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Main site"</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"blue"</span>)],</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="fu">c</span>(<span class="st">"+"</span>, <span class="st">"+"</span>, <span class="st">"*"</span>, <span class="st">"o"</span>)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -495,11 +555,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>List of GHCN stations retained in the analysis.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>stations[id <span class="sc">%in%</span> ids <span class="sc">&amp;</span> element <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"TMIN"</span>, <span class="st">"TAVG"</span>), .(</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  first_year, last_year</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>), keyby<span class="ot">=</span>.(id, name, element)] <span class="sc">|&gt;</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
+<div class="cell page-columns page-full">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>stations[</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  id <span class="sc">%in%</span> ids <span class="sc">&amp;</span> element <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"TMIN"</span>, <span class="st">"TAVG"</span>),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  .(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    first_year,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    last_year</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  keyby <span class="ot">=</span> .(id, name, element)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>] <span class="sc">|&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display column-page-right">
 <table class="table table-sm table-striped small">
 <colgroup>
 <col style="width: 17%">
@@ -642,9 +708,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>10-year summary.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> stations.dt[, <span class="fu">unique</span>(var)]) stations.dt[var<span class="sc">==</span>i, </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hist</span>(value, <span class="at">main=</span>i, <span class="at">xlab=</span><span class="cn">NA</span>, <span class="at">col=</span>pal2[<span class="dv">2</span>], <span class="at">border=</span>pal[<span class="st">"light"</span>])]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> stations.dt[, <span class="fu">unique</span>(var)]) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  stations.dt[</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    var <span class="sc">==</span> i,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">hist</span>(value, <span class="at">main =</span> i, <span class="at">xlab =</span> <span class="cn">NA</span>, <span class="at">col =</span> pal2[<span class="dv">2</span>], <span class="at">border =</span> pal[<span class="st">"light"</span>])</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell column-page-right quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid"></a></p>
@@ -670,37 +740,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>dt[, sdate <span class="sc">:</span><span class="er">=</span> <span class="fu">as.Date</span>(date)][, year <span class="sc">:</span><span class="er">=</span> <span class="fu">year</span>(date)]</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">year</span>(dt<span class="sc">$</span>sdate) <span class="ot">&lt;-</span> <span class="dv">2020</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> dt[<span class="fu">yday</span>(date) <span class="sc">%between%</span> <span class="fu">yday</span>(prd), .(</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tmin =</span> <span class="fu">mean</span>(Tmin, <span class="at">na.rm=</span>T),</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">GHCN_Tmin =</span> <span class="fu">mean</span>(GHCN_Tmin, <span class="at">na.rm=</span>T),</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">diff_Tmean =</span> <span class="fu">mean</span>(Tmean <span class="sc">-</span> GHCN_Tmean, <span class="at">na.rm=</span>T),</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">diff_Tmin =</span> <span class="fu">mean</span>(Tmin <span class="sc">-</span> GHCN_Tmin, <span class="at">na.rm=</span>T)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>), by<span class="ot">=</span>.(year, date, sdate)</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>][, sign <span class="sc">:</span><span class="er">=</span> diff_Tmin <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="fu">gglabs</span>(tmp[<span class="fu">year</span>(date) <span class="sc">%between%</span> <span class="fu">c</span>(<span class="dv">2010</span>, <span class="dv">2014</span>)], <span class="fu">aes</span>(<span class="at">x=</span>sdate)) <span class="sc">+</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y=</span>Tmin, <span class="at">color=</span><span class="st">"ERA5 Tmin"</span>)) <span class="sc">+</span> </span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>Tmin, <span class="at">color=</span><span class="st">"ERA5 Tmin"</span>), <span class="at">size=</span>.<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y=</span>GHCN_Tmin, <span class="at">color=</span><span class="st">"GHCN Tmin"</span>)) <span class="sc">+</span> </span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>GHCN_Tmin, <span class="at">color=</span><span class="st">"GHCN Tmin"</span>), <span class="at">size=</span>.<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels=</span><span class="st">"%b-%d"</span>, <span class="at">breaks=</span><span class="st">"2 days"</span>) <span class="sc">+</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type=</span>pal2) <span class="sc">+</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="st">"year"</span>, <span class="at">ncol=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Temperature Mean of Min (°C) -- ERA5 vs. GHCN (19 WS)"</span>) <span class="sc">+</span></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="sc">-</span><span class="dv">90</span>))</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="fu">gglabs</span>(tmp[<span class="fu">year</span>(date) <span class="sc">&gt;</span> <span class="dv">2014</span>], <span class="fu">aes</span>(<span class="at">x=</span>sdate)) <span class="sc">+</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y=</span>Tmin, <span class="at">color=</span><span class="st">"ERA5 Tmin"</span>)) <span class="sc">+</span> </span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>Tmin, <span class="at">color=</span><span class="st">"ERA5 Tmin"</span>), <span class="at">size=</span>.<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y=</span>GHCN_Tmin, <span class="at">color=</span><span class="st">"GHCN Tmin"</span>)) <span class="sc">+</span> </span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>GHCN_Tmin, <span class="at">color=</span><span class="st">"GHCN Tmin"</span>), <span class="at">size=</span>.<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels=</span><span class="st">"%b-%d"</span>, <span class="at">breaks=</span><span class="st">"2 days"</span>) <span class="sc">+</span></span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type=</span>pal2) <span class="sc">+</span></span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="st">"year"</span>, <span class="at">ncol=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Temperature Mean of Min (°C) -- ERA5 vs. GHCN (19 WS)"</span>) <span class="sc">+</span></span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="sc">-</span><span class="dv">90</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> dt[</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">yday</span>(date) <span class="sc">%between%</span> <span class="fu">yday</span>(prd),</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  .(</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Tmin =</span> <span class="fu">mean</span>(Tmin, <span class="at">na.rm =</span> T),</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">GHCN_Tmin =</span> <span class="fu">mean</span>(GHCN_Tmin, <span class="at">na.rm =</span> T),</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">diff_Tmean =</span> <span class="fu">mean</span>(Tmean <span class="sc">-</span> GHCN_Tmean, <span class="at">na.rm =</span> T),</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">diff_Tmin =</span> <span class="fu">mean</span>(Tmin <span class="sc">-</span> GHCN_Tmin, <span class="at">na.rm =</span> T)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  by <span class="ot">=</span> .(year, date, sdate)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>][, sign <span class="sc">:</span><span class="er">=</span> diff_Tmin <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbrand</span>(tmp[<span class="fu">year</span>(date) <span class="sc">%between%</span> <span class="fu">c</span>(<span class="dv">2010</span>, <span class="dv">2014</span>)], <span class="fu">aes</span>(<span class="at">x =</span> sdate)) <span class="sc">+</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> Tmin, <span class="at">color =</span> <span class="st">"ERA5 Tmin"</span>)) <span class="sc">+</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> Tmin, <span class="at">color =</span> <span class="st">"ERA5 Tmin"</span>), <span class="at">size =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> GHCN_Tmin, <span class="at">color =</span> <span class="st">"GHCN Tmin"</span>)) <span class="sc">+</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> GHCN_Tmin, <span class="at">color =</span> <span class="st">"GHCN Tmin"</span>), <span class="at">size =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%b-%d"</span>, <span class="at">breaks =</span> <span class="st">"2 days"</span>) <span class="sc">+</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type =</span> pal2) <span class="sc">+</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="st">"year"</span>, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Temperature Mean of Min (°C) -- ERA5 vs. GHCN (19 WS)"</span>) <span class="sc">+</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="sc">-</span><span class="dv">90</span>))</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbrand</span>(tmp[<span class="fu">year</span>(date) <span class="sc">&gt;</span> <span class="dv">2014</span>], <span class="fu">aes</span>(<span class="at">x =</span> sdate)) <span class="sc">+</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> Tmin, <span class="at">color =</span> <span class="st">"ERA5 Tmin"</span>)) <span class="sc">+</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> Tmin, <span class="at">color =</span> <span class="st">"ERA5 Tmin"</span>), <span class="at">size =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> GHCN_Tmin, <span class="at">color =</span> <span class="st">"GHCN Tmin"</span>)) <span class="sc">+</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> GHCN_Tmin, <span class="at">color =</span> <span class="st">"GHCN Tmin"</span>), <span class="at">size =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%b-%d"</span>, <span class="at">breaks =</span> <span class="st">"2 days"</span>) <span class="sc">+</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type =</span> pal2) <span class="sc">+</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="st">"year"</span>, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Temperature Mean of Min (°C) -- ERA5 vs. GHCN (19 WS)"</span>) <span class="sc">+</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="sc">-</span><span class="dv">90</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell column-page-right quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid"></a></p>
@@ -711,29 +784,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>2010-2014 and 2015-2020.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gglabs</span>(tmp[<span class="fu">year</span>(date) <span class="sc">%between%</span> <span class="fu">c</span>(<span class="dv">2010</span>, <span class="dv">2014</span>)], </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(sdate, <span class="at">color=</span>sign)) <span class="sc">+</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">xend=</span>sdate, <span class="at">y=</span>Tmin, <span class="at">yend=</span>GHCN_Tmin), <span class="at">size=</span>.<span class="dv">8</span>, <span class="at">lineend=</span><span class="st">"butt"</span>) <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>GHCN_Tmin)) <span class="sc">+</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels=</span><span class="st">"%b-%d"</span>, <span class="at">breaks=</span><span class="st">"3 day"</span>) <span class="sc">+</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type=</span>pal2, </span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"ERA5 ≤ GHCN"</span>, <span class="st">"ERA5 &gt; GHCN"</span>)) <span class="sc">+</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="st">"year"</span>, <span class="at">ncol=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Temperature Mean of Min (°C) -- ERA5 vs. GHCN WS"</span>) <span class="sc">+</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="sc">-</span><span class="dv">90</span>))</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="fu">gglabs</span>(tmp[<span class="fu">year</span>(date) <span class="sc">&gt;</span> <span class="dv">2014</span>], </span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(sdate, <span class="at">color=</span>sign)) <span class="sc">+</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">xend=</span>sdate, <span class="at">y=</span>Tmin, <span class="at">yend=</span>GHCN_Tmin), <span class="at">size=</span>.<span class="dv">8</span>, <span class="at">lineend=</span><span class="st">"butt"</span>) <span class="sc">+</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>GHCN_Tmin)) <span class="sc">+</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels=</span><span class="st">"%b-%d"</span>, <span class="at">breaks=</span><span class="st">"3 day"</span>) <span class="sc">+</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type=</span>pal2,</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"ERA5 ≤ GHCN"</span>, <span class="st">"ERA5 &gt; GHCN"</span>)) <span class="sc">+</span></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="st">"year"</span>, <span class="at">ncol=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Temperature Mean of Min (°C) -- ERA5 vs. GHCN WS"</span>) <span class="sc">+</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="sc">-</span><span class="dv">90</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbrand</span>(tmp[<span class="fu">year</span>(date) <span class="sc">%between%</span> <span class="fu">c</span>(<span class="dv">2010</span>, <span class="dv">2014</span>)], <span class="fu">aes</span>(sdate, <span class="at">color =</span> sign)) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">xend =</span> sdate, <span class="at">y =</span> Tmin, <span class="at">yend =</span> GHCN_Tmin),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> .<span class="dv">8</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">lineend =</span> <span class="st">"butt"</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> GHCN_Tmin)) <span class="sc">+</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%b-%d"</span>, <span class="at">breaks =</span> <span class="st">"3 day"</span>) <span class="sc">+</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="cn">NULL</span>,</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> pal2,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"ERA5 ≤ GHCN"</span>, <span class="st">"ERA5 &gt; GHCN"</span>)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="st">"year"</span>, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Temperature Mean of Min (°C) -- ERA5 vs. GHCN WS"</span>) <span class="sc">+</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="sc">-</span><span class="dv">90</span>))</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbrand</span>(tmp[<span class="fu">year</span>(date) <span class="sc">&gt;</span> <span class="dv">2014</span>], <span class="fu">aes</span>(sdate, <span class="at">color =</span> sign)) <span class="sc">+</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">xend =</span> sdate, <span class="at">y =</span> Tmin, <span class="at">yend =</span> GHCN_Tmin),</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> .<span class="dv">8</span>,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">lineend =</span> <span class="st">"butt"</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y =</span> GHCN_Tmin)) <span class="sc">+</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%b-%d"</span>, <span class="at">breaks =</span> <span class="st">"3 day"</span>) <span class="sc">+</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    <span class="cn">NULL</span>,</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> pal2,</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"ERA5 ≤ GHCN"</span>, <span class="st">"ERA5 &gt; GHCN"</span>)</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="st">"year"</span>, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Temperature Mean of Min (°C) -- ERA5 vs. GHCN WS"</span>) <span class="sc">+</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="sc">-</span><span class="dv">90</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell column-page-right quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid"></a></p>
@@ -747,7 +832,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dt[<span class="fu">yday</span>(date) <span class="sc">%in%</span> <span class="fu">yday</span>(prd), <span class="fu">summary</span>(Tmin <span class="sc">-</span> GHCN_Tmin)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.     NAs 
 -5.9080 -1.1880  0.2500  0.2953  1.5979  9.7133     206 </code></pre>
 </div>
 </div>
@@ -763,7 +848,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>dt[<span class="fu">yday</span>(date) <span class="sc">%in%</span> <span class="fu">yday</span>(prd), <span class="fu">summary</span>(Tmean <span class="sc">-</span> GHCN_Tmean)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.     NAs 
 -4.5485 -1.7915 -1.1321 -0.9827 -0.1575  1.9854     359 </code></pre>
 </div>
 </div>
@@ -771,13 +856,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>dt[<span class="fu">yday</span>(date) <span class="sc">%in%</span> <span class="fu">yday</span>(prd), <span class="fu">summary</span>(Tmax <span class="sc">-</span> GHCN_Tmax)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.     NAs 
 -4.6174 -1.4994 -0.6568 -0.6119  0.1649  4.7969     204 </code></pre>
 </div>
 </div>
 <p>Correlation summary on temperature minima (all available dates):</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> dt[<span class="sc">!</span><span class="fu">is.na</span>(GHCN_Tmin), .(<span class="at">cor =</span> <span class="fu">cor</span>(GHCN_Tmin, Tmin, <span class="at">method=</span><span class="st">"pearson"</span>))]</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> dt[<span class="sc">!</span><span class="fu">is.na</span>(GHCN_Tmin), .(<span class="at">cor =</span> <span class="fu">cor</span>(GHCN_Tmin, Tmin, <span class="at">method =</span> <span class="st">"pearson"</span>))]</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(tmp<span class="sc">$</span>cor)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
@@ -786,86 +871,118 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Correlation summary on temperature minima (GHCN below 0°C, all available dates):</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> dt[<span class="sc">!</span><span class="fu">is.na</span>(GHCN_Tmin) <span class="sc">&amp;</span> GHCN_Tmin <span class="sc">&lt;=</span> <span class="dv">0</span>, .(<span class="at">cor =</span> <span class="fu">cor</span>(GHCN_Tmin, Tmin, <span class="at">method=</span><span class="st">"pearson"</span>))]</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(tmp<span class="sc">$</span>cor)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> dt[</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">!</span><span class="fu">is.na</span>(GHCN_Tmin) <span class="sc">&amp;</span> GHCN_Tmin <span class="sc">&lt;=</span> <span class="dv">0</span>,</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  .(<span class="at">cor =</span> <span class="fu">cor</span>(GHCN_Tmin, Tmin, <span class="at">method =</span> <span class="st">"pearson"</span>))</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(tmp<span class="sc">$</span>cor)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
  0.2952  0.2952  0.2952  0.2952  0.2952  0.2952 </code></pre>
 </div>
 </div>
 <p>ERA5 bias along GHCN ground temperatures:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> dt[<span class="sc">!</span><span class="fu">is.na</span>(GHCN_Tmin), .(</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  GHCN_Tmean, GHCN_Tmin, </span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tmean_bias =</span> GHCN_Tmean <span class="sc">-</span> Tmean,</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tmin_bias =</span> GHCN_Tmin <span class="sc">-</span> Tmin</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>)]</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="fu">gglabs</span>(tmp) <span class="sc">+</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">x=</span>GHCN_Tmean, <span class="at">y=</span>Tmean_bias, <span class="at">color=</span><span class="st">"Bias (Tmean)"</span>)) <span class="sc">+</span></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">x=</span>GHCN_Tmin, <span class="at">y=</span>Tmin_bias, <span class="at">color=</span><span class="st">"Bias (Tmin)"</span>)) <span class="sc">+</span></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept=</span><span class="dv">0</span>), <span class="at">color=</span>pal[<span class="st">"dark"</span>], <span class="at">linetype=</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept=</span><span class="dv">0</span>), <span class="at">color=</span>pal[<span class="st">"dark"</span>], <span class="at">linetype=</span><span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type=</span>pal2) <span class="sc">+</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">n.breaks=</span><span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">n.breaks=</span><span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"GHCN Temp. (°C)"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"ERA5 Bias (°C)"</span>) <span class="sc">+</span></span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"ERA5 Temperature Bias vs. GHCN WS (2010-2020)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-12-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img"></a></p>
+<div class="cell page-columns page-full">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> dt[</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">!</span><span class="fu">is.na</span>(GHCN_Tmin),</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  .(</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    GHCN_Tmean,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    GHCN_Tmin,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Tmean_bias =</span> GHCN_Tmean <span class="sc">-</span> Tmean,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Tmin_bias =</span> GHCN_Tmin <span class="sc">-</span> Tmin</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbrand</span>(tmp) <span class="sc">+</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">x =</span> GHCN_Tmean, <span class="at">y =</span> Tmean_bias, <span class="at">color =</span> <span class="st">"Bias (Tmean)"</span>)) <span class="sc">+</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">x =</span> GHCN_Tmin, <span class="at">y =</span> Tmin_bias, <span class="at">color =</span> <span class="st">"Bias (Tmin)"</span>)) <span class="sc">+</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="fu">aes</span>(<span class="at">yintercept =</span> <span class="dv">0</span>), <span class="at">color =</span> pal[<span class="st">"dark"</span>], <span class="at">linetype =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="dv">0</span>), <span class="at">color =</span> pal[<span class="st">"dark"</span>], <span class="at">linetype =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type =</span> pal2) <span class="sc">+</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">n.breaks =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">n.breaks =</span> <span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"GHCN Temp. (°C)"</span>) <span class="sc">+</span></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"ERA5 Bias (°C)"</span>) <span class="sc">+</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"ERA5 Temperature Bias vs. GHCN WS (2010-2020)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><a href="index_files/figure-html/unnamed-chunk-12-1.png" class="lightbox page-columns page-full" data-gallery="quarto-lightbox-gallery-10"><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img column-page-inset-right"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="frost-index" class="level1">
+<section id="frost-index" class="level1 page-columns page-full">
 <h1>Frost Index</h1>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>degree_frost <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="dv">0</span>)</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Add daily index values</span></span>
 <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">setorder</span>(dt, loc_id, date)</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">&lt;-</span> dt[<span class="fu">yday</span>(date) <span class="sc">%between%</span> <span class="fu">yday</span>(prd), .(</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">idx =</span> <span class="fu">sum</span>(degree_frost[<span class="dv">2</span>] <span class="sc">-</span> <span class="fu">pmin</span>(</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fifelse</span>(Tmin <span class="sc">&lt;</span> degree_frost[<span class="dv">1</span>], degree_frost[<span class="dv">1</span>], Tmin), degree_frost[<span class="dv">2</span>]), <span class="at">na.rm=</span>T),</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">idx_ghcn =</span> <span class="fu">sum</span>(degree_frost[<span class="dv">2</span>] <span class="sc">-</span> <span class="fu">pmin</span>(</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fifelse</span>(GHCN_Tmin <span class="sc">&lt;</span> degree_frost[<span class="dv">1</span>], degree_frost[<span class="dv">1</span>], GHCN_Tmin), degree_frost[<span class="dv">2</span>]), <span class="at">na.rm=</span>T)</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>), by<span class="ot">=</span>.(loc_id, year)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">&lt;-</span> dt[</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">yday</span>(date) <span class="sc">%between%</span> <span class="fu">yday</span>(prd),</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  .(</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">idx =</span> <span class="fu">sum</span>(</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>      degree_frost[<span class="dv">2</span>] <span class="sc">-</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pmin</span>(</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>          <span class="fu">fifelse</span>(Tmin <span class="sc">&lt;</span> degree_frost[<span class="dv">1</span>], degree_frost[<span class="dv">1</span>], Tmin),</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>          degree_frost[<span class="dv">2</span>]</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">na.rm =</span> T</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">idx_ghcn =</span> <span class="fu">sum</span>(</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>      degree_frost[<span class="dv">2</span>] <span class="sc">-</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pmin</span>(</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>          <span class="fu">fifelse</span>(GHCN_Tmin <span class="sc">&lt;</span> degree_frost[<span class="dv">1</span>], degree_frost[<span class="dv">1</span>], GHCN_Tmin),</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>          degree_frost[<span class="dv">2</span>]</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">na.rm =</span> T</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>  by <span class="ot">=</span> .(loc_id, year)</span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">melt</span>(idx, <span class="at">id.vars=</span><span class="fu">c</span>(<span class="st">"loc_id"</span>, <span class="st">"year"</span>))</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> tmp[, .(<span class="at">value=</span><span class="fu">mean</span>(value, <span class="at">na.rm=</span>T)), by<span class="ot">=</span>.(year, variable)]</span>
+<div class="cell page-columns page-full">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> <span class="fu">melt</span>(idx, <span class="at">id.vars =</span> <span class="fu">c</span>(<span class="st">"loc_id"</span>, <span class="st">"year"</span>))</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>tmp <span class="ot">&lt;-</span> tmp[, .(<span class="at">value =</span> <span class="fu">mean</span>(value, <span class="at">na.rm =</span> T)), by <span class="ot">=</span> .(year, variable)]</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">gglabs</span>(tmp[variable <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"idx"</span>, <span class="st">"idx_ghcn"</span>)], </span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(year, value, <span class="at">fill=</span>variable)) <span class="sc">+</span></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position=</span><span class="st">"dodge"</span>, <span class="at">color=</span>pal[<span class="st">"light"</span>], <span class="at">width=</span>.<span class="dv">8</span>) <span class="sc">+</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="cn">NULL</span>, <span class="at">type=</span>pal2[<span class="dv">2</span><span class="sc">:</span><span class="dv">1</span>], <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"GHCN FDD"</span>, <span class="st">"ERA5 FDD"</span>)) <span class="sc">+</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="dv">2010</span><span class="sc">:</span><span class="dv">2020</span>) <span class="sc">+</span></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Mean FDD across Stations -- ERA5 vs. GHCN (2010-2020)"</span>) <span class="sc">+</span></span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_text</span>(<span class="at">angle=</span><span class="sc">-</span><span class="dv">90</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-14-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img"></a></p>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbrand</span>(</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  tmp[variable <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"idx"</span>, <span class="st">"idx_ghcn"</span>)],</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(year, value, <span class="at">fill =</span> variable)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">color =</span> pal[<span class="st">"light"</span>], <span class="at">width =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    <span class="cn">NULL</span>,</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> pal2[<span class="dv">2</span><span class="sc">:</span><span class="dv">1</span>],</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"GHCN FDD"</span>, <span class="st">"ERA5 FDD"</span>)</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">2010</span><span class="sc">:</span><span class="dv">2020</span>) <span class="sc">+</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Mean FDD across Stations -- ERA5 vs. GHCN (2010-2020)"</span>) <span class="sc">+</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="sc">-</span><span class="dv">90</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><a href="index_files/figure-html/unnamed-chunk-14-1.png" class="lightbox page-columns page-full" data-gallery="quarto-lightbox-gallery-11"><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img column-page-inset-right"></a></p>
 </figure>
 </div>
 </div>
 </div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gglabs</span>(idx[idx_ghcn<span class="sc">&gt;</span><span class="dv">0</span>], <span class="fu">aes</span>(idx_ghcn, idx)) <span class="sc">+</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">linetype=</span><span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">color=</span><span class="st">"ERA5 non-adjusted"</span>)) <span class="sc">+</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape=</span><span class="st">"+"</span>, <span class="at">color=</span>pal[<span class="st">"dark"</span>], <span class="at">size=</span><span class="dv">4</span>) <span class="sc">+</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type=</span>pal2[<span class="dv">1</span>]) <span class="sc">+</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"GHCN FDD"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"ERA5 FDD"</span>) <span class="sc">+</span></span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"FDD -- ERA5 vs. GHCN (2010-2020)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-15-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img"></a></p>
+<div class="cell page-columns page-full">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbrand</span>(idx[idx_ghcn <span class="sc">&gt;</span> <span class="dv">0</span>], <span class="fu">aes</span>(idx_ghcn, idx)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">color =</span> pal[<span class="st">"red"</span>]) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="st">"ERA5 non-adjusted"</span>)) <span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="st">"+"</span>, <span class="at">color =</span> pal[<span class="st">"red"</span>], <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_discrete</span>(<span class="cn">NULL</span>, <span class="at">type =</span> pal2[<span class="dv">1</span>]) <span class="sc">+</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"GHCN FDD"</span>) <span class="sc">+</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"ERA5 FDD"</span>) <span class="sc">+</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"FDD -- ERA5 vs. GHCN (2010-2020)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><a href="index_files/figure-html/unnamed-chunk-15-1.png" class="lightbox page-columns page-full" data-gallery="quarto-lightbox-gallery-12"><img src="index_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img column-page-inset-right"></a></p>
 </figure>
 </div>
 </div>
@@ -874,26 +991,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </section>
 
-<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2020,
-  author = {BACOU, Melanie},
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{melanie2020,
+  author = {Melanie , BACOU},
   title = {ERA5-LAND {Temperature} {Validation} {(California)}},
-  date = {2020-12-02},
+  date = {2020-12-03},
   url = {https://mbacou.com/posts/2020-12-02-era5-ca/},
-  langid = {en}
+  langid = {en},
+  abstract = {This notebook is a sample model bias correction for
+    WorldCover PBC.}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2020" class="csl-entry quarto-appendix-citeas" role="listitem">
-BACOU, Melanie. 2020. <span>“ERA5-LAND Temperature Validation
-(California).”</span> December 2. <a href="https://mbacou.com/posts/2020-12-02-era5-ca/">https://mbacou.com/posts/2020-12-02-era5-ca/</a>.
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-melanie2020" class="csl-entry quarto-appendix-citeas" role="listitem">
+Melanie, BACOU. 2020. <span>“ERA5-LAND Temperature Validation
+(California).”</span> December 3. <a href="https://mbacou.com/posts/2020-12-02-era5-ca/">https://mbacou.com/posts/2020-12-02-era5-ca/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

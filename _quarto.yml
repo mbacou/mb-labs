@@ -10,6 +10,8 @@ project:
   preview:
     port: 5555 
 
+bibliography: global.bib
+
 website:
   title: Mel B. mb-labs
   description: Playground for consulting and data science projects
@@ -28,16 +30,15 @@ website:
 format:
   mb-article-html:
     logo: assets/mb-square.png
-    logo-href: /
+    logo-href: index.qmd
     logo-alt: Mel B. mb-labs
     license: CC BY-NC 4.0
-    copyright: © Mel B. Labs - a personal blog about statistics and spatial econometrics.
-    bibliography: references.bib
+    copyright: © 2026, Mel B. Labs.
     header:
       palette: true
       left: 
         - text: My Blog
-          href: index.qmd
+          href: blog.qmd
           icon: substack
         - text: Portfolio
           href: portfolio.qmd
@@ -57,3 +58,5 @@ format:
           href: https://linkedin.com/in/mbacou
         - icon: youtube
           href: https://youtube.com/\@mbacou/playlists        
+        - icon: rss
+          href: index.xml

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Melanie BACOU">
+<meta name="author" content="BACOU, Melanie">
 <meta name="keywords" content="theming, bootstrap, ejs">
 
 <title>Time to Migrate this Blog from Distill to Quarto – Mel B. mb-labs</title>
@@ -93,16 +93,15 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-746460a2f44fae2b83e2f14b2a1a127a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-bac8fe6acf79b2017e7154f11a73c8a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-a4603f228267c45f3f49e5914c477eca.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-bac8fe6acf79b2017e7154f11a73c8a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9161184c1009bd6b6b31ce38d15b85f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -147,7 +146,7 @@ div.csl-indent {
 
 <meta property="og:title" content="Time to Migrate this Blog from Distill to Quarto – Mel B. mb-labs">
 <meta property="og:description" content="A post about literate programming in general and Quarto formats in particular, in which I document migrating this personal blog from Distill to Quarto. Compared to J.J. Allaire’s Distill for R Markdown, Posit® Quarto Markdown uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way.">
-<meta property="og:image" content="https://mbacou.com/posts/2022-12-01-theme/index_files/figure-html/preview-image-1.svg">
+<meta property="og:image" content="https://mbacou.com/posts/2022-12-01-theme/_fig/preview-image-1.svg">
 <meta property="og:site_name" content="Mel B. mb-labs">
 </head>
 
@@ -163,8 +162,8 @@ div.csl-indent {
   <!-- Fixed article meta -->
   <div class="mb-meta mt-2 mt-md-4 mb-3">
 
-    <p class="fs-0">Jun 27, 2026 <i class="bi bi-clock ms-1"></i></p>
-
+        <p class="fs-0">Jun 29, 2026 <i class="bi bi-clock ms-1"></i></p>
+    
     
   </div>
 
@@ -173,7 +172,7 @@ div.csl-indent {
   <ul>
   <li><a href="#css-grid-system" id="toc-css-grid-system" class="nav-link active" data-scroll-target="#css-grid-system">CSS Grid System</a></li>
   <li><a href="#color-scheme" id="toc-color-scheme" class="nav-link" data-scroll-target="#color-scheme">Color Scheme</a></li>
-  <li><a href="#bringing-it-altogther-quarto-format-extension" id="toc-bringing-it-altogther-quarto-format-extension" class="nav-link" data-scroll-target="#bringing-it-altogther-quarto-format-extension">Bringing it altogther: Quarto Format Extension</a></li>
+  <li><a href="#bringing-it-altogether-quarto-format-extension" id="toc-bringing-it-altogether-quarto-format-extension" class="nav-link" data-scroll-target="#bringing-it-altogether-quarto-format-extension">Bringing it altogether: Quarto Format Extension</a></li>
   <li><a href="#publishing-workflow" id="toc-publishing-workflow" class="nav-link" data-scroll-target="#publishing-workflow">Publishing Workflow</a></li>
   </ul>
 
@@ -187,9 +186,10 @@ div.csl-indent {
   
   <div class="d-none d-lg-block mt-auto">
     <!-- Optional sidebar logo -->
-        <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
+        <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
         <!-- Copyright -->
         <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
+      true
     </div>
       </div>
 
@@ -210,14 +210,14 @@ div.csl-indent {
 
     <!-- logo -->
       <div class="d-lg-none mb-n1">
-      <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
+      <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
     </div>
     
     <!-- left links -->
     <ul class="navbar-nav d-none d-md-flex flex-row w-100 me-2">
 
           <li class="nav-item flex-fill">
-        <a class="nav-link" href="../../index.html">
+        <a class="nav-link" href="../../blog.html">
           <span class="menu-text">My Blog</span></a>
       </li>
           <li class="nav-item flex-fill">
@@ -238,7 +238,7 @@ div.csl-indent {
     <ul class="navbar-nav d-flex d-md-none flex-row w-100">
 
           <li class="nav-item flex-fill text-center">
-        <a class="nav-link" href="../../index.html">
+        <a class="nav-link" href="../../blog.html">
           <i class="bi bi-substack"></i></a>
       </li>
           <li class="nav-item flex-fill text-center">
@@ -258,6 +258,10 @@ div.csl-indent {
     <!-- right tools -->
     <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
 
+          <li class="nav-item">
+        <a class="nav-link px-1" href="index.xml">
+          <i class="bi bi-feed" role="img"></i></a>
+      </li>
           <li class="nav-item">
         <a class="nav-link px-1" href="https://github.com/mbacou/mb-labs">
           <i class="bi bi-github" role="img"></i></a>
@@ -313,18 +317,18 @@ div.csl-indent {
 
 <header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
-        <li class="nav-item fs-3 text-primary fw-bold pt-2">quarto</li>
-        <li class="nav-item fs-3 text-primary fw-bold pt-2">dataviz</li>
-        <li class="nav-item ms-auto">
-      <label class="">Draft
+  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">quarto</li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">dataviz</li>
+        <li class="nav-item px-2 secondary ms-auto">
+      <span>Draft
         ☐
-      </label>
+      </span>
     </li>
-    <li class="nav-item">
-      <label class="">Frozen
+    <li class="nav-item px-2 secondary">
+      <span>Frozen
         ☐
-      </label>
+      </span>
     </li>
   </ul>
 
@@ -340,7 +344,7 @@ div.csl-indent {
 
 
 
-  <span class="me-1">Melanie BACOU </span>
+  <span class="me-1">BACOU, Melanie </span>
   
 
 <a class="fs-4" href="mailto:mel@mbacou.com">
@@ -348,10 +352,10 @@ div.csl-indent {
 
           </p>
     
+    
+    
         <label>First published</label>
     <p class="lh-lg text-body">Oct 1, 2023</p>
-    
-    
     
         <label>Reuse</label>
     <p id="mb-reuse" class="lh-lg text-body"></p>
@@ -371,17 +375,15 @@ div.csl-indent {
     
 </div></header>
 
-<div class="bg-primary pb1 mb-2 w-25"></div>
 
-
-<p>With the release of <strong>Quarto 1.4</strong> (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as <strong>Emacs org-mode</strong>, <strong>Rmarkdown</strong> and <strong>Jupyter</strong> notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments..</p>
+<p>With the release of <strong>Quarto 1.4</strong> (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as <strong>Emacs org-mode</strong>, <strong>Rmarkdown</strong> and <strong>Jupyter</strong> notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.</p>
 <p>Old-time researchers<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and engineers have long used <a href="https://orgmode.org/">Emacs <code>Org-Mode</code></a> (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to <em>Eric Schulte</em>’s incredible <strong>Babel</strong> extension <span class="citation" data-cites="schulte2012">(see <a href="#ref-schulte2012" role="doc-biblioref">Schulte et al. 2012</a>)</span> and to <em>John MacFarlane</em>’s <a href="https://pandoc.org/">Pandoc</a> document converter library – but nowadays <strong>Quarto</strong> makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as <strong>in-browser real-time rendering of documents</strong>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;For folks born this century, to <strong>babel</strong> (elips) or to <strong>sweave</strong> (R) is the process of compiling text documents that include both static markup and compile-time executable scripts.</p>
 <p><a href="_fig/Donald-Knuth.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="_fig/Donald-Knuth.jpg" class="rounded-circle d-block mx-auto img-fluid"></a></p>
 <p>The concept of <strong>Literate programming</strong> was introduced in 1984 by the mathematician <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a> and was widely popularized thereafter in the engineering community thanks to <a href="https://orgmode.org/worg/org-contrib/babel/uses.html">org-mode</a> in the Emacs editor.</p>
 <p><a href="_fig/Carsten-Dominik.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_fig/Carsten-Dominik.jpg" class="rounded-circle d-block mx-auto img-fluid"></a></p>
 <p>Emacs <strong><code>Org-Mode</code></strong> was created by the astronomer <a href="https://en.wikipedia.org/wiki/Org-mode#:~:text=Org%20Mode%20was%20created%20by,mode%20by%20default%20since%202006">Carsten Dominik</a> in 2003 and remains to this day one of the most used and madly loved note-taking and GTD (Get-Things-Done) tools, with many of its functionality (agenda, tags, etc.) yet to be ported to any markdown engine.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Only keyboard, Baby!</p>
-<p><a href="_fig/real-programmers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_fig/real-programmers.png" class="img-fluid"></a></p></div></div><p>In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my <code>mbacou/mb-article</code> Quarto extebsion and other tidbits.</p>
+<p><a href="_fig/real-programmers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_fig/real-programmers.png" class="img-fluid"></a></p></div></div><p>In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my <code>mbacou/mb-article</code> Quarto extension and other tidbits.</p>
 <section id="css-grid-system" class="level1 page-columns page-full">
 <h1>CSS Grid System</h1>
 <p>One of Quarto’s many great features is the full flexibility of the <a href="https://getbootstrap.com/docs/5.3/getting-started/">Bootstrap v5.3</a> responsive grid system, with a few handy classes to help precisely position content in a document or on a web page. In particular Quarto now provides:</p>
@@ -542,8 +544,8 @@ column: screen-right</code></pre></td>
 <span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display column-page-left">
-<div id="htmlwidget-118f66c0ccfb37826732" style="width:100%;height:17rem;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-118f66c0ccfb37826732">{"x":{"options":{"minZoom":11,"maxZoom":13,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://maps.vlasenko.net/?lon={x}&lat={y}",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"sovietmap.com"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below...",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c8f23830595d00b32baa" style="width:100%;height:17rem;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c8f23830595d00b32baa">{"x":{"options":{"minZoom":11,"maxZoom":13,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://maps.vlasenko.net/?lon={x}&lat={y}",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"sovietmap.com"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below...",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -640,12 +642,12 @@ column: screen-right</code></pre></td>
 </div>
 </div>
 </section>
-<section id="bringing-it-altogther-quarto-format-extension" class="level1">
-<h1>Bringing it altogther: Quarto Format Extension</h1>
+<section id="bringing-it-altogether-quarto-format-extension" class="level1">
+<h1>Bringing it altogether: Quarto Format Extension</h1>
 <p>The final Quarto format was released under its own extension, named <code>mb-article</code>. To use in your own documents, simply install the extension with:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template mbacou/mb-article</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use mbacou/mb-article</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And to update the extension thereafter:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> update template mbacou/mb-article</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> update mbacou/mb-article</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="publishing-workflow" class="level1">
 <h1>Publishing Workflow</h1>
@@ -664,10 +666,10 @@ column: screen-right</code></pre></td>
 
 <div id="quarto-appendix"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-schulte2012" class="csl-entry" role="listitem">
-Schulte, Eric, Dan Davison, Thomas Dye, and Carsten Dominik. 2012. <span>“A Multi-Language Computing Environment for Literate Programming and Reproducible Research.”</span> <em>Journal of Statistical Software</em> 46 (3): 1–24. <a href="https://doi.org/10.18637/jss.v046.i03">https://doi.org/10.18637/jss.v046.i03</a>.
+Schulte, Eric, Dan Davison, Thomas Dye, and Carsten Dominik. 2012. <span>“A Multi-Language Computing Environment for Literate Programming and Reproducible Research.”</span> <em>Journal of Statistical Software</em> 46 (3). <a href="https://doi.org/10.18637/jss.v046.i03">https://doi.org/10.18637/jss.v046.i03</a>.
 </div>
-</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2023,
-  author = {BACOU, Melanie},
+</div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{melanie2023,
+  author = {Melanie , BACOU},
   title = {Time to {Migrate} This {Blog} from {*Distill*} to {*Quarto*}},
   date = {2023-10-01},
   url = {https://mbacou.com/posts/2022-12-01-theme/},
@@ -682,19 +684,12 @@ Schulte, Eric, Dan Davison, Thomas Dye, and Carsten Dominik. 2012. <span>“A Mu
     creating a custom Bootstrap theme for this revamped website, and
     design tweaks I made along the way.}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-BACOU, Melanie. 2023. <span>“Time to Migrate This Blog from *Distill* to
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-melanie2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Melanie, BACOU. 2023. <span>“Time to Migrate This Blog from *Distill* to
 *Quarto*.”</span> October 1. <a href="https://mbacou.com/posts/2022-12-01-theme/">https://mbacou.com/posts/2022-12-01-theme/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

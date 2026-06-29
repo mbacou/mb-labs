@@ -6,7 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Melanie BACOU">
+<meta name="author" content="BACOU, Melanie">
+<meta name="keywords" content="random forest, ERA5">
+<meta name="description" content="ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations.">
 
 <title>Rainfall: Merge Ground and Satellite Observations with RFMerge – Mel B. mb-labs</title>
 <style>
@@ -73,16 +75,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-746460a2f44fae2b83e2f14b2a1a127a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-0dfeddb783db43e03baada5433767f10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-65ad67f7a8ec059766e3bcd39f5568ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-0dfeddb783db43e03baada5433767f10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-9161184c1009bd6b6b31ce38d15b85f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -119,11 +120,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="Rainfall: Merge Ground and Satellite Observations with RFMerge – Mel B. mb-labs">
-<meta property="og:description" content="Recalibrate ERA5 hourly temperatures to CIMIS network ground observations">
-<meta property="og:image" content="https://mbacou.com/posts/2021-01-16-rfmerge/index_files/figure-html/unnamed-chunk-7-1.png">
+<meta property="og:description" content="ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations.">
+<meta property="og:image" content="https://mbacou.com/posts/2021-01-16-rfmerge/unnamed-chunk-10-1.png">
 <meta property="og:site_name" content="Mel B. mb-labs">
-<meta property="og:image:height" content="1100">
-<meta property="og:image:width" content="1540">
+<meta property="og:image:height" content="768">
+<meta property="og:image:width" content="1248">
 </head>
 
 <body class="floating slimcontent quarto-light">
@@ -138,8 +139,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <!-- Fixed article meta -->
   <div class="mb-meta mt-2 mt-md-4 mb-3">
 
-    <p class="fs-0">Dec 8, 2024 <i class="bi bi-clock ms-1"></i></p>
-
+        <p class="fs-0">Jun 29, 2026 <i class="bi bi-clock ms-1"></i></p>
+    
+        <div class="lh-sm fs-2 text-muted"><em><p>ERA5-LAND temperature estimate biases against ground observations collected from NOAA GHCN network of meteorological stations.</p></em></div>
     
   </div>
 
@@ -161,9 +163,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   <div class="d-none d-lg-block mt-auto">
     <!-- Optional sidebar logo -->
-        <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
+        <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
         <!-- Copyright -->
         <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
+      true
     </div>
       </div>
 
@@ -184,14 +187,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     <!-- logo -->
       <div class="d-lg-none mb-n1">
-      <a href="../../"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
+      <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-header-logo"></a>
     </div>
     
     <!-- left links -->
     <ul class="navbar-nav d-none d-md-flex flex-row w-100 me-2">
 
           <li class="nav-item flex-fill">
-        <a class="nav-link" href="../../index.html">
+        <a class="nav-link" href="../../blog.html">
           <span class="menu-text">My Blog</span></a>
       </li>
           <li class="nav-item flex-fill">
@@ -212,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="navbar-nav d-flex d-md-none flex-row w-100">
 
           <li class="nav-item flex-fill text-center">
-        <a class="nav-link" href="../../index.html">
+        <a class="nav-link" href="../../blog.html">
           <i class="bi bi-substack"></i></a>
       </li>
           <li class="nav-item flex-fill text-center">
@@ -232,6 +235,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <!-- right tools -->
     <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
 
+          <li class="nav-item">
+        <a class="nav-link px-1" href="index.xml">
+          <i class="bi bi-feed" role="img"></i></a>
+      </li>
           <li class="nav-item">
         <a class="nav-link px-1" href="https://github.com/mbacou/mb-labs">
           <i class="bi bi-github" role="img"></i></a>
@@ -285,23 +292,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+<header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
-        <li class="nav-item fs-3 text-primary fw-bold">meteo</li>
-        <li class="nav-item fs-3 text-primary fw-bold">risk modeling</li>
-        <li class="nav-item ms-auto">
-      <label class="">Draft <i class="bi bi-square"></i>
-      </label>
+  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">meteo</li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">risk modeling</li>
+        <li class="nav-item px-2 secondary ms-auto">
+      <span>Draft
+        ☐
+      </span>
     </li>
-    <li class="nav-item">
-      <label class="">Frozen <i class="bi bi-square"></i>
-      </label>
+    <li class="nav-item px-2 secondary">
+      <span>Frozen
+        ☐
+      </span>
     </li>
   </ul>
 
    <p class="title display-7">Rainfall: Merge Ground and Satellite Observations with RFMerge</p> 
-  <p class="subtitle lead"> Recalibrate ERA5 hourly temperatures to CIMIS network ground observations. </p>
+  <p class="subtitle lead"> Recalibrate ERA5 hourly temperatures to CIMIS network ground observations </p>
 
     
   
@@ -312,7 +321,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-  <span class="me-1">Melanie BACOU </span>
+  <span class="me-1">BACOU, Melanie </span>
   
 
 <a class="fs-4" href="mailto:mel@mbacou.com">
@@ -320,36 +329,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
           </p>
     
+    
+    
         <label>First published</label>
     <p class="lh-lg text-body">Jan 16, 2021</p>
-    
-    
     
         <label>Reuse</label>
     <p id="mb-reuse" class="lh-lg text-body"></p>
     
     
-  </div></div><div class="mx-lg-3 mb-2">
+  </div></div><div class="mx-lg-3">
     
+        <ul class="navbar-nav d-flex flex-row gap-1">
+      <li class="nav-item fs-1 text-muted me-1">Keywords: </li>
+       <li class="nav-item fs-1">random forest;</li>
+       <li class="nav-item fs-1">ERA5;</li>
+      
+    </ul>
     
-  </div>
-</header>
+</div></header>
 
 
-<hr>
-<p>While estimating winter season frost risk for almond orchards over Central California, project partners reported significant discrepancies between modeled-based temperature estimates provided by ERA5-LAND reanalysis dataset and ground observations. These biases impact the calculation of daily <strong>Frost-Degree-Day</strong> index (FDD) used to price insurance coverage.</p>
-<p>Here we want to recalibrate <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land">ERA5-LAND</a> hourly temperatures to <a href="https://cimis.water.ca.gov/">CIMIS</a> ground network observations in order to address ERA5-LAND model biases reported over Central California. The procedure involves the following steps:</p>
+<p>While estimating winter season frost risk for almond orchards over Central California, project partners reported significant discrepancies between modeled temperature estimates provided by <strong>ERA5-LAND Reanalysis</strong> dataset and ground observations. These biases impact the calculation of the daily <strong>Frost-Degree-Day</strong> index (FDD) used to price insurance coverage.</p>
+<p>Here we want to recalibrate <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land">ERA5-LAND</a> hourly temperatures to <a href="https://cimis.water.ca.gov/">CIMIS</a> ground network observations in order to address ERA5 model biases reported over Central California. The entire procedure involves the following steps:</p>
 <ul>
 <li>Build CIMIS time-series across OLAM portfolio extent<br>
 </li>
 <li>Build DEM covariate (using ERA5-LAND extent and spatial resolution)</li>
 <li>Use RFMerge procedure<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> to produce calibrated hourly raster stacks over the past 10 years (we limit this calibration from Jan-01 to Apr-30 every year)</li>
 </ul>
-<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;See Baez-Villanueva, O. M., Zambrano-Bigiarini, M., Diego, J., Osorio, G.-, &amp; Mcnamara, I. (2020). <em>Tutorial for merging satellite-based precipitation datasets with ground observations using RFmerge</em>.</p></div></div><p>This work was initially performed for <strong>WorldCover PBC</strong> and <strong>OLAM US</strong> in early 2021, and redacted here to omit confidential details.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;See Baez-Villanueva, O. M., Zambrano-Bigiarini, M., Diego, J., Osorio, G.-, &amp; Mcnamara, I. (2020). <em>Tutorial for merging satellite-based precipitation datasets with ground observations using RFmerge</em>.</p></div></div><p>This work was initially performed for <strong>WorldCover PBC</strong> and <strong>OLAM US</strong> in early 2021. It is somewhat redacted here to omit confidential details.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mbutils)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lattice)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#library(raster)</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zoo)</span>
@@ -357,72 +370,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RFmerge)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">&lt;-</span> mblabs<span class="sc">::</span>pal</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>mblabs<span class="sc">::</span><span class="fu">theme_labs_on</span>()</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">here</span>(<span class="st">"_data/2020-burn_olam_usa_06.RData"</span>))</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>my.settings <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">superpose.polygon=</span><span class="fu">list</span>(<span class="at">col=</span><span class="fu">alpha</span>(pal, .<span class="dv">6</span>), <span class="at">border=</span><span class="st">"transparent"</span>),</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">strip.background=</span><span class="fu">list</span>(<span class="at">col=</span>pal[<span class="st">"light"</span>])</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">font.main=</span><span class="dv">1</span>, <span class="at">font.sub=</span><span class="dv">1</span>, <span class="at">adj.main=</span><span class="dv">0</span>, <span class="at">adj.sub=</span><span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">interactive</span>()) {</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setwd</span>(<span class="st">"./posts/2021-01-16-rfmerge/"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"_data/2020-burn_olam_usa_06.RData"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>pal <span class="ot">&lt;-</span> <span class="fu">pal</span>(<span class="at">file =</span> <span class="st">"../../_brand.yml"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>my.settings <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">superpose.polygon =</span> <span class="fu">list</span>(<span class="at">col =</span> <span class="fu">alpha</span>(pal, .<span class="dv">6</span>), <span class="at">border =</span> <span class="st">"transparent"</span>),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">strip.background =</span> <span class="fu">list</span>(<span class="at">col =</span> pal[<span class="st">"light"</span>])</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <section id="covariate-layers" class="level1">
 <h1>Covariate Layers</h1>
 <p>Define zone of interest (ZOI), load and verify covariate layers.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear workspace, keep portfolio details</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="fu">here</span>(<span class="st">"./tmp/2020-burn_olam_usa_04.RData"</span>))</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="fu">c</span>(<span class="st">"dir"</span>, <span class="st">"pts.dt"</span>)))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear workspace, keep only portfolio details</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"./tmp/2020-burn_olam_usa_04.RData"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="fu">c</span>(<span class="st">"dir"</span>, <span class="st">"pts.dt"</span>)))</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">SpatialPointsDataFrame</span>(pts.dt[, .(X,Y)], <span class="fu">data.frame</span>(pts.dt), </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">proj4string=</span><span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>))</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>usa <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"GADM"</span>, <span class="at">country=</span><span class="st">"USA"</span>, <span class="at">level=</span><span class="dv">2</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Limit ZOI to OLAM counties</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>usa <span class="ot">&lt;-</span> usa[usa<span class="sc">$</span>NAME_2 <span class="sc">%in%</span> pts.dt[, <span class="fu">unique</span>(adm2_nm)],]</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>zoi <span class="ot">&lt;-</span> <span class="fu">extent</span>(usa)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>zoi</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># class      : Extent </span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># xmin       : -121.4844 </span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># xmax       : -117.6166 </span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ymin       : 34.7902 </span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># ymax       : 38.07786 </span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Catalog hourly ERA5 tmean</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">list.files</span>(</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">"../maps/ERA5LAND/2m_temperature/hourly/usa.ca"</span>), <span class="st">".nc"</span>, </span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">recursive=</span>T, <span class="at">full.names=</span>T)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify data archive</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">sapply</span>(f, <span class="cf">function</span>(x) <span class="fu">nlayers</span>(<span class="fu">brick</span>(x, <span class="at">quick=</span>T)))</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(n)</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 23 24  1 22</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>bad <span class="ot">&lt;-</span> f[<span class="fu">names</span>(n[n<span class="sc">&lt;</span><span class="dv">24</span>])]</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">sapply</span>(f[bad], <span class="cf">function</span>(x) <span class="fu">nlayers</span>(<span class="fu">brick</span>(x, <span class="at">quick=</span>T)))</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">data.table</span>(</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">fname =</span> <span class="fu">basename</span>(f[bad]),</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">nlayers =</span> n)</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co">#                  fname nlayers</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 1: daily_1981-01-01.nc      23</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># 2: daily_2020-08-01.nc       1</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="co"># 3: daily_2020-10-01.nc      22</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 4: daily_2020-10-02.nc      22</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co"># 5: daily_2020-10-03.nc      22</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="co"># 6: daily_2020-10-15.nc      22</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="fu">lapply</span>(f[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>], <span class="cf">function</span>(x) {</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">=</span> <span class="fu">brick</span>(x, <span class="at">quick=</span>T)</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">=</span> <span class="fu">setMinMax</span>(s)</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">=</span> <span class="fu">minValue</span>(s) <span class="sc">==</span> <span class="fu">maxValue</span>(s)</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">which</span>(s)</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>bad <span class="ot">&lt;-</span> N[<span class="fu">sapply</span>(N, <span class="st">`</span><span class="at">!=</span><span class="st">`</span>, <span class="fu">integer</span>(<span class="dv">0</span>))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">SpatialPointsDataFrame</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  pts.dt[, .(X, Y)],</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(pts.dt),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">proj4string =</span> <span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>usa <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"GADM"</span>, <span class="at">country =</span> <span class="st">"USA"</span>, <span class="at">level =</span> <span class="dv">2</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Limit ZOI to counties of interest to OLAM</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>usa <span class="ot">&lt;-</span> usa[usa<span class="sc">$</span>NAME_2 <span class="sc">%in%</span> pts.dt[, <span class="fu">unique</span>(adm2_nm)], ]</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>zoi <span class="ot">&lt;-</span> <span class="fu">extent</span>(usa)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>zoi</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># class      : Extent</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># xmin       : -121.4844</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># xmax       : -117.6166</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ymin       : 34.7902</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ymax       : 38.07786</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Catalog hourly ERA5 tmean</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">list.files</span>(</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="st">"../maps/ERA5LAND/2m_temperature/hourly/usa.ca"</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="st">".nc"</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">recursive =</span> T,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">full.names =</span> T</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify data archive</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">sapply</span>(f, <span class="cf">function</span>(x) <span class="fu">nlayers</span>(<span class="fu">brick</span>(x, <span class="at">quick =</span> T)))</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(n)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 23 24  1 22</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>bad <span class="ot">&lt;-</span> f[<span class="fu">names</span>(n[n <span class="sc">&lt;</span> <span class="dv">24</span>])]</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">sapply</span>(f[bad], <span class="cf">function</span>(x) <span class="fu">nlayers</span>(<span class="fu">brick</span>(x, <span class="at">quick =</span> T)))</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">data.table</span>(</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">fname =</span> <span class="fu">basename</span>(f[bad]),</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">nlayers =</span> n)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="co">#                  fname nlayers</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="co"># 1: daily_1981-01-01.nc      23</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="co"># 2: daily_2020-08-01.nc       1</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="co"># 3: daily_2020-10-01.nc      22</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="co"># 4: daily_2020-10-02.nc      22</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co"># 5: daily_2020-10-03.nc      22</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="co"># 6: daily_2020-10-15.nc      22</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="fu">lapply</span>(f[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>], <span class="cf">function</span>(x) {</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> <span class="fu">brick</span>(x, <span class="at">quick =</span> T)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> <span class="fu">setMinMax</span>(s)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> <span class="fu">minValue</span>(s) <span class="sc">==</span> <span class="fu">maxValue</span>(s)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">which</span>(s)</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>bad <span class="ot">&lt;-</span> N[<span class="fu">sapply</span>(N, <span class="st">`</span><span class="at">!=</span><span class="st">`</span>, <span class="fu">integer</span>(<span class="dv">0</span>))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>We note that <strong>6 days</strong> on records do not include 24 hourly series.</p>
-<p>Next we obtain long-term weather station records from CIMIS API.</p>
+<p>Next we obtain long-term weather station records from the CIMIS API.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set_key</span>(<span class="st">"27ab5faa-abbb-475e-8af1-f380862bca61"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>item <span class="ot">&lt;-</span> <span class="st">"hly-air-tmp"</span></span>
@@ -438,23 +457,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>obs.gis[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># HMS Lat/Lon to degree</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">X =</span> <span class="fu">unlist</span>(<span class="fu">tstrsplit</span>(HmsLongitude, <span class="st">" / "</span>, <span class="at">fixed=</span>T, <span class="at">keep=</span><span class="dv">2</span>L)),</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">Y =</span> <span class="fu">unlist</span>(<span class="fu">tstrsplit</span>(HmsLatitude, <span class="st">" / "</span>, <span class="at">fixed=</span>T, <span class="at">keep=</span><span class="dv">2</span>L))</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">X =</span> <span class="fu">unlist</span>(<span class="fu">tstrsplit</span>(HmsLongitude, <span class="st">" / "</span>, <span class="at">fixed =</span> T, <span class="at">keep =</span> <span class="dv">2</span>L)),</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">Y =</span> <span class="fu">unlist</span>(<span class="fu">tstrsplit</span>(HmsLatitude, <span class="st">" / "</span>, <span class="at">fixed =</span> T, <span class="at">keep =</span> <span class="dv">2</span>L))</span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>)][, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">X =</span> <span class="fu">as.numeric</span>(X),</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">Y =</span> <span class="fu">as.numeric</span>(Y)</span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>)][, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Cast dates</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">date_start =</span> <span class="fu">as.Date</span>(ConnectDate, <span class="at">format=</span><span class="st">"%m/%d/%Y"</span>),</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">date_end =</span> <span class="fu">as.Date</span>(DisconnectDate, <span class="at">format=</span><span class="st">"%m/%d/%Y"</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">date_start =</span> <span class="fu">as.Date</span>(ConnectDate, <span class="at">format =</span> <span class="st">"%m/%d/%Y"</span>),</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">date_end =</span> <span class="fu">as.Date</span>(DisconnectDate, <span class="at">format =</span> <span class="st">"%m/%d/%Y"</span>)</span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>)]</span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>obs.gis[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, .(HmsLongitude, HmsLatitude, X, Y, date_start, date_end)]</span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>obs.gis <span class="ot">&lt;-</span> obs.gis[, .(StationNbr, Name, X, Y, date_start, date_end, IsActive)]</span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># There are duplicated stations (?)</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>obs.gis <span class="ot">&lt;-</span> <span class="fu">unique</span>(obs.gis, <span class="at">by=</span><span class="fu">c</span>(<span class="st">"StationNbr"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"date_start"</span>))</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="fu">anyDuplicated</span>(obs.gis, <span class="at">by=</span><span class="st">"StationNbr"</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>obs.gis <span class="ot">&lt;-</span> <span class="fu">unique</span>(obs.gis, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"StationNbr"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"date_start"</span>))</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="fu">anyDuplicated</span>(obs.gis, <span class="at">by =</span> <span class="st">"StationNbr"</span>)</span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Date ranges that are available</span></span>
 <span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>obs.gis[, .(<span class="fu">range</span>(date_start), <span class="fu">range</span>(date_end))]</span>
@@ -462,98 +481,115 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co"># 1: 1982-05-30 1985-07-23</span></span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co"># 2: 2020-10-28 2050-12-31</span></span>
 <span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>obs.gis <span class="ot">&lt;-</span> <span class="fu">SpatialPointsDataFrame</span>(obs.gis[, .(X, Y)], <span class="fu">data.frame</span>(obs.gis),</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">proj4string=</span><span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>))</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>obs.gis <span class="ot">&lt;-</span> <span class="fu">crop</span>(obs.gis, zoi)</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot maps</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">crop</span>(<span class="fu">raster</span>(r, <span class="at">layer=</span><span class="dv">2</span>), zoi), <span class="at">main=</span><span class="fu">basename</span>(f[<span class="dv">2</span>]))</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">add=</span>T, <span class="at">pch=</span><span class="st">"*"</span>)</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(obs.gis, <span class="at">add=</span>T, <span class="at">col=</span>pal[<span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"green"</span>)][<span class="dv">1</span><span class="sc">+</span>(obs.gis<span class="sc">$</span>IsActive<span class="sc">==</span><span class="st">"True"</span>)], <span class="at">pch=</span><span class="st">"x"</span>)</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>obs.lst <span class="ot">&lt;-</span> obs.gis<span class="sc">@</span>data[, <span class="st">"StationNbr"</span>]</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(obs.lst)</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>obs.gis <span class="ot">&lt;-</span> <span class="fu">setDT</span>(obs.gis<span class="sc">@</span>data)</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co"># API request limit at 1,750 records, so let's batch it</span></span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>drange <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"2017-01-01"</span>, <span class="st">"2017-04-30"</span>)</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>obs <span class="ot">&lt;-</span> <span class="fu">lapply</span>(obs.lst, <span class="cf">function</span>(x) {</span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>  date_start <span class="ot">=</span> obs.gis[StationNbr<span class="sc">==</span>x, date_start]</span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>  date_end <span class="ot">=</span> obs.gis[StationNbr<span class="sc">==</span>x, date_end]</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>  date_start <span class="ot">=</span> <span class="fu">pmax</span>(<span class="fu">as.Date</span>(drange[<span class="dv">1</span>]), date_start)</span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>  date_end <span class="ot">=</span> <span class="fu">pmin</span>(<span class="fu">as.Date</span>(drange[<span class="dv">2</span>]), date_end)</span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>  res <span class="ot">=</span> <span class="cf">if</span>(date_end <span class="sc">&gt;=</span> date_start) {</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>    s <span class="ot">=</span> <span class="fu">seq.Date</span>(date_start, date_end, <span class="at">by=</span><span class="st">"10 days"</span>)</span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lapply</span>(s, <span class="cf">function</span>(y) {</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>      t <span class="ot">=</span> <span class="fu">try</span>(<span class="fu">cimis_data</span>(</span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>        <span class="at">targets=</span><span class="fu">as.integer</span>(x), <span class="at">items=</span>item, <span class="at">measure.unit=</span><span class="st">"M"</span>, <span class="at">start.date=</span>y, <span class="at">end.date=</span>y<span class="sc">+</span><span class="dv">10-1</span>))</span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>      t <span class="ot">=</span> <span class="cf">if</span>(<span class="fu">class</span>(t)[<span class="dv">1</span>]<span class="sc">==</span><span class="st">"try-error"</span>) <span class="cn">NULL</span> <span class="cf">else</span> <span class="fu">setDT</span>(t)</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(t)</span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>    })</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cn">NULL</span></span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(res)</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>obs <span class="ot">&lt;-</span> <span class="fu">lapply</span>(obs, rbindlist)</span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(obs) <span class="ot">&lt;-</span> obs.lst</span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>obs <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(obs, <span class="at">fill=</span>T, <span class="at">idcol=</span><span class="st">"StationNbr"</span>)</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean up resulting dataset</span></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>obs[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>  <span class="at">Name =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>  <span class="at">Type =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>  <span class="at">Owner =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>  <span class="at">Standard =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>  <span class="at">ZipCodes =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>  <span class="at">Item =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>  <span class="at">Qc =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>  <span class="at">Unit =</span> <span class="cn">NULL</span></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>)]</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify</span></span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>obs[StationNbr <span class="sc">!=</span> Station, .N]</span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>obs[, .N, by<span class="ot">=</span>Scope]</span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>obs[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>  <span class="at">Station =</span> <span class="cn">NULL</span>,</span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>  <span class="at">Scope =</span> <span class="cn">NULL</span></span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>)]</span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a><span class="co"># Tally ground observations</span></span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>obs[, .(.N, <span class="fu">min</span>(Date), <span class="fu">max</span>(Date)), keyby<span class="ot">=</span>.(StationNbr)]</span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="co"># =&gt; "232" station missing records 2160/2880</span></span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>obs[, .(.N, <span class="fu">sum</span>(<span class="fu">is.na</span>(Value)), <span class="fu">min</span>(Date), <span class="fu">max</span>(Date)), keyby<span class="ot">=</span>.(StationNbr)]</span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="dv">24</span><span class="sc">*</span>(<span class="fu">as.Date</span>(drange[<span class="dv">2</span>])<span class="sc">-</span><span class="fu">as.Date</span>(drange[<span class="dv">1</span>])<span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep stations nearest to OLAM3 site portfolio</span></span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>ids <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">168</span>, <span class="dv">206</span>, <span class="dv">145</span>, <span class="dv">188</span>, <span class="dv">148</span>)</span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="fu">fwrite</span>(obs[StationNbr <span class="sc">%in%</span> <span class="fu">as.character</span>(ids)], <span class="fu">here</span>(<span class="st">"./out/CIMIA_OLAM3_2017.csv"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>obs.gis <span class="ot">&lt;-</span> <span class="fu">SpatialPointsDataFrame</span>(</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  obs.gis[, .(X, Y)],</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(obs.gis),</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  <span class="at">proj4string =</span> <span class="fu">CRS</span>(<span class="st">"+init=epsg:4326"</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>obs.gis <span class="ot">&lt;-</span> <span class="fu">crop</span>(obs.gis, zoi)</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot maps</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">crop</span>(<span class="fu">raster</span>(r, <span class="at">layer =</span> <span class="dv">2</span>), zoi), <span class="at">main =</span> <span class="fu">basename</span>(f[<span class="dv">2</span>]))</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">add =</span> T, <span class="at">pch =</span> <span class="st">"*"</span>)</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>  obs.gis,</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  <span class="at">add =</span> T,</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> pal[<span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"green"</span>)][<span class="dv">1</span> <span class="sc">+</span> (obs.gis<span class="sc">$</span>IsActive <span class="sc">==</span> <span class="st">"True"</span>)],</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="st">"x"</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>obs.lst <span class="ot">&lt;-</span> obs.gis<span class="sc">@</span>data[, <span class="st">"StationNbr"</span>]</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(obs.lst)</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>obs.gis <span class="ot">&lt;-</span> <span class="fu">setDT</span>(obs.gis<span class="sc">@</span>data)</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="co"># API request limit at 1,750 records, so let's batch it</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>drange <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"2017-01-01"</span>, <span class="st">"2017-04-30"</span>)</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>obs <span class="ot">&lt;-</span> <span class="fu">lapply</span>(obs.lst, <span class="cf">function</span>(x) {</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>  date_start <span class="ot">&lt;-</span> obs.gis[StationNbr <span class="sc">==</span> x, date_start]</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  date_end <span class="ot">&lt;-</span> obs.gis[StationNbr <span class="sc">==</span> x, date_end]</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>  date_start <span class="ot">&lt;-</span> <span class="fu">pmax</span>(<span class="fu">as.Date</span>(drange[<span class="dv">1</span>]), date_start)</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>  date_end <span class="ot">&lt;-</span> <span class="fu">pmin</span>(<span class="fu">as.Date</span>(drange[<span class="dv">2</span>]), date_end)</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>  res <span class="ot">&lt;-</span> <span class="cf">if</span> (date_end <span class="sc">&gt;=</span> date_start) {</span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>    s <span class="ot">&lt;-</span> <span class="fu">seq.Date</span>(date_start, date_end, <span class="at">by =</span> <span class="st">"10 days"</span>)</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>    <span class="fu">lapply</span>(s, <span class="cf">function</span>(y) {</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>      t <span class="ot">&lt;-</span> <span class="fu">try</span>(<span class="fu">cimis_data</span>(</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>        <span class="at">targets =</span> <span class="fu">as.integer</span>(x),</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>        <span class="at">items =</span> item,</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>        <span class="at">measure.unit =</span> <span class="st">"M"</span>,</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>        <span class="at">start.date =</span> y,</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>        <span class="at">end.date =</span> y <span class="sc">+</span> <span class="dv">10</span> <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>      ))</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>      t <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">class</span>(t)[<span class="dv">1</span>] <span class="sc">==</span> <span class="st">"try-error"</span>) <span class="cn">NULL</span> <span class="cf">else</span> <span class="fu">setDT</span>(t)</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(t)</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>    <span class="cn">NULL</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(res)</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>obs <span class="ot">&lt;-</span> <span class="fu">lapply</span>(obs, rbindlist)</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(obs) <span class="ot">&lt;-</span> obs.lst</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>obs <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(obs, <span class="at">fill =</span> T, <span class="at">idcol =</span> <span class="st">"StationNbr"</span>)</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean up resulting dataset</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>obs[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>  <span class="at">Name =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>  <span class="at">Type =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>  <span class="at">Owner =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>  <span class="at">Standard =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>  <span class="at">ZipCodes =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>  <span class="at">Item =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>  <span class="at">Qc =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>  <span class="at">Unit =</span> <span class="cn">NULL</span></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>)]</span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>obs[StationNbr <span class="sc">!=</span> Station, .N]</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>obs[, .N, by <span class="ot">=</span> Scope]</span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>obs[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>  <span class="at">Station =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>  <span class="at">Scope =</span> <span class="cn">NULL</span></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>)]</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Tally ground observations</span></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>obs[, .(.N, <span class="fu">min</span>(Date), <span class="fu">max</span>(Date)), keyby <span class="ot">=</span> .(StationNbr)]</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="co"># =&gt; "232" station missing records 2160/2880</span></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>obs[, .(.N, <span class="fu">sum</span>(<span class="fu">is.na</span>(Value)), <span class="fu">min</span>(Date), <span class="fu">max</span>(Date)), keyby <span class="ot">=</span> .(StationNbr)]</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a><span class="dv">24</span> <span class="sc">*</span> (<span class="fu">as.Date</span>(drange[<span class="dv">2</span>]) <span class="sc">-</span> <span class="fu">as.Date</span>(drange[<span class="dv">1</span>]) <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep stations nearest to OLAM3 site portfolio</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>ids <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">168</span>, <span class="dv">206</span>, <span class="dv">145</span>, <span class="dv">188</span>, <span class="dv">148</span>)</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a><span class="fu">fwrite</span>(obs[StationNbr <span class="sc">%in%</span> <span class="fu">as.character</span>(ids)], <span class="st">"./out/CIMIA_OLAM3_2017.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Prepare DEM over ERA5 extent.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare DEM at ERA5 extent and resolution</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dem1 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon=</span>zoi[<span class="dv">2</span>], <span class="at">lat=</span>zoi[<span class="dv">3</span>])</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dem2 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon=</span>zoi[<span class="dv">1</span>], <span class="at">lat=</span>zoi[<span class="dv">4</span>])</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>dem3 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon=</span>zoi[<span class="dv">2</span>], <span class="at">lat=</span>zoi[<span class="dv">4</span>])</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dem4 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon=</span>zoi[<span class="dv">1</span>], <span class="at">lat=</span>zoi[<span class="dv">3</span>])</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>dem <span class="ot">&lt;-</span> <span class="fu">merge</span>(dem1, dem2, dem3, dem4, <span class="at">ext=</span>zoi)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dem1 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon =</span> zoi[<span class="dv">2</span>], <span class="at">lat =</span> zoi[<span class="dv">3</span>])</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>dem2 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon =</span> zoi[<span class="dv">1</span>], <span class="at">lat =</span> zoi[<span class="dv">4</span>])</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>dem3 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon =</span> zoi[<span class="dv">2</span>], <span class="at">lat =</span> zoi[<span class="dv">4</span>])</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dem4 <span class="ot">&lt;-</span> <span class="fu">getData</span>(<span class="st">"SRTM"</span>, <span class="at">lon =</span> zoi[<span class="dv">1</span>], <span class="at">lat =</span> zoi[<span class="dv">3</span>])</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>dem <span class="ot">&lt;-</span> <span class="fu">merge</span>(dem1, dem2, dem3, dem4, <span class="at">ext =</span> zoi)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Convert station time-series to <code>zoo</code> wide arrays.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prep station time-series, require ZOO wide format</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>obs[, Time <span class="sc">:</span><span class="er">=</span> <span class="fu">paste</span>(<span class="fu">as.character</span>(Date), Hour)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>][, <span class="fu">c</span>(<span class="st">"Date"</span>, <span class="st">"Time"</span>) <span class="sc">:</span><span class="er">=</span> <span class="fu">IDateTime</span>(</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.POSIXlt</span>(Time, <span class="at">format=</span><span class="st">"%Y-%m-%d %H%M"</span>, <span class="at">tz=</span><span class="st">"America/Los_Angeles"</span>))]</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(obs[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>, .N)])</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2017-01-01 2300 =&gt; 2017-01-01 23:00</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2017-01-01 2400 =&gt; 2017-01-02 00:00</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># =&gt; OK</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">setorder</span>(obs, StationNbr, Date, Time)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>obs.ts <span class="ot">&lt;-</span> <span class="fu">dcast</span>(obs, Date<span class="sc">+</span>Time<span class="sc">~</span>StationNbr, <span class="at">value.var=</span><span class="st">"Value"</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>obs.ts <span class="ot">&lt;-</span> <span class="fu">zoo</span>(</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  obs.ts[, .SD, <span class="at">.SDcols=</span><span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)], </span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">order.by=</span>obs.ts[, <span class="fu">as.POSIXlt</span>(<span class="fu">paste</span>(Date, Time, <span class="at">tz=</span><span class="st">"America/Los_Angeles"</span>))]</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>obs[, Time <span class="sc">:</span><span class="er">=</span> <span class="fu">paste</span>(<span class="fu">as.character</span>(Date), Hour)][,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"Date"</span>, <span class="st">"Time"</span>) <span class="sc">:</span><span class="er">=</span> <span class="fu">IDateTime</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">as.POSIXlt</span>(Time, <span class="at">format =</span> <span class="st">"%Y-%m-%d %H%M"</span>, <span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(obs[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>, .N)])</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2017-01-01 2300 =&gt; 2017-01-01 23:00</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2017-01-01 2400 =&gt; 2017-01-02 00:00</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># =&gt; OK</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">setorder</span>(obs, StationNbr, Date, Time)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>obs.ts <span class="ot">&lt;-</span> <span class="fu">dcast</span>(obs, Date <span class="sc">+</span> Time <span class="sc">~</span> StationNbr, <span class="at">value.var =</span> <span class="st">"Value"</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>obs.ts <span class="ot">&lt;-</span> <span class="fu">zoo</span>(</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  obs.ts[, .SD, <span class="at">.SDcols =</span> <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)],</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">order.by =</span> obs.ts[, <span class="fu">as.POSIXlt</span>(<span class="fu">paste</span>(Date, Time, <span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>))]</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="recalibrate-hourly-temperature-estimates-using-randon-forest" class="level1">
@@ -569,19 +605,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Limit ERA5 covariate</span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">brick</span>(<span class="fu">as.list</span>(f))</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">crop</span>(era, zoi, <span class="at">filename=</span><span class="fu">here</span>(<span class="st">"./out/ERA5_2m_temperature_2017.grd"</span>), <span class="at">overwrite=</span>T)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">brick</span>(<span class="fu">here</span>(<span class="st">"./out/ERA5_2m_temperature_2017.grd"</span>))</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">crop</span>(era, zoi, <span class="at">filename =</span> <span class="st">"./out/ERA5_2m_temperature_2017.grd"</span>, <span class="at">overwrite =</span> T)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">brick</span>(<span class="st">"./out/ERA5_2m_temperature_2017.grd"</span>)</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Align DEM to ERA5</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>dem <span class="ot">&lt;-</span> <span class="fu">resample</span>(dem, era[[<span class="dv">1</span>]], <span class="at">filename=</span><span class="fu">here</span>(<span class="st">"./out/SRTM_ERA5.grd"</span>))</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>dem <span class="ot">&lt;-</span> <span class="fu">resample</span>(dem, era[[<span class="dv">1</span>]], <span class="at">filename =</span> <span class="st">"./out/SRTM_ERA5.grd"</span>)</span>
 <span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(<span class="fu">res</span>(dem), <span class="fu">res</span>(era))</span>
 <span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(<span class="fu">extent</span>(dem), <span class="fu">extent</span>(era))</span>
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(<span class="fu">nlayers</span>(era), <span class="fu">nrow</span>(obs.ts))</span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ZOI requires `sf`</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>stations <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_as_sf</span>(obs.gis, <span class="at">coords=</span><span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>), <span class="at">crs=</span><span class="dv">4326</span>)</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>stations <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_as_sf</span>(obs.gis, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
 <span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>zoi <span class="ot">&lt;-</span> <span class="fu">st_as_sfc</span>(<span class="fu">st_bbox</span>(usa))</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>zoi <span class="ot">&lt;-</span> <span class="fu">st_sf</span>(<span class="fu">data.frame</span>(<span class="at">ID=</span><span class="dv">1</span>), <span class="at">geom=</span>zoi)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>zoi <span class="ot">&lt;-</span> <span class="fu">st_sf</span>(<span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="dv">1</span>), <span class="at">geom =</span> zoi)</span>
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify CRS</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(<span class="fu">st_crs</span>(zoi), <span class="fu">st_crs</span>(era))</span>
@@ -589,87 +625,112 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Reproject all to NAD_1983_California_Teale_Albers</span></span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>NAD83 <span class="ot">&lt;-</span> <span class="fu">CRS</span>(<span class="st">"+init=epsg:3310"</span>)</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">projectRaster</span>(<span class="at">from=</span>era, <span class="at">crs=</span>NAD83)</span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>dem <span class="ot">&lt;-</span> <span class="fu">projectRaster</span>(<span class="at">from=</span>dem, <span class="at">crs=</span>NAD83)</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>stations <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(stations, <span class="at">crs=</span><span class="dv">3310</span>)</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">projectRaster</span>(<span class="at">from =</span> era, <span class="at">crs =</span> NAD83)</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>dem <span class="ot">&lt;-</span> <span class="fu">projectRaster</span>(<span class="at">from =</span> dem, <span class="at">crs =</span> NAD83)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>stations <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(stations, <span class="at">crs =</span> <span class="dv">3310</span>)</span>
 <span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(pts, <span class="fu">CRS</span>(<span class="st">"+init=epsg:3310"</span>))</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>zoi <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(zoi, <span class="at">crs=</span><span class="dv">3310</span>)</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>zoi <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(zoi, <span class="at">crs =</span> <span class="dv">3310</span>)</span>
 <span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>obs.gis[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
 <span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">Lon =</span> <span class="fu">st_coordinates</span>(stations)[, <span class="st">"X"</span>],</span>
 <span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">Lat =</span> <span class="fu">st_coordinates</span>(stations)[, <span class="st">"Y"</span>]</span>
 <span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>)]</span>
 <span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Covariates</span></span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>covariates <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">era=</span>era, <span class="at">dem=</span>dem)</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>covariates <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">era =</span> era, <span class="at">dem =</span> dem)</span>
 <span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>obs.meta <span class="ot">&lt;-</span> obs.gis[StationNbr <span class="sc">%in%</span> <span class="fu">names</span>(obs.ts), .(StationNbr, Lon, Lat)]</span>
 <span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="co"># RFmerge</span></span>
-<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">here</span>(<span class="st">"./out/2017_RFmerge_proj"</span>))</span>
-<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>mc.cores <span class="ot">&lt;-</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>()<span class="sc">-</span><span class="dv">2</span></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">"./out/2017_RFmerge_proj"</span>)</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>mc.cores <span class="ot">&lt;-</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>() <span class="sc">-</span> <span class="dv">2</span></span>
 <span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>rfmep <span class="ot">&lt;-</span> <span class="fu">RFmerge</span>(</span>
-<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> obs.ts, </span>
-<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>  <span class="at">metadata =</span> obs.meta, </span>
-<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>  <span class="at">cov =</span> covariates, </span>
-<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">id=</span><span class="st">"StationNbr"</span>, <span class="at">lat=</span><span class="st">"Lat"</span>, <span class="at">lon=</span><span class="st">"Lon"</span>, <span class="at">ED=</span><span class="cn">TRUE</span>,</span>
-<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">mask=</span>zoi, <span class="at">training=</span><span class="fl">0.9</span>, <span class="at">write2disk=</span><span class="cn">TRUE</span>, <span class="at">drty.out=</span><span class="fu">here</span>(<span class="st">"./out/2017_RFmerge_proj"</span>),</span>
-<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>  <span class="at">parallel=</span><span class="st">"parallel"</span>, <span class="at">par.nnodes=</span>mc.cores)</span>
-<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(rfmep)[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="fu">nlayers</span>(rfmep))]</span>
-<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "X2017.01.01.01.00.00" "X2017.01.01.02.00.00" "X2017.05.01.00.00.00"</span></span>
-<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="fu">crs</span>(rfmep)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> obs.ts,</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>  <span class="at">metadata =</span> obs.meta,</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>  <span class="at">cov =</span> covariates,</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="st">"StationNbr"</span>,</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">lat =</span> <span class="st">"Lat"</span>,</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>  <span class="at">lon =</span> <span class="st">"Lon"</span>,</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>  <span class="at">ED =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>  <span class="at">mask =</span> zoi,</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>  <span class="at">training =</span> <span class="fl">0.9</span>,</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>  <span class="at">write2disk =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">drty.out =</span> <span class="st">"./out/2017_RFmerge_proj"</span>,</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">parallel =</span> <span class="st">"parallel"</span>,</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">par.nnodes =</span> mc.cores</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(rfmep)[<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="fu">nlayers</span>(rfmep))]</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "X2017.01.01.01.00.00" "X2017.01.01.02.00.00" "X2017.05.01.00.00.00"</span></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="fu">crs</span>(rfmep)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Extract recalibrated time-series across almond production sites.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract recalibrated time-series across production sites</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">removeTmpFiles</span>(<span class="at">h=</span><span class="dv">0</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">removeTmpFiles</span>(<span class="at">h =</span> <span class="dv">0</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>dt.imp <span class="ot">&lt;-</span> <span class="fu">extract</span>(rfmep, pts)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>dt.imp <span class="ot">=</span> <span class="fu">as.data.table</span>(dt.imp, <span class="at">keep.rownames=</span><span class="cn">TRUE</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>dt.imp <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>(dt.imp, <span class="at">keep.rownames =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>dt.imp[, loc_id <span class="sc">:</span><span class="er">=</span> pts<span class="sc">$</span>loc_id]</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>dt.imp <span class="ot">=</span> <span class="fu">melt</span>(dt.imp, <span class="at">id.vars=</span><span class="st">"loc_id"</span>, <span class="at">variable.name=</span><span class="st">"time"</span>, <span class="at">value.name=</span><span class="st">"value"</span>, <span class="at">variable.factor=</span>F)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>dt.imp[, time <span class="sc">:</span><span class="er">=</span> <span class="fu">as.POSIXct</span>(time, <span class="at">format=</span><span class="st">"X%Y.%m.%d.%H.%M.%OS"</span>, <span class="at">tz=</span><span class="st">"America/Los_Angeles"</span>)]</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>dt.imp[, <span class="fu">range</span>(time)]</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>dt.imp[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert to IDate</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">date =</span> <span class="fu">as.IDate</span>(time),</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">time =</span> <span class="fu">as.ITime</span>(time)</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>)]</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-extract ERA5-LAND over period to double-check</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">brick</span>(f[<span class="dv">1</span>], <span class="at">quick=</span>T)</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(pts, <span class="fu">crs</span>(r))</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>dt.era <span class="ot">&lt;-</span> <span class="fu">lapply</span>(f, <span class="cf">function</span>(x) {</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  r <span class="ot">=</span> <span class="fu">brick</span>(x, <span class="at">quick=</span>T)</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">=</span> <span class="fu">extract</span>(r, pts)</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">=</span> <span class="fu">as.data.table</span>(y, <span class="at">keep.rownames=</span><span class="cn">TRUE</span>)</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  y[, loc_id <span class="sc">:</span><span class="er">=</span> pts<span class="sc">$</span>loc_id]</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">=</span> <span class="fu">melt</span>(y, <span class="at">id.vars=</span><span class="st">"loc_id"</span>, <span class="at">variable.name=</span><span class="st">"time"</span>, <span class="at">value.name=</span><span class="st">"value"</span>, <span class="at">variable.factor=</span>F)</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  y[, time <span class="sc">:</span><span class="er">=</span> <span class="fu">as.POSIXct</span>(time, <span class="at">format=</span><span class="st">"X%Y.%m.%d.%H.%M.%OS"</span>, <span class="at">tz=</span><span class="st">"UTC"</span>)]</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>dt.era <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(dt.era)</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>dt.era[, <span class="fu">range</span>(time)]</span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>dt.era[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert to IDate</span></span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">date =</span> <span class="fu">as.IDate</span>(time),</span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">time =</span> <span class="fu">as.ITime</span>(time)</span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>)]</span>
-<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Impute ERA5 hourly time-series with output of RFmerge</span></span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">here</span>(<span class="st">"./tmp/2020-tmean-hourly_olam_ca_almd.rds"</span>))</span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>dt.imp[dt, on<span class="ot">=</span>.(loc_id, date, time), era <span class="sc">:</span><span class="er">=</span> i.value</span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>][dt.era, on<span class="ot">=</span>.(loc_id, date, time), era_valid <span class="sc">:</span><span class="er">=</span> i.value]</span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Save</span></span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> dt[<span class="sc">!</span>dt.imp, on<span class="ot">=</span>.(loc_id, date, time)]</span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="fu">rbind</span>(dt, dt.imp[, .SD, <span class="at">.SDcols=</span><span class="fu">names</span>(dt)])</span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a><span class="fu">setorder</span>(dt, loc_id, date, time)</span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(dt, <span class="fu">here</span>(<span class="st">"./tmp/2020-tmean-hourly_olam_ca_almd_imputed.rds"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>dt.imp <span class="ot">&lt;-</span> <span class="fu">melt</span>(</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  dt.imp,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">id.vars =</span> <span class="st">"loc_id"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">variable.name =</span> <span class="st">"time"</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">value.name =</span> <span class="st">"value"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">variable.factor =</span> F</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>dt.imp[,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  time <span class="sc">:</span><span class="er">=</span> <span class="fu">as.POSIXct</span>(time, <span class="at">format =</span> <span class="st">"X%Y.%m.%d.%H.%M.%OS"</span>, <span class="at">tz =</span> <span class="st">"America/Los_Angeles"</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>dt.imp[, <span class="fu">range</span>(time)]</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>dt.imp[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert to IDate</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">date =</span> <span class="fu">as.IDate</span>(time),</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">time =</span> <span class="fu">as.ITime</span>(time)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>)]</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Re-extract ERA5-LAND over period to double-check</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">brick</span>(f[<span class="dv">1</span>], <span class="at">quick =</span> T)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">spTransform</span>(pts, <span class="fu">crs</span>(r))</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>dt.era <span class="ot">&lt;-</span> <span class="fu">lapply</span>(f, <span class="cf">function</span>(x) {</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  r <span class="ot">&lt;-</span> <span class="fu">brick</span>(x, <span class="at">quick =</span> T)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">extract</span>(r, pts)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>(y, <span class="at">keep.rownames =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  y[, loc_id <span class="sc">:</span><span class="er">=</span> pts<span class="sc">$</span>loc_id]</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">melt</span>(</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    y,</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">id.vars =</span> <span class="st">"loc_id"</span>,</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">variable.name =</span> <span class="st">"time"</span>,</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">value.name =</span> <span class="st">"value"</span>,</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">variable.factor =</span> F</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  y[, time <span class="sc">:</span><span class="er">=</span> <span class="fu">as.POSIXct</span>(time, <span class="at">format =</span> <span class="st">"X%Y.%m.%d.%H.%M.%OS"</span>, <span class="at">tz =</span> <span class="st">"UTC"</span>)]</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>dt.era <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(dt.era)</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>dt.era[, <span class="fu">range</span>(time)]</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>dt.era[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Convert to IDate</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>  <span class="at">date =</span> <span class="fu">as.IDate</span>(time),</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>  <span class="at">time =</span> <span class="fu">as.ITime</span>(time)</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>)]</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Impute ERA5 hourly time-series with output of RFmerge</span></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"./tmp/2020-tmean-hourly_olam_ca_almd.rds"</span>)</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>dt.imp[dt, on <span class="ot">=</span> .(loc_id, date, time), era <span class="sc">:</span><span class="er">=</span> i.value][</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>  dt.era,</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>  on <span class="ot">=</span> .(loc_id, date, time),</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>  era_valid <span class="sc">:</span><span class="er">=</span> i.value</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Save</span></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> dt[<span class="sc">!</span>dt.imp, on <span class="ot">=</span> .(loc_id, date, time)]</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>dt <span class="ot">&lt;-</span> <span class="fu">rbind</span>(dt, dt.imp[, .SD, <span class="at">.SDcols =</span> <span class="fu">names</span>(dt)])</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a><span class="fu">setorder</span>(dt, loc_id, date, time)</span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(dt, <span class="st">"./tmp/2020-tmean-hourly_olam_ca_almd_imputed.rds"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(x, i, j, t, tmp, dem1, dem2, dem3, dem4, n, x1, x2, dt, dtc)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="fu">here</span>(<span class="st">"./tmp/2020-burn_olam_usa_06.RData"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="st">"./tmp/2020-burn_olam_usa_06.RData"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="explore-results" class="level1 page-columns page-full">
@@ -677,7 +738,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Validate ZOI, DEM, and ERA5 covariates.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot with package `terra` (instead of deprecated `raster`)</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="fu">here</span>(<span class="st">"./_out/ERA5_2m_temperature_2017.grd"</span>))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>era <span class="ot">&lt;-</span> <span class="fu">rast</span>(<span class="st">"./_out/ERA5_2m_temperature_2017.grd"</span>)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Align projections</span></span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>pts <span class="ot">&lt;-</span> <span class="fu">vect</span>(pts)</span>
@@ -692,35 +753,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>rfmep <span class="ot">&lt;-</span> <span class="fu">project</span>(<span class="fu">rast</span>(rfmep[[<span class="dv">1</span>]]), <span class="st">"epsg:4326"</span>)</span>
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Validate ERA5 and DEM covariates</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(era, <span class="at">ext=</span>zoi, <span class="at">ylab=</span><span class="fu">names</span>(era), <span class="at">col=</span><span class="fu">terrain.colors</span>(<span class="dv">20</span>),</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"ERA5-LAND Temperature (°C) on 2017-01-01 01:00"</span>)</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations, <span class="at">add=</span>T, <span class="at">pch=</span><span class="st">"x"</span>, <span class="at">col=</span>pal[[<span class="st">"dark"</span>]])</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">add=</span>T, <span class="at">pch=</span><span class="st">"o"</span>, <span class="at">col=</span>pal[<span class="st">"blue"</span>])</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts[pts<span class="sc">$</span>loc_id <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">82</span>, <span class="dv">83</span>), ], <span class="at">add=</span>T, <span class="at">col=</span>pal[<span class="st">"red"</span>], <span class="at">pch=</span><span class="st">"o"</span>)</span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottom"</span>, <span class="at">ncol=</span><span class="dv">3</span>, <span class="at">bty=</span><span class="st">"n"</span>,</span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"CIMIS WS"</span>, <span class="st">"OLAM site"</span>, <span class="st">"Portfolio site"</span>),</span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span>pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>)], <span class="at">pch=</span><span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"o"</span>, <span class="st">"o"</span>))</span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dem, <span class="at">ext=</span>zoi, <span class="at">ylab=</span><span class="fu">names</span>(dem), <span class="at">col=</span><span class="fu">terrain.colors</span>(<span class="dv">20</span>),</span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"SRTM 90m (meter)"</span>)</span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
-<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">add=</span>T, <span class="at">pch=</span><span class="st">"o"</span>, <span class="at">col=</span>pal[<span class="st">"dark"</span>])</span>
-<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations, <span class="at">add=</span>T, <span class="at">col=</span>pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"red"</span>)][<span class="dv">1</span><span class="sc">+</span>(obs.gis<span class="sc">$</span>IsActive<span class="sc">==</span><span class="st">"True"</span>)], <span class="at">pch=</span><span class="st">"x"</span>)</span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottom"</span>, <span class="at">ncol=</span><span class="dv">3</span>, <span class="at">bg=</span>pal[<span class="st">"light"</span>],</span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Active station"</span>, <span class="st">"Stale station"</span>, <span class="st">"Production site"</span>),</span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span>pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"red"</span>, <span class="st">"dark"</span>)], <span class="at">pch=</span><span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"x"</span>, <span class="st">"o"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  era,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> zoi,</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="fu">names</span>(era),</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">terrain.colors</span>(<span class="dv">20</span>),</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="st">"ERA5-LAND Temperature (°C) on 2017-01-01 01:00"</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations, <span class="at">add =</span> T, <span class="at">pch =</span> <span class="st">"x"</span>, <span class="at">col =</span> pal[[<span class="st">"dark"</span>]])</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">add =</span> T, <span class="at">pch =</span> <span class="st">"o"</span>, <span class="at">col =</span> pal[<span class="st">"blue"</span>])</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts[pts<span class="sc">$</span>loc_id <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">82</span>, <span class="dv">83</span>), ], <span class="at">add =</span> T, <span class="at">col =</span> pal[<span class="st">"red"</span>], <span class="at">pch =</span> <span class="st">"o"</span>)</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bottom"</span>,</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol =</span> <span class="dv">3</span>,</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">bty =</span> <span class="st">"n"</span>,</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> pal[<span class="st">"light"</span>],</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"CIMIS WS"</span>, <span class="st">"OLAM site"</span>, <span class="st">"Portfolio site"</span>),</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>)],</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"o"</span>, <span class="st">"o"</span>)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>  dem,</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> zoi,</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="fu">names</span>(dem),</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">terrain.colors</span>(<span class="dv">20</span>),</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="st">"SRTM 90m (meter)"</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">add =</span> T, <span class="at">pch =</span> <span class="st">"o"</span>, <span class="at">col =</span> pal[<span class="st">"dark"</span>])</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>  stations,</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>  <span class="at">add =</span> T,</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"red"</span>)][<span class="dv">1</span> <span class="sc">+</span> (obs.gis<span class="sc">$</span>IsActive <span class="sc">==</span> <span class="st">"True"</span>)],</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="st">"x"</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bottom"</span>,</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol =</span> <span class="dv">3</span>,</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> pal[<span class="st">"light"</span>],</span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Active station"</span>, <span class="st">"Stale station"</span>, <span class="st">"Production site"</span>),</span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> pal[<span class="fu">c</span>(<span class="st">"dark"</span>, <span class="st">"red"</span>, <span class="st">"dark"</span>)],</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"x"</span>, <span class="st">"o"</span>)</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell column-page quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
-</div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid"></a></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-1-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid"></a></p>
@@ -728,16 +807,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>CIMIS station observations between Jan-Apr 2017.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>obs[, .(</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Obs.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">comma</span>(.N), </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">NA</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">percent</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(Value))<span class="sc">/</span>.N), </span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Min.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">min</span>(Value, <span class="at">na.rm=</span>T), </span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Max.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">max</span>(Value, <span class="at">na.rm=</span>T),</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Date Range</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">paste</span>(<span class="fu">range</span>(Date, <span class="at">na.rm=</span>T), <span class="at">collapse=</span><span class="st">" - "</span>)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>), keyby<span class="ot">=</span>.(StationNbr)] <span class="sc">%&gt;%</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
+<div class="cell page-columns page-full">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>obs[,</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  .(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Obs.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">comma</span>(.N),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">NA</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">percent</span>(<span class="fu">sum</span>(<span class="fu">is.na</span>(Value)) <span class="sc">/</span> .N),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Min.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">min</span>(Value, <span class="at">na.rm =</span> T),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Max.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">max</span>(Value, <span class="at">na.rm =</span> T),</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Date Range</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">paste</span>(<span class="fu">range</span>(Date, <span class="at">na.rm =</span> T), <span class="at">collapse =</span> <span class="st">" - "</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  keyby <span class="ot">=</span> .(StationNbr)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>] <span class="sc">|&gt;</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display column-page-right">
 <div data-pagedtable="false">
 <script data-pagedtable-source="" type="application/json">
 {"columns":[{"label":["StationNbr"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Obs."],"name":[2],"type":["chr"],"align":["left"]},{"label":["NA"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Min."],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Max."],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Date Range"],"name":[6],"type":["chr"],"align":["left"]}],"data":[{"1":"105","2":"2,880","3":"0%","4":"-1.6","5":"30.9","6":"2017-01-01 - 2017-05-01"},{"1":"113","2":"2,880","3":"0%","4":"-0.9","5":"31.1","6":"2017-01-01 - 2017-05-01"},{"1":"114","2":"2,880","3":"0%","4":"0.3","5":"29.6","6":"2017-01-01 - 2017-05-01"},{"1":"124","2":"2,880","3":"0%","4":"-2.2","5":"28.3","6":"2017-01-01 - 2017-05-01"},{"1":"125","2":"2,880","3":"0%","4":"-0.7","5":"30.7","6":"2017-01-01 - 2017-05-01"},{"1":"126","2":"2,880","3":"5%","4":"-2.1","5":"29.3","6":"2017-01-01 - 2017-05-01"},{"1":"142","2":"2,880","3":"0%","4":"-1.4","5":"34.9","6":"2017-01-01 - 2017-05-01"},{"1":"143","2":"2,880","3":"0%","4":"-2.1","5":"29.3","6":"2017-01-01 - 2017-05-01"},{"1":"146","2":"2,880","3":"0%","4":"-1.0","5":"31.2","6":"2017-01-01 - 2017-05-01"},{"1":"148","2":"2,880","3":"0%","4":"-4.0","5":"28.4","6":"2017-01-01 - 2017-05-01"},{"1":"15","2":"2,880","3":"1%","4":"-0.9","5":"30.2","6":"2017-01-01 - 2017-05-01"},{"1":"160","2":"2,880","3":"38%","4":"0.4","5":"29.5","6":"2017-01-01 - 2017-05-01"},{"1":"161","2":"2,880","3":"0%","4":"0.0","5":"29.3","6":"2017-01-01 - 2017-05-01"},{"1":"163","2":"2,880","3":"7%","4":"-3.9","5":"28.2","6":"2017-01-01 - 2017-05-01"},{"1":"165","2":"2,880","3":"7%","4":"-5.1","5":"30.8","6":"2017-01-01 - 2017-05-01"},{"1":"167","2":"2,880","3":"0%","4":"-1.0","5":"29.3","6":"2017-01-01 - 2017-05-01"},{"1":"169","2":"2,880","3":"9%","4":"-4.5","5":"29.4","6":"2017-01-01 - 2017-05-01"},{"1":"182","2":"2,880","3":"0%","4":"-0.9","5":"29.4","6":"2017-01-01 - 2017-05-01"},{"1":"183","2":"2,880","3":"0%","4":"-12.8","5":"28.0","6":"2017-01-01 - 2017-05-01"},{"1":"188","2":"2,880","3":"0%","4":"-3.9","5":"28.9","6":"2017-01-01 - 2017-05-01"},{"1":"189","2":"2,880","3":"0%","4":"-6.1","5":"30.0","6":"2017-01-01 - 2017-05-01"},{"1":"190","2":"2,880","3":"0%","4":"-1.8","5":"32.0","6":"2017-01-01 - 2017-05-01"},{"1":"194","2":"2,880","3":"22%","4":"-0.5","5":"28.1","6":"2017-01-01 - 2017-05-01"},{"1":"2","2":"2,880","3":"4%","4":"-1.5","5":"29.8","6":"2017-01-01 - 2017-05-01"},{"1":"202","2":"2,880","3":"16%","4":"0.8","5":"28.9","6":"2017-01-01 - 2017-05-01"},{"1":"203","2":"2,880","3":"2%","4":"-13.0","5":"30.6","6":"2017-01-01 - 2017-05-01"},{"1":"205","2":"2,880","3":"0%","4":"-0.4","5":"29.4","6":"2017-01-01 - 2017-05-01"},{"1":"206","2":"2,880","3":"0%","4":"-1.8","5":"28.5","6":"2017-01-01 - 2017-05-01"},{"1":"21","2":"2,880","3":"55%","4":"0.3","5":"29.8","6":"2017-01-01 - 2017-05-01"},{"1":"232","2":"2,160","3":"0%","4":"0.5","5":"28.3","6":"2017-01-31 - 2017-05-01"},{"1":"248","2":"2,880","3":"12%","4":"0.0","5":"28.6","6":"2017-01-01 - 2017-05-01"},{"1":"249","2":"2,880","3":"0%","4":"-0.2","5":"29.1","6":"2017-01-01 - 2017-05-01"},{"1":"252","2":"2,880","3":"0%","4":"0.5","5":"29.8","6":"2017-01-01 - 2017-05-01"},{"1":"35","2":"2,880","3":"0%","4":"-10.6","5":"27.4","6":"2017-01-01 - 2017-05-01"},{"1":"39","2":"2,880","3":"0%","4":"-0.7","5":"29.8","6":"2017-01-01 - 2017-05-01"},{"1":"5","2":"2,880","3":"4%","4":"-0.5","5":"29.9","6":"2017-01-01 - 2017-05-01"},{"1":"52","2":"2,880","3":"0%","4":"2.8","5":"30.2","6":"2017-01-01 - 2017-05-01"},{"1":"54","2":"2,880","3":"2%","4":"-11.8","5":"29.7","6":"2017-01-01 - 2017-05-01"},{"1":"56","2":"2,880","3":"0%","4":"-1.5","5":"28.4","6":"2017-01-01 - 2017-05-01"},{"1":"7","2":"2,880","3":"0%","4":"-1.1","5":"29.4","6":"2017-01-01 - 2017-05-01"},{"1":"70","2":"2,880","3":"0%","4":"-1.5","5":"28.1","6":"2017-01-01 - 2017-05-01"},{"1":"71","2":"2,880","3":"0%","4":"-1.2","5":"27.5","6":"2017-01-01 - 2017-05-01"},{"1":"80","2":"2,880","3":"0%","4":"-1.5","5":"29.2","6":"2017-01-01 - 2017-05-01"},{"1":"86","2":"2,880","3":"0%","4":"-1.1","5":"30.6","6":"2017-01-01 - 2017-05-01"},{"1":"88","2":"2,880","3":"0%","4":"-2.9","5":"28.1","6":"2017-01-01 - 2017-05-01"},{"1":"92","2":"2,880","3":"0%","4":"-3.5","5":"28.1","6":"2017-01-01 - 2017-05-01"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -746,98 +828,110 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>CIMIS Station Observations, Jan-Apr 2017</p>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(obs.ts[,<span class="dv">1</span>], <span class="at">col=</span><span class="fu">alpha</span>(pal[<span class="dv">1</span>], .<span class="dv">7</span>),</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub=</span><span class="fu">paste</span>(<span class="st">"Station"</span>, <span class="fu">names</span>(obs.ts)[<span class="dv">1</span>]), <span class="at">xlab=</span><span class="st">"CIMIS Hourly Temp. °C"</span>, <span class="at">ylab=</span><span class="cn">NA</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(obs.ts[,<span class="dv">20</span>], <span class="at">col=</span><span class="fu">alpha</span>(pal[<span class="dv">1</span>], .<span class="dv">7</span>),</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub=</span><span class="fu">paste</span>(<span class="st">"Station"</span>, <span class="fu">names</span>(obs.ts)[<span class="dv">20</span>]), <span class="at">xlab=</span><span class="st">"CIMIS Hourly Temp. °C"</span>, <span class="at">ylab=</span><span class="cn">NA</span>)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  obs.ts[, <span class="dv">1</span>],</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">alpha</span>(pal[<span class="dv">1</span>], .<span class="dv">7</span>),</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="fu">paste</span>(<span class="st">"Station"</span>, <span class="fu">names</span>(obs.ts)[<span class="dv">1</span>]),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"CIMIS Hourly Temp. °C"</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="cn">NA</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  obs.ts[, <span class="dv">20</span>],</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">alpha</span>(pal[<span class="dv">1</span>], .<span class="dv">7</span>),</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="fu">paste</span>(<span class="st">"Station"</span>, <span class="fu">names</span>(obs.ts)[<span class="dv">20</span>]),</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"CIMIS Hourly Temp. °C"</span>,</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="cn">NA</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell column-page quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
-</div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid"></a></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-3-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">histogram</span>(<span class="sc">~</span>Value<span class="sc">|</span>StationNbr, <span class="at">data=</span>obs, <span class="at">breaks=</span><span class="dv">20</span>,</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">alpha</span>(pal[<span class="dv">1</span>], .<span class="dv">6</span>), <span class="at">border=</span>pal[<span class="st">"light"</span>], <span class="at">layout=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">6</span>),</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">par.settings=</span>my.settings,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Jan-Apr 2017 - CIMIS Hourly Temp. °C across meteo stations"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">histogram</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span> Value <span class="sc">|</span> StationNbr,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> obs,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks =</span> <span class="dv">20</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">alpha</span>(pal[[<span class="dv">1</span>]], .<span class="dv">6</span>),</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">border =</span> pal[[<span class="st">"light"</span>]],</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">layout =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">6</span>),</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">par.settings =</span> my.settings,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Jan-Apr 2017 - CIMIS Hourly Temp. °C across meteo stations"</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell column-page quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
-</div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid"></a></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-4-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="index_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid"></a></p>
 </div>
 </div>
 <div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
-</div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-4-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="index_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid"></a></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-4-4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="index_files/figure-html/unnamed-chunk-4-4.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rfmep, <span class="at">ext=</span>zoi, <span class="at">ylab=</span><span class="fu">names</span>(rfmep)[<span class="dv">1</span>], </span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">terrain.colors</span>(<span class="dv">80</span>), <span class="at">breaks=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">11</span>,</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"RF-MEP Temperatures °C"</span>)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">pch=</span><span class="st">"o"</span>, <span class="at">col=</span>pal[<span class="st">"dark"</span>], <span class="at">add=</span>T)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations[stations<span class="sc">$</span>StationNbr <span class="sc">%in%</span> <span class="fu">names</span>(obs.ts),], </span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch=</span><span class="st">"x"</span>, <span class="at">col=</span>pal[[<span class="st">"dark"</span>]], <span class="at">add=</span>T)</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottom"</span>, <span class="at">ncol=</span><span class="dv">2</span>, <span class="at">bg=</span>pal[<span class="st">"light"</span>],</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Active station"</span>, <span class="st">"Production site"</span>), <span class="at">pch=</span><span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"o"</span>))</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(era, <span class="at">ext=</span>zoi, <span class="at">ylab=</span><span class="fu">names</span>(era)[<span class="dv">1</span>], </span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="fu">terrain.colors</span>(<span class="dv">80</span>), <span class="at">breaks=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">11</span>,</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">main=</span><span class="st">"ERA5-LAND Temperatures °C"</span>)</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">pch=</span><span class="st">"o"</span>, <span class="at">col=</span>pal[<span class="st">"dark"</span>], <span class="at">add=</span>T)</span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stations[stations<span class="sc">$</span>StationNbr <span class="sc">%in%</span> <span class="fu">names</span>(obs.ts),], </span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch=</span><span class="st">"x"</span>, <span class="at">col=</span>pal[[<span class="st">"dark"</span>]], <span class="at">add=</span>T)</span>
-<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottom"</span>, <span class="at">ncol=</span><span class="dv">2</span>, <span class="at">bg=</span>pal[<span class="st">"light"</span>],</span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Active station"</span>, <span class="st">"Production site"</span>), <span class="at">pch=</span><span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"o"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  rfmep,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> zoi,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="fu">names</span>(rfmep)[<span class="dv">1</span>],</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">terrain.colors</span>(<span class="dv">80</span>),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks =</span> <span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">11</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="st">"RF-MEP Temperatures °C"</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">pch =</span> <span class="st">"o"</span>, <span class="at">col =</span> pal[<span class="st">"dark"</span>], <span class="at">add =</span> T)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  stations[stations<span class="sc">$</span>StationNbr <span class="sc">%in%</span> <span class="fu">names</span>(obs.ts), ],</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="st">"x"</span>,</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> pal[[<span class="st">"dark"</span>]],</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">add =</span> T</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bottom"</span>,</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol =</span> <span class="dv">2</span>,</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> pal[<span class="st">"light"</span>],</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Active station"</span>, <span class="st">"Production site"</span>),</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"o"</span>)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  era,</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">ext =</span> zoi,</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="fu">names</span>(era)[<span class="dv">1</span>],</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="fu">terrain.colors</span>(<span class="dv">80</span>),</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks =</span> <span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">11</span>,</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="st">"ERA5-LAND Temperatures °C"</span></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>()</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(pts, <span class="at">pch =</span> <span class="st">"o"</span>, <span class="at">col =</span> pal[<span class="st">"dark"</span>], <span class="at">add =</span> T)</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>  stations[stations<span class="sc">$</span>StationNbr <span class="sc">%in%</span> <span class="fu">names</span>(obs.ts), ],</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="st">"x"</span>,</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> pal[[<span class="st">"dark"</span>]],</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">add =</span> T</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>  <span class="st">"bottom"</span>,</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol =</span> <span class="dv">2</span>,</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>  <span class="at">bg =</span> pal[<span class="st">"light"</span>],</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>  <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Active station"</span>, <span class="st">"Production site"</span>),</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"o"</span>)</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell column-page quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
-</div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid"></a></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><a href="index_files/figure-html/unnamed-chunk-5-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="index_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid"></a></p>
@@ -845,66 +939,81 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Hourly time-series from nearest CIMIS ground stations compared to hourly time-series at production sites from ERA5-LAND.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>(Value<span class="sc">~</span><span class="fu">as.numeric</span>(Date)<span class="sc">*</span>Time, <span class="at">data=</span>obs, </span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Date"</span>, <span class="at">ylab=</span><span class="st">"Hour"</span>, <span class="at">sub=</span><span class="st">"Nearest CIMIS Stations - Hourly Temp. °C"</span>,</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="cn">NA</span>, <span class="at">col.regions=</span><span class="fu">terrain.colors</span>(<span class="dv">100</span>, <span class="at">alpha=</span>.<span class="dv">4</span>), <span class="at">drape=</span>T,</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">at=</span><span class="fu">do.breaks</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">35</span>), <span class="dv">100</span>)</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>(era<span class="sc">~</span><span class="fu">as.numeric</span>(date)<span class="sc">*</span>time, <span class="at">data=</span>dt.imp, </span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Date"</span>, <span class="at">ylab=</span><span class="st">"Hour"</span>, <span class="at">zlab=</span><span class="st">"°C"</span>,  </span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub=</span><span class="st">"Production Sites - Hourly Temp. °C (ERA5-LAND)"</span>,</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="cn">NA</span>, <span class="at">col.regions=</span><span class="fu">terrain.colors</span>(<span class="dv">100</span>, <span class="at">alpha=</span>.<span class="dv">4</span>), <span class="at">drape=</span>T,</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">at=</span><span class="fu">do.breaks</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">30</span>), <span class="dv">100</span>)</span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell column-screen quarto-layout-panel" data-layout-ncol="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  Value <span class="sc">~</span> <span class="fu">as.numeric</span>(Date) <span class="sc">*</span> Time,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> obs,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Date"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Hour"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="st">"Nearest CIMIS Stations - Hourly Temp. °C"</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="cn">NA</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.regions =</span> <span class="fu">terrain.colors</span>(<span class="dv">100</span>, <span class="at">alpha =</span> .<span class="dv">4</span>),</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">drape =</span> T,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">at =</span> <span class="fu">do.breaks</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">35</span>), <span class="dv">100</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>(</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  era <span class="sc">~</span> <span class="fu">as.numeric</span>(date) <span class="sc">*</span> time,</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dt.imp,</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Date"</span>,</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Hour"</span>,</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">zlab =</span> <span class="st">"°C"</span>,</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="st">"Production Sites - Hourly Temp. °C (ERA5-LAND)"</span>,</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> <span class="cn">NA</span>,</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.regions =</span> <span class="fu">terrain.colors</span>(<span class="dv">100</span>, <span class="at">alpha =</span> .<span class="dv">4</span>),</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">drape =</span> T,</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">at =</span> <span class="fu">do.breaks</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">30</span>), <span class="dv">100</span>)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell column-page quarto-layout-panel" data-layout-ncol="2">
+
+</div>
+<div class="column-page quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><a href="unnamed-chunk-8-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="unnamed-chunk-8-1.png" class="img-fluid"></a></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="index_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid"></a></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-stdout quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="index_files/figure-html/unnamed-chunk-6-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="index_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid"></a></p>
+<p><a href="unnamed-chunk-9-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="unnamed-chunk-9-1.png" class="img-fluid"></a></p>
 </div>
 </div>
 </div>
 <p>Mean recalibration effect across production sites (after RFmerge procedure):</p>
 <div class="cell preview-image">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>((value<span class="sc">-</span>era)<span class="sc">~</span><span class="fu">as.numeric</span>(date)<span class="sc">*</span>time, <span class="at">data=</span>dt.imp, </span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab=</span><span class="st">"Date"</span>, <span class="at">ylab=</span><span class="st">"Hour"</span>, <span class="at">zlab=</span><span class="st">"°C"</span>,  </span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub=</span><span class="st">"ERA5-LAND Mean Recalibration Effect</span><span class="sc">\n</span><span class="st">across Production Sites</span><span class="sc">\n</span><span class="st">Hourly Temp. °C"</span>,</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col=</span><span class="cn">NA</span>, <span class="at">col.regions=</span><span class="fu">terrain.colors</span>(<span class="dv">100</span>, <span class="at">alpha=</span>.<span class="dv">4</span>), <span class="at">drape=</span>T</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Error : The fig.showtext code chunk option must be TRUE</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wireframe</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  (value <span class="sc">-</span> era) <span class="sc">~</span> <span class="fu">as.numeric</span>(date) <span class="sc">*</span> time,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> dt.imp,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Date"</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Hour"</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">zlab =</span> <span class="st">"°C"</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">sub =</span> <span class="st">"ERA5-LAND Mean Recalibration Effect</span><span class="sc">\n</span><span class="st">across Production Sites</span><span class="sc">\n</span><span class="st">Hourly Temp. °C"</span>,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#col = NA,</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.regions =</span> <span class="fu">terrain.colors</span>(<span class="dv">100</span>, <span class="at">alpha =</span> .<span class="dv">4</span>),</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">drape =</span> T</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
+<p><a href="unnamed-chunk-10-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="unnamed-chunk-10-1.png" class="img-fluid"></a></p>
 <p>FDD index across sites between Feb-01 and Mar-31, 2017 (before and after ground calibration):</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>dt.imp[date <span class="sc">%between%</span> <span class="fu">c</span>(<span class="st">"2017-02-01"</span>, <span class="st">"2017-03-31"</span>), .(</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">era =</span> <span class="fu">min</span>(era, <span class="at">na.rm=</span>T),</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">era_valid =</span> <span class="fu">min</span>(era_valid, <span class="at">na.rm=</span>T),</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">min</span>(value, <span class="at">na.rm=</span>T)</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>), by<span class="ot">=</span>.(loc_id, date)][, .(</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">FDD (before)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">fifelse</span>(era<span class="sc">&lt;</span><span class="dv">0</span>, <span class="fu">pmax</span>(era, <span class="sc">-</span><span class="dv">4</span>, <span class="at">na.rm=</span>T), <span class="dv">0</span>), <span class="at">na.rm=</span>T),</span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">FDD (validate)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">fifelse</span>(era_valid<span class="sc">&lt;</span><span class="dv">0</span>, <span class="fu">pmax</span>(era_valid, <span class="sc">-</span><span class="dv">4</span>, <span class="at">na.rm=</span>T), <span class="dv">0</span>), <span class="at">na.rm=</span>T),</span>
-<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">FDD (after)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">fifelse</span>(value<span class="sc">&lt;</span><span class="dv">0</span>, <span class="fu">pmax</span>(value, <span class="sc">-</span><span class="dv">4</span>, <span class="at">na.rm=</span>T), <span class="dv">0</span>), <span class="at">na.rm=</span>T)</span>
-<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>), keyby<span class="ot">=</span>.(loc_id)]<span class="sc">%&gt;%</span></span>
-<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
+<div class="cell page-columns page-full">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>dt.imp[</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  date <span class="sc">%between%</span> <span class="fu">c</span>(<span class="st">"2017-02-01"</span>, <span class="st">"2017-03-31"</span>),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  .(</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">era =</span> <span class="fu">min</span>(era, <span class="at">na.rm =</span> T),</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">era_valid =</span> <span class="fu">min</span>(era_valid, <span class="at">na.rm =</span> T),</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">value =</span> <span class="fu">min</span>(value, <span class="at">na.rm =</span> T)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  by <span class="ot">=</span> .(loc_id, date)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>][,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  .(</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">FDD (before)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">fifelse</span>(era <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="fu">pmax</span>(era, <span class="sc">-</span><span class="dv">4</span>, <span class="at">na.rm =</span> T), <span class="dv">0</span>), <span class="at">na.rm =</span> T),</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">FDD (validate)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">fifelse</span>(era_valid <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="fu">pmax</span>(era_valid, <span class="sc">-</span><span class="dv">4</span>, <span class="at">na.rm =</span> T), <span class="dv">0</span>),</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">na.rm =</span> T</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">FDD (after)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(<span class="fu">fifelse</span>(value <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="fu">pmax</span>(value, <span class="sc">-</span><span class="dv">4</span>, <span class="at">na.rm =</span> T), <span class="dv">0</span>), <span class="at">na.rm =</span> T)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  keyby <span class="ot">=</span> .(loc_id)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>] <span class="sc">|&gt;</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>  rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display column-page-right">
 <div data-pagedtable="false">
 <script data-pagedtable-source="" type="application/json">
 {"columns":[{"label":["loc_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["FDD (before)"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["FDD (validate)"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["FDD (after)"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"0.0000000000","3":"0.0000000000","4":"-2.1666767"},{"1":"2","2":"0.0000000000","3":"0.0000000000","4":"-2.1666767"},{"1":"3","2":"0.0000000000","3":"0.0000000000","4":"-2.1666767"},{"1":"4","2":"0.0000000000","3":"0.0000000000","4":"-2.1666767"},{"1":"5","2":"0.0000000000","3":"0.0000000000","4":"-2.1666767"},{"1":"6","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"7","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"8","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"9","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"10","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"11","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"12","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"13","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"14","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"15","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"16","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"17","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"18","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"19","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"20","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"21","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"22","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"23","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"24","2":"0.0000000000","3":"0.0000000000","4":"-3.4761350"},{"1":"25","2":"0.0000000000","3":"0.0000000000","4":"-0.7498333"},{"1":"26","2":"0.0000000000","3":"0.0000000000","4":"-0.5087167"},{"1":"27","2":"0.0000000000","3":"0.0000000000","4":"-0.5087167"},{"1":"28","2":"0.0000000000","3":"0.0000000000","4":"-0.5087167"},{"1":"29","2":"0.0000000000","3":"0.0000000000","4":"-0.5087167"},{"1":"30","2":"0.0000000000","3":"0.0000000000","4":"-0.3167700"},{"1":"31","2":"0.0000000000","3":"0.0000000000","4":"-0.3167700"},{"1":"32","2":"0.0000000000","3":"0.0000000000","4":"-0.3167700"},{"1":"33","2":"0.0000000000","3":"0.0000000000","4":"-0.3167700"},{"1":"34","2":"0.0000000000","3":"0.0000000000","4":"-0.5087167"},{"1":"35","2":"0.0000000000","3":"0.0000000000","4":"-0.5087167"},{"1":"36","2":"0.0000000000","3":"0.0000000000","4":"-0.3167700"},{"1":"37","2":"0.0000000000","3":"0.0000000000","4":"-0.3167700"},{"1":"38","2":"0.0000000000","3":"0.0000000000","4":"-0.3167700"},{"1":"39","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"40","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"41","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"42","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"43","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"44","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"45","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"46","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"47","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"48","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"49","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"50","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"51","2":"0.0000000000","3":"0.0000000000","4":"-1.0882958"},{"1":"52","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"53","2":"0.0000000000","3":"0.0000000000","4":"-0.6372300"},{"1":"54","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"55","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"56","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"57","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"58","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"59","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"60","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"61","2":"0.0000000000","3":"0.0000000000","4":"-0.6372300"},{"1":"62","2":"0.0000000000","3":"0.0000000000","4":"-0.6372300"},{"1":"63","2":"0.0000000000","3":"0.0000000000","4":"-0.6372300"},{"1":"64","2":"0.0000000000","3":"0.0000000000","4":"-0.6372300"},{"1":"65","2":"0.0000000000","3":"0.0000000000","4":"-0.6372300"},{"1":"66","2":"0.0000000000","3":"0.0000000000","4":"-0.6372300"},{"1":"67","2":"0.0000000000","3":"0.0000000000","4":"-0.6372300"},{"1":"68","2":"0.0000000000","3":"0.0000000000","4":"-0.6372300"},{"1":"69","2":"0.0000000000","3":"0.0000000000","4":"-0.9189067"},{"1":"70","2":"0.0000000000","3":"0.0000000000","4":"-1.0882958"},{"1":"71","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"72","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"73","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"74","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"75","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"76","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"77","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"78","2":"0.0000000000","3":"0.0000000000","4":"-2.9816700"},{"1":"79","2":"0.0000000000","3":"0.0000000000","4":"-2.9816700"},{"1":"80","2":"0.0000000000","3":"0.0000000000","4":"-2.9816700"},{"1":"81","2":"0.0000000000","3":"0.0000000000","4":"-2.9816700"},{"1":"82","2":"-0.0002197266","3":"-0.0002197266","4":"-3.7889842"},{"1":"83","2":"-0.0002197266","3":"-0.0002197266","4":"-3.7889842"},{"1":"84","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"85","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"86","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"87","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"88","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"89","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"90","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"91","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"92","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"93","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"94","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"95","2":"-0.2233642638","3":"-0.2233642638","4":"-3.3181283"},{"1":"96","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"97","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"98","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"99","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"100","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"101","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"102","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"103","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"104","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"105","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"106","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"107","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"108","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"109","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"110","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"111","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"112","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"113","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"114","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"115","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"116","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"117","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"118","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"119","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"120","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"121","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"122","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"123","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"124","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"125","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"126","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"127","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"128","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"129","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"130","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"131","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"132","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"133","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"134","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"135","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"136","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"137","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"138","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"139","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"140","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"141","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"},{"1":"142","2":"0.0000000000","3":"0.0000000000","4":"-0.5150467"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -918,27 +1027,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 
-<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2021,
-  author = {BACOU, Melanie},
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{melanie2021,
+  author = {Melanie , BACOU},
   title = {Rainfall: {Merge} {Ground} and {Satellite} {Observations}
     with {RFMerge}},
   date = {2021-01-16},
   url = {https://mbacou.com/posts/2021-01-16-rfmerge/},
   langid = {en}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-bacou2021" class="csl-entry quarto-appendix-citeas" role="listitem">
-BACOU, Melanie. 2021. <span>“Rainfall: Merge Ground and Satellite
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-melanie2021" class="csl-entry quarto-appendix-citeas" role="listitem">
+Melanie, BACOU. 2021. <span>“Rainfall: Merge Ground and Satellite
 Observations with RFMerge.”</span> January 16. <a href="https://mbacou.com/posts/2021-01-16-rfmerge/">https://mbacou.com/posts/2021-01-16-rfmerge/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

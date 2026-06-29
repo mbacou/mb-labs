@@ -7,13 +7,14 @@ contributes:
     html:
       date-format: medium
       date-modified: last-modified
+      anchor-sections: false
       search: true
       smooth-scroll: true
       link-external-icon: false
       link-external-newwindow: true
 
       tbl-cap-location: bottom
-      fig-cap-location: margin
+      fig-cap-location: bottom
       fig-numbering: true
       citation: true
       citation-location: document
@@ -28,6 +29,7 @@ contributes:
       lightbox: true
       fig-dpi: 120
       fig-format: svg
+      out-height: "40rem"
 
       code-copy: true
       code-overflow: wrap

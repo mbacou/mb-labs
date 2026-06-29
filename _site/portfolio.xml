@@ -46,18 +46,20 @@
   </div>
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+<header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
-        <li class="nav-item fs-3 text-primary fw-bold">model front-end</li>
-        <li class="nav-item fs-3 text-primary fw-bold">R/Shiny</li>
-        <li class="nav-item ms-auto">
-      <label class="">Draft <i class="bi bi-square"></i>
-      </label>
+  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">model front-end</li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">R/Shiny</li>
+        <li class="nav-item px-2 secondary ms-auto">
+      <span>Draft
+        ☐
+      </span>
     </li>
-    <li class="nav-item">
-      <label class="">Frozen <i class="bi bi-square"></i>
-      </label>
+    <li class="nav-item px-2 secondary">
+      <span>Frozen
+        ☐
+      </span>
     </li>
   </ul>
 
@@ -81,22 +83,21 @@
 
           </p>
     
+    
+    
         <label>First published</label>
     <p class="lh-lg text-body">Feb 1, 2024</p>
-    
-    
     
         <label>Reuse</label>
     <p id="mb-reuse" class="lh-lg text-body"></p>
     
     
-  </div></div><div class="mx-lg-3 mb-2">
+  </div></div><div class="mx-lg-3">
         <label>Abstract</label>
     <div class="lh-lg fs-1 text-muted"><p>Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.</p></div>
     
     
-  </div>
-</header>
+</div></header>
 
 
 <div class="column-screen pgrarallax-container">
@@ -106,11 +107,11 @@
 </div>
 <p>Complex statistical analyses and economic models always require robust end-user design.</p>
 <section id="water-accounting-balances" class="level2">
-<h2 class="anchored" data-anchor-id="water-accounting-balances">Water accounting Balances</h2>
+<h2 data-anchor-id="water-accounting-balances">Water accounting Balances</h2>
 <p>Model visualization for large-scale water accounting models</p>
 </section>
 <section id="simulating-historical-claim-costs" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="simulating-historical-claim-costs">Simulating Historical Claim Costs</h2>
+<h2 data-anchor-id="simulating-historical-claim-costs">Simulating Historical Claim Costs</h2>
 <p>Visual interface for agricultural insurance</p>
 <p>Real-time pricing of weather-index insurance</p>
 <p>This tool supports WorldCover PBC agricultural insurance operations.</p>
@@ -170,7 +171,7 @@ lines here.</td>
 <p>Something in the margin now.</p>
 </div></div></section>
 
-<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
   author = {BACOU, Melanie},
   title = {Interactive {Web} {Applications}},
   date = {2024-02-01},
@@ -217,18 +218,20 @@ February 1. <a href="https://mbacou.com/portfolio/app-pricing.html">https://mbac
   </div>
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+<header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
-        <li class="nav-item fs-3 text-primary fw-bold">model front-end</li>
-        <li class="nav-item fs-3 text-primary fw-bold">R/Shiny</li>
-        <li class="nav-item ms-auto">
-      <label class="">Draft <i class="bi bi-square"></i>
-      </label>
+  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">model front-end</li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">R/Shiny</li>
+        <li class="nav-item px-2 secondary ms-auto">
+      <span>Draft
+        ☐
+      </span>
     </li>
-    <li class="nav-item">
-      <label class="">Frozen <i class="bi bi-square"></i>
-      </label>
+    <li class="nav-item px-2 secondary">
+      <span>Frozen
+        ☐
+      </span>
     </li>
   </ul>
 
@@ -252,33 +255,32 @@ February 1. <a href="https://mbacou.com/portfolio/app-pricing.html">https://mbac
 
           </p>
     
+    
+    
         <label>First published</label>
     <p class="lh-lg text-body">Feb 1, 2024</p>
-    
-    
     
         <label>Reuse</label>
     <p id="mb-reuse" class="lh-lg text-body"></p>
     
     
-  </div></div><div class="mx-lg-3 mb-2">
+  </div></div><div class="mx-lg-3">
         <label>Abstract</label>
     <div class="lh-lg fs-1 text-muted"><p>Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.</p></div>
     
     
-  </div>
-</header>
+</div></header>
 
 
 <p>Complex statistical analyses and economic models always require robust end-user design.</p>
 <section id="water-accounting-balances" class="level2">
-<h2 class="anchored" data-anchor-id="water-accounting-balances">Water accounting Balances</h2>
+<h2 data-anchor-id="water-accounting-balances">Water accounting Balances</h2>
 <p>Model visualization for large-scale water accounting models</p>
 
 
 </section>
 
-<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
   author = {BACOU, Melanie},
   title = {Interactive {Web} {Applications}},
   date = {2024-02-01},
@@ -325,17 +327,19 @@ February 1. <a href="https://mbacou.com/portfolio/app-wadashboard.html">https://
   </div>
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+<header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
-        <li class="nav-item fs-3 text-primary fw-bold">design</li>
-        <li class="nav-item ms-auto">
-      <label class="">Draft <i class="bi bi-square"></i>
-      </label>
+  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">design</li>
+        <li class="nav-item px-2 secondary ms-auto">
+      <span>Draft
+        ☐
+      </span>
     </li>
-    <li class="nav-item">
-      <label class="">Frozen <i class="bi bi-square"></i>
-      </label>
+    <li class="nav-item px-2 secondary">
+      <span>Frozen
+        ☐
+      </span>
     </li>
   </ul>
 
@@ -359,28 +363,27 @@ February 1. <a href="https://mbacou.com/portfolio/app-wadashboard.html">https://
 
           </p>
     
+    
+    
         <label>First published</label>
     <p class="lh-lg text-body">Jan 30, 2024</p>
-    
-    
     
         <label>Reuse</label>
     <p id="mb-reuse" class="lh-lg text-body"></p>
     
     
-  </div></div><div class="mx-lg-3 mb-2">
+  </div></div><div class="mx-lg-3">
         <label>Abstract</label>
     <div class="lh-lg fs-1 text-muted"><p>Showcase of print posters, bulletins and handouts designed for partners and clients.</p></div>
     
     
-  </div>
-</header>
+</div></header>
 
 
 
 
 
-<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
   author = {BACOU, Melanie},
   title = {Print {Design}},
   date = {2024-01-30},
@@ -425,18 +428,20 @@ BACOU, Melanie. 2024. <span>“Print Design.”</span> January 30. <a href="http
   </div>
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 page-columns page-full">
+<header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row gap-3 text-sans text-uppercase">
-        <li class="nav-item fs-3 text-primary fw-bold">design</li>
-        <li class="nav-item fs-3 text-primary fw-bold">tableau</li>
-        <li class="nav-item ms-auto">
-      <label class="">Draft <i class="bi bi-square"></i>
-      </label>
+  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">design</li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold">tableau</li>
+        <li class="nav-item px-2 secondary ms-auto">
+      <span>Draft
+        ☐
+      </span>
     </li>
-    <li class="nav-item">
-      <label class="">Frozen <i class="bi bi-square"></i>
-      </label>
+    <li class="nav-item px-2 secondary">
+      <span>Frozen
+        ☐
+      </span>
     </li>
   </ul>
 
@@ -460,28 +465,27 @@ BACOU, Melanie. 2024. <span>“Print Design.”</span> January 30. <a href="http
 
           </p>
     
+    
+    
         <label>First published</label>
     <p class="lh-lg text-body">Jan 30, 2024</p>
-    
-    
     
         <label>Reuse</label>
     <p id="mb-reuse" class="lh-lg text-body"></p>
     
     
-  </div></div><div class="mx-lg-3 mb-2">
+  </div></div><div class="mx-lg-3">
         <label>Abstract</label>
     <div class="lh-lg fs-1 text-muted"><p>Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.</p></div>
     
     
-  </div>
-</header>
+</div></header>
 
 
 
 
 
-<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© Mel B. Labs - a personal blog about statistics and spatial econometrics.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
+<div id="quarto-appendix"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{bacou2024,
   author = {BACOU, Melanie},
   title = {Tableau® {Dashboards}},
   date = {2024-01-30},

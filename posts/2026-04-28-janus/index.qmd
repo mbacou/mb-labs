@@ -1,37 +1,36 @@
 ---
-title: "JANUS Model — Literature Review"
+title: JANUS Model — Literature Review
 date: 2026-04-30
+image: preview-image.png
 bibliography: index.bib
-doi: "123.4567"
+description: AI-assisted literature review using [pi-feynman](https://pi.dev/packages/@companion-ai/feynman), **Pi** and **alphaXiv** agents.
+status: DRAFT (sources fetched, light verification performed; page-level verification pending)
 categories:
   - cosmology
+  - lit review
 keywords: 
   - janus
   - petit
   - bigravity
-title-block-banner: false
-
-status: DRAFT (sources fetched, light verification performed; page-level verification pending)
 
 abstract: |
-  This literature review summarizes the JANUS (and JANUS-like) cosmological ideas associated with **Jean‑Pierre Petit**, focusing on the model family that invokes bimetric or multi-metric gravity with positive- and negative-mass sectors as an alternative approach to dark matter and dark energy. This review synthesizes the available preprints (arXiv) and related work by Petit and his collaborators, separates consensus points from disputed claims, and lists concrete open questions and recommended follow-ups. All citations are to arXiv preprints retrieved during the Gather step; claims should be cross-checked in the Full Verifier stage for exact quotations, page numbers, and figure/table references.
+  An AI-assisted review of JANUS (and JANUS-like) cosmological theories associated with French renowned physicist **Jean‑Pierre Petit**. The reviews focuses on the family of models that invokes bimetric or multi-metric gravity with positive- and negative-mass sectors as an alternative approach to dark matter and dark energy. This review synthesizes the available preprints (arXiv) and related work by Petit and his collaborators, separates consensus points from disputed claims, and lists concrete open questions and recommended follow-ups.
 
-description: AI-assisted lit review using [pi-feynman](https://pi.dev/packages/@companion-ai/feynman) Pi and alphaXiv agent.
 ---
 
-<br/>
-
-::: {.column-page-inset-right .note .text-serif}
+::: {.column-page-inset-right .note .text-serif .mt-2}
 
 This review was produced by an automated pipeline that:
 
--   Collected candidate sources from arXiv author searches and the Jean‑Pierre Petit Wikipedia page.
--   Downloaded arXiv PDFs and performed per-page text extraction (pdftotext) for verification.
--   Ran a light verifier to find key claims and a full verifier to map claims to specific PDF pages.
--   Extracted figure/table captions and searched for numeric/fit evidence.
--   Performed a reviewer pass to flag unsupported claims and editing issues.
+- Collected candidate sources from arXiv author searches and the Jean‑Pierre Petit Wikipedia page.
+- Downloaded arXiv PDFs and performed per-page text extraction (pdftotext) for verification.
+- Ran a light verifier to find key claims and a full verifier to map claims to specific PDF pages.
+- Extracted figure/table captions and searched for numeric/fit evidence.
+- Performed a reviewer pass to flag unsupported claims and editing issues.
 
-Primary artifacts are stored under **outputs/** (raw PDFs, per-page extracts, caption extracts, verifier and reviewer reports).
+All citations are to arXiv preprints retrieved during the `gather` step; claims should be cross-checked in the `full verifier` stage for exact quotations, page numbers, and references to figures and tables.
+
+Primary artifacts are stored under **outputs/** (raw PDFs, per-page extracts, caption extracts, `verifier` and `reviewer` reports).
 :::
 
 # Background & Motivation
@@ -42,11 +41,11 @@ Visual materials and figures: Petit's expositions include schematic/topological 
 
 # Core Model Ingredients (summary)
 
--   Two (or more) metric sectors / "bigravity" structure: the gravitational field is described by two coupled metric tensors (often labelled g+ and g-). Each matter sector minimally couples to its own metric.
+- Two (or more) metric sectors / "bigravity" structure: the gravitational field is described by two coupled metric tensors (often labelled g+ and g-). Each matter sector minimally couples to its own metric.
 
--   Positive‑ and negative‑mass matter: a second sector is populated by matter with reversed active gravitational mass (and appropriate sign conventions), producing repulsive inter‑sector gravity while retaining attractive interaction within a same‑sign sector.
+- Positive‑ and negative‑mass matter: a second sector is populated by matter with reversed active gravitational mass (and appropriate sign conventions), producing repulsive inter‑sector gravity while retaining attractive interaction within a same‑sign sector.
 
--   Coupled field equations: Petit formulates coupled Einstein‑type field equations (one per metric) with coupling terms that govern the inter‑metric interaction; in some versions a Newtonian (bimetric) limit shows modified interaction laws between opposite‑sign masses that can suppress runaway behavior (see arXiv:1408.2451, e.g. Bimetric Newtonian approximation, p.5; also arXiv:0712.0067, p.10).
+- Coupled field equations: Petit formulates coupled Einstein‑type field equations (one per metric) with coupling terms that govern the inter‑metric interaction; in some versions a Newtonian (bimetric) limit shows modified interaction laws between opposite‑sign masses that can suppress runaway behavior (see arXiv:1408.2451, e.g. Bimetric Newtonian approximation, p.5; also arXiv:0712.0067, p.10).
 
 ::: aside
 Note: exact action, coupling constants, and sign conventions vary across Petit's papers; refer to the primary sources for precise equations (examples: arXiv:0712.0067, arXiv:1408.2451 — see p.10 and p.5 respectively).
@@ -123,4 +122,4 @@ JANUS and related negative‑mass/bimetric proposals by Jean‑Pierre Petit pres
 
 # Provenance
 
-See outputs/janus-cosmology.provenance.md for the provenance record and list of downloaded sources and verification artifacts.
+See `outputs/janus-cosmology.provenance.md` for the provenance record and list of downloaded sources and verification artifacts.
