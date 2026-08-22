@@ -57,6 +57,10 @@ nav .nav-item .bi {
   color: $secondary;
   background-color: tint-color($secondary, 85%);  
 }
+.tertiary {
+  color: $tertiary;
+  background-color: tint-color($tertiary, 85%);  
+}
 .info {
   color: $info;
   background-color: tint-color($info, 85%);  
@@ -79,11 +83,18 @@ nav .nav-item .bi {
   background-color: $shaded;
   backdrop-filter: blur(3px);
 }
+.bg-grid {
+  background-color: $grid;
+  backdrop-filter: blur(3px);  
+}
 .border-grid {
   border-top: solid 1px $grid;
 }
+.border-muted {
+  border-bottom: solid 1px $gray-200;  
+}
 .text-muted {
-  color: $text-muted !important;
+  color: $muted !important;
 }
 .text-sans {
   font-family: $font-family-sans-serif;

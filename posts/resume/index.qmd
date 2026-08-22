@@ -1,24 +1,23 @@
 ---
 title: BACOU, Melanie (CV)
-subtitle: Agro-economist, agri-meteo, and geospatial analyst
-author: ""
-abstract-title: Summary
-abstract: |
-  Economist with 20+ years in public-sector consulting. Led economic development programs and research grants in the $500K range. Advised government agencies and multilateral donors with large-scale data collection methods (field-based, mobile, and remote sensing), household survey design and analysis, market segmentation, agricultural value-chain analysis, rural finance, climate risk assessment, and risk transfer.
+subtitle: Agro-economist / Geospatial Data Scientist
+date: 2026-03-17
+author: []
+bibliography: []
 image: _fig/profile.jpg
-toc-depth: 2
+toc-depth: 3
 freeze: false
 citation: false
-category: skip
 lightbox: false
+category: skip
 format-links: 
   - text: Download PDF
     href: BACOU-Melanie-CV.pdf
     icon: file-pdf
 ---
 
-::: {.aside .mt-md-5}
-![](_fig/profile.jpg){width="9em" .rounded-circle}
+::: {.aside .text-center .text-md-start}
+![](_fig/profile.jpg){width="9em" .rounded-circle .mx-auto}
 
 ::: {.small .my-3}
 {{< bi linkedin >}}    [linkedin.com/in/mbacou](https://linkedin.com/in/mbacou)\
@@ -29,15 +28,15 @@ format-links:
 {{< bi chat >}}    [zoom.us/mbacou](https://us05web.zoom.us/j/6857815367?pwd=eXdteU9QdWhsM1hwTXZGTFdVL0d6dz09)\
 :::
 
-###### Top Skills
+###### Services
 
-Cost/benefit analysis\
-Economic impact evaluation\
-Spatial econometrics\
-Agrometeorology\
-Weather risk and adaptation\
-Parametric risk transfer\
-R, STATA, QGIS
+  Cost-benefit analysis \
+  Economic impact evaluation \
+  Market research, forecasting \
+  Business analytics \
+  Spatial econometrics \
+  Climate risk assessment \
+  Data / map visualization \
 
 ###### Languages
 
@@ -50,51 +49,62 @@ Russian (beginner)
 
 [SAS® Programming III](https://learn.sas.com/course/view.php?id=211)
 
-<a role="button" class="btn btn-success" href="BACOU-Melanie-CV.pdf" target="_blank"><i class="bi bi-file-pdf"></i> Download PDF</a>
+<a role="button" class="btn btn-success mt-2" href="BACOU-Melanie-CV.pdf" target="_blank"><i class="bi bi-file-pdf"></i> Download PDF</a>
 
 :::
 
+[{{< bi check2-square >}} I bring in...]{.text-serif .text-secondary style="font-size:1.75em;"}
 
-##### I bring in... 
+<!-- Led economic assistance programs and research grants in the $500K range. Advised public agencies and multilateral donors with large-scale data collection methods (field-based, mobile, and remote sensing), household survey design and analysis, value-chain analysis for agriculture, market segmentation, rural finance, climate risk assessment, and risk transfer. -->
 
-- Strong quantitative, analytical, and data modeling skills acquired in collaboration with top-rank economic research teams and consulting firms
+- Quantitative, analytical, and data modeling skills acquired in collaboration with top-rank economic research teams and consulting firms
+
+- Tech startup experience and 20+ years in public-sector consulting
+
+- Can build and lead your data science team and infrastructure
+
 - Multi-stakeholder (public-private) project management, fundraising, budgeting, forecasting, resource and cost tracking
-- A multidisciplinary background with ability to liaise efficiently with investors, government officials, private-sector partners, technical experts, researchers, and beneficiaries
-- 3+ years field experience in fragile states (Mid-East, West/subSaharan Africa)
 
+- Multidisciplinary background with ability to liaise efficiently with investors, government officials, private-sector partners, technical experts, researchers, and beneficiaries
 
-##### Tech Skills
+- Can navigate complex regulatory and political environments, incl. 3+ years field experience in fragile states (Mid-East, West/subSaharan Africa)
 
-*Statistics* -- R, STATA, SAS, GAMS / LaTeX, Quarto, Typst\
-*Survey* -- ODK, CSPro, SurveyCTO, CommCare, Fulcrum, GISCloud\
-*Data viz* --  Shiny, Tableau®, Highcharts.js, D3.js, Superset, Grafana\
-*GIS* -- QGIS, GRASS, GDAL, GeoServer, Carto, Mapnik, Leaflet, Kepler.gl, Google Earth Engine\
-*Databases* -- MS SQL Server, MySQL, PostGIS, MongoDB, MariaDB, Elasticsearch, DuckDB\
-*DevOps* -- Linux (Ubuntu, Arch), Git, CI/CD, Docker, AWS cloud deployment, containerization, orchestration (Airflow)\
-*Agile development* -- Jira, Trello, Asana, Taiga.io, ClubHouse
+Consulting rate: **US \$650** / day
 
-{{< pagebreak >}}
+**French (EU)** / **U.S.** citizenships
 
-## {{< bi briefcase >}} Clients & Projects
+#### Tech Skills 
+
+::: {.small .mb-4}
+[*Statistics*]{.text-secondary} -- R, STATA, SAS, GAMS / LaTeX, Quarto, Typst\
+[*Survey*]{.text-secondary} -- ODK, CSPro, SurveyCTO, CommCare, Fulcrum, GeoPoll\
+[*Dataviz*]{.text-secondary} --  Shiny, Tableau®, Highcharts.js, D3.js, Superset, Grafana\
+[*GIS*]{.text-secondary} -- QGIS, GRASS, GDAL, GeoServer, Carto, Mapnik, Leaflet, Kepler.gl, Google Earth Engine\
+[*Databases*]{.text-secondary} -- MS SQL Server, MySQL, PostGIS, MongoDB, MariaDB, Elasticsearch, DuckDB, Qdrant\
+[*DevOps*]{.text-secondary} -- Linux (Ubuntu, Arch), Git, CI/CD, Docker, AWS cloud deployment, containerization, orchestration (Airflow, Temporal)\
+[*Agile development*]{.text-secondary} -- Jira, Trello, Asana, Taiga.io, ClubHouse
+:::
+
+### {{< bi briefcase >}} Clients & Projects
 
 #### International Water Management Institute (IWMI)
 
 ::: aside
-![](_fig/iwmi.jpg){.mt-2 width="6em"}
+![](_fig/iwmi.jpg){.mt-2 height="4em"}
 
 Porto, Portugal\
 Aug 2021 -- Jan 2022\
 6 months
 :::
 
-**Scientific Modeling and Visualization** (contract)
+[**Scientific Modeling and Visualization** (contract)]{.text-secondary}
 
 Designed [complex ETLs](https://mbacou.github.io/WADashboard/) and [interactive tools](http://3.224.92.203:3838/WADashboard) to track changes in water budgets and water productivity across multiple river basins. Part of FAO Water Secure Africa initiative ([WASA](https://wateraccounting.org/)) to inform equitable and sustainable water use policies.
 
 #### WorldCover PBC
 
 ::: aside
-![](_fig/wc.jpg){.mt-2 width="5em"}
+![](_fig/wc.jpg){.mt-2 height="3em"}
 
 Washington DC\
 Tamale, Ghana\
@@ -103,14 +113,14 @@ Aug 2017 -- Apr 2021\
 3 years 9 months
 :::
 
-**Head of Research**
+[**Head of Research**]{.text-secondary}
 
-WorldCover engineers solutions to better design, target, and deliver affordable (parametric) weather insurance to small-scale farmers (Ghana, Togo, Kenya, Uganda), and to large-scale fruit and nut tree growers, and to protect entire agricultural value chains against climate risks. Led agrometeorological research across 20 value-chains and agroclimatic zones. Rolled out a real-time pricing engine and multiple APIs on AWS cloud. ([technical platform](http://3.224.92.203:3838/app-pricing/) sold in April 2021).
+WorldCover engineers solutions to better design, target, and deliver affordable **(parametric) weather insurance** to small-scale farmers (Ghana, Togo, Kenya, Uganda), and to large-scale fruit and nut tree growers, and to protect entire agricultural value chains against climate risks. Led agrometeorological research across 20 value-chains and agroclimatic zones. Rolled out a real-time pricing engine and multiple APIs on AWS cloud. ([technical platform](http://3.224.92.203:3838/app-pricing/) sold in April 2021).
 
-#### Bill & Melinda Gates Foundation (BMGF)
+#### Gates Foundation (BMGF)
 
 ::: aside
-![](_fig/bmgf.jpg){.mt-2 width="5em"}
+![](_fig/bmgf.jpg){.mt-2 height="3em"}
 
 Washington DC\
 Seattle WA\
@@ -118,56 +128,56 @@ Apr 2017 -- Dec 2017\
 9 months
 :::
 
-**Agricultural Economist** (contract)
+[**Agricultural Economist** (contract)]{.text-secondary}
 
-Business-oriented typologies and characterization of small-holder farming systems in Ghana, Ethiopia, Tanzania, and Nigeria. Under a work assignment with [Spatial Development International](https://spatialdev.com/) (now Locana).
+Business-oriented typologies and characterization of small-holder farming systems in Ghana, Ethiopia, Tanzania, and Nigeria. Under a work assignment with [Spatial Development International](https://spatialdev.com/) (now TRC).
 
 #### Abt Associates Inc.
 
 ::: aside
-![](_fig/abt.svg){.mt-2 width="6em"}
+![](_fig/abt.svg){.mt-2 height="4em"}
 
 Washington DC\
 Jun 2017 -- Jul 2017\
 2 months
 :::
 
-**Geospatial Analyst** (contract)
+[**Geospatial Analyst** (contract)]{.text-secondary}
 
 Geospatial analysis to support [USAID AgResults](https://agresults.org/) program evaluation in Nigeria, Kenya, and Uganda.
 
 #### International Food Policy Research Institute (IFPRI)
 
 ::: aside
-![](_fig/ifpri.jpg){.mt-2 width="5em"}
+![](_fig/ifpri.jpg){.mt-2 height="3em"}
 
 Washington DC\
 Sep 2014 -- Dec 2016\
 2 years 4 months
 :::
 
-**Snr. Program Manager**
+[**Snr. Program Manager**]{.text-secondary}
 
 Generated subnational socio-economic and biophysical datasets to inform and upscale agricultural research investments in sub-Saharan Africa, track adoption of new agricultural technologies, track CGIAR research investments around the globe, and monitor the impact of policies and investments on small farm-holder livelihoods.
 
 #### IFPRI -- HarvestChoice Program
 
 ::: aside
-![](_fig/hc.jpg){.mt-2 width="5em"}
+![](_fig/hc.jpg){.mt-2 height="2em"}
 
 Washington DC\
 May 2010 -- Aug 2014\
 4 years 4 months
 :::
 
-**Agricultural Economist**
+[**Agricultural Economist**]{.text-secondary}
 
 Research, data and analytics in support of the Global Development Program of the Bill & Melinda Gates Foundation, USAID Feed the Future Africa RISING, the G-8 New Alliance for Food Security and Nutrition, the Alliance for a Green Revolution in Africa (AGRA), and several CGIAR programs focused on agricultural productivity improvement, food security, and poverty reduction in sub-Saharan Africa. In charge of [HarvestChoice](https://ifpri.org/project/harvestchoice) data releases.
 
 #### IFPRI -- AGRODEP Program
 
 ::: aside
-![](_fig/agrodep.jpg){.mt-2 width="5em"}
+![](_fig/agrodep.jpg){.mt-2 height="3em"}
 
 Washington DC\
 Dakar, Senegal\
@@ -175,14 +185,14 @@ May 2011 -- Oct 2011\
 6 months
 :::
 
-**Instructor / Web Developer**
+[**Instructor / Web Developer**]{.text-secondary}
 
 The African Growth and Development Policy Modeling Consortium is a program sponsored by USAID / UKAid. Website migration to a Drupal CMS, incl. preparation of design mockups, content migration, and training of [AGRODEP](http://www.agrodep.org/) staff. Held a 3-day workshop on household survey data sampling and processing to AGRODEP awardees in Dakar, Senegal.
 
 #### Gates Foundation
 
 ::: aside
-![](_fig/bmgf.jpg){.mt-2 width="5em"}
+![](_fig/bmgf.jpg){.mt-2 height="3em"}
 
 Washington DC\
 Seattle WA\
@@ -190,42 +200,42 @@ Nov 2012 -- Sep 2014\
 1 year 11 months
 :::
 
-**Agricultural Economist** (contract)
+[**Agricultural Economist** (contract)]{.text-secondary}
 
 Country diagnostics, segmentation of farm households, and data visualization for the Foundation's Agricultural Development Program. Under a work assignment with [Spatial Development International](https://spatialdev.com/) (now part of [TRC Companies, Inc](https://www.trccompanies.com/services/intelligent-grid-solutions/)).
 
 #### African Development Bank
 
 ::: aside
-![](_fig/afdb.svg){.mt-2 width="9em"}
+![](_fig/afdb.svg){.mt-2 height="3em"}
 
 Tunis, Tunisia\
 Oct 2008 -- Jan 2009\
 4 months
 :::
 
-**Team Lead - Procurement** (contract)
+[**Team Lead - Procurement** (contract)]{.text-secondary}
 
 Led a 4-month ICT project for the Bank’s Procurement and Fiduciary Services division aimed at a complete upgrade of its internal SAP® modules (procurement workflow and reporting tools) and external Web portal (procurement tools and information for borrowing governments and the business community). Under a work assignment with [Crown Agents UK](https://crownagents.com/).
 
 #### Development Gateway Foundation
 
 ::: aside
-![](_fig/dgf.jpg){.mt-2 width="5em"}
+![](_fig/dgf.jpg){.mt-2 height="3em"}
 
 Washington DC\
 May 2008 -- Sep 2008\
 5 months
 :::
 
-**Monitoring & Evaluation of ICT Programs** (contract)
+[**Monitoring & Evaluation of ICT Programs** (contract)]{.text-secondary}
 
 Helped conduct a 5-month evaluation of the relevance, effectiveness and impact, sustainability, governance and management structure of DGF (5 international programs and staff of 84). The evaluation was forward-looking and provided substantial strategic recommendations to DGF in the areas of ICT4D and aid effectiveness. Data collection included desk review, on-line surveys, usage analysis from DGF servers, phone and in-person stakeholder interviews with over 45 individuals. Under a work assignment with [AMEX International](http://amexdc.com/).
 
 #### Abt Associates Inc.
 
 ::: aside
-![](_fig/abt.svg){.mt-2 width="6em"}
+![](_fig/abt.svg){.mt-2 width="4em"}
 
 Washington DC\
 Sana'a, Yemen\
@@ -233,7 +243,7 @@ Oct 2005 -- Sep 2007\
 2 years
 :::
 
-**Senior Analyst**
+[**Senior Analyst**]{.text-secondary}
 
 Managed environmental cost-benefit and regulatory analyses, and program evaluations for the U.S. EPA Office of Air Quality and Office of Pesticide Programs (multi-year \$200K-\$500K task orders). Advised and led digital solutions for USAID, MCC, and WTO-funded projects. Supervised analysts, designers, and content experts:
 
@@ -246,14 +256,14 @@ Managed environmental cost-benefit and regulatory analyses, and program evaluati
 #### Center for Global Trade Analysis (GTAP)
 
 ::: aside
-![](_fig/gtap.png){.mt-2 width="9em"}
+![](_fig/gtap.png){.mt-2 height="3em"}
 
 West Lafayette IN\
 2001 -- 2005\
 4 years
 :::
 
-**ICT and Data Specialist**
+[**ICT and Data Specialist**]{.text-secondary}
 
 - Coordinated all distance learning activities on Computable General Equilibrium modeling
 - Administered Web and database servers in support of the [GTAP Network](https://gtap.org/) (over 8,000 researchers in 110 countries)
@@ -264,14 +274,14 @@ West Lafayette IN\
 #### Landbouw Economisch Instituut -- Wageningen UR (LEI)
 
 ::: aside
-![](_fig/lei.jpg){.mt-2 width="6em"}
+![](_fig/lei.jpg){.mt-2 height="3em"}
 
 Den Haag, The Netherlands\
 Jan 2000 -- Aug 2000\
 8 months
 :::
 
-**Information Management Specialist** (contract)
+[**Information Management Specialist** (contract)]{.text-secondary}
 
 - Planned and coordinated a first on-line training program on horticultural systems between WUR and agricultural academies in China
 - Delivered initial training of trainers to Dutch content experts
@@ -279,7 +289,7 @@ Jan 2000 -- Aug 2000\
 #### Purdue University -- Dpt of Agricultural Economics
 
 ::: aside
-![](_fig/purdue.jpg){.mt-2 width="5em"}
+![](_fig/purdue.jpg){.mt-2 height="3em"}
 
 West Lafayette IN\
 Harare, Zimbabwe\
@@ -287,7 +297,7 @@ Sep 1998 -- Dec 1999\
 1 year 4 months
 :::
 
-**Research Assistant**
+[**Research Assistant**]{.text-secondary}
 
 - Webmaster and technical adviser for a 6-month distance learning project for the Zimbabwean Tariff Commission sponsored by the World Bank
 - Developed distance learning programs focusing on General Equilibrium theories and applications, sponsored by the United Nations Economic Commission for Africa
@@ -296,14 +306,14 @@ Sep 1998 -- Dec 1999\
 #### Société Générale Emerging Europe Asset Management (SGEEAM)
 
 ::: aside
-![](_fig/sg.jpg){.mt-2 width="5em"}
+![](_fig/sg.jpg){.mt-2 height="3em"}
 
 London, UK\
 Jan 1996 -- May 1996\
 5 months
 :::
 
-**Marketing and Technical Assistant**
+[**Marketing and Technical Assistant**]{.text-secondary}
 
 - Assisted the initial release of high-risk investment funds on Eastern European markets
 - Performed ratio analysis and financial reporting (translation of Polish and Czech accounting standards into IAS)
@@ -312,14 +322,14 @@ Jan 1996 -- May 1996\
 #### FIMATEX S.A.
 
 ::: aside
-![](_fig/fimatex.jpg){.mt-2 width="6em"}
+![](_fig/fimatex.jpg){.mt-2 height="3em"}
 
 Paris, France\
 Jul 1995 -- Oct 1995\
 4 months
 :::
 
-**Marketing and Sales Assistant**
+[**Marketing and Sales Assistant**]{.text-secondary}
 
 - Took part in a strategic diversification from commodity to index derivatives markets
 - Negotiated new marketing partnerships with the financial press and software vendors
@@ -329,24 +339,24 @@ Jul 1995 -- Oct 1995\
 #### SEAT France S.A.
 
 ::: aside
-![](_fig/seat.png){.mt-2 width="6em"}
+![](_fig/seat.png){.mt-2 height="3em"}
 
 Cergy Pontoise, France\
 Jan 1995 -- Apr 1995\
 4 months
 :::
 
-**Marketing and Sales Intern**
+[**Marketing and Sales Intern**]{.text-secondary}
 
 Contributed to monthly promotional campaigns with advertising agencies and tracked all merchandising programs with SEAT auto dealers across France.
 
 
-## {{< bi award >}} Education
+### {{< bi award >}} Education
 
 #### Purdue University
 
 ::: aside
-![](_fig/purdue.jpg){width="5em"}
+![](_fig/purdue.jpg){height="3em"}
 
 West Lafayette IN\
 1997 -- 2001
@@ -360,7 +370,7 @@ Activities: started and taught Purdue's Argentine tango student organization
 #### ESCP Europe (EAP)
 
 ::: aside
-![](_fig/escp.jpg){width="5em"}
+![](_fig/escp.jpg){height="3em"}
 
 Paris, France\
 Oxford, UK\
@@ -378,7 +388,7 @@ Thesis: *Agricultural Derivatives Markets – A Substitute to the Common Agricul
 #### Lycée Louis-le-Grand
 
 ::: aside
-![](_fig/llg.jpg){width="6em"}
+![](_fig/llg.jpg){height="3em"}
 
 Paris, France\
 1992 -- 1994
@@ -389,7 +399,7 @@ Paris, France\
 #### Herzen State University
 
 ::: aside
-![](_fig/herzen.jpg){width="6em"}
+![](_fig/herzen.jpg){height="3em"}
 
 St Petersburg, Russia\
 Jun-Sep 2023
@@ -398,9 +408,7 @@ Jun-Sep 2023
 **Intensive summer course in Russian language, culture, and literature**. Grant recipient of the Russian Ministry of Education.
 
 
-{{< pagebreak >}}
-
-## {{< bi journal-text >}} Publications {.mt-md-4}
+### {{< bi journal-text >}} Publications  {.mt-md-4 .mb-3}
 
 *Poverty, Land, and Climate in Africa South of the Sahara: an empirical analysis*, International Food Policy Research Institute. Presented at CSAE 2016.
 

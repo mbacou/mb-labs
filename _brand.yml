@@ -1,29 +1,29 @@
 meta:
   name: Mel B. Labs
-  logo: assets/mb-square.svg
+  logo: assets/mb-square.png
   link:
     home: https://mbacou.github.io/mb-labs
     github: https://github.com/mbacou/mb-labs
 
 color:
   palette:
+    brick:     "#D47979"
+    purple:    "#8D46C1"
     teal:      "#8E8467"
     indigo:    "#79799C"
     blue:      "#00839E"
     cyan:      "#05D5FF"
     green:     "#73842A"
-    purple:    "#8D46C1"
     pink:      "#C6A5E8"
-    brick:     "#D47979"
     red:       "#B54D4D"
     orange:    "#A1713C"
     yellow:    "#E0D1A4"
-    gray:      "#212120"
+    gray:      "#4d4d4d"
     light:     "#FCFAF5"
     dark:      "#003946"
     grid:      "#e7e2da"
 
-  foreground:  gray
+  foreground:  gray     # $body-color = $gray-800 in `mb-article` theme
   background:  light
   primary:     brick
   secondary:   purple
@@ -39,7 +39,7 @@ typography:
   fonts:
     - family: Crimson Text
       source: google
-      weight: [400, 500, 600]
+      weight: [300, 400, 500, 600]
     - family: Iosevka Charon Mono
       source: google
       weight: [400, 500]
@@ -49,11 +49,9 @@ typography:
 
   base: 
     family: Crimson Text
-    size: 20px
+    size: 20px          # $font-size-base ≠ $font-size-root in `_quarto.yml`
   headings: Caveat
   monospace: 
     family: Iosevka Charon Mono
-    size: 14px
-  
- 
+    size: 14px          # $code-font-size
 

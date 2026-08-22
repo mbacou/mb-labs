@@ -1,37 +1,51 @@
 ---
-title: Time to Migrate this Blog from *Distill* to *Quarto*
+title: Time to Migrate this Blog from Distill to Quarto
 subtitle: Mastering <mark>Quarto</mark> Markdown for literate programming, technical writing, and web publishing
 date: 2023-10-01
 date-modified: last-modified
 image: _fig/preview-image-1.svg
+title-block-banner: https://maps.vlasenko.net/historical/rkka100/n-35-008-s.jpg
+draft: false
+freeze: false
+categories:
+  - quarto
+  - dataviz
 keywords: 
   - theming
   - bootstrap
   - ejs
-categories:
-  - quarto
-  - dataviz
-draft: false
-freeze: false
-format-links: 
+format-links:
   - text: Download PDF
     icon: file-pdf
     href: mlabs-theme.pdf
 abstract: |
-  A post about **literate programming** in general and Quarto formats in particular, in which I document migrating this personal blog from **Distill** to **Quarto**. Compared to *J.J. Allaire's Distill for R Markdown*, **Posit® Quarto Markdown** uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way. 
+  A post about **literate programming** in general and Quarto formats in particular, in which I document migrating this personal blog from **Distill** to **Quarto**. Compared to **Distill for R Markdown** (by J.J. Allaire), **Quarto Markdown** (by Posit®) uses a new templating system built on top of Bootstrap v5.3.^ with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme and design tweaks for this revamped website.
 ---
+
+::: {.aside .note}
+No other reason for this post banner but to showcase Quarto's new content layout features -- this margin note has classes `.aside.note`, the map itself has classes `column-page-right` to demonstrate the use of Quarto CSS utilities.
+:::
+
+::: {.aside .note .success .text-serif}
+I am a fan of Soviet-era classic topo styles. Check out Russian [cartography](https://sovietmaps.com/), it is stunning work.
+:::
+
+::: {.aside .text-sans}
+This margin column is **responsive**, content will be moved to the body column on smaller display sizes.
+<hr/>
+:::
 
 With the release of **Quarto 1.4** (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as **Emacs org-mode**, **Rmarkdown** and **Jupyter** notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.
 
-Old-time researchers[^1] [^2] and engineers have long used [Emacs `Org-Mode`](https://orgmode.org/) (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to *Eric Schulte*'s incredible **Babel** extension [see @schulte2012] and to *John MacFarlane*'s [Pandoc](https://pandoc.org/) document converter library -- but nowadays **Quarto** makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as **in-browser real-time rendering of documents**.
+Old-time scientists[^1] [^2] (myself included here) have long used [Emacs `Org-Mode`](https://orgmode.org/) (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to *Eric Schulte*'s incredible **Babel** extension [see @schulte2012] and to *John MacFarlane*'s [Pandoc](https://pandoc.org/) document converter library -- but nowadays **Quarto** uses more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as **in-browser real-time rendering of documents**.
 
 [^1]: For folks born this century, to **babel** (elips) or to **sweave** (R) is the process of compiling text documents that include both static markup and compile-time executable scripts.
 
-    ![](_fig/Donald-Knuth.jpg){.rounded-circle .d-block .mx-auto}
+    ![](_fig/Donald-Knuth.jpg){width="9em" .rounded-circle .d-block .mx-auto}
 
     The concept of **Literate programming** was introduced in 1984 by the mathematician [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) and was widely popularized thereafter in the engineering community thanks to [org-mode](https://orgmode.org/worg/org-contrib/babel/uses.html) in the Emacs editor.
 
-    ![](_fig/Carsten-Dominik.jpg){.rounded-circle .d-block .mx-auto}
+    ![](_fig/Carsten-Dominik.jpg){width="9em" .rounded-circle .d-block .mx-auto}
 
     Emacs **`Org-Mode`** was created by the astronomer [Carsten Dominik](https://en.wikipedia.org/wiki/Org-mode#:~:text=Org%20Mode%20was%20created%20by,mode%20by%20default%20since%202006) in 2003 and remains to this day one of the most used and madly loved note-taking and GTD (Get-Things-Done) tools, with many of its functionality (agenda, tags, etc.) yet to be ported to any markdown engine.
 
@@ -39,7 +53,7 @@ Old-time researchers[^1] [^2] and engineers have long used [Emacs `Org-Mode`](ht
 
     ![](_fig/real-programmers.png)
 
-In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my `mbacou/mb-article` Quarto extension and other tidbits.
+In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my standalone [mbacou/mb-article](https://github.com/mbacou/mb-article) Quarto extension and other tidbits.
 
 # CSS Grid System
 
@@ -70,9 +84,8 @@ leaflet(width="100%", height="15em") %>% addTiles() %>%
 
 Grid sizing and spacing are defined in `_quarto.yml` and may also be modified on a per-document basis, for example by setting:
 
-```{yaml}
+```yaml
 #| filename: ./_quarto.yml
-#| eval: false
 
 format:
   html:
@@ -156,43 +169,9 @@ Finally any layout is achievable using stackable `<div class="g-col-{width}">` C
 
 Note that this table stretches across the right column thanks to Quarto `.column-page-right` CSS class.
 
-::: {.aside .note .mt-md-4}
-No other reason for this map but to showcase Quarto's new content layout features -- this margin note has classes `.aside.note`, the map itself has classes `column-page-left` to demonstrate the use of Quarto and Bootstrap's CSS utilities.
-
-This margin column is **responsive**, content will be moved to the body column on smaller display sizes.
-
-I am a fan of Soviet-era classic topo styles. Check out Russian [cartography](https://sovietmaps.com/), it is stunning work.
-:::
-
-```{r}
-#| column: page-left
-#| echo: fenced
-
-library(leaflet)
-leaflet(
-  width = "100%",
-  height = "17rem",
-  options = leafletOptions(minZoom = 11, maxZoom = 13)
-) %>%
-  addTiles(
-    "https://maps.vlasenko.net/?lon={x}&lat={y}",
-    "sovietmap.com"
-  ) %>%
-  addMarkers(
-    -8.65406047010657,
-    41.14426475811268,
-    label = "In Porto while <br/>working on migration.<br/> Read on, tips below...",
-    labelOptions = labelOptions(textsize = "1rem")
-  )
-```
-
 # Color Scheme
 
-Bootstrap works best with a limited set of **8 semantic color names**. These are well known to Web designers, and for portability's sake it is advised to work within this standard and thus avoid complex naming. Optionally Bootstrap provides classes for an additional [10 + 4 colors](https://getbootstrap.com/docs/5.3/customize/color/#theme-colors) in both **opaque** and **subtle** variants. Most corporate brands stick to a handful of colors, but having a complete categorical palette is useful for more intricate graphical elements and for plots.
-
-Choosing a color scheme is relatively easy -- for example start from your favorite photo or graphic and upload it to one of the many on-line **color palette generators** to extract dominant shades. An alternative is to use a professionally curated **R palette**, such as one available in the `paletteer`, `RBrewer` or `viridis` packages. See [r-charts.com](https://r-charts.com/color-palettes/) for many such examples.
-
-Below I settled for a 12-color palette that simply matches my decade-old [Kubuntu desktop](https://store.kde.org/p/1980663)[^4].
+Bootstrap works best with a limited set of **8 semantic color names**. These are well known to Web designers, and for portability's sake it is advised to work within this standard and avoid intricate color names. Optionally Bootstrap provides classes for an additional [10 + 4 colors](https://getbootstrap.com/docs/5.3/customize/color/#theme-colors) in both **opaque** and **subtle** variants. Most corporate brands stick to a handful of colors, but having a complete categorical palette is useful for more intricate graphical elements and for plots.
 
 [^4]: KDE, 30 years later, still going strong! My personal KDE color scheme in QGIS and VSCode.
 
@@ -200,19 +179,27 @@ Below I settled for a 12-color palette that simply matches my decade-old [Kubunt
 
     ![](_fig/vscode.png){.lightbox}
 
-Another remarkable tool I have used to generate sensible UI color schemes is [themer.dev](https://themer.dev/)[^5] -- this masterpiece of a library is designed to generate consistent color schemes across Linux desktops and for many consoles, text editors, and IDEs. Check it out!
-
 [^5]: Development environment theme creator
 
     ![](_fig/themer.png){.lightbox}
 
-Moreover as of **Quarto v1.6**, the engine now supports externally-defined branding elements (colors, fonts, etc.) provided in standalone `_brand.yml` files. This is a more unified and flexible approach to organizing document- and project-level branding across multiple output formats[^6].
+Choosing a color scheme is relatively easy -- for example start from your favorite photo or graphic and upload it to one of the many on-line **color palette generators** to extract dominant shades. An alternative is to use a professionally curated **R palette**, such as one available in the `paletteer`, `RBrewer` or `viridis` packages. See [r-charts.com](https://r-charts.com/color-palettes/) for many such examples.
+
+Below I settled for a 12-color palette that simply matches my decade-old [KDE desktop](https://store.kde.org/p/1980663)[^4].
+
+Another remarkable tool I have used to generate sensible UI color schemes is [themer.dev](https://themer.dev/)[^5] -- this masterpiece of a library is designed to generate consistent color schemes across Linux desktops and for many consoles, text editors, and IDEs. Check it out!
+
+As of **Quarto v1.6**, the engine now supports externally-defined branding elements (colors, fonts, etc.) provided in standalone `_brand.yml` configuration files. This is a more unified and flexible approach to organizing document- and project-level branding across multiple output formats[^6].
 
 [^6]: The good folks at Posit further documented this [new feature](https://posit-dev.github.io/brand-yml/).
 
-Note that `_brand.yml` definitions can also apply branding to `ggplot2`, `base R`, and `lattice` plots via the (recently released) `brand.yml` R package. However, I generally prefer to use my own branding utilities (see R package `mbutils`).
+::: {.aside .note} 
+Note that a `_brand.yml` config file can also apply brand colors and fonts to `ggplot2`, `base R`, and `lattice` plots via the (recently released) `brand.yml` R package. However, I generally prefer to stick to my own branding utilities[^mbutils].
+:::
 
-Below is the `_brand.yml` config file used on this website.
+[^mbutils]: my R package `mbutils` on [Github](https://github.com/mbacou/mbutils)), which largely predates `brand.yml`.
+
+Below is the `_brand.yml` config used on this website.
 
 ```{yaml}
 #| file: ../../_brand.yml
@@ -220,7 +207,7 @@ Below is the `_brand.yml` config file used on this website.
 #| eval: false
 ```
 
-My active Bootstrap color palette rendered below.
+And my active Bootstrap color palette rendered here.
 
 ```{r}
 #| classes: preview-image
@@ -233,23 +220,57 @@ yaml::read_yaml("../../_brand.yml")$color$palette |>
   scales::show_col()
 ```
 
-# Bringing it altogether: Quarto Format Extension
+# Custom Listings
+
+Blog and Book projects in Quarto typically make use of **post listings** so readers can navigate and filter content posts[^qlst]. Quarto offers 3 built-in listing types (default/table/grid)) that simply proved too intricate for me to style, so I've also packaged my own simplified listings along with this custom theme. They can be called in a document's frontmatter.
+
+[^qlst]: See Quarto's excellent [listing](https://quarto.org/docs/websites/website-listings-custom.html) documentation for details.
+
+::: {.aside .note}
+Oddly, as of Quarto **v1.9.38**, not all standard documents keys are passed on to the EJS engine, so we need to invoke a `template-params` collection instead. In addition Quarto's built-in listing types use additional parsing logic (e.g. image thumbnails, markdown rendering, etc.) also not readily available for reuse.
+:::
+
+```yaml
+---
+title: etc...
+listing:
+  - id: lst-posts
+    contents: posts
+    template: _ejs/listing-list.ejs.md (or) _ejs/listing-card.ejs.md
+    max-description-length: 240
+    categories: false
+    feed: true
+    filter-ui: false
+    sort-ui: false
+    sort: date desc
+    max-items: 3
+    template-params: 
+      image-height: 12rem
+      image-placeholder: assets/placeholder.svg
+    fields: [title, description, image, date, author, categories, reading-time]
+    exclude: 
+      category: [skip*]
+---
+```
+
+
+# Bringing it altogether: Quarto format extension
 
 The final Quarto format was released under its own extension, named `mb-article`. To use in your own documents, simply install the extension with:
 
-``` bash
+```bash
 quarto use mbacou/mb-article
 ```
 
 And to update the extension thereafter:
 
-``` bash
+```bash
 quarto update mbacou/mb-article
 ```
 
 # Publishing Workflow
 
-Finally, the latest Quarto release adds perfectly sensible options to optimize everyone's publishing workflow, in particular through the use of **Draft** and **Freeze** behavior:
+Worth noting, the latest Quarto release adds perfectly sensible options to optimize everyone's publishing workflow, in particular through the use of **Draft** and **Freeze** behavior:
 
 - `draft: true`
 

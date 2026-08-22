@@ -2,5 +2,11 @@
 line-width = 86
 indent-width = 2
 indent-style = "space"
+line-ending = "auto"
 persistent-line-breaks = true
-skip = ["data.table", "tribble", "fcase"]
+assignment-style = "equal"
+exclude = []
+default-exclude = true
+table = []
+default-table = true
+skip = ["data.table", "fcase", "graph_from_literal", "."]

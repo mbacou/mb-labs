@@ -1,6 +1,6 @@
 ---
 title: People, Space, and Statistics
-subtitle: Blog Articles & Notebooks
+subtitle: My Blog Articles & Notebooks
 author: []
 date: ""
 toc-title: ""
@@ -18,24 +18,20 @@ description: |
 listing:
   - id: lst-posts
     contents: posts
-    template: _ejs/listing-list.ejs.md
+    # template: _ejs/listing-list.ejs.md
     max-description-length: 200
-    categories: false
+    categories: true
     feed: true
-    filter-ui: false
-    sort-ui: false
+    filter-ui: true
+    sort-ui: true
     sort: date desc
-    template-params: 
-      image-height: 9rem
-      image-placeholder: assets/placeholder.svg
-    fields: [title, description, image, date, author, categories, reading-time]
+    image-align: left
+    image-height: 8rem
+    image-placeholder: assets/placeholder.svg
+    fields: [title, description, image, date, reading-time]
     exclude: 
       category: [skip*]
 ---
-
-::: {.mx-lg-3 .mb-2}
-[Hi, my name is Mel --- ]{.text-serif .text-muted .me-2 style="font-size:1.75em;"} On this blog I write about sustainable agriculture and food security, policies for equitable trade and development, and about the geopolitics of natural resources. You will also find book and article reviews, and the occasional shout-out and opinion pieces. Check out my [full bio](./posts/resume/) for contact details.
-:::
 
 All blog entries are listed below.
 

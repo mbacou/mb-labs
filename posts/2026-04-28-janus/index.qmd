@@ -1,8 +1,8 @@
 ---
 title: JANUS Model — Literature Review
 date: 2026-04-30
-image: preview-image.png
-bibliography: index.bib
+image: preview.png
+bibliography: biblio.bib
 description: AI-assisted literature review using [pi-feynman](https://pi.dev/packages/@companion-ai/feynman), **Pi** and **alphaXiv** agents.
 status: DRAFT (sources fetched, light verification performed; page-level verification pending)
 categories:

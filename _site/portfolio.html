@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,14 +44,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-746460a2f44fae2b83e2f14b2a1a127a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3fdbed52ddd759eb439825698dcb71cb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-56fd777307ccad64388a606534036c9e.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3fdbed52ddd759eb439825698dcb71cb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9161184c1009bd6b6b31ce38d15b85f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-534e35a8fb73e48858011cc2608ade7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3d5b404e453ec2897701276fdb0dc7ff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-534e35a8fb73e48858011cc2608ade7b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -89,9 +92,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-bibliography','listing-website','listing-format','listing-engines','listing-language','listing-author','listing-execute','listing-title','listing-subtitle','listing-image','listing-date','listing-date-modified','listing-title-block-banner','listing-categories','listing-abstract','listing-path','listing-outputHref','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-bibliography','listing-syntax-highlighting','listing-website','listing-format','listing-engines','listing-language','listing-author','listing-execute','listing-title','listing-subtitle','listing-image','listing-date','listing-date-modified','listing-title-block-banner','listing-categories','listing-abstract','listing-path','listing-outputHref','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-bibliography","listing-website","listing-format","listing-engines","listing-language","listing-author","listing-execute","listing-title","listing-subtitle","listing-image","listing-date","listing-date-modified","listing-title-block-banner","listing-categories","listing-abstract","listing-path","listing-outputHref","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-bibliography","listing-syntax-highlighting","listing-website","listing-format","listing-engines","listing-language","listing-author","listing-execute","listing-title","listing-subtitle","listing-image","listing-date","listing-date-modified","listing-title-block-banner","listing-categories","listing-abstract","listing-path","listing-outputHref","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -111,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -190,8 +193,7 @@ window.Quarto = {
 <!-- article title header -->
 <header id="mb-header" class="column-page-right sticky-top">
   <!-- mb-navbar -->
-  <nav class="d-flex align-items-end 
-  ">
+  <nav class="d-flex align-items-end border-bottom">
 
     <!-- logo -->
       <div class="d-lg-none mb-n1">
@@ -244,10 +246,6 @@ window.Quarto = {
     <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
 
           <li class="nav-item">
-        <a class="nav-link px-1" href="index.xml">
-          <i class="bi bi-feed" role="img"></i></a>
-      </li>
-          <li class="nav-item">
         <a class="nav-link px-1" href="https://github.com/mbacou/mb-labs">
           <i class="bi bi-github" role="img"></i></a>
       </li>
@@ -262,6 +260,10 @@ window.Quarto = {
           <li class="nav-item">
         <a class="nav-link px-1" href="https://youtube.com/@mbacou/playlists">
           <i class="bi bi-youtube" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="index.xml">
+          <i class="bi bi-rss" role="img"></i></a>
       </li>
         </ul>
 
@@ -282,45 +284,34 @@ window.Quarto = {
       <div id="quarto-search"></div>
     
   </nav>
-  <div class="border-top ">
-
-    <!-- Optional brand color palette -->
-        <div class="d-flex justify-content-end">
-      <div class="p-1 text-bg-primary"></div>
-      <div class="p-1 text-bg-secondary"></div>
-      <div class="p-1 text-bg-tertiary"></div>
-      <div class="p-1 text-bg-info"></div>
-      <div class="p-1 text-bg-success"></div>
-      <div class="p-1 text-bg-warning"></div>
-      <div class="p-1 text-bg-danger"></div>
-      <div class="p-1 text-bg-light"></div>
-      <div class="p-1 text-bg-dark"></div>
-    </div>
-    
+  <!-- Optional brand color palette -->
+    <div class="d-flex justify-content-end">
+    <div class="p-1 text-bg-primary"></div>
+    <div class="p-1 text-bg-secondary"></div>
+    <div class="p-1 text-bg-tertiary"></div>
+    <div class="p-1 text-bg-info"></div>
+    <div class="p-1 text-bg-success"></div>
+    <div class="p-1 text-bg-warning"></div>
+    <div class="p-1 text-bg-danger"></div>
+    <div class="p-1 text-bg-light"></div>
+    <div class="p-1 text-bg-dark"></div>
   </div>
+  
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 mb-3">
+<header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+  <ul class="column-page-right navbar-nav d-flex flex-row align-items-start gap-2 mt-1 text-sans text-uppercase">
         <li class="nav-item pt-2 fs-3 text-primary fw-bold">econ</li>
         <li class="nav-item pt-2 fs-3 text-primary fw-bold">stats</li>
         <li class="nav-item pt-2 fs-3 text-primary fw-bold">dataviz</li>
-        <li class="nav-item px-2 secondary ms-auto">
-      <span>Draft
-        ☐
-      </span>
-    </li>
-    <li class="nav-item px-2 secondary">
-      <span>Frozen
-        ☐
-      </span>
-    </li>
-  </ul>
+          </ul>
 
    <p class="title display-7">Mel’s Design Portfolio</p> 
   <p class="subtitle lead"> A collection of visuals. </p>
 
+  <!-- Optional banner image -->
+  
   
   <div class="mx-lg-3">
     
@@ -333,29 +324,19 @@ window.Quarto = {
 <h2 data-anchor-id="examples">Examples</h2>
 <div id="listing-lst-portfolio" class="column-page-right listing quarto-float quarto-figure quarto-figure-left quarto-listing quarto-listing-container-custom">
   
-    <div class="grid gap-3 py-3" data-index="0" data-categories="bW9kZWwlMjBmcm9udC1lbmQlMkNSJTJGU2hpbnk=" data-listing-date-sort="1706745600000" data-listing-file-modified-sort="1749010388751" data-listing-date-modified-sort="1749010388000" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
+    <div class="grid gap-md-3 py-3" data-index="0" data-categories="bW9kZWwlMjBmcm9udC1lbmQlMkNSJTJGU2hpbnk=" data-listing-date-sort="1706745600000" data-listing-file-modified-sort="1749010388751" data-listing-date-modified-sort="1749010388000" data-listing-reading-time-sort="2" data-listing-word-count-sort="242">
 
-      <div class="g-col12 g-col-md-3 order-md-3">
+      <div class="g-col-12 d-md-none">
+        <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
         
-        <p class="mb-0 fw-bolder fs-1 text-secondary">Feb 1, 2024</p>
+          <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('bW9kZWwlMjBmcm9udC1lbmQ='); return false;">model front-end</li>
         
+          <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('UiUyRlNoaW55'); return false;">R/Shiny</li>
+        
+        </ul>
+      </div>    
 
-        
-        <p><i class="bi bi-user"></i> 
-          
-            Melanie BACOU
-                
-        </p>
-        
-
-        
-        <p class="fs-2 text-muted">
-        <i class="bi bi-stopwatch"></i> 2 min
-        </p>
-        
-      </div>
-
-      <div class="g-col12 g-col-md-3 order-md-1" style="overflow: clip; height: 14rem;">
+      <div class="g-col-12 g-col-md-3 order-md-1 bg-light" style="overflow: clip; max-height: 14rem;">
         <a href="./portfolio/app-pricing.html" class="no-external">
         
         
@@ -364,46 +345,58 @@ window.Quarto = {
         </a>
       </div>          
       
-      <div class="g-col12 g-col-md-6 order-md-2">
-        <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
+      <div class="g-col-12 g-col-md-6 order-md-2">
+        <ul class="d-none d-md-flex navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
         
           <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('bW9kZWwlMjBmcm9udC1lbmQ='); return false;">model front-end</li>
         
           <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('UiUyRlNoaW55'); return false;">R/Shiny</li>
         
         </ul>      
-        <h4 class="no-anchor mt-0">
+        <h4 class="no-anchor mt-md-0">
         <a href="./portfolio/app-pricing.html" class="text-body">Interactive Web Applications</a>
         </h4>
         <p class="small">Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.
 </p>
       </div>
 
-    </div>
-  
-    <div class="grid gap-3 py-3" data-index="1" data-categories="bW9kZWwlMjBmcm9udC1lbmQlMkNSJTJGU2hpbnk=" data-listing-date-sort="1706745600000" data-listing-file-modified-sort="1706627114646" data-listing-date-modified-sort="1706627114000" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
-
-      <div class="g-col12 g-col-md-3 order-md-3">
-        
-        <p class="mb-0 fw-bolder fs-1 text-secondary">Feb 1, 2024</p>
-        
-
-        
-        <p><i class="bi bi-user"></i> 
+      <div class="g-col-12 g-col-md-3 order-md-3 pt-md-4">
+        <div class="d-flex d-md-block flex-row gap-2">
           
-            Melanie BACOU
-                
-        </p>
-        
+          <p class="mb-0"><mark class="1 fs-1 secondary">Feb 1, 2024</mark></p>
+          
 
-        
-        <p class="fs-2 text-muted">
-        <i class="bi bi-stopwatch"></i> 1 min
-        </p>
-        
+          
+          <p><i class="bi bi-user"></i> 
+            
+              Melanie BACOU
+                  
+          </p>
+          
+
+          
+          <p class="fs-2 text-muted ms-auto">
+          <i class="bi bi-stopwatch"></i> 2 min
+          </p>
+          
+        </div>      
       </div>
 
-      <div class="g-col12 g-col-md-3 order-md-1" style="overflow: clip; height: 14rem;">
+    </div>
+  
+    <div class="grid gap-md-3 py-3" data-index="1" data-categories="bW9kZWwlMjBmcm9udC1lbmQlMkNSJTJGU2hpbnk=" data-listing-date-sort="1706745600000" data-listing-file-modified-sort="1706627114646" data-listing-date-modified-sort="1706627114000" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+
+      <div class="g-col-12 d-md-none">
+        <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
+        
+          <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('bW9kZWwlMjBmcm9udC1lbmQ='); return false;">model front-end</li>
+        
+          <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('UiUyRlNoaW55'); return false;">R/Shiny</li>
+        
+        </ul>
+      </div>    
+
+      <div class="g-col-12 g-col-md-3 order-md-1 bg-light" style="overflow: clip; max-height: 14rem;">
         <a href="./portfolio/app-wadashboard.html" class="no-external">
         
         
@@ -412,46 +405,56 @@ window.Quarto = {
         </a>
       </div>          
       
-      <div class="g-col12 g-col-md-6 order-md-2">
-        <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
+      <div class="g-col-12 g-col-md-6 order-md-2">
+        <ul class="d-none d-md-flex navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
         
           <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('bW9kZWwlMjBmcm9udC1lbmQ='); return false;">model front-end</li>
         
           <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('UiUyRlNoaW55'); return false;">R/Shiny</li>
         
         </ul>      
-        <h4 class="no-anchor mt-0">
+        <h4 class="no-anchor mt-md-0">
         <a href="./portfolio/app-wadashboard.html" class="text-body">Interactive Web Applications</a>
         </h4>
         <p class="small">Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.
 </p>
       </div>
 
-    </div>
-  
-    <div class="grid gap-3 py-3" data-index="2" data-categories="ZGVzaWdu" data-listing-date-sort="1706572800000" data-listing-file-modified-sort="1706610656158" data-listing-date-modified-sort="1706610656000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-
-      <div class="g-col12 g-col-md-3 order-md-3">
-        
-        <p class="mb-0 fw-bolder fs-1 text-secondary">Jan 30, 2024</p>
-        
-
-        
-        <p><i class="bi bi-user"></i> 
+      <div class="g-col-12 g-col-md-3 order-md-3 pt-md-4">
+        <div class="d-flex d-md-block flex-row gap-2">
           
-            Melanie BACOU
-                
-        </p>
-        
+          <p class="mb-0"><mark class="1 fs-1 secondary">Feb 1, 2024</mark></p>
+          
 
-        
-        <p class="fs-2 text-muted">
-        <i class="bi bi-stopwatch"></i> 1 min
-        </p>
-        
+          
+          <p><i class="bi bi-user"></i> 
+            
+              Melanie BACOU
+                  
+          </p>
+          
+
+          
+          <p class="fs-2 text-muted ms-auto">
+          <i class="bi bi-stopwatch"></i> 1 min
+          </p>
+          
+        </div>      
       </div>
 
-      <div class="g-col12 g-col-md-3 order-md-1" style="overflow: clip; height: 14rem;">
+    </div>
+  
+    <div class="grid gap-md-3 py-3" data-index="2" data-categories="ZGVzaWdu" data-listing-date-sort="1706572800000" data-listing-file-modified-sort="1706610656158" data-listing-date-modified-sort="1706610656000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+
+      <div class="g-col-12 d-md-none">
+        <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
+        
+          <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('ZGVzaWdu'); return false;">design</li>
+        
+        </ul>
+      </div>    
+
+      <div class="g-col-12 g-col-md-3 order-md-1 bg-light" style="overflow: clip; max-height: 14rem;">
         <a href="./portfolio/print.html" class="no-external">
         
         
@@ -460,44 +463,56 @@ window.Quarto = {
         </a>
       </div>          
       
-      <div class="g-col12 g-col-md-6 order-md-2">
-        <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
+      <div class="g-col-12 g-col-md-6 order-md-2">
+        <ul class="d-none d-md-flex navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
         
           <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('ZGVzaWdu'); return false;">design</li>
         
         </ul>      
-        <h4 class="no-anchor mt-0">
+        <h4 class="no-anchor mt-md-0">
         <a href="./portfolio/print.html" class="text-body">Print Design</a>
         </h4>
         <p class="small">Showcase of print posters, bulletins and handouts designed for partners and clients.
 </p>
       </div>
 
-    </div>
-  
-    <div class="grid gap-3 py-3" data-index="3" data-categories="ZGVzaWduJTJDdGFibGVhdQ==" data-listing-date-sort="1706572800000" data-listing-file-modified-sort="1706610591538" data-listing-date-modified-sort="1706610591000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-
-      <div class="g-col12 g-col-md-3 order-md-3">
-        
-        <p class="mb-0 fw-bolder fs-1 text-secondary">Jan 30, 2024</p>
-        
-
-        
-        <p><i class="bi bi-user"></i> 
+      <div class="g-col-12 g-col-md-3 order-md-3 pt-md-4">
+        <div class="d-flex d-md-block flex-row gap-2">
           
-            Melanie BACOU
-                
-        </p>
-        
+          <p class="mb-0"><mark class="1 fs-1 secondary">Jan 30, 2024</mark></p>
+          
 
-        
-        <p class="fs-2 text-muted">
-        <i class="bi bi-stopwatch"></i> 1 min
-        </p>
-        
+          
+          <p><i class="bi bi-user"></i> 
+            
+              Melanie BACOU
+                  
+          </p>
+          
+
+          
+          <p class="fs-2 text-muted ms-auto">
+          <i class="bi bi-stopwatch"></i> 1 min
+          </p>
+          
+        </div>      
       </div>
 
-      <div class="g-col12 g-col-md-3 order-md-1" style="overflow: clip; height: 14rem;">
+    </div>
+  
+    <div class="grid gap-md-3 py-3" data-index="3" data-categories="ZGVzaWduJTJDdGFibGVhdQ==" data-listing-date-sort="1706572800000" data-listing-file-modified-sort="1706610591538" data-listing-date-modified-sort="1706610591000" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+
+      <div class="g-col-12 d-md-none">
+        <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
+        
+          <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('ZGVzaWdu'); return false;">design</li>
+        
+          <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('dGFibGVhdQ=='); return false;">tableau</li>
+        
+        </ul>
+      </div>    
+
+      <div class="g-col-12 g-col-md-3 order-md-1 bg-light" style="overflow: clip; max-height: 14rem;">
         <a href="./portfolio/tableau.html" class="no-external">
         
         
@@ -506,19 +521,41 @@ window.Quarto = {
         </a>
       </div>          
       
-      <div class="g-col12 g-col-md-6 order-md-2">
-        <ul class="navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
+      <div class="g-col-12 g-col-md-6 order-md-2">
+        <ul class="d-none d-md-flex navbar-nav d-flex flex-row gap-2 text-sans text-uppercase">
         
           <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('ZGVzaWdu'); return false;">design</li>
         
           <li class="nav-item fs-4 text-primary fw-bold" onclick="window.quartoListingCategory('dGFibGVhdQ=='); return false;">tableau</li>
         
         </ul>      
-        <h4 class="no-anchor mt-0">
+        <h4 class="no-anchor mt-md-0">
         <a href="./portfolio/tableau.html" class="text-body">Tableau® Dashboards</a>
         </h4>
         <p class="small">Showcase of interactive statistical dashboards and decision-support tools designed for partners and clients.
 </p>
+      </div>
+
+      <div class="g-col-12 g-col-md-3 order-md-3 pt-md-4">
+        <div class="d-flex d-md-block flex-row gap-2">
+          
+          <p class="mb-0"><mark class="1 fs-1 secondary">Jan 30, 2024</mark></p>
+          
+
+          
+          <p><i class="bi bi-user"></i> 
+            
+              Melanie BACOU
+                  
+          </p>
+          
+
+          
+          <p class="fs-2 text-muted ms-auto">
+          <i class="bi bi-stopwatch"></i> 1 min
+          </p>
+          
+        </div>      
       </div>
 
     </div>

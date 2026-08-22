@@ -1,0 +1,46 @@
+meta:
+  name: Mel B. Labs
+  logo: assets/mb-square.png
+  link:
+    home: https://mbacou.github.io/mb-labs
+    github: https://github.com/mbacou/mb-labs
+
+color:
+  palette:
+    brick:     "#D47979"
+    purple:    "#8D46C1"
+    teal:      "#8E8467"
+    indigo:    "#79799C"
+    blue:      "#00839E"
+    cyan:      "#05D5FF"
+    green:     "#73842A"
+    pink:      "#C6A5E8"
+    red:       "#B54D4D"
+    orange:    "#A1713C"
+    yellow:    "#E0D1A4"
+    gray:      "#19181f"
+    light:     "#FDFDFD"
+    dark:      "#003946"
+    grid:      "#e7e2da"
+
+  foreground:  gray     # $body-color = $gray-800 in `mb-article` theme
+  background:  light
+  primary:     brick
+  secondary:   purple
+  tertiary:    gray
+  info:        blue
+  success:     green
+  warning:     orange
+  danger:      red
+  light:       light
+  dark:        dark
+
+typography:
+  base: 
+    family: system-ui
+    size: 20px          # $font-size-base ≠ $font-size-root in `_quarto.yml`
+  headings: ui-serif
+  monospace: 
+    family: monospace-ui
+    size: 14px          # $code-font-size
+

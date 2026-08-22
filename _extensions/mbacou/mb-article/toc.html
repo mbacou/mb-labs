@@ -20,8 +20,10 @@
   $table-of-contents$
 
   <!-- Back to top -->
-  <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 border-grid mb-4">
+  <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 mb-4 border-grid">
+    $if(bibliography)$
     <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
+    $endif$
     $if(citation)$
     <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
     $endif$

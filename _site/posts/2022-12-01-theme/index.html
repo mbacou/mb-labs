@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -94,14 +97,14 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-746460a2f44fae2b83e2f14b2a1a127a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1c54a13ad7212dd7997f8f28688ef137.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3fdbed52ddd759eb439825698dcb71cb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-56fd777307ccad64388a606534036c9e.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3fdbed52ddd759eb439825698dcb71cb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-9161184c1009bd6b6b31ce38d15b85f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-9b7cb29f3acc74cd4644af26f6024363.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3fef1d77c7831d2c787e2c0f9774faee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-2069367a6cbbf489d69b259bc6520835.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3fef1d77c7831d2c787e2c0f9774faee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -133,19 +136,16 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
-<script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="../../site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: https://maps.vlasenko.net/historical/rkka100/n-35-008-s.jpg;
+      }
+</style>
 
 
 <meta property="og:title" content="Time to Migrate this Blog from Distill to Quarto – Mel B. mb-labs">
-<meta property="og:description" content="A post about literate programming in general and Quarto formats in particular, in which I document migrating this personal blog from Distill to Quarto. Compared to J.J. Allaire’s Distill for R Markdown, Posit® Quarto Markdown uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way.">
+<meta property="og:description" content="A post about literate programming in general and Quarto formats in particular, in which I document migrating this personal blog from Distill to Quarto. Compared to Distill for R Markdown (by J.J. Allaire), Quarto Markdown (by Posit®) uses a new templating system built on top of Bootstrap v5.3.^ with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme and design tweaks for this revamped website.">
 <meta property="og:image" content="https://mbacou.com/posts/2022-12-01-theme/_fig/preview-image-1.svg">
 <meta property="og:site_name" content="Mel B. mb-labs">
 </head>
@@ -154,7 +154,7 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="d-flex flex-column justify-content-around h-100 pt-5 px-2 toc-active" data-toc-expanded="99">
@@ -162,7 +162,7 @@ div.csl-indent {
   <!-- Fixed article meta -->
   <div class="mb-meta mt-2 mt-md-4 mb-3">
 
-        <p class="fs-0">Jun 29, 2026 <i class="bi bi-clock ms-1"></i></p>
+        <p class="fs-0">Jul 3, 2026 <i class="bi bi-clock ms-1"></i></p>
     
     
   </div>
@@ -172,14 +172,15 @@ div.csl-indent {
   <ul>
   <li><a href="#css-grid-system" id="toc-css-grid-system" class="nav-link active" data-scroll-target="#css-grid-system">CSS Grid System</a></li>
   <li><a href="#color-scheme" id="toc-color-scheme" class="nav-link" data-scroll-target="#color-scheme">Color Scheme</a></li>
-  <li><a href="#bringing-it-altogether-quarto-format-extension" id="toc-bringing-it-altogether-quarto-format-extension" class="nav-link" data-scroll-target="#bringing-it-altogether-quarto-format-extension">Bringing it altogether: Quarto Format Extension</a></li>
+  <li><a href="#custom-listings" id="toc-custom-listings" class="nav-link" data-scroll-target="#custom-listings">Custom Listings</a></li>
+  <li><a href="#bringing-it-altogether-quarto-format-extension" id="toc-bringing-it-altogether-quarto-format-extension" class="nav-link" data-scroll-target="#bringing-it-altogether-quarto-format-extension">Bringing it altogether: Quarto format extension</a></li>
   <li><a href="#publishing-workflow" id="toc-publishing-workflow" class="nav-link" data-scroll-target="#publishing-workflow">Publishing Workflow</a></li>
   </ul>
 
   <!-- Back to top -->
-  <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 border-grid mb-4">
-    <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
-        <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
+  <div class="d-flex flex-column text-sans pt-1 lh-sm fs-5 mb-4 border-grid">
+        <a href="#quarto-appendix">References <i class="bi bi-link-45deg ms-1"></i></a>
+            <a href="#citation">How to cite <i class="bi bi-share ms-1"></i></a>
         <a class="mt-1 border-grid pt-1 text-muted" href="#mb-title-block">Back
       to top <i class="bi bi-arrow-up ms-1"></i></a>
   </div>
@@ -200,13 +201,12 @@ div.csl-indent {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 <!-- article title header -->
 <header id="mb-header" class="column-page-right sticky-top">
   <!-- mb-navbar -->
-  <nav class="d-flex align-items-end 
-  ">
+  <nav class="d-flex align-items-end border-bottom">
 
     <!-- logo -->
       <div class="d-lg-none mb-n1">
@@ -259,10 +259,6 @@ div.csl-indent {
     <ul class="navbar-nav d-none d-md-flex flex-row justify-content-end">
 
           <li class="nav-item">
-        <a class="nav-link px-1" href="index.xml">
-          <i class="bi bi-feed" role="img"></i></a>
-      </li>
-          <li class="nav-item">
         <a class="nav-link px-1" href="https://github.com/mbacou/mb-labs">
           <i class="bi bi-github" role="img"></i></a>
       </li>
@@ -277,6 +273,10 @@ div.csl-indent {
           <li class="nav-item">
         <a class="nav-link px-1" href="https://youtube.com/@mbacou/playlists">
           <i class="bi bi-youtube" role="img"></i></a>
+      </li>
+          <li class="nav-item">
+        <a class="nav-link px-1" href="index.xml">
+          <i class="bi bi-rss" role="img"></i></a>
       </li>
         </ul>
 
@@ -297,47 +297,47 @@ div.csl-indent {
       <div id="quarto-search"></div>
     
   </nav>
-  <div class="border-top ">
-
-    <!-- Optional brand color palette -->
-        <div class="d-flex justify-content-end">
-      <div class="p-1 text-bg-primary"></div>
-      <div class="p-1 text-bg-secondary"></div>
-      <div class="p-1 text-bg-tertiary"></div>
-      <div class="p-1 text-bg-info"></div>
-      <div class="p-1 text-bg-success"></div>
-      <div class="p-1 text-bg-warning"></div>
-      <div class="p-1 text-bg-danger"></div>
-      <div class="p-1 text-bg-light"></div>
-      <div class="p-1 text-bg-dark"></div>
-    </div>
-    
+  <!-- Optional brand color palette -->
+    <div class="d-flex justify-content-end">
+    <div class="p-1 text-bg-primary"></div>
+    <div class="p-1 text-bg-secondary"></div>
+    <div class="p-1 text-bg-tertiary"></div>
+    <div class="p-1 text-bg-info"></div>
+    <div class="p-1 text-bg-success"></div>
+    <div class="p-1 text-bg-warning"></div>
+    <div class="p-1 text-bg-danger"></div>
+    <div class="p-1 text-bg-light"></div>
+    <div class="p-1 text-bg-dark"></div>
   </div>
+  
 </header>
 
 <header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
-  <ul class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+  <ul class="column-page-right navbar-nav d-flex flex-row align-items-start gap-2 mt-1 text-sans text-uppercase">
         <li class="nav-item pt-2 fs-3 text-primary fw-bold">quarto</li>
         <li class="nav-item pt-2 fs-3 text-primary fw-bold">dataviz</li>
-        <li class="nav-item px-2 secondary ms-auto">
+            <li class="nav-item px-2 mb-2 secondary ms-auto">
       <span>Draft
         ☐
       </span>
     </li>
-    <li class="nav-item px-2 secondary">
+    <li class="nav-item px-2 mb-2 secondary">
       <span>Frozen
         ☐
       </span>
     </li>
-  </ul>
+      </ul>
 
-   <p class="title display-7">Time to Migrate this Blog from <em>Distill</em> to <em>Quarto</em></p> 
-  <p class="subtitle lead"> Mastering <mark>Quarto</mark> Markdown for literate programming, technical writing, and web publishing </p>
-
+  <!-- Optional banner image -->
+    <div class="column-page-right p-2" style="background: url('https://maps.vlasenko.net/historical/rkka100/n-35-008-s.jpg') center center / cover no-repeat fixed;">
+    <p class="subtitle mb-4"> Mastering <mark>Quarto</mark> Markdown for literate programming, technical writing, and web publishing </p>
+     <p class="title">Time to Migrate this Blog from Distill to Quarto</p> 
+  </div>
+  
     
   
-  <div class="no-row-height column-margin column-container"><div class="">
+  <div class="no-row-height column-margin column-container"><div class="mt-4">
 
         <p class="lh-sm fs-0 mb-3 text-body"><a href="https://orcid.org/0000-0003-1810-6818">
   <i class="bi bi-person-circle me-1"></i></a>
@@ -363,27 +363,37 @@ div.csl-indent {
     
   </div></div><div class="mx-lg-3">
         <label>Abstract</label>
-    <div class="lh-lg fs-1 text-muted"><p>A post about <strong>literate programming</strong> in general and Quarto formats in particular, in which I document migrating this personal blog from <strong>Distill</strong> to <strong>Quarto</strong>. Compared to <em>J.J. Allaire’s Distill for R Markdown</em>, <strong>Posit® Quarto Markdown</strong> uses a new templating system built on top of Bootstrap v5.3.1 with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme for this revamped website, and design tweaks I made along the way.</p></div>
+    <div class="lh-lg fs-0 fw-light text-muted"><p>A post about <strong>literate programming</strong> in general and Quarto formats in particular, in which I document migrating this personal blog from <strong>Distill</strong> to <strong>Quarto</strong>. Compared to <strong>Distill for R Markdown</strong> (by J.J. Allaire), <strong>Quarto Markdown</strong> (by Posit®) uses a new templating system built on top of Bootstrap v5.3.^ with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme and design tweaks for this revamped website.</p></div>
     
         <ul class="navbar-nav d-flex flex-row gap-1">
-      <li class="nav-item fs-1 text-muted me-1">Keywords: </li>
-       <li class="nav-item fs-1">theming;</li>
-       <li class="nav-item fs-1">bootstrap;</li>
-       <li class="nav-item fs-1">ejs;</li>
+      <li class="nav-item fs-2 text-muted me-1">Keywords: </li>
+       <li class="nav-item fs-2">theming;</li>
+       <li class="nav-item fs-2">bootstrap;</li>
+       <li class="nav-item fs-2">ejs;</li>
       
     </ul>
     
 </div></header>
 
 
+
+<div class="no-row-height column-margin column-container"><div class="note margin-aside">
+<p>No other reason for this post banner but to showcase Quarto’s new content layout features – this margin note has classes <code>.aside.note</code>, the map itself has classes <code>column-page-right</code> to demonstrate the use of Quarto CSS utilities.</p>
+</div><div class="note success text-serif margin-aside">
+<p>I am a fan of Soviet-era classic topo styles. Check out Russian <a href="https://sovietmaps.com/">cartography</a>, it is stunning work.</p>
+</div><div class="text-sans margin-aside">
+This margin column is <strong>responsive</strong>, content will be moved to the body column on smaller display sizes.
+<hr>
+</div></div>
+
 <p>With the release of <strong>Quarto 1.4</strong> (in 2023), markdown-based publishing is gaining popularity, way beyond the scientific community. Multilingual text-based publishing formats (such as <strong>Emacs org-mode</strong>, <strong>Rmarkdown</strong> and <strong>Jupyter</strong> notebooks) that combine executable code chunks with formatted prose greatly simplify the process of drafting, iterating, compiling, documenting, sharing and reproducing computable research experiments.</p>
-<p>Old-time researchers<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and engineers have long used <a href="https://orgmode.org/">Emacs <code>Org-Mode</code></a> (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to <em>Eric Schulte</em>’s incredible <strong>Babel</strong> extension <span class="citation" data-cites="schulte2012">(see <a href="#ref-schulte2012" role="doc-biblioref">Schulte et al. 2012</a>)</span> and to <em>John MacFarlane</em>’s <a href="https://pandoc.org/">Pandoc</a> document converter library – but nowadays <strong>Quarto</strong> makes use of more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as <strong>in-browser real-time rendering of documents</strong>.</p>
+<p>Old-time scientists<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (myself included here) have long used <a href="https://orgmode.org/">Emacs <code>Org-Mode</code></a> (along with its wild hordes of keyboard shortcuts) to achieve similar results thanks to <em>Eric Schulte</em>’s incredible <strong>Babel</strong> extension <span class="citation" data-cites="schulte2012">(see <a href="#ref-schulte2012" role="doc-biblioref">Schulte et al. 2012</a>)</span> and to <em>John MacFarlane</em>’s <a href="https://pandoc.org/">Pandoc</a> document converter library – but nowadays <strong>Quarto</strong> uses more efficient script parsers and optimized runtime engines (Sass, Deno, V8) as well as <strong>in-browser real-time rendering of documents</strong>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;For folks born this century, to <strong>babel</strong> (elips) or to <strong>sweave</strong> (R) is the process of compiling text documents that include both static markup and compile-time executable scripts.</p>
-<p><a href="_fig/Donald-Knuth.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="_fig/Donald-Knuth.jpg" class="rounded-circle d-block mx-auto img-fluid"></a></p>
+<p><a href="_fig/Donald-Knuth.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="_fig/Donald-Knuth.jpg" class="rounded-circle d-block mx-auto img-fluid" style="width:9em"></a></p>
 <p>The concept of <strong>Literate programming</strong> was introduced in 1984 by the mathematician <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a> and was widely popularized thereafter in the engineering community thanks to <a href="https://orgmode.org/worg/org-contrib/babel/uses.html">org-mode</a> in the Emacs editor.</p>
-<p><a href="_fig/Carsten-Dominik.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_fig/Carsten-Dominik.jpg" class="rounded-circle d-block mx-auto img-fluid"></a></p>
+<p><a href="_fig/Carsten-Dominik.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="_fig/Carsten-Dominik.jpg" class="rounded-circle d-block mx-auto img-fluid" style="width:9em"></a></p>
 <p>Emacs <strong><code>Org-Mode</code></strong> was created by the astronomer <a href="https://en.wikipedia.org/wiki/Org-mode#:~:text=Org%20Mode%20was%20created%20by,mode%20by%20default%20since%202006">Carsten Dominik</a> in 2003 and remains to this day one of the most used and madly loved note-taking and GTD (Get-Things-Done) tools, with many of its functionality (agenda, tags, etc.) yet to be ported to any markdown engine.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Only keyboard, Baby!</p>
-<p><a href="_fig/real-programmers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_fig/real-programmers.png" class="img-fluid"></a></p></div></div><p>In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my <code>mbacou/mb-article</code> Quarto extension and other tidbits.</p>
+<p><a href="_fig/real-programmers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="_fig/real-programmers.png" class="img-fluid"></a></p></div></div><p>In the process of migrating old articles and code notebooks to the Quarto markdown syntax, I used this article as a template to build a complete Bootstrap theme for the revamped website. This article helped me finetune content placement and notebook execution. Feel free to reuse my standalone <a href="https://github.com/mbacou/mb-article">mbacou/mb-article</a> Quarto extension and other tidbits.</p>
 <section id="css-grid-system" class="level1 page-columns page-full">
 <h1>CSS Grid System</h1>
 <p>One of Quarto’s many great features is the full flexibility of the <a href="https://getbootstrap.com/docs/5.3/getting-started/">Bootstrap v5.3</a> responsive grid system, with a few handy classes to help precisely position content in a document or on a web page. In particular Quarto now provides:</p>
@@ -412,20 +422,15 @@ div.csl-indent {
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">label=</span><span class="st">"Me, as I'm writing this post. Read on, tips below!"</span>, </span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">labelOptions=</span><span class="fu">labelOptions</span>(<span class="at">textsize=</span><span class="st">"1rem"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Grid sizing and spacing are defined in <code>_quarto.yml</code> and may also be modified on a per-document basis, for example by setting:</p>
-<div class="cell">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>./_quarto.yml</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid</span><span class="kw">:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">body-width</span><span class="kw">:</span><span class="at"> 840px</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">sidebar-width</span><span class="kw">:</span><span class="at"> 180px</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">margin-width</span><span class="kw">:</span><span class="at"> 240px</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">gutter-width</span><span class="kw">:</span><span class="at"> 30px</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| filename: ./_quarto.yml</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">body-width</span><span class="kw">:</span><span class="at"> 840px</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">sidebar-width</span><span class="kw">:</span><span class="at"> 180px</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">margin-width</span><span class="kw">:</span><span class="at"> 240px</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">gutter-width</span><span class="kw">:</span><span class="at"> 30px</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>There are new Quarto CSS classes to help control content width and placement.</p>
 <div class="column-body bg-info-subtle mb-2">
 <p><code>.column-body</code></p>
@@ -517,122 +522,91 @@ column: screen-right</code></pre></td>
 </table>
 </div>
 <p>Note that this table stretches across the right column thanks to Quarto <code>.column-page-right</code> CSS class.</p>
-
-<div class="no-row-height column-margin column-container"><div class="note mt-md-4 margin-aside">
-<p>No other reason for this map but to showcase Quarto’s new content layout features – this margin note has classes <code>.aside.note</code>, the map itself has classes <code>column-page-left</code> to demonstrate the use of Quarto and Bootstrap’s CSS utilities.</p>
-<p>This margin column is <strong>responsive</strong>, content will be moved to the body column on smaller display sizes.</p>
-<p>I am a fan of Soviet-era classic topo styles. Check out Russian <a href="https://sovietmaps.com/">cartography</a>, it is stunning work.</p>
-</div></div><div class="cell page-columns page-full">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: page-left</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>(</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">width =</span> <span class="st">"100%"</span>,</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="st">"17rem"</span>,</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">leafletOptions</span>(<span class="at">minZoom =</span> <span class="dv">11</span>, <span class="at">maxZoom =</span> <span class="dv">13</span>)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>(</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://maps.vlasenko.net/?lon={x}&amp;lat={y}"</span>,</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"sovietmap.com"</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span><span class="fl">8.65406047010657</span>,</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    <span class="fl">41.14426475811268</span>,</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below..."</span>,</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">labelOptions =</span> <span class="fu">labelOptions</span>(<span class="at">textsize =</span> <span class="st">"1rem"</span>)</span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display column-page-left">
-<div id="htmlwidget-c8f23830595d00b32baa" style="width:100%;height:17rem;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c8f23830595d00b32baa">{"x":{"options":{"minZoom":11,"maxZoom":13,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://maps.vlasenko.net/?lon={x}&lat={y}",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"sovietmap.com"}]},{"method":"addMarkers","args":[41.14426475811268,-8.65406047010657,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,"In Porto while &lt;br/&gt;working on migration.&lt;br/&gt; Read on, tips below...",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"1rem","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.14426475811268,41.14426475811268],"lng":[-8.65406047010657,-8.65406047010657]}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
 </section>
 <section id="color-scheme" class="level1 page-columns page-full">
 <h1>Color Scheme</h1>
-<p>Bootstrap works best with a limited set of <strong>8 semantic color names</strong>. These are well known to Web designers, and for portability’s sake it is advised to work within this standard and thus avoid complex naming. Optionally Bootstrap provides classes for an additional <a href="https://getbootstrap.com/docs/5.3/customize/color/#theme-colors">10 + 4 colors</a> in both <strong>opaque</strong> and <strong>subtle</strong> variants. Most corporate brands stick to a handful of colors, but having a complete categorical palette is useful for more intricate graphical elements and for plots.</p>
+<p>Bootstrap works best with a limited set of <strong>8 semantic color names</strong>. These are well known to Web designers, and for portability’s sake it is advised to work within this standard and avoid intricate color names. Optionally Bootstrap provides classes for an additional <a href="https://getbootstrap.com/docs/5.3/customize/color/#theme-colors">10 + 4 colors</a> in both <strong>opaque</strong> and <strong>subtle</strong> variants. Most corporate brands stick to a handful of colors, but having a complete categorical palette is useful for more intricate graphical elements and for plots.</p>
 <p>Choosing a color scheme is relatively easy – for example start from your favorite photo or graphic and upload it to one of the many on-line <strong>color palette generators</strong> to extract dominant shades. An alternative is to use a professionally curated <strong>R palette</strong>, such as one available in the <code>paletteer</code>, <code>RBrewer</code> or <code>viridis</code> packages. See <a href="https://r-charts.com/color-palettes/">r-charts.com</a> for many such examples.</p>
-<p>Below I settled for a 12-color palette that simply matches my decade-old <a href="https://store.kde.org/p/1980663">Kubuntu desktop</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<p>Below I settled for a 12-color palette that simply matches my decade-old <a href="https://store.kde.org/p/1980663">KDE desktop</a><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
 <div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;KDE, 30 years later, still going strong! My personal KDE color scheme in QGIS and VSCode.</p>
 <p><a href="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://images.pling.com/img/00/00/51/57/23/1980663/screenshot-20230201-205024.png" class="img-fluid"></a></p>
 <p><a href="_fig/vscode.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="_fig/vscode.png" class="img-fluid"></a></p></div><div id="fn5"><p><sup>5</sup>&nbsp;Development environment theme creator</p>
 <p><a href="_fig/themer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="_fig/themer.png" class="img-fluid"></a></p></div></div><p>Another remarkable tool I have used to generate sensible UI color schemes is <a href="https://themer.dev/">themer.dev</a><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> – this masterpiece of a library is designed to generate consistent color schemes across Linux desktops and for many consoles, text editors, and IDEs. Check it out!</p>
-<p>Moreover as of <strong>Quarto v1.6</strong>, the engine now supports externally-defined branding elements (colors, fonts, etc.) provided in standalone <code>_brand.yml</code> files. This is a more unified and flexible approach to organizing document- and project-level branding across multiple output formats<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
-<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;The good folks at Posit further documented this <a href="https://posit-dev.github.io/brand-yml/">new feature</a>.</p></div></div><p>Note that <code>_brand.yml</code> definitions can also apply branding to <code>ggplot2</code>, <code>base R</code>, and <code>lattice</code> plots via the (recently released) <code>brand.yml</code> R package. However, I generally prefer to use my own branding utilities (see R package <code>mbutils</code>).</p>
-<p>Below is the <code>_brand.yml</code> config file used on this website.</p>
+<p>As of <strong>Quarto v1.6</strong>, the engine now supports externally-defined branding elements (colors, fonts, etc.) provided in standalone <code>_brand.yml</code> configuration files. This is a more unified and flexible approach to organizing document- and project-level branding across multiple output formats<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><div id="fn6"><p><sup>6</sup>&nbsp;The good folks at Posit further documented this <a href="https://posit-dev.github.io/brand-yml/">new feature</a>.</p></div><div class="note margin-aside">
+<p>Note that a <code>_brand.yml</code> config file can also apply brand colors and fonts to <code>ggplot2</code>, <code>base R</code>, and <code>lattice</code> plots via the (recently released) <code>brand.yml</code> R package. However, I generally prefer to stick to my own branding utilities<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>.</p>
+<div id="fn7"><p><sup>7</sup>&nbsp;my R package <code>mbutils</code> on <a href="https://github.com/mbacou/mbutils">Github</a>), which largely predates <code>brand.yml</code>.</p></div></div></div>
+<p>Below is the <code>_brand.yml</code> config used on this website.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>_brand.yml</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">meta</span><span class="kw">:</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Mel B. Labs</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> assets/mb-square.svg</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">link</span><span class="kw">:</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">home</span><span class="kw">:</span><span class="at"> https://mbacou.github.io/mb-labs</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">github</span><span class="kw">:</span><span class="at"> https://github.com/mbacou/mb-labs</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="fu">color</span><span class="kw">:</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">palette</span><span class="kw">:</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">teal</span><span class="kw">:</span><span class="at">      </span><span class="st">"#8E8467"</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">indigo</span><span class="kw">:</span><span class="at">    </span><span class="st">"#79799C"</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">blue</span><span class="kw">:</span><span class="at">      </span><span class="st">"#00839E"</span></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">cyan</span><span class="kw">:</span><span class="at">      </span><span class="st">"#05D5FF"</span></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">green</span><span class="kw">:</span><span class="at">     </span><span class="st">"#73842A"</span></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">purple</span><span class="kw">:</span><span class="at">    </span><span class="st">"#8D46C1"</span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pink</span><span class="kw">:</span><span class="at">      </span><span class="st">"#C6A5E8"</span></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">brick</span><span class="kw">:</span><span class="at">     </span><span class="st">"#D47979"</span></span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">red</span><span class="kw">:</span><span class="at">       </span><span class="st">"#B54D4D"</span></span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">orange</span><span class="kw">:</span><span class="at">    </span><span class="st">"#A1713C"</span></span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">yellow</span><span class="kw">:</span><span class="at">    </span><span class="st">"#E0D1A4"</span></span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">gray</span><span class="kw">:</span><span class="at">      </span><span class="st">"#212120"</span></span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">light</span><span class="kw">:</span><span class="at">     </span><span class="st">"#FCFAF5"</span></span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">dark</span><span class="kw">:</span><span class="at">      </span><span class="st">"#003946"</span></span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid</span><span class="kw">:</span><span class="at">      </span><span class="st">"#e7e2da"</span></span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">foreground</span><span class="kw">:</span><span class="at">  gray</span></span>
-<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">background</span><span class="kw">:</span><span class="at">  light</span></span>
-<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at">     brick</span></span>
-<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">secondary</span><span class="kw">:</span><span class="at">   purple</span></span>
-<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">tertiary</span><span class="kw">:</span><span class="at">    gray</span></span>
-<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">info</span><span class="kw">:</span><span class="at">        blue</span></span>
-<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">success</span><span class="kw">:</span><span class="at">     green</span></span>
-<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">warning</span><span class="kw">:</span><span class="at">     orange</span></span>
-<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">danger</span><span class="kw">:</span><span class="at">      red</span></span>
-<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">light</span><span class="kw">:</span><span class="at">       light</span></span>
-<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">dark</span><span class="kw">:</span><span class="at">        dark</span></span>
-<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a><span class="fu">typography</span><span class="kw">:</span></span>
-<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">fonts</span><span class="kw">:</span></span>
-<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
-<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
-<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">,</span><span class="at"> </span><span class="dv">500</span><span class="kw">,</span><span class="at"> </span><span class="dv">600</span><span class="kw">]</span></span>
-<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Iosevka Charon Mono</span></span>
-<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
-<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">,</span><span class="at"> </span><span class="dv">500</span><span class="kw">]</span></span>
-<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Caveat</span></span>
-<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
-<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">]</span></span>
-<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
-<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">size</span><span class="kw">:</span><span class="at"> 20px</span></span>
-<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">headings</span><span class="kw">:</span><span class="at"> Caveat</span></span>
-<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">monospace</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Iosevka Charon Mono</span></span>
-<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">size</span><span class="kw">:</span><span class="at"> 14px</span></span>
-<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a><span class="at">  </span></span>
-<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a><span class="at"> </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">meta</span><span class="kw">:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Mel B. Labs</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> assets/mb-square.png</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">link</span><span class="kw">:</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">home</span><span class="kw">:</span><span class="at"> https://mbacou.github.io/mb-labs</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">github</span><span class="kw">:</span><span class="at"> https://github.com/mbacou/mb-labs</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="fu">color</span><span class="kw">:</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">palette</span><span class="kw">:</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">brick</span><span class="kw">:</span><span class="at">     </span><span class="st">"#D47979"</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">purple</span><span class="kw">:</span><span class="at">    </span><span class="st">"#8D46C1"</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">teal</span><span class="kw">:</span><span class="at">      </span><span class="st">"#8E8467"</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">indigo</span><span class="kw">:</span><span class="at">    </span><span class="st">"#79799C"</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">blue</span><span class="kw">:</span><span class="at">      </span><span class="st">"#00839E"</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">cyan</span><span class="kw">:</span><span class="at">      </span><span class="st">"#05D5FF"</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">green</span><span class="kw">:</span><span class="at">     </span><span class="st">"#73842A"</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pink</span><span class="kw">:</span><span class="at">      </span><span class="st">"#C6A5E8"</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">red</span><span class="kw">:</span><span class="at">       </span><span class="st">"#B54D4D"</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">orange</span><span class="kw">:</span><span class="at">    </span><span class="st">"#A1713C"</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">yellow</span><span class="kw">:</span><span class="at">    </span><span class="st">"#E0D1A4"</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">gray</span><span class="kw">:</span><span class="at">      </span><span class="st">"#4d4d4d"</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">light</span><span class="kw">:</span><span class="at">     </span><span class="st">"#FCFAF5"</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">dark</span><span class="kw">:</span><span class="at">      </span><span class="st">"#003946"</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid</span><span class="kw">:</span><span class="at">      </span><span class="st">"#e7e2da"</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">foreground</span><span class="kw">:</span><span class="at">  gray</span><span class="co">     # $body-color = $gray-800 in `mb-article` theme</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">background</span><span class="kw">:</span><span class="at">  light</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at">     brick</span></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">secondary</span><span class="kw">:</span><span class="at">   purple</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">tertiary</span><span class="kw">:</span><span class="at">    gray</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">info</span><span class="kw">:</span><span class="at">        blue</span></span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">success</span><span class="kw">:</span><span class="at">     green</span></span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">warning</span><span class="kw">:</span><span class="at">     orange</span></span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">danger</span><span class="kw">:</span><span class="at">      red</span></span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">light</span><span class="kw">:</span><span class="at">       light</span></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">dark</span><span class="kw">:</span><span class="at">        dark</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="fu">typography</span><span class="kw">:</span></span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">fonts</span><span class="kw">:</span></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">,</span><span class="at"> </span><span class="dv">500</span><span class="kw">,</span><span class="at"> </span><span class="dv">600</span><span class="kw">]</span></span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Iosevka Charon Mono</span></span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">,</span><span class="at"> </span><span class="dv">500</span><span class="kw">]</span></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Caveat</span></span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">source</span><span class="kw">:</span><span class="at"> google</span></span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="dv">400</span><span class="kw">]</span></span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Crimson Text</span></span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">size</span><span class="kw">:</span><span class="at"> 20px</span><span class="co">          # $font-size-base ≠ $font-size-root in `_quarto.yml`</span></span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">headings</span><span class="kw">:</span><span class="at"> Caveat</span></span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">monospace</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">family</span><span class="kw">:</span><span class="at"> Iosevka Charon Mono</span></span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">size</span><span class="kw">:</span><span class="at"> 14px</span><span class="co">          # $code-font-size</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
-<p>My active Bootstrap color palette rendered below.</p>
+<p>And my active Bootstrap color palette rendered here.</p>
 <div class="cell preview-image">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"transparent"</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>yaml<span class="sc">::</span><span class="fu">read_yaml</span>(<span class="st">"../../_brand.yml"</span>)<span class="sc">$</span>color<span class="sc">$</span>palette <span class="sc">|&gt;</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unname</span>() <span class="sc">|&gt;</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">|&gt;</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  scales<span class="sc">::</span><span class="fu">show_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">bg =</span> <span class="st">"transparent"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>yaml<span class="sc">::</span><span class="fu">read_yaml</span>(<span class="st">"../../_brand.yml"</span>)<span class="sc">$</span>color<span class="sc">$</span>palette <span class="sc">|&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unname</span>() <span class="sc">|&gt;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">|&gt;</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  scales<span class="sc">::</span><span class="fu">show_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -642,8 +616,35 @@ column: screen-right</code></pre></td>
 </div>
 </div>
 </section>
+<section id="custom-listings" class="level1 page-columns page-full">
+<h1>Custom Listings</h1>
+<p>Blog and Book projects in Quarto typically make use of <strong>post listings</strong> so readers can navigate and filter content posts<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>. Quarto offers 3 built-in listing types (default/table/grid)) that simply proved too intricate for me to style, so I’ve also packaged my own simplified listings along with this custom theme. They can be called in a document’s frontmatter.</p>
+<div class="no-row-height column-margin column-container"><div id="fn8"><p><sup>8</sup>&nbsp;See Quarto’s excellent <a href="https://quarto.org/docs/websites/website-listings-custom.html">listing</a> documentation for details.</p></div><div class="note margin-aside">
+<p>Oddly, as of Quarto <strong>v1.9.38</strong>, not all standard documents keys are passed on to the EJS engine, so we need to invoke a <code>template-params</code> collection instead. In addition Quarto’s built-in listing types use additional parsing logic (e.g.&nbsp;image thumbnails, markdown rendering, etc.) also not readily available for reuse.</p>
+</div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> etc...</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">listing</span><span class="kw">:</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> lst-posts</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> posts</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">template</span><span class="kw">:</span><span class="at"> _ejs/listing-list.ejs.md (or) _ejs/listing-card.ejs.md</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">max-description-length</span><span class="kw">:</span><span class="at"> </span><span class="dv">240</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">feed</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">filter-ui</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sort-ui</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> date desc</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">max-items</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">template-params</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">image-height</span><span class="kw">:</span><span class="at"> 12rem</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">image-placeholder</span><span class="kw">:</span><span class="at"> assets/placeholder.svg</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">fields</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">title</span><span class="kw">,</span><span class="at"> description</span><span class="kw">,</span><span class="at"> image</span><span class="kw">,</span><span class="at"> date</span><span class="kw">,</span><span class="at"> author</span><span class="kw">,</span><span class="at"> categories</span><span class="kw">,</span><span class="at"> reading-time</span><span class="kw">]</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">exclude</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">category</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">skip</span><span class="ot">*]</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="at">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
 <section id="bringing-it-altogether-quarto-format-extension" class="level1">
-<h1>Bringing it altogether: Quarto Format Extension</h1>
+<h1>Bringing it altogether: Quarto format extension</h1>
 <p>The final Quarto format was released under its own extension, named <code>mb-article</code>. To use in your own documents, simply install the extension with:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use mbacou/mb-article</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And to update the extension thereafter:</p>
@@ -651,7 +652,7 @@ column: screen-right</code></pre></td>
 </section>
 <section id="publishing-workflow" class="level1">
 <h1>Publishing Workflow</h1>
-<p>Finally, the latest Quarto release adds perfectly sensible options to optimize everyone’s publishing workflow, in particular through the use of <strong>Draft</strong> and <strong>Freeze</strong> behavior:</p>
+<p>Worth noting, the latest Quarto release adds perfectly sensible options to optimize everyone’s publishing workflow, in particular through the use of <strong>Draft</strong> and <strong>Freeze</strong> behavior:</p>
 <ul>
 <li><p><code>draft: true</code></p>
 <p>Tells Quarto that a document may (or may not) be listed / accessible to viewers, and prevents automatic re-tangling.</p></li>
@@ -670,23 +671,23 @@ Schulte, Eric, Dan Davison, Thomas Dye, and Carsten Dominik. 2012. <span>“A Mu
 </div>
 </div></section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-copyright"><h2 class="anchored quarto-appendix-heading">Copyright</h2><div class="quarto-appendix-contents"><div>© 2026, Mel B. Labs.</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{melanie2023,
   author = {Melanie , BACOU},
-  title = {Time to {Migrate} This {Blog} from {*Distill*} to {*Quarto*}},
+  title = {Time to {Migrate} This {Blog} from {Distill} to {Quarto}},
   date = {2023-10-01},
   url = {https://mbacou.com/posts/2022-12-01-theme/},
   langid = {en},
   abstract = {A post about **literate programming** in general and
     Quarto formats in particular, in which I document migrating this
-    personal blog from **Distill** to **Quarto**. Compared to *J.J.
-    Allaire’s Distill for R Markdown*, **Posit® Quarto Markdown** uses a
-    new templating system built on top of Bootstrap v5.3.1 with new page
-    and content layouts, extended export formats, and more flexible
-    publishing workflows. This post briefly outlines my process for
-    creating a custom Bootstrap theme for this revamped website, and
-    design tweaks I made along the way.}
+    personal blog from **Distill** to **Quarto**. Compared to **Distill
+    for R Markdown** (by J.J. Allaire), **Quarto Markdown** (by Posit®)
+    uses a new templating system built on top of Bootstrap v5.3.\^{}
+    with new page and content layouts, extended export formats, and more
+    flexible publishing workflows. This post briefly outlines my process
+    for creating a custom Bootstrap theme and design tweaks for this
+    revamped website.}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-melanie2023" class="csl-entry quarto-appendix-citeas" role="listitem">
-Melanie, BACOU. 2023. <span>“Time to Migrate This Blog from *Distill* to
-*Quarto*.”</span> October 1. <a href="https://mbacou.com/posts/2022-12-01-theme/">https://mbacou.com/posts/2022-12-01-theme/</a>.
+Melanie, BACOU. 2023. <span>“Time to Migrate This Blog from Distill to
+Quarto.”</span> October 1. <a href="https://mbacou.com/posts/2022-12-01-theme/">https://mbacou.com/posts/2022-12-01-theme/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

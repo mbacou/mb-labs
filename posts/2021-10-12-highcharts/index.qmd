@@ -1,7 +1,8 @@
 ---
-title: "Visualizing Water: Sankey Diagrams (draft)"
+title: Visualizing Water 2/4
+subtitle: With Sankey Diagrams
 description: |
-  Part 2: custom data-driven flow charts using Highcharts.js and networkD3 (IWMI).
+  Part 2: custom data-driven flow charts using Highcharts.js and networkD3.
 date: 2021-10-01
 image: _fig/sankey_truthstudio_2.gif
 status: DRAFT (do not cite)
@@ -12,6 +13,13 @@ freeze: false
 categories:
   - imwi
   - hydrology
+  - dataviz
+keywords:
+  - highchart
+  - networkD3
+
+abstract: |
+  This notebook is Part 2 of a code playground for hydrologic model visualization. In [Part 1](../2021-10-16-svg/) we focused on `D3.js`, here we test network and hierarchical visuals using two higher-level graphic libraries [Highchart.js](https://www.highcharts.com/) and [networkD3](http://christophergandrud.github.io/networkD3/). 
 ---
 
 ```{r setup, include=FALSE}
@@ -28,11 +36,9 @@ if (interactive()) {
 }
 
 # Default color palette
-pal <- readRDS("pal_iwmi.rds")
+pal = readRDS("pal_iwmi.rds")
 ```
 
-
-This notebook is Part 2 of a code playground for hydrologic model visualization. In [Part 1](../2021-10-16-svg/) we focused on `D3.js`, here we test network and hierarchical visuals using higher-level graphic libraries [Highchart.js](https://www.highcharts.com/) and [networkD3](http://christophergandrud.github.io/networkD3/).
 
 The 2 libraries are built on top of D3 but they come with sample configurations and R and Python clients, making it easier to build dynamic charts, esp. Sankey, treemaps, network and flow diagrams with significantly less code.
 
@@ -61,7 +67,7 @@ c(
 #| column: page-right
 
 # Load yearly dataset generated in Part 1
-data <- fread(here("../2021-10-16-svg/data/data.csv"))
+data = fread(here("../2021-10-16-svg/data/data.csv"))
 knitr::kable(data[1:10, ])
 ```
 
@@ -74,7 +80,7 @@ Here we use R library [`networkD3`](http://christophergandrud.github.io/networkD
 
 ```{r}
 
-hc_theme_iwmi <- function(
+hc_theme_iwmi = function(
   hc,
   title = NULL,
   subtitle = NULL,
@@ -85,7 +91,7 @@ hc_theme_iwmi <- function(
   credits = FALSE,
   ...
 ) {
-  thm <- hc_theme(
+  thm = hc_theme(
     chart = list(
       backgroundColor = "transparent"
     ),
@@ -166,12 +172,12 @@ hc_theme_iwmi <- function(
     ...
   )
 
-  p <- hc_add_theme(hc, thm) %>%
+  p = hc_add_theme(hc, thm) %>%
     hc_title(text = title) %>%
     hc_subtitle(text = subtitle)
 
   if (length(label) > 0) {
-    p <- p %>%
+    p = p %>%
       hc_annotations(list(
         labels = list(
           list(

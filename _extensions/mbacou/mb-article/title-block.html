@@ -2,52 +2,61 @@
 <header id="mb-header" class="column-page-right sticky-top">
   $header.html()$
 
-  <div class="border-top $if(title-block-banner)$ pt-4 $endif$"
-    $if(title-block-banner)$ style="background: $title-block-banner$;" $endif$>
-
-    <!-- Optional brand color palette -->
-    $if(header.palette)$
-    <div class="d-flex justify-content-end">
-      <div class="p-1 text-bg-primary"></div>
-      <div class="p-1 text-bg-secondary"></div>
-      <div class="p-1 text-bg-tertiary"></div>
-      <div class="p-1 text-bg-info"></div>
-      <div class="p-1 text-bg-success"></div>
-      <div class="p-1 text-bg-warning"></div>
-      <div class="p-1 text-bg-danger"></div>
-      <div class="p-1 text-bg-light"></div>
-      <div class="p-1 text-bg-dark"></div>
-    </div>
-    $endif$
-
+  <!-- Optional brand color palette -->
+  $if(header.palette)$
+  <div class="d-flex justify-content-end">
+    <div class="p-1 text-bg-primary"></div>
+    <div class="p-1 text-bg-secondary"></div>
+    <div class="p-1 text-bg-tertiary"></div>
+    <div class="p-1 text-bg-info"></div>
+    <div class="p-1 text-bg-success"></div>
+    <div class="p-1 text-bg-warning"></div>
+    <div class="p-1 text-bg-danger"></div>
+    <div class="p-1 text-bg-light"></div>
+    <div class="p-1 text-bg-dark"></div>
   </div>
+  $endif$
+
 </header>
 
-<header id="mb-title-block" class="bg-light py-2 mb-3">
+<header id="mb-title-block"
+  class="bg-$if(title-block-banner-color)$$title-block-banner-color$$else$light$endif$ py-2 mb-3">
 
   <ul
-    class="navbar-nav d-flex flex-row align-items-start gap-2 text-sans text-uppercase ">
+    class="column-page-right navbar-nav d-flex flex-row align-items-start gap-2 mt-1 text-sans text-uppercase">
     $for(categories)$
-    <li class="nav-item pt-2 fs-3 text-primary fw-bold">$it$</li>
+    <li class="nav-item pt-2 fs-3 text-primary fw-bold"><a
+        href="/blog.qmd#category=$it$">$it$</a></li>
     $endfor$
+    $if(date)$
     <li
-      class="nav-item px-2 $if(draft)$text-bg-secondary$else$secondary$endif$ ms-auto">
+      class="nav-item px-2 mb-2 $if(draft)$text-bg-tertiary$else$secondary$endif$ ms-auto">
       <span>Draft
         $if(draft)$&#9745;$else$&#9744;$endif$
       </span>
     </li>
-    <li class="nav-item px-2 $if(freeze)$text-bg-secondary$else$secondary$endif$">
+    <li class="nav-item px-2 mb-2 $if(freeze)$text-bg-tertiary$else$secondary$endif$">
       <span>Frozen
         $if(freeze)$&#9745;$else$&#9744;$endif$
       </span>
     </li>
+    $endif$
   </ul>
 
+  <!-- Optional banner image -->
+  $if(title-block-banner)$
+  <div class="column-page-right p-2"
+    style="background: url('$title-block-banner$') center center / cover no-repeat fixed;">
+    <p class="subtitle mb-4">$if(subtitle)$ $subtitle$ $endif$</p>
+    $if(title)$ <p class="title">$title$</p> $endif$
+  </div>
+  $else$
   $if(title)$ <p class="title">$title$</p> $endif$
   <p class="subtitle">$if(subtitle)$ $subtitle$ $endif$</p>
+  $endif$
 
   $if(author)$
-  <div class="column-margin">
+  <div class="column-margin $if(title-block-banner)$mt-4$endif$">
 
     $for(by-author)$
     <p class="lh-sm fs-0 mb-3 text-body">$title-meta-author.html()$
@@ -82,12 +91,10 @@
     <p id="mb-reuse" class="lh-lg text-body"></p>
     $endif$
 
-    $if(format-links)$
     $for(format-links)$
-    <a role="button" class="btn btn-success mb-2" href="$it.href$">
-      <i class="bi bi-$it.icon$"></i>$it.text$</a>
+    <a role="button" class="btn btn-success-subtle mb-2" href="$it.href$">
+      <i class="bi bi-$it.icon$"></i> $it.text$</a>
     $endfor$
-    $endif$
 
   </div>
   $endif$
@@ -95,13 +102,13 @@
   <div class="mx-lg-3">
     $if(abstract)$
     <label>$abstract-title$</label>
-    <div class="lh-lg fs-1 text-muted">$abstract$</div>
+    <div class="lh-lg fs-0 fw-light text-muted">$abstract$</div>
     $endif$
 
     $if(keywords)$
     <ul class="navbar-nav d-flex flex-row gap-1">
-      <li class="nav-item fs-1 text-muted me-1">Keywords: </li>
-      $for(keywords)$ <li class="nav-item fs-1">$it$;</span></li>
+      <li class="nav-item fs-2 text-muted me-1">Keywords: </li>
+      $for(keywords)$ <li class="nav-item fs-2">$it$;</span></li>
       $endfor$
     </ul>
     $endif$

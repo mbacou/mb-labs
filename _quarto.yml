@@ -7,10 +7,13 @@ project:
     - "**/*.qmd"
     - "**/*.ipynb"
     - "!ejs/**"
+  resources:
+    - posts/2021-10-24-3dmap/threejs_files
   preview:
     port: 5555 
 
 bibliography: global.bib
+syntax-highlighting: monochrome
 
 website:
   title: Mel B. mb-labs
@@ -18,7 +21,7 @@ website:
   site-url: https://mbacou.com
   repo-url: https://github.com/mbacou/mb-labs
   favicon: assets/favicon.svg
-  image: assets/mb-square.svg
+  image: assets/mb-square.png
   twitter-card: false
   open-graph: true
   repo-branch: quarto

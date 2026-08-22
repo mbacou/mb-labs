@@ -5,6 +5,7 @@ quarto-required: ">=1.8.1"
 contributes:
   formats:
     html:
+      fontsize: 14px              # $font-size-root * 2  = baseline grid
       date-format: medium
       date-modified: last-modified
       anchor-sections: false
@@ -28,7 +29,7 @@ contributes:
 
       lightbox: true
       fig-dpi: 120
-      fig-format: svg
+      fig-format: png
       out-height: "40rem"
 
       code-copy: true
@@ -59,6 +60,6 @@ contributes:
       grid:
         body-width: 700px
         sidebar-width: 200px
-        margin-width: 210px
+        margin-width: 220px
         gutter-width: 2rem
 

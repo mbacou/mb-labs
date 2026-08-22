@@ -1,10 +1,9 @@
 ---
-title: "Visualizing Water: Interactive SVG with D3.js"
+title: Visualizing Water 1/4
+subtitle: Interactive SVG with D3.js
 date: 2021-10-01
 description: |
   Part 1: add interactivity to IWMI's printable WA+ water balance sheets.
-abstract: |
-  An exploration of multiple dynamic visualization schemes for hydrological model simulations. This work is part of IWMI WA Dashboard assignment.
 draft: false
 freeze: true
 image: svg/sheet_1_edited.svg
@@ -21,9 +20,12 @@ keywords:
   - r2d3
   - ggalluvial
   - D3.js
+  
+abstract: |
+  An exploration of multiple dynamic visualization schemes for hydrological model simulations. This work is part of IWMI WA Dashboard assignment.
 ---
 
-::: {.note .text-serif}
+::: {.note .text-serif .mt-2}
 This notebook was first generated in 2021 using R package `r2d3` to pass objects between R and the JavaScript DOM. It was re-rendered using Quarto in 2026. Quarto now natively supports `D3.js` through its integration with **Observable JS** (OJS), which was created by **Mike Bostock**, the original author of D3. OJS allows to seamlessly mix D3 visualizations with reactive data exploration.
 :::
 
@@ -55,15 +57,15 @@ if (interactive()) {
 }
 
 # IMWI color palette
-tmp <- fread("./data/IWMI.gpl", skip = 4, header = F)
-pal <- grDevices::rgb(tmp[, .(V1, V2, V3)], maxColorValue = 255)
-names(pal) <- tmp[, V4]
+tmp = fread("./data/IWMI.gpl", skip = 4, header = F)
+pal = grDevices::rgb(tmp[, .(V1, V2, V3)], maxColorValue = 255)
+names(pal) = tmp[, V4]
 # Save for reuse
 saveRDS(pal, "./data/pal_iwmi.rds")
 
 # Default plot theme
 options(ggplot2.discrete.color = pal)
-theme_mb <- function(
+theme_mb = function(
   base_size = 8,
   base_family = "Roboto Condensed",
   base_fill = pal["light"],
@@ -89,7 +91,7 @@ theme_mb <- function(
 #| fig-cap: Kenya - List of output files
 #| column: page-right
 
-data <- list(
+data = list(
   ken = "/run/media/mbacou/Backup MB/WADashboard/ken/hydroloop_results/csv",
   mli = "/run/media/mbacou/Backup MB/WADashboard/mli/csv_km3"
 ) |>
@@ -129,8 +131,8 @@ Let's load a sample model output for Kenya for the year 2017.
 #| fig-cap: sheet1_2017.csv
 #| column: page-right
 
-f <- "sheet1_2017.csv"
-ken <- data[iso3 == "ken" & file == f][1, fread(path)]
+f = "sheet1_2017.csv"
+ken = data[iso3 == "ken" & file == f][1, fread(path)]
 ken |> paged_table()
 ```
 
@@ -174,8 +176,8 @@ And monthly time-series of **Incremental ET** by land-use classes:
 #| fig-cap: sheet1_basin_etincr_monthly.csv
 #| column: page-right
 
-f <- "sheet1_basin_etincr_monthly.csv"
-ken.ts <- data[iso3 == "ken" & file == f][1, fread(path)]
+f = "sheet1_basin_etincr_monthly.csv"
+ken.ts = data[iso3 == "ken" & file == f][1, fread(path)]
 ken.ts |> paged_table()
 ```
 
@@ -184,8 +186,8 @@ We'll gather all the **yearly** budgets for now into a long table, and simply vi
 ```{r}
 #| column: page-right
 
-f <- data[sheet == "sheet1" & is.na(month) & !is.na(year)]
-data <- lapply(1:nrow(f), function(x) {
+f = data[sheet == "sheet1" & is.na(month) & !is.na(year)]
+data = lapply(1:nrow(f), function(x) {
   fread(f[x, path])[, `:=`(
     iso3 = f[x, iso3],
     sheet = f[x, sheet],
@@ -500,7 +502,7 @@ Object model for **Sheet #1** is shown in the table below.
 ```{r}
 #| column: page-right
 
-model <- fread("./data/sheet_1_schema.csv")
+model = fread("./data/sheet_1_schema.csv")
 model[, .(id, class, subclass, variable)] |> paged_table()
 ```
 
