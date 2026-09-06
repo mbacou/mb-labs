@@ -32,7 +32,7 @@ navbar:
     - text: Notebooks
       href: index.html
     - text: Portfolio
-      href: portfolio.html
+      href: https://mbacou.github.io/portfolio/
     - text: About
       href: about.html
   right:
