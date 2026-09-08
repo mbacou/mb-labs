@@ -6,6 +6,7 @@ date: ""
 toc-title: ""
 abstract-title: ""
 citation: false
+repo-actions: []
 categories:
   - econ
   - stats
@@ -13,8 +14,7 @@ categories:
 description: |
   ![](posts/resume/_fig/profile.jpg){width="9em" .rounded-circle .mt-2}
 
-  **ABOUT**\
-  A personal blog and playground for statistical and geospatial analyses -- and a home for other random explorations and poorly researched topics.
+  A personal blog and playground for statistical and geospatial analyses -- and a home for random explorations, reading notes, and otherwise poorly researched topics.
 
 listing:
   - id: lst-posts
@@ -30,7 +30,7 @@ listing:
     template-params: 
       image-height: 12rem
       image-placeholder: assets/placeholder.svg
-    fields: [title, description, image, date, author, categories, reading-time]
+      fields: [title, description, image, date, categories, reading-time]
     exclude: 
       category: [skip*]
 
@@ -50,24 +50,23 @@ listing:
     fields: [title, description, image, keywords]
 ---
 
-::: {.mx-lg-3}
-[Hi, my name is Mel --- ]{.text-serif .text-muted .me-2 style="font-size:2em;"} I am an [Applied Economist]{.mark} turned [Geospatial Data Scientist]{.mark} (yes, around that time when global model simulations required distributed loads) -- I am passionate about ZERO nonsense, equitable and sustainable policy making that truly empowers everyone's life in full respect of planetary boundaries.
 
-As a [consultant]{.mark}, [designer]{.mark}, and [instructor]{.mark}, I specialize in helping research teams and businesses effectively harness data, build  models, and communicate insights through engaging stories and visuals
+::: {.text-muted .border-start .border-3 .px-3 .mb-2}
+  [Hi, my name is Mel ---]{.text-serif .text-secondary style="font-size:2em;"}\
 
-I code mostly in [R]{.mark}, [Python]{.mark}, [JavaScript]{.mark} and [D3.js]{.mark}. Check out my full bio for contact details.
+I am an **Applied Economist** and **Geospatial Data Scientist**; passionate about *zero nonsense*, equitable and sustainable policy-making that truly empowers everyone's life -- respects traditional beliefs, cultures and knowledge, and Earth's boundaries.
+
+::: {.d-md-block .d-grid .gap-2 .mt-3}
+<a role="button" class="btn btn-dark btn-lg me-md-2 mb-1" href="./posts/resume/"><i class="bi bi-info-circle"></i> Read more about me</a>
+<a role="button" class="btn btn-dark btn-lg mb-1" href="https://calendar.app.google/s4wKCkz2GYg4ncAMA" target="_new"><i class="bi bi-telephone"></i> Schedule a discovery call</a>
+:::
 :::
 
-::: {.ms-md-3 .my-md-2 .d-md-block .d-grid .gap-2}
-<a role="button" class="btn btn-outline-secondary secondary btn-lg me-md-2" href="./posts/resume/"><i class="bi bi-arrow-right"></i> Read more about me</a>
-<a role="button" class="btn btn-outline-secondary secondary btn-lg" href="about.qmd"><i class="bi bi-arrow-right"></i> Schedule a discovery call</a>
-:::
-
-# Featured Projects {.mt-2}
+# Featured Projects {.column-page-right}
 
 Statistical work I deliver for public agencies typically lives in [code repositories](https://github.com/mbacou/) on Github. Other projects (sometimes restricted or confidential) are showcased in the [portfolio](./portfolio.qmd) section of this website.
 
-::: {#lst-featured .column-page-right}
+::: {#lst-featured .mt-3 .mx-md-2}
 :::
 
 # Latest Articles
@@ -78,16 +77,18 @@ Most recent code notebooks and articles. Feel free to cite, clone, comment, and 
 [[View all](./blog.qmd)]
 :::
 
-::: {#lst-posts .column-page-right}
+::: {#lst-posts .mx-md-2 .column-page-right}
 :::
 
 # Services
 
-I provide a variety of services catered to geospatial and remote sensing data:
+As a [consultant]{.mark}, [designer]{.mark}, and [instructor]{.mark}, I specialize in helping research teams and businesses effectively harness data, build models and decision tools, and communicate insights through engaging stories and visuals.
 
-::: {.column-page .d-md-flex .flex-row .gap-3}
+With or without AI agents, I continue to code daily, mostly in [R]{.mark}, [Python]{.mark}, [JavaScript]{.mark} and [D3.js]{.mark}. Check out my [portfolio](portfolio.qmd) and [full bio](./posts/resume/) for contact details.
 
-::: {.bg-secondary-subtle .px-2}
+::: {.column-page-inset .d-md-flex .flex-row .gap-3 .my-3}
+
+::: {.bg-info-subtle .px-3 .rounded .w-100}
 
 ### Geospatial and Remote Sensing Analysis
 
@@ -96,7 +97,7 @@ Machine learning model development and inference for geospatial applications
 I offer services in developing predictive models for geospatial applications. Including, but not limited to, retrieval models for multi- and hyperspectral satellite and airborne sensors, as well as multivariate prediction models for ecosystem assessment and climate projections.
 :::
 
-::: {.bg-secondary-subtle .px-2}
+::: {.bg-warning-subtle .px-3 .rounded .w-100}
 
 ### Software Development
 
@@ -104,7 +105,7 @@ Software development, data pipelines & cloud infrastructure for scalable geo-app
 
 :::
 
-::: {.bg-secondary-subtle .px-2}
+::: {.bg-success-subtle .px-3 .rounded .w-100}
 
 ### Data Visualization
 
@@ -116,3 +117,6 @@ Interactive visualization solutions.
 # Get in Touch
 
 Want to chat or work together? Send me a message or book a free call.
+
+
+

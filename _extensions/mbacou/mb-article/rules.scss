@@ -1,5 +1,13 @@
 /*-- scss:rules --*/
 
+/* Compatibility */
+.bg-tertiary {
+  background-color: $tertiary;
+}
+.text-tertiary {
+  color: $tertiary;
+}
+
 /* Navigation */
 nav .nav-item .nav-link,
 .nav-tabs .nav-item .nav-link {
@@ -44,10 +52,13 @@ nav .nav-item .bi {
   color: $secondary;
   font-size: calc($font-size-base - 2px);
   background-color: tint-color($secondary, 85%);
-  padding: 1rem 1rem 0;
+  padding: 1.5rem 2rem .5rem;
   margin-bottom: 2rem;
   border-radius: $border-radius;
   line-height: $line-height-lg;
+}
+.aside .note {
+  padding: 1rem 1.25rem 0;
 }
 .primary {
   color: $primary;
@@ -80,7 +91,7 @@ nav .nav-item .bi {
 
 /* Helper classes */
 .bg-shaded {
-  background-color: $shaded;
+  background-color: rgba($shaded, .5);
   backdrop-filter: blur(3px);
 }
 .bg-grid {
@@ -103,4 +114,94 @@ nav .nav-item .bi {
 .text-serif {
   font-family: $font-family-serif;
   font-size: calc($font-size-base + 2px);
+}
+
+// Fancy stabilo marks
+mark {
+  color: inherit;
+  font-weight: $font-weight-bold;  
+  position: relative;
+  isolation: isolate;
+}
+mark::before,
+mark::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+/* Main ink stroke */
+mark::before {
+  inset: 18% -4% 8% -3%;
+  background:
+    linear-gradient(
+      178deg,
+      rgba(255, 235, 45, 0.15) 0%,
+      rgba(255, 235, 45, 0.52) 12%,
+      rgba(255, 235, 45, 0.46) 55%,
+      rgba(255, 235, 45, 0.38) 88%,
+      rgba(255, 235, 45, 0.08) 100%
+    );
+  transform:
+    rotate(-2.5deg)
+    skewX(-7deg);
+  border-radius: 3px 6px 2px 4px;
+  clip-path: polygon(
+    0 15%,
+    4% 7%,
+    17% 10%,
+    35% 5%,
+    52% 9%,
+    70% 4%,
+    87% 8%,
+    100% 3%,
+    98% 94%,
+    82% 97%,
+    63% 93%,
+    44% 98%,
+    24% 94%,
+    6% 100%,
+    1% 91%
+  );
+  filter: blur(0.25px);
+}
+
+/* Uneven secondary ink pass */
+mark::after {
+  inset: 24% -2% 12% 1%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 235, 45, 0.00),
+    rgba(255, 235, 45, 0.18) 18%,
+    rgba(255, 235, 45, 0.22) 65%,
+    rgba(255, 235, 45, 0.00)
+  );
+  transform: rotate(-1.8deg);
+  clip-path: polygon(
+    0 18%,
+    15% 10%,
+    31% 15%,
+    49% 8%,
+    68% 14%,
+    86% 9%,
+    100% 16%,
+    98% 85%,
+    81% 92%,
+    60% 87%,
+    42% 94%,
+    22% 88%,
+    3% 95%
+  );
+  filter: blur(0.5px);
+}
+
+// Scroll animation
+.scroller {
+  width: 100%;
+  overflow: hidden;
+}
+.scroller img {
+  height: 6em;
+  filter: grayscale(1);
+
 }

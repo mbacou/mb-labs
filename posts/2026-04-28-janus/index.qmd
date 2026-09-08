@@ -14,7 +14,7 @@ keywords:
   - bigravity
 
 abstract: |
-  An AI-assisted review of JANUS (and JANUS-like) cosmological theories associated with French renowned physicist **Jean‑Pierre Petit**. The reviews focuses on the family of models that invokes bimetric or multi-metric gravity with positive- and negative-mass sectors as an alternative approach to dark matter and dark energy. This review synthesizes the available preprints (arXiv) and related work by Petit and his collaborators, separates consensus points from disputed claims, and lists concrete open questions and recommended follow-ups.
+  An AI-assisted review of **Janus** (and Janus-like) cosmological theories associated with renowned French physicist **Jean‑Pierre Petit**. The reviews focuses on the family of models that invokes bimetric or multi-metric gravity with positive- and negative-mass sectors as an alternative approach to dark matter and dark energy. This review synthesizes the available preprints (arXiv) and related work by Petit and his collaborators, separates consensus points from disputed claims, and lists concrete open questions and recommended follow-ups.
 
 ---
 
@@ -30,7 +30,7 @@ This review was produced by an automated pipeline that:
 
 All citations are to arXiv preprints retrieved during the `gather` step; claims should be cross-checked in the `full verifier` stage for exact quotations, page numbers, and references to figures and tables.
 
-Primary artifacts are stored under **outputs/** (raw PDFs, per-page extracts, caption extracts, `verifier` and `reviewer` reports).
+Primary artifacts are stored under `outputs/` (raw PDFs, per-page extracts, caption extracts, `verifier` and `reviewer` reports).
 :::
 
 # Background & Motivation

@@ -9,8 +9,7 @@
 <link>https://mbacou.com/</link>
 <atom:link href="https://mbacou.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>![](posts/resume/_fig/profile.jpg){width=&quot;9em&quot; .rounded-circle .mt-2}
-**ABOUT**\
-A personal blog and playground for statistical and geospatial analyses -- and a home for other random explorations and poorly researched topics.
+A personal blog and playground for statistical and geospatial analyses -- and a home for random explorations, reading notes, and otherwise poorly researched topics.
 </description>
 <image>
 <url>https://mbacou.com/assets/mb-square.png</url>
@@ -19,7 +18,7 @@ A personal blog and playground for statistical and geospatial analyses -- and a 
 <height>144</height>
 <width>144</width>
 </image>
-<generator>quarto-1.10.18</generator>
+<generator>quarto-1.11.3</generator>
 <lastBuildDate>Wed, 29 Apr 2026 23:00:00 GMT</lastBuildDate>
 <item>
   <title></title>
@@ -33,15 +32,15 @@ A personal blog and playground for statistical and geospatial analyses -- and a 
   
   <!-- Optional brand color palette -->
     <div class="d-flex justify-content-end">
-    <div class="p-1 text-bg-primary"></div>
-    <div class="p-1 text-bg-secondary"></div>
-    <div class="p-1 text-bg-tertiary"></div>
-    <div class="p-1 text-bg-info"></div>
-    <div class="p-1 text-bg-success"></div>
-    <div class="p-1 text-bg-warning"></div>
-    <div class="p-1 text-bg-danger"></div>
-    <div class="p-1 text-bg-light"></div>
-    <div class="p-1 text-bg-dark"></div>
+    <div class="p-1 bg-primary"></div>
+    <div class="p-1 bg-secondary"></div>
+    <div class="p-1 bg-tertiary"></div>
+    <div class="p-1 bg-info"></div>
+    <div class="p-1 bg-success"></div>
+    <div class="p-1 bg-warning"></div>
+    <div class="p-1 bg-danger"></div>
+    <div class="p-1 bg-light"></div>
+    <div class="p-1 bg-dark"></div>
   </div>
   
 </header>
@@ -49,8 +48,8 @@ A personal blog and playground for statistical and geospatial analyses -- and a 
 <header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
   <ul class="column-page-right navbar-nav d-flex flex-row align-items-start gap-2 mt-1 text-sans text-uppercase">
-        <li class="nav-item pt-2 fs-3 text-primary fw-bold"><a href="../../blog.html#category=cosmology">cosmology</a></li>
-        <li class="nav-item pt-2 fs-3 text-primary fw-bold"><a href="../../blog.html#category=lit review">lit review</a></li>
+        <li class="nav-item pt-2 fs-2 text-primary fw-bold"><a href="../../blog.html#category=cosmology">cosmology</a></li>
+        <li class="nav-item pt-2 fs-2 text-primary fw-bold"><a href="../../blog.html#category=lit review">lit review</a></li>
             <li class="nav-item px-2 mb-2 secondary ms-auto">
       <span>Draft
         ☐
@@ -63,9 +62,10 @@ A personal blog and playground for statistical and geospatial analyses -- and a 
     </li>
       </ul>
 
-  <!-- Optional banner image -->
-     <p class="title display-7">JANUS Model — Literature Review</p> 
+   <p class="title display-7">JANUS Model — Literature Review</p> 
   <p class="subtitle lead"></p>
+
+  <!-- Optional banner image -->
   
     
   
@@ -97,7 +97,7 @@ A personal blog and playground for statistical and geospatial analyses -- and a 
     
   </div></div><div class="mx-lg-3">
         <label>Abstract</label>
-    <div class="lh-lg fs-0 fw-light text-muted"><p>An AI-assisted review of JANUS (and JANUS-like) cosmological theories associated with French renowned physicist <strong>Jean‑Pierre Petit</strong>. The reviews focuses on the family of models that invokes bimetric or multi-metric gravity with positive- and negative-mass sectors as an alternative approach to dark matter and dark energy. This review synthesizes the available preprints (arXiv) and related work by Petit and his collaborators, separates consensus points from disputed claims, and lists concrete open questions and recommended follow-ups.</p></div>
+    <div class="lh-lg fw-light text-muted"><p>An AI-assisted review of <strong>Janus</strong> (and Janus-like) cosmological theories associated with renowned French physicist <strong>Jean‑Pierre Petit</strong>. The reviews focuses on the family of models that invokes bimetric or multi-metric gravity with positive- and negative-mass sectors as an alternative approach to dark matter and dark energy. This review synthesizes the available preprints (arXiv) and related work by Petit and his collaborators, separates consensus points from disputed claims, and lists concrete open questions and recommended follow-ups.</p></div>
     
         <ul class="navbar-nav d-flex flex-row gap-1">
       <li class="nav-item fs-2 text-muted me-1">Keywords: </li>
@@ -120,7 +120,7 @@ A personal blog and playground for statistical and geospatial analyses -- and a 
 <li>Performed a reviewer pass to flag unsupported claims and editing issues.</li>
 </ul>
 <p>All citations are to arXiv preprints retrieved during the <code>gather</code> step; claims should be cross-checked in the <code>full verifier</code> stage for exact quotations, page numbers, and references to figures and tables.</p>
-<p>Primary artifacts are stored under <strong>outputs/</strong> (raw PDFs, per-page extracts, caption extracts, <code>verifier</code> and <code>reviewer</code> reports).</p>
+<p>Primary artifacts are stored under <code>outputs/</code> (raw PDFs, per-page extracts, caption extracts, <code>verifier</code> and <code>reviewer</code> reports).</p>
 </div>
 <section id="background-motivation" class="level1">
 <h1>Background &amp; Motivation</h1>
@@ -235,8 +235,8 @@ Petit, Jean-Pierre, and Gilles D’Agostini. 2014. <em>Can Negative Mass Be Cons
   date = {2026-04-30},
   url = {https://mbacou.com/posts/2026-04-28-janus/},
   langid = {en},
-  abstract = {An AI-assisted review of JANUS (and JANUS-like)
-    cosmological theories associated with French renowned physicist
+  abstract = {An AI-assisted review of **Janus** (and Janus-like)
+    cosmological theories associated with renowned French physicist
     **Jean‑Pierre Petit**. The reviews focuses on the family of models
     that invokes bimetric or multi-metric gravity with positive- and
     negative-mass sectors as an alternative approach to dark matter and
@@ -766,8 +766,8 @@ BACOU, Melanie. 2024. <span>“Tableau® Dashboards.”</span> January 30. <a hr
 <header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
   <ul class="column-page-right navbar-nav d-flex flex-row align-items-start gap-2 mt-1 text-sans text-uppercase">
-        <li class="nav-item pt-2 fs-3 text-primary fw-bold">quarto</li>
-        <li class="nav-item pt-2 fs-3 text-primary fw-bold">dataviz</li>
+        <li class="nav-item pt-2 fs-2 text-primary fw-bold"><a href="../../blog.html#category=quarto">quarto</a></li>
+        <li class="nav-item pt-2 fs-2 text-primary fw-bold"><a href="../../blog.html#category=dataviz">dataviz</a></li>
             <li class="nav-item px-2 mb-2 secondary ms-auto">
       <span>Draft
         ☐
@@ -780,10 +780,11 @@ BACOU, Melanie. 2024. <span>“Tableau® Dashboards.”</span> January 30. <a hr
     </li>
       </ul>
 
+   <p class="title display-7">Time to Migrate this Blog from Distill to Quarto</p> 
+  <p class="subtitle lead"> Mastering <mark>Quarto</mark> Markdown for literate programming, technical writing, and web publishing </p>
+
   <!-- Optional banner image -->
-    <div class="column-page-right p-2" style="background: url('https://maps.vlasenko.net/historical/rkka100/n-35-008-s.jpg') center center / cover no-repeat fixed;">
-    <p class="subtitle mb-4"> Mastering <mark>Quarto</mark> Markdown for literate programming, technical writing, and web publishing </p>
-     <p class="title">Time to Migrate this Blog from Distill to Quarto</p> 
+    <div class="column-page-right py-5" style="background: url('https://maps.vlasenko.net/historical/rkka100/n-35-008-s.jpg') center center / cover no-repeat fixed;">
   </div>
   
     
@@ -814,7 +815,7 @@ BACOU, Melanie. 2024. <span>“Tableau® Dashboards.”</span> January 30. <a hr
     
   </div></div><div class="mx-lg-3">
         <label>Abstract</label>
-    <div class="lh-lg fs-0 fw-light text-muted"><p>A post about <strong>literate programming</strong> in general and Quarto formats in particular, in which I document migrating this personal blog from <strong>Distill</strong> to <strong>Quarto</strong>. Compared to <strong>Distill for R Markdown</strong> (by J.J. Allaire), <strong>Quarto Markdown</strong> (by Posit®) uses a new templating system built on top of Bootstrap v5.3.^ with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme and design tweaks for this revamped website.</p></div>
+    <div class="lh-lg fw-light text-muted"><p>A post about <strong>literate programming</strong> in general and Quarto formats in particular, in which I document migrating this personal blog from <strong>Distill</strong> to <strong>Quarto</strong>. Compared to <strong>Distill for R Markdown</strong> (by J.J. Allaire), <strong>Quarto Markdown</strong> (by Posit®) uses a new templating system built on top of Bootstrap v5.3.^ with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme and design tweaks for this revamped website.</p></div>
     
         <ul class="navbar-nav d-flex flex-row gap-1">
       <li class="nav-item fs-2 text-muted me-1">Keywords: </li>
@@ -2237,13 +2238,23 @@ font-style: inherit;">8</span>)</span></code></pre></div></div>
 <li><a href="https://worldwind.arc.nasa.gov/web/examples/#anchor">NASA Web WorldWind</a></li>
 <li><a href="https://cloud.google.com/blog/products/maps-platform/using-new-webgl-powered-maps-features">WebGL with Google Maps API</a> on how to construct and render 3D scenes with WebGL.</li>
 </ul>
-<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="cell column-page-right quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="./_fig/mara.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mbacou.com/posts/2021-10-24-3dmap/_fig/mara.png" class="img-fluid" width="704"></a></p>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./_fig/mara.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Visual inspiration"><img src="https://mbacou.com/posts/2021-10-24-3dmap/_fig/mara.png" class="img-fluid figure-img" width="704" alt="Visual inspiration"></a></p>
+<figcaption>Visual inspiration</figcaption>
+</figure>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="./_fig/Screenshot from 2021-10-31 02-24-05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://mbacou.com/posts/2021-10-24-3dmap/_fig/Screenshot from 2021-10-31 02-24-05.png" class="img-fluid" width="556"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./_fig/Screenshot from 2021-10-31 02-24-05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Visual inspiration"><img src="https://mbacou.com/posts/2021-10-24-3dmap/_fig/Screenshot from 2021-10-31 02-24-05.png" class="img-fluid figure-img" width="556" alt="Visual inspiration"></a></p>
+<figcaption>Visual inspiration</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -14065,9 +14076,9 @@ Melanie, BACOU. 2020. <span>“ERA5-LAND Temperature Validation
 <header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
   <ul class="column-page-right navbar-nav d-flex flex-row align-items-start gap-2 mt-1 text-sans text-uppercase">
-        <li class="nav-item pt-2 fs-3 text-primary fw-bold">dataviz</li>
-        <li class="nav-item pt-2 fs-3 text-primary fw-bold">income</li>
-        <li class="nav-item pt-2 fs-3 text-primary fw-bold">russia</li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold"><a href="../../blog.html#category=dataviz">dataviz</a></li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold"><a href="../../blog.html#category=income">income</a></li>
+        <li class="nav-item pt-2 fs-3 text-primary fw-bold"><a href="../../blog.html#category=russia">russia</a></li>
             <li class="nav-item px-2 mb-2 secondary ms-auto">
       <span>Draft
         ☐
@@ -14080,10 +14091,9 @@ Melanie, BACOU. 2020. <span>“ERA5-LAND Temperature Validation
     </li>
       </ul>
 
-   <p class="title display-7">Income Distribution Cartograms</p> 
-  <p class="subtitle lead"> A side-by-side view of U.S. and Russian income distributions – or when best to use cartograms to convey spatial features </p>
-
   <!-- Optional banner image -->
+     <p class="title display-7">Income Distribution Cartograms</p> 
+  <p class="subtitle lead"> A side-by-side view of U.S. and Russian income distributions – or when best to use cartograms to convey spatial features </p>
   
     
   

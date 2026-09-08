@@ -16,7 +16,7 @@
           <a href="<%- item.path %>" class="no-external">
           <% const imgSrc = getImage(item) || (templateParams['image-placeholder']); %>
           <% if (imgSrc) { %>
-          <img src="<%- imgSrc %>" alt="<%- item['image-alt'] || item.title %>" class="img-fluid shadow-md img-zoom" />
+          <img src="<%- imgSrc %>" alt="<%- item['image-alt'] || item.title %>" class="img-fluid rounded shadow-md img-zoom" />
           <% } %>
           </a>
         </p>
@@ -25,7 +25,7 @@
           <h4 class="no-anchor">
           <a href="<%- item.path %>" class="text-body"><%= item.title %>
           </a></h4>
-          <p class="small"><%= item.description %></p>
+          <p><%= item.description %></p>
           <ul class="navbar-nav d-flex flex-row gap-2 text-sans fs-2">
           <% for (const key of (item.keywords || [])) { %>
           <li class="nav-item fs-4 text-primary"><%= key %></li>

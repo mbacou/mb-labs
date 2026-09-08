@@ -102,9 +102,9 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3fdbed52ddd759eb439825698dcb71cb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3fef1d77c7831d2c787e2c0f9774faee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-2069367a6cbbf489d69b259bc6520835.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-3fef1d77c7831d2c787e2c0f9774faee.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-377140d812a3d114cfa3d5d0facfe756.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-353a8053b33831b6df283dc1a7e65ac5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-377140d812a3d114cfa3d5d0facfe756.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -113,14 +113,13 @@ div.csl-indent {
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
-  "type": "textbox",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -157,7 +156,7 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="d-flex flex-column justify-content-around h-100 pt-5 px-2 toc-active" data-toc-expanded="99">
+    <nav id="TOC" role="doc-toc" class="d-flex flex-column justify-content-around h-100 pt-5 px-2 toc-active" data-toc-expanded="1">
 
   <!-- Fixed article meta -->
   <div class="mb-meta mt-2 mt-md-4 mb-3">
@@ -187,7 +186,7 @@ div.csl-indent {
   
   <div class="d-none d-lg-block mt-auto">
     <!-- Optional sidebar logo -->
-        <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid"></a>
+        <a href="../../index.html"><img src="../../assets/mb-square.png" alt="Mel B. mb-labs" class="mb-logo img-fluid rounded"></a>
         <!-- Copyright -->
         <div id="mb-copyright" class="lh-sm fs-2 text-muted my-2">
       true
@@ -315,8 +314,8 @@ div.csl-indent {
 <header id="mb-title-block" class="bg-light py-2 mb-3 page-columns page-full">
 
   <ul class="column-page-right navbar-nav d-flex flex-row align-items-start gap-2 mt-1 text-sans text-uppercase">
-        <li class="nav-item pt-2 fs-3 text-primary fw-bold">quarto</li>
-        <li class="nav-item pt-2 fs-3 text-primary fw-bold">dataviz</li>
+        <li class="nav-item pt-2 fs-2 text-primary fw-bold"><a href="../../blog.html#category=quarto">quarto</a></li>
+        <li class="nav-item pt-2 fs-2 text-primary fw-bold"><a href="../../blog.html#category=dataviz">dataviz</a></li>
             <li class="nav-item px-2 mb-2 secondary ms-auto">
       <span>Draft
         ☐
@@ -329,10 +328,11 @@ div.csl-indent {
     </li>
       </ul>
 
+   <p class="title display-7">Time to Migrate this Blog from Distill to Quarto</p> 
+  <p class="subtitle lead"> Mastering <mark>Quarto</mark> Markdown for literate programming, technical writing, and web publishing </p>
+
   <!-- Optional banner image -->
-    <div class="column-page-right p-2" style="background: url('https://maps.vlasenko.net/historical/rkka100/n-35-008-s.jpg') center center / cover no-repeat fixed;">
-    <p class="subtitle mb-4"> Mastering <mark>Quarto</mark> Markdown for literate programming, technical writing, and web publishing </p>
-     <p class="title">Time to Migrate this Blog from Distill to Quarto</p> 
+    <div class="column-page-right py-5" style="background: url('https://maps.vlasenko.net/historical/rkka100/n-35-008-s.jpg') center center / cover no-repeat fixed;">
   </div>
   
     
@@ -363,7 +363,7 @@ div.csl-indent {
     
   </div></div><div class="mx-lg-3">
         <label>Abstract</label>
-    <div class="lh-lg fs-0 fw-light text-muted"><p>A post about <strong>literate programming</strong> in general and Quarto formats in particular, in which I document migrating this personal blog from <strong>Distill</strong> to <strong>Quarto</strong>. Compared to <strong>Distill for R Markdown</strong> (by J.J. Allaire), <strong>Quarto Markdown</strong> (by Posit®) uses a new templating system built on top of Bootstrap v5.3.^ with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme and design tweaks for this revamped website.</p></div>
+    <div class="lh-lg fw-light text-muted"><p>A post about <strong>literate programming</strong> in general and Quarto formats in particular, in which I document migrating this personal blog from <strong>Distill</strong> to <strong>Quarto</strong>. Compared to <strong>Distill for R Markdown</strong> (by J.J. Allaire), <strong>Quarto Markdown</strong> (by Posit®) uses a new templating system built on top of Bootstrap v5.3.^ with new page and content layouts, extended export formats, and more flexible publishing workflows. This post briefly outlines my process for creating a custom Bootstrap theme and design tweaks for this revamped website.</p></div>
     
         <ul class="navbar-nav d-flex flex-row gap-1">
       <li class="nav-item fs-2 text-muted me-1">Keywords: </li>

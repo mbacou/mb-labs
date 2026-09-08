@@ -74,6 +74,8 @@ Some inspiration below:
 ```{r}
 #| echo: false
 #| layout-ncol: 2
+#| column: page-right
+#| fig-cap: Visual inspiration
 
 list.files("./_fig", full.names = TRUE)[c(1, 5)] |>
   knitr::include_graphics()

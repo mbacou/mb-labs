@@ -5,10 +5,10 @@ date: 2026-03-17
 author: []
 bibliography: []
 image: _fig/profile.jpg
-toc-depth: 3
-freeze: false
+freeze: auto
 citation: false
 lightbox: false
+toc-depth: 4
 category: skip
 format-links: 
   - text: Download PDF
@@ -25,7 +25,7 @@ format-links:
 {{< bi person-circle >}}    [devex.com](https://www.devex.com/people/melanie-bacou-46872)\
 {{< bi journal-text >}}    [orcid.org](https://orcid.org/0000-0003-1810-6818)  
 {{< bi telegram >}}    [t.me/mbacou](https://t.me/mbacou)\
-{{< bi chat >}}    [zoom.us/mbacou](https://us05web.zoom.us/j/6857815367?pwd=eXdteU9QdWhsM1hwTXZGTFdVL0d6dz09)\
+<!-- {{< bi chat >}}    [zoom.us/mbacou](https://us05web.zoom.us/j/6857815367?pwd=eXdteU9QdWhsM1hwTXZGTFdVL0d6dz09)\ -->
 :::
 
 ###### Services
@@ -43,31 +43,30 @@ format-links:
 French (native)\
 English (bilingual)\
 German (limited working)\
-Russian (beginner)
+Russian (B1)
 
 ###### Certifications
 
 [SAS® Programming III](https://learn.sas.com/course/view.php?id=211)
 
-<a role="button" class="btn btn-success mt-2" href="BACOU-Melanie-CV.pdf" target="_blank"><i class="bi bi-file-pdf"></i> Download PDF</a>
+<a role="button" class="btn btn-outline-secondary mt-2" href="BACOU-Melanie-CV.pdf" target="_blank"><i class="bi bi-file-pdf"></i> Download PDF</a>
 
 :::
 
 [{{< bi check2-square >}} I bring in...]{.text-serif .text-secondary style="font-size:1.75em;"}
 
-<!-- Led economic assistance programs and research grants in the $500K range. Advised public agencies and multilateral donors with large-scale data collection methods (field-based, mobile, and remote sensing), household survey design and analysis, value-chain analysis for agriculture, market segmentation, rural finance, climate risk assessment, and risk transfer. -->
-
-- Quantitative, analytical, and data modeling skills acquired in collaboration with top-rank economic research teams and consulting firms
+- Strong quantitative, analytical, data modeling, and project management skills acquired in collaboration with top-rank economic research institutes and consulting firms
 
 - Tech startup experience and 20+ years in public-sector consulting
 
+- Recruit and train research teams, and meet targets amidst complex political and regulatory environments
+
 - Can build and lead your data science team and infrastructure
 
-- Multi-stakeholder (public-private) project management, fundraising, budgeting, forecasting, resource and cost tracking
+- Multidisciplinary background with ability to fundraise and liaise with investors, government officials, private-sector partners, technical experts, and beneficiaries
 
-- Multidisciplinary background with ability to liaise efficiently with investors, government officials, private-sector partners, technical experts, researchers, and beneficiaries
+- 3+ years field experience in fragile states (Mid-East, West/sub-Saharan Africa)
 
-- Can navigate complex regulatory and political environments, incl. 3+ years field experience in fragile states (Mid-East, West/subSaharan Africa)
 
 Consulting rate: **US \$650** / day
 

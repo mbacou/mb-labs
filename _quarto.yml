@@ -29,11 +29,14 @@ website:
   back-to-top-navigation: false
   page-navigation: false
   bread-crumbs: false
+  search:
+    type: overlay
 
 format:
   mb-article-html:
+    fontsize: 14px
     logo: assets/mb-square.png
-    logo-href: index.qmd
+    logo-href: index.qmd_brand
     logo-alt: Mel B. mb-labs
     license: CC BY-NC 4.0
     copyright: © 2026, Mel B. Labs.

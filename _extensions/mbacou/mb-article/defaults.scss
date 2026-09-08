@@ -10,8 +10,8 @@ $theme: 'mb-article';
 
 // Optionally define foreground, background, and semantic colors in `_brand.yml`
 // else Bootstrap defaults or moded values here will apply
-// Read in optional gridline color from `_brand.yml`
-$grid:  $brand-grid;
+// Pick optional gridline color from `_brand.yml` color palette
+$grid: $brand-grid;
 
 // Use _brand.yml fonts (hackish)
 $font-family-sans-serif:  $font-family-monospace;
@@ -46,7 +46,7 @@ $font-weight-bold: 500;
 $font-size-root: 14px;      // inherits optional fontsize key from `_quarto.yml`
 $font-size-sm: .9em;
 $font-size-lg: 1.25em;
-$lead-font-size: 1.3em;
+$lead-font-size: 1.35em;
 $sub-sup-font-size: calc($font-size-base - 2px);
 $sub-sup-font-weight: 500;
 
@@ -74,8 +74,8 @@ $spacers: (
   5: $spacer * 2,
 );
 
-$h1-font-size: calc($font-size-base + 15px); 
-$h2-font-size: calc($font-size-base + 11px);
+$h1-font-size: calc($font-size-base + 13px);
+$h2-font-size: calc($font-size-base + 10px);
 $h3-font-size: calc($font-size-base +  8px);
 $h4-font-size: calc($font-size-base +  6px);
 $h5-font-size: calc($font-size-base +  5px);
@@ -84,10 +84,7 @@ $h6-font-size: calc($font-size-base -  5px);
 $enable-rounded: true;
 $enable-negative-margins: true;
 
-$border-color: $body-color;
-$border-radius-sm: 0;
-$border-radius: .25rem;
-$border-radius-lg: .25rem;
+//$border-color: $body-color;
 $border-width: 1px;
 $hr-border-color: $border-color;
 $hr-opacity: 1;
@@ -115,14 +112,14 @@ $input-border-color: $border-color;
 $input-disabled-bg: darken($input-bg, 4%);
 $input-group-addon-bg: $shaded;
 $input-btn-font-family: $font-family-sans-serif;
-$input-btn-font-size: calc($code-font-size + 3px);
+$input-btn-font-size: calc($code-font-size + 2px);
 $input-btn-font-size-sm: calc($code-font-size + 0px);
-$input-btn-font-size-lg: calc($code-font-size + 5px);
-$input-btn-padding-x: 1rem;
+$input-btn-font-size-lg: calc($code-font-size + 3px);
+$input-btn-padding-x: 1.25rem;
 $input-btn-padding-y: .25rem;
-$input-btn-padding-x-sm: .5rem;
+$input-btn-padding-x-sm: 1rem;
 $input-btn-padding-y-sm: .25rem;
-$input-btn-padding-x-lg: 1rem;
+$input-btn-padding-x-lg: 1.5rem;
 $input-btn-padding-y-lg: .5rem;
 
 $jumbotron-bg: $shaded;
@@ -198,6 +195,7 @@ $sidebar-font-size-section-collapse: $font-size-sm;
 body {
   font-size: $font-size-base;
   line-height: 2rem;
+  text-rendering: optimizeLegibility;
 }
 p, ol, ul {
   margin: 0 0 1rem 0;
@@ -233,13 +231,6 @@ label, .label, #toc-title, #quarto-appendix h2, h6, .h6 {
   font-size: $font-size-base;
   font-weight: 500;
 }
-mark, .mark {
-  color: inherit;
-  font-weight: $font-weight-bold;
-  padding: 0 .25rem;
-  background-color: rgba($primary, 10%);
-  border-radius: $border-radius;
-}
 small, .small {
   font-size: $font-size-sm;
   line-height: 1.75rem;
@@ -250,7 +241,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .title {
   font-weight: $headings-font-weight;
   line-height: 2.5rem;
   padding: 0;
-  margin: 1.5rem 0 0.5rem 0;
+  margin: 1.5rem 0 1rem 0;
 }
 h1, .h1, h2, .h2 {
   margin-top: 2rem;
@@ -297,9 +288,10 @@ p.subtitle {
 .blockquote {
   font-family: $font-family-serif;
   font-size: 2.5rem;
-  color: rgba($muted, 50%);
+  color: rgba($secondary, 50%);
   text-align: center;
-  padding: 0 2rem;
+  padding: 2rem;
+  margin: 2rem 0 3rem 0;
   border: none;
 }
 .blockquote .small {
@@ -333,6 +325,7 @@ code span.fu, code span.sc {
 p code:not(.sourceCode), li code:not(.sourceCode), 
 td code:not(.sourceCode) {
   font-family: $font-family-monospace;
+  color: $secondary;
   line-height: inherit;
   background-color: $shaded;
   padding: 0 .25rem !important;
@@ -443,9 +436,11 @@ figcaption, .column-margin figcaption, .margin-caption {
 .img-zoom {
   transition: transform .25s ease-in-out;
   transform-origin: center center;
+  filter: grayscale(.5);
+  mix-blend-mode: multiply; 
 }
 .img-zoom:hover {
-  transform: scale(1.15);
+  transform: scale(1.25) rotate(-3deg);
 }
 
 
@@ -487,8 +482,6 @@ main {
   font-size: $font-size-sm;
   margin-top: 2rem;
   padding: 0 0 2rem 0;
-}
-.quarto-appendix-heading {
   border-top: solid 1px $border-color;
 }
 .quarto-appendix-citeas, .csl-entry span {
@@ -497,6 +490,9 @@ main {
 }
 #quarto-citation>div pre {
   margin: 1rem 2rem;
+}
+#quarto-citation>div pre code {
+  font-size: calc($code-font-size - 1px);
 }
 .csl-entry {
   margin-left: 3rem !important;
@@ -522,7 +518,9 @@ main {
   width: 3rem;
 }
 .mb-logo {
-  max-height: 11vh;
+  max-height: 10vh;
+  // filter: grayscale(1);
+  mix-blend-mode: multiply; 
 }
 .mb-toc-actions a {
   color: $muted;

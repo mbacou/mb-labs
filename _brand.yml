@@ -1,5 +1,5 @@
 meta:
-  name: Mel B. Labs
+  name: Mel B. Labs (emacs theme)
   logo: assets/mb-square.png
   link:
     home: https://mbacou.github.io/mb-labs
@@ -7,33 +7,32 @@ meta:
 
 color:
   palette:
-    brick:     "#D47979"
-    purple:    "#8D46C1"
-    teal:      "#8E8467"
-    indigo:    "#79799C"
-    blue:      "#00839E"
-    cyan:      "#05D5FF"
-    green:     "#73842A"
-    pink:      "#C6A5E8"
-    red:       "#B54D4D"
-    orange:    "#A1713C"
-    yellow:    "#E0D1A4"
-    gray:      "#4d4d4d"
-    light:     "#FCFAF5"
-    dark:      "#003946"
-    grid:      "#e7e2da"
+    gray-800: "#555555"
+    gray-300: "#ADADAD"
+    gray-200: "#6B6F79"
+    gray-100: "#C4C4C4"
+    purple:   "#7653C1"
+    indigo:   "#204A87"
+    blue:     "#4C8fC7"
+    green:    "#61862F"
+    orange:   "#BC670F"
+    ochre:    "#C4A000"
+    red:      "#a40000"
+    light:    "#FEFEFE"
+    dark:     "#1E282C"
+    grid:     "#e7e2da"
 
-  foreground:  gray     # $body-color = $gray-800 in `mb-article` theme
-  background:  light
-  primary:     brick
-  secondary:   purple
-  tertiary:    gray
-  info:        blue
-  success:     green
-  warning:     orange
-  danger:      red
-  light:       light
-  dark:        dark
+  foreground: gray-800
+  background: light
+  primary: orange
+  secondary: purple
+  tertiary: indigo
+  info: blue
+  success: green
+  warning: ochre
+  danger: red
+  light: light
+  dark: dark
 
 typography:
   fonts:
@@ -47,11 +46,17 @@ typography:
       source: google
       weight: [400]
 
-  base: 
+  base:
     family: Crimson Text
     size: 20px          # $font-size-base ≠ $font-size-root in `_quarto.yml`
-  headings: Caveat
-  monospace: 
+  headings: Caveat      # Serif font
+  monospace:
     family: Iosevka Charon Mono
     size: 14px          # $code-font-size
 
+defaults:
+  bootstrap:
+    border-color: gray-800
+    border-radius-sm: .5rem
+    border-radius: .75rem
+    border-radius-lg: 1rem

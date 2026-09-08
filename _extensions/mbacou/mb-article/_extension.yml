@@ -19,8 +19,8 @@ contributes:
       fig-numbering: true
       citation: true
       citation-location: document
-      reference-location: margin
       citations-hover: true
+      reference-location: margin
       footnotes-hover: false
       
       abstract-title: Abstract
@@ -38,7 +38,7 @@ contributes:
 
       toc: true
       toc-depth: 3
-      toc-expand: true
+      toc-expand: 1
       toc-location: left
       toc-title: Content
 

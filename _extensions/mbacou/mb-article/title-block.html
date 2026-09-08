@@ -5,15 +5,15 @@
   <!-- Optional brand color palette -->
   $if(header.palette)$
   <div class="d-flex justify-content-end">
-    <div class="p-1 text-bg-primary"></div>
-    <div class="p-1 text-bg-secondary"></div>
-    <div class="p-1 text-bg-tertiary"></div>
-    <div class="p-1 text-bg-info"></div>
-    <div class="p-1 text-bg-success"></div>
-    <div class="p-1 text-bg-warning"></div>
-    <div class="p-1 text-bg-danger"></div>
-    <div class="p-1 text-bg-light"></div>
-    <div class="p-1 text-bg-dark"></div>
+    <div class="p-1 bg-primary"></div>
+    <div class="p-1 bg-secondary"></div>
+    <div class="p-1 bg-tertiary"></div>
+    <div class="p-1 bg-info"></div>
+    <div class="p-1 bg-success"></div>
+    <div class="p-1 bg-warning"></div>
+    <div class="p-1 bg-danger"></div>
+    <div class="p-1 bg-light"></div>
+    <div class="p-1 bg-dark"></div>
   </div>
   $endif$
 
@@ -25,7 +25,7 @@
   <ul
     class="column-page-right navbar-nav d-flex flex-row align-items-start gap-2 mt-1 text-sans text-uppercase">
     $for(categories)$
-    <li class="nav-item pt-2 fs-3 text-primary fw-bold"><a
+    <li class="nav-item pt-2 fs-2 text-primary fw-bold"><a
         href="/blog.qmd#category=$it$">$it$</a></li>
     $endfor$
     $if(date)$
@@ -43,16 +43,14 @@
     $endif$
   </ul>
 
-  <!-- Optional banner image -->
-  $if(title-block-banner)$
-  <div class="column-page-right p-2"
-    style="background: url('$title-block-banner$') center center / cover no-repeat fixed;">
-    <p class="subtitle mb-4">$if(subtitle)$ $subtitle$ $endif$</p>
-    $if(title)$ <p class="title">$title$</p> $endif$
-  </div>
-  $else$
   $if(title)$ <p class="title">$title$</p> $endif$
   <p class="subtitle">$if(subtitle)$ $subtitle$ $endif$</p>
+
+  <!-- Optional banner image -->
+  $if(title-block-banner)$
+  <div class="column-page-right py-5"
+    style="background: url('$title-block-banner$') center center / cover no-repeat fixed;">
+  </div>
   $endif$
 
   $if(author)$
@@ -102,7 +100,7 @@
   <div class="mx-lg-3">
     $if(abstract)$
     <label>$abstract-title$</label>
-    <div class="lh-lg fs-0 fw-light text-muted">$abstract$</div>
+    <div class="lh-lg fw-light text-muted">$abstract$</div>
     $endif$
 
     $if(keywords)$

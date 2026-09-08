@@ -18,17 +18,18 @@ description: |
 listing:
   - id: lst-posts
     contents: posts
-    # template: _ejs/listing-list.ejs.md
+    template: _ejs/listing-list.ejs.md
+    template-params:
+      image-align: left
+      image-height: 8rem
+      image-placeholder: assets/placeholder.svg
+    fields: [title, description, image, date, reading-time]
     max-description-length: 200
     categories: true
     feed: true
-    filter-ui: true
-    sort-ui: true
+    filter-ui: false
+    sort-ui: false
     sort: date desc
-    image-align: left
-    image-height: 8rem
-    image-placeholder: assets/placeholder.svg
-    fields: [title, description, image, date, reading-time]
     exclude: 
       category: [skip*]
 ---
@@ -39,3 +40,24 @@ All blog entries are listed below.
 :::
 
 # 
+
+  <script>
+    const categoryHashParam = () => {
+      const hash = (window.location.hash || '').replace(/^#/, '');
+      const params = new URLSearchParams(hash);
+      return params.get('category');
+    };
+
+    const applyCategoryFromHash = () => {
+      const category = categoryHashParam();
+      if (!category || typeof window.quartoListingCategory !== 'function') {
+        return;
+      }
+
+      const encoded = btoa(unescape(encodeURIComponent(category)));
+      window.quartoListingCategory(encoded);
+    };
+
+    window.addEventListener('hashchange', applyCategoryFromHash);
+    window.addEventListener('DOMContentLoaded', applyCategoryFromHash);
+  </script>

@@ -4,6 +4,7 @@ subtitle: A curated list of accessible resources for agricultural and agro-meteo
 date: last-modified
 description: A nice description down here.
 category: skip
+title-block-banner: dashboard.jpg
 ---
 
 A curated list of resources and tools. This page is always in progress.

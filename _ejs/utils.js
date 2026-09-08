@@ -1,4 +1,4 @@
-// ejs/utils.js
+// _ejs/utils.js
 
 function getFirstImage(item) {
   if (item.image) return item.image;
@@ -11,7 +11,8 @@ function getFirstImage(item) {
 
   const firstMatch = item.body.match(/<img[^>]+src=["']([^"']+)["']/i);
   return firstMatch ? firstMatch[1] : null;
-}
+};
 
 module.exports = { getFirstImage };
+
 
