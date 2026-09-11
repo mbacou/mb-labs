@@ -1,0 +1,62 @@
+                                                                                                                             9
+
+   By contrast, in presence of PDI, we observe a stepped        as illustrated by the comparison between Fig. 3(d) and
+evolution of the hump height and a transition from bell-        Fig. 2(d). Although the interface shape evolution with
+shaped to step-shaped hump profiles, see Fig. 2(e). This        and without PDI are qualitatively similar, the interface
+transition is associated with the appearance of radial          deformation is more cylindrical with PDI than without
+modulations of the radiation pressure exerted along the         PDI, for which a bell-shaped deformation is observed.
+interface, whose physical origin lies in the appearance of      This is attributed to the waveguiding effect of the defor-
+guided modes within the increasingly slender deforma-           mation [6]. The comparison between the steady shape
+tion due to the PDI [6].                                        visible in Fig. 3(h) and experimental observations on flu-
+   The comparison between numerical simulations                 ids such that c− /c+ ≃ 0.9 shown in Fig. 4(c), provides
+with/without PDI confirms its paramount influence on            with a satisfying qualitative agreement.
+both the shape and evolution of the irradiated inter-
+face. Noticeably, the steady shape of the irradiated in-
+terface shape shown in Fig. 2(h) qualitatively reproduces                4.   Small celerity contrast with cfrom < cto
+well the experimental observations on fluids such that
+c− /c+ ≃ 0.5, as shown in Fig. 4(a). Also we note in              The evolution of the interface shape for c− /c+ = 0.95
+Fig. 2(h) the axial energy density modulation along the         and cfrom < cto , at Π0 = 6, is reported in the bottom-half
+beam axis in fluid “to”. It might be understood as the re-      part of Fig. 3 in a similar manner as for the previously
+sult of interferences between distinct guided modes (i.e.,      discussed case cfrom > cto .
+associated to distinct wavenumbers) propagating through           Although the hump height evolutions are qualitatively
+the deformed interface acting as a multimodal waveg-            similar with and without PDI, the asymptotic regime is
+uide. Such energy density modulation is also visible in         reached twice more rapidly with PDI than without and
+Figs. 3(b) and 4(b) of Ref. [6], while the underlying mul-      the asymptotic height is twice smaller with PDI than
+timodal propagation is demonstrated in Figs. 6(a), 6(b),        without, which substantially differs from the large con-
+7(a) and 7(b) of Ref. [6].                                      trast situation. Moreover, the steady deformation shapes
+                                                                noticeably differ depending on whether PDI is taken into
+                                                                account or not. Without PDI, the deformation tends to
+         2.   Large celerity contrast with cfrom < cto          a cone, as shown in Fig. 3(j), whereas a bell-shaped de-
+                                                                formation is found with PDI, as shown in Fig. 3(n, q).
+   The evolution of the interface shape for c− /c+ = 0.5        These results demonstrate how strongly the PDI matters
+and cfrom < cto , at Π0 = 5, is reported in the bottom-half     even when the celerity contrast is rather small. Also, a
+part of Fig. 2 in a similar manner as for the previously        qualitative agreement is found between Fig. 3(q) and ex-
+discussed case cfrom > cto .                                    perimental observations on fluids such that c− /c+ ≃ 0.9
+   In absence of PDI, the only qualitative difference be-       shown in Fig. 4(d).
+tween the case cfrom < cto and the case cfrom > cto
+lies in the emergence of a peak in the radiation pres-
+sure distribution along the deformed interface, as shown                       C.    Slenderness transition
+in Fig. 2(j). This peak corresponds to the coincidence
+of the local inclination of the interface with respect to                              1.   Background
+the horizontal with the so-called total internal reflection
+(TIR) angle θTIR = arcsin(c− /c+ ) [5].                            Two decades ago, it was observed that an abrupt tran-
+   As shown in Fig. 2(m, n), when PDI is at work, a non-        sition from moderately to strongly slender deformation
+smooth evolution of the hump height is found as for the         occurs in the electromagnetic case only when cfrom <
+case cfrom > cto and the interface deformation evolves to-      cto [7]. This so-called “slenderness transition” between
+ward a steady, slender and corrugated shape, also show          two distinct regimes of deformation, was observed when
+in Fig. 2(q). This steady shape compares well with ex-          a focused laser beam deforms an interface between the
+perimental observations on fluids such that c− /c+ ≃ 0.5        coexisting phases of a two-phase micro-emulsion close to
+shown in Fig.4(b) .                                             its critical miscibility. A ray-optics based interpretation
+                                                                involving total internal reflection was suggested. Namely,
+                                                                it was proposed that the transition occurs when the in-
+         3.   Small celerity contrast with cfrom > cto          clination angle θi of the deformed interface with respect
+                                                                to the horizontal [see inset of Fig. 6 (b)] exceeds the an-
+   The morphogenesis of interface deformation for               gle of total internal reflection [7], which is specific to the
+c− /c+ = 0.95 and cfrom > cto , at Π0 = 6, is reported          situation cfrom < cto .
+in the top-half part of Fig. 3 in a similar manner as for          Further investigations dedicated to the measurement
+Fig. 2.                                                         of the maximal value for the steady-state incidence angle
+                                                                                                  ∞                    ∞
+   As expected, since the celerity contrast is small, the ax-   at the onset of the transition, θi,max , showed that θi,max  is
+ial energy density modulations in fluid ‘from’ are much         unambiguously smaller than θTIR [25], thus questioning
+less pronounced than in the case of large celerity contrast,    the ray-optics approach. However, since the near-critical
+

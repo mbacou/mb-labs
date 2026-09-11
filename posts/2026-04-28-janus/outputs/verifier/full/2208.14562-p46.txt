@@ -1,0 +1,52 @@
+     eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series 9905, 990566 (July
+     2016).
+[60] Barbera, M., Lo Cicero, U., Sciortino, L., Parodi, G., D’Anca, F., Giglio, P., Ferruggia Bonura, S., Nuzzo,
+     F., Jimenez Escobar, A., Ciaravella, A., Collura, A., Varisco, S., and Samain, V., “Preliminary Mechanical
+     Characterization of Thermal Filters for the X-IFU Instrument on Athena,” Journal of Low Temperature
+     Physics 193, 793–798 (Dec. 2018).
+[61] Barbera, M., Lo Cicero, U., Sciortino, L., D’Anca, F., Lo Cicero, G., Parodi, G., Sciortino, S., Rauw, G.,
+     Branduardi-Raymont, G., Varisco, S., Ferruggia Bonura, S., Collura, A., Candia, R., Di Cicca, G., Giglio,
+     P., Buttacavoli, A., Cuttaia, F., Villa, F., Cappi, M., Lam Trong, T., Mesnager, J.-M., Peille, P., den
+     Hartog, R., den Herder, J. W., Jackson, B., Barret, D., and Piro, L., “ATHENA X-IFU thermal filters
+     development status toward the end of the instrument phase-A,” in [Space Telescopes and Instrumentation
+     2018: Ultraviolet to Gamma Ray ], den Herder, J.-W. A., Nikzad, S., and Nakazawa, K., eds., Society of
+     Photo-Optical Instrumentation Engineers (SPIE) Conference Series 10699, 106991R (July 2018).
+[62] Lo Cicero, U., Lo Cicero, G., Puccio, E., Montinaro, N., Gulli, D., Todaro, M., Calandra, E., Törmä,
+     P., Cuttaia, F., Villa, F., Ferruggia Bonura, S., Lullo, G., Collura, A., D’Anca, F., Sciortino, L., Varisco,
+     S., Jackson, B., van Leeuwen, B.-J., Gloaguen, E., and Barbera, M., “Radio frequency shielding of thin
+     aluminized plastic filters investigated for the ATHENA X-IFU detector,” in [Space Telescopes and Instru-
+     mentation 2018: Ultraviolet to Gamma Ray ], den Herder, J.-W. A., Nikzad, S., and Nakazawa, K., eds.,
+     Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series 10699, 106994R (July 2018).
+[63] Sciortino, L., Lo Cicero, U., Ferruggia Bonura, S., D’Anca, F., Buttacavoli, A., Puccio, E., and Barbera,
+     M., “Thermal modelling of the ATHENA X-IFU filters,” in [Space Telescopes and Instrumentation 2018:
+     Ultraviolet to Gamma Ray ], den Herder, J.-W. A., Nikzad, S., and Nakazawa, K., eds., Society of Photo-
+     Optical Instrumentation Engineers (SPIE) Conference Series 10699, 1069950 (July 2018).
+[64] Sciortino, L., Lo Cicero, U., Ferruggia Bonura, S., Magnano, E., Nannarone, S., Koshmak, K., and Bar-
+     bera, M., “A Temperature-Dependent X-Ray Absorption Characterization of Test Filters for the ATHENA
+     Mission X-IFU Instrument,” Journal of Low Temperature Physics 193, 799–804 (Dec. 2018).
+[65] Puccio, E., Todaro, M., Lo Cicero, U., Sciortino, L., Laurent, P., Ferrando, P., Giglia, A., Nannarone, S.,
+     and Barbera, M., “Synchrotron x-ray transmission measurements and modeling of filters investigated for
+     Athena,” Journal of Astronomical Telescopes, Instruments, and Systems 6, 038003 (July 2020).
+[66] Bozzo, E., Barbera, M., Genolet, L., Paltani, S., Sordet, M., Branduardi-Raymont, G., Rauw, G., Sciortino,
+     S., Barret, D., and Den Herder, J. W., “The Filter Wheel and Filters development for the X-IFU instrument
+     on-board Athena,” arXiv e-prints , arXiv:1609.03776 (Sept. 2016).
+[67] de Vries, C. P., Fioretti, V., den Herder, J. W., Schyns, E., and Pinto, S. D., “Simulating modulated x-ray
+     calibration sources for future x-ray missions using GEANT4,” in [Space Telescopes and Instrumentation
+     2018: Ultraviolet to Gamma Ray ], den Herder, J.-W. A., Nikzad, S., and Nakazawa, K., eds., Society of
+     Photo-Optical Instrumentation Engineers (SPIE) Conference Series 10699, 1069965 (July 2018).
+[68] den Hartog, R., Barret, D., Gottardi, L., den Herder, J. W., Jackson, B., de Korte, P., van der Kuur, J.,
+     van Leeuwen, B. J., van Loon, D., Nieuwenhuizen, A., and Ravera, L., “Requirements for the detectors
+     and read-out of ATHENA X-IFU,” in [Space Telescopes and Instrumentation 2014: Ultraviolet to Gamma
+     Ray], Takahashi, T., den Herder, J.-W. A., and Bautz, M., eds., Society of Photo-Optical Instrumentation
+     Engineers (SPIE) Conference Series 9144, 91445Q (July 2014).
+[69] Peille, P., den Hartog, R., Macculi, C., Barbera, M., Lotti, S., Cucchetti, E., Kirsch, C., Dauser, T., Wilms,
+     J., Bandler, S. R., Smith, S. J., Jackson, B., Geoffray, H., Mesnager, J.-M., Pajot, F., Barret, D., Lam-
+     Trong, T., den Herder, J.-W., and Piro, L., “The performance of the ATHENA X-ray Integral Field Unit,”
+     in [Space Telescopes and Instrumentation 2018: Ultraviolet to Gamma Ray ], den Herder, J.-W. A., Nikzad,
+     S., and Nakazawa, K., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series
+     10699, 106994K (July 2018).
+[70] Ettori, S., Pratt, G. W., de Plaa, J., Eckert, D., Nevalainen, J., Battistelli, E. S., Borgani, S., Croston,
+     J. H., Finoguenov, A., Kaastra, J., Gaspari, M., Gastaldello, F., Gitti, M., Molendi, S., Pointecouteau,
+     E., Ponman, T. J., Reiprich, T. H., Roncarelli, M., Rossetti, M., Sanders, J. S., Sun, M., Trinchieri, G.,
+     Vazza, F., Arnaud, M., Böringher, H., Brighenti, F., Dahle, H., De Grandi, S., Mohr, J. J., Moretti, A.,
+

@@ -1,0 +1,36 @@
+                   Fig. 9. Geodesical path in a [ρ, ϕ] representation (plane, θ = π/2).
+
+
+     By letting a family of geodesics play a particular role among the coordi-nates lines
+     Gauss introduced a useful coordinate system. Consider a 4D space with hyperbolic
+     metric with signature (1, −1, −1, −1). Assume we can imbed a 3D hypersurface Σ3 ,
+     imbedded in the 4D space Σ4 . Assume, in some place, we can define a vector n
+     normal to Σ3 , which satisfies:
+                              n0 n0 + n1 n1 + n1 n1 + n1 n1 > 0
+                                                            
+
+     which, in the familiar language of special relativity theory, implies that Σ3 is “oriented
+     in space” (whereas the vector n, normal to s, is “oriented in time”).
+     We introduce in the surface Σ3 three coordinates x∗1 , x∗2 , x∗3 which serve to charac-
+     terise the point P ∗ ∈ Σ3 . Through each point P ∗ of the 3D surface Σ3 we draw the
+     geodesic which is orthogonal to Σ3 at P ∗ . These geodesic will form a non-intersecting
+     curves in some neighborhood M of Σ3 such that, through each point P of M there
+     will be exactly one of the geodesics constructed. We introduce now, in the entire
+     4D domain M , coordinates as follows: Given P , we consider the geodesic passing
+     through P and its original point P ∗ ∈ Σ3 . We define the coordinate xi of P in terms
+     of the arc length P ∗ P of the geodesic and of the coordinate x∗i of P ∗ .
+     In this manner, the three coordinates x1 , x2 , x3 remain constant along any geodesic
+     perpendicular to Σ3 . It follows that, along such a geodesic,
+                                       ds2 = (dẋ)2 ,      g00 = 1.
+
+    This is the classical way Gaussian coordinates are defined. This is possible if and only if
+g00 6= 0, if the term of the line element related to time-marker is nonzero. Note that, in Fig. 1,
+
+
+
+
+                                                 Fig. 10
+
+
+                                                    7
+

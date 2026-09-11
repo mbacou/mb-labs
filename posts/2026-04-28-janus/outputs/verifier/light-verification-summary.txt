@@ -1,0 +1,201 @@
+\n=== KEYWORD: runaway ===
+outputs/verifier/1408.2451.txt:22:                                                 removes the preposterous runaway effect and gives different interaction laws, be-
+outputs/verifier/1408.2451.txt:27:                                                 Keywords negative mass · bimetric model · gravitation · runaway effect
+outputs/verifier/1408.2451.txt:117:Bondi tried to integrate such puzzling runaway particles in GR without any suc-
+outputs/verifier/1408.2451.txt:119:negative mass. He considered the runaway phenomenon as preposterous and stud-
+outputs/verifier/1408.2451.txt:415:The preposterous runaway phenomenon has disappeared.
+outputs/verifier/1408.2451.txt:497:Universe, while implying a puzzling phenomenon : the runaway effect. After GR,
+outputs/verifier/1809.05046.txt:40:                                           a very unpleasant runaway effect, negative masses have been rejected by the
+outputs/verifier/1809.05046.txt:56:lowing. We have mentioned the runaway effect as one of the main causes for
+outputs/verifier/1809.05046.txt:77:    Besides the fact that this runaway effect violates the action-reaction prin-
+outputs/verifier/light-verification.txt:428:                                                 removes the preposterous runaway effect and gives different interaction laws, be-
+outputs/verifier/light-verification.txt:433:                                                 Keywords negative mass · bimetric model · gravitation · runaway effect
+outputs/verifier/light-verification.txt:523:Bondi tried to integrate such puzzling runaway particles in GR without any suc-
+outputs/verifier/light-verification.txt:525:negative mass. He considered the runaway phenomenon as preposterous and stud-
+outputs/verifier/light-verification.txt:648:                                           a very unpleasant runaway effect, negative masses have been rejected by the
+outputs/verifier/light-verification.txt:664:lowing. We have mentioned the runaway effect as one of the main causes for
+outputs/verifier/light-verification.txt:685:    Besides the fact that this runaway effect violates the action-reaction prin-
+\n=== KEYWORD: negative mass ===
+outputs/verifier/0712.0067.txt:23:unknown. It is identified in the present model with a set of particles having negative mass and
+outputs/verifier/0712.0067.txt:24:energy. These negative mass particles are emitting negative energy photons, hence they are
+outputs/verifier/0712.0067.txt:61:   -   Particles with non-zero, negative mass and negative energy.
+outputs/verifier/0712.0067.txt:151:order to avoid the problems caused by negative energy (and negative mass) particles,
+outputs/verifier/0712.0067.txt:167:conversely that hypothetic observers and measuring instruments made of negative mass and
+outputs/verifier/0712.0067.txt:172:if our Universe contains negative mass and energy particles, we cannot see them nor record
+outputs/verifier/0712.0067.txt:343:ρ - the absolute value of the density of negative mass matter. Same thing for the pressure
+outputs/verifier/0712.0067.txt:416:and for the movements of negative mass and energy particles, along geodesics of the
+outputs/verifier/0712.0067.txt:484:Following : how positive and negative mass particles interact:
+outputs/verifier/0712.0067.txt:487:   -   Negative mass particles attract each others through Newton’s law
+outputs/verifier/0712.0067.txt:501:negative mass and energy. They are no longer « exotic » but consist of:
+outputs/verifier/0712.0067.txt:503:   -   Protons and antiprotons with negative mass and energy
+outputs/verifier/0712.0067.txt:504:   -   Neutrons and antineutrons with negative mass and energy
+outputs/verifier/0712.0067.txt:505:   -   Electrons and anti-electrons with negative mass and energy
+outputs/verifier/0712.0067.txt:652:population, and a reverse phenomenon for the negative mass and energy population:
+outputs/verifier/0712.0067.txt:674:concept of negative mass and energy particles: emitting negative energy photons, they are not
+outputs/verifier/0712.0067.txt:733:7 Jean-Pierre Petit « Negative mass and energy. Complete Poincaré group »
+outputs/verifier/0805.1423.txt:18:negative mass and energies have finite lifetimes, it restores the O(3) symmetry and makes the
+outputs/verifier/0805.1423.txt:526:   -   We assume that matter, with positive or negative mass has a finite lifetime, even the latter
+outputs/verifier/0805.1423.txt:532:       negative mass or energy.
+outputs/verifier/0805.1423.txt:558:We don’t find negative energy particles. The “second world”, with negative mass and energy
+outputs/verifier/1408.2451.txt:7:                                                 Can negative mass be considered in
+outputs/verifier/1408.2451.txt:23:                                                 tween positive and negative masses, that bring new insights into the alternative
+outputs/verifier/1408.2451.txt:27:                                                 Keywords negative mass · bimetric model · gravitation · runaway effect
+outputs/verifier/1408.2451.txt:33:                                                 Scientists have been trying long ago to mix positive and negative masses to com-
+outputs/verifier/1408.2451.txt:43:                                                 dial density field, acting as if they had a negative mass, could expand and play
+outputs/verifier/1408.2451.txt:45:                                                 justification however, that negative mass could own a negative active mass (from
+outputs/verifier/1408.2451.txt:48:                                                 while positive and negative masses would repel each other. He developped a Void
+outputs/verifier/1408.2451.txt:109:ever positive or negative. Conversely, a negative mass would repel any kind of
+outputs/verifier/1408.2451.txt:111:but opposite signs, the negative mass escapes, while the positive mass runs after it,
+outputs/verifier/1408.2451.txt:114:In addition, according to Bondi’s analysis two negative masses mutually repel,
+outputs/verifier/1408.2451.txt:119:negative mass. He considered the runaway phenomenon as preposterous and stud-
+outputs/verifier/1408.2451.txt:120:ied a universe only filled with negative masses, immediatly pointing out that this
+outputs/verifier/1408.2451.txt:123:Can negative mass be considered in General Relativity ?                             3
+outputs/verifier/1408.2451.txt:127:ously mentioned references, GR bans any introduction of negative masses in the
+outputs/verifier/1408.2451.txt:140:mass, if they have one), and gµν to negative energy particles (and negative mass,
+outputs/verifier/1408.2451.txt:148:only, while negative structures, made of negative masses, can emit and absorb
+outputs/verifier/1408.2451.txt:266:Can negative mass be considered in General Relativity ?                                                        5
+outputs/verifier/1408.2451.txt:412:    – Two negative masses attract each other through Newtons law ;
+outputs/verifier/1408.2451.txt:416:Can negative mass be considered in General Relativity ?                                  7
+outputs/verifier/1408.2451.txt:421:If positive and negative masses repel each other, anywhere positive mass domi-
+outputs/verifier/1408.2451.txt:422:nates, negative mass is almost absent, so that in the vicinity of the solar system
+outputs/verifier/1408.2451.txt:474:of negative mass, corresponding to the equations :
+outputs/verifier/1408.2451.txt:487:the presence of some negative mass. A positive energy photon can cross freely a
+outputs/verifier/1408.2451.txt:488:negative mass. Considering positive energy photons, this give a negative lensing
+outputs/verifier/1408.2451.txt:489:effect not only in the vicinity of a negative mass, but also inside it, as firstly
+outputs/verifier/1408.2451.txt:496:The classical General Relativity model bans the existence of negative mass in the
+outputs/verifier/1408.2451.txt:498:positive mass attracts anything and negative mass repels anything, so that if two
+outputs/verifier/1408.2451.txt:521:  tational lensing shear by an exotic lens with negative convergence or negative mass, Physical
+outputs/verifier/1408.2451.txt:523:11. Bondi H., Negative mass in General Relativity, Rev. of Mod. Phys., Vol 29, N3 (1957)
+outputs/verifier/1408.2451.txt:524:12. Bonnor W.B., Negative mass and general relativity, General Relativity and Gravitation
+outputs/verifier/1809.05046.txt:18:                                                Keywords : Quantum mechanics, Dirac equation, discrete symmetry, negative masses, antimatter
+outputs/verifier/1809.05046.txt:22:                                                  as the Dirac equation under the concept of negative masses. We show
+outputs/verifier/1809.05046.txt:30:                                           Until recently, the concept of negative masses was relegated to the field of
+outputs/verifier/1809.05046.txt:33:                                           the context of general relativity, negative masses have been considered by a
+outputs/verifier/1809.05046.txt:40:                                           a very unpleasant runaway effect, negative masses have been rejected by the
+outputs/verifier/1809.05046.txt:42:                                                However, minds are evolving nowadays : the possibility of negative masses
+outputs/verifier/1809.05046.txt:43:                                           is seriously reconsidered. As examples, let us mention that negative mass
+outputs/verifier/1809.05046.txt:48:was shown that negative mass can produce a Schwarzschild solution without
+outputs/verifier/1809.05046.txt:55:    A further reason for this renewed interest in negative masses is the fol-
+outputs/verifier/1809.05046.txt:65:ticles of positive or negative masses immersed in the same gravitational field,
+outputs/verifier/1809.05046.txt:69:   • Positive mass attracts both other positive masses and negative masses
+outputs/verifier/1809.05046.txt:71:   • Negative mass repels both other negative masses and positive masses
+outputs/verifier/1809.05046.txt:72:This means that the particle of negative mass pursues, in a uniformly ac-
+outputs/verifier/1809.05046.txt:79:    If we deviate from the assumption that positive and negative masses
+outputs/verifier/1809.05046.txt:87:    • Positive mass attracts positive masses and repels negative masses
+outputs/verifier/1809.05046.txt:88:    • Negative mass attracts negative masses and repels positive masses
+outputs/verifier/1809.05046.txt:91:substance to the study of negative masses.
+outputs/verifier/1809.05046.txt:92:    Despite of the growing interest in negative masses, there were very few
+outputs/verifier/1809.05046.txt:94:us cite [13] where the concept of negative mass is used to solve Schrdinger
+outputs/verifier/1809.05046.txt:113:tifermions are then associated with negative masses and energies. We con-
+outputs/verifier/1809.05046.txt:480:consider, simultaneously, negative masses
+outputs/verifier/1809.05046.txt:518:We have shown that negative masses can take place in relativistic quantum
+outputs/verifier/1809.05046.txt:530:composed of the same elements, this time with a negative mass and energy.
+outputs/verifier/1809.05046.txt:531:It is this antimatter of negative mass (what we call negative antimatter)
+outputs/verifier/light-verification.txt:25:unknown. It is identified in the present model with a set of particles having negative mass and
+outputs/verifier/light-verification.txt:26:energy. These negative mass particles are emitting negative energy photons, hence they are
+outputs/verifier/light-verification.txt:63:   -   Particles with non-zero, negative mass and negative energy.
+outputs/verifier/light-verification.txt:153:order to avoid the problems caused by negative energy (and negative mass) particles,
+outputs/verifier/light-verification.txt:169:conversely that hypothetic observers and measuring instruments made of negative mass and
+outputs/verifier/light-verification.txt:174:if our Universe contains negative mass and energy particles, we cannot see them nor record
+outputs/verifier/light-verification.txt:222:negative mass and energies have finite lifetimes, it restores the O(3) symmetry and makes the
+outputs/verifier/light-verification.txt:413:                                                 Can negative mass be considered in
+outputs/verifier/light-verification.txt:429:                                                 tween positive and negative masses, that bring new insights into the alternative
+outputs/verifier/light-verification.txt:433:                                                 Keywords negative mass · bimetric model · gravitation · runaway effect
+outputs/verifier/light-verification.txt:439:                                                 Scientists have been trying long ago to mix positive and negative masses to com-
+outputs/verifier/light-verification.txt:449:                                                 dial density field, acting as if they had a negative mass, could expand and play
+outputs/verifier/light-verification.txt:451:                                                 justification however, that negative mass could own a negative active mass (from
+outputs/verifier/light-verification.txt:454:                                                 while positive and negative masses would repel each other. He developped a Void
+outputs/verifier/light-verification.txt:515:ever positive or negative. Conversely, a negative mass would repel any kind of
+outputs/verifier/light-verification.txt:517:but opposite signs, the negative mass escapes, while the positive mass runs after it,
+outputs/verifier/light-verification.txt:520:In addition, according to Bondi’s analysis two negative masses mutually repel,
+outputs/verifier/light-verification.txt:525:negative mass. He considered the runaway phenomenon as preposterous and stud-
+outputs/verifier/light-verification.txt:526:ied a universe only filled with negative masses, immediatly pointing out that this
+outputs/verifier/light-verification.txt:529:Can negative mass be considered in General Relativity ?                             3
+outputs/verifier/light-verification.txt:533:ously mentioned references, GR bans any introduction of negative masses in the
+outputs/verifier/light-verification.txt:546:mass, if they have one), and gµν to negative energy particles (and negative mass,
+outputs/verifier/light-verification.txt:554:only, while negative structures, made of negative masses, can emit and absorb
+outputs/verifier/light-verification.txt:626:                                                Keywords : Quantum mechanics, Dirac equation, discrete symmetry, negative masses, antimatter
+outputs/verifier/light-verification.txt:630:                                                  as the Dirac equation under the concept of negative masses. We show
+outputs/verifier/light-verification.txt:638:                                           Until recently, the concept of negative masses was relegated to the field of
+outputs/verifier/light-verification.txt:641:                                           the context of general relativity, negative masses have been considered by a
+outputs/verifier/light-verification.txt:648:                                           a very unpleasant runaway effect, negative masses have been rejected by the
+outputs/verifier/light-verification.txt:650:                                                However, minds are evolving nowadays : the possibility of negative masses
+outputs/verifier/light-verification.txt:651:                                           is seriously reconsidered. As examples, let us mention that negative mass
+outputs/verifier/light-verification.txt:656:was shown that negative mass can produce a Schwarzschild solution without
+outputs/verifier/light-verification.txt:663:    A further reason for this renewed interest in negative masses is the fol-
+outputs/verifier/light-verification.txt:673:ticles of positive or negative masses immersed in the same gravitational field,
+outputs/verifier/light-verification.txt:677:   • Positive mass attracts both other positive masses and negative masses
+outputs/verifier/light-verification.txt:679:   • Negative mass repels both other negative masses and positive masses
+outputs/verifier/light-verification.txt:680:This means that the particle of negative mass pursues, in a uniformly ac-
+outputs/verifier/light-verification.txt:687:    If we deviate from the assumption that positive and negative masses
+outputs/verifier/light-verification.txt:695:    • Positive mass attracts positive masses and repels negative masses
+outputs/verifier/light-verification.txt:696:    • Negative mass attracts negative masses and repels positive masses
+outputs/verifier/light-verification.txt:699:substance to the study of negative masses.
+outputs/verifier/light-verification.txt:700:    Despite of the growing interest in negative masses, there were very few
+outputs/verifier/light-verification.txt:702:us cite [13] where the concept of negative mass is used to solve Schrdinger
+outputs/verifier/light-verification.txt:721:tifermions are then associated with negative masses and energies. We con-
+outputs/verifier/light-verification.txt:831:                                                   negative mass and dispersed in space.
+\n=== KEYWORD: negative-mass ===
+\n=== KEYWORD: rotation ===
+outputs/verifier/1809.05046.txt:579:[16] K.N. Srinivasa Rao (1988), The Rotation and Lorentz Groups and Their
+outputs/verifier/light-verification.txt:1135:heat-conducting media when dealing with acoustic waves        velocity is irrotational in absence of acoustic attenuation,
+\n=== KEYWORD: rotation curve ===
+\n=== KEYWORD: accelerat ===
+outputs/verifier/0712.0067.txt:7:                     of the cosmic acceleration
+outputs/verifier/0712.0067.txt:21:acceleration deduced from optically observed high-redshift supernovae. This phenomenon is
+outputs/verifier/0712.0067.txt:43:acceleration of the cosmic expansion, R’’ becoming positive for high redshifts[, deep space].
+outputs/verifier/0712.0067.txt:52:   explain the observed acceleration if it is basically related to repulsive forces.
+outputs/verifier/0712.0067.txt:509:6) About the cosmic acceleration
+outputs/verifier/0712.0067.txt:511:In cosmology, observations show a reacceleration of the Universe for high redshifts. Can we
+outputs/verifier/0712.0067.txt:651:We thus obtain an acceleration effect on the expansion for the positive mass and energy
+outputs/verifier/0712.0067.txt:661:the recession speed for the most remote supernovae have revealed a re-acceleration of the
+outputs/verifier/0712.0067.txt:669:dynamics, accounts for the re-acceleration of the part of the Universe accessible to optical
+outputs/verifier/0805.1423.txt:245:As presented in reference [2] this explains the acceleration of the expansion of our Universe,
+outputs/verifier/0805.1423.txt:505:In reference [2] we presented a bimetric model of the Universe, which explained the acceleration
+outputs/verifier/0805.1423.txt:585:[2] J.P. Petit & G. d'Agostini.: Bigravity as an interpretation of cosmic acceleration. Colloque
+outputs/verifier/1408.2451.txt:112:both being accelerated the same way. To increase such paradoxical phenomenon,
+outputs/verifier/1408.2451.txt:500:one runs after it since both experience the same acceleration, while energy and
+outputs/verifier/1809.05046.txt:532:which is responsible for the acceleration of cosmic expansion, for the confine-
+outputs/verifier/light-verification.txt:9:                     of the cosmic acceleration
+outputs/verifier/light-verification.txt:23:acceleration deduced from optically observed high-redshift supernovae. This phenomenon is
+outputs/verifier/light-verification.txt:45:acceleration of the cosmic expansion, R’’ becoming positive for high redshifts[, deep space].
+outputs/verifier/light-verification.txt:54:   explain the observed acceleration if it is basically related to repulsive forces.
+outputs/verifier/light-verification.txt:518:both being accelerated the same way. To increase such paradoxical phenomenon,
+\n=== KEYWORD: bigravity ===
+outputs/verifier/0712.0067.txt:6:                    Bigravity as an interpretation
+outputs/verifier/0712.0067.txt:274:particles. Bimetric configuration, bigravity.
+outputs/verifier/0712.0067.txt:668:The present work, based on a bimetric description of the Universe going with a bigravity
+outputs/verifier/0805.1423.txt:4:                   Five-dimensional bigravity.
+outputs/verifier/0805.1423.txt:130:2) Extension of the bigravity model to a five-dimensional geometry.
+outputs/verifier/0805.1423.txt:585:[2] J.P. Petit & G. d'Agostini.: Bigravity as an interpretation of cosmic acceleration. Colloque
+outputs/verifier/0805.1423.txt:588:[3] J.P. Petit & G. d'Agostini. Bigravity: A bimetric model of the Universe with variable
+outputs/verifier/0805.1423.txt:592:[5] J.P. Petit & G. d'Agostini. Bigravity: A bimetric model of the Universe. Exact nonlinear
+outputs/verifier/light-verification.txt:8:                    Bigravity as an interpretation
+outputs/verifier/light-verification.txt:208:                   Five-dimensional bigravity.
+outputs/verifier/light-verification.txt:334:2) Extension of the bigravity model to a five-dimensional geometry.
+\n=== KEYWORD: bimetric ===
+outputs/verifier/0712.0067.txt:20:A bimetric description of the Universe is proposed, which may explain the cosmic
+outputs/verifier/0712.0067.txt:274:particles. Bimetric configuration, bigravity.
+outputs/verifier/0712.0067.txt:525:Our Universe is bimetric. Points of this manifold can be located using an arbitrary frame of
+outputs/verifier/0712.0067.txt:668:The present work, based on a bimetric description of the Universe going with a bigravity
+outputs/verifier/0805.1423.txt:14:We extend the bimetric description of the Universe to a five-dimensional framework. Starting
+outputs/verifier/0805.1423.txt:23:bimetric model. We choose to eliminate the “initial singularity” replaced by a boundary space,
+outputs/verifier/0805.1423.txt:435:Notice that this geometrical configuration is equivalent to a bimetric description, each “adjacent
+outputs/verifier/0805.1423.txt:505:In reference [2] we presented a bimetric model of the Universe, which explained the acceleration
+outputs/verifier/0805.1423.txt:530:   -   The dynamics of the Universe corresponds to a bimetric description, going with a system
+outputs/verifier/0805.1423.txt:588:[3] J.P. Petit & G. d'Agostini. Bigravity: A bimetric model of the Universe with variable
+outputs/verifier/0805.1423.txt:592:[5] J.P. Petit & G. d'Agostini. Bigravity: A bimetric model of the Universe. Exact nonlinear
+outputs/verifier/1408.2451.txt:27:                                                 Keywords negative mass · bimetric model · gravitation · runaway effect
+outputs/verifier/1408.2451.txt:131:2 Bimetric Newtonian approximation
+outputs/verifier/1408.2451.txt:309:bimetric extension of the clasical Poisson equation :
+outputs/verifier/1408.2451.txt:323:Then, for a bimetric system, we get an extended Poisson’s equation :
+outputs/verifier/1408.2451.txt:341:3 Gravity as a Bimetric Phenomenon
+outputs/verifier/1408.2451.txt:435:the bimetric model fits the classical local tests of GR.
+outputs/verifier/1408.2451.txt:473:inside. In the bimetric approach (26) and (27) provide the geodesics around clumps
+outputs/verifier/1408.2451.txt:503:interpretations of the VLS as shown in the present work, based on a new bimetric
+outputs/verifier/1408.2451.txt:528:15. Hossenfelder S., A bimetric Theory with Exchange Symmetry, Phys. Rev. D78, 044015
+outputs/verifier/light-verification.txt:22:A bimetric description of the Universe is proposed, which may explain the cosmic
+outputs/verifier/light-verification.txt:218:We extend the bimetric description of the Universe to a five-dimensional framework. Starting
+outputs/verifier/light-verification.txt:227:bimetric model. We choose to eliminate the “initial singularity” replaced by a boundary space,
+outputs/verifier/light-verification.txt:433:                                                 Keywords negative mass · bimetric model · gravitation · runaway effect
+outputs/verifier/light-verification.txt:537:2 Bimetric Newtonian approximation

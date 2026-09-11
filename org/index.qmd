@@ -1,0 +1,60 @@
+---
+title: Mel’s Org Notes
+date: 2026-09-05
+---
+
+<a id="orgdf68a02"></a>
+
+# Notebooks
+
+Mel’s notebooks gathered since 2010.
+
+-   [2025/26-Notebook](./2025-Notebook.qmd)
+-   [2023/24-Notebook](./2023-Notebook.qmd)
+-   [2022-Notebook](./2022-Notebook.qmd)
+-   [2020/21-Notebook](./2021-Notebook.qmd)
+-   [2019-Notebook](./2019-Notebook.qmd)
+-   [2018-Notebook](./2018-Notebook.qmd)
+-   [2017-Notebook](./2017-Notebook.qmd)
+-   [2016-Notebook](./2016-Notebook.qmd)
+-   [2015-Stats-Notebook](./2015-Stats-Notebook.qmd)
+-   [2015-Notebook](./2015-Notebook.qmd)
+-   [2014-Notebook](./2014-Notebook.qmd)
+-   [2013-Notebook](./2013-Notebook.qmd)
+    
+# Project specific notes:
+
+-   [2021-IWMI/notebook](../2021-IWMI/notebook.md)
+-   [2018-MIFA/admin/notebook](../2018-MIFA/admin/notebook.md)
+-   [2018-MIFA/admin/notebook](../2016-MIFA/admin/notebook.md)
+-   [2017-WorldCover/admin/notebook](../2017-WorldCover/admin/notebook.md)
+-   [2016-BMGF/notebook (Bihar)](../2016-BMGF-Segmentation/IND/R/Notebook (Bihar).md)
+-   [2014-BMGF/notebook](../2016-BMGF-Segmentation/ETH/R/2014-BMGF-Notebook.md)
+-   [2011-HC/TableMaker](../2011-HCII/contracts/SpatialDev/HCII cell5mTableMaker.md)
+    
+# Misc notes:
+
+-   [Quotes](./quotes.qmd)
+-   [Russian song lyrics](./lyrics.qmd)
+-   [Настоящие lyrics](./transcript.qmd)
+
+
+<a id="org0ad686a"></a>
+
+# Tips & Tricks
+
+This project configured globally with:
+
+```{lisp}
+  ;; default publishing
+  (setq org-publish-project-alist '(
+        ("org-html"
+           :base-directory "/home/data/GDrive"
+           :publishing-directory "./html"
+           :publishing-function org-html-publish-to-html
+           :headline-levels 3
+           :auto-preamble t
+           :recursive t
+           :exclude "(-(/data/|2021-Mel|prose|Jobs|themes|template|draft)\\.org$)"
+           )))
+```

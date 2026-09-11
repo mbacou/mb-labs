@@ -1,0 +1,38 @@
+                                                                                                     5
+
+
+                                     [         ]
+               d s _ 2 = (d x o )2 − R _ (x o1 ) 2 [ d u 2 + u 2 ( d θ 2 + sin 2 θ dϕ 2 )] − d x 5
+
+
+are solutions of the system and give the evolution of the two space scale factors versus the time
+marker x°
+
+(27)
+                                      d 2R+        1 ⎛ (R + )3 ⎞
+                                             = −           ⎜1 −         ⎟
+                                      d x° 2     (R + ) 2 ⎜⎝ ( R − ) 3 ⎟⎠
+
+
+                                       d 2R−        1 ⎛ (R − )3 ⎞
+                                              = −           ⎜1 −         ⎟
+                                       d x° 2     (R − ) 2 ⎜⎝ ( R + ) 3 ⎟⎠
+
+
+
+
+        Fig.1: Evolution of the space scale factors with respect to the time marker x°
+
+
+As presented in reference [2] this explains the acceleration of the expansion of our Universe,
+supposed to be described by the metric g + (positive energy matter).
+In the next paper [3] we recall that the Roberston-Walker metric is based on the assumptions of
+isotropy and homogeneity, which does not fit the observational data. The expansion occurs in
+large portion of "empty" space (in fact filled by primeval photons). Elsewhere, space does not
+expand. This corresponds to a more refined metric solution, that we don’t hold right now.
+Introducing a 2d didactic model, the Universe looks like a diamond, with blunt summits.
+In the precedent paper we gave a very simplified 2d toy model: a cube with eight blunt corners.
+Each of these corners is an eighth of a sphere, that does not expand. These blunt summits are
+linked by Euclidean surfaces: quarters of a cylinder and flat plates, which expand. On figure 2 the
+O(2) symmetry is broken in step 2.
+

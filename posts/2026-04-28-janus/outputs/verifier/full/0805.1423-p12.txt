@@ -1,0 +1,23 @@
+                                                                                               12
+
+
+
+Antipodal regions of the S2 sphere become adjacent. The arrows of time of adjacent regions
+become everywhere anti-parallel. Following, the vicinity of a world line, glued on itself along a
+one half-turn closed strip (classical single sided Moebius strip) .
+
+
+
+
+Same thing for the vicinity of the maximum space extension (equator of the S2 sphere) glued on
+itself along a single sided three half turns Moebius strip:
+
+
+
+
+                Fig.9: Equator of the spherical space-time S2. Arrows of time
+
+
+On the right image of figure 8 we find the three half-turns Moebius strip. The figure 10 shows the
+inversion of the arrow of time and the enantiomorphical relationship (P-symmetry).
+

@@ -1,0 +1,691 @@
+---
+title: 2025 Notebook
+date: 2026-09-05
+---
+
+<a id="org52fef50"></a>
+
+# Job Leads
+
+
+<a id="org836bdc3"></a>
+
+## ACTIVE <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-09-07">&lt;2026-09-07 Mon&gt;</time></span> WMO Chief - Programme and Operations, Geneva
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-25">[2026-08-25 Tue]</time></span>  
+
+<https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_5001/job/36313?mode=location>  
+
+
+### Description
+
+This position is located in the CREWS Secretariat under the World Meteorological Organization (WMO). The Chief, Programme and Operations will report to the Director of the CREWS Secretariat. The incumbent to this position will serve as a senior manager responsible for overseeing the CREWS portfolio of global, regional and national programmes and projects implemented by its partners. The incumbent will provide strategic leadership for programme planning, as reflected in the CREWS Operational Procedures, implementation oversight, monitoring and evaluation, results-based management, performance reporting, and organizational learning to ensure the effective delivery of development and institutional outcomes.  
+
+The Chief, Programme and Operations must demonstrate managerial-level proficiency in:  
+
+-   Communication & Influence
+-   Collaboration & Team Dynamics
+-   Inclusive Mindset & Cultural Awareness
+-   Decision Making & Problem Solving
+-   Integrity & Accountability
+-   Innovation & Digital Agility
+-   Stakeholder Understanding & Engagement
+
+See WMO reports in Mendeley.  
+<https://crews-initiative.org/resources/crews-documents/>  
+
+
+### CREWS Strategy
+
+**Structural adjustment → reduced public budgets → deterioration of observation networks → poorer services → low political visibility → dependence on donor projects → capital investment without sufficient O&M (operation & maintenance) → further deterioration.**  
+
+And this matters particularly for **agriculture**. A functioning NMHS (National Meteorological and Hydrological Service) is the national layer connecting global weather models and satellites to local rainfall, evapotranspiration, soil moisture, crop calendars, drought indicators and agricultural advisories. Without that layer, Africa can have access to some of the world's best global climate datasets while still having relatively poor operational weather and climate services locally.  
+
+The economic case is actually quite strong: World Bank estimates have put the benefit-cost ratio of hydrometeorological investment in Africa at roughly 7:1. The problem has historically been less “does meteorology create value?” and more “who captures the value, and who has to pay the recurring bill?”  
+
+CREWS says that its overall success is measured in terms of wider socioeconomic benefits, particularly:  
+
+-   reduction in lives lost to extreme climate events;
+-   reduction in livelihoods lost or affected;
+-   number of people living in areas covered by early-warning services;
+-   people's access to and receipt of those warnings.
+
+So there is a deliberate distinction between capacity/output indicators and impact indicators.  
+
+CREWS is explicitly aligning its MEAL framework with the UN/WMO-led **Early Warnings for All (EW4All)**. The CREWS Steering Committee specifically instructed the Secretariat to align its Theory of Change and MEAL framework with the emerging EW4All M&E framework and the **Early Warnings Maturity Index**.  
+
+That means CREWS is becoming part of a broader architecture:  
+
+-   Sendai Framework →
+-   Paris Agreement / SDGs →
+-   EW4All →
+-   CREWS + SOFF + other financing mechanisms →
+-   National EWS/NMHS investments
+
+
+### EW4All Early Warnings Maturity Index
+
+How mature is a country's national early-warning system, and where are its biggest capability gaps?  
+
+| Dimension | What it asks |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **1. Disaster risk knowledge** | Does the country understand where hazards, exposure and vulnerability are? |
+| **2. Detection, observation, monitoring & forecasting** | Can it observe hazards and produce reliable forecasts? |
+| **3. Warning dissemination & communication** | Can warnings reach the right people, through appropriate channels, in a usable form? |
+| **4. Preparedness & response** | Do authorities and communities know what to do when a warning arrives? |
+| **5. Enabling environment** | Are governance, legislation, institutions, financing, technology, coordination and human resources adequate? |
+
+
+### FEWSNET Recap
+
+Current 2026 FEWSNET recruitment material explicitly states that Chemonics has implemented FEWSNET since 2000 and is now implementing FEWSNET 8, which began in 2024.  
+
+Under FEWSNET 7, USAID had an IDIQ structure involving:  
+
+-   Tetra Tech ARD
+-   DAI Global
+-   Abt Associates
+-   Chemonics
+
+with different task orders.  
+
+For FEWSNET 8, the current evidence indicates that Chemonics is the principal implementer of the core DST. There is also a separate FEWS NET 8 Knowledge Base contract. Chemonics received the five-year, approximately $65.5 million task order in October 2024.  
+
+| Organization | Role in FEWS NET 8 | Relevance |
+| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **[Chemonics International](https://chemonics.com/)** | Prime implementer of the FEWSNET Decision Support Team\* | Core food-security monitoring, forecasting, country/regional teams |
+| **[Chemonics International — FEWSNET 8 Knowledge Base](https://fews.net/)** | Knowledge Base contractor\* | Livelihood zones, market systems, baseline data and analytical foundations |
+| **[American Institutes for Research (AIR)](https://air.org/)** | FEWSNET technical/knowledge-data activities | Data, learning, technology and research components |
+| **NASA** | Scientific partner | Remote sensing and Earth observation |
+| **NOAA** | Scientific partner, CPC produces RFE 2.0 | Meteorology, climate and forecasting |
+| **USDA**                ! | Scientific partner | Agricultural production and food-security information |
+| **USGS** | Scientific partner | Hydrology, environmental and Earth-system information |
+| **UCSB Climate Hazards Center** | Scientific partner | CHIRPS, climate hazards, rainfall monitoring |
+| **University of Maryland** | Scientific partner | Remote sensing, geospatial and food-security analysis |
+
+
+### State of Data
+
+| Dataset | Producer | Main approach | Resolution | Coverage period | Primary role |
+| -------------- | --------------------------- | ----------------------------------------------------- | ----------&ndash;&mdash;: | --------------------- | ----------------------------------------------------------------------------------------------- |
+| **RFE 2.0** | NOAA CPC | Satellite + GTS gauges | 0.1° | 2001–present | Near-real-time African rainfall monitoring |
+| **CHIRPS v3** | UCSB Climate Hazards Center | Satellite + climatology + gauges | 0.05° | 1981–present | Long-term rainfall monitoring and drought analysis |
+| **TAMSAT 3.x** | University of Reading | Meteosat IR + gauge calibration | ~4 km | 1983–present | African rainfall monitoring |
+| **ARC2** | NOAA CPC | Satellite + gauge | 0.1° | 1983–present | Long-term/operational African rainfall monitoring |
+| **IMERG** | NASA GPM | Multi-satellite precipitation + gauge adjustment | 0.1° | June 2000–present | Global precipitation monitoring |
+| **ERA5-Land** | ECMWF / Copernicus C3S | Land-surface model driven by ERA5 atmospheric forcing | **~9 km (0.1°)** | 1950–present | Global land-surface reanalysis: precipitation, temperature, soil moisture, PET/ET, runoff, etc. |
+| **GridMET** | NOAA | 48 US states, blends from PRISM and NLDAS-2 regional models | 1/24°/ 4km | 1979-yesterday |  |
+
+
+### Cover Letter
+
+See ChatGPT.  
+Map ecosystem:  
+CGIAR, IWMI, Aghyrmet, Digital Earth Africa (Lisa-Maria Rebelo, Managing Director), FEWSNET, World Bank  
+
+-   Africa Climate Resilient Investment Facility (AFRI-RES) <https://www.worldbank.org/en/programs/africa-climate-business-plan/investment-facility>
+
+
+<a id="org88556f8"></a>
+
+## ACTIVE <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-09-14">&lt;2026-09-14 Mon&gt;</time></span> World Bank - Geospatial Data Scientist
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-09-04">[2026-09-04 Fri]</time></span>  
+
+<https://worldbankgroup.csod.com/ux/ats/careersite/1/home/requisition/38183?c=worldbankgroup&wscji8ps=&m=-5&u=-100>  
+  Posted by **Brian Blankespoor**  
+
+
+<a id="org47396e1"></a>
+
+## ACTIVE <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-09-08">&lt;2026-09-08 Tue&gt;</time></span> UNDP - Digital Transformation
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-09-04">[2026-09-04 Fri]</time></span>  
+
+<https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/35850?utm_medium=jobshare>  
+Found on Linkedin.  
+
+
+<a id="org0f345d9"></a>
+
+## TODO <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-09-02">&lt;2026-09-02 Wed&gt;</time></span> McCain - Sustainable Ag
+
+<https://careers.mccain.com/us/en/job/MFOMFBUS43886EXTERNALENUS/Sr-Program-Manager-Regenerative-Agriculture-CE?utm_source=linkedin&utm_medium=phenom-feeds>  
+
+
+<a id="orgbf615b7"></a>
+
+## TODO <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-09-11">&lt;2026-09-11 Fri&gt;</time></span> Alabama - Research Scientist
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-09-04">[2026-09-04 Fri]</time></span>  
+
+<https://careers.uah.edu/cw/en-us/job/504208/research-scientist-ii-step-14>  
+EarthRISE Project Office, within the Lab for Applied Science (LAS)  
+Posted <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-07-28">&lt;2026-07-28 Tue&gt;</time></span>, open-ended  
+$67,151-$89,611  
+
+Earth-observations-driven data solutions and geospatial artificial intelligence-informed services and supporting workforce development activities in support of the EarthRISE program  
+
+
+<a id="org7c8dd3a"></a>
+
+## TODO <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-09-02">&lt;2026-09-02 Wed&gt;</time></span> IFAD Roster
+
+<https://job.ifad.org/psc/IFHRPRDE/CAREERS/JOBS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant>  
+
+
+<a id="org6b16bb6"></a>
+
+## DONE <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-25">&lt;2026-08-25 Tue&gt;</time></span> WMO - Meteo Rwanda
+
+Description:  
+<https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_5001/job/36366/>  
+Profile:  
+<https://estm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_5001/my-profile>  
+
+
+### Purpose of the Assignment
+
+The World Meteorological Organization (WMO), through the **Climate Risk and Early Warning Systems (CREWS)** Accelerated Support Window (ASW), seeks to engage a Climate Modelling and Downscaling Expert. The consultant will work closely with **Meteo Rwanda** to generate and evaluate high-resolution climate projections while strengthening national technical capacity to independently undertake climate modelling, downscaling, validation, analysis and interpretation.  
+
+Strengthen the technical and institutional capacity of Meteo Rwanda to generate, evaluate, interpret and apply high-resolution climate projections for Rwanda.  
+The consultant will develop and apply an appropriate climate-downscaling methodology, evaluate available climate-model products against observations, generate and validate high-resolution projections of key climate variables and extremes, and strengthen the capacity of Meteo Rwanda staff to independently undertake and sustain these processes.  
+The assignment will also support the development of climate information products that can be applied to early warning, climate-risk management, adaptation planning and climate-sensitive sectoral decision-making.  
+
+
+<a id="org9ca6d3d"></a>
+
+## DONE <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-21">&lt;2026-08-21 Fri&gt;</time></span> KPMG - Cyprus
+
+Sent to Rosalie’s contact in Luxembourg.  
+
+
+<a id="orgfc27414"></a>
+
+## DONE <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-18">&lt;2026-08-18 Tue&gt;</time></span> FAO - Climate Risk and Agrometeorologist Specialist
+
+<https://jobs.fao.org/careersection/fao_external/jobdetail.ftl?job=2601614>  
+
+
+### Tasks and responsibilities
+
+-   Prepare technical documents (hydrometeorological, agrometeorological, and climate impact assessments) to evaluate the effects of climate risks in agrifood systems, for climate change adaptation project formulation and policy development.
+-   Analyze technical, social, economic, environmental information and data to characterize climate impacts and climate risks in agriculture (crop, livestock, forestry, fisheries, aquaculture) and in agrifood systems
+-   Provide technical support to development and implementation of climate risk assessment tools and methodologies.
+-   Support multi-hazard agricultural climate services as a weather risk management solution by improving access to, and use of, weather monitoring, forecasting, and early warning services across FAO’s work.
+-   Support the Environment Team with transferring risk knowledge (including tools, datasets, and methodologies) to FAO country/regional offices and Member States.
+-   Participate in relevant meetings and technical trainings.
+-   Participate in multidisciplinary teams and promote climate risk management and climate services across FAO’s work areas
+-   Provide technical support to FAO’s work on climate services and climate risks as required.
+-   Perform other related duties as required.
+
+
+### Notes
+
+
+<a id="org450807a"></a>
+
+## TODO CoreStar - Business Analyst, Limassol
+
+<https://corestar.bamboohr.com/careers/43>  
+
+-   Identify and analyze business problems and needs to drive product evolution;
+-   Daily collaboration with Development team to be aligned on the requirements and technical solutions;
+-   Define and describe functional and non-functional requirements to drive product evaluation;
+-   Create and Maintain Confluence documentation, Jira Epics and Stories;
+-   Manage Product and Sprint Backlog. Maintain requirements in case of any change requests and during all phases of SDLC;
+-   Conduct and manage Sprint Demo meetings.
+
+
+<a id="org3313875"></a>
+
+## TODO <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-03-08">&lt;2026-03-08 Sun&gt;</time></span> PAHO Consultant - Epidemic Intelligence and GIS Analyst, Off Site, Geneva
+
+  <https://jobingis.com/jobs/paho-consultant-epidemic-intelligence-and-gis-anal>  
+Very interesting dashboards with R and QGIS  
+
+
+<a id="org92e6b6c"></a>
+
+## TODO <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-11-08">&lt;2025-11-08 Sat&gt;</time></span> AfDB - 2026 AEO Macro consultancy
+
+<https://afdb1.fcp.eu.fieldglass.cloud.sap/job_posting.do?id=z2510311143500740215121f&fromPage=advanceSearch>  
+
+-   Contribute to the drafting of a detailed outline for the Chapter: This annotated outline will propose a storyline that coherently links the different sections of the chapter, including placeholders for potential boxes to support specific issues outlined in the Chapter.
+-   In collaboration with the Bank’s Statistics Department and ECMR researchers, collect primary and secondary sources of data needed for the analysis in the chapter.
+-   Provide a comprehensive review on each of the sections of the chapter, after the preliminary drafts are submitted, as well as the final drafts.
+-   Ensure that all comments received are well addressed at each round of revisions.
+-   Put together the different sections drafted by him/her, the AEO core team and other experts that will constitute the consolidated draft of Chapter 2 and ensure that the flow and narrative are consistent and coherent.
+-   Review the final draft of the chapter to ensure a flow of the storyline consistent with the other chapters.
+-   Attend regular meetings with the AEO core team and other drafters, initiated by either him/her or the Bank, to discuss challenges, potential new directions, and progress made on the thematic chapter.
+-   Prior to submission to the task manager(s) for onward processing, present the preliminary findings of the chapter to the AEO core team and other experts.
+-   Undertake any other required tasks related to the chapter to deliver a high-quality product.
+-   Assist in preparation of the presentation slides (PPT) as advised by the division manager and chapter leads.
+
+
+<a id="org99413e7"></a>
+
+## TODO Meridia - Agtech Supply-chain
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-09-17">[2025-09-17 Wed]</time></span>  
+
+**$5.6M Series A**  
+<https://meridia.land/>   
+We are an AgTech company specialised in field data within complex smallholder-heavy agri-commodity supply chains such as cocoa, coffee, palm oil, rubber and soy.  
+
+Meridia Verify®, our flagship SaaS product, verifies supply chain field data in real time – and validates compliance with frameworks such as the EUDR (EU Deforestation Regulation). With Verify, companies can reduce commercial and reputational risk, minimise supply chain disruption and accelerate evidence-based decision-making for strategic sourcing, procurement and trade.  
+
+Our mission is to improve the veracity of datasets driving decision making in global agri-commodity supply chains. Our purpose is to build transparent and inclusive supply chains that afford smallholders a level playing field.  
+
+**Head of Consultancy**  
+Meridia is now looking for a Head of Consulting based in our Amsterdam office at least 2 days a week. The role is full time. This senior position is accountable for acquiring new consulting revenue and building Meridia's consulting practice into a strong, global business line. The role requires a proven track record in both business development and project execution, particularly in generating new revenue streams from consulting assignments, partnerships and long-term client engagements.  
+
+Our current portfolio includes a diverse range of consultancy assignments and projects that often involve working in an international setting with teams in tropical countries such as Brazil, Peru, Guatemala, Colombia, Ghana, Ivory Coast, Uganda, Indonesia, India, Thailand and other areas. Some examples:  
+
+-   Developing Standard Operating Procedures (SOPs) for a large coffee agri-commodity trader, focussed on coffee farm mapping and EUDR-related field data processing, delivered in a series of trainings to client's origin country teams in LatAm and Asia.
+-   Leading a collaborative program together with a large agri-bank to guide and support cohorts of commodity traders and exporters in LatAm, Africa and Asia to become EUDR-ready.
+-   Supporting a large cocoa agri-commodity trader to support their field teams in West Africa to resolve field data quality issues through SOPs, decision trees, training and capacity building.
+-   Provide in-situ datasets as part of a consortium of remote sensing companies to develop a global model for commodity crop maps for EUDR competent authorities.
+-   Developing best practice guides for the remediation of noncompliant and illegal farming activity (e.g. farms in protected forests, farms with deforestation) to ensure smallholder farmers can maintain their livelihoods while initiating a process of nature restoration.
+-   Delivering large projects for one of the largest food companies in the world on data dashboards, farmer extension and field data collection.
+
+
+<a id="org7768898"></a>
+
+## TODO Xjenza Malta
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-11-05">[2025-11-05 Wed]</time></span>  
+
+Xjenza Malta (Science Malta) is the Malta Government Agency acting as the national R&D and Space-funding agency, and the policy development and implementation body in the area of Research, Innovation and Space. Xjenza Malta is entrusted with the updating of the national R&I and Space policy frameworks, overseeing and coordinating R&I and Space-strategy implementation through programming efforts, including the direct management of the national public budgetary allocation for Research, Innovation and Space.  
+<https://xjenzamalta.mt/careers/>  
+
+Innovation center and event showcase at **Villa Bighi**, Grand Harbour  
+Villa Bighi is one of the finest examples of 17th Century neo-classical architecture on the Islands. Villa Bighi affords breath-taking views of the natural harbour of Valletta. It has been a focal point in the historical development of the Maltese Islands, due to its ample size for ships to enter and moor as well as it’s geographical importance in the middle of the Mediterranean.  
+<https://esplora.org.mt/category/upcoming-events/>  
+
+Open funding schemes:  
+<https://xjenzamalta.mt/media/open-funding-schemes/>  
+
+
+<a id="org295a281"></a>
+
+## Job rosters:
+
+-   <https://developmentaid.org//jobs/search>
+-   <https://job-boards.eu.greenhouse.io/pulaio>
+-   <https://degas-ltd.breezy.hr/>
+-   <https://jobingis.com/>
+
+
+<a id="orga8506dd"></a>
+
+# Interview Thoughts
+
+
+<a id="org274a729"></a>
+
+## 3-year break
+
+To lauch insurance product and operations in Ghana, but also in multiple food insecure countries at the same time was a major effort and changed my outlook on life’s priorities. Not being able to scale fast enough to retain venture funds, even though we signed MoUs with Togo and Ghana was distressing, almost tragic, because communities were deeply impacted. Yes in Ghana the public sector progressively enacted it’s own relief system through GAIC, leveraging some of our lessons learned, but there was no chance to really hand over the (local) teams and tech platform. Because we iterated so fast between seaons, it took me a while to personnaly digest and assimilate what we’d learned along the way, esp. where we made mistakes.  
+In addition I came back from working with remote rural communities with parasitic infections that took a while to diagnose and that slowed me down for a good year.  
+
+
+<a id="org363d02a"></a>
+
+## Why Cyprus?
+
+I was very inspired with 2021 PwC 15-year strategic plan for Cyprus (Vision 2035 for sustainable growth), was very high quality and inspiring work and demonstrated real engagement from the public sector.  
+
+That study was paid for by ****EU DG Reform****.  
+
+I’ve dedicated my whole life to equitable and sustainable development. Today in the Western world all these principles are put into question. Citizens’ well-being is no longer a priority and a guiding principle for today’s governments, so I prefer to move my focus elsewhere, where good public policy-making is still a local priority.  
+
+In the past 2 years I took a break from my normal prodessional networks and interacted with musicians and artists.  
+
+> This means that the growth model has Europe’s business and trade hub at its core, but is enhanced by the green and blue economy and the development of niche high-tech services (including in the research heavy areas of e-health, agritech and green technologies including renewables) to drive sustainability and diversification. By any means, this does not mean that we are favouring one sector over the other. All the sectors of the Cyprus economy have their role to play to deliver Vision 2035  
+
+
+<a id="org394a444"></a>
+
+## Agri-meteo, risks, preparedness, mitigation &ndash; 2026 where do we stand?
+
+The upside of taking a sabbatical was that I was able to travel to new regions, esp. Russia, where I have contacts working for МЧС. To me that was a real eye-opener, because that Ministry focuses so much more on skill building for local populations and preparedness than what we’re used to in the West. Of course the focus there is no longer on food insecurity, but preparing for planting and harvest in the best possible conditions. I came back with the strong belief that good public policy means developing local information networks, decision-making systems, recommandations, skills, and logistics before disasters strike (not just early warning and insurance).  
+
+2-week weather forecast were even more useful to farmers than automated insurance payments, because that give them sufficient lead time to adjust planting strategies and labor use. Esp. in terms of choosing specific crop varieties (short or long maturation), types of inputs, etc.  
+
+Basically these are services you’d expect from ****top-notch agricultural and agro-meteo extension systems****, which no longer exist in Africa for lack of public funding (also underfunded in the West).  
+
+
+<a id="org441838b"></a>
+
+## WorldCover PBC - Lessons learned
+
+-   YCombinator, Nephila, MS&AD Venture, Catalyst Fund, FinTech Collective,  Omidyar Network.
+-   7 rounds of funding
+-   Raised over $10M / 5 years
+-   Auctioned tech platform after signed MoUs with Togo and Ghana
+-   Had to recollect, experience had a profound impact on my prof and perso life.  
+    
+    | Investor Name                 | Funding Round  | Partners              |
+    |-------------------------------|----------------|-----------------------|
+    | YCombinator                   | —              | Series A - WorldCover |
+    | EchoVC Partners               | Series A       | Eghosa Omoigui        |
+    | Castor Ventures               | Series A       | —                     |
+    | Western Technology Investment | Series A       | —                     |
+    | MS&AD Ventures                | Series A       | —                     |
+    | Alumni Ventures               | Series A       | Alain Hanover         |
+    | Plug and Play                 | Seed Round     | —                     |
+    | Chris Eyre                    | Seed Round     | —                     |
+    | CE Innovation Capital         | Seed Roundr    | —                     |
+    | Omidyar Network               | Venture Roundr | —                     |
+
+
+<a id="org9e60fde"></a>
+
+# Events
+
+
+<a id="org348c5d1"></a>
+
+## DONE <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-09-15">&lt;2025-09-15 Mon&gt;</time></span> Take SAFe Engineering certifcation     :Jobs:
+
+2-day courseware ($2,295):  
+<https://training.scaledagile.com/?courseType=Agile%20Software%20Engineering>  
+
+-   How to apply the test-first principle to align tests and requirements.
+-   Techniques to detail, model, design, implement, verify, and validate stories within a SAFe Continuous Delivery Pipeline.
+-   Practices such as **abstraction**, **encapsulation**, and **SOLID** principles to build quality into code and design.
+-   Foundational Lean, Agile, and DevOps principles and practices.
+-   Utilization of the test infrastructure for **automated testing**.
+-   Designing from **context** to enhance testability.
+-   The course answers questions such as:  
+    -   How do I build a **test-first**, principle-based team environment and technical infrastructure?
+    -   How do Agile teams use **BDD** to create a shared understanding?
+    -   How do we build in quality throughout the **Continuous Delivery** pipeline?
+
+
+<a id="org0c719d3"></a>
+
+## TODO LPS25 Symposium
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-09-16">[2025-09-16 Tue]</time></span>  
+<https://lps25.esa.int/programme/>   
+
+
+<a id="orgc9f624f"></a>
+
+# Data
+
+
+<a id="orge904bc2"></a>
+
+## OpenTopography
+
+<https://portal.opentopography.org/dataCatalog>  
+Facilitates access to topography data, tools and resources to advance our understanding of the Earth’s surface, vegetation, and built environment. We provide web-based access to high-resolution (meter to sub-meter scale), regional and global (2-90 m resolution) topography data acquired with lidar, radar and photogrammetry technologies. The data are co-located with on-demand processing tools to generate derivatives and visualizations that are particularly useful for Earth-Science applications. OpenTopography is funded by the Division of Earth Sciences at the US National Science Foundation.  
+
+
+<a id="org9ad55da"></a>
+
+# Reading Notes
+
+
+<a id="org23d3f05"></a>
+
+## Tech News
+
+**Agile** is a broad philosophy and mindset focused on continuous improvement, flexibility, and teamwork. **Scrum** is a specific, structured framework used to put Agile principles into practice through fixed cycles called sprints.  
+
+
+### TOREAD <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-10-31">&lt;2025-10-31 Fri&gt;</time></span> Geocomputation books
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-09-15">[2025-09-15 Mon]</time></span>  
+<https://geocompx.org/>  
+Here you will find content, including books and beyond, on reproducible geographic data analysis, modeling, and visualization with open source software.  
+Geocomputation with R  
+<https://r.geocompx.org/>  
+
+
+### TOREAD <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-10-31">&lt;2025-10-31 Fri&gt;</time></span> Tmap book
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-09-15">[2025-09-15 Mon]</time></span>  
+Spatial Data Visualization with tmap, a Practical Guide to Thematic Mapping in R  
+<https://tmap.geocompx.org/>  
+
+
+### TOREAD <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-10-31">&lt;2025-10-31 Fri&gt;</time></span> Visualization for Social Data Science
+
+Roger Beecham  
+<https://vis4sds.github.io/vis4sds/>   
+
+
+<a id="orgbd3ff3b"></a>
+
+## Noteworthy Blogs
+
+-   Real World Data Science  
+    <https://realworlddatascience.net/the-pulse/>
+-   Cédric Scherer  
+    <https://www.cedricscherer.com/>
+
+
+<a id="org4a62e28"></a>
+
+## MEAL
+
+
+### How to design a MEAL plan that donors actually trust?
+
+Ref: <https://lnkd.in/p/eAN3zXT9>  
+
+After 15 years managing MEAL across USAID, EC, FCDO, and UN-funded programmes, here is what separates a MEAL plan that earns confidence from one that satisfies a submission requirement and nothing more.  
+
+-   Start with the questions, not the indicators
+
+    A MEAL plan built around indicators is a reporting tool. A MEAL plan built around evaluation questions what do we need to know, by when, and why is a learning tool. Donors increasingly know the difference. Start with: what are the three most important things we need to understand about this programme to know whether it is working and how to improve it?  
+
+-   Make your Theory of Change visible and testable
+
+    Your MEAL plan should map directly to your ToC not just reference it. Each key assumption should have a corresponding monitoring or evaluation mechanism. If an assumption cannot be tested, name why. Donors respect honesty about the limits of what can be known.  
+
+-   Show how data will be used not just collected
+
+    Most MEAL plans describe data collection in detail and say almost nothing about how findings will feed into decisions. Add a learning calendar: when will data be reviewed, by whom, and what kinds of decisions could it inform? This is what separates a compliance document from a genuine management tool.  
+
+-   Be realistic about what you can measure with the resources available
+
+    A MEAL plan with 47 indicators and a 3% budget line is not a plan it is a wish list. If your MEL budget cannot support your indicator list, say so and negotiate. Donors who see a realistic, well-costed MEAL plan trust it more than an ambitious one with no resources behind it.  
+
+-   Build in adaptive management triggers
+
+    Name, explicitly, the **conditions under which the programme would consider course-correcting**. What finding would prompt a programme review? What threshold of underperformance would trigger a design revision? This signals to donors that your MEAL plan is connected to how the programme actually operates.  
+
+
+<a id="org08c78cc"></a>
+
+## TOREAD Satellite-based assessment of yield variation and its determinants in smallholder African systems
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2018-04-18">[2018-04-18 Wed]</time></span>   
+SOURCE: [Satellite-based assessment of yield variation and its determinants in smallholder African systems | PNAS](http://www.pnas.org/content/114/9/2189)   
+
+
+<a id="orgf36251c"></a>
+
+## TOREAD <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-10-31">&lt;2025-10-31 Fri&gt;</time></span> Geocomputation books
+
+CREATED: <span class="timestamp-wrapper"><time class="timestamp" datetime="2025-09-15">[2025-09-15 Mon]</time></span>  
+<https://geocompx.org/>  
+Here you will find content, including books and beyond, on reproducible geographic data analysis, modeling, and visualization with open source software.  
+
+
+<a id="orgf32a53c"></a>
+
+# Shipping Quotes
+
+For a ****quarter-container shipment from Porto to Limassol****, I would normally quote this as ****LCL (Less-than-Container Load / groupage)**** rather than trying to book 25% of a container yourself.  
+
+
+<a id="org24338a6"></a>
+
+## Quotation Details
+
+20 FCL / 40 m³ (or under)  
+Ask for a **door-to-door household relocation, approximately 40 m³, Porto → Limassol**, with the following explicitly included:  
+
+-   Origin: Porto, Portugal
+-   Destination: Limassol, Cyprus
+-   Cargo: Personal household belongings / used furniture and personal effects
+-   Estimated volume: 39 m³
+-   Service required: Door-to-door
+-   Preferred option: dedicated 20-ft container
+-   Customs: Please include Cyprus customs clearance and advise on **Transfer of Residence** tax relief
+-   Weekly port storage charges at destination
+-   Please provide: Total door-to-door price, all origin/destination charges, estimated transit time and any exclusions.  
+    
+    I may need storage in Limassol for approximately 3 months before final delivery. Please quote **door-to-door with storage-in-transit**, including unloading the container into your warehouse/depot and final delivery to my address. Please separately identify all port storage/demurrage charges and the monthly storage rate.  
+    
+    On the quote, verify:
+
+-   Loading
+-   Local transport Porto → port
+-   Optional weekly storage charges at port
+-   Ocean/ferry transport to Limassol
+-   Customs clearance in Cyprus
+-   Optional weekly storage charges at port
+-   Local transport from Limassol port to your address
+-   Unloading
+-   Any storage charges
+-   All VAT, customs and other taxes clearly identified
+-   Transit time
+-   Validity of the quotation
+
+
+### Private container storage around Limassol
+
+At the port the charge is **EUR 18/day** after the first week.  
+
+For example, **RTSCY** in the Limassol area currently advertises a 20-ft-sized storage unit for **€120/month + 19% VAT**, i.e. about **€143/month**. They describe it as temperature-regulated and give 24/7 access.  
+
+
+### **Transfer of Residence** tax relief
+
+Ask your Portuguese freight forwarder:  
+"Please arrange the appropriate proof of Union status (T2L/T2LF) for my household goods shipment from Portugal to Cyprus."  
+This is particularly worth doing for a large 40 m³ shipment.  
+
+
+<a id="orgec66be1"></a>
+
+## Brokers
+
+
+### DONE Multicargo — Portugal
+
+Request sent via web on <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-22">&lt;2026-08-22 Sat&gt;</time></span>  
+
+-   Particularly interesting because they explicitly advertise a **Portugal → Cyprus groupage service**
+-   Origin: **Leixões**
+-   Destination: **Limassol**
+-   They state **weekly departures** and around **9 days transit**.
+-   They also say they can collect throughout the Iberian Peninsula.
+-   Cyprus agent: **Lavar Shipping**, +357 25 258800.
+
+[Multicargo](https://multicargo.pt/)  
+multicargo@multicargo.pt  
++351 220 930 060  
+
+
+### TODO FGA Cargo — Limassol
+
+Request sent on <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-22">&lt;2026-08-22 Sat&gt;</time></span> (asked for FCL option)  
+
+-   This is probably one of the first companies I'd contact because they explicitly handle **LCL/groupage from Porto to Limassol**.
+-   They advertise collection in Porto and other Portuguese cities.
+-   Their quoted LCL service is approximately ****12 days door-to-door****, with customs clearance available.
+-   **Email:** [web@fgacargo.com.cy](mailto:web@fgacargo.com.cy)
+-   **Phone:** +357 25 208800. ([FGA Cargo][2])
+
+[FGA Cargo Logistics](https://fgacargo.com.cy/)  
+
+
+### DONE Shoham Shipping & Logistics — Cyprus
+
+Request sent on <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-22">&lt;2026-08-22 Sat&gt;</time></span>  
+
+-   They specifically advertise **Portugal → Cyprus LCL**, including collection in Portugal and delivery/customs handling in Cyprus.
+-   They list **Leixões** as one of their Portuguese origin ports and **Limassol** as the destination.
+-   Their published LCL estimate is **14–20 days**.
+
+[Shoham Shipping & Logistics](https://shoham.com.cy/shipping-from/portugal-to-cyprus)  
++357-25-208700  
++357-25-568990  
+websales@shoham.com.cy  
+
+
+### TODO Shiptrans Logistics — Limassol
+
+Request sent via email on <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-22">&lt;2026-08-22 Sat&gt;</time></span>  
+
+-   A Cyprus freight forwarder offering both **LCL and FCL**.
+-   They publish weekly groupage schedules and handle European import/export.
+-   **Phone:** +357 25 562401
+-   **Email:** loucas@shiptrans-cyprus.com
+
+[Shiptrans Logistics](https://shiptranslogistics.com/)  
+
+
+### TODO TeamFreight — Limassol
+
+Request sent on <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-22">&lt;2026-08-22 Sat&gt;</time></span>  
+
+-   Offers both **FCL and LCL sea freight** and handles the shipment from booking through arrival.
+-   **Phone:** +357 25 745328
+-   **Email:** [info@teamfreight.com.cy](mailto:info@teamfreight.com.cy). ([Team Freight][4])
+
+[TeamFreight Cyprus](https://teamfreight.com.cy/services/seafreight/)  
+
+
+### TODO Adria Moving — Portugal
+
+Request sent via web on <span class="timestamp-wrapper"><time class="timestamp" datetime="2026-08-22">&lt;2026-08-22 Sat&gt;</time></span>  
+
+I'd also get a quote from a specialist international removals company, rather than only freight forwarders. For example, Adria Moving specifically handles household relocations from Portugal to Cyprus and offers dedicated/shared-load solutions for volumes up to 50 m³.  
+
+[Adria Moving](https://adriamoving.com/international-movers-from-portugal-to-cyprus/)  
+
+
+<a id="orgd7f71e4"></a>
+
+## Porto-side Forwarders
+
+You could also ask a Leixões freight forwarder to quote the complete shipment:  
+
+-   PORTOCARGO - Transitários S.A. — Maia
+-   Noatum Logistics - Portugal — Porto
+-   FLS - Freight & Logistics Solutions — Matosinhos
+-   Blue Water Shipping Unipessoal Lda — Leça da Palmeira
+-   Across Logistics Portugal (Oporto) — Maia
+-   Maersk Portugal - PORTO — Porto
+
+
+<a id="orga445599"></a>
+
+## LCL vs. FCL shipping
+
+"Quarter container" could mean very different things commercially. If you have roughly **5–8 m³**, LCL is likely appropriate. If you have **8–10+ m³**, it is worth getting \*\*both an LCL quote and a 20-foot FCL quote\*\*—the latter can sometimes become surprisingly competitive once LCL handling, consolidation, port charges and destination fees are included.  
+
+When requesting quotes, give them:  
+
+-   Collection address/postcode in Porto
+-   Delivery address in Limassol
+-   Number of pallets/crates
+-   Dimensions of each
+-   Total weight
+-   Total volume in m³
+-   Description of goods
+-   Whether the goods are ****personal effects or commercial cargo****
+-   Approximate value
+-   Whether you need ****door-to-door****
+-   Whether you need packing/unpacking
+-   Desired shipping date
+-   Whether you need customs clearance

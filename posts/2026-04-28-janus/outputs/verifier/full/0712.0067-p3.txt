@@ -1,0 +1,52 @@
+                                                                                           3
+
+group. The set of matrices made from the neutral component Ln of the Lorentz group is
+traditionally known as the restricted Poincaré group:
+(5bis)
+                                           ⎡L n C ⎤
+                                           ⎢ 0 1⎥
+                                           ⎣       ⎦
+
+Now, writing the matrix of the orthochron subgroup of Poincaré's group:
+(6)
+                                          ⎡L o C ⎤
+                                          ⎢ 0 1⎥
+                                          ⎣      ⎦
+
+the complete group can be written:
+(7)
+                              ⎡λ L o   C⎤
+                              ⎢ 0                 with λ = ± 1
+                              ⎣        1 ⎥⎦
+
+In reference [1] J.M.Souriau built the coadjoint action of Poincaré's group on its momentum
+space, which owns the same number of dimensions as the group. He writes the momentum by
+forming, with four of its components, the energy-impulsion vector P :
+(8)
+                                               ⎡E⎤
+                                               ⎢p ⎥
+                                          P = ⎢ x⎥
+                                               ⎢ px ⎥
+                                               ⎢ ⎥
+                                               ⎣ px ⎦
+
+and bringing together the last six components, which form an antisymmetric matrix M,
+Souriau then writes the momentum of Poincaré's group:
+(9)
+                                      J={M,P}
+
+The coadjoint action of Poincaré's group on its Lie algebra then gives:
+(10)
+                                         P’ = λ Lo P
+(11)
+
+                          M’ = Lo M tLo + ( C tP tLo - Lo P tC )
+
+This result can be found in reference [1], page 198. It clearly shows that the antichron
+components of Poincaré's group transform any orthochron movement (corresponding to a
+{M,P} set of the momentum components) with positive energy into an antichron movement
+with negative energy. As highlighted by the author of "Structure of Dynamical Systems", in
+order to avoid the problems caused by negative energy (and negative mass) particles,
+relativistic dynamics of material points can arbitrarily be limited to the restricted Poincaré
+group.
+

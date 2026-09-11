@@ -1,0 +1,73 @@
+Can negative mass be considered in General Relativity ?                                                        5
+
+
+
+Thus the approximate field equations may be expressend as :
+
+                                  (+)                       (+)
+                    1
+                                                
+                                          α                                χε  (+)        
+                      Ln(−g (+) )      −                              =+       δρ   + δρ(−) c2 δµν
+                    2             |µ|ν
+                                         µ ν                    |α         2
+                                       (−)               (−)
+                    1                     α                                χε  (+)        
+                      Ln(−g (−) )      −                              =−       δρ   + δρ(−) c2 δµν           (13)
+                    2             |µ|ν   µ ν                    |α         2
+
+
+Consider the case µ = ν = 0, with the time-independance hypothesis (index 0
+denoting the time-marker), we get :
+
+    3 h                                     (+)           (+)            (+)
+                                                                                !
+        (+)
+            i                         ∂ 2 γ00   ∂ 2 γ00   ∂ 2 γ00                                       
+                                                                                    = −χε δρ(+) + δρ(−) c2
+    X
+ε         γ00              =ε                 +         +
+    i=1
+                    |ı|ı                ∂x2       ∂y 2      ∂z 2
+    3 h                                  (−)              (−)            (−)
+                                                                                !
+        (−)
+            i                         ∂ 2 γ00   ∂ 2 γ00   ∂ 2 γ00                                       
+                                                                                    = +χε δρ(+) + δρ(−) c2 (14)
+    X
+ε         γ00              =ε                 +         +
+    i=1
+                    |ı|ı                ∂x2       ∂y 2      ∂z 2
+
+
+If we define the potentials as follows, the equations (14) may be considered as a
+bimetric extension of the clasical Poisson equation :
+
+                                                  c2 (+)                             c2 (−)
+                                       ϕ(+) =       εγ                  ϕ(−) =         εγ                    (15)
+                                                  2 00                               2 00
+
+The constant χ is determined by considering a portion of space where ρ(−) = 0.
+The identification to classical Poisson’s equation gives :
+
+                                                                      8πG
+                                                           χ=−                                               (16)
+                                                                       c4
+
+
+Then, for a bimetric system, we get an extended Poisson’s equation :
+                                                                               
+                                     △ϕ(+) = +4πG ρ(+) + ρ(−)
+                                                                               
+                                     △ϕ(−) = −4πG ρ(+) + ρ(−) = −△ϕ(+)                                       (17)
+
+
+and for the potentials :
+                                                                                      
+                                                  Z       ρ(+) (x’) + ρ(−) (x’)
+                               (+)
+                           ϕ         (x) = −G                                              d3 x ≡ ϕ(x)
+                                                                     |x − x’|
+
+                           ϕ(−) (x) = −ϕ(+) (x) = −ϕ(x)                                                      (18)
+

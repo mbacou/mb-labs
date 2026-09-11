@@ -1,0 +1,79 @@
+                                                                                                                       An extraordinary cryostat to characteri
+
+                                                                                                                  INTA-Cryostat for 2K Core                                         Extraordinary sp
+                                                                                                                                                                               Athena/X-IFU will b
+                                                                                                                      Calibration team                                         will be the most sens
+                                                                                                                               INTA (Spain)                                    before it departs fro
+                                                                                                                                                                               trolled conditions. Th
+                                                                                                                                                                               lution potential.
+
+                                                                                                                                                                                    The goal of the
+                                                                                                                                                                               opment, manufactur
+                                                                                                                                                                               of the FPA and its re
+                                                                                                                                                                               characterization pro
+                                                                                                                                                                               opportunity to verify
+                                                                                                                                                                               ment module of Ath
+
+                                                                                                                                                                                    The project is a
+                                                                                                                                                                               detection chain, any
+                                                                                                                                                                               blur the instrument
+                                                                                                                                                                               from the external en
+                                                                                                                                                                               brations. Any mecha
+                                                                                                                                                                               imal temperature va
+                                                                                                                                                                               to be isolated from e
+                                                                                                                                                                               susceptible. Moreove
+                                                                                                                                                                               calibration like: an e
+                                                                                                                                                                               erate at representativ
+                                                                                                                                                                               Even more, the C2C
+                                                                                                                                                                               operations, from init
+                                                                                                                                                                               same stable conditio
+
+                                                                                                                                                                                   This project repr
+                                                                                                     Conceptual scheme of the cryostat for testing and calibrating the Focal   engineering. It will
+Figure 26. Left) The snout is composed of a 1024 TES array with its associated Plane
+                                                                                  cold   readout
+                                                                                     Assembly of        electronics.
+                                                                                                 Athena/X-IFU. Credit:         The
+                                                                                                                       INTA – C2CC    snout is
+                                                                                                                                   team.               electromagnetic-the
+                                                                                                                                                       performances and en
+placed in the niobium shield and connected to the 50 mK stage. Superconducting looms insure the signals connection to
+                                                                 82
+the 500 mK terminator card and then to the 3 K cold electronics (see Castellani et al., 2022, SPIE submitted). Right)
+                                                                                                                www.the-athena-x-ray-observatory.eu ACO@ifca.unican.es
+Conceptual scheme of the cryostat for testing and calibrating the Focal Plane Assembly of Athena/X-IFU. Credit: INTA
+– C2CC team (and AthenaNuggets62).
+
+
+      centroid are either not accurately known, or can depend on chemical composition of the target and thus do
+      not constitute reliable references. EBITs can produce narrower (typically tenth of eV FWHM) well-known
+      X-ray lines at low energy, providing a more accurate description of the energy scale for a lower number of
+      counts (approx. 5000 counts instead of 10000 for Kα lines). The use of this source has clear implications
+      on the X-IFU interface due to its large volume, which will need to fit below the SIM.
+    • Channel-Cut Crystal Monochromators (CCCMs)87 will also be used for more efficient energy resolution
+      measurements, but also to verify the calibration of the instrument extended line spread function performed
+      at TES array level.
+    • A flight-like MXS and 55 Fe sources that are used to reproduce, without using the flight hardware, the
+      fiducial lines expected in-flight throughout the calibration.
+
+     Some calibration activities will be performed at system level. The extended line spread function will be
+calibrated at TES array level with CCCMs as it only depends on the physics of photon absorption in the
+detector. On the other hand, the X-IFU will not be exposed to a synchrotron beam to calibrate its quantum
+efficiency, given the complexity of such test. Instead we will rely on a set of measurements at sub-system level
+(thermal filters and TES array).
+    The possibility of irradiating a representative FPA by protons was also investigated as a way to validate
+the models used for the computation of the expected NXB. This was not followed up in favor of more focused
+verification activities of the key processes dominating the X-IFU background (electron back scattering on XIFU-
+like absorber samples and secondary electron production in the kapton-coated Nb shield). For the calibration of
+the NXB, we plan to perform long dark exposures with the filter wheel in the closed position, further relying on
+a high-performance radiation monitor tracking variations of the charged particle environment.
+
+       7. OVERVIEW OF THE X-IFU INSTRUMENT SCIENCE CENTER (X-ISC)
+The X-IFU Instrument Science Center (X-ISC) is an integral part of the instrument delivery. It will be developed
+within the X-IFU Consortium, with the activities ramping up 5 to 7 years before launch. Prime contributors
+to the X-ISC are France, Switzerland, and Italy (see Figure 27). The X-ISC includes responsibilities for X-IFU
+instrument operations and calibration. In conjunction, the X-ISC will be responsible for instrument performance
+evaluation, instrument calibration and trend monitoring during the mission operations, contiguous with their
+role in instrument testing, characterisation and calibration pre-launch. The X-ISC will generally be responsible
+for the provision of all detailed instrument knowledge and expertise to successfully operate the instrument. It
+

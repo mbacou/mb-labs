@@ -1,0 +1,83 @@
+                                                                                               Réf.: XIFU-PL-30000-00846-CNES
+                                  ATHENA                                                       Issue : 1.0
+                                                                  Date :
+will operate together with the ESA Mission Operation Center (MOC) and    30/05/2022
+                                                                      Science Operation Center (SOC), and
+                                                                  Page : 20/61
+form the X-IFU component of the Athena Science Ground Segment (SGS).  More  specifically, in the current share
+
+
+
+
+Figure 27. The overall organisation structure for the X-ISC. Only the Prime contributors are shown. Other contributions
+from Consortium partners will make up the X-ISC.
+   The X-ISC organisation breakdown structure is shown in the following table:
+of work with ESA as described in the science implementation plan, the main responsibilities of the X-ISC are:
+              Role                                              Responsible                             Institute                       Country
+   • Instrument testing, validation, characterisation and calibration, including definition of instrument tests to
+    Management
+     be            Team
+         performed in   the: in-flight Checkout, Commissioning and Performance Verification Phases.
+   • In-flight instrument
+        X-IFU Principal      performance evaluation,
+                          Investigator                 instrument calibration
+                                             Didier Barret                  IRAPand trend monitoring     and following-up
+                                                                                                    France
+     instrument operational anomalies.
+        X-IFU Project
+   • Production         Manager and software
+                   of instrument             Vincent
+                                                  userAlbouys
+                                                        manuals, and inputs CNES                    France and for all
+                                                                                for the observers’ manuals
+        X-ISC Project
+     instrument         Scientist
+                  specific                   Natalie WebbIn particular, the
+                            user support documentation.                     IRAP                    France
+                                                                                X-ISC will review and    formally endorse
+     instrument manuals issued in support of the calls for observing proposals.
+        X-ISC System Lead                    Desi Raulin                    CNES                    France
+   • Provision   of a scientific simulator and  instrument observation-time      estimators: tools to   simulate planned
+    X-ISC  Board and
+     observations membersto :calculate s/n vs. observation time and vice-versa, for use in proposal preparation as
+     well as preparation of calibrations and any other observations/measurements. They are critical for an
+        Member
+     efficient planning and will need to beLaurence     Chaoul
+                                               incorporated    early within CNES
+                                                                             the SOC framework. France
+        Member
+   • While   the SOC will be responsible for Enrico  Bozzo
+                                                Athena   Common SoftwareUniv.     Genève
+                                                                              System                Switzerland
+                                                                                      (ACSS) coordination,     X-ISC will
+     allocate resources for a joint ACSS coordination board and join the SOC in the testing and validation of
+        Member                               Fabrizio Fiore                 INAF-Obs. Roma          Italy
+     new   releases of the ACSS; X-ISC will     provide S/W contributions       and carry out ACSS     related activities.
+        Member
+     These   comprise (but are not limitedJose     Miguel
+                                              to) the      Torrejon of theUniv.
+                                                        development           datademodels,
+                                                                                     Alicantecommon Spain
+                                                                                                       libraries, pipeline
+     scripting language, graphical user interfaces, as well as S/W integration activities and the development of
+     S/WMember
+            integration servers.             Aurora Simionescu              ASTRON                  Netherlands
+   • Member
+     Development and provision of the Jörn standardWilms                    Erlangen-Nürnberg
+                                                      scientific data processing (DP)    S/W and Germany
+                                                                                                   calibration files that
+     are used both for the pipeline and interactive (IA) processing, including documentation. The IA scientific
+    X-ISC System Team :
+     DP S/W, including necessary calibration files, will be distributed via the SOC.
+   • System    Engineer
+     Development,                            TBD
+                     testing, and operation of                              CNES
+                                                 the scientific data processing  pipeline to processFrance
+                                                                                                      Level-0.5 data into
+     Level-1 and 2 products. Pipeline products will be delivered to SOC for storage and distribution.
+       System AIV Lead                                 TBD                                    CNES                             France
+
+
+
+               This document belongs to CNES. Its information cannot be distributed, published or reproduced without a CNES agreement
+

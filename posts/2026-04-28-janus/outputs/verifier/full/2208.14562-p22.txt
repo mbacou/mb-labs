@@ -1,0 +1,51 @@
+   • To manage instrument operability (modes transitions, autonomy. . . ). This function gathers the highest
+     level of autonomy services needed to implement the instrument operations: recycling sequences, detectors
+     setup, calibration sequences. . .
+
+    It is made of a single box, hosting two independent units used in an adapted cold redundancy concept: only
+one unit is used as the instrument controller, but the second one could be switched ON for maintenance (mainly
+software upload or troubleshooting). In this case, the first unit controls the instrument, and the second is not
+allowed to interact with other instrument units.
+    The spacecraft and instrument units are connected to a 100 Mbps Space Wire router implemented in the
+ICU. This architecture enables high date rate communications for instrument management purposes and science
+telemetry transfer.
+
+                      3. MASS AND ELECTRICAL POWER BUDGETS
+The budgets presented below are the current estimates at the time of the X-IFU SRR. They would still remain
+subject to changes in later phases of the project.
+
+3.1 Mass budget
+The X-IFU mass budget is given in Table 2. This does not include the cryostat and the cooling chain, which are
+not in the X-IFU Consortium perimeter. The not-to-exceed mass allocation for X-IFU is 270 kg.
+
+                              Unit                                      Mass (kg)
+                              Hybrid Cooler Mechanical Assembly            8.6
+                              Focal Plane Assembly                        11.3
+                              Connector boxes                              2.2
+                              2K Core frame                                8.1
+                              sub-total 2K Core                           30.2
+                              Aperture Cylinder                            4.3
+                              Filter Wheel                                13.0
+                              Filter Wheel Supporting Structure            8.6
+                              Calibration assembly                         5.3
+                              sub-total                                   26.9
+                              Warm Front End Electronics                  24.9
+                              Digital Readout electronics                102.4
+                              cryo-AC Warm Front End Electronics            2
+                              cryo-AC Warm Back End Electronics             4
+                              Instrument Control Unit                      15
+                              Filter wheel electronics                     3.2
+                              2K Core Controller                           22
+                              sub-total e-Boxes                          173.4
+                              FPA Cold Harness                             15
+                              2K C-HK and CryoAC Cold Harness               5
+                              Hybrid cooler coil harness                    1
+                              sub-total cold harnesses                     21
+                              Total X-IFU                               221.3 kg
+       Table 2. The nominal mass budget of X-IFU to be compared with the 270 kg not-to exceed allocations.
+
+
+3.2 Electrical power Budget
+The electrical power budgets are provided in Table 3 for three sizing instrument modes, excluding again the
+cryogenic chain:
+

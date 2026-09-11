@@ -1,0 +1,79 @@
+6                                                              Jean-Pierre Petit, Gilles dAgostini
+
+
+3 Gravity as a Bimetric Phenomenon
+
+Let us write the two metrics :
+
+            (ds(+) )2 = c2 dt2 − (dx1 )2 − (dx2 )2 − (dx3 )2 + εγµν
+                                                                 (+)
+                                                                     dxµ dxν
+
+
+            (ds(−) )2 = c2 dt2 − (dx1 )2 − (dx2 )2 − (dx3 )2 + εγµν
+                                                                 (−)
+                                                                     dxµ dxν                 (19)
+
+and the corresponding differential equations of the geodesics :
+
+                                            (+)
+                             d2 x α                 dxη dxτ
+                                      
+                                       α
+                                    +                          =0
+                            ds (+)2   η τ          ds(+) ds(+)
+                                            (−)
+                             d2 x α                 dxη dxτ
+                                      
+                                      α
+                                    +                          =0                            (20)
+                            ds(−)2    ητ           ds(−) ds(−)
+
+                                                                             v
+                                            q
+                                                (dx1 )2 +(dx2 )2 +(dx3 )2
+Hence, to the first order in ε and β =                     dt2            ≡ ( ), equations (20)
+                                                                             c
+becomes :
+
+                                            (+)               !2
+                             d2 x α                     dx0
+                                       
+                                      α
+                                    +                               =0
+                            ds(+)2    00               ds(+)
+                                            (−)               !2
+                             d2 x α                     dx0
+                                       
+                                      α
+                                    +                               =0                       (21)
+                            ds(−)2    00               ds(−)
+
+
+and we have also :
+                       !2                                      !2
+               ds(+)        ∼   2        (+)           ds(−)        ∼  2       (−)
+                            =   c (1 + εγ00 )                       = c (1 + εγ00 )          (22)
+                dt                                      dt
+
+
+After some calculation we derive the equations for two classes of geodesics :
+
+                                                 (+)
+                                d2 x i    c2 ∂γ      ∂φ(+)
+                                   2
+                                       = − ε 00i = −
+                                 dt       2 ∂x        ∂xi
+                                                (−)
+                                d2 x i    c2 ∂γ      ∂φ(−)
+                                   2
+                                       = − ε 00i = −                                         (23)
+                                 dt       2 ∂x        ∂xi
+
+      from which we get, with (17) and (18), the following laws of interaction :
+    – Two positive masses attract each other through Newtons law ;
+    – Two negative masses attract each other through Newtons law ;
+    – Two masses, with opposite signs, repel each other through anti-Newtons law.
+
+The preposterous runaway phenomenon has disappeared.
+

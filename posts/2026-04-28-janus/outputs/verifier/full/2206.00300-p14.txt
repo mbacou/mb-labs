@@ -1,0 +1,63 @@
+                                                                                                                            14
+
+                                                                 height versus Π0 , as shown in Fig. 7(a). Experiments
+                                                                 correspond to V = 13.7 and the hysteresis phenomenon
+                                                                 is also observed for larger values of V . The relative width
+                                                                 of the hysteresis cycle is ∼ 50 % and its lower and upper
+                                                                 branches are characterized by a height ratio ∼ 10. Notic-
+                                                                 ing that a hysteresis is a generic manifestation of the feed-
+                                                                 back action of a system on its driving parameter, these
+                                                                 experimental results tend to further highlight the role
+                                                                 of PDI that can be also explored numerically. For this
+                                                                 purpose, we simulate the interface response to a cycling
+                                                                 of the dimensionless power in a configuration as close as
+                                                                 possible to the experimental conditions. Recalling that
+                                                                 the computational limitations prevent us from assessing
+                                                                 deformation heights as large as those observed experi-
+                                                                 mentally (h0 /w0 = 10 − 100), we chose material param-
+                                                                 eters enabling the demonstration of the existence of an
+                                                                 hysteretic behavior, namely c− /c+ = 0.93 and V = 6.9.
+                                                                 The results are shown in Fig.7(b). A hysteresis cycle is
+                                                                 numerically obtained, which demonstrates that PDI is
+                                                                 required for describing a hysteresic behavior.
+
+
+                                                                           VI.    CONCLUDING REMARKS
+
+                                                                    As illustrated by the Eqs. (55) and (58), the inter-
+                                                                 face deformations induced by the radiation pressure of
+                                                                 an acoustic or an electromagnetic beam can be described
+                                                                 in a universal manner using 4 parameters (in the limit of
+FIG. 7. (a) Experimentally observed hysteretic behavior of       small density contrast regarding acoustic fields), which
+the deformation height h̃ versus Π0 of the interface of a Win-   makes their thorough numerical investigation rather chal-
+sor phase such that c− /c+ = 0.96, V = 13.7. (b) Computed        lenging. For this reason, in this work we have numerically
+hysteretic behavior for c− /c+ = 0.93, V = 6.9.                  investigated a few phenomena such as the deformation
+                                                                 morphologies, the slenderness transition and its hystere-
+                                                                 sis, using parameter values as close as possible to those
+clusions in the acoustic domain. Indeed, for this pair           encountered in experiment. In overall, we found qualita-
+of fluids, θTIR ≃ 70◦ whereas the transition occurs at           tive agreement between numerical simulations and exper-
+ ∞
+θi,max ≃ 30◦ < θTIR .                                            iments only when the propagation-deformation interplay
+                                                                 is taken into account, hence pinpointing its crucial role
+                                                                 in the interface deformation morphogenesis in situations
+     D.   Hysteresis of the slenderness transition               where streaming flows induced by bulk forces—which can
+                                                                 occur both in acoustics and optics—can be neglected.
+  Beyond the slenderness transition, by cycling the beam         Therefore, the numerical model presented here consti-
+power up and down in the typical range 0 < Π0 /Πth0 < 2,         tutes a valuable tool for further investigations of these
+we evidenced a hysteretic behavior of the deformation            phenomena.
+
+
+
+
+ [1] G. Hertz and H. Mende, Zeitschrift für Physik A 114,        [6] N. Bertin, H. Chraibi, R. Wunenburger, J.-P. Delville,
+     354 (1939).                                                      and E. Brasselet, Physical Review Letters p. 244304
+ [2] A. Ashkin and J. M. Dziedzic, Phys. Rev. Lett. 30, 139           (2012).
+     (1973).                                                      [7] A. Casner and J.-P. Delville, Phys. Rev. Lett. 90, 144503
+ [3] A. Casner and J.-P. Delville, Phys. Rev. Lett. 87, 054503        (2003).
+     (2001).                                                      [8] R. Wunenburger, B. Issenmann, E. Brasselet,
+ [4] B. Issenmann, A. Nicolas, R. Wunenburger, S. Man-                C. Loussert, V. Hourtane, and J.-P. Delville, Jour-
+     neville, and J.-P. Delville, EPL 83, 34002 (2008).               nal of Fluid Mechanics 666, 273 (2011).
+ [5] A. Casner, J.-P. Delville, and I. Brevik, JOSA B 20, 2355    [9] A. Casner and J.-P. Delville, EPL 65, 337 (2004).
+     (2003).                                                     [10] E. Brasselet and J.-P. Delville, Phys. Rev. A 78, 013835
+                                                                      (2008).
+

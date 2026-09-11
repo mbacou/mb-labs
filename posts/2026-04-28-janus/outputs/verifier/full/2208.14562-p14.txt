@@ -1,0 +1,79 @@
+                                                                   ATHENA                                            Page : 28/107
+
+
+
+
+                        The switching from one pixel to the other that results from the multiplexing generates high frequency transient
+                        signals along the detection chain that can propagate within one column and from one chain to its neighbors
+                        through parasitic coupling mechanisms. To minimize the impact of possible interferences, a synchronization is
+                        implemented so that the switching occurs at the very same time for the 72 chains, and the sampling of the
+                        signal can be done in a steady time window where no switching occurs. This synchronization is based on the
+                        distribution by the Instrument Control Unit (ICU) of 2 clocks to the 6 DRE (where the row addressing driving
+                        the switching is implemented), one at the frame frequency (183.8 kHz) and one at 62.5 MHz. The DRE FPGA
+                        master clock is derived
+                                           Réf.: from the latter.
+                                                 XIFU-DD-10000-00816-CNES
+THENA                     The DRE also Issue
+                                         implement
+                                                : 1.0 an adjustable delay (several steps of 8 ns), that allows to correct static delays that
+                        may result from differences  in harnesses length or electronics.
+                                          Date : 2022/06/03
+                                     Page : 34/198
+                        2.5 The 2K Core
+                   The 2K Core consists of the Focal Plane Assembly (FPA) and the hybrid cooler cold mechanical assembly
+                   (CMA). It is placed inside the cryostat (see Figure 12). The so-called 2K Frame provides mechanical support to
+                   the FPA and CMA, and the thermal and mechanical interfaces with the cryostat. The 2K Frame provides also
+array and anti-coincidence)  and the hybrid
+                   EMC tightness       to thecooler
+                                                 FPA,need to beharness
+                                                        some    operatedrouting, Figure
+                                                                           at very   e.g. 5for
+                                                                                            – 2K
+                                                                                               theCore
+                                                                                                   cryo-AC signals, as well as thermal sensors and
+etection concept, in a cryostat which is not Left:
+                                             in the Envelope
+                                                    perimeter ofCAD    model
+                                                                 the instrument.of the  assembly   – Right: 2K Core exploded view
+                   heaters.
+ocal Plane Assembly (detectors + the cold electronics), and the cooler
+embled to make the so called 2K core, which is the cold assembly that will be
+
+
+
+
+er mechanical assembly (CMA).
+                Figure 12.    On the
+                           Left) Theright,
+                                      FocalthePlane
+                                              Focal Plane Assembly
+                                                    Assembly       (FPA)layout, without FPA 2K baffle but with electrical interfaces with
+                                                              external
+                        FPA Cold harnesses. Center) Hybrid Cooler Mechanical Assembly. Right) The 2K Frame
+g the 2K core are the Focal Plane Assembly (FPA), andFigure
+                                                        the 6  – cooler
+                                                            hybrid Details of elements composing the 2K Core
+                                                                         cold
+                         Left: the
+A third one is needed to make   FPA  external
+                                   2K core:     layout,
+                                            the 2K frame.without FPA 2K baffle, and with electrical interfaces with FPA Cold harnesses
+                                                     Center: Hybrid Cooler Mechanical Assembly
+                        2.5.1 Focal Plane Assembly (FPA)           Right: 2K Frame
+                        The FPA54 hosts the two cryogenic detectors (prime micro-calorimeter array and cryo-AC) and their cold readout
+                        electronics, further providing the thermal isolation and electromagnetic shielding required to operate the sensor
+                        array at ∼ 50 mK within the environment of the 2K Core, located inside the instrument cryostat. An exploded
+                        view of the FPA is shown in Figure 13 (see van Weers, 2022, SPIE, submitted).
+                              The FPA implements the following functions:
+
+                              • the main TES detector array operated at nominal temperature T0 stage (50 mK),
+                              • the cryogenic input electronics: 1) MUX SQUIDs for the main array at nominal temperature T0 stage; 2)
+                                AMP SQUID at nominal temperature T2 stage (2 K),
+                              This document belongs to CNES. Its information cannot be distributed, published or reproduced without a CNES agreement
+                 Figure 12: the 2K frame
+
+
+
+
+CNES. Its information cannot be distributed, published or reproduced without a CNES agreement
+

@@ -1,0 +1,61 @@
+                                                                                                          2
+
+If not, the zero divergence condition would not give the classical equations of physics, in non-
+relativistic Newtonian approximation. Following the Jordan-Thiry approximation Souriau
+assumes the g jk of the 5d metric do not depend on the fifth variable x5:
+(4)
+                                                      ∂ 5 g jk = 0
+and writes t:
+(5)
+                                 ⎡x1 ⎤
+                                 ⎢x 2 ⎥                    ⎡x1 ⎤
+                                 ⎢ ⎥                       ⎢ 2⎥
+                                                              x                ⎡ xˆ ⎤
+                             x = ⎢x 3 ⎥               xˆ = ⎢ 3 ⎥           x = ⎢ 5⎥
+                                 ⎢ 4⎥                      ⎢x ⎥                ⎣x ⎦
+                                 ⎢x ⎥                      ⎢ 5⎥
+                                 ⎢⎣ x 5 ⎥⎦                 ⎢⎣ x ⎥⎦
+
+
+The Universe U is a bundle. The fifth dimension is supposed to be closed, then Souriau writes:
+(6)
+                                         ξ = − g 55
+The length of the loop is:
+(7)
+                                                 2π
+                                             ∫
+                                             0
+                                                      ξ dx5       ≡ 2π ξ
+
+
+ξ can be considered as the radius of the "tube-Universe".
+
+In the following the equation (34.13) page 332 defines the action:
+
+(8)
+
+                                             A =         ∫ ∑ p vol
+                                                          C
+                                                              j
+                                                                    j
+
+
+
+
+The variational method gives the field equation, where the sum of the stress-energy tensors
+includes the gravitation and all other phenomena. The 5d field equation ([1], (41.59) page 405) is:
+
+(9)
+
+                       1
+                 R jk − R g jk + Λ g jk = χ ∑ Tjk                 with     j et k ∈{ 1, 2 , 3 , 4 , 5 }
+                       2
+
+where Λ is the cosmological constant and χ is Einstein’s constant. As in the 4d approach we
+find:
+
+(10)
+                                                        a                1
+                                             Λ=−                   ξ=
+                                                        2b               2b
+

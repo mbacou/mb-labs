@@ -1,0 +1,17 @@
+                                                                                           9
+
+
+
+
+Suppose M and M* are a couple of antipodal points. We know that we can make any point of
+this sphere to coincide with its antipode, the result being the well-known Boy surface, an
+immersion of the projective space P2 in R3.
+
+
+
+
+             Fig.6: The Boy an its self-intersection curve, with its triple point T.
+
+
+To become familiar to such stuff, read my (free) comic book “ Topo the World”, 1985 [8].
+

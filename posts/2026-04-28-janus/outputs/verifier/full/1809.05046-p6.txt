@@ -1,0 +1,47 @@
+Only a few components do form a group, i.e. L↑+ (named the restricted
+Lorentz group ; it is the one considered by physicists exclusively concerned
+with positive masses and energies ), L↑+ ∪ L↑− (named the orthochronous
+Lorentz group), L↑+ ∪ L↓+ (named the proper Lorentz group ), L↑+ ∪ L↓− and
+the set of four components referred to as the entire Lorentz group.
+Only one of these options, the proper Lorentz group, is recognized as a known
+Lie group, namely SO(1, 3)
+
+                          L↑+ ∪ P T L↑+ ⇒ SO(1, 3)
+
+    If we now add to these transformations the four abelian translations and
+their PT version, we obtain two components generating a subgroup of the
+entire Poincar group. One thing well-known about this group is that it
+admits two Casimir operators, the first one having the square of the mass
+as eigenvalues. The only requirement on these eigenvalues is their reality.
+The mass itself can thus be positive or negative. Besides, the meaning of
+the second Casimir operator constructed from the Pauli-Lubanski 4-vector
+is clear when limited to isotropy groups. In this case, one can choose a
+particular time-like momentum 4-vector, say
+
+                                      m
+                                           
+                                     0 
+                                                                            (11)
+                                       
+                                     0 
+                                       
+
+                                      0
+
+and see that the second Casimir operator is related, up to the square of the
+mass (again), to the spin of the particles. These are very well-known facts.
+    Now, let us have a look on the 4-vector (11). If the mass is positive
+(respectively negative), it belongs to the future (respectively past) light cone.
+An orthochronous transformation is realized through a matrix whose first
+element is bigger than one (it is the ”↑” symbol). So, when applied to a
+4-vector like Eq. (11), it gives rise to another time-like 4-vector within the
+same part of the cone light : if the mass is positive and the 4-vector belongs
+to the future part, its image will also stand in the future part. If the mass
+is negative, the 4-vector lives in the past part and stays in this part after
+an orthochronous transformation. Only antichronous transformations (the
+”↓” symbol) can join the two parts. If the mass is positive at the start
+and the four-vector oriented from past to future, it will change its direction
+but also the sign of the associated mass. This is due to the fact that the
+
+                                        6
+

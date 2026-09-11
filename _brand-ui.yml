@@ -1,0 +1,63 @@
+meta:
+  name: Mel B. Labs (system fonts)
+  logo: assets/mb-square.png
+  link:
+    home: https://mbacou.github.io/mb-labs
+    github: https://github.com/mbacou/mb-labs
+
+color:
+  palette:
+    brick:     "#D47979"
+    purple:    "#8D46C1"
+    teal:      "#8E8467"
+    indigo:    "#79799C"
+    blue:      "#00839E"
+    cyan:      "#05D5FF"
+    green:     "#73842A"
+    pink:      "#C6A5E8"
+    red:       "#B54D4D"
+    orange:    "#A1713C"
+    yellow:    "#E0D1A4"
+    gray:      "#1E1B4B"
+    light:     "#FFFDF5"
+    dark:      "#1E1B4B"
+    grid:      "#e7e2da"
+
+  foreground:  gray     # $body-color = $gray-800 in `mb-article` theme
+  background:  light
+  primary:     brick
+  secondary:   purple
+  tertiary:    gray
+  info:        blue
+  success:     green
+  warning:     orange
+  danger:      red
+  light:       light
+  dark:        dark
+
+typography:
+  fonts:
+    - family: system-ui
+      source: system
+    - family: ui-sans-serif
+      source: system
+    - family: ui-serif
+      source: system
+    - family: ui-monospace
+      source: system
+
+  base:
+    family: ui-sans-serif
+    size: 20px
+  headings: ui-serif
+  monospace:
+    family: ui-monospace
+    size: 14px
+
+defaults:
+  bootstrap:
+    border-color: gray
+    border-radius-sm: .5rem
+    border-radius: .75rem
+    border-radius-lg: 1rem
+

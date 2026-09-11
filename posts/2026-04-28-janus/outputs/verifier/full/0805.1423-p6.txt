@@ -1,0 +1,29 @@
+                                                                                                6
+
+
+
+
+               Fig.2: 2d didactic model with symmetry breaking phenomenon
+
+We have assumed that this symmetry breaking occurred at a undefined moment, early located in
+the radiation dominated era.
+
+
+   -   After this symmetry breaking the constants of physics behave like absolute constants.
+
+   -   Before, they are involved, with space and time scale factors, in a generalized gauge
+       process.
+
+
+
+4) Universe with finite lifetime matter
+
+We don’t know if matter has a finite lifetime, or not. Attempts has been done to evidence that the
+proton could have a finite lifetime. But this particle did not cooperate. This does not shows that
+the proton has an infinite lifetime, only that our experimental apparatus did not succeed to give
+the answer to that question.
+We can assume that all massive particles, with positive or negative energy, have finite lifetimes.
+Then, after they have all decayed the Universe would recover the O(3) symmetry and would be
+ruled again by the generalized gauge process, involving space and time scale factors and variable
+constants. As a consequence, the speed of light would tend to zero:
+

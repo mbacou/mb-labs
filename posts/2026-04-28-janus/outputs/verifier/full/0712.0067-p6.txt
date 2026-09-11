@@ -1,0 +1,55 @@
+                                                                                              6
+
+Then the action of the group on its momentum space is written:
+
+                                      q’ = λ ν q
+
+                                 P’ = λ Lo P
+
+                          M’ = Lo M tLo + ( C tP tLo - Lo P tC )
+
+Hence, reversing the sign of λ brings a reversal of charge, space and time, in other words a
+CPT-symmetry.
+
+
+4) Construction of an interaction between positive energy particles and negative energy
+particles. Bimetric configuration, bigravity.
+
+By choosing the complete Poincaré group, we obtained an invisible « second matter species ».
+In order for it to have the properties of dark energy, laws of gravitational interaction giving a
+repulsive nature to this « matter-dark energy » are needed.
+
+Writing Einstein’s equation:
+(20)
+                                         S=χT–gΛ
+
+S is a geometrical tensor, i.e. Einstein's tensor S(g) built from the metric g associated to a
+four-dimensional manifold. T is a tensor density representing the energy-matter content of the
+Universe, χ is Einstein’s constant:
+(21)
+                                                8π G
+                                          χ =−
+                                                  c2
+
+and Λ is the cosmological constant.
+
+g belongs to a function space sometimes called hyperspace. The Einstein tensor is, in absolute
+value, the gradient of the Hilbert functional:
+(22)
+                                 H ( g ) = ∫ ( a R ( g ) + b ) d Vg
+                                           M
+
+
+in which a and b are constants and R the scalar curvature. This functional is invariant by
+diffeomorphism. Einstein’s constant χ = 1/a derives from constant a only, while a and b give
+the cosmological constant Λ = b/2a . Let us set Λ = 0, which amounts to take b = 0. Thereafter
+we will not need it. So we restrict (22) to:
+(23)
+                                     H ( g ) = ∫ a R ( g ) d Vg
+                                               M
+
+
+We build the Einstein tensor S as a gradient of this fonctional in the space of metrics.
+Associated with a tensor density T we obtain the equation:
+(24)
+

@@ -1,0 +1,125 @@
+                                                                  2. THE X-IFU INSTRUMENT
+The X-IFU key performance requirements matching the Athena science requirements are listed in Table 1.
+
+                Key performance parameter                                                                                          Value
+                Energy range                                                                                                       0.2-12 keV
+                Spectral resolution                                                                                                < 2.5 eV up to 7 keV
+                Energy scale calibration                                                                                           0.4 eV in the 0.2-7 keV range
+                Field of view                                                                                                      5’ (equivalent diameter)
+                Instrument efficiency at 0.35, 1.0, 7.0, 10 keV                                                                    > 13%, > 57%, > 63%, > 42%
+                Non X-ray background                                                                                               < 5 × 10−3 counts/s/cm2 /keV (E > 2 keV)
+                Relative time resolution                                                                                           10 µs
+                2.5 eV throughput (broadband, point source)                                                                        80% at 1 mCrab (goal of 10 mCrab)
+                10 eV throughput (5-8 keV, point source)                                                                           50% at 1 Crab
+                2.5 eV throughput (broadband, extended source)                                                                     80% at 2 × 10−11 ergs/s/cm2 /arcmin2
+                Continuous cool time / regeneration time                                                                           Up to 28.5 hours (75% duty cycle)
+                                                             Table 1. X-IFU top level performance requirements.
+
+    Next, we move to the description of the instrument, whose physical and programmatic breakdown is shown
+in Figure 5. In the following sections, we will go through all the main components of the instrument. It is hosted
+by the Athena Science Instrument Module, which provides in particular the cryostat and the associated cooling
+chain. These are not described in this paper (see25–29 for a description of the previous incarnations of X-IFU,
+when the cryostat and cooling chain were in the Consortium perimeter, and still relevant for the global SIM
+architecture today.).
+
+                                                                                                                                                                                                                   Filter Wheel (FW) & Calibration
+                                                                                                                                                                                                                           ASsembly (CAS)
+                                                                                                                     FW and CAS
+                                                                                                                   electronics (FWE,
+                                                                                                                    N & R in 1 box)
+                                                                                                                                                                                                                                            Calibration
+                                                                                                                                                                                                                     Filter
+                                                                                                                                                                                                                                            ASsembly
+                                                                                                                                                                                                                   Wheel (FW)
+                                                                               DigitalReadout
+                                                                               Digital
+                                                                              Digital     ReadoutElectronics
+                                                                                         Readout   Electronics
+                                                                                                   Electronics                                                                                                                                (CAS)
+                                                                              Digital
+                                                                             Digital
+                                                                             Digital   Readout    Electronics
+                                                                                      Readout Electronics
+                                                                                     Readout     Electronics
+                                                                                         (DRE,666units)
+                                                                                        (DRE,
+                                                                                       (DRE,      units)
+                                                                                                 units)
+                                                                                      (DRE,
+                                                                                     (DRE,
+                                                                                   (DRE,    666boxes)
+                                                                                                units)
+                                                                                                units)                                                           Focal Plane
+                                                                                                                                                                                                                    FW and CAS supporting plate
+                                                                                                                                    Warm    Front-End Assembly signals
+                                                                                                                                    WarmFront-End
+                                                                                                Row Addressing &                   Warm   Front-End
+                                                                          De-multiplexing                                               electronics
+                                                                                                                                       electronics
+                                                                                                 Synchronization                      electronics
+                                                                             (DEMUX)                                                 (WFEE,33units)
+                                                                                                                                                units)
+                                                                                                     (RAS)                          (WFEE,
+                                                                                                                                   (WFEE,   3 boxes)                                                                      Aperture Cylinder (ApC)
+                                                                                                 Event Processor
+                                                                        Event Processor (EP)                                                                                                                                      Thermal filters
+                                                                                                   Algorithm
+
+
+
+
+                                                                                                                                                                                                                                      2K Core
+
+                                                                              CryoAC Warm Back-End                       CryoAC Warm Front-End                                                                           Focal Plane Assembly (FPA)
+                                                                                    Electronics                                 Electronics
+                                                                                                                                                                                           FPA CH1
+                                                                                                                                                                                                                                    Thermal filters
+   Spacecraft                                                                    (CryoAC-WBEE,                               (CryoAC-WFEE,
+
+
+
+
+                                                                                                                                                         CryoAC signal and HK
+     (ESA)                                                                        N & R in 1 box)                       Redundancy 1/4th in 1 box)                                         FPA CH2              Transition Edge Sensor
+                                                                                                                                                                                                                         array                  CryoAC TES & Cold
+                                                                                                                                                                                                                 Multiplexing SQUIDs            Front-end Electronics
+                                                                                                                                                                                           FPA CH3                      (SQ1)
+
+
+
+                                                                                                                                                                                                                                                                        Cryostat
+                                                                                                                                                                                                            Amplifying SQUIDs (SAA)              Cryo-AC SQUIDs
+
+                                                                                                                                                                                                                                                 Internal cold flex
+                         Instrument Control                                                                                                                                                                     FPA auxiliary electronics             harness
+                                                                                   2K Core Controler
+                         Unit (ICU, N & R in
+                                                                                 (2KCC, N & R in 1 box)
+                                1 box)
+                                                                                                                                                                                            Cryo-AC
+                                                                                   FPA Auxiliary Board                           FPA house keeping                                         and HK CH
+                                                                                         (FAB)
+                                                                                                                                                                                                                                   2K Core Frame
+
+                                                                                                                               2K Core house keeping
+                                                                                                                                                                                             ADR Coil                           Hybrid Cooler
+                                                                                 Hybrid Cooler Control                     Hybrid cooler house keeping                                         CH                             Mechanical Assembly
+                                                                                   Electronics (CCE)                                                                                                                                (CMA)
+                                                                                                                            Hybrid cooler current leads
+
+
+
+
+                                                Power line                        High speed bus                                       Signals (control & science)                               Cold Harnesses (CH)
+
+                                     Air tight feedthrough          Connectors
+
+
+                            France             Netherlands      Italy           United States            Switzerland          Belgium               Finland                     Czech Republic          Spain                         ESA                                  ©DB/X-IFU/2021
+
+
+
+
+Figure 5. The Physical Breakdown of the X-IFU instrument, highlighting its main components, as well as the country
+responsible for the procurement.
+

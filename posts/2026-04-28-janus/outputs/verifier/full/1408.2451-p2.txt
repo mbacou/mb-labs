@@ -1,0 +1,70 @@
+2                                                       Jean-Pierre Petit, Gilles dAgostini
+
+
+Finder Algorithm allowing to identify voids in redshift surveys and to measure
+their size and underdensity. Interesting three-dimensional views of voids, based on
+the IRAS survey, are shown in his paper [8].
+2D-simulations involving the same interaction schema had been performed by Pe-
+tit [9] in 1995, also giving a VLS lacunar structure. More recently (July 2013)
+Izumi et al. [10] suggested that the distortions observed on the images of distant
+galaxies, if considered as due to some negative gravitational lensing effect being
+radial instead of azimutal, would lead to a somewhat different mapping of the
+invisible matter.
+However, all these works contradicted Bondis result of 1957 [11] based on General
+Relativity (GR), hence on the assumption that the Universe is a M4 manifold,
+coupled to a single metric g obeying Einsteins equation. The Newtonian approxi-
+mation gives such a metric a time independent quasi-Lorentzian form :
+
+                                  g µν = η µν + εγ µν                                  (1)
+
+
+A subsequent development of the field equation into a series, combined to similar
+approximation of the equations of geodesics, provides Newtons law and Poisson’s
+equation. Bondi expressed the result as :
+                              2−
+                               →                 −
+                                                 → −  →
+                          (1) d r1         (2) ( r2 − r1 )
+                        mi      2
+                                   = Gm(1)
+                                       p ma     →
+                                                −     →
+                                                      −                                (2)
+                              dt               | r2 − r1 |3
+
+accounting for the gravitational action of a mass (2) on a mass (1), and decided
+to introduce three kinds of masses :
+- inertial mass mi
+- passive gravitational mass mp
+- active gravitational mass ma
+Because of the equivalence principle the first two are identical, so that Equ. 2
+becomes :
+                             d2 −
+                                →
+                                r1           → −
+                                             −     →
+                                        (2) ( r2 − r1 )
+                                   = Gm                                      (3)
+                                            |−
+                                             →
+                                             r2 − −
+                                                  →
+                                        a
+                              dt2                 r1 |3
+
+In other words: according to GR, a positive mass attracts any kind of mass, what-
+ever positive or negative. Conversely, a negative mass would repel any kind of
+mass. In particular, if one considers a couple of masses with equal absolute values
+but opposite signs, the negative mass escapes, while the positive mass runs after it,
+both being accelerated the same way. To increase such paradoxical phenomenon,
+because the masses have opposite signs, energy and momentum are conserved.
+In addition, according to Bondi’s analysis two negative masses mutually repel,
+so that negative matter cannot form clusters by gravitational accretion through
+Jeans instability.
+Bondi tried to integrate such puzzling runaway particles in GR without any suc-
+cess. Only much later, in 1989, Bonnor [12] also published a paper devoted to
+negative mass. He considered the runaway phenomenon as preposterous and stud-
+ied a universe only filled with negative masses, immediatly pointing out that this
+has nothing to do with physics and astrophysics, for such a medium cannot form
+stars and galaxies through gravitational instability.
+

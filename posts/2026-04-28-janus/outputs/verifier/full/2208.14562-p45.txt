@@ -1,0 +1,53 @@
+[49] Ravera, L., Gumuchian, P., Clénet, A., Bertrand, B., Murat, D., Oziol, C., Camus, T., Pointecouteau,
+     E., and Barret, D., “First results of the ATHENA/X-IFU digital readout electronics prototype,” in [Space
+     Telescopes and Instrumentation 2018: Ultraviolet to Gamma Ray], den Herder, J.-W. A., Nikzad, S., and
+     Nakazawa, K., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series 10699,
+     106994V (July 2018).
+[50] Peille, P., Ceballos, M. T., Cobo, B., Wilms, J., Bandler, S., Smith, S. J., Dauser, T., Brand, T., den Hartog,
+     R., de Plaa, J., Barret, D., den Herder, J.-W., Piro, L., Barcons, X., and Pointecouteau, E., “Performance
+     assessment of different pulse reconstruction algorithms for the ATHENA X-ray Integral Field Unit,” in
+     [Space Telescopes and Instrumentation 2016: Ultraviolet to Gamma Ray ], den Herder, J.-W. A., Takahashi,
+     T., and Bautz, M., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series
+     9905, 99055W (July 2016).
+[51] Cobo, B., Ceballos, M. T., Peille, P., Mesnager, J.-M., Wilms, J., Dauser, T., Kirsch, C., Pinsard, F.,
+     Cara, C., Gros, M., Ravera, L., Bandler, S., Porter, F., Kilbourne, C., and Sakai, K., “ATHENA X-ray
+     Integral Field Unit on-board event processor: analysis of performance of two triggering algorithms,” in
+     [Space Telescopes and Instrumentation 2018: Ultraviolet to Gamma Ray ], den Herder, J.-W. A., Nikzad,
+     S., and Nakazawa, K., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series
+     10699, 106994S (July 2018).
+[52] Cobo, B., Cardiel, N., Ceballos, M. T., and Peille, P., “Pulse processing in TES detectors: comparative of
+     different short filter methods based on optimal filtering: case study for Athena X-IFU,” in [Society of Photo-
+     Optical Instrumentation Engineers (SPIE) Conference Series ], Society of Photo-Optical Instrumentation
+     Engineers (SPIE) Conference Series 11444, 1144496 (Dec. 2020).
+[53] Vega-Ferrero, J., Ceballos, M. T., Cobo, B., Carrera, F. J., Garcı́a, P., and Puyol-Gruart, J., “Event
+     Detection and Reconstruction Using Neural Networks in TES Devices: a Case Study for Athena/X-IFU,”
+     Publications of the Astronomical Society of the Pacific 134, 024504 (Feb. 2022).
+[54] Jackson, B. D., van Weers, H., van der Kuur, J., den Hartog, R., Akamatsu, H., Argan, A., Bandler, S. R.,
+     Barbera, M., Barret, D., Bruijn, M. P., Chervenak, J. A., Dercksen, J., Gatti, F., Gottardi, L., Haas, D., den
+     Herder, J. W., Kilbourne, C. A., Kiviranta, M., Lam-Trong, T., van Leeuwen, B. J., Macculi, C., Piro, L.,
+     and Smith, S. J., “The focal plane assembly for the Athena X-ray Integral Field Unit instrument,” in [Space
+     Telescopes and Instrumentation 2016: Ultraviolet to Gamma Ray], den Herder, J.-W. A., Takahashi, T.,
+     and Bautz, M., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series 9905,
+     99052I (July 2016).
+[55] Duband, L., Charles, I., and Duval, J. M., “Coolers development for the ATHENA X-IFU cryogenic chain,”
+     in [Space Telescopes and Instrumentation 2014: Ultraviolet to Gamma Ray ], Takahashi, T., den Herder, J.-
+     W. A., and Bautz, M., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series
+     9144, 91445W (July 2014).
+[56] Duband, L., Charles, I., Duval, J.-M., Ercolani, E., Gully, P., Luchier, N., Prouve, T., and Thibault, P.,
+     “Space cryogenics at CEA-SBT,” in [Society of Photo-Optical Instrumentation Engineers (SPIE) Conference
+     Series], Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series 10566, 105660A
+     (Nov. 2017).
+[57] Barbera, M., Collura, A., Gatti, F., Lo Cicero, U., Macculi, C., Piro, L., Renotte, E., and Sciortino, S.,
+     “Baseline design of the thermal blocking filters for the X-IFU detector on board ATHENA,” in [Space
+     Telescopes and Instrumentation 2014: Ultraviolet to Gamma Ray], Takahashi, T., den Herder, J.-W. A.,
+     and Bautz, M., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series 9144,
+     91445U (July 2014).
+[58] Barbera, M., Argan, A., Bozzo, E., Branduardi-Raymont, G., Ciaravella, A., Collura, A., Cuttaia, F., Gatti,
+     F., Jimenez Escobar, A., Lo Cicero, U., Lotti, S., Macculi, C., Mineo, T., Nuzzo, F., Paltani, S., Parodi, G.,
+     Piro, L., Rauw, G., Sciortino, L., Sciortino, S., and Villa, F., “Thermal Filters for the ATHENA X-IFU:
+     Ongoing Activities Toward the Conceptual Design,” Journal of Low Temperature Physics 184, 706–711
+     (Aug. 2016).
+[59] Sciortino, L., Lo Cicero, U., Magnano, E., Pı́š, I., and Barbera, M., “Surface investigation and aluminum
+     oxide estimation on test filters for the ATHENA X-IFU and WFI detectors,” in [Space Telescopes and
+     Instrumentation 2016: Ultraviolet to Gamma Ray ], den Herder, J.-W. A., Takahashi, T., and Bautz, M.,
+

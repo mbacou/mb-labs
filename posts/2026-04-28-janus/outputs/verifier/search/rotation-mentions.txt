@@ -1,0 +1,4 @@
+outputs/verifier/full/1809.05046-p14.txt:7:[16] K.N. Srinivasa Rao (1988), The Rotation and Lorentz Groups and Their
+outputs/verifier/full/2206.00300-p2.txt:57:heat-conducting media when dealing with acoustic waves        velocity is irrotational in absence of acoustic attenuation,
+outputs/verifier/full/2208.14562-p18.txt:88:                                                                              Issue : 1.0                                    eccentric position with respect to the FWM rotation axis. A planetary gear is embed
+outputs/verifier/full/2208.14562-p18.txt:123:                                                                                                                                        regulating the FWM rotation, has to

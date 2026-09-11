@@ -1,0 +1,38 @@
+                 Fig. 3. Twofold cover of a manifold with a circle as common boundary.
+
+
+
+
+                                    Fig. 4. Projection of geodesics.
+
+
+   Now introduce the 3D metric
+                                       dr2
+                              dΣ2 =         + r2 dθ2 + sin2 θ dϕ2 ,
+                                                                 
+                                         Rs
+                                                                                              (14)
+                                      1− r
+
+which is Euclidean at infinity. When r < Rs the signature (+ + +) is changed into (− + +).
+Applying (10) we get
+                                                                              
+              2    2 (1 + Log ch ρ)   2    2                2  2      2    2
+                                                                             
+           ds = Rs                  th ρ dρ + (1 + Log ch ρ) dθ + sin θ dϕ       .    (15)
+                         Log ch ρ
+
+    Its determinant never vanishes. The metric is well defined for all values of ρ and is Euclidean
+at infinite. It is a 3D space bridge linking to 3D Euclidean spaces. Its throat, corresponding to
+ρ = 0, is a S2 sphere.
+    Unfortunately we do not own a 4D Euclidean representation space to operate an isometric
+imbedding. So that, similarly as in Fig. 3, we will use a non-isometric imbedding in 3D Euclidean
+space. Then the throat is converted into a “pleat” along the projected S2 sphere. Similarly, some
+geodesics, continuous in this 3D hypersurface, seem to turn back on the sphere (see Fig. 6).
+    To show 3D space orientation we will use a tetrahedron (see Fig. 7). To illustrate the enan-
+tiomorphy relationship we need to project this object through the S2 throat sphere, each vertice
+following a geodesic, as showed in Fig. 8.
+
+
+                                                   4
+

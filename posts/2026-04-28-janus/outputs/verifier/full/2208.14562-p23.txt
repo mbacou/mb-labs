@@ -1,0 +1,51 @@
+   • In “RECYCLE” mode, the cryo-cooler is recycling
+   • In “SETUP” mode, the instrument gets ready for observing (the filter wheel can be activated and calibration
+     sources active)
+   • In “OBSERVATION” mode, the detection chain is active, the MXS are one and are running at a stable
+     pulse rate and the cooling is active with regulation
+
+
+           Unit                                                RECYCLE         SETUP      OBSERVATION
+           Digital Readout electronics (6 identical units)       718.2          718.2         718.2
+           Instrument Control Unit                                 20             20            20
+           cryo-AC                                                28.8           28.8          28.8
+           2K Core Controller                                      34            28.8          28.8
+           Filter wheel electronics                               15.8           27.9          17.0
+           Total                                                 816.8          823.7         812.8
+Table 3. The electrical power budget for X-IFU in three instrument modes. The allocation for X-IFU is 1300 W, indicating
+that in all sizing cases, the margin is about 60%.
+
+
+3.3 Science telemetry budget
+The six DRE and the cryo-AC will produce science telemetry packets that are transmitted to the platform for
+storage before downlink to the ground. The DRE and CryoAC will implement output buffers and overflow
+control to ensure they do not exceed the permitted on-board data-rate. Each event requires 120 bits to be fully
+described. For a moderately bright X-ray source of 10 mCrab, this leads to a data rate of 75 kbits/s and a
+volume of 7.5 Gbits for a 100 ks observation. The X-IFU further produces a steady rate of 18 kbits/s, as the
+sum of the background bit rate, calibration bit rate, cryo-AC bit rate (1.8 Gbits for 100 ks). These volumes are
+to be compared with the 26 Gbits of mass memory allocated daily to X-IFU. Larger volumes of data would still
+be allowed for the observations of brighter sources, provided adapting the WFI observations to produce lower
+data rate around this period.
+
+                                  4. PERFORMANCE ASSESSMENT
+Next we present the latest assessment of the main X-IFU performance parameters, starting with the instrument
+efficiency.
+
+4.1 Instrument efficiency
+The instrument efficiency (IE) refers to the probability of a photon arriving at the top of the aperture cylinder
+in the X-IFU field of view to be detected by the instrument and incorporated in the final science data. This
+includes the absorber quantum efficiency and the array geometrical filling factor (see §2.1), the transmission of
+the thermal filters (see §2.6), the loss of transmission due to contamination, the loss due to dead time process,
+as well as the detector yield. This excludes however dead time due to MXS-related veto processes, which rather
+corresponds to calibration time, as well as the rejection of events at high count rates, which is captured in the
+throughput requirements.
+    Molecular contamination onto the thermal filters will lower their transmission, notably at the lowest energies.
+We chose to allocate 20% (End-of-Life) of transmission loss at 0.35 keV (corresponding to a transmission loss
+of 4% at 1 keV). The most likely candidate species for contamination are carbon (hydro carbonate) and oxygen
+(water), which coincidentally represent the worst case species at 350 eV and 1 keV. Particulate contamination
+is deemed negligible.
+   The detector yield is expected to be dominated by the fraction of “dead pixels” in the sensor array (due to
+various fabrication defects). Accounting for all the possible losses in the different cold connections, as well as
+the MUX SQUID chip fabrication yield and possible loss via ESD events, we expect a total yield of ∼ 92%, to
+be consolidated after testing all fabrication processes on large numbers of samples.
+

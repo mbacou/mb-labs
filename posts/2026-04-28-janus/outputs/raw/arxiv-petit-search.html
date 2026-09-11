@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- new favicon config and versions by realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/favicon-16x16.png">
+<link rel="manifest" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/site.webmanifest">
+<link rel="mask-icon" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/safari-pinned-tab.svg" color="#b31b1b">
+<link rel="shortcut icon" href="https://static.arxiv.org/static/base/1.0.0a5/images/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#b31b1b">
+<meta name="msapplication-config" content="images/icons/browserconfig.xml">
+<meta name="theme-color" content="#b31b1b">
+<!-- end favicon config -->
+<title>Search | arXiv e-print repository</title>
+<script defer src="https://static.arxiv.org/static/base/1.0.0a5/fontawesome-free-5.11.2-web/js/all.js"></script>
+<link rel="stylesheet" href="https://static.arxiv.org/static/base/1.0.0a5/css/arxivstyle.css" />
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    messageStyle: "none",
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true,
+      ignoreClass: '.*',
+      processClass: 'mathjax.*'
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js"],
+        noErrors: {
+          inlineDelimiters: ["$","$"],
+          multiLine: false,
+          style: {
+            "font-size": "normal",
+            "border": ""
+          }
+        }
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src='//static.arxiv.org/MathJax-2.7.3/MathJax.js'></script>
+<script src="https://static.arxiv.org/static/base/1.0.0a5/js/notification.js"></script>
+
+    
+  <link rel="stylesheet" href="https://static.arxiv.org/static/search/0.5.6/css/bulma-tooltip.min.css" />
+  <link rel="stylesheet" href="https://static.arxiv.org/static/search/0.5.6/css/search.css" />
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+
+  <script src="https://static.arxiv.org/static/search/0.5.6/js/fieldset.js"></script>
+  <style>
+  radio#cf-customfield_11400 {
+    display: none;
+  }
+  </style>
+
+  </head>
+  <body>
+  
+  
+  <header><a href="#main-container" class="is-sr-only">Skip to main content</a>
+    
+    <!-- contains Cornell logo and sponsor statement -->
+<div class="attribution level is-marginless" role="banner">
+  <div class="level-left">
+    <a class="level-item" href="https://cornell.edu/"><img src="https://static.arxiv.org/static/base/1.0.0a5/images/cornell-reduced-white-SMALL.svg" alt="Cornell University" width="200" aria-label="logo" /></a>
+  </div>
+  <div class="level-right is-marginless"><p class="sponsors level-item is-marginless"><span id="support-ack-url">We gratefully acknowledge support from<br /> the Simons Foundation, <a href="https://info.arxiv.org/about/ourmembers.html">member institutions</a>, and all contributors. <a href="https://info.arxiv.org/about/donate.html">Donate</a></span></p></div>
+</div>
+<!-- contains arXiv identity and search bar -->
+<div class="identity level is-marginless">
+  <div class="level-left">
+    <div class="level-item">
+      <a class="arxiv" href="https://arxiv.org/" aria-label="arxiv-logo">
+        <img src="https://static.arxiv.org/static/base/1.0.0a5/images/arxiv-logo-one-color-white.svg" aria-label="logo" alt="arxiv logo" width="85" style="width:85px;"/>
+      </a>
+    </div>
+  </div>
+  
+  <div class="search-block level-right">
+    <form class="level-item mini-search" method="GET" action="https://arxiv.org/search">
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input is-small" type="text" name="query" placeholder="Search..." aria-label="Search term or terms" />
+          <p class="help"><a href="https://info.arxiv.org/help">Help</a> | <a href="https://arxiv.org/search/advanced">Advanced Search</a></p>
+        </div>
+        <div class="control">
+          <div class="select is-small">
+            <select name="searchtype" aria-label="Field to search">
+              <option value="all" selected="selected">All fields</option>
+              <option value="title">Title</option>
+              <option value="author">Author</option>
+              <option value="abstract">Abstract</option>
+              <option value="comments">Comments</option>
+              <option value="journal_ref">Journal reference</option>
+              <option value="acm_class">ACM classification</option>
+              <option value="msc_class">MSC classification</option>
+              <option value="report_num">Report number</option>
+              <option value="paper_id">arXiv identifier</option>
+              <option value="doi">DOI</option>
+              <option value="orcid">ORCID</option>
+              <option value="author_id">arXiv author ID</option>
+              <option value="help">Help pages</option>
+              <option value="full_text">Full text</option>
+            </select>
+          </div>
+        </div>
+        <input type="hidden" name="source" value="header">
+        <button class="button is-small is-cul-darker">Search</button>
+      </div>
+    </form>
+  </div>
+</div> <!-- closes identity -->
+
+<div class="container">
+    <div class="user-tools is-size-7 has-text-right has-text-weight-bold" role="navigation" aria-label="User menu">
+      <a href="https://arxiv.org/login">Login</a>
+    </div>
+</div>
+    
+  </header>
+  <main class="container" id="main-container">
+    
+
+
+    
+  <div class="level is-marginless">
+    <div class="level-left">
+      <h1 class="title is-clearfix">
+    
+        Showing 1&ndash;15 of 15 results for author: <span class="mathjax">Jean-Pierre Petit</span>
+    
+</h1>
+    </div>
+    <div class="level-right is-hidden-mobile">
+      <!-- feedback for mobile is moved to footer -->
+      <span class="help" style="display: inline-block;"><a href="https://github.com/arXiv/arxiv-search/releases">Search v0.5.6 released 2020-02-24</a>&nbsp;&nbsp;</span>
+    </div>
+  </div>
+    <div class="content">
+      
+  <form method="GET" action="/search/"  aria-role="search">
+    
+
+    
+    <div class="field has-addons-tablet">
+      <div class="control is-expanded">
+        <label for="query" class="hidden-label">Search term or terms</label>
+        
+          <input class="input is-medium" id="query" name="query" placeholder="Search term..." type="text" value="Jean-Pierre Petit">
+        
+        
+      </div>
+      <div class="select control is-medium">
+        <label class="is-hidden" for="searchtype">Field</label>
+        <select class="is-medium" id="searchtype" name="searchtype"><option value="all">All fields</option><option value="title">Title</option><option selected value="author">Author(s)</option><option value="abstract">Abstract</option><option value="comments">Comments</option><option value="journal_ref">Journal reference</option><option value="acm_class">ACM classification</option><option value="msc_class">MSC classification</option><option value="report_num">Report number</option><option value="paper_id">arXiv identifier</option><option value="doi">DOI</option><option value="orcid">ORCID</option><option value="license">License (URI)</option><option value="author_id">arXiv author ID</option><option value="help">Help pages</option><option value="full_text">Full text</option></select>
+      </div>
+      <div class="control">
+          <button class="button is-link is-medium">Search</button>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control is-size-7">
+        
+        <label class="radio">
+          <input checked id="abstracts-0" name="abstracts" type="radio" value="show"> Show abstracts
+        </label>
+        
+        <label class="radio">
+          <input id="abstracts-1" name="abstracts" type="radio" value="hide"> Hide abstracts
+        </label>
+        
+      </div>
+    </div>
+    <div class="is-clearfix" style="height: 2.5em"> 
+      <div class="is-pulled-right">
+        
+        <a href="/search/advanced?terms-0-term=Jean-Pierre+Petit&amp;terms-0-field=author&amp;size=50&amp;order=-announced_date_first">Advanced Search</a>
+        
+      </div>
+    </div>
+    <input type="hidden" name="order" value="-announced_date_first">
+    <input type="hidden" name="size" value="50">
+  </form>
+
+  
+
+  
+      
+<div class="level breathe-horizontal">
+  <div class="level-left">
+    <form method="GET" action="/search/">
+      <div style="display: none;">
+        
+          
+            <select id="searchtype" name="searchtype"><option value="all">All fields</option><option value="title">Title</option><option selected value="author">Author(s)</option><option value="abstract">Abstract</option><option value="comments">Comments</option><option value="journal_ref">Journal reference</option><option value="acm_class">ACM classification</option><option value="msc_class">MSC classification</option><option value="report_num">Report number</option><option value="paper_id">arXiv identifier</option><option value="doi">DOI</option><option value="orcid">ORCID</option><option value="license">License (URI)</option><option value="author_id">arXiv author ID</option><option value="help">Help pages</option><option value="full_text">Full text</option></select>
+          
+        
+          
+            <input id="query" name="query" type="text" value="Jean-Pierre Petit">
+          
+        
+          
+        
+          
+        
+          
+            <ul id="abstracts"><li><input checked id="abstracts-0" name="abstracts" type="radio" value="show"> <label for="abstracts-0">Show abstracts</label></li><li><input id="abstracts-1" name="abstracts" type="radio" value="hide"> <label for="abstracts-1">Hide abstracts</label></li></ul>
+          
+        
+      </div>
+      <div class="box field is-grouped is-grouped-multiline level-item">
+        <div class="control">
+          <span class="select is-small">
+            <select id="size" name="size"><option value="25">25</option><option selected value="50">50</option><option value="100">100</option><option value="200">200</option></select>
+          </span>
+          <label for="size">results per page</label>.
+        </div>
+        <div class="control">
+          <label for="order">Sort results by</label>
+          <span class="select is-small">
+            <select id="order" name="order"><option selected value="-announced_date_first">Announcement date (newest first)</option><option value="announced_date_first">Announcement date (oldest first)</option><option value="-submitted_date">Submission date (newest first)</option><option value="submitted_date">Submission date (oldest first)</option><option value="">Relevance</option></select>
+          </span>
+        </div>
+        <div class="control">
+          <button class="button is-small is-link">Go</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+      
+
+
+
+
+<ol class="breathe-horizontal" start="1"> 
+
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2412.04644">arXiv:2412.04644</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2412.04644">pdf</a>, <a href="https://arxiv.org/format/2412.04644">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Relativity and Quantum Cosmology">gr-qc</span>
+        </div>
+      
+        
+          <div class="is-inline-block" style="margin-left: 0.5rem">
+            <div class="tags has-addons">
+              <span class="tag is-dark is-size-7">doi</span>
+              <span class="tag is-light is-size-7"><a class="" href="https://doi.org/10.1140/epjc/s10052-024-13569-w">10.1140/epjc/s10052-024-13569-w <i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+            </div>
+          </div>
+        
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        A bimetric cosmological model based on Andrei Sakharov&#39;s twin universe approach
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Jean-Pierre%2C+P">Petit Jean-Pierre</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Florent%2C+M">Margnat Florent</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Hicham%2C+Z">Zejli Hicham</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2412.04644v3-abstract-short" style="display: inline;">
+        The standard cosmological model, based on Cold Dark Matter and Dark Energy (ΛCDM), faces several challenges. Among these is the need to adjust the scenario to account for he presence of vast voids in the large-scale structure of the universe, as well as the early formation of the first stars and galaxies. Additionally, the observed matter-antimatter asymmetry in the universe remains an unresolved&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2412.04644v3-abstract-full').style.display = 'inline'; document.getElementById('2412.04644v3-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2412.04644v3-abstract-full" style="display: none;">
+        The standard cosmological model, based on Cold Dark Matter and Dark Energy (ΛCDM), faces several challenges. Among these is the need to adjust the scenario to account for he presence of vast voids in the large-scale structure of the universe, as well as the early formation of the first stars and galaxies. Additionally, the observed matter-antimatter asymmetry in the universe remains an unresolved issue. To address this latter question, Andrei Sakharov proposed a twin universe model in 1967. Building upon this idea and introducing interactions between these two universe sheets through a bimetric model, we propose an alternative interpretation of the large-scale structure of the universe, including its voids and the acceleration of cosmic expansion.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2412.04644v3-abstract-full').style.display = 'none'; document.getElementById('2412.04644v3-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 21 December, 2024; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 5 December, 2024;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> December 2024.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">37 pages, 14 figures</span>
+    </p>
+    
+
+    
+
+    
+      <p class="comments is-size-7">
+        <span class="has-text-black-bis has-text-weight-semibold">Journal ref:</span>
+        The European Physical Journal C 2024
+      </p>
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2208.14562">arXiv:2208.14562</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2208.14562">pdf</a>, <a href="https://arxiv.org/format/2208.14562">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Instrumentation and Methods for Astrophysics">astro-ph.IM</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Cosmology and Nongalactic Astrophysics">astro-ph.CO</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Astrophysics of Galaxies">astro-ph.GA</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="High Energy Astrophysical Phenomena">astro-ph.HE</span>
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Solar and Stellar Astrophysics">astro-ph.SR</span>
+          
+        </div>
+      
+        
+          <div class="is-inline-block" style="margin-left: 0.5rem">
+            <div class="tags has-addons">
+              <span class="tag is-dark is-size-7">doi</span>
+              <span class="tag is-light is-size-7"><a class="" href="https://doi.org/10.1007/s10686-022-09880-7">10.1007/s10686-022-09880-7 <i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+            </div>
+          </div>
+        
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        The Athena X-ray Integral Field Unit: a consolidated design for the system requirement review of the preliminary definition phase
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Barret%2C+D">Didier Barret</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Albouys%2C+V">Vincent Albouys</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Herder%2C+J+d">Jan-Willem den Herder</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Piro%2C+L">Luigi Piro</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Cappi%2C+M">Massimo Cappi</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Huovelin%2C+J">Juhani Huovelin</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Kelley%2C+R">Richard Kelley</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Mas-Hesse%2C+J+M">J. Miguel Mas-Hesse</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Paltani%2C+S">Stéphane Paltani</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Rauw%2C+G">Gregor Rauw</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Rozanska%2C+A">Agata Rozanska</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Svoboda%2C+J">Jiri Svoboda</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Wilms%2C+J">Joern Wilms</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Yamasaki%2C+N">Noriko Yamasaki</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Audard%2C+M">Marc Audard</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Bandler%2C+S">Simon Bandler</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Barbera%2C+M">Marco Barbera</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Barcons%2C+X">Xavier Barcons</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Bozzo%2C+E">Enrico Bozzo</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Ceballos%2C+M+T">Maria Teresa Ceballos</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Charles%2C+I">Ivan Charles</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Costantini%2C+E">Elisa Costantini</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Dauser%2C+T">Thomas Dauser</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Decourchelle%2C+A">Anne Decourchelle</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Duband%2C+L">Lionel Duband</a>
+      , et al. (274 additional authors not shown)
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2208.14562v2-abstract-short" style="display: inline;">
+        The Athena X-ray Integral Unit (X-IFU) is the high resolution X-ray spectrometer, studied since 2015 for flying in the mid-30s on the Athena space X-ray Observatory, a versatile observatory designed to address the Hot and Energetic Universe science theme, selected in November 2013 by the Survey Science Committee. Based on a large format array of Transition Edge Sensors (TES), it aims to provide sp&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2208.14562v2-abstract-full').style.display = 'inline'; document.getElementById('2208.14562v2-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2208.14562v2-abstract-full" style="display: none;">
+        The Athena X-ray Integral Unit (X-IFU) is the high resolution X-ray spectrometer, studied since 2015 for flying in the mid-30s on the Athena space X-ray Observatory, a versatile observatory designed to address the Hot and Energetic Universe science theme, selected in November 2013 by the Survey Science Committee. Based on a large format array of Transition Edge Sensors (TES), it aims to provide spatially resolved X-ray spectroscopy, with a spectral resolution of 2.5 eV (up to 7 keV) over an hexagonal field of view of 5 arc minutes (equivalent diameter). The X-IFU entered its System Requirement Review (SRR) in June 2022, at about the same time when ESA called for an overall X-IFU redesign (including the X-IFU cryostat and the cooling chain), due to an unanticipated cost overrun of Athena. In this paper, after illustrating the breakthrough capabilities of the X-IFU, we describe the instrument as presented at its SRR, browsing through all the subsystems and associated requirements. We then show the instrument budgets, with a particular emphasis on the anticipated budgets of some of its key performance parameters. Finally we briefly discuss on the ongoing key technology demonstration activities, the calibration and the activities foreseen in the X-IFU Instrument Science Center, and touch on communication and outreach activities, the consortium organisation, and finally on the life cycle assessment of X-IFU aiming at minimising the environmental footprint, associated with the development of the instrument. Thanks to the studies conducted so far on X-IFU, it is expected that along the design-to-cost exercise requested by ESA, the X-IFU will maintain flagship capabilities in spatially resolved high resolution X-ray spectroscopy, enabling most of the original X-IFU related scientific objectives of the Athena mission to be retained. (abridged).
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2208.14562v2-abstract-full').style.display = 'none'; document.getElementById('2208.14562v2-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 28 November, 2022; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 30 August, 2022;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> August 2022.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">48 pages, 29 figures, Accepted for publication in Experimental Astronomy with minor editing</span>
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2206.00300">arXiv:2206.00300</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2206.00300">pdf</a>, <a href="https://arxiv.org/ps/2206.00300">ps</a>, <a href="https://arxiv.org/format/2206.00300">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Fluid Dynamics">physics.flu-dyn</span>
+        </div>
+      
+        
+          <div class="is-inline-block" style="margin-left: 0.5rem">
+            <div class="tags has-addons">
+              <span class="tag is-dark is-size-7">doi</span>
+              <span class="tag is-light is-size-7"><a class="" href="https://doi.org/10.1103/PhysRevE.106.065104">10.1103/PhysRevE.106.065104 <i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+            </div>
+          </div>
+        
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Numerical simulation of universal morphogenesis of fluid interface deformations driven by radiation pressure
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Chesneau%2C+H">Hugo Chesneau</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Chraibi%2C+H">Hamza Chraibi</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Bertin%2C+N">Nicolas Bertin</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J">Julien Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Delville%2C+J">Jean-Pierre Delville</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Brasselet%2C+E">Etienne Brasselet</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Wunenburger%2C+R">Regis Wunenburger</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2206.00300v3-abstract-short" style="display: inline;">
+        We report on ab initio simulation of fluid interface deformations induced either by acoustic or optical radiation pressure. This is done by solving simultaneously the scalar wave propagation equation and the two-phase flow equations using the boundary element method. Using dimensional analysis, we show that interface deformation morphogenesis is universal, i.e. depends on the same dimensionless pa&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2206.00300v3-abstract-full').style.display = 'inline'; document.getElementById('2206.00300v3-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2206.00300v3-abstract-full" style="display: none;">
+        We report on ab initio simulation of fluid interface deformations induced either by acoustic or optical radiation pressure. This is done by solving simultaneously the scalar wave propagation equation and the two-phase flow equations using the boundary element method. Using dimensional analysis, we show that interface deformation morphogenesis is universal, i.e. depends on the same dimensionless parameters in acoustics and electromagnetics. We numerically investigate a few selected phenomena -- in particular the shape of large deformations, the slenderness transition and its hysteresis -- and compare with existing and novel experimental observations. Qualitative agreement between the numerical simulations and experiments is found when the mutual interaction between wave propagation and wave-induced deformations is taken into account. Our results demonstrate the leading role of the radiation pressure in morphogenesis of fluid interface deformations and the importance of the propagation-deformation interplay .
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2206.00300v3-abstract-full').style.display = 'none'; document.getElementById('2206.00300v3-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 17 November, 2022; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 1 June, 2022;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> June 2022.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/2103.12845">arXiv:2103.12845</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/2103.12845">pdf</a>, <a href="https://arxiv.org/format/2103.12845">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Relativity and Quantum Cosmology">gr-qc</span>
+        </div>
+      
+        
+          <div class="is-inline-block" style="margin-left: 0.5rem">
+            <div class="tags has-addons">
+              <span class="tag is-dark is-size-7">doi</span>
+              <span class="tag is-light is-size-7"><a class="" href="https://doi.org/10.1142/S0217732315500510">10.1142/S0217732315500510 <i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+            </div>
+          </div>
+        
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Cancellation of the central singularity of the Schwarzschild solution with natural mass inversion process
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J+P">J. P. Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=D%27Agostini%2C+G">G. D&#39;Agostini</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="2103.12845v1-abstract-short" style="display: inline;">
+        We reconsider the classical Schwarzschild solution in the context of a Janus cosmological model. We show that the central singularity can be eliminated through a simple coordinate change and that the subsequent transit from one fold to the other is accompanied by mass inversion. In such scenario matter swallowed by black holes could be ejected as invisible negative mass and dispersed in space.
+        
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="2103.12845v1-abstract-full" style="display: none;">
+        We reconsider the classical Schwarzschild solution in the context of a Janus cosmological model. We show that the central singularity can be eliminated through a simple coordinate change and that the subsequent transit from one fold to the other is accompanied by mass inversion. In such scenario matter swallowed by black holes could be ejected as invisible negative mass and dispersed in space.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('2103.12845v1-abstract-full').style.display = 'none'; document.getElementById('2103.12845v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 23 March, 2021; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> March 2021.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">11 pages , 12 figures</span>
+    </p>
+    
+
+    
+
+    
+      <p class="comments is-size-7">
+        <span class="has-text-black-bis has-text-weight-semibold">Journal ref:</span>
+        Modern Physics Letters A, Vol. 30, No. 9 (2015) 1550051
+      </p>
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/1809.05046">arXiv:1809.05046</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/1809.05046">pdf</a>, <a href="https://arxiv.org/ps/1809.05046">ps</a>, <a href="https://arxiv.org/format/1809.05046">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Quantum Physics">quant-ph</span>
+        </div>
+      
+        
+          <div class="is-inline-block" style="margin-left: 0.5rem">
+            <div class="tags has-addons">
+              <span class="tag is-dark is-size-7">doi</span>
+              <span class="tag is-light is-size-7"><a class="" href="https://doi.org/10.13140/RG.2.2.29710.00322">10.13140/RG.2.2.29710.00322 <i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+            </div>
+          </div>
+        
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        On evidence for negative energies and masses in the Dirac equation through a unitary time-reversal operator
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Debergh%2C+N">Nathalie Debergh</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J">Jean-Pierre Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=D%27Agostini%2C+G">Gilles D&#39;Agostini</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="1809.05046v2-abstract-short" style="display: inline;">
+        We review the standards of relativistic quantum mechanics such as the Dirac equation under the concept of negative masses. We show that negative energies are acceptable provided the masses are simultaneously negative. Negative energy and mass anti fermions are obtained from positive energy and mass fermions through a unitary PT transformation.
+        
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="1809.05046v2-abstract-full" style="display: none;">
+        We review the standards of relativistic quantum mechanics such as the Dirac equation under the concept of negative masses. We show that negative energies are acceptable provided the masses are simultaneously negative. Negative energy and mass anti fermions are obtained from positive energy and mass fermions through a unitary PT transformation.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('1809.05046v2-abstract-full').style.display = 'none'; document.getElementById('1809.05046v2-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 7 November, 2018; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 12 September, 2018;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> September 2018.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/1408.2451">arXiv:1408.2451</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/1408.2451">pdf</a>, <a href="https://arxiv.org/ps/1408.2451">ps</a>, <a href="https://arxiv.org/format/1408.2451">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Physics">physics.gen-ph</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Can negative mass be considered in General Relativity ?
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J">Jean-Pierre Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=dAgostini%2C+G">Gilles dAgostini</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="1408.2451v1-abstract-short" style="display: inline;">
+        We show, through Newtonian approximation, that shifting to a bimetric model of the Universe based on a suitable system of coupled field equations, removes the preposterous runaway effect and gives different interaction laws, between positive and negative masses, that bring new insights into the alternative VLS interpretations previously proposed by several authors, and strengthening their assumpti&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('1408.2451v1-abstract-full').style.display = 'inline'; document.getElementById('1408.2451v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="1408.2451v1-abstract-full" style="display: none;">
+        We show, through Newtonian approximation, that shifting to a bimetric model of the Universe based on a suitable system of coupled field equations, removes the preposterous runaway effect and gives different interaction laws, between positive and negative masses, that bring new insights into the alternative VLS interpretations previously proposed by several authors, and strengthening their assumptions.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('1408.2451v1-abstract-full').style.display = 'none'; document.getElementById('1408.2451v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 29 May, 2014; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> August 2014.
+      
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/1406.0981">arXiv:1406.0981</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/1406.0981">pdf</a>, <a href="https://arxiv.org/format/1406.0981">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Number Theory">math.NT</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        On the quaternion $\ell$-isogeny path problem
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Kohel%2C+D">David Kohel</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Lauter%2C+K">Kristin Lauter</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+C">Christophe Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Tignol%2C+J">Jean-Pierre Tignol</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="1406.0981v1-abstract-short" style="display: inline;">
+        Let $\cO$ be a maximal order in a definite quaternion algebra over $\mathbb{Q}$ of prime discriminant $p$, and $\ell$ a small prime. We describe a probabilistic algorithm, which for a given left $O$-ideal, computes a representative in its left ideal class of $\ell$-power norm. In practice the algorithm is efficient, and subject to heuristics on expected distributions of primes, runs in expected po&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('1406.0981v1-abstract-full').style.display = 'inline'; document.getElementById('1406.0981v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="1406.0981v1-abstract-full" style="display: none;">
+        Let $\cO$ be a maximal order in a definite quaternion algebra over $\mathbb{Q}$ of prime discriminant $p$, and $\ell$ a small prime. We describe a probabilistic algorithm, which for a given left $O$-ideal, computes a representative in its left ideal class of $\ell$-power norm. In practice the algorithm is efficient, and subject to heuristics on expected distributions of primes, runs in expected polynomial time. This breaks the underlying problem for a quaternion analog of the Charles-Goren-Lauter hash function, and has security implications for the original CGL construction in terms of supersingular elliptic curves.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('1406.0981v1-abstract-full').style.display = 'none'; document.getElementById('1406.0981v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 4 June, 2014; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> June 2014.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">To appear in the LMS Journal of Computation and Mathematics, as a special issue for ANTS (Algorithmic Number Theory Symposium) conference</span>
+    </p>
+    
+
+    
+      <p class="comments is-size-7">
+        
+
+        
+          <span class="has-text-black-bis has-text-weight-semibold">MSC Class:</span>
+          11-Gxx; 11-Gxx; 11-Rxx; 11-Sxx; 11-Yxx
+        
+
+        
+      </p>
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/1307.6330">arXiv:1307.6330</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/1307.6330">pdf</a>, <a href="https://arxiv.org/ps/1307.6330">ps</a>, <a href="https://arxiv.org/format/1307.6330">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Soft Condensed Matter">cond-mat.soft</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Fluid Dynamics">physics.flu-dyn</span>
+          
+        </div>
+      
+        
+          <div class="is-inline-block" style="margin-left: 0.5rem">
+            <div class="tags has-addons">
+              <span class="tag is-dark is-size-7">doi</span>
+              <span class="tag is-light is-size-7"><a class="" href="https://doi.org/10.1103/PhysRevLett.111.044502">10.1103/PhysRevLett.111.044502 <i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+            </div>
+          </div>
+        
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Excitation of fountain and entrainment instabilities at the interface between two viscous fluids using a beam of laser light
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Chraibi%2C+H">Hamza Chraibi</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J">Julien Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Wunenburger%2C+R">Régis Wunenburger</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Delville%2C+J">Jean-Pierre Delville</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="1307.6330v1-abstract-short" style="display: inline;">
+        We report on two instabilities called viscous fountain and viscous entrainment triggered at the interface between two liquids by the action of bulk flows driven by a laser beam. These streaming flows are due to light scattering losses in turbid liquids, and can be directed either toward or forward the interface. We experimentally and numerically investigate these interface instabilities and show t&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('1307.6330v1-abstract-full').style.display = 'inline'; document.getElementById('1307.6330v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="1307.6330v1-abstract-full" style="display: none;">
+        We report on two instabilities called viscous fountain and viscous entrainment triggered at the interface between two liquids by the action of bulk flows driven by a laser beam. These streaming flows are due to light scattering losses in turbid liquids, and can be directed either toward or forward the interface. We experimentally and numerically investigate these interface instabilities and show that the height and curvature of the interface deformation at the threshold and the jet radius after interface destabilization mainly depend on the waist of the laser beam. Analogies and differences between these two instabilities are characterized.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('1307.6330v1-abstract-full').style.display = 'none'; document.getElementById('1307.6330v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 24 July, 2013; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> July 2013.
+      
+    </p>
+    
+
+    
+
+    
+      <p class="comments is-size-7">
+        <span class="has-text-black-bis has-text-weight-semibold">Journal ref:</span>
+        Physical Review Letters 111 (2013) 044502
+      </p>
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/1111.5719">arXiv:1111.5719</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/1111.5719">pdf</a>, <a href="https://arxiv.org/ps/1111.5719">ps</a>, <a href="https://arxiv.org/format/1111.5719">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Soft Condensed Matter">cond-mat.soft</span>
+        
+          
+            <span class="tag is-small is-grey tooltip is-tooltip-top" data-tooltip="Classical Physics">physics.class-ph</span>
+          
+        </div>
+      
+        
+          <div class="is-inline-block" style="margin-left: 0.5rem">
+            <div class="tags has-addons">
+              <span class="tag is-dark is-size-7">doi</span>
+              <span class="tag is-light is-size-7"><a class="" href="https://doi.org/10.1017/jfm.2011.372">10.1017/jfm.2011.372 <i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+            </div>
+          </div>
+        
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Eddies and interface deformations induced by optical streaming
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Chraibi%2C+H">Hamza Chraibi</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Wunenburger%2C+R">Régis Wunenburger</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Lasseux%2C+D">Didier Lasseux</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J">Julien Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Delville%2C+J">Jean-Pierre Delville</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="1111.5719v1-abstract-short" style="display: inline;">
+        We study flows and interface deformations produced by the scattering of a laser beam propagating through non-absorbing turbid fluids. Light scattering produces a force density resulting from the transfer of linear momentum from the laser to the scatterers. The flow induced in the direction of the beam propagation, called &#39;optical streaming&#39;, is also able to deform the interface separating the two&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('1111.5719v1-abstract-full').style.display = 'inline'; document.getElementById('1111.5719v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="1111.5719v1-abstract-full" style="display: none;">
+        We study flows and interface deformations produced by the scattering of a laser beam propagating through non-absorbing turbid fluids. Light scattering produces a force density resulting from the transfer of linear momentum from the laser to the scatterers. The flow induced in the direction of the beam propagation, called &#39;optical streaming&#39;, is also able to deform the interface separating the two liquid phases and to produce wide humps. The viscous flow taking place in these two liquid layers is solved analytically, in one of the two liquid layers with a stream function formulation, as well as numerically in both fluids using a boundary integral element method. Quantitative comparisons are shown between the numerical and analytical flow patterns. Moreover, we present predictive simulations regarding the effects of the geometry, of the scattering strength and of the viscosities, on both the flow pattern and the deformation of the interface. Finally, theoretical arguments are put forth to explain the robustness of the emergence of secondary flows in a two-layer fluid system.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('1111.5719v1-abstract-full').style.display = 'none'; document.getElementById('1111.5719v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 24 November, 2011; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> November 2011.
+      
+    </p>
+    
+
+    
+
+    
+      <p class="comments is-size-7">
+        <span class="has-text-black-bis has-text-weight-semibold">Journal ref:</span>
+        Journal of Fluid Mechanics 688 (2011) 195-218
+      </p>
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/0805.1423">arXiv:0805.1423</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/0805.1423">pdf</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Physics">physics.gen-ph</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Five Dimensional bigravity. New topological description of the Universe
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J+P">Jean Pierre Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=d%27Agostini%2C+G">Gilles d&#39;Agostini</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="0805.1423v1-abstract-short" style="display: inline;">
+        We extend the bimetric description of the Universe to a five-dimensional framework. Starting from Souriau&#39;s work (1964) we use two Robertson-Walker metrics with an extra term corresponding to the additional Kaluza fifth dimension. This first order model is limited to zero electric charge and electromagnetic energy densities. Assuming the massive particles, with positive or negative mass and ener&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('0805.1423v1-abstract-full').style.display = 'inline'; document.getElementById('0805.1423v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="0805.1423v1-abstract-full" style="display: none;">
+          We extend the bimetric description of the Universe to a five-dimensional framework. Starting from Souriau&#39;s work (1964) we use two Robertson-Walker metrics with an extra term corresponding to the additional Kaluza fifth dimension. This first order model is limited to zero electric charge and electromagnetic energy densities. Assuming the massive particles, with positive or negative mass and energies owing finite lifetimes, it restores the O(3) symmetry and makes the generalized gauge process to restart. As a consequence the speed of light tends to zero. We assume the Universe to be closed over all its dimensions. Then, following an idea introduced in 1994 we describe the Universe as the two folds cover of a projective space. The arrow of time, mass and energy inversions arise as consequences of this geometrical hypothesis and fits the bimetric model. We choose to eliminate the &#34;initial singularity&#34;, replaced by a boundary space, which is found to be euclidean.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('0805.1423v1-abstract-full').style.display = 'none'; document.getElementById('0805.1423v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 9 May, 2008; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> May 2008.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">22 pages, 17 figures</span>
+    </p>
+    
+
+    
+      <p class="comments is-size-7">
+        
+
+        
+          <span class="has-text-black-bis has-text-weight-semibold">MSC Class:</span>
+          83D05; 83B05; 83F05
+        
+
+        
+      </p>
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/0803.1362">arXiv:0803.1362</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/0803.1362">pdf</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Physics">physics.gen-ph</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Bigravity: a bimetric model of the Universe with variable constants, inluding VSL (variable speed of light)
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J+P">Jean Pierre Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=d%27Agostini%2C+G">Gilles d&#39;Agostini</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="0803.1362v2-abstract-short" style="display: inline;">
+        The Universe, far to be homogenous, expands in large empty bubbles of the large-scale structure, but not in mass concentrations like galaxies, so that the Robertson-Walker solution does not fit. We suggest that a symmetry breaking occurred in a distant past, during the radiation-dominated era. Before, the three-dimensional hypersurface was invariant under the action of O(3) and the Robertson-Wal&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('0803.1362v2-abstract-full').style.display = 'inline'; document.getElementById('0803.1362v2-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="0803.1362v2-abstract-full" style="display: none;">
+          The Universe, far to be homogenous, expands in large empty bubbles of the large-scale structure, but not in mass concentrations like galaxies, so that the Robertson-Walker solution does not fit. We suggest that a symmetry breaking occurred in a distant past, during the radiation-dominated era. Before, the three-dimensional hypersurface was invariant under the action of O(3) and the Robertson-Walker metric could be used. But this obliges the so-called constants and physics, length and time scale factors to be involved through a generalized gauge process, which is built. The subsequent variation of the speed of light solves the horizon problem, while the Planck barrier disappears
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('0803.1362v2-abstract-full').style.display = 'none'; document.getElementById('0803.1362v2-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 15 March, 2008; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 10 March, 2008;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> March 2008.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">16 pages, 8figures</span>
+    </p>
+    
+
+    
+      <p class="comments is-size-7">
+        
+
+        
+          <span class="has-text-black-bis has-text-weight-semibold">MSC Class:</span>
+          83D05; 83B05; 83F05
+        
+
+        
+      </p>
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/0801.1477">arXiv:0801.1477</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/0801.1477">pdf</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Physics">physics.gen-ph</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Bigravity : A bimetric model of the Universe. Positive and negative gravitational lensings
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J">Jean-Pierre Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=d%27Agostini%2C+G">Gilles d&#39;Agostini</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="0801.1477v1-abstract-short" style="display: inline;">
+        After a short summary of our bimetric model of the Universe, an exact nonlinear solution is built, which demonstrates the existence of solutions for our two coupled field equations system. In addition to the classical positive gravitational lensing, this solution is shown to also lead to negative gravitational lensing, a phenomenon previously described in 1995 (Astrophysics and Space Science). S&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('0801.1477v1-abstract-full').style.display = 'inline'; document.getElementById('0801.1477v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="0801.1477v1-abstract-full" style="display: none;">
+          After a short summary of our bimetric model of the Universe, an exact nonlinear solution is built, which demonstrates the existence of solutions for our two coupled field equations system. In addition to the classical positive gravitational lensing, this solution is shown to also lead to negative gravitational lensing, a phenomenon previously described in 1995 (Astrophysics and Space Science). Such negative lensing provides an alternative interpretation for the observed faint magnitudes of high redshift galaxies, so far considered as dwarf galaxies.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('0801.1477v1-abstract-full').style.display = 'none'; document.getElementById('0801.1477v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 9 January, 2008; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> January 2008.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">19 pages, 20 figures</span>
+    </p>
+    
+
+    
+      <p class="comments is-size-7">
+        
+
+        
+          <span class="has-text-black-bis has-text-weight-semibold">MSC Class:</span>
+          83D05; 83B05; 83F05
+        
+
+        
+      </p>
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/0712.0067">arXiv:0712.0067</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/0712.0067">pdf</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Physics">physics.gen-ph</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Bigravity as an interpretation of the cosmic acceleration
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J">Jean-Pierre Petit</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=D%27Agostini%2C+G">Gilles D&#39;Agostini</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="0712.0067v2-abstract-short" style="display: inline;">
+        A bimetric description of the universe is proposed, which explains cosmic acceleration deduced from optically observed high-redshift objects. This phenomenon is classically charged to a mysterious repulsive &#34;dark energy&#34; whose true nature is unknown. This is identified in this model with a set of particles having negative mass and energy. These negative mass particles, emitting negative energy p&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('0712.0067v2-abstract-full').style.display = 'inline'; document.getElementById('0712.0067v2-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="0712.0067v2-abstract-full" style="display: none;">
+          A bimetric description of the universe is proposed, which explains cosmic acceleration deduced from optically observed high-redshift objects. This phenomenon is classically charged to a mysterious repulsive &#34;dark energy&#34; whose true nature is unknown. This is identified in this model with a set of particles having negative mass and energy. These negative mass particles, emitting negative energy photons, are not observable using optical instruments.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('0712.0067v2-abstract-full').style.display = 'none'; document.getElementById('0712.0067v2-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 6 December, 2007; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 1 December, 2007;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> December 2007.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">14 pages,1 figure</span>
+    </p>
+    
+
+    
+      <p class="comments is-size-7">
+        
+
+        
+          <span class="has-text-black-bis has-text-weight-semibold">MSC Class:</span>
+          83D05;83B05;83F05
+        
+
+        
+      </p>
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/math-ph/0502042">arXiv:math-ph/0502042</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/math-ph/0502042">pdf</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="Mathematical Physics">math-ph</span>
+        </div>
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        I - Matter, antimatter and geometry II - The twin universe model : a solution to the problem of negative energy particles III - The twin universe model plus electric charges and matter-antimatter symmetry
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Henry-Couannier%2C+F">Frederic Henry-Couannier</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=D%27Agostini%2C+G">Gilles D&#39;Agostini</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J">Jean-Pierre Petit</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="math-ph/0502042v2-abstract-short" style="display: inline;">
+        We introduce a new dynamical group whose coadjoint action on its momentum space takes account of matter-antimatter symmetry on pure geometrical grounds. According to this description the energy and the spin are unchanged under matter-antimatter symmetry. We recall that the antichron components of the Poincaré group, ruling relativistic motions of a mass-point particle, generate negative energy p&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('math-ph/0502042v2-abstract-full').style.display = 'inline'; document.getElementById('math-ph/0502042v2-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="math-ph/0502042v2-abstract-full" style="display: none;">
+          We introduce a new dynamical group whose coadjoint action on its momentum space takes account of matter-antimatter symmetry on pure geometrical grounds. According to this description the energy and the spin are unchanged under matter-antimatter symmetry. We recall that the antichron components of the Poincaré group, ruling relativistic motions of a mass-point particle, generate negative energy particles. The model with two twin universes, inspired by Sakharov&#39;s one, solves the stability issue. Positive and negative energy particles motions hold in two distinct folds. The model is extended to charged particles. As a result, the matter-antimatter duality holds in both universes.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('math-ph/0502042v2-abstract-full').style.display = 'none'; document.getElementById('math-ph/0502042v2-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 9 March, 2005; <span class="has-text-black-bis has-text-weight-semibold">v1</span> submitted 20 February, 2005;
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> February 2005.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">19 Fevrier 2004</span>
+    </p>
+    
+
+    
+
+    
+  </li>
+
+  <li class="arxiv-result">
+    <div class="is-marginless">
+      <p class="list-title is-inline-block"><a href="https://arxiv.org/abs/gr-qc/9909086">arXiv:gr-qc/9909086</a>
+        <span>&nbsp;[<a href="https://arxiv.org/pdf/gr-qc/9909086">pdf</a>, <a href="https://arxiv.org/ps/gr-qc/9909086">ps</a>, <a href="https://arxiv.org/format/gr-qc/9909086">other</a>]&nbsp;</span>
+      </p>
+      <div class="tags is-inline-block">
+        <span class="tag is-small is-link tooltip is-tooltip-top" data-tooltip="General Relativity and Quantum Cosmology">gr-qc</span>
+        </div>
+      
+        
+          <div class="is-inline-block" style="margin-left: 0.5rem">
+            <div class="tags has-addons">
+              <span class="tag is-dark is-size-7">doi</span>
+              <span class="tag is-light is-size-7"><a class="" href="https://doi.org/10.1142/S0218271899000213">10.1142/S0218271899000213 <i class="fa fa-external-link" aria-hidden="true"></i></a></span>
+            </div>
+          </div>
+        
+      
+    </div>
+    
+    <p class="title is-5 mathjax">
+      
+        Scale Invariant Cosmology
+      
+    </p>
+    <p class="authors">
+      <span class="search-hit">Authors:</span>
+      
+      <a href="/search/?searchtype=author&amp;query=Midy%2C+P">Pierre Midy</a>, 
+      
+      <a href="/search/?searchtype=author&amp;query=Petit%2C+J">Jean-Pierre Petit</a>
+      
+    </p>
+    
+    <p class="abstract mathjax">
+      <span class="has-text-black-bis has-text-weight-semibold">Abstract</span>:
+      <span class="abstract-short has-text-grey-dark mathjax" id="gr-qc/9909086v1-abstract-short" style="display: inline;">
+        An attempt is made here to extend to the microscopic domain the scale invariant character of gravitation - which amounts to consider expansion as applying to any physical scale. Surprisingly, this hypothesis does not prevent the redshift from being obtained. It leads to strong restrictions concerning the choice between the presently available cosmological models and to new considerations about t&hellip;
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('gr-qc/9909086v1-abstract-full').style.display = 'inline'; document.getElementById('gr-qc/9909086v1-abstract-short').style.display = 'none';">&#9661; More</a>
+      </span>
+      <span class="abstract-full has-text-grey-dark mathjax" id="gr-qc/9909086v1-abstract-full" style="display: none;">
+          An attempt is made here to extend to the microscopic domain the scale invariant character of gravitation - which amounts to consider expansion as applying to any physical scale. Surprisingly, this hypothesis does not prevent the redshift from being obtained. It leads to strong restrictions concerning the choice between the presently available cosmological models and to new considerations about the notion of time. Moreover, there is no horizon problem and resorting to inflation is not necessary.
+        <a class="is-size-7" style="white-space: nowrap;" onclick="document.getElementById('gr-qc/9909086v1-abstract-full').style.display = 'none'; document.getElementById('gr-qc/9909086v1-abstract-short').style.display = 'inline';">&#9651; Less</a>
+      </span>
+    </p>
+    
+
+    <p class="is-size-7"><span class="has-text-black-bis has-text-weight-semibold">Submitted</span> 28 September, 1999; 
+      <span class="has-text-black-bis has-text-weight-semibold">originally announced</span> September 1999.
+      
+    </p>
+    
+    <p class="comments is-size-7">
+      <span class="has-text-black-bis has-text-weight-semibold">Comments:</span>
+      <span class="has-text-grey-dark mathjax">TeX, 20 pages</span>
+    </p>
+    
+
+    
+
+    
+      <p class="comments is-size-7">
+        <span class="has-text-black-bis has-text-weight-semibold">Journal ref:</span>
+        Int.J.Mod.Phys. D8 (1999) 271-289; Int.J.Mod.Phys. D12 (2003) 541
+      </p>
+    
+  </li>
+
+</ol>
+
+
+  
+
+
+      <div class="is-hidden-tablet">
+        <!-- feedback for mobile only -->
+        <span class="help" style="display: inline-block;"><a href="https://github.com/arXiv/arxiv-search/releases">Search v0.5.6 released 2020-02-24</a>&nbsp;&nbsp;</span>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    
+    <div class="columns is-desktop" role="navigation" aria-label="Secondary">
+  <!-- MetaColumn 1 -->
+  <div class="column">
+    <div class="columns">
+      <div class="column">
+        <ul class="nav-spaced">
+          <li><a href="https://info.arxiv.org/about">About</a></li>
+          <li><a href="https://info.arxiv.org/help">Help</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <ul class="nav-spaced">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon filter-black" role="presentation"><title>contact arXiv</title><desc>Click here to contact arXiv</desc><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+            <a href="https://info.arxiv.org/help/contact.html"> Contact</a>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon filter-black" role="presentation"><title>subscribe to arXiv mailings</title><desc>Click here to subscribe</desc><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+            <a href="https://info.arxiv.org/help/subscribe"> Subscribe</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> <!-- end MetaColumn 1 -->
+  <!-- MetaColumn 2 -->
+  <div class="column">
+    <div class="columns">
+      <div class="column">
+        <ul class="nav-spaced">
+          <li><a href="https://info.arxiv.org/help/license/index.html">Copyright</a></li>
+          <li><a href="https://info.arxiv.org/help/policies/privacy_policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="column sorry-app-links">
+        <ul class="nav-spaced">
+          <li><a href="https://info.arxiv.org/help/web_accessibility.html">Web Accessibility Assistance</a></li>
+          <li>
+            <p class="help">
+              <a class="a11y-main-link" href="https://status.arxiv.org" target="_blank">arXiv Operational Status <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="icon filter-dark_grey" role="presentation"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a><br>
+              Get status notifications via
+              <a class="is-link" href="https://subscribe.sorryapp.com/24846f03/email/new" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon filter-black" role="presentation"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>email</a>
+              or <a class="is-link" href="https://subscribe.sorryapp.com/24846f03/slack/new" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon filter-black" role="presentation"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>slack</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> <!-- end MetaColumn 2 -->
+</div>
+    
+  </footer>
+  <script src="https://static.arxiv.org/static/base/1.0.0a5/js/member_acknowledgement.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+Figure 10. Exploded view of one WFEE box with its main components highlighted: the ASIC module with the buffers,
+the row addressing signal buffer module and finally the regulator module and the converter filtering board.
+
+
+perturbations, and as far as possible from noisy digital electronics. The WFEE is implemented by 6 independent
+units, aligned on the 6 cold electronics groups. These 6 WFEE units are grouped in 3 electronic boxes. One unit
+thus corresponds to 12 readout chains.
+
+2.4.2 Digital Readout Electronics (DRE)
+The second stage of the warm detection chain is the Digital Readout Electronics (DRE49 for a description of the
+DRE prototype developed for Frequency Domain Multiplexing, but sharing some commonalities with the one
+being developed now for TDM readout, see Figure 11). Its main functions are to:
+
+   • Generate the row addressing signals to select the row to be readout,
+   • Sample the error signal of the pixels of the selected row,
+   • Generate the feedback signal for the MUX SQUIDs,
+   • Generate dynamic offset compensation signals to the SSA to account for the offset dispersion of the different
+     MUX SQUIDs output voltage inside a column
+   • Identify events in the pixel data flow and extract the data records (8192 samples each: the sampling
+     frequency is 183.8 kHz equivalent to one sample every 5.44 µs),
+   • Process the data record to estimate the arrival time, to digitize the energy of the event and determine its
+     grade.50–53 The accurate energy of the photon in keV will then be obtained on-ground accounting Réf.: for the
+                                                                                                                XIFU-DD-10000-00816-C
+     gain scale (and other corrections).                                 ATHENA                           Issue : 1.0
+   • Produce telemetry packets and send them to the spacecraft mass memory.                               Date : 2022/06/03
+                                                                                                                              Page : 165/198
+
+
+
+
+                                                                                         Figure 99: Physical breakdown of a DRE unit.
+Figure 11. Left) Layout of a DRE unit, with the warm harnesses connecting to the WFEE. Center) The rear of a DRE
+unit, showing covers to protect internal interfaces against 5.11.4. LAYOUT interferences. Right) Physical breakdown of a
+                                                            electromagnetic
+DRE unit, made of 3 demultiplexing (DEMUX) modules, 1       Theraw   addressing
+                                                                layout of a       and
+                                                                            DRE unit      synchronisation
+                                                                                     is presented             (RAS) module and one
+                                                                                                  on Figure 100.
+module holding the event processor (EP). The DC converter is located at the bottom of the DRE Unit.
+

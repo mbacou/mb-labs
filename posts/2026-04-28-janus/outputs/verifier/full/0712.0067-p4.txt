@@ -1,0 +1,54 @@
+                                                                                            4
+
+2) A world populated by positive and negative energy particles
+
+But todays, particles with negative energy and mass should be taken into account, which
+implies having recourse to the complete Poincaré group, outfitted with its orthochron and
+antichron components.
+
+Notice importantly that antichron components of the group also transform orthochron photons
+movements with positive energy into antichron movements with negative energy.
+
+We can then suppose that real observers, or measuring instruments, being made of particles
+with positive mass and energy, they are not able to deal with negative energy photons, and
+conversely that hypothetic observers and measuring instruments made of negative mass and
+energy particles, would not be able to deal with positive energy photons.
+
+From this point of view the two cosmic contents, one with positive energy and the other with
+negative energy, cannot interact through electromagnetic waves. Concretely, this implies that
+if our Universe contains negative mass and energy particles, we cannot see them nor record
+images of them with optical devices such as telescopes, whatever the frequency considered.
+
+
+3) The true nature of antimatter
+
+It is possible to consider that antimatter particles correspond to other kinds of a material
+point's relativistic movements. The electric charge q can be geometrized, making of it an
+additional component of the momentum, by extending Poincaré's group. Introducing an
+additional parameter ν we can then bring out (as explained in reference [2], chapter 5, page
+413) the fact that the fifth dimension of Kaluza comes with a charge reversal. Let us introduce
+the four-vector:
+(12)
+                                                 ⎡t ⎤
+                                                 ⎢ x⎥
+                                            ξ = ⎢ ⎥
+                                                 ⎢ y⎥
+                                                 ⎢ ⎥
+                                                 ⎣z⎦
+
+and the five-vector:
+(13)
+                                             ⎡ς ⎤
+                                             ⎢ξ ⎥
+                                             ⎣ ⎦
+
+where ζ represents the additional dimension of Kaluza. We define this property by
+introducing the group of four connected components:
+(14)
+                          ⎡ς '⎤ ⎡ ν 0 ν φ ⎤ ⎡ζ ⎤ ⎡ν ζ + ν φ ⎤
+                          ⎢ξ '⎥ = ⎢ 0 L
+                          ⎢ ⎥ ⎢         o  C ⎥⎥ × ⎢⎢ξ ⎥⎥ = ⎢⎢ Lo ξ + C ⎥⎥
+                          ⎢⎣ 1 ⎥⎦ ⎢⎣ 0 0   1 ⎥⎦ ⎢⎣ 1 ⎥⎦ ⎢⎣        1     ⎥⎦
+
+The group momentum has 11 components:
+

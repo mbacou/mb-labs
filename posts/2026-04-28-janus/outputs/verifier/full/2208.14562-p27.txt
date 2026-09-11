@@ -1,0 +1,54 @@
+       Observation type                       Astrophysical flux             Count rate at         Resolution &
+                                                                           X-IFU TES array         (Throughput)
+       Defocused point source                     1 mCrab                        62 cps           2.5 eV (> 80%)
+       Defocused point source (G)                10 mCrab                       620 cps           2.5 eV (> 80%)
+       Brightest point source                      1 Crab                  8.2 kcps (Be filt)     10 eV (> 50%)
+       Focused point source                     0.25 mCrab                      15.5 cps          2.5 eV (> 80%)
+       Extended source                       Perseus inner 1’x1’            0.44 cps/pixel        2.5 eV (> 80%)
+       Extended source (G)                   CasA average flux               2.5 cps/pixel        2.5 eV (> 80%)
+Table 6. This table lists the observation type (focused, defocused, point or extended source, G refers to the Goal), the
+astrophysical flux, the count rate at the X-IFU entrance, the X-IFU at the TES array, i.e. after passing through the
+filter wheel filter, and finally the requirement in terms of spectral resolution (in eV) and throughput (%). The defocusing
+depth assumed is 35 mm, see Kammoun et al.,76 for more details, including a method to analyze bright source defocused
+observations. For the requirements, the count rates are estimated assuming a Crab like spectrum for point source and
+a thermal APEC 4 keV absorbed APEC model for extended source. The reference telescope design used in this table
+is: ATHENA - Telescope Reference Design and Effective Area Estimates, ESA-ATHENA-ESTEC-PL-DD- 001, Issue 3.3,
+21/12/2020. Note that the requirement of 10 eV resolution with a 50% throughput applies to the 5 to 8 keV band, and
+is met assuming a 100 µm thick beryllium filter cutting off most of the photons below 2-3 keV.
+
+
+   • The instrument efficiency as described above,
+   • The pixel pitch which drives the event spread of the sources onto different neighbouring pixels: smaller
+     pixels would each receive lower count rates and better share the overall count rate load,
+   • The pixel speed. At high count rates, the current pulses used for the energy reconstruction of the impacting
+     X-rays will get packed together in the pixels timelines, leading to two main degradations of the instrument
+     performance. For each event, if the preceding pulse is too close, the energy reconstruction will be biased
+     (by an amount depending on the time separation) and the event will need to be rejected from the science
+     data. Such events are called secondaries. A nearby subsequent pulse will in turn shorten the amount
+     of data available for the reconstruction and degrade the energy resolution. To characterize these effects,
+     different grades can be defined as shown in Table 7.
+   • Another main limitation to the instrument count rate capability is crosstalk between pixels. Crosstalk can
+     be defined as any science signal, originating from the absorption of energy on one pixel, contributing to
+     an energy measurement on another pixel. It may arise via various mechanisms: 1) thermal leakage on the
+     detector array, 2) next-in time crosstalk related to the imperfect settling of the TDM switch at the end
+     of a row period, and 3) inductive coupling due to the finite mutual inductance between elements of the
+     readout chain.
+   • Event Processor (EP) performance. Due to limited on board computing power and memory, the X-IFU
+     EP will have a maximal event processing rate. However, together with the processing of the MXS events,
+     the EP is being designed for a maximum processing rate of ∼20 kcps, in order not to introduce further
+     throughput losses.
+
+    Figure 22 shows the expected instrument throughput performance as a function of count rate/flux for the
+different observation types specified in the X-IFU count rate requirements, and relying on the defocusing ca-
+pability of the Athena telescope (see Figure 22 to visualize how the point spread function of the optics varies
+with energy at an out-of-focus distance of 35 mm,76 ). These results were obtained using detailed End-to-End
+simulations performed in the SIXTE environment,78 taking into account all the above-mentioned processes.77
+As can be seen, a significant margin exists with respect to all performance requirements, and almost all goals are
+met. The only exception is the extended source goal by a few percentage points. This actually shows that the
+X-IFU instrument is not being oversized. This study notably serves as an input to key subsystem performance
+requirements, in particular those related to pixel speed constraints and crosstalk level.
+
+4.4.2 Undetected pileup
+Pileup originates at high count rates when events are too close to one another in a pixel timeline, such that the
+triggering stage of the event processor will only detect one event. Phase A studies showed via simulations of the
+

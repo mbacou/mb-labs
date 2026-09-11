@@ -1,0 +1,165 @@
+2.1 The Transition Edge Sensor (TES) Array
+TESs are superconducting thin film thermistors operated in the sharp transition region between the super-
+conducting and normal states. The X-IFU TESs consist of a 50 µm-square Mo/Au bilayer voltage biased at
+a superconducting-to-normal transition temperature of ∼ 90 mK. The TES is deposited atop a 0.5 µm-thick
+silicon-nitride membrane, which forms a weak       Figure   7: the
+                                                      thermal        micro
+                                                                link to    calorimeter
+                                                                        the heat            concept
+                                                                                   sink. TESs    are coupled to an electro-
+plated Au/Bi/Au absorber, which provides the X-ray stopping power. Its composition (Bi to Au ratio) is chosen
+      The the
+to provide      desired
+            TES is   a pixel
+                       thermal heat  capacity
+                                 sensor        (optimized
+                                            providing    an for energy resolution
+                                                            extreme     sensitivity,and   dynamic
+                                                                                      thanks        range),
+                                                                                                to its sharpwhile simultane-
+                                                                                                              resistance    variation when
+       achieving the between
+ouslytransitioning    desired pixel  quantum    efficiency. This   optimization  has  a limit, as a  minimal layer
+                                  the superconducting state and the ormal state. The bias current provided by the   of gold is
+required  for intra-pixel
+      readout             heatallows
+                electronics     diffusion.  A small
+                                        to keep    thegold
+                                                        TEScapinisbetween     on top
+                                                                   deposited the      of the absorber to
+                                                                                  superconducting       andoptimize  infrared
+                                                                                                             the normal     states, thanks
+reflectivity and  protect  the  porous   bismuth   from   humidity.   For the  baseline   317  µm  pitch
+      the heat dissipated in the TES by the Joules effect resulting from the bias current and the non    pixels,  a target  of zero
+∼ 91% intrinsic stopping power at 7 keV is achieved with a total gold thickness of 1.09 µm (of which 40 nm
+      resistance of the TES. Of course, such a device needs to be operated at very cold temperatures (below
+are used for the capping) and bismuth thickness of 5.51 µm. The spacing between the pixels further introduces
+      100mK).
+a flat multiplicative factor in the instrument efficiency. State of the art fabrication processes allow reaching an
+average gap of 6.34 µm, leading to a 96 % filling factor.
+
+
+
+                                                                                     120
+                                                                                    RN                                       Normal
+
+                                                                                     100
+
+                                                                                         80
+
+
+                                                                             RTES (m≠)
+        X-ray                                                                                                  Transition
+                                                                                         60
+                               Appl. Sci. 2021, 11, 3793                                                                                            29 of 43
+                                                                                         40
+
+                                                                                         20                                  Biasing
+                                                     and Au shielding in the proximity           of the array. On top of that, the energy resolution of
+                                                                                              Superconducting
+                                                     the detectors can be0 affected by thermal bath fluctuations from the energy deposited on
+                                                     the substrate by cosmic  0   rays 20
+                                                                                        from   astrophysical
+                                                                                                  40          60 sources  [164,165]
+                                                                                                                       80 TC    100 and by120 micro-vibrations
+                                                                                                           T (mK)
+                                                     induced by the mechanical coolers [162,166]. A proper coating and thermalization of the
+                                                     TES array wafer can minimize the impact of the cosmic ray [167], while a sophisticated
+Figure 6. Left) The schematic of a TES. Right) TheKevlar-based
+                                                      resistance variation
+                                                                      suspensionas a      function
+                                                                                     system is  in     of  the to
+                                                                                                    development   temperature,      showingand
+                                                                                                                        provide robustness      a sharp
+                                                                                                                                                   stiffness to
+                                                                                           26
+rise in the transition region between the superconducting     andlaunch
+                                                     survive the      normal andstates.
+                                                                                   sufficient thermal and mechanical decoupling from the different
+                                                     cryostat stages [162]. Finally, the X-IFU TES array sensitivity will be degraded by the
+    The Figure     8: On
+          absorption       the
+                       of an   left:inthe
+                             X-ray      theread-out concept
+                                                     leads to aof
+                                            absorber particles          the which is
+                                                               background       microcalorimeter.
+                                                                      temperature          induced
+                                                                                           increase  byof     theOn
+                                                                                                         primary        the of
+                                                                                                                     protons  right:
+                                                                                                                    TES/absorber       the
+                                                                                                                                 both solar    TES
+                                                                                                                                              and
+                                                                                                                                          couple       resistance as a
+                                                                                                                                                     and rays
+                                                                                                                                                  cosmic
+                                                     origin, and    secondary
+                                                               function of bias  electrons.   To
+                                                                                     temperature prevent    that,  a Cryogenic   AntiCoincidence     (CryoAC)
+thus of the TES resistance (see Figure 6). Underdetector
+                                                       an (almost)
+                                                               is placedconstant
+                                                                           in the proximity of  voltage,
+                                                                                                   the X-IFUthe  TEScurrent     going
+                                                                                                                      array [168].      through
+                                                                                                                                   The CryoAC     is athe
+                                                                                                                                                       4-pixels
+TES then shows a sharp decrease. Overall, eachdetector X-raymade photonof wide area silicon absorbers sensed by a network of about 120(and
+                                                                              will   create    a  current       pulse,   whose     amplitude        IrAu TESs
+shape) depends on its energy. It is reconstructed on connected
+                                                           board  in to
+                                                                     parallel.  It is a
+                                                                          provide     located  at a distance of
+                                                                                          precise    measurement   <1 mm of the
+                                                                                                                            underneath   the TES-array.
+                                                                                                                                     photon     energyA set
+and arrival time. The combination of the TES/absorberof low-Z material    shields in between
+                                                                   heat capacity,                 the TES array
+                                                                                          the thermal                and the Niobium
+                                                                                                               conductance        to theshield
+                                                                                                                                            coldwill minimize
+                                                                                                                                                  bath,
+                                                     the effect of secondaries. In this configuration, the X-IFU particle background will be
+and the electrical properties of the TES circuit, reduced
+                                                      including      the detector
+                                                               to a total   level <5·10 3 setpoint,      defineinthe
+                                                                                              cts/cm2 /s/keV          the temporal     shape
+                                                                                                                           2–10 keV energy        of the
+                                                                                                                                               band.  The first
+pulse. These are optimized to match the X-IFU 0.2           to 12 keV
+                                                     simultaneous             operating
+                                                                      operation of            range
+                                                                                       a CryoAC         and allow
+                                                                                                    prototype            a at INAF,
+                                                                                                                  developed  multiplexedwith areadout
+                                                                                                                                                 NASA-GSFC
+with minimal resolution degradation (see 2.2).30,      31 kilo-pixel array read-out in single pixel mode by a MHz-FDM set-up developed at
+                                                     TES
+                                                     SRON has been recently reported by Macculi et al. [169].
+
+
+
+
+Figure 7. Left) Top-down viewFigure     (a) X-IFU Center)
+                                    13. design.
+                              of pixel            Focal PlaneCross-section
+                                                              Assembly Demonstration
+                                                                               cartoonModel.
+                                                                                         view of(b) pixel
+                                                                                                     Photograph  of a Right)
+                                                                                                            layout.   X-IFU prototype array from
+                                                                                                                              Photograph       of
+                             NASA-GSFC with more than 3000 pixels on a pitch of 260 µm. Courtesy of the X-IFU FPA team at SRON and NASA-GSFC.
+a X-IFU prototype hexagonal detector    with more than 3000 pixels.
+                       This document belongs to CNES. Its information cannot be distributed, published or reproduced without a CNES agreement
+                                                         6.2. Other Future X-ray Space Missions
+                                                                  After the European mission Athena, other X-ray observatories are currently being
+                                                             proposed in China, Japan, and USA.
+                                                                  The Hot Universe Baryon Surveyor (HUBS) [170], proposed in China, is designed
+                                                             to explore and characterize the circumgalactic medium with a large FoV. HUBS will be
+                                                             complementary to Athena. Thanks to the larger FoV (10 angular resolution pixels over a
+                                                             1 deg2 FoV, while X-IFU has ⇠500 pixels over a FoV of 50 equivalent diameter), it is optimized
+                                                             to measure the spatial profile of extended warm-hot gas around galaxies and clusters of
+                                                             galaxies, and, potentially, the filamentary structures in the cosmic web, as well. The array
+

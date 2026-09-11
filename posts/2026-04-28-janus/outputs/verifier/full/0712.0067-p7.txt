@@ -1,0 +1,54 @@
+                                                                                           7
+
+
+                                               S=χT
+
+where the unknown term is the metric g and where the problem directly hinge upon the value
+of this tensor density T.
+
+Now we suppose the Universe is a four-dimensional manifold M4 fitted up with two metrics,
+which we call g+ and g-.
+
+We also suppose that positive energy particles follow the geodesics resulting from metrics g+,
+while negative energy particles progress along geodesics resulting from metrics g-.
+
+It is geometrically impossible for a positive energy particle to move along a geodesic deduced
+from the metric g - , and conversely for a negative energy particle to move along a geodesic
+deduced from the metric g + .
+
+From the metric g+ a geometrical tensor S + can be built, and in the same manner from the
+metric g – a geometrical tensor S - . Let us take the Einstein field equation again, which we
+will write:
+(25)
+                                       S + ( g +) = χ T
+
+T is a tensor density which contains the problem data, the energy-matter density at the
+considered point. This is the conjugation of two contributions.
+
+ρ + will designate the density of positive energy matter.
+
+In order to tally with previous works (references [7] to [11]) we decide to designate with
+ρ - the absolute value of the density of negative mass matter. Same thing for the pressure
+terms involved in the tensor density of this second kind of matter, so we will designate with
+T – the absolute value of the tensor density of an energy-matter corresponding to negative
+energy and mass. Thereby we write:
+(26)
+                                   S + ( g +) = χ ( T + - T - )
+
+
+Now we are going to create a coupling between both metrics, and we will call them conjugate
+metrics. Let us take again the development which brought us to the construction of the
+Einstein’s equation. We write the Hilbert functional:
+(27)
+                                 H + ( g ) = ∫ a R + ( g ) d Vg
+                                                M
+
+
+from where the derivative gives the geometrical tensor S + (g +) which is the gradient of this
+functional in the metrics function space, in the hyperspace. We suppose the geometrical tensor
+
+                                               S - ( g -)
+
+is a derivative from the Hilbert functional:
+(28)
+

@@ -1,0 +1,52 @@
+[38] Akamatsu, H., Gottardi, L., van der Kuur, J., de Vries, C. P., Bruijn, M. P., Chervenak, J. A., Kiviranta, M.,
+     van den Linden, A. J., Jackson, B. D., Miniussi, A., Ravensberg, K., Sakai, K., Smith, S. J., and Wakeham,
+     N., “Progress in the Development of Frequency-Domain Multiplexing for the X-ray Integral Field Unit on
+     Board the Athena Mission,” Journal of Low Temperature Physics 199, 737–744 (Jan. 2020).
+[39] Akamatsu, H., Vaccaro, D., Gottardi, L., van der Kuur, J., de Vries, C. P., Kiviranta, M., Ravensberg,
+     K., D’Andrea, M., Taralli, E., de Wit, M., Bruijn, M. P., van der Hulst, P., den Hartog, R. H., van
+     Leeuwen, B. J., van der Linden, A. J., McCalden, A. J., Nagayoshi, K., Nieuwenhuizen, A. C. T., Ridder,
+     M. L., Visser, S., van Winden, P., Gao, J. R., Hoogeveen, R. W. M., Jackson, B. D., and den Herder, J.
+     W. A., “Demonstration of MHz frequency domain multiplexing readout of 37 transition edge sensors for
+     high-resolution x-ray imaging spectrometers,” Applied Physics Letters 119, 182601 (Nov. 2021).
+[40] Irwin, K. D. and Hilton, G. C., “Transition-Edge Sensors,” in [Cryogenic Particle Detection ], Enss, C., ed.,
+     99, 63 (2005).
+[41] Durkin, M., Adams, J. S., Bandler, S. R., Chervenak, J. A., Chaudhuri, S., Dawson, C. S., Denison, E. V.,
+     Doriese, W. B., Duff, S. M., Finkbeiner, F. M., FitzGerald, C. T., Fowler, J. W., Gard, J. D., Hilton,
+     G. C., Irwin, K. D., Joe, Y. I., Kelley, R. L., Kilbourne, C. A., Miniussi, A. R., Morgan, K. M., O’Neil,
+     G. C., Pappas, C. G., Porter, F. S., Reintsema, C. D., Rudman, D. A., Sakai, K., Smith, S. J., Stevens,
+     R. W., Swetz, D. S., Szypryt, P., Ullom, J. N., Vale, L. R., Wakeham, N. A., Weber, J. C., and Young,
+     B. A., “Demonstration of Athena X-IFU Compatible 40-Row Time-Division-Multiplexed Readout,” IEEE
+     Transactions on Applied Superconductivity 29, 2904472 (Aug. 2019).
+[42] Lotti, S., D’Andrea, M., Molendi, S., Macculi, C., Minervini, G., Fioretti, V., Laurenza, M., Jacquey,
+     C., and Piro, L., “Review of the Particle Background of the Athena X-IFU Instrument,” Astrophysical
+     Journal 909, 111 (Mar. 2021).
+[43] Macculi, C., Argan, A., D’Andrea, M., Lotti, S., Laurenza, M., Piro, L., Biasotti, M., Corsini, D., Gatti, F.,
+     Torrioli, G., Fiorini, M., Molendi, S., Uslenghi, M., Mineo, T., Bulgarelli, A., Fioretti, V., and Cavazzuti, E.,
+     “The Cryogenic AntiCoincidence detector for ATHENA X-IFU: a program overview,” in [Space Telescopes
+     and Instrumentation 2016: Ultraviolet to Gamma Ray ], den Herder, J.-W. A., Takahashi, T., and Bautz,
+     M., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series 9905, 99052K (July
+     2016).
+[44] Macculi, C., Argan, A., Brienza, D., D’Andrea, M., Lotti, S., Minervini, G., Piro, L., Biasotti, M., Ferrari
+     Barusso, L., Gatti, F., Rigano, M., Chiarello, F., Torrioli, G., Fiorini, M., Uslenghi, M., Cavazzuti, E.,
+     Puccetti, S., and Volpe, A., “The cryogenic anticoincidence detector for ATHENA X-IFU: advancement in
+     the project,” in [Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series ], Society of
+     Photo-Optical Instrumentation Engineers (SPIE) Conference Series 11444, 114444A (Dec. 2020).
+[45] Macculi, C., Argan, A., Brienza, D., D’Andrea, M., Lotti, S., Minervini, G., Piro, L., Biasotti, M., Ferrari
+     Barusso, L., Gatti, F., Rigano, M., Torrioli, G., Fiorini, M., Molendi, S., Uslenghi, M., Cavazzuti, E., and
+     Volpe, A., “The Cryogenic AntiCoincidence Detector for ATHENA X-IFU: The Project Status,” Journal of
+     Low Temperature Physics 199, 416–424 (Jan. 2020).
+[46] D’Andrea, M., Macculi, C., Torrioli, G., Argan, A., Brienza, D., Lotti, S., Minervini, G., Piro, L., Biasotti,
+     M., Ferrari Barusso, L., Gatti, F., Rigano, M., Volpe, A., and Battistelli, E. S., “The Demonstration Model
+     of the ATHENA X-IFU Cryogenic AntiCoincidence Detector,” Journal of Low Temperature Physics 199,
+     65–72 (Apr. 2020).
+[47] D’Andrea, M., Ravensberg, K., Argan, A., Brienza, D., Lotti, S., Macculi, C., Minervini, G., Piro, L.,
+     Torrioli, G., Chiarello, F., Ferrari Barusso, L., Biasotti, M., Gallucci, G., Gatti, F., Rigano, M., Akamatsu,
+     H., Dercksen, J., Gottardi, L., de Groote, F., den Hartog, R., den Herder, J. W., Hoogeveen, R., Jackson, B.,
+     McCalden, A., Rosman, S., Taralli, E., Vaccaro, D., de Wit, M., Chervenak, J., Smith, S., and Wakeham, N.,
+     “ATHENA X-IFU Demonstration Model: First Joint Operation of the Main TES Array and its Cryogenic
+     AntiCoincidence Detector (CryoAC),” Journal of Low Temperature Physics (July 2022).
+[48] Prêle, D., Chen, S., Coleiro, A., Varniere, P., Peille, P., Ravera, L., and Kirsch, C., “Warm front end
+     electronic modelization for the X-IFU ATHENA readout chain simulation,” in [Society of Photo-Optical
+     Instrumentation Engineers (SPIE) Conference Series ], Society of Photo-Optical Instrumentation Engineers
+     (SPIE) Conference Series 11444, 114443U (Dec. 2020).
+

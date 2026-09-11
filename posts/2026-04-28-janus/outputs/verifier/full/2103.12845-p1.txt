@@ -1,0 +1,66 @@
+                                                 Cancellation of the central singularity of the Schwarzschild
+                                                       solution with natural mass inversion process.
+                                                             Published inModern Physics Letters A, Vol. 30, No. 9 (2015) 1550051
+
+
+                                                                              J.P. Petit∗                G. D’Agostini†
+
+                                                                                         March 25, 2021
+
+
+                                                                                           Abstract
+
+
+
+
+arXiv:2103.12845v1 [gr-qc] 23 Mar 2021
+                                                      We reconsider the classical Schwarzschild solution in the context of a Janus cosmological
+                                                   model. We show that the central singularity can be eliminated through a simple coordinate
+                                                   change and that the subsequent transit from one fold to the other is accompanied by mass
+                                                   inversion. In such scenario matter swallowed by black holes could be ejected as invisible
+                                                   negative mass and dispersed in space.
+
+                                            Keywords: Black hole; space bridge; Schwarzschild metric; Kerr metric; central singularity; Janus
+                                         cosmological model; Gaussian coordinates; mass inversion process.
+                                                 PACS Nos.: 98.80.Bp, 98.80.Qc
+
+
+                                         1        Introduction
+                                         When Schwarzschild published his solution 1 of Einstein equation, in 1916, the basic hypothesis
+                                         was just time-independence and spherical symmetry. Nobody suspected that there was an addi-
+                                         tional one: null-homotopy. The consequence of this last one was that, in the proposed solution,
+                                         r was a radial coordinate:
+
+                                                                                       dr2
+                                                                         
+                                                              2        Rs 2 2                      2    2       2     2
+                                                                                                                        
+                                                            ds = 1 −        c dt −        R
+                                                                                             −  r   dθ   + sin   θ dϕ    .          (1)
+                                                                        r            1 − rs
+                                             A first problem at r = Rs , considered as coordinate singularity, was eliminated by various
+                                         coordinates changes. See Fig. 1.
+                                             But r = 0 was considered as a true singularity, a point of space where the geodesics end.
+                                         The goal of this paper is to show, through a very simple coordinate change, that this so-called
+                                         “central singularity” is due to a wrong choice of local topology.
+                                             We must introduce the concept of representation space which is the space in which we build
+                                         a mental image of an object. As an example we believe we live in R3 and that space and time
+                                         are separated. This old belief is useful and enough for today’s life. But if the speed of light
+                                         was much smaller we should shift to Minkowski’s spacetime. Similarly, when we send a probe
+                                         to Jupiter or predict an eclipse we neglect space curvature. If this last was not neglectible, we
+                                         should use Einstein’s equation instead of Newton’s. If we intend to describe an object through
+                                         a line element it is easy to show, through 2D examples that inadequate coordinate choice may
+                                         induce wrong image of a geometric object. For example, consider the following metric:
+                                                                                                dr2
+                                                                                      ds2 =         2    + r2 dϕ,                                 (2)
+                                                                                              1 − Rr 2
+                                                                                                     s
+
+                                             ∗
+                                                 CNRS, BP 55, 84122 Pertuis, France, e-mail: jppetit1937@yahoo.fr
+                                             †
+                                                 dagostini.gilles@laposte.net
+
+
+                                                                                                  1
+

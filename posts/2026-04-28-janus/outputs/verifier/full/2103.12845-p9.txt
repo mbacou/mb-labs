@@ -1,0 +1,61 @@
+with
+                                                  t(−) = −t(+) .                             (21)
+    In the neighborhood of ρ = 0 it is possible to write the nearby expressions:
+                                      2       ρ2  (+) 2
+                               ds(+)        =       dt      − 2 dρ2 − Rs2 dϕ2 ,             (22a)
+                                                2
+
+                                      2ρ2  (−) 2
+                               ds(−)        =dt      − 2 dρ2 − Rs2 dϕ2 .                     (22b)
+                                         2
+    The inversion of the time variable does not imply a change in the sign of the proper time, and
+from one fold to the other ds(−) takes the reins of ds(+) . It is not possible
+                                                                            to have
+                                                                                    an inversion
+in the length measure along a geodesic. In other words we have ds(+) ds(−) > 0. But t(+)
+and t(−) are nothing more than “time markers”, simple coordinates, and thus one will have:
+dt(−) = − dt(+) . So here one finds again the central idea of differential geometry: the length
+element has an only intrinsic reality. Lagrange equations give always in the vicinity of ρ = 0 the
+relations:
+
+                                                   ϕ̈ = ρ̈ = 0.                              (23)
+    These functions are linear and monotonic as a function of the proper times (lengths s(+) and
+s(−) ) that enchain themselves in passing from one fold to the other without inversion.
+
+                            dt(+)    C             dt(−)   −C
+                               (+)
+                                   = 2,               (−)
+                                                          = 2 ,     C = Cst.                 (24)
+                            ds      ρ              ds       ρ
+    The sign of the constant C depends on the sense adopted for the passage from one fold to the
+other. The object is thus a “black hole” and a “white fountain” at the same time. But, if measured
+with variable t(+) the passage is achievable only in an infinite time. If the object results from
+the implosion of a neutron star, its mass would be transferred to the negative energy region. But
+for the observers located in one of the folds such phenomena of implosion–explosion will appear
+to be “freezed in time”.
+    As shown in Ref. 16 time-inversion goes with mass and energy inversion. In Refs. 11 and 12,
+according to Janus Cosmological Model the universe is composed by positive and negative energy
+                                                                        (+)     (−)
+(and mass if they own) particles, respectively described by metrics gµν and gµν , solutions of a
+coupled field equation system. Spacetime bridges operate mass inversion. From Ref. 11 we know
+that masses with opposite signs repel each other. On another hand negative matter does not
+interact with positive matter by electromagnetic, strong or weak interaction.
+
+
+2      Conclusion and Discussion
+If black holes exist and swallow matter this last, instead to be crushed in a central singularity,
+would be discretely rejected as an invisible negative matter.
+    The main feature of the theory presented here is the mass (and space) inversion process. The
+advantage is to avoid the puzzling problem of a “central singularity” and to explain the fate of
+matter swallowed by black holes. But it implies injection of negative energy (and mass if the
+                                                                           (+)     (−)
+own) particles in spacetime, considered as a manifold plus two metrics gµν and gµν .
+    As precised in Ref. 9 we assumed that particles of opposite masses do not interact neither
+by electromagnetic forces nor strong or weak forces, they could not enter into a collision. Some
+colleagues have criticized this idea arguing that “the particles are on the same spacetime”. The
+answer to this question is: if one considers the problem on purely geometrical grounds, those
+encounters would be “geometrically impossible” because the two subsets move along disjoint
+families of geodesics.
+
+                                                        9
+

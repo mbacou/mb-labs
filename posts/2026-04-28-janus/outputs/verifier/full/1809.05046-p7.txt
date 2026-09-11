@@ -1,0 +1,43 @@
+antichronous transformations result from the application of a unitary PT (=
+−diag(1, 1, 1, 1)) on the orthochronous ones, changing the sign of the first
+component of 4-vectors. And if the mass becomes negative, so is the energy
+through the Einstein relation E = m for a relativistic particle at rest.
+
+
+3      Realization of the unitary PT symmetry
+       for the Dirac equation
+Let us now see the impact of a unitary PT transformation on the Dirac
+equation.
+For recall, the covariant Dirac equation is written as [17]
+
+                                    (γ µ pµ − m)ψ = 0                             (12)
+
+with the Dirac matrices satisfying
+
+                     {γ µ , γ ν } = 2g µν , g = diag(1, −1, −1, −1)               (13)
+
+We realize these matrices through the so-called Dirac representation i.e.
+                                          !                       !
+                                  0 ~σ                    I 0
+                        ~γ =                  , γ0 =                              (14)
+                                 −~σ 0                    0 −I
+
+where the ~σ are the Pauli matrices.
+The usual unitary parity operator P is realized through
+
+                                 ψ(t, ~x) → γ 0 ψ(t, −~x)                         (15)
+
+In what concerns a unitary time-reversal, we have to ask for
+
+    TU (iγ 0 ∂t + iγ j ∂j − m)TU−1 TU ψ(x) = (−iγ 0 ∂t + iγ j ∂j − m)ψ ′ (x′ ) = 0 (16)
+
+with
+                               x = (t, ~x) → x′ = (−t, ~x)                        (17)
+In other words, we have to search for a matrix TU anticommuting with γ 0
+and commuting with each of the γ j ’s. This matrix is γ 1 γ 2 γ 3 . Up to a phase,
+the action of the time reversal as a unitary operator is thus marked by
+
+                               ψ(t, ~x) → γ 1 γ 2 γ 3 ψ(−t, ~x)                   (18)
+
+                                              7
+

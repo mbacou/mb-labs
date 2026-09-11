@@ -1,0 +1,16 @@
+                                                                                               17
+
+
+
+
+            Fig.12: 2d space time image with symmetry breaking and recovering
+
+The diamond-like portion of the surface illustrates that, in such place the O(2) symmetry does not
+hold. Il we choose a fully closed universe (spherical space-time) we get the figure 12.
+
+
+
+
+            Fig.13: Closed 2d Universe with symmetry breaking and recovering.
+                          In white areas the O(2) symmetry holds
+

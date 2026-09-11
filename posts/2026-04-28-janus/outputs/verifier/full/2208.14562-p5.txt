@@ -1,0 +1,26 @@
+                                                 ABSTRACT
+The Athena X-ray Integral Unit (X-IFU) is the high resolution X-ray spectrometer studied since 2015 for flying
+in the mid-30s on the Athena space X-ray Observatory. Athena is a versatile observatory designed to address
+the Hot and Energetic Universe science theme, as selected in November 2013 by the Survey Science Committee.
+Based on a large format array of Transition Edge Sensors (TES), X-IFU aims to provide spatially resolved
+X-ray spectroscopy, with a spectral resolution of 2.5 eV (up to 7 keV) over an hexagonal field of view of 5
+arc minutes (equivalent diameter). The X-IFU entered its System Requirement Review (SRR) in June 2022,
+at about the same time when ESA called for an overall X-IFU redesign (including the X-IFU cryostat and the
+cooling chain), due to an unanticipated cost overrun of Athena. In this paper, after illustrating the breakthrough
+capabilities of the X-IFU, we describe the instrument as presented at its SRR (i.e. in the course of its preliminary
+definition phase, so-called B1), browsing through all the subsystems and associated requirements. We then show
+the instrument budgets, with a particular emphasis on the anticipated budgets of some of its key performance
+parameters, such as the instrument efficiency, spectral resolution, energy scale knowledge, count rate capability,
+non X-ray background and target of opportunity efficiency. Finally, we briefly discuss the ongoing key technology
+demonstration activities, the calibration and the activities foreseen in the X-IFU Instrument Science Center,
+touch on communication and outreach activities, the consortium organisation and the life cycle assessment of
+X-IFU aiming at minimising the environmental footprint, associated with the development of the instrument.
+Thanks to the studies conducted so far on X-IFU, it is expected that along the design-to-cost exercise requested
+by ESA, the X-IFU will maintain flagship capabilities in spatially resolved high resolution X-ray spectroscopy,
+enabling most of the original X-IFU related scientific objectives of the Athena mission to be retained.
+The X-IFU will be provided by an international consortium led by France, The Netherlands and Italy, with ESA
+member state contributions from Belgium, Czech Republic, Finland, Germany, Poland, Spain, Switzerland, with
+additional contributions from the United States and Japan.
+Keywords: Athena: The Advanced Telescope for High Energy Astrophysics, X-IFU: The X-ray Integral Field
+Unit. Space instrumentation. X-rays. Observatory.
+

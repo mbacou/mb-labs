@@ -1,0 +1,45 @@
+         • One closed position (Molybdenum filter), to be used during launch for the protection of the focal plane
+           detectors and in-flight for the evaluation of the internal detectors background.
+         • One open position (no filter) that is used for most observations or in the event of failures related to the
+           FW.
+         • One thick filter with a transmission equivalent to 100-µm of Beryllium to suppress the X-ray fluxes of
+           celestial sources at energies < 3 keV. This filter can thus be adopted to limit the degradation of the X-IFU
+           performances during the observations of particularly soft and bright X-ray sources.
+         • One thinner filter with a transmission equivalent to 20-µm of Beryllium for the observation of X-ray sources
+           of intermediate brightness (while preserving more soft X-ray photons).
+         • Two optical blocking filters that are needed to limit the optical load (and thus the degradation of the
+           instrument energy resolution) from the bright UV/V counterparts of the X-ray sources to be observed by
+           the X-IFU. The first filter will be made out of a 200 nm-thick polyimide foil covered with a layer of 30
+           nm-thick Aluminum layer. The second filter will be made out of a 200 nm-thick polyimide foil covered by
+           a 60 nm-thick Aluminum layer.
+         • A number of 55 Fe radioactive sources, to be used for the calibration of the X-IFU.
+
+         The filter wheel mechanical assembly (FWA) is controlled by its associated electronic box: the filter wheel
+     electronics (FWE).
+
+     2.9 The Calibration Assembly (CAS)
+     To capitalize on the good intrinsic energy resolution of the X-IFU main detector, it is critical to be able to correct
+     for drifts in the detector response and in the electronics. These drifts can be caused by many factors including
+     the thermal load on the detector, its magnetic field and temperature variations in the electronics, etc... They
+     typically need to be corrected to a level of better than a few 0.1 eV. The drifts are assumed to be slowly varying
+     and being able to correct these on a 4000 s time scale is sufficient.
+         X-ray emission lines, if intense enough, allow such post-facto drift corrections. Natural X-ray sources (such as
+     a 55 Fe source) would be bright enough but continuously illuminate the detector (can be placed on a position in
+     the filter wheel) but would contribute to the instrumental background if used during the observation. Therefore,
+     modulated X-ray sources (MXS), similar to the one developed for Hitomi, are the natural choice.67 The CAS
+(FWE).
+
+
+
+
+     Figure 18. Left) View of CAS with 6 MXS and 2 High Voltage Power Supply units (I-PRR Design). Center) One MXS
+     Right) FW and CAS accommodation wrt Athena telescope X-Ray beam and detector visibility cone.
+
+     includes (see Figure 18) :
+
+         • six Modulated X-ray Sources (MXS),
+         • a CAS ring carrying the MXS around the telescope X-ray beam,
+         • the high voltage harness linking the HVPS to the MXS,
+         • two High Voltage Power Supplies (HVPS),
+         • a CAS support plate.
+

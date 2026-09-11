@@ -1,0 +1,75 @@
+--- KEYWORD: km/s ---
+outputs/verifier/full/2208.14562-p25.txt:30:(down to 20 km/s accuracy) bulk motions of hot plasma in galaxy clusters, being deemed sufficient to measure
+outputs/verifier/full/2208.14562-p6.txt:103:                                                                                                                                                                                                       Best fit (μerr=3.9%,σerr=10.2km/s)
+outputs/verifier/full/2208.14562-p6.txt:104:                                                                                                                                                                                                       μerr ±μfit (7.4 km/s)
+outputs/verifier/full/2208.14562-p6.txt:128: mic lines, al-               of iron (wrt to solar) and bulk motion (km/s) computed from the mean redshift of the cluster. White dots represent the excised point sources. (Bot-
+outputs/verifier/full/2208.14562-p6.txt:129:                         to right):    Plasma temperature in keV, abundance of iron (with respect to solar) and bulk motion (km/s) computed from
+outputs/verifier/full/2208.14562-p8.txt:9:                                                                                                                                           Perseus: Fe XXV Heα, z = 0.01756, σv,turb = 160 km/s
+--- KEYWORD: kpc ---
+--- KEYWORD: v(r) ---
+--- KEYWORD: v(r) ---
+--- KEYWORD: v(r) ---
+--- KEYWORD: v (r) ---
+--- KEYWORD: rotation curve ---
+--- KEYWORD: rotation-curve ---
+--- KEYWORD: chi2 ---
+--- KEYWORD: chi^2 ---
+--- KEYWORD: fit ---
+outputs/verifier/full/0712.0067-p1.txt:35:models, solutions to Einstein's equations, fit the observations. With time, a general consensus
+outputs/verifier/full/0712.0067-p4.txt:6:implies having recourse to the complete Poincaré group, outfitted with its orthochron and
+outputs/verifier/full/0712.0067-p7.txt:9:Now we suppose the Universe is a four-dimensional manifold M4 fitted up with two metrics,
+outputs/verifier/full/0805.1423-p1.txt:22:arrow of time, mass and energy is a consequence of this geometrical hypothesis and fits the
+outputs/verifier/full/0805.1423-p20.txt:15:       bundle. As a first order solution, the Kaluza metric fits the five dimensional field
+outputs/verifier/full/0805.1423-p5.txt:30:isotropy and homogeneity, which does not fit the observational data. The expansion occurs in
+outputs/verifier/full/1408.2451-p7.txt:20:the bimetric model fits the classical local tests of GR.
+outputs/verifier/full/1809.05046-p3.txt:5:The JCM perfectly fits available observational data [12] and restores the
+outputs/verifier/full/2103.12845-p8.txt:24:surface, time and space cannot be oriented. This fits time and space inversion from fold F (+) to
+outputs/verifier/full/2206.00300-p5.txt:20:   In order to separate the effect of gravity from the effect   shown in [29] that Eq. (39) accurately fits the acoustic
+outputs/verifier/full/2208.14562-p26.txt:29:data points, the light blue lines are the natural lines shapes and the dark blue line is the fit to data. The fitted ∆EFWHM , number of counts and number of pixels FWHM  measured
+outputs/verifier/full/2208.14562-p26.txt:38:shape profile of [20] to fit Cu- Kα gives a slightly different best fit resolution of ∆EFWHM = 2.42 eV). The Br line shape is derived from [21], [22], however the    theconnect to the
+outputs/verifier/full/2208.14562-p26.txt:43:       dark blue line is the fit to data. The fitted ∆E (Full Width ataverage                                                                            obtained
+outputs/verifier/full/2208.14562-p26.txt:152:                                                                                                                                             energy histogram is fitted to the assumed line profile for each
+outputs/verifier/full/2208.14562-p26.txt:163:                                                                                                                                                                                 listbest-fit   value of ∆E
+outputs/verifier/full/2208.14562-p26.txt:167:        the last column, Table 6). One of the most emblematic count                                                                          local gain slope parameter is included in the fitting routine
+outputs/verifier/full/2208.14562-p34.txt:52:      on the X-IFU interface due to its large volume, which will need to fit below the SIM.
+outputs/verifier/full/2208.14562-p43.txt:32:[34] Doriese, W. B., Morgan, K. M., Bennett, D. A., Denison, E. V., Fitzgerald, C. P., Fowler, J. W., Gard, J. D.,
+outputs/verifier/full/2208.14562-p43.txt:38:     FitzGerald, C. T., Fowler, J. W., Gard, J. D., Hilton, G. C., Irwin, K. D., Joe, Y. I., Morgan, K. M., O’Neil,
+outputs/verifier/full/2208.14562-p44.txt:14:     Doriese, W. B., Duff, S. M., Finkbeiner, F. M., FitzGerald, C. T., Fowler, J. W., Gard, J. D., Hilton,
+outputs/verifier/full/2208.14562-p6.txt:97:                                         Best fit (μerr=-0.9%,σerr=2.2%)
+outputs/verifier/full/2208.14562-p6.txt:98:                                         μerr ±μfit (2.4%)
+outputs/verifier/full/2208.14562-p6.txt:100:                                                                                                                         Best fit (μerr=1.5%,σerr=7.3%)
+outputs/verifier/full/2208.14562-p6.txt:101:                                                                                                                         μerr ±μfit (9.3%)
+outputs/verifier/full/2208.14562-p6.txt:103:                                                                                                                                                                                                       Best fit (μerr=3.9%,σerr=10.2km/s)
+outputs/verifier/full/2208.14562-p6.txt:104:                                                                                                                                                                                                       μerr ±μfit (7.4 km/s)
+outputs/verifier/full/2208.14562-p6.txt:130:                              tom:) Corresponding normalised relative error distribution (%) of output with respect to input histogram (green) along with Gaussian best fit (red sol-
+outputs/verifier/full/2208.14562-p6.txt:140:                                                                                                         the related        fit. sources. (Bottom:) Corresponding normalised
+outputs/verifier/full/2208.14562-p6.txt:143:                         relative error distribution (%) of output with respect to input histogram (green) along with Gaussian best fit (red solid
+outputs/verifier/full/2208.14562-p6.txt:149:                                                                                     biases error        to to the fit.
+outputs/verifier/full/2208.14562-p6.txt:156:                                      perature [13] and multi-band spectral fits. Residuals error can be explained by low-statistics in the lines, mixing
+outputs/verifier/full/2208.14562-p7.txt:43:The plot shows the ratio of the X-IFU data of the blazar 1ES 1553+113 with the local best-fitting continuum model, to
+outputs/verifier/full/2208.14562-p7.txt:44:highlight the two OVII He-α and He-β absorption lines. The simulation is performed using the best fitting parameters
+--- KEYWORD: velocity ---
+outputs/verifier/full/0712.0067-p13.txt:36:[13] J.P.Petit : An interpretation of cosmological model with variable light velocity. Modern
+outputs/verifier/full/0712.0067-p13.txt:38:[14] J.P.Petit : Cosmological model with variable light velocity: the interpretation of red
+outputs/verifier/full/0712.0067-p13.txt:40:[15] J.P.Petit & M.Viton : Gauge cosmological model with variable light velocity.
+outputs/verifier/full/0805.1423-p20.txt:20:structure of the two boundary 4d-universes, linking the two, when the velocity of the light is
+outputs/verifier/full/0805.1423-p20.txt:44:of light and the second to a "nil" value of this velocity), is an imaginary quantity. The figure 17 is
+outputs/verifier/full/1408.2451-p3.txt:55:four-velocity flows uµ (x) = dx
+outputs/verifier/full/2206.00300-p2.txt:39:                      II.    MODEL                            ity. The complex harmonic velocity field ui associated
+outputs/verifier/full/2206.00300-p2.txt:45:equations describing the acoustic and electromagnetic         interface, the pressure and the velocity fields satisfy the
+outputs/verifier/full/2206.00300-p2.txt:57:heat-conducting media when dealing with acoustic waves        velocity is irrotational in absence of acoustic attenuation,
+outputs/verifier/full/2206.00300-p3.txt:20:                                                                   tangential components of the velocity field on both sides
+outputs/verifier/full/2206.00300-p3.txt:86:   Assuming the incident acoustic pressure and velocity            order to get an axisymmetric radiation stress leading to
+outputs/verifier/full/2206.00300-p3.txt:88:distribution, the acoustic velocity can be expressed as            netic radiation stress can be actually obtained by con-
+outputs/verifier/full/2206.00300-p4.txt:36:                                                                phase fluid sample can flow. The velocity and pressure
+outputs/verifier/full/2206.00300-p4.txt:43:                                                                   Since the observed interface velocity is always largely
+outputs/verifier/full/2206.00300-p4.txt:44:where, according to Eqs. (5)–(8), the normal and tangen-        subsonic, we assume both velocity fields Ui as incom-
+outputs/verifier/full/2206.00300-p4.txt:50:                        H 1 = H2 .                      (25)       Moreover, the observed interface velocity is sufficiently
+outputs/verifier/full/2206.00300-p4.txt:64:                                                                the continuity of the flow velocity
+outputs/verifier/full/2206.00300-p5.txt:28:                           2                                    fine the characteristic fluid velocity in the creeping flow
+outputs/verifier/full/2206.00300-p5.txt:39:where TH solely encompasses all the effect of flows on          time t̃ = t/τ , velocity Ũi = Ui /U0 , pseudo-pressure
+outputs/verifier/full/2206.00300-p5.txt:70:                     = U(x) , x ∈ Cint ,                (38)    and determining the induced velocity field Ũ and hydro-
+outputs/verifier/full/2206.00300-p6.txt:23:    C2                                                               of the velocity field along the interface, whose position
+outputs/verifier/full/2206.00300-p6.txt:39:are the velocity and stress associated to the Green kernel,          of the mechanical perturbation applied on the interface
+--- KEYWORD: km s^-1 ---
+--- KEYWORD: k m s ---

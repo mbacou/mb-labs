@@ -1,0 +1,73 @@
+                                                                                                                                  7
+
+work is rooted in the fact that the existence and the diam-    the dimensions of the fluid sample rmax and zmax are as-
+eter of liquid bridges [10–12] and needle-like interface de-   sumed to be large enough that h∞ does not depend on
+formations [8] sustained either by acoustic or electromag-     them.
+netic waves can be explained by the waveguiding prop-             At steady state there is no more flow: Ui = 0 and
+erties of the wave-induced deformation that behaves as a       P̂i = 0. Consequently TH = 0. As shown by Eq. (37),
+step-index liquid-core liquid-cladding cylindrical waveg-      the deformation thus results from the combined effects of
+uide. Considering the textbook case of step-index opti-        interfacial tension σ, buoyancy g(ρ1 − ρ2 ) and radiation
+cal fibre with radius R, inner refractive index nin and        pressure TR . As shown by Eq. (10) and (17), radia-
+outer index nout < nin , the number of guided propa-           tion pressure involves the propagating fields and physical
+gating modes is determinedp     by the value of the dimen-     properties of both fluids. The propagating fields are de-
+sionless parameter V = k0 R n2out − n2in , where k0 is the     fined by the beam power P, its waist w0 , its wavenumber
+wavenumber in vacuum of the harmonic field injected into       kfrom = ω/cfrom and its direction of propagation, that
+the waveguide [35]. By analogy, here we define a univer-       is accounted by introducing a boolean variable ξ whose
+sal characteristic waveguiding parameter V associated to       value depends on whether cfrom > cto or cfrom < cto .
+an interface deformation as                                    The fluids physical properties determining the radiation
+                      v                                        pressure are c1 , c2 plus (i) µ1 and µ2 for electromagnetic
+                                  2  2
+                                                               waves or (ii) ρ1 and ρ2 for acoustic waves. In what follows
+                      u
+                      u       1           1
+             V = ωw0 t              −           ,       (51)   we consider separately the acoustic and electromagnetic
+                            cfrom        cto
+                                                               cases.
+where cto is the wave celerity of the medium to which
+the incident wave goes after passing through the inter-                                2.   Acoustic waves
+face. Introducing the wavenumber of the incident beam,
+kfrom = ω/cfrom , Eq. (51) can be reformulated as
+                                                                 From the previous analysis it follows that for acoustic
+                          v
+                          u             2                    waves, h∞ is function of 11 independent quantities:
+                          u        cfrom
+             V = kfrom w0 t 1 −             .      (52)          h∞ = f (r, g(ρ1 − ρ2 ), σ, P, w0 , kfrom , ξ, ρ1 , ρ2 , c1 , c2 ).
+                                    cto
+                                                                                                                                (53)
+As shown in [6], V is a prime choice parameter for de-         Since the quantities appearing in Eq. (53) can be ex-
+scribing and understanding the shape of observed inter-        pressed using the dimensions of mass, length and time,
+face deformations whatever is the nature of the wave.          according to Buckingham’s theorem [36], Eq. (53) can
+   Noteworthy, Π0 and V are the two key universal in-          be rewritten as a relationship between 9 independent di-
+gredients when addressing the PDI problem. Indeed, Π0          mensionless quantities. We choose
+informs to what extent the incident wave can deform the             h∞
+                                                                             
+                                                                                r                  Z 1 c1
+                                                                                                                    
+interface whereas V informs to what extent the deformed                 =F        , Bo, Π0 , V, ξ,     , , A(ρ̄) ,              (54)
+                                                                     w0        w0                  Z 2 c2
+interface can distort the incident wave.
+                                                               where ρ̄ = (ρ1 + ρ2 )/2 and A(ρ̄) is a dimensionless quan-
+                                                               tity involving ρ̄. Noticing that ρ̄ accounts for fluid inertia,
+               B.    Dimensional analysis
+                                                               which is involved only in unsteady phenomena, A(ρ̄) is
+                                                               discarded recalling that we deal here with static steady
+  In this section we aim at identifying a minimal set of       states. Finally, an important additional simplification
+dimensionless parameters determining the axisymmetric          occurs when considering ρ1 = ρ2 , which leads to Bo = 0
+shape of the deformed interface at steady state h∞ (r) =       and Z1 /Z2 = c1 /c2 , hence to
+h(r, t ≫ τ ).                                                                                            
+                                                                               h∞          r c1
+                                                                                   =F        , , Π0 , V, ξ .             (55)
+                                                                               w0         w0 c2
+                    1.   General remarks
+
+   At first we notice that, for electromagnetic waves, the                        3.   Electromagnetic waves
+hypothesis of axisymmetric deformations requires to dis-
+card the role of the polarization state, which is valid          In the case of electromagnetic waves, h∞ is function of
+in the limit of small refractive index contrast, as sug-       11 independent quantities:
+gested by the expressions of the Fresnel coefficients of
+reflexion and transmission at the interface between two          h∞ = f (r, g(ρ1 − ρ2 ), σ, P, w0 , kfrom , ξ, µ1 , µ2 , c1 , c2 ).
+homogeneous media. Since all the reported electromag-                                                                           (56)
+netic experiments involve weak refractive index contrasts      The quantities appearing in Eq. (56) can be expressed
+(typically of the order of a few percent), the role of the     using the dimensions of mass, length, time, and electric
+polarization state is discarded from now on. Moreover,         current. According to Buckingham’s theorem, Eq. (56)
+

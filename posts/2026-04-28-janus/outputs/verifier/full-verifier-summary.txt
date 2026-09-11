@@ -1,0 +1,247 @@
+Full Verifier run: 2026-04-30T03:47:11Z
+Processing 0712.0067
+Pages: 14
+Extracted pages for 0712.0067
+Processing 0805.1423
+Pages: 22
+Extracted pages for 0805.1423
+Processing 1408.2451
+Pages: 9
+Extracted pages for 1408.2451
+Processing 1809.05046
+Pages: 14
+Extracted pages for 1809.05046
+Processing 2103.12845
+Pages: 11
+Extracted pages for 2103.12845
+Processing 2206.00300
+Pages: 15
+Extracted pages for 2206.00300
+Processing 2208.14562
+Pages: 48
+Extracted pages for 2208.14562
+\n--- Claim: runaway ---
+Found in 1408.2451 p1
+Found in 1408.2451 p2
+Found in 1408.2451 p6
+Found in 1408.2451 p8
+Found in 1809.05046 p1
+Found in 1809.05046 p2
+\n--- Claim: bimetric ---
+Found in 0712.0067 p10
+Found in 0712.0067 p12
+Found in 0712.0067 p1
+Found in 0712.0067 p6
+Found in 0805.1423 p16
+Found in 0805.1423 p19
+Found in 0805.1423 p1
+Found in 0805.1423 p20
+Found in 0805.1423 p22
+Found in 1408.2451 p1
+Found in 1408.2451 p3
+Found in 1408.2451 p5
+Found in 1408.2451 p6
+Found in 1408.2451 p7
+Found in 1408.2451 p8
+\n--- Claim: bigravity ---
+Found in 0712.0067 p12
+Found in 0712.0067 p1
+Found in 0712.0067 p6
+Found in 0805.1423 p1
+Found in 0805.1423 p22
+Found in 0805.1423 p3
+\n--- Claim: negative mass ---
+Found in 0712.0067 p10
+Found in 0712.0067 p12
+Found in 0712.0067 p13
+Found in 0712.0067 p14
+Found in 0712.0067 p1
+Found in 0712.0067 p2
+Found in 0712.0067 p3
+Found in 0712.0067 p4
+Found in 0712.0067 p7
+Found in 0712.0067 p8
+Found in 0712.0067 p9
+Found in 0805.1423 p1
+Found in 0805.1423 p20
+Found in 1408.2451 p1
+Found in 1408.2451 p2
+Found in 1408.2451 p3
+Found in 1408.2451 p5
+Found in 1408.2451 p6
+Found in 1408.2451 p7
+Found in 1408.2451 p8
+Found in 1809.05046 p11
+Found in 1809.05046 p12
+Found in 1809.05046 p13
+Found in 1809.05046 p1
+Found in 1809.05046 p2
+Found in 1809.05046 p3
+Found in 2103.12845 p1
+\n--- Claim: rotation curve ---
+\n--- Claim: rotation ---
+Found in 1809.05046 p14
+Found in 2206.00300 p2
+Found in 2208.14562 p18
+\n--- Claim: cosmic acceleration ---
+Found in 0712.0067 p10
+Found in 0712.0067 p1
+Found in 0805.1423 p22
+Found in 2103.12845 p10
+\n--- Claim: acceleration ---
+Found in 0712.0067 p10
+Found in 0712.0067 p12
+Found in 0712.0067 p1
+Found in 0712.0067 p2
+Found in 0805.1423 p19
+Found in 0805.1423 p22
+Found in 0805.1423 p5
+Found in 1408.2451 p8
+Found in 1809.05046 p13
+Found in 2103.12845 p10
+Found in 2206.00300 p4
+Claim -> first match (pdf page)
+negative mass -> 0712.0067 p10
+cosmic acceleration -> 0712.0067 p10
+runaway -> 1408.2451 p1
+bimetric -> 0712.0067 p10
+bigravity -> 0712.0067 p12
+rotation -> 1809.05046 p14
+acceleration -> 0712.0067 p10
+Full verifier extraction complete.
+total 816
+drwxr-xr-x 2 mbacou mbacou  4096 Apr 30 04:47 .
+drwxr-xr-x 3 mbacou mbacou  4096 Apr 30 04:47 ..
+-rw-r--r-- 1 mbacou mbacou  2601 Apr 30 04:47 0712.0067-p10.txt
+-rw-r--r-- 1 mbacou mbacou  3005 Apr 30 04:47 0712.0067-p11.txt
+-rw-r--r-- 1 mbacou mbacou  1809 Apr 30 04:47 0712.0067-p12.txt
+-rw-r--r-- 1 mbacou mbacou  2482 Apr 30 04:47 0712.0067-p13.txt
+-rw-r--r-- 1 mbacou mbacou   870 Apr 30 04:47 0712.0067-p14.txt
+-rw-r--r-- 1 mbacou mbacou  2036 Apr 30 04:47 0712.0067-p1.txt
+-rw-r--r-- 1 mbacou mbacou  2440 Apr 30 04:47 0712.0067-p2.txt
+-rw-r--r-- 1 mbacou mbacou  2388 Apr 30 04:47 0712.0067-p3.txt
+-rw-r--r-- 1 mbacou mbacou  2823 Apr 30 04:47 0712.0067-p4.txt
+-rw-r--r-- 1 mbacou mbacou  2388 Apr 30 04:47 0712.0067-p5.txt
+-rw-r--r-- 1 mbacou mbacou  2223 Apr 30 04:47 0712.0067-p6.txt
+-rw-r--r-- 1 mbacou mbacou  2392 Apr 30 04:47 0712.0067-p7.txt
+-rw-r--r-- 1 mbacou mbacou  2407 Apr 30 04:47 0712.0067-p8.txt
+-rw-r--r-- 1 mbacou mbacou  2913 Apr 30 04:47 0712.0067-p9.txt
+-rw-r--r-- 1 mbacou mbacou   512 Apr 30 04:47 0805.1423-p10.txt
+-rw-r--r-- 1 mbacou mbacou   442 Apr 30 04:47 0805.1423-p11.txt
+-rw-r--r-- 1 mbacou mbacou   784 Apr 30 04:47 0805.1423-p12.txt
+-rw-r--r-- 1 mbacou mbacou   444 Apr 30 04:47 0805.1423-p13.txt
+-rw-r--r-- 1 mbacou mbacou   344 Apr 30 04:47 0805.1423-p14.txt
+-rw-r--r-- 1 mbacou mbacou   153 Apr 30 04:47 0805.1423-p15.txt
+-rw-r--r-- 1 mbacou mbacou  1486 Apr 30 04:47 0805.1423-p16.txt
+-rw-r--r-- 1 mbacou mbacou   516 Apr 30 04:47 0805.1423-p17.txt
+-rw-r--r-- 1 mbacou mbacou   830 Apr 30 04:47 0805.1423-p18.txt
+-rw-r--r-- 1 mbacou mbacou  1825 Apr 30 04:47 0805.1423-p19.txt
+-rw-r--r-- 1 mbacou mbacou  2415 Apr 30 04:47 0805.1423-p1.txt
+-rw-r--r-- 1 mbacou mbacou  2783 Apr 30 04:47 0805.1423-p20.txt
+-rw-r--r-- 1 mbacou mbacou   186 Apr 30 04:47 0805.1423-p21.txt
+-rw-r--r-- 1 mbacou mbacou  1304 Apr 30 04:47 0805.1423-p22.txt
+-rw-r--r-- 1 mbacou mbacou  2598 Apr 30 04:47 0805.1423-p2.txt
+-rw-r--r-- 1 mbacou mbacou  1239 Apr 30 04:47 0805.1423-p3.txt
+-rw-r--r-- 1 mbacou mbacou  2654 Apr 30 04:47 0805.1423-p4.txt
+-rw-r--r-- 1 mbacou mbacou  1906 Apr 30 04:47 0805.1423-p5.txt
+-rw-r--r-- 1 mbacou mbacou  1232 Apr 30 04:47 0805.1423-p6.txt
+-rw-r--r-- 1 mbacou mbacou   585 Apr 30 04:47 0805.1423-p7.txt
+-rw-r--r-- 1 mbacou mbacou  1419 Apr 30 04:47 0805.1423-p8.txt
+-rw-r--r-- 1 mbacou mbacou   506 Apr 30 04:47 0805.1423-p9.txt
+-rw-r--r-- 1 mbacou mbacou  3771 Apr 30 04:47 1408.2451-p1.txt
+-rw-r--r-- 1 mbacou mbacou  3935 Apr 30 04:47 1408.2451-p2.txt
+-rw-r--r-- 1 mbacou mbacou  3815 Apr 30 04:47 1408.2451-p3.txt
+-rw-r--r-- 1 mbacou mbacou  3371 Apr 30 04:47 1408.2451-p4.txt
+-rw-r--r-- 1 mbacou mbacou  4105 Apr 30 04:47 1408.2451-p5.txt
+-rw-r--r-- 1 mbacou mbacou  3885 Apr 30 04:47 1408.2451-p6.txt
+-rw-r--r-- 1 mbacou mbacou  3564 Apr 30 04:47 1408.2451-p7.txt
+-rw-r--r-- 1 mbacou mbacou  2674 Apr 30 04:47 1408.2451-p8.txt
+-rw-r--r-- 1 mbacou mbacou     1 Apr 30 04:47 1408.2451-p9.txt
+-rw-r--r-- 1 mbacou mbacou  2239 Apr 30 04:47 1809.05046-p10.txt
+-rw-r--r-- 1 mbacou mbacou  2288 Apr 30 04:47 1809.05046-p11.txt
+-rw-r--r-- 1 mbacou mbacou  2094 Apr 30 04:47 1809.05046-p12.txt
+-rw-r--r-- 1 mbacou mbacou  1473 Apr 30 04:47 1809.05046-p13.txt
+-rw-r--r-- 1 mbacou mbacou   855 Apr 30 04:47 1809.05046-p14.txt
+-rw-r--r-- 1 mbacou mbacou  3747 Apr 30 04:47 1809.05046-p1.txt
+-rw-r--r-- 1 mbacou mbacou  2479 Apr 30 04:47 1809.05046-p2.txt
+-rw-r--r-- 1 mbacou mbacou  2314 Apr 30 04:47 1809.05046-p3.txt
+-rw-r--r-- 1 mbacou mbacou  1948 Apr 30 04:47 1809.05046-p4.txt
+-rw-r--r-- 1 mbacou mbacou  1871 Apr 30 04:47 1809.05046-p5.txt
+-rw-r--r-- 1 mbacou mbacou  2709 Apr 30 04:47 1809.05046-p6.txt
+-rw-r--r-- 1 mbacou mbacou  1962 Apr 30 04:47 1809.05046-p7.txt
+-rw-r--r-- 1 mbacou mbacou  2424 Apr 30 04:47 1809.05046-p8.txt
+-rw-r--r-- 1 mbacou mbacou  5385 Apr 30 04:47 1809.05046-p9.txt
+-rw-r--r-- 1 mbacou mbacou  2878 Apr 30 04:47 2103.12845-p10.txt
+-rw-r--r-- 1 mbacou mbacou  1110 Apr 30 04:47 2103.12845-p11.txt
+-rw-r--r-- 1 mbacou mbacou  5513 Apr 30 04:47 2103.12845-p1.txt
+-rw-r--r-- 1 mbacou mbacou  3950 Apr 30 04:47 2103.12845-p2.txt
+-rw-r--r-- 1 mbacou mbacou  2581 Apr 30 04:47 2103.12845-p3.txt
+-rw-r--r-- 1 mbacou mbacou  1950 Apr 30 04:47 2103.12845-p4.txt
+-rw-r--r-- 1 mbacou mbacou   390 Apr 30 04:47 2103.12845-p5.txt
+-rw-r--r-- 1 mbacou mbacou  3046 Apr 30 04:47 2103.12845-p6.txt
+-rw-r--r-- 1 mbacou mbacou  2068 Apr 30 04:47 2103.12845-p7.txt
+-rw-r--r-- 1 mbacou mbacou  2613 Apr 30 04:47 2103.12845-p8.txt
+-rw-r--r-- 1 mbacou mbacou  4386 Apr 30 04:47 2103.12845-p9.txt
+-rw-r--r-- 1 mbacou mbacou  1653 Apr 30 04:47 2206.00300-p10.txt
+-rw-r--r-- 1 mbacou mbacou  1033 Apr 30 04:47 2206.00300-p11.txt
+-rw-r--r-- 1 mbacou mbacou  6147 Apr 30 04:47 2206.00300-p12.txt
+-rw-r--r-- 1 mbacou mbacou  4407 Apr 30 04:47 2206.00300-p13.txt
+-rw-r--r-- 1 mbacou mbacou  6277 Apr 30 04:47 2206.00300-p14.txt
+-rw-r--r-- 1 mbacou mbacou  3222 Apr 30 04:47 2206.00300-p15.txt
+-rw-r--r-- 1 mbacou mbacou  9532 Apr 30 04:47 2206.00300-p1.txt
+-rw-r--r-- 1 mbacou mbacou  5654 Apr 30 04:47 2206.00300-p2.txt
+-rw-r--r-- 1 mbacou mbacou  8597 Apr 30 04:47 2206.00300-p3.txt
+-rw-r--r-- 1 mbacou mbacou  7423 Apr 30 04:47 2206.00300-p4.txt
+-rw-r--r-- 1 mbacou mbacou  7176 Apr 30 04:47 2206.00300-p5.txt
+-rw-r--r-- 1 mbacou mbacou  7310 Apr 30 04:47 2206.00300-p6.txt
+-rw-r--r-- 1 mbacou mbacou  7015 Apr 30 04:47 2206.00300-p7.txt
+-rw-r--r-- 1 mbacou mbacou  6536 Apr 30 04:47 2206.00300-p8.txt
+-rw-r--r-- 1 mbacou mbacou  6691 Apr 30 04:47 2206.00300-p9.txt
+-rw-r--r-- 1 mbacou mbacou 16366 Apr 30 04:47 2208.14562-p10.txt
+-rw-r--r-- 1 mbacou mbacou  3233 Apr 30 04:47 2208.14562-p11.txt
+-rw-r--r-- 1 mbacou mbacou  7380 Apr 30 04:47 2208.14562-p12.txt
+-rw-r--r-- 1 mbacou mbacou  3179 Apr 30 04:47 2208.14562-p13.txt
+-rw-r--r-- 1 mbacou mbacou  5818 Apr 30 04:47 2208.14562-p14.txt
+-rw-r--r-- 1 mbacou mbacou  2904 Apr 30 04:47 2208.14562-p15.txt
+-rw-r--r-- 1 mbacou mbacou 10683 Apr 30 04:47 2208.14562-p16.txt
+-rw-r--r-- 1 mbacou mbacou  6934 Apr 30 04:47 2208.14562-p17.txt
+-rw-r--r-- 1 mbacou mbacou 14745 Apr 30 04:47 2208.14562-p18.txt
+-rw-r--r-- 1 mbacou mbacou  3223 Apr 30 04:47 2208.14562-p19.txt
+-rw-r--r-- 1 mbacou mbacou  6048 Apr 30 04:47 2208.14562-p1.txt
+-rw-r--r-- 1 mbacou mbacou  3311 Apr 30 04:47 2208.14562-p20.txt
+-rw-r--r-- 1 mbacou mbacou  5864 Apr 30 04:47 2208.14562-p21.txt
+-rw-r--r-- 1 mbacou mbacou  3476 Apr 30 04:47 2208.14562-p22.txt
+-rw-r--r-- 1 mbacou mbacou  3975 Apr 30 04:47 2208.14562-p23.txt
+-rw-r--r-- 1 mbacou mbacou  2583 Apr 30 04:47 2208.14562-p24.txt
+-rw-r--r-- 1 mbacou mbacou  3982 Apr 30 04:47 2208.14562-p25.txt
+-rw-r--r-- 1 mbacou mbacou 35934 Apr 30 04:47 2208.14562-p26.txt
+-rw-r--r-- 1 mbacou mbacou  5061 Apr 30 04:47 2208.14562-p27.txt
+-rw-r--r-- 1 mbacou mbacou  4702 Apr 30 04:47 2208.14562-p28.txt
+-rw-r--r-- 1 mbacou mbacou  6208 Apr 30 04:47 2208.14562-p29.txt
+-rw-r--r-- 1 mbacou mbacou  4070 Apr 30 04:47 2208.14562-p2.txt
+-rw-r--r-- 1 mbacou mbacou  3378 Apr 30 04:47 2208.14562-p30.txt
+-rw-r--r-- 1 mbacou mbacou  4154 Apr 30 04:47 2208.14562-p31.txt
+-rw-r--r-- 1 mbacou mbacou  2323 Apr 30 04:47 2208.14562-p32.txt
+-rw-r--r-- 1 mbacou mbacou  7769 Apr 30 04:47 2208.14562-p33.txt
+-rw-r--r-- 1 mbacou mbacou  9925 Apr 30 04:47 2208.14562-p34.txt
+-rw-r--r-- 1 mbacou mbacou  6234 Apr 30 04:47 2208.14562-p35.txt
+-rw-r--r-- 1 mbacou mbacou  5290 Apr 30 04:47 2208.14562-p36.txt
+-rw-r--r-- 1 mbacou mbacou  4616 Apr 30 04:47 2208.14562-p37.txt
+-rw-r--r-- 1 mbacou mbacou  4888 Apr 30 04:47 2208.14562-p38.txt
+-rw-r--r-- 1 mbacou mbacou  4759 Apr 30 04:47 2208.14562-p39.txt
+-rw-r--r-- 1 mbacou mbacou  4001 Apr 30 04:47 2208.14562-p3.txt
+-rw-r--r-- 1 mbacou mbacou  5049 Apr 30 04:47 2208.14562-p40.txt
+-rw-r--r-- 1 mbacou mbacou  5411 Apr 30 04:47 2208.14562-p41.txt
+-rw-r--r-- 1 mbacou mbacou  5410 Apr 30 04:47 2208.14562-p42.txt
+-rw-r--r-- 1 mbacou mbacou  5370 Apr 30 04:47 2208.14562-p43.txt
+-rw-r--r-- 1 mbacou mbacou  5119 Apr 30 04:47 2208.14562-p44.txt
+-rw-r--r-- 1 mbacou mbacou  5000 Apr 30 04:47 2208.14562-p45.txt
+-rw-r--r-- 1 mbacou mbacou  5243 Apr 30 04:47 2208.14562-p46.txt
+-rw-r--r-- 1 mbacou mbacou  4922 Apr 30 04:47 2208.14562-p47.txt
+-rw-r--r-- 1 mbacou mbacou  2475 Apr 30 04:47 2208.14562-p48.txt
+-rw-r--r-- 1 mbacou mbacou  3078 Apr 30 04:47 2208.14562-p4.txt
+-rw-r--r-- 1 mbacou mbacou  2574 Apr 30 04:47 2208.14562-p5.txt
+-rw-r--r-- 1 mbacou mbacou 17986 Apr 30 04:47 2208.14562-p6.txt
+-rw-r--r-- 1 mbacou mbacou  8838 Apr 30 04:47 2208.14562-p7.txt
+-rw-r--r-- 1 mbacou mbacou  7045 Apr 30 04:47 2208.14562-p8.txt
+-rw-r--r-- 1 mbacou mbacou 15123 Apr 30 04:47 2208.14562-p9.txt

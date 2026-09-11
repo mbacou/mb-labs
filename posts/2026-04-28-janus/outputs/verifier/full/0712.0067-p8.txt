@@ -1,0 +1,58 @@
+                                                                                               8
+
+
+                           H − ( g ) = ∫ a R − ( g ) d Vg = − H − ( g )
+                                       M
+
+
+Since the geometrical tensor is the gradient of the functional in the metrics space, this implies
+(29)
+                                      S + ( g +) = - S - ( g -)
+
+
+and hence both metrics are not independant.
+
+               Let us call them conjugate metrics, a new mathematical concept.
+
+If metric g+ is known, then metric g– can be deduced. We can write the two equations (26) and
+(29) as follow:
+(30)
+                                   S + ( g +) = χ ( T + - T - )
+(31)
+                                    S - ( g -) = χ ( T - - T + )
+
+
+And it is in that form this coupled field equations system had been published for the first time
+in the Nuevo Cimento review in 1994 ([10]).
+
+
+5) Newtonian approximation
+
+This approximation allows to understand the dynamics arising from this system. We will
+expand these equations into a series, on the basis of a situation at zero order, where the second
+members are null and where the metrics, assumed as stationary, are Lorentzian. We suppose
+curvatures are weak and agitations velocities in the two « cosmic fluids » are low compared to
+the speed of light. We have:
+(32)
+                                 g + = η+ ( Lorentz ) + ε γ +
+(33)
+                                  g - = η - ( Lorentz ) + ε γ -
+
+where ε is a small parameter. We expend the two metrics into series, using the traditional
+method. This calculation is present in all books dealing with General Relativity (i.e. in [the]
+reference [12], chapter 4, section 4.3). As a result, we get the following for the movements of
+positive mass and energy particles, along geodesics of the metric g + :
+(34)
+                                     d 2 xi            ∂ γ + oo
+                                            =  − c 2
+                                                     ε
+                                      dt 2              ∂xi
+
+and for the movements of negative mass and energy particles, along geodesics of the
+metric g - :
+(35)
+                               d 2 xi           ∂ γ − oo
+                                      = − c 2
+                                              ε
+                                dt 2             ∂xi
+

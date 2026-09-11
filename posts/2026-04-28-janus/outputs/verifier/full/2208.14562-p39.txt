@@ -1,0 +1,50 @@
+thankful to Gilles Bergametti (President of the CNES Comité des Programmes Scientifiques, CPS), Athena
+Coustenis (President of the CNES Comité d’évaluation de la recherche et de l’exploration spatiale, CERES)
+and Pierre-Olivier Petrucci (President of the Programme National des Hautes Energies) for their support and
+for providing the feedback from the French scientific community at large. The French contribution to X-IFU is
+funded by CNES, CNRS and CEA. This work has been also supported by ASI (Italian Space Agency) through the
+Contract 2019-27-HH.0, and by the ESA (European Space Agency) Core Technology Program (CTP) Contract
+No. 4000114932/15/NL/BW and the AREMBES - ESA CTP No.4000116655/16/NL/BW. This publication is
+part of grant RTI2018-096686-B-C21 funded by MCIN/AEI/ 10.13039/501100011033 and by “ERDF A way of
+making Europe”. This publication is part of grant RTI2018-096686-B-C21 and PID2020-115325GB-C31 funded
+by MCIN/AEI/10.13039/501100011033.
+   We wish to thank an anonymous referee for a very careful reading of our manuscript, and for providing helpful
+comments.
+
+                                           14. DECLARATIONS
+There is no conflict of interest.
+
+                                                REFERENCES
+ [1] Nandra, K., Barret, D., Barcons, X., Fabian, A., den Herder, J.-W., Piro, L., Watson, M., Adami, C., Aird,
+     J., Afonso, J. M., Alexander, D., Argiroffi, C., Amati, L., Arnaud, M., Atteia, J.-L., Audard, M., Badenes,
+     C., Ballet, J., Ballo, L., Bamba, A., Bhardwaj, A., Stefano Battistelli, E., Becker, W., De Becker, M., Behar,
+     E., Bianchi, S., Biffi, V., Bı̂rzan, L., Bocchino, F., Bogdanov, S., Boirin, L., Boller, T., Borgani, S., Borm,
+     K., Bouché, N., Bourdin, H., Bower, R., Braito, V., Branchini, E., Branduardi-Raymont, G., Bregman, J.,
+     Brenneman, L., Brightman, M., Brüggen, M., Buchner, J., Bulbul, E., Brusa, M., Bursa, M., Caccianiga,
+     A., Cackett, E., Campana, S., Cappelluti, N., Cappi, M., Carrera, F., Ceballos, M., Christensen, F., Chu,
+     Y.-H., Churazov, E., Clerc, N., Corbel, S., Corral, A., Comastri, A., Costantini, E., Croston, J., Dadina,
+     M., D’Ai, A., Decourchelle, A., Della Ceca, R., Dennerl, K., Dolag, K., Done, C., Dovciak, M., Drake, J.,
+     Eckert, D., Edge, A., Ettori, S., Ezoe, Y., Feigelson, E., Fender, R., Feruglio, C., Finoguenov, A., Fiore, F.,
+     Galeazzi, M., Gallagher, S., Gandhi, P., Gaspari, M., Gastaldello, F., Georgakakis, A., Georgantopoulos,
+     I., Gilfanov, M., Gitti, M., Gladstone, R., Goosmann, R., Gosset, E., Grosso, N., Guedel, M., Guerrero,
+     M., Haberl, F., Hardcastle, M., Heinz, S., Alonso Herrero, A., Hervé, A., Holmstrom, M., Iwasawa, K.,
+     Jonker, P., Kaastra, J., Kara, E., Karas, V., Kastner, J., King, A., Kosenko, D., Koutroumpa, D., Kraft,
+     R., Kreykenbohm, I., Lallement, R., Lanzuisi, G., Lee, J., Lemoine-Goumard, M., Lobban, A., Lodato, G.,
+     Lovisari, L., Lotti, S., McCharthy, I., McNamara, B., Maggio, A., Maiolino, R., De Marco, B., de Martino,
+     D., Mateos, S., Matt, G., Maughan, B., Mazzotta, P., Mendez, M., Merloni, A., Micela, G., Miceli, M.,
+     Mignani, R., Miller, J., Miniutti, G., Molendi, S., Montez, R., Moretti, A., Motch, C., Nazé, Y., Nevalainen,
+     J., Nicastro, F., Nulsen, P., Ohashi, T., O’Brien, P., Osborne, J., Oskinova, L., Pacaud, F., Paerels, F.,
+     Page, M., Papadakis, I., Pareschi, G., Petre, R., Petrucci, P.-O., Piconcelli, E., Pillitteri, I., Pinto, C., de
+     Plaa, J., Pointecouteau, E., Ponman, T., Ponti, G., Porquet, D., Pounds, K., Pratt, G., Predehl, P., Proga,
+     D., Psaltis, D., Rafferty, D., Ramos-Ceja, M., Ranalli, P., Rasia, E., Rau, A., Rauw, G., Rea, N., Read,
+     A., Reeves, J., Reiprich, T., Renaud, M., Reynolds, C., Risaliti, G., Rodriguez, J., Rodriguez Hidalgo, P.,
+     Roncarelli, M., Rosario, D., Rossetti, M., Rozanska, A., Rovilos, E., Salvaterra, R., Salvato, M., Di Salvo,
+     T., Sanders, J., Sanz-Forcada, J., Schawinski, K., Schaye, J., Schwope, A., Sciortino, S., Severgnini, P.,
+     Shankar, F., Sijacki, D., Sim, S., Schmid, C., Smith, R., Steiner, A., Stelzer, B., Stewart, G., Strohmayer,
+     T., Strüder, L., Sun, M., Takei, Y., Tatischeff, V., Tiengo, A., Tombesi, F., Trinchieri, G., Tsuru, T. G.,
+     Ud-Doula, A., Ursino, E., Valencic, L., Vanzella, E., Vaughan, S., Vignali, C., Vink, J., Vito, F., Volonteri,
+     M., Wang, D., Webb, N., Willingale, R., Wilms, J., Wise, M., Worrall, D., Young, A., Zampieri, L., In’t
+     Zand, J., Zane, S., Zezas, A., Zhang, Y., and Zhuravleva, I., “The Hot and Energetic Universe: A White
+     Paper presenting the science theme motivating the Athena+ mission,” arXiv e-prints , arXiv:1306.2307
+     (June 2013).
+

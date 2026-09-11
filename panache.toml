@@ -1,0 +1,38 @@
+# Markdown flavor
+flavor = "quarto"
+
+# Formatting style
+[format]
+wrap = "preserve"
+line-width = 86
+line-ending = "auto"
+table-indent = 0
+tab-stops = "normalize"
+tab-width = 2
+horizontal-rule-style = "line-width"
+math-delimiter-style = "preserve"
+math = "reflow"
+math-indent = 2
+
+[extensions]
+hard-line-breaks = false
+citations = true
+task-lists = true
+four-space-rule = false
+mark = true
+
+# [formatters]
+# r = "air"
+# python = "ruff"
+# javascript = "prettier"
+# typescript = "prettier"
+
+# [linters]
+# r = "arity"
+# julia = "fatou"
+# latex = "badness"
+# python = "ruff"
+# sh = "shellcheck"
+# js = "eslint"
+# go = "staticcheck"
+# rust = "clippy"

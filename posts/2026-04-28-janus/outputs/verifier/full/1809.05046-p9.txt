@@ -1,0 +1,80 @@
+now stand for eigenvalues)
+                                                                                      
+        s                           1                 s                         0
+            E + m i(~p.~x−Et)      0        E + m i(~p.~x−Et)                 1
+                                                                                      
+ψ1+ =                                       , ψ+ =
+                                                                        
+                 e           p3
+                              
+                                                2   e           p1−ip2 
+             2E               
+                            E+m
+                              
+                                           
+                                              2E              
+                                                                E+m 
+                                                                         
+                           p1+ip2                                   p3
+                            E+m
+                                                                 − E+m
+                                                                       (20)
+and two solutions with negative energies E = −Ep (spin up and spin down,
+respectively)
+                                    p3                                        p1−ip2
+                                                                                      
+        s                          E−m                s                      E−m
+                                  p1+ip2                                         p3
+            E − m i(~p.~x−Et)                            E − m i(~p.~x−Et) 
+                                                                             − E−m
+                                                                                       
+ψ1− =                                       , ψ− =
+                                                                                        
+                 e                E−m                         e                         
+                                                2
+             2E               
+                                   1      
+                                                          2E             
+                                                                               0        
+                                                                                         
+                                    0                                           1
+
+which are replaced by two solutions with positive energies E = Ep (spin down
+and spin up, respectively)
+                                    p3                                         p1−ip2
+                                                                                        
+       s                           E+m                s                       E+m
+                                  p1+ip2                                          p3
+           E + m −i(~p.~x−Et)                            E + m −i(~p.~x−Et) 
+                                                                              − E+m
+                                                                                         
+χ+                                          , χ+ =
+                                                                                          
+ 1 =            e                 E+m                         e                           
+                                                2
+            2E                
+                                   1      
+                                                           2E              
+                                                                                   0      
+                                                                                           
+                                    0                                               1
+                                                                                        (21)
+by the transformation
+                                  ~p → −~p , E → −E                                     (22)
+Actually, the states (21) are solutions of a slightly different Dirac equation
+
+                                   (γ µ pµ + m)χ = 0
+
+The changes (22) are attributed to Feynman [20] and Stueckelberg [21], inde-
+pendently. They were motivated by two reasons : first, keep positive energies
+only and second, give a physical interpretation to these states. Indeed, in
+case of an electromagnetic interaction, the corresponding negative energy so-
+lutions dont give back a meaningful Pauli equation at the non-relativistic
+limit while the new positive energy ones (21) do with an electric charge hav-
+ing been replaced by its opposite. This is what have led physicists to interpret
+these new solutions as the ones associated with antimatter.
+    Let us now analyse these solutions (20) and (21) by keeping in mind that
+both energies and masses can be simultaneously negative.
+
+                                               9
+

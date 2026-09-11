@@ -1,0 +1,532 @@
+                                                 Noname manuscript No.
+                                                 (will be inserted by the editor)
+
+
+
+
+                                                 Can negative mass be considered in
+                                                 General Relativity ?
+
+                                                 Jean-Pierre Petit · Gilles dAgostini
+
+
+
+
+arXiv:1408.2451v1 [physics.gen-ph] 29 May 2014
+                                                 Received: date / Accepted: date
+
+
+
+                                                 Abstract We show, through Newtonian approximation, that shifting to a bimet-
+                                                 ric model of the Universe based on a suitable system of coupled field equations,
+                                                 removes the preposterous runaway effect and gives different interaction laws, be-
+                                                 tween positive and negative masses, that bring new insights into the alternative
+                                                 VLS interpretations previously proposed by several authors, and strengthening
+                                                 their assumptions.
+
+                                                 Keywords negative mass · bimetric model · gravitation · runaway effect
+
+
+
+                                                 1 Introduction
+
+                                                 Scientists have been trying long ago to mix positive and negative masses to com-
+                                                 pose a new cosmological model. The lacunar structure of the Universe at large
+                                                 scales early suggested that some negative matter could have formed clumps, re-
+                                                 pelling positive matter into remnant places shaped like joint bubbles. Such a bubble
+                                                 structure was suggested in 1986 by De Lapparent et al. [1] then by Kirshner et al.
+                                                 [2] in 1986, Rood [3] in 1988 and Geller et al. [4] in 1989. The idea of repulsive
+                                                 structures, shaping positive matter into lacunar structures was progressively de-
+                                                 velopped by El-Ad et al. [5, 6, 7].
+                                                 The possibility of gravitational repulsion was explicitely evoked by Piran [8] in
+                                                 1997, a paper in which he suggested that initial tiny perturbations in the primor-
+                                                 dial density field, acting as if they had a negative mass, could expand and play
+                                                 a role in the VLS (Very Large Scale) structure. He further theorized, with no
+                                                 justification however, that negative mass could own a negative active mass (from
+                                                 Bondis definition [11]), but positive inertial and passive masses, so that two nega-
+                                                 tive masses would mutually attract. Hence, negative material could form clusters
+                                                 while positive and negative masses would repel each other. He developped a Void
+
+                                                 F. Author
+                                                 E-mail: jppetit1937@yahoo.fr
+                                                 Gilles dAgostini
+                                                 E-mail: dagostini.gilles@laposte.net
+2                                                       Jean-Pierre Petit, Gilles dAgostini
+
+
+Finder Algorithm allowing to identify voids in redshift surveys and to measure
+their size and underdensity. Interesting three-dimensional views of voids, based on
+the IRAS survey, are shown in his paper [8].
+2D-simulations involving the same interaction schema had been performed by Pe-
+tit [9] in 1995, also giving a VLS lacunar structure. More recently (July 2013)
+Izumi et al. [10] suggested that the distortions observed on the images of distant
+galaxies, if considered as due to some negative gravitational lensing effect being
+radial instead of azimutal, would lead to a somewhat different mapping of the
+invisible matter.
+However, all these works contradicted Bondis result of 1957 [11] based on General
+Relativity (GR), hence on the assumption that the Universe is a M4 manifold,
+coupled to a single metric g obeying Einsteins equation. The Newtonian approxi-
+mation gives such a metric a time independent quasi-Lorentzian form :
+
+                                  g µν = η µν + εγ µν                                  (1)
+
+
+A subsequent development of the field equation into a series, combined to similar
+approximation of the equations of geodesics, provides Newtons law and Poisson’s
+equation. Bondi expressed the result as :
+                              2−
+                               →                 −
+                                                 → −  →
+                          (1) d r1         (2) ( r2 − r1 )
+                        mi      2
+                                   = Gm(1)
+                                       p ma     →
+                                                −     →
+                                                      −                                (2)
+                              dt               | r2 − r1 |3
+
+accounting for the gravitational action of a mass (2) on a mass (1), and decided
+to introduce three kinds of masses :
+- inertial mass mi
+- passive gravitational mass mp
+- active gravitational mass ma
+Because of the equivalence principle the first two are identical, so that Equ. 2
+becomes :
+                             d2 −
+                                →
+                                r1           → −
+                                             −     →
+                                        (2) ( r2 − r1 )
+                                   = Gm                                      (3)
+                                            |−
+                                             →
+                                             r2 − −
+                                                  →
+                                        a
+                              dt2                 r1 |3
+
+In other words: according to GR, a positive mass attracts any kind of mass, what-
+ever positive or negative. Conversely, a negative mass would repel any kind of
+mass. In particular, if one considers a couple of masses with equal absolute values
+but opposite signs, the negative mass escapes, while the positive mass runs after it,
+both being accelerated the same way. To increase such paradoxical phenomenon,
+because the masses have opposite signs, energy and momentum are conserved.
+In addition, according to Bondi’s analysis two negative masses mutually repel,
+so that negative matter cannot form clusters by gravitational accretion through
+Jeans instability.
+Bondi tried to integrate such puzzling runaway particles in GR without any suc-
+cess. Only much later, in 1989, Bonnor [12] also published a paper devoted to
+negative mass. He considered the runaway phenomenon as preposterous and stud-
+ied a universe only filled with negative masses, immediatly pointing out that this
+has nothing to do with physics and astrophysics, for such a medium cannot form
+stars and galaxies through gravitational instability.
+Can negative mass be considered in General Relativity ?                             3
+
+
+As a conclusion, in despite of interesting perspectives suggested by the previ-
+ously mentioned references, GR bans any introduction of negative masses in the
+Universe, unless giving up the equivalence principle itself.
+
+
+2 Bimetric Newtonian approximation
+
+A first tentative solution was suggested in 1994 by Petit [9, 13], and later by Henry-
+Couannier [14], then Hossenfelder [15]. All are based on a new description of the
+Universe, considered as a manifold M4 coupled to two metrics instead of a single
+one.
+                               (+)
+Basically, the first metric gµν refers to positive energy particles (and positive
+                               (−)
+mass, if they have one), and gµν to negative energy particles (and negative mass,
+if they have one). Opposite energy particles cannot encounter, for they cruise on
+distinct geodesic families. Both families include null geodesics, with positive energy
+                                                          (+)
+photons cruising on null geodesics built from metric gµν , while negative energy
+                                                      (−)
+photons cruise on null geodesics built from metric gµν . It is assumed than positive
+structures, made of positive masses, can emit or absorb positive energy photons
+only, while negative structures, made of negative masses, can emit and absorb
+negative energy photons only. In short, on purely geometrical grounds, negative
+mass structures would be invisible for a positive mass observer (and vice-versa).
+
+First, let us consider a system of coupled field equations with which we intend to
+describe a time-independant configuration, or quasi time-independant. The study
+of a time dependant solution, based on a modified system will be the subject of a
+next publication.
+                       (+)  1              
+                                             (+)    (−)
+                                                        
+                      Rµν  − R(+) gµν
+                                   (+)
+                                       = +χ Tµν  + Tµν
+                            2
+
+                       (−)     1 (−) (−)   
+                                             (+)    (−)
+                                                        
+                      Rµν  −     R gµν = −χ Tµν  + Tµν                            (4)
+                               2
+
+                                                 (+)      (−)
+We find the Ricci tensors built from metrics gµν and gµν . The energy-momentum
+          (+)        (−)
+tensors Tµν and Tµν , in the simple case of non interacting incoherent matters,
+can be expressed in term of the scalar proper density fields ρ(+) and ρ(−) and
+                                µ
+                                        µν
+four-velocity flows uµ (x) = dx
+                              ds by : T    = ρ(x)uµ (x)uν (x).
+
+In the Newtonian approximation, for both species, the velocities are small with
+respect to the speed of light and the energy densities low. The energy-momentum
+tensors for a field of matter can be writen,in this case, as :
+                         1 0 0 0                                     1 0 0 0
+                                                                         
+
+        (+) µ    (+) 2  0 0 0 0                  (−) µ     (−) 2  0 0 0 0
+      T     ν =ρ    c                         T     ν = ρ    c              (5)
+                         0 0 0 0                                    0 0 0 0
+                         0 0 0 0                                     0 0 0 0
+
+with ρ(+) > 0 and ρ(−) < 0
+4                                                         Jean-Pierre Petit, Gilles dAgostini
+
+
+In the Newtonian approximation, the system (4) admits, for ρ(+) + ρ(−) = 0
+a couple of Lorentzian solutions η (+) and η (−) :
+
+                                     1 0 0 0
+                                                         
+
+                        (+)   (−)   0 −1 0 0 
+                                    0 0 −1 0  ≡ ηµν
+                       ηµν = ηµν =                                                      (6)
+                                              
+
+                                     0 0 0 −1
+
+Let us consider two time-independent small perturbations with finite extents, and
+write the metrics and the mass densities as :
+
+                 (+)           (+)                 (−)           (−)
+                gµν  = ηµν + εγµν                 gµν  = ηµν + εγµν                      (7)
+
+
+                        (+)                                   (−)
+               ρ(+) = ρ(0) + εδρ(+)               ρ(−) = ρ(0) + εδρ(−)                   (8)
+
+      (+)      (−)
+with ρ(0) + ρ(0) = 0. The mass densities are not supposed individually small.
+
+We will now consider only the firt order perturbation terms.
+
+Let us introduce the Laue scalars :
+                         µ                                           µ
+            T (+) ≡ T (+) µ ≃ ρ(+) c2             T (−) ≡ T (−) µ ≃ ρ(−) c2              (9)
+
+in the system (4) which becomes :
+                                       1                    
+                 (+)       (+)     (−)
+                Rµν  ≃ +χ Tµν   + Tµν    − ηµν χ T (+) + T (−)
+                                          2
+                                        1                   
+                Rµν ≃ −χ Tµν + Tµν + ηµν χ T (+) + T (−)
+                 (−)        (+)     (−)
+                                                                                        (10)
+                                           2
+
+
+and then :
+
+                         (+)    χε  (+)        
+                        Rµν  =+     δρ   + δρ(−) c2 δµν
+                                2
+                                χε  (+)        
+                         (−)
+                        Rµν  =−     δρ   + δρ(−) c2 δµν                                 (11)
+                                2
+
+
+
+Using the classical method and notations of [16], the Ricci tensors are developed
+into series:
+
+                                                 (+)          (+)
+                                   1
+                                                    
+                       (+) ∼                            α
+                      Rµν  =         Ln(−g (+) )      −
+                                   2             |µ|ν   µν      |α
+                                              (−)             (−)
+                                   1
+                                                     
+                       (−) ∼                             α
+                      Rµν  =         Ln(−g (−) )      −                                 (12)
+                                   2             |µ|ν   µ ν     |α
+Can negative mass be considered in General Relativity ?                                                        5
+
+
+
+Thus the approximate field equations may be expressend as :
+
+                                  (+)                       (+)
+                    1
+                                                
+                                          α                                χε  (+)        
+                      Ln(−g (+) )      −                              =+       δρ   + δρ(−) c2 δµν
+                    2             |µ|ν
+                                         µ ν                    |α         2
+                                       (−)               (−)
+                    1                     α                                χε  (+)        
+                      Ln(−g (−) )      −                              =−       δρ   + δρ(−) c2 δµν           (13)
+                    2             |µ|ν   µ ν                    |α         2
+
+
+Consider the case µ = ν = 0, with the time-independance hypothesis (index 0
+denoting the time-marker), we get :
+
+    3 h                                     (+)           (+)            (+)
+                                                                                !
+        (+)
+            i                         ∂ 2 γ00   ∂ 2 γ00   ∂ 2 γ00                                       
+                                                                                    = −χε δρ(+) + δρ(−) c2
+    X
+ε         γ00              =ε                 +         +
+    i=1
+                    |ı|ı                ∂x2       ∂y 2      ∂z 2
+    3 h                                  (−)              (−)            (−)
+                                                                                !
+        (−)
+            i                         ∂ 2 γ00   ∂ 2 γ00   ∂ 2 γ00                                       
+                                                                                    = +χε δρ(+) + δρ(−) c2 (14)
+    X
+ε         γ00              =ε                 +         +
+    i=1
+                    |ı|ı                ∂x2       ∂y 2      ∂z 2
+
+
+If we define the potentials as follows, the equations (14) may be considered as a
+bimetric extension of the clasical Poisson equation :
+
+                                                  c2 (+)                             c2 (−)
+                                       ϕ(+) =       εγ                  ϕ(−) =         εγ                    (15)
+                                                  2 00                               2 00
+
+The constant χ is determined by considering a portion of space where ρ(−) = 0.
+The identification to classical Poisson’s equation gives :
+
+                                                                      8πG
+                                                           χ=−                                               (16)
+                                                                       c4
+
+
+Then, for a bimetric system, we get an extended Poisson’s equation :
+                                                                               
+                                     △ϕ(+) = +4πG ρ(+) + ρ(−)
+                                                                               
+                                     △ϕ(−) = −4πG ρ(+) + ρ(−) = −△ϕ(+)                                       (17)
+
+
+and for the potentials :
+                                                                                      
+                                                  Z       ρ(+) (x’) + ρ(−) (x’)
+                               (+)
+                           ϕ         (x) = −G                                              d3 x ≡ ϕ(x)
+                                                                     |x − x’|
+
+                           ϕ(−) (x) = −ϕ(+) (x) = −ϕ(x)                                                      (18)
+6                                                              Jean-Pierre Petit, Gilles dAgostini
+
+
+3 Gravity as a Bimetric Phenomenon
+
+Let us write the two metrics :
+
+            (ds(+) )2 = c2 dt2 − (dx1 )2 − (dx2 )2 − (dx3 )2 + εγµν
+                                                                 (+)
+                                                                     dxµ dxν
+
+
+            (ds(−) )2 = c2 dt2 − (dx1 )2 − (dx2 )2 − (dx3 )2 + εγµν
+                                                                 (−)
+                                                                     dxµ dxν                 (19)
+
+and the corresponding differential equations of the geodesics :
+
+                                            (+)
+                             d2 x α                 dxη dxτ
+                                      
+                                       α
+                                    +                          =0
+                            ds (+)2   η τ          ds(+) ds(+)
+                                            (−)
+                             d2 x α                 dxη dxτ
+                                      
+                                      α
+                                    +                          =0                            (20)
+                            ds(−)2    ητ           ds(−) ds(−)
+
+                                                                             v
+                                            q
+                                                (dx1 )2 +(dx2 )2 +(dx3 )2
+Hence, to the first order in ε and β =                     dt2            ≡ ( ), equations (20)
+                                                                             c
+becomes :
+
+                                            (+)               !2
+                             d2 x α                     dx0
+                                       
+                                      α
+                                    +                               =0
+                            ds(+)2    00               ds(+)
+                                            (−)               !2
+                             d2 x α                     dx0
+                                       
+                                      α
+                                    +                               =0                       (21)
+                            ds(−)2    00               ds(−)
+
+
+and we have also :
+                       !2                                      !2
+               ds(+)        ∼   2        (+)           ds(−)        ∼  2       (−)
+                            =   c (1 + εγ00 )                       = c (1 + εγ00 )          (22)
+                dt                                      dt
+
+
+After some calculation we derive the equations for two classes of geodesics :
+
+                                                 (+)
+                                d2 x i    c2 ∂γ      ∂φ(+)
+                                   2
+                                       = − ε 00i = −
+                                 dt       2 ∂x        ∂xi
+                                                (−)
+                                d2 x i    c2 ∂γ      ∂φ(−)
+                                   2
+                                       = − ε 00i = −                                         (23)
+                                 dt       2 ∂x        ∂xi
+
+      from which we get, with (17) and (18), the following laws of interaction :
+    – Two positive masses attract each other through Newtons law ;
+    – Two negative masses attract each other through Newtons law ;
+    – Two masses, with opposite signs, repel each other through anti-Newtons law.
+
+The preposterous runaway phenomenon has disappeared.
+Can negative mass be considered in General Relativity ?                                  7
+
+
+4 Comparison with observational data
+
+If positive and negative masses repel each other, anywhere positive mass domi-
+nates, negative mass is almost absent, so that in the vicinity of the solar system
+ρ(−) ≃ 0. Our coupled field equations become :
+                                    1               (+)
+                               (+)
+                              Rµν  − R(+) gµν
+                                           (+)
+                                               ≃ +χTµν                                 (24)
+                                    2
+                             (−)        1 (−) (−)    (−)
+                            Rµν  −        R gµν ≃ −χTµν                                (25)
+                                        2
+
+(24) identifying to Einsteins equation with a null cosmological constant, so that
+the bimetric model fits the classical local tests of GR.
+
+
+5 About Schwarzschild’s solutions
+
+Theoreticians also noticed long ago that the parameter m of Schwarzschild’s so-
+lution was nothing but an integration constant, that may be chosen positive or
+negative. We will call the following metric external Schwarschild solution.
+
+                         2m                   dr 2
+                                                                           
+           ds2 =    1−            c2 dt2 −       2m − r
+                                                       2
+                                                            dθ2 + sin2 (θ)dφ2          (26)
+                          r                  1− r
+
+Similarly, in the internal Schwarzschild solution :
+           s                            
+                                                  dr 2
+                              r
+          3       r2   1             r2                      2
+                                                                                  
+     2
+   ds =        1− 0 −            1 −  c2 dt2 −     r 2 − r     dθ2 + sin2 (θ)dφ2
+          2        A   2             A           1− A
+                                                                              3c2
+                                                      f or r ≤ r0 with A =             (27)
+                                                                             8πGρ
+
+ρ can be chosen positive or negative, with the coupling condition :
+
+                            4πGr03
+                       m=          ρ         ( positive or negative )                  (28)
+                              c2
+
+In GR, the internal Schwarzschild solution, describing the geometry inside a sphere
+filled with constant matter density, was considered as some kind of mathematical
+complement to the external solution, since no particle would follow a geodesic
+inside. In the bimetric approach (26) and (27) provide the geodesics around clumps
+of negative mass, corresponding to the equations :
+
+                               (+)      1 (+) (+)    (−)
+                              Rµν  −      R gµν ≃ −χTµν                                (29)
+                                        2
+                             (−)        1 (−) (+)    (−)
+                            Rµν  −        R gµν ≃ +χTµν                                (30)
+                                        2
+
+Equation (29) corresponds to an induced geometry in the positive sector, due to
+8                                                          Jean-Pierre Petit, Gilles dAgostini
+
+
+the presence of some negative mass. A positive energy photon can cross freely a
+negative mass. Considering positive energy photons, this give a negative lensing
+effect not only in the vicinity of a negative mass, but also inside it, as firstly
+suggested in [9]. The present work supports the assumptions corresponding to
+reference [8].
+
+
+6 Conclusion
+
+The classical General Relativity model bans the existence of negative mass in the
+Universe, while implying a puzzling phenomenon : the runaway effect. After GR,
+positive mass attracts anything and negative mass repels anything, so that if two
+masses with opposite signs encounter, the positive one escapes and the negative
+one runs after it since both experience the same acceleration, while energy and
+momentum are conserved. G.W. Bonnor qualified such phenomenon as prepos-
+terous. However, choosing other interaction laws provides interesting challenging
+interpretations of the VLS as shown in the present work, based on a new bimetric
+model of the Universe supporting the various assumptions of previous investigators
+and opening the road towards interesting research.
+
+
+References
+
+1. De Lapparent V., Geller M.H. , Huchra J.P., Astrophys. J. Letters 302, L1 (1986)
+2. Kirshner R.P , Oemler A. Jr. , Schlechter P.L., Schectman S.A, Astrophys. Jr. 314, 496
+  (1987)
+3. Rood H.J., Ann. Rev. Astron. Astrophys. 26, 245 (1988)
+4. Geller M.J. , Huchra J.P. , Science, 246, 897 (1989)
+5. El-Ad H. , Piran T. , Da Costa L.N. ,Astrophys. J. Lett. 462 L13 (1996)
+6. El-Ad H. , Piran T. , Da Costa L.N. , Mon. Not. R. Astro. Soc. 287 : 790 (1997)
+7. El-Ad H. , Piran T. , Astrophys. J. Vol. 491 n2 (1997)
+8. Piran T., On Gravitational Repulsion, Gen. Relat. and Gravit. Vol. 29 , N 11 (1997)
+9. Petit J.P., Twin Universe Cosmology. Astrophysics and Space Science (226): 273307. (1995)
+10. Koki Izumi, Chizaki Hagiwara, Koki Nakajima, Takao Kitamura and Hideki Asada, Gravi-
+  tational lensing shear by an exotic lens with negative convergence or negative mass, Physical
+  Review D 88, 024049 (2013)
+11. Bondi H., Negative mass in General Relativity, Rev. of Mod. Phys., Vol 29, N3 (1957)
+12. Bonnor W.B., Negative mass and general relativity, General Relativity and Gravitation
+  Vol.21, N11 (1989)
+13. Petit J.P., The missing mass problem, Il Nuevo Cimento B, 109 : 697-710
+14. Henry-Couannier F., Int. J. Mod. Phys. A20 2341 (2005)
+15. Hossenfelder S., A bimetric Theory with Exchange Symmetry, Phys. Rev. D78, 044015
+  (2008)
+16. R. Adler, R. Bazin, M. Schiffer, Introduction to General Relativity, Mc Graw Hill Book
+  (1967)
+

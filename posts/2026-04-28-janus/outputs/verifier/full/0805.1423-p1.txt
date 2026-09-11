@@ -1,0 +1,48 @@
+                                                                                                      1
+
+
+                   Five-dimensional bigravity.
+            New topological description of the Universe.
+                              Jean-Pierre Petit and Gilles d'Agostini
+
+                                       jppetit1937@yahoo.fr
+
+______________________________________________________________________________
+
+Abstract:
+
+We extend the bimetric description of the Universe to a five-dimensional framework. Starting
+from Souriau’s work (1964) we use Robertson-Walker metrics, with an extra term corresponding
+to the additional Kaluza dimension. This first order model is limited to zero densities of electric
+charge and electromagnetic energy. Assuming that the massive particles, with positive or
+negative mass and energies have finite lifetimes, it restores the O(3) symmetry and makes the
+generalized gauge process to restart. As a consequence the speed of light tends to zero.
+We assume the Universe to be closed in all its dimensions. Then, following an idea introduced in
+1994 we describe the Universe as the two folds cover of a projective space. The inversion of the
+arrow of time, mass and energy is a consequence of this geometrical hypothesis and fits the
+bimetric model. We choose to eliminate the “initial singularity” replaced by a boundary space,
+which is found to be Euclidean.
+______________________________________________________________________________
+
+
+1) Introduction
+
+The theory of the General Relativity was extended to a five-dimensional framework in 1964 by
+the French mathematician Jean-Marie Souriau in the chapter five of his book “Géométrie et
+relativité” [1]. He assumes the Universe to be a five dimensional manifold M5. Page 388 he
+defines his notations and we will choose the same. When the indexes are labelled by Latin letters
+j , k , l , m, it means that the refer to five values { 1 , 2 , 3 , 4 , 5 }. When Greek letters are used
+they refer to a set of four { 1 , 2 , 3 , 4 }. He introduces a Lagragian density, that he calls
+“presence”:
+ (1)
+                                            p = a + b g lm R lm
+
+or, in a simpler way:
+(2)
+                                             p=a+bR
+
+where R is the scalar curvature. The fifth dimension is space-like, whence the signature of the
+metric is
+(3)
+                                           (+----)
+

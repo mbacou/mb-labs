@@ -1,0 +1,36 @@
+                                                                                                  19
+
+
+
+This is indeed a torus, for the small tube gives the Euler-Poincaré characteristic a nil value;
+Of course the following sketch will be more familiar to the reader.
+
+
+
+
+             Fig.16: More familiar view of the 2-folds cover of a Klein’s bottle K2
+
+
+
+8) Conclusion: a new geometric framework for the Universe.
+
+In reference [2] we presented a bimetric model of the Universe, which explained the acceleration
+of the expansion, at large redshifts. Then in [3] we added symmetry breaking and variable
+constants technique, which explained the homogeneity of the primeval Universe. Now, back to an
+older work [4] we add some topological features. The Universe is described as the two-fold cover
+of a projective space P4. The analysis of the world-lines evidences the inversion of the arrow of
+time. Thanks to the work of J.M. Souriau [6] this inversion of time justifies the inversion of
+masses and energies, as described by the second metric g -. Adding a closed fifth dimension we
+deal with electrically charged particles.
+
+Let’s sum up our assumptions:
+
+   -   The universe is closed in all its dimensions, has a maximum space extension
+   -   There is no initial singularity, so that it owns a minimum space extension, small size,
+       which replaces the Big Bang singular structure.
+   -   When going backwards in time, towards the minimum space extension, a symmetry
+       breaking occurs, during the radiation-dominated era. Then, as described in [3] this first era
+       goes with variable constants, linked to space and time scale factor through a generalized
+       gauge process. Close to the minimum space extension the value of the speed of light tends
+       to a very large value, “infinite”.
+

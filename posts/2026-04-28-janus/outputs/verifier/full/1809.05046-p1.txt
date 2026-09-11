@@ -1,0 +1,46 @@
+                                            On evidence for negative energies and masses
+                                              in the Dirac equation through a unitary
+                                                       time-reversal operator
+
+
+
+
+arXiv:1809.05046v2 [quant-ph] 7 Nov 2018
+                                                             N. Debergh 1 , J.-P. Petit 2 and G. D’Agostini 3
+                                            1
+                                                Department of agronomy, Haute Ecole Charlemagne, 3, rue Saint-Victor, 4500 Huy,
+                                                                     Belgium, nathalie.debergh@hech.be
+                                                                                 2
+                                                                                     jp.petit@mailaps.org
+                                                                            3
+                                                                                dagostinigilles@mailaps.org
+
+                                                Keywords : Quantum mechanics, Dirac equation, discrete symmetry, negative masses, antimatter
+
+                                                                                        Abstract
+                                                      We review the standards of relativistic quantum mechanics such
+                                                  as the Dirac equation under the concept of negative masses. We show
+                                                  that negative energies are acceptable provided the masses are simul-
+                                                  taneously negative. Negative energy and mass anti-fermions are ob-
+                                                  tained from positive energy and mass fermions through a unitary PT
+                                                  transformation.
+
+
+                                           1      Introduction
+                                           Until recently, the concept of negative masses was relegated to the field of
+                                           exotic, and even far-fetched, ideas.
+                                                Proposed by Hermann Bondi [1] and revisited by William B. Bonnor [2] in
+                                           the context of general relativity, negative masses have been considered by a
+                                           few physicists only due to the fact that they have never been detected in lab-
+                                           oratories. Let us mention among these avant-garde physicists, M.A. Markov
+                                           who, from a previously proposed second-order equation for spin 12 particles
+                                           [3], has put in evidence two first-order equations, one with a ”plus”’ sign and
+                                           the other one with a ”minus” sign multiplying the mass [4]. Nevertheless, for
+                                           the reason of being qualified as ”non-physical”and because they could imply
+                                           a very unpleasant runaway effect, negative masses have been rejected by the
+                                           majority of the scientific community for many years.
+                                                However, minds are evolving nowadays : the possibility of negative masses
+                                           is seriously reconsidered. As examples, let us mention that negative mass
+
+                                                                                             1
+

@@ -1,0 +1,73 @@
+                                                                                                                                6
+
+be eventually expressed as a function of one-dimensional                                        2.   Flow
+integrals along the contours C1 , C2 and Cint , see Ref. [32]
+for details. One finds                                                  The influence of the viscosity ratio η1 /η2 on the inter-
+                                                                     face dynamics has been studied in [32]. The conclusion
+1+α
+       Ũ(x̃) =                                                      of the latter work is that the viscosity ratio has no quali-
+  2Z                                                                 tative influence on it, hence we chose η1 = η2 = η for our
+       h                                 i
+−       κ̃(ỹ) + T̃R (ỹ) + Bo h̃(ỹ) Ũ∗ (x̃ − ỹ) · n(ỹ) dC(ỹ)   numerical investigations.
+    Cint                                                                First, the acoustic or electromagnetic field along the
+                                                                     initially flat interface is computed. Then, the radia-
+             Z h                          i
++ (1 − α)          K̃∗ (x̃ − ỹ) · Ũ(ỹ) · n(ỹ) dC(ỹ)             tion pressure exerted along the interface is computed
+               Cint
+     Z                     h                 i                       and injected into the first term of the right-hand side
+−α        Ũ∗ (x̃ − ỹ) · T̃H 1 (ỹ) · n(ỹ) dC(ỹ)                  of Eq. (45). This gives a system of N integral equations,
+   Z C1                                                              N being the number of points used to discretize the in-
+                                                                     terface. Its numerical solution allows the determination
+                        h                  i
++       Ũ∗ (x̃ − ỹ) · T̃H 2 (ỹ) · n(ỹ) dC(ỹ) , x̃ ∈ Cint ,
+    C2                                                               of the velocity field along the interface, whose position
+                                                             (45)    is then advected through a simple Euler forward scheme
+                                                                     x(t + ∆t) = x(t) + U(t)∆t. This procedure is then re-
+where dC(ỹ) refers to the elementary contour piece at               peated accounting for until a stationary state is reached.
+point ỹ, and
+                                               !                               IV.    PRELIMINARY ANALYSIS
+                 ∗        1     1    d̃ ⊗ d̃
+               Ũ (d̃) =          I+               ,         (46)
+                         8π     ˜
+                                d       d˜3                               A.    Universal dimensionless characteristic
+                                                  !                                        quantities
+                               3   d̃ ⊗ d̃ ⊗ d̃
+               K̃∗ (d̃) = −                            .     (47)
+                              4π       d˜5
+                                                                        In this section, we introduce two dimensionless quan-
+                                                                     tities enabling, on the one hand, to evaluate the strength
+are the velocity and stress associated to the Green kernel,          of the mechanical perturbation applied on the interface
+respectively, with d̃ = x̃ − ỹ.                                     and on the other hand, to appreciate the influence of
+   The numerical resolution is based on the Boundary                 the deformed interface acting as a dioptre on the wave
+Element Method. This method has been chosen because                  propagation. These two parameters are the dimension-
+it allows for a precise monitoring of the interface position,        less characteristic radiation pressure Π0 and the char-
+which is crucial here since both capillary stresses and              acteristic waveguiding parameter V , respectively. Both
+radiation pressure depend on the interface shape (i.e.,              are universal in the sense that they are independent of
+slope and curvature).                                                the acoustic or electromagnetic nature of the irradiating
+                                                                     wave.
+                                                                        Constructing Π0 starts by noting that a dimensionless
+                                                                     radiation pressure Π can be defined at each point of the
+                C.    Numerical procedure                            interface as the ratio between the radiation pressure and
+                                                                     the characteristic value of the Laplace overpressure σ/w0 ,
+                       1.     Propagation
+                                                                                                 w0
+                                                                                           Π=       TR · n ,                  (49)
+                                                                                                 σ
+  The acoustic or electromagnetic beam is considered as
+harmonic with angular frequency ω. As a consequence,                 where TR = TAC   R  or TEM
+                                                                                              R . A characteristic value of
+the propagating field qi = p′i , Ei or Hi can be described           the dimensionless radiation pressure is thus obtained by
+as the real part of the complex field Qi exp(−jωt) which             considering a flat horizontal interface and evaluating it
+satisfies Helmholtz’s equation                                       at the beam focus, see Eqs. (14) and (26),
+
+                      ∇2 Qi + ki2 Qi = 0,                    (48)                         2P     Z12 + Z22 − 2 cc21 Z1 Z2
+                                                                               Π0 =                                       .   (50)
+                                                                                      πcfrom σw0      (Z1 + Z2 )2
+where ki = ω/ci is the wavenumber in fluid i. Thus,
+the open source numerical code developed for comput-                 As shown in [3, 4, 6, 25, 29], in the Bo ≪ 1 limit, which
+ing the acoustic propagation in the harmonic regime [33]             applies to the present work as discussed in Section V,
+can be used indistinctly for simulating optical or acous-            the height h0 of the steady humps formed at an interface
+tic fields. Eq. (48) is solved using opensource fortran              irradiated by a Gaussian beam satisfies h0 /w0 ∼ Π0 .
+routines [33] described in Ref. [34] and adapted to our                 The parameter V is that arising from standard waveg-
+specific problem.                                                    uide theory. Its introduction in the context of the present
+

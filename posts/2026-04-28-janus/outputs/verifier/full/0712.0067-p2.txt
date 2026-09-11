@@ -1,0 +1,55 @@
+                                                                                           2
+
+   The last component, whose existence had been neglected until now recently, might well
+   explain the observed acceleration if it is basically related to repulsive forces.
+
+   As shown below, it is possible to obtain such an effect if we suppose the Universe
+   consisting of:
+
+   -   Particles with non-zero, positive mass and positive energy.
+
+   -   Particles with zero mass: positive energy photons.
+
+   -   Particles with non-zero, negative mass and negative energy.
+
+   -   Particles with zero mass: negative energy photons.
+
+Group theory accounts for this since a long time. Relativistic dynamics of a material point is
+associated with the dynamic Poincaré group, which is based on the Lorentz group. If Γ is the
+Gramm matrix:
+(2)
+                                        ⎡1 0      0    0⎤
+                                        ⎢0 − 1 0       0 ⎥⎥
+                                   Γ = ⎢
+                                        ⎢0 0 − 1 0 ⎥
+                                        ⎢                 ⎥
+                                        ⎣0 0      0 − 1⎦
+
+
+the Lorentz group can be represented by (4,4) matrices L . Hence:
+(3)
+                                        t
+                                          LΓL = Γ
+
+If C is the space-time translation vector:
+(4)
+                                                 ⎡ Δt ⎤
+                                                 ⎢Δ x ⎥
+                                             C = ⎢    ⎥
+                                                 ⎢Δ y ⎥
+                                                 ⎢    ⎥
+                                                 ⎣Δ z ⎦
+
+then Poincaré's group corresponds to the matrix:
+(5)
+                                          ⎡L C ⎤
+                                          ⎢0 1 ⎥
+                                          ⎣      ⎦
+
+
+The Lorentz group owns four connected components. Using a terminology borrowed from
+reference [1] the first two ones form the orthochron subgroup and do not reverse the time
+coordinate. The last two ones constitute the antichron subset and their components reverse
+time. The Poincaré group, owing ten dimensions, inherits this property and also owns four
+connected components. Let us call Lo the matrices of the antichron subgroup of the Lorentz
+

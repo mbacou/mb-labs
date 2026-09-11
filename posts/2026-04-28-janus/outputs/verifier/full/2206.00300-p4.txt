@@ -1,0 +1,84 @@
+                                                                                                                           4
+
+axisymmetric transverse magnetic (TM) polarized elec-                                 C.   Synthesis
+tromagnetic beams.
+   On the one hand, for a TE field defined as Ei = Ei eϕ           Comparisons between Eqs. (2) and (19), between
+and Hi = Hni n + Hti t, the normal component of the             Eqs. (12) and (20) between Eqs. (13) and (21) and be-
+electromagnetic radiation stress is                             tween Eqs. (11) and (18) show that the electromag-
+               
+                  1           1
+                                                               netic TE problem and the acoustic problem are formally
+    EM,TE                2            2        2
+                                                 
+  TR      · n = − ε2 hE2 i + µ2 hHn2 i − hHt2 i                 identical with the following correspondences: p ↔ E,
+                  2           2
+                                                              u ↔ eϕ × H, ρ ↔ µ and χ ↔ ε. Similarly, comparisons
+                    1      2     1       2       2
+                                                               between Eqs. (2) and (25), between Eqs. (12) and (23),
+               − − ε1 hE1 i + µ1 hHn1 i − hHt1 i ,
+                    2            2                              between Eqs. (13) and (24) and between Eqs. (11) and
+                                                      (18)      (22) show that the electromagnetic TM problem and the
+                                                                acoustic problem are formally identical with the follow-
+where, according to Eqs. (5)–(8), the magnitude of the          ing correspondences: p ↔ H, u ↔ eϕ × E, ρ ↔ ε and
+electric field and the normal and tangential components         χ ↔ µ.
+of the magnetic field on both sides of the interface satisfy       These correspondences between the mechanical effects
+                         E1 = E2 ,                      (19)    of acoustic waves and TE or TM electromagnetic waves
+                     µ1 Hn1 = µ2 Hn2 ,                  (20)    offer a common framework that allow treating the wave-
+                                                                matter interaction in a universal manner.
+                        Ht1 = Ht2 .                     (21)
+On the other hand, for a TM field defined as Ei = Eni n+
+Hti t and Hi = Hi eϕ , one gets                                                          D.   Flow
+                                                   
+   EM,TM          1        2    1      2        2
+                                                                  As a result of the radiation stresses exerted on the
+ TR       · n = − µ2 hH2 i + ε2 hEn2 i − hEt2 i
+                  2             2                               interface, the interface can be deformed and the two-
+                                                                phase fluid sample can flow. The velocity and pressure
+                                                      
+                      1      2    1      2        2
+                                                      
+               − − µ1 hH1 i + ε1 hEn1 i − hEt1 i ,              fields associated to this flow driven by radiation pressure
+                      2           2
+                                                      (22)      are noted Ui and Pi , respectively.
+                                                                   Since the observed interface velocity is always largely
+where, according to Eqs. (5)–(8), the normal and tangen-        subsonic, we assume both velocity fields Ui as incom-
+tial components of the electric field and the magnitude         pressible, hence satisfying
+of the magnetic field and on both sides of the interface
+satisfy                                                                                 ∇ · Ui = 0 .                    (28)
+                     ε1 En1 = ε2 En2 ,                  (23)    and both fluid densities ρi remain homogeneous and con-
+                        Et1 = Et2 ,                     (24)    stant.
+                        H 1 = H2 .                      (25)       Moreover, the observed interface velocity is sufficiently
+                                                                small to ensure that the associated Reynolds number is
+Moreover, the tangential component of the electromag-           small compared to unity and we model the flows of both
+netic radiation stress TEM
+                        R · t is zero whatever the polar-       fluids as creeping flows. Defining the piezometric pres-
+ization state.                                                  sure P̂i as P̂i = Pi + ρi gz, where g = −gez is the gravity
+   Considering an incident plane wave, the electromag-          acceleration, Stokes equation is therefore satisfied in both
+netic radiation pressure exerted on the horizontal inter-       fluids [28], namely,
+face at rest is independent of the polarization state and
+equals                                                                            − ∇P̂i + ηi ∇2 Ui = 0 ,               (29)
+                        2   2     c
+            EM     2I Z1 + Z2 − 2 c21 Z1 Z2                     where ηi is dynamic viscosity of fluid i. In addition, at the
+           TR,0 =                           n,          (26)
+                  cfrom   (Z1 + Z2 )2                           interface between the two immiscible fluids, we assume
+                                                                the continuity of the flow velocity
+where I is the electromagnetic intensity of the incident
+plane wave, cfrom is the wave celerity of the medium from                               U1 = U2 .                       (30)
+which the incident wave impinges on the interface and
+Zi = (µi /εi )1/2 = (εi ci )−1 = µi ci is the electromagnetic     The hydrodynamic stress TH0 exerted by the flows on
+impedance. In particular, in the optical frequency do-          the interface is
+main for which µ1 = µ2 , Eq. (26) simplifies to
+                                                                                 TH0 = TH0    H0
+                                                                                                 
+                                                                                        2 − T1     · n.          (31)
+                           2I c2 − c1
+                 TEM
+                  R,0 =                 n.              (27)
+                          cfrom c1 + c2                         where TH0
+                                                                       i  is the hydrodynamic stress tensor
+where I is the electromagnetic intensity of the incident                                   ηi 
+                                                                          TH0                   ∇Ui + (∇Ui )T ,
+                                                                                                             
+plane wave.                                                                i = −Pi I +                                  (32)
+                                                                                           2
+

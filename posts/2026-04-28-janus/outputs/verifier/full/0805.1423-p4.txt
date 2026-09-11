@@ -1,0 +1,66 @@
+                                                                                                      4
+
+
+                                                      d u 2 + u 2 ( d θ 2 + sin 2 θ dϕ 2 )
+                                       [ ]
+                   d s 2 = (d x 1 )2 − R (x 1 ) 2
+                                                                        k u2 2
+                                                                                           − dx 5
+                                                                  ( 1+       )
+                                                                          4
+
+In order to link to the notations of former papers ([3], [4], [5]) we prefer to write the five
+variables:
+(18)
+                           { x° , x1 , x2 , x3 , ζ } or { x° , r , θ , ϕ , ζ }
+
+
+x° is the time-marker, { x1 , x2 , x3} or { r , θ , ϕ } the space markers and ζ the Kaluza
+coordinate, associated to the additional dimension. Introducing flatness (k = 0) we write the
+metric:
+(19)
+                                      [       ]
+                d s 2 = (d x o )2 − R (x o1 ) 2 [ d u 2 + u 2 ( d θ 2 + sin 2 θ dϕ 2 )] − d x 5
+
+Introducing the function:
+(20)
+                                       [
+                    F = ( xÝo )2 − R (x o1 ) 2    ] [ uÝ + u ( θÝ + sin θ ϕÝ )] − xÝ
+                                                          2     2    2       2     2         5
+
+
+
+
+and the Lagrange equations:
+(21)
+                                               d ∂F        ∂F
+                                                 (      )=
+                                               ds ∂ xÝi
+                                                           ∂x i
+
+we get:
+(22)
+                                            ς&&=0i.e :ς =α s+ β (linear )
+
+
+The introduction of an additional closed dimension does not change the results of our precedent
+papers. We can give the manifold M5 two five-dimensional metrics g + et g - , solutions of the
+system of the following system of coupled field equations:
+(24)
+                                           1
+                          S + jk = R + jk _ R + g + jk = χ ( T + jk − T _ jk )
+                                           2
+
+                                                  1 − _
+                              S − jk = R − jk _     R g jk = χ ( T _ jk − T + jk )
+                                                  2
+
+
+The two coupled metrics:
+
+(25)
+                                      [           ]
+                d s + 2 = (d x o )2 − R + (x o1 ) 2 [ d u 2 + u 2 ( d θ 2 + sin 2 θ dϕ 2 )] − d x 5
+
+(26)
+

@@ -1,0 +1,72 @@
+                                         defocused point source (high res)                         defocused point source (lim res)
+
+                      1.1                                                                                                                             1.1
+
+                       1                                                                                                                              1
+
+                      0.9                                                                                                                             0.9
+
+                      0.8                                                                                                                             0.8
+                             Requirement                  Goal
+
+
+
+         Throughput                                                                                                                                         Throughput
+                      0.7                                                                                                                             0.7
+
+                      0.6                                                                                                                             0.6
+
+                      0.5                                                                                                          Requirement        0.5
+
+                      0.4                                                                                                                             0.4
+
+                      0.3                                                                                                                             0.3
+
+                      0.2                                                                                                                             0.2
+                                   high res (2.5 eV)                                        lim res (10 eV)
+                      0.1          high res – filter                                        lim res – filter                                          0.1
+                       0                                                                                                                              0
+                                   1                    10            100          1000     1                    10              100         1000
+                                                       Flux [mCrab]                                             Flux [mCrab]
+
+                                                in-focus point source                                          extended source
+
+                      1.1                                                                                                                             1.1
+
+                       1                                                                                                                              1
+
+                      0.9                                                                                                                             0.9
+                                                                            Goal                                                           Goal
+                      0.8                                                                       Requirement                                           0.8
+
+
+
+
+         Throughput                                                                                                                                         Throughput
+                      0.7                                                                                                                             0.7
+
+                      0.6                                                                                                                             0.6
+
+                      0.5                                                                                                                             0.5
+
+                      0.4                                                                                                                             0.4
+
+                      0.3                                                                                                                             0.3
+
+                      0.2                                                                                                                             0.2
+
+                      0.1          high res (2.5 eV)                                        high res (2.5 eV)                                         0.1
+                       0                                                                                                                              0
+                            0.01                            0.1                      1    0.1       0.2         0.5        1           2          5
+                                                       Flux [mCrab]                                       Count Rate [cts/pix]
+
+Figure 22. Top: The defocused PSF of the Athena optics at 13 energies as seen by X-IFU.76 The bottom rightmost panel
+shows the in-focus PSF at 1 keV (Half Energy Width = 5”), for comparison. The grid in this panel shows the X-IFU
+pixels. We note that the in-focus PSF is shown on a 20” × 20” image while the defocused PSF is shown on a 200” ×
+200” image. The full field of view of the X-IFU is of the order of 300” (equivalent diameter). Bottom: Summary of
+the throughput performance for all the observing cases specified in the X-IFU URD. Requirements and goals are shown
+with crosses. Top left: High resolution observation of a defocused point source. Top right: Limited resolution (10 eV)
+observation of a defocused point source (for the filter configuration, the plot includes the 5 % loss due to the limited
+transmission of the beryllium filter in the 5 to 8 keV band of interest). Bottom left: High resolution observation of a
+focused point source. Bottom right: High resolution observation of an extended source.
+

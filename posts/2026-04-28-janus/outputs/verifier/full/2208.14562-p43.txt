@@ -1,0 +1,53 @@
+     B., Geoffray, H., Peille, P., Aicardi, C., André, J., Daniel, C., Clénet, A., Etcheverry, C., Gloaguen, E.,
+     Hervet, G., Jolly, A., Ledot, A., Paillet, I., Schmisser, R., Vella, B., Damery, J.-C., Boyce, K., Dipirro, M.,
+     Lotti, S., Schwander, D., Smith, S., Van Leeuwen, B.-J., van Weers, H., Clerc, N., Cobo, B., Dauser, T.,
+     Kirsch, C., Cucchetti, E., Eckart, M., Ferrando, P., and Natalucci, L., “The ATHENA X-ray Integral Field
+     Unit (X-IFU),” in [Space Telescopes and Instrumentation 2018: Ultraviolet to Gamma Ray], den Herder,
+     J.-W. A., Nikzad, S., and Nakazawa, K., eds., Society of Photo-Optical Instrumentation Engineers (SPIE)
+     Conference Series 10699, 106991G (July 2018).
+[29] Pajot, F., Barret, D., Lam-Trong, T., den Herder, J. W., Piro, L., Cappi, M., Huovelin, J., Kelley, R.,
+     Mas-Hesse, J. M., Mitsuda, K., Paltani, S., Rauw, G., Rozanska, A., Wilms, J., Barbera, M., Douchin, F.,
+     Geoffray, H., den Hartog, R., Kilbourne, C., Le Du, M., Macculi, C., Mesnager, J. M., and Peille, P., “The
+     Athena X-ray Integral Field Unit (X-IFU),” Journal of Low Temperature Physics 193, 901–907 (Dec. 2018).
+[30] Smith, S. J., Adams, J. S., Bandler, S. R., Betancourt-Martinez, G. L., Chervenak, J. A., Chiao, M. P.,
+     Eckart, M. E., Finkbeiner, F. M., Kelley, R. L., Kilbourne, C. A., Miniussi, A. R., Porter, F. S., Sadleir,
+     J. E., Sakai, K., Wakeham, N. A., Wassell, E. J., Yoon, W., Bennett, D. A., Doriese, W. B., Fowler, J. W.,
+     Hilton, G. C., Morgan, K. M., Pappas, C. G., Reintsema, C. N., Swetz, D. S., Ullom, J. N., Irwin, K. D.,
+     Akamatsu, H., Gottardi, L., den Hartog, R., Jackson, B. D., van der Kuur, J., Barret, D., and Peille, P.,
+     “Transition-edge sensor pixel parameter design of the microcalorimeter array for the x-ray integral field
+     unit on Athena,” in [Space Telescopes and Instrumentation 2016: Ultraviolet to Gamma Ray], den Herder,
+     J.-W. A., Takahashi, T., and Bautz, M., eds., Society of Photo-Optical Instrumentation Engineers (SPIE)
+     Conference Series 9905, 99052H (July 2016).
+[31] Smith, S. J., Adams, J. S., Bandler, S. R., Beaumont, S., Chervenak, J. A., Denison, E. V., Doriese,
+     W. B., Durkin, M., Finkbeiner, F. M., Fowler, J. W., Hilton, G. C., Hummatov, R., Irwin, K. D., Kelley,
+     R. L., Kilbourne, C. A., Leutenegger, M. A., Miniussi, A. R., Porter, F. S., Reintsema, C. D., Sadleir,
+     J. E., Sakai, K., Swetz, D. S., Ullom, J. N., Vale, L. R., Wakeham, N. A., Wassell, E. J., and Witthoeft,
+     M. C., “Performance of a Broad-Band, High-Resolution, Transition-Edge Sensor Spectrometer for X-ray
+     Astrophysics,” IEEE Transactions on Applied Superconductivity 31, 3061918 (Aug. 2021).
+[32] Welty, R. P. and Martinis, J. M., “Two-stage integrated SQUID amplifier with series array output,” IEEE
+     Transactions on Applied Superconductivity 3, 2605–2608 (Mar. 1993).
+[33] Kiviranta, M., Gronberg, L., Puranen, T., van der Kuur, J., Beev, N., Salonen, J., Hazra, D., and Korpela,
+     S., “Two-Stage SQUID Amplifier for the Frequency Multiplexed Readout of the X-IFU X-Ray Camera,”
+     IEEE Transactions on Applied Superconductivity 31, 3060356 (Aug. 2021).
+[34] Doriese, W. B., Morgan, K. M., Bennett, D. A., Denison, E. V., Fitzgerald, C. P., Fowler, J. W., Gard, J. D.,
+     Hays-Wehle, J. P., Hilton, G. C., Irwin, K. D., Joe, Y. I., Mates, J. A. B., O’Neil, G. C., Reintsema, C. D.,
+     Robbins, N. O., Schmidt, D. R., Swetz, D. S., Tatsuno, H., Vale, L. R., and Ullom, J. N., “Developments in
+     Time-Division Multiplexing of X-ray Transition-Edge Sensors,” Journal of Low Temperature Physics 184,
+     389–395 (July 2016).
+[35] Doriese, W. B., Bandler, S. R., Chaudhuri, S., Dawson, C. S., Denison, E. V., Duff, S. M., Durkin, M.,
+     FitzGerald, C. T., Fowler, J. W., Gard, J. D., Hilton, G. C., Irwin, K. D., Joe, Y. I., Morgan, K. M., O’Neil,
+     G. C., Pappas, C. G., Reintsema, C. D., Rudman, D. A., Smith, S. J., Stevens, R. W., Swetz, D. S., Szypryt,
+     P., Ullom, J. N., Vale, L. R., Weber, J. C., and Young, B. A., “Optimization of Time- and Code-Division-
+     Multiplexed Readout for Athena X-IFU,” IEEE Transactions on Applied Superconductivity 29, 2905577
+     (Aug. 2019).
+[36] Durkin, M., Adams, J. S., Bandler, S. R., Chervenak, J. A., Denison, E. V., Doriese, W. B., Duff, S. M.,
+     Finkbeiner, F. M., Fowler, J. W., Gard, J. D., Hilton, G. C., Hummatov, R., Irwin, K. D., Joe, Y. I.,
+     Kelley, R. L., Kilbourne, C. A., Miniussi, A. R., Morgan, K. M., O’Neil, G. C., Pappas, C. G., Porter, F. S.,
+     Reintsema, C. D., Rudman, D. A., Sakai, K., Smith, S. J., Stevens, R. W., Swetz, D. S., Szypryt, P., Ullom,
+     J. N., Vale, L. R., and Wakeham, N., “Mitigation of Finite Bandwidth Effects in Time-Division-Multiplexed
+     SQUID Readout of TES Arrays,” IEEE Transactions on Applied Superconductivity 31, 3065279 (Aug. 2021).
+[37] Vaccaro, D., Akamatsu, H., Gottardi, L., van der Kuur, J., Nagayoshi, K., Taralli, E., de Wit, M., Bruijn,
+     M. P., van der Linden, A. J., van Leeuwen, B.-J., van der Hulst, P., Ravensberg, K., de Vries, C. P.,
+     Kiviranta, M., Gao, J.-R., and den Herder, J.-W. A., “Frequency domain multiplexing readout for large
+     arrays of transition-edge sensors,” arXiv e-prints , arXiv:2208.12604 (Aug. 2022).
+

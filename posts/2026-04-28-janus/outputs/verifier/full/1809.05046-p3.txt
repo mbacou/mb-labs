@@ -1,0 +1,40 @@
+subsequent Newtonian approximation provides the following corresponding
+interaction rules :
+    • Positive mass attracts positive masses and repels negative masses
+    • Negative mass attracts negative masses and repels positive masses
+The JCM perfectly fits available observational data [12] and restores the
+action-reaction as well as the equivalence principles. This certainly gives
+substance to the study of negative masses.
+    Despite of the growing interest in negative masses, there were very few
+papers devoted to the subject within the quantum mechanical paradigm. Let
+us cite [13] where the concept of negative mass is used to solve Schrdinger
+equations.
+    The purpose of this article is to initiate a study of the impact of negative
+masses on relativistic quantum mechanics by taking a new look at its stan-
+dards such as the Dirac equation (for a review of these standards, see, for
+instance, Section 2.3 of [14]).
+    The reason to do so is that relativistic quantum mechanics naturally puts
+in evidence negative energies having an unpleasant consequence which can
+be avoided if masses are negative, too. Indeed, one of the arguments for
+having given up the Klein-Gordon equation is the fact that the density of
+                                                                         E
+probability is, up to the square of a normalization factor, the ratio m    . It is
+obvious to see that this probability is positive if energies and masses have
+the same sign. So, negative energies can be restored if masses are negative,
+too.
+    The contents is distributed as follows. In Section 2, we show that if the
+time-reversal operator is chosen as unitary, masses become negative (while
+an anti-unitary one leads to positive masses). In Section 3, we realize this
+unitary operator within the Dirac formalism. States corresponding to an-
+tifermions are then associated with negative masses and energies. We con-
+clude in Section 4.
+    We work in the following in the standard units. Greek letters run from 0
+to 3 while Latin indices are equal to 1, 2, 3.
+
+
+2     Unitarity of the time-reversal operator
+First, let us recall that a unitary operator U is defined through
+                            < Uψ|Uφ >=< ψ|φ >                                 (1)
+
+                                        3
+

@@ -1,0 +1,117 @@
+To achieve the temperatures required by the mission, the X-IFU Hybrid cooler is based   on
+                                                                                    Page : 24/72a solution that
+
+combines (see figure below):
+•       A 3He sorption cooler, providing the cooling power at T1 (300 mK range),
+•       An Adiabatic Demagnetization Refrigerator (ADR), providing the cooling power at T0 (50 mK range).
+
+
+
+
+                                                                                                                                           Figure 6 – Principle of operation of a Sorption cooler
+                                                                                                                                                            (extract from [RD-7])
+
+                                                                                                                The ADR stage is based on magnetic cooling, which principle is based on the entropy reduction of the
+                                                                                       Ref.: XIFU-RD-11410-00790-CNES
+                                                                                                         disordered spins of paramagnetic material:
+                                                                                       Issue: 1.0                   -    when submitted to a magnetic field, the spins in the paramagnetic material tend to align along the field
+                                                                                                                         direction; the order in the material increases, thus the entropy decreases, and the material releases
+                                                                                       Date: 16/05/2022
+                          ATHENA                                                       Page : 24/72                 -
+                                                                                                                         heat toward a heat sink;
+                                                                                                                         when the magnetic field is gradually reduced and turned off, the spins turn back to their random
+                                                                                                                         orientation, which needs some energy; if the material is thermally isolated, this energy is drawn from
+                                                                                                                         the thermal agitation, which cools the material in an adiabatic process.
+
+
+
+                                                                               Figure 5 – Schematic of HybCMA
+                                                                                      (extract from [RD-8])
+
+The sorption stage features:
+        -     a sorption pump,
+        -     an evaporator, into which liquid Helium 3 is condensed and then pumped down, with a thermal link to
+              the objects to be cooled: the ADR stage of the cooler, and the T1 stage (~300 mK) of the FPA,
+       - a pumping line, between the pump and the evaporator,
+       - thermal            links toward heat sinks at T2 (1.9K) and T3 (4.9 K),
+                         Figure 6 – Principle of operation of a Sorption cooler
+                                                                                                                                       provided
+                                                                                                                                Figure 7 –   Principle of by  operationthe       upper cryochain (SIM
+                                                                                                                                                                            of an ADR
+                                                                                                                                              (extract from [RD-7])
+        Figure      14. Top) The (extract
+              Cryostat)                 schematic from of   the Hybrid cooler mechanical assembly. Bottom
+                                                       [RD-7])                                                                                     left) The working principle of the
+        sorption stage. Bottom right) The working principle of an                             Adiabatic           Demagnetization                     Refrigerator               (ADR).
+The ADR- stagetwo     gason gap
+                 is based    magneticheat
+                                        cooling,                 is based and
+                                                 which principle(HS1
+                                              switches                    on the HS2),      allowing
+                                                                                          Thus, like
+                                                                                          recycling of
+                                                                                 entropy reduction       the to thermally connect or disconnect respectively
+                                                                                                      the Sorption stage, the
+                                                                                                    phase.
+                                                                                                                                    ADR stage has a cyclic            operation, with   a cooling phase followed by a
+
+              the
+disordered spins     sorptionmaterial:
+                 of paramagnetic    pump to the T3 interface, and the                            evaporator cold end to the T2 interface.
+                                                                                          This document belongs to CNES. Its information cannot be distributed, published or reproduced without a CNES agreement
+    -    when submitted to a magnetic field, the spins in the paramagnetic material tend to align along the field
+                • a pumping line, between the pump and the evaporator,
+         direction; the order in the material increases, thus the entropy decreases, and the material releases
+This heat
+      system          is a
+           toward a heat
+            • thermal     sink;one-shot system and needs to be recycled once all the liquid helium has been exhausted.
+                               links toward heat sinks at T2 (1.9K) and T3 (4.9 K), provided by the upper cryochain,
+During     the    recycling         phase,         the sorption            pump         first isis drawn
+                                                                                                   heated to desorb (exhaust) most of the helium gas and
+   - when the magnetic field is gradually reduced and turned off, the spins turn back to their random
+            •
+     orientation,
+               twowhichgas
+                         needsgapsome heat
+                                      energy; switches
+                                              if the material is thermally
+                                                              (HS1      andisolated, this energy
+                                                                                 HS2),      allowing fromto thermally connect or disconnect respectively the
+allow goodsorption
+     the thermal   condensation
+                  agitation, which cools the  efficiency. Then once the liquid has been condensed, the sorption pump is cooled
+                                             material in an adiabatic process.
+                                pump to the T3 interface, and the evaporator cold end to the T2 interface.
+back down to ensure the pumping effect and lower the saturated vapor pressure of the liquid helium bath.
+          This system is a one-shot system and needs to be recycled once all the liquid helium has been exhausted.
+          During the recycling phase, the sorption pump first is heated to exhaust most of the helium gas and allows good
+          condensation efficiency. Then once the liquid has been condensed, the sorption pump is cooled back down to
+          ensure the pumping effect and lower the saturated vapor pressure of the liquid helium bath.
+              The ADR stage is based on magnetic cooling, which principle is based on the entropy reduction of the
+          disordered spins of paramagnetic material: 1) when submitted to a magnetic field, the spins in the paramagnetic
+          material tend to align along the field direction; the order in the material increases, thus the entropy decreases,
+          and the material releases heat toward a heat sink; 2) when the magnetic field is gradually reduced and turned
+          off, the spins turn back to their random orientation, which requires energy; if the material is thermally isolated,
+          this energy is drawn from the thermal agitation, which cools the material in an adiabatic process. Thus, like the
+          sorption stage,Figure
+                           the7 –
+                                ADR      stage
+                                  Principle of     has aof an
+                                               operation   cyclic
+                                                              ADR operation, with a cooling phase followed by a recycling phase. The
+                                   (extract from [RD-7])
+          ADR stage is composed of:
+Thus, like the Sorption stage, the ADR stage has a cyclic operation, with a cooling phase followed by a
+recycling phase.
+                • a cryogenic superconductor coil,
+                • a paramagnetic salt pill accommodated inside of the coil,
+This document belongs to CNES. Its information cannot be distributed, published or reproduced without a CNES agreement
+
+
+                • a thermal link to the object to be cooled: the T0 stage (∼ 50 mK) of the FPA (detector stage),
+                • a third heat switch (HS3), allowing to thermally connect the salt pill to the cold end of the sorption stage
+                  evaporator during the recycling phase, to thermally disconnect the salt pill from the rest of the cooler
+                  during the cooling phase.
+This document belongs to CNES. Its information cannot be distributed, published or reproduced without a CNES agreement
+

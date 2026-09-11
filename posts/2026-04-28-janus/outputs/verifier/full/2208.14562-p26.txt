@@ -1,0 +1,213 @@
+                                                                                                                                                                                                                                         an exper
+                                                                                                                                                                                                                                         this exce
+                                                                                                                                                                                                                                         recipe w
+                                                                                                                                         Fig. 4. Histogram of ∆EFWHM , measured at Co-Kα (6.9 keV), for all 218                          process
+                                                                                                                                         pixels that generated spectra in the array. The average of resolution of pixels in              quality B
+SMITH et al.: PERFORMANCE OF A BROAD-BAND, HIGH-RESOLUTION, TRANSITION-EDGE SENSOR SPECTROMETER                                          the main   distribution is !∆EFWHM " = (2.17 ± 0.10) eV.
+                                                                                                                                                 2100806
+                                                                                                                                                                                                                                         in our de
+                                                                                                                                                                                                                                         detector
+                                                                                                                                                                                                                                         and som
+                                                                                                                                                                                                                                         lower lev
+                                                                                                                                                                                                                                            By co
+                                                                                                                                                                                                                                         pixel we
+                                                                                                                                                                                                                                         whole. F
+                                                                                                                                                                                                                                         the five
+                                                                                                                                                                                                                                         top row
+                                                                                                                                                                                                                                         been om
+                                                                                                                                                                                                                                         coadded
+                                                                                                                                                                                                                                         significa
+                                                                                                                                                                                                                                         be due t
+                                                                                                                                                                                                                                         circuit re
+                                                                                                                                                                                                                                         read out
+                                                                                                                                                                                                                                         larger sl
+                                                                                                                                                                                                                                         tracked
+                                                                                                                                                                                                                                         Three of
+Fig. 6. Coadded 8-column by 32-row spectra for (a)31        Ti-Kα, (b) Mn-Kα, (c) Co-Kα, (d) Cu-Kα and (e) Br-Kα (measured from K-Br.) The red dots are the
+       Figure 21. Left) From Co-added 8-column by 32-row spectra for                                                        Fig. 5. (a) ∆E Ti-Kα, (b)     array heat map(c)
+                                                                                                                                                             Mn-Kα,
+data points, the light blue lines are the natural lines shapes and the dark blue line is the fit to data. The fitted ∆EFWHM , number of counts and number of pixels FWHM  measured
+                                                                                                                                                                             Co-Kα,   Co-Kα. The
+                                                                                                                                                                                   at (d)     Cu-Kα    andof(e)
+                                                                                                                                                                                                    region    63 pixels
+                                                                                                                                                                                                                                         dataset b
+included in each spectrum are shown on the figures. The natural line shapes are from [18] for Ti and [19] for Mn, Co and Cu (we note that using the alternative line
+       Br-Kα (measured from K-Br). The red dots are the data points,                                                        in each       quadrant
+                                                                                                                                  the light       blueof the  array
+                                                                                                                                                          lines  arethat
+shape profile of [20] to fit Cu- Kα gives a slightly different best fit resolution of ∆EFWHM = 2.42 eV). The Br line shape is derived from [21], [22], however the    theconnect to the
+                                                                                                                                                                           natural                       outlined.
+                                                                                                                                                                                              shapesareand
+                                                                                                                                                                                         bond-pads
+                                                                                                                                                                                     lines                   the The                     for those
+       dark blue line is the fit to data. The fitted ∆E (Full Width ataverage                                                                            obtained
+α1/α2 peak intensities are re-normalized to account for the change in the Au absorber transmission at 11919 eV due to the LIII Au absorption edge. (f) ∆EFWHM
+                                                                                                                                          ∆E
+as a function of energy for the 1-column by 40-row measurements in [7] (black circles) and the new 8-column by 32-row results (red squares). The improved FWHM
+                                                                                                                              Half Maximum,                FWHM),   in each quadrant
+                                                                                                                                                                         number    of iscounts
+                                                                                                                                                                                          indicated
+                                                                                                                                                                                                 andon number
+                                                                                                                                                                                                       the figure. The                   ∆EFWH
+       of pixels included in each spectrum are shown on the figures (f)∆E
+                                                                                                                            top row of the detector suffered from excess broadening of the intrinsic detector
+∆EFWHM is attributed to lower noise, improvements in the dynamic behavior of the readout chain and more optimized TES bias point. The dashed black line
+                                                                                                                                 ∆E FWHM              as a function of energy for the 1-column by
+shows the X-IFU instrument level resolution requirements, and the dashed blue line shows the currently assumed requirements considering only the detector and
+                                                                                                                                                                                                                                         for Mn-K
+readout subsystem and excluding margin.                                                                                                         due to an absorber fabrication issue.
+                                                                                                                                                      FWHM                                                                               for Br-K
+       40-row measurements41 and the new 8-column by 32-row results (red squares). The improved ∆E FWHM is attributed
+       to lower       noise,                                                                                                                                                                                                             spectra.
+requirements  with some margin atimprovements              in the[2] dynamic
+                                  7 keV and substantial margin                            behavior of the readout chain and more optimized TES bias point. The
+                                                                     S. J. Smith et al., “Transition-edge sensor pixel parameter design of the
+for <7 keV.
+       dashed black line shows the X-IFU instrument                  microcalorimeter array for the X-ray integral field unit on athena,” in
+                                                                                          level     resolution             requirements,             and the dashed blue line shows the currently                                           Since
+                                                                     Proc. vol. 9905, Space Telescopes  Instrum. Ultraviolet Gamma Ray, 2016,
+   The final ∆EFWHM margin requirements for X-IFU are yet
+       assumed        requirements           considering        only Art. no. 99052H.                                       For subsystem
+                                                                                                                                     all data sets         <5%      of events   were Right)
+                                                                                                                                                                                         rejected.   The31 crosstalk                     !Nrow ,
+to be confirmed. However, noting  that Min for the current mul-  [3] W. B. the      detector
+                                                                           Doriese et al.,              and
+                                                                                           “Developments in      readout
+                                                                                                            time-division multiplexing of X-ray        and    excluding     margin.               From      ∆E
+tiplexer chips was designed to accommodate 12 keV photon
+       FWHM          array    heat     map       measured       at                                                          levels
+                                                                     transition-edge sensors,” J. Low Temp. Phys., vol. 184, pp.
+                                                                     Co-Kα.                                                      389–395,are
+                                                                                                                                          2016. consistent with the X-IFU requirements.                                                  readout n
+slew-rates for Nrow = 40, we have some margin in the dynamic     [4] M. Durkin et al., “Mitigating finite bandwidth effects in time-division-
+range to re-optimize Min for the current baseline of Nrow = 34.                                                                                   For each of the 218 TES pixels that produced X-ray pulses,
+                                                                                   multiplexed SQUID readout of TES arrays,” IEEE Trans. Appl. Super-
+                                                                                   cond., submitted for publication.
+                                                                                                                                                                                                                                         Nrow = 4
+Using 1 to re-scale Min to 34-row TDM, we predict the noise
+would be reduced to 17.7 pA/!Hz and gain further resolution
+                                                                                                                                             each triggered data record is digitally processed via the standard
+                                                                               [5] J. S. Adams et al., “First operation of TES microcalorimeters in space
+                                                                                   with the Micro-X sounding rocket,” J. Low Temp. Phys., vol. 199,
+                                                                                                                                                                                                                                         and we e
+                 An extensive demonstration campaign is ongoing at GSFC
+margin (we estimate this would improve ∆EFWHM by 0.02 eV).                         pp. 1062–1071, 2020.                                                   using a technique
+                                                                                                                                             optimal-filter
+                                                                               [6] R. P. Welty and J. M. Martinis, “Two-stage integrated SQUID amplifier
+                                                                                                                                                                       prototype[17]. 8x32 TDM
+                                                                                                                                                                                           Histogrammedsetup31 to      demon-
+                                                                                                                                                                                                                spectra of    filtered   a subset
+        strate our           IV. C    ONCLUSION to accurately correct gain drifts insidepulse
+                                   ability                                                                                                      the heights
+                                                                                   with series array output,” IEEE Trans. Appl. Supercond., vol. 3, no. 1,
+                                                                                   pp. 2605–2608, Mar. 1993.
+                                                                                                                                                           expected    are then    converted
+                                                                                                                                                                           parameter       space to of
+                                                                                                                                                                                                    energy
+                                                                                                                                                                                                        X-IFU via the   recognition
+                                                                                                                                                                                                                   operating             outlier p
+        conditions
+   We have                        with bydifferent
+               demonstrated 8-column                                 correction
+                                                    32-row TDM readout         of           algorithms. First results                        of known
+                                                                               [7] M. Durkin et al., “Demonstration of athena X-IFU compatible 40-
+                                                                                                                                                    indicatemission
+                                                                                   row time-division-multiplexed readout,” IEEE Trans. Appl. Supercond.,
+                                                                                                                                                                               lines. The
+                                                                                                                                                                      error levels             photon
+                                                                                                                                                                                      relatively         energieswith
+                                                                                                                                                                                                     consistent            corrected
+                                                                                                                                                                                                                      are pre-           = (2.03
+> 200 pixels in a prototype kilo-pixel array. Our results meet
+        dictions obtained through simulations of the instrumental for
+the energy-range     and  resolution     requirements      for Athena   X-IFU.
+                                                                                   vol. 29, no. 5, Aug. 2019, Art. no. 2101005.
+                                                                                                                                              readout uncertainty
+                                                                               [8] G. V. Brown et al., “A brief overview of the fusion and astrophysics data              in the pulse
+                                                                                                                                                                   via XIFUSIM,            arrival
+                                                                                                                                                                                      72, 73         phasethe
+                                                                                                                                                                                              on which       with    respect to the
+                                                                                                                                                                                                                 instrument              when inc
+This laboratory instrument will now be calibrated and delivered
+        energy
+to LLNL EBIT        for laboratory      budget is
+                         scale astrophysics                     based.
+                                                        experiments.     For X- Overall, our current best estimate                           filter template
+                                                                                   and diagnostic calibration facility,” in Proc. SPIE 7732, Space Telescopes
+                                                                                   Instrum. Ultraviolet Gamma Ray, Jul. 29, 2010, Art. no. 77324Q, [Online].     for thedueenergy     scalejitter.
+                                                                                                                                                                              to trigger      performance          corrections
+                                                                                                                                                                                                    Additionalamounts         to are        Fig. 6
+IFU we are now fabricating full-scale 3168-pixel arrays and
+        0.33
+                                                                                   Available: https://doi.org/10.1117/12.857555
+                                                                                                                                             made          to     each   pixel  individually      to  account    for   drifts  in the    the origi
+developing     the eV.
+                   infrastructure to test all pixels with TDM readout.         [9] G. L. Betancourt-Martinez et al., “The transition-edge EBIT mi-
+                                                                                                                                             detector gains over time (of typically a few eV). The resulting
+                                                                                   crocalorimeter spectrometer,” in Proc. Space Telescopes Instrum. Ultra-
+                                                                                   violet Gamma Ray, 2014, Art. no. 91443U, [Online]. Available: https:
+                                                                                                                                                                                                                                         32-row r
+        4.4 Count rate capability
+                                    REFERENCES                                     //doi.org/10.1117/12.2055568
+                                                                                                                                             energy histogram is fitted to the assumed line profile for each
+                                                                              [10] H. Collaboration, “Atomic data and spectral modeling constraints from                                                                                 ∆EFWH
+ [1] D. Barret et al., “The athena X-ray integral field unit (X-IFU),” in
+     Proc. SPIE Space Telescopes Instrum. Ultraviolet Gamma Ray, 2016,                                                                       Kα complex to determine the Gaussian energy response of
+                                                                                   high-resolution X-ray observations of the perseus cluster with Hitomi,”
+                                                                                   Pub. Astronomical Soc. Jpn., vol. 70, no. 2, Mar. 12. 2018, [Online].                                                                                 proveme
+     Art. o. 99052F.
+        In this section, we review the count rate capability of X-IFU,             Available: https://doi.org/10.1093/pasj/psx156
+                                                                                                                                             thestarting
+                                                                                                                                                      TES pixel      withwith
+                                                                                                                                                                            thethe
+                                                                                                                                                                                 listbest-fit   value of ∆E
+                                                                                                                                                                                      of requirements        to be
+                                                                                                                                                                                                                 FWHMmet. (see
+                                                                                                                                                                                                                            A linear     more opt
+        the last column, Table 6). One of the most emblematic count                                                                          local gain slope parameter is included in the fitting routine
+                                                                                                                                                       rate       requirements       for  X-IFU     is the   one   related    to         shows th
+        mCrab
+   Authorized            intensity
+              licensed use limited to:            sources
+                                       University of Maryland       observed
+                                                              Baltimore Cty.            out-of-focus
+                                                                             Downloaded on January                  requiring
+                                                                                                   13,2022 at 16:11:29 UTC from          a to
+                                                                                                                                IEEE Xplore.       account
+                                                                                                                                             throughput
+                                                                                                                                             Restrictions apply.     for non-linearity
+                                                                                                                                                                      of 80%    for 2.5 eV in the    energy gain
+                                                                                                                                                                                                spectral   resolution,scale.andFig. 4    eV up t
+        is driven by the capability to observe bright gamma-ray burst                                                                        shows the    afterglowshistogrammed       energy
+                                                                                                                                                                            to probe the          resolutions
+                                                                                                                                                                                               Warm     Hot of the         218 TES
+                                                                                                                                                                                                               Intergalactic             however
+        Medium.74, 75 Another one is certainly the one related to the                                                                        pixels at  capabilitythe Co-Kα     complex very
+                                                                                                                                                                          of observing       (6.9 keV).     Excluding
+                                                                                                                                                                                                    bright X-ray          the even
+                                                                                                                                                                                                                       sources           consider
+        (1 Crab intensity level) with X-IFU, thanks to the optics outlier                                                                    defocussing     pixelsand  between
+                                                                                                                                                                            the ∆Eaddition
+                                                                                                                                                                                        FWHM   of =   2.7 and
+                                                                                                                                                                                                   thick  filters3.2along
+                                                                                                                                                                                                                      eV thethemean      subsyste
+                                                                                                                                                                                                                                         by the d
+        light path. This one is driven by the objective to probe resolution                                                                   stellar mass          is !∆E
+                                                                                                                                                                        black           = (2.17
+                                                                                                                                                                                hole" spins,
+                                                                                                                                                                             FWHM                   ± 0.10)
+                                                                                                                                                                                                 winds    and eV.     The standard
+                                                                                                                                                                                                                 outflows     in
+       binary systems.16
+           We define the throughput as the fraction of valid events selected to pass a certain resolution criterion (currently
+       2.5 eV or 10 eV depending on the requirement) among allAuthorized      licensed use limited o: University of Maryland Baltimore Cty. Downloaded on Janu
+                                                                       detected   events. Most count rate requirements are
+       thus expressed as a minimum throughput to be met at a given reference instrument count rate. This stems from
+       the fact that the energy resolution of a photon detected by a micro-calorimeter depends on the time separation
+       between individual X-ray pulses in the pixel timeline, as well as on the presence of crosstalk signals generated
+       by simultaneous events on neighbour pixels: the 2.5 eV resolution will only be achieved for photons well isolated
+       within the data stream timeline.
+
+       4.4.1 Components of the throughput budget
+       The throughput performance depends on several factors.77 The main ones are listed below:
+

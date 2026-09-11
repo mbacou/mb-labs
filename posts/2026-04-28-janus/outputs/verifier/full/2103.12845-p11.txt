@@ -1,0 +1,39 @@
+16. J. M. Souriau, Structure Des Systèmes Dynamiques (Dunod France, 1970) (in French); Struc-
+    ture of Dynamical Systems, Chap. III (Birkhaüser, 1997).
+
+17. S. Weinberg, The Quantum Theory of Fields (Cambridge Univ. Press, 2005), Vol. 1.
+
+18. A. G. Riess et al., Astron. J. 116, 1009 (1998).
+
+19. S. Perlmutter et al., Astrophys. J. 517, 565 (1999).
+
+20. A. G. Riess, Publ. Astron. Soc. Pac. 112, 1284 (2000).
+
+21. A. V. Filippenko and A. G. Riess, AIP Conf. Proc. 540, 227 (2000).
+
+22. B. Leibundgut, Annu. Rev. Astron. Astrophys. 39, 67 (2001).
+
+23. R. Knop et al., Astrophys. J. 598, 102 (2003).
+
+24. J. T. Tonry et al., Astrophys. J. 594, 1 (2003).
+
+25. B. Barris et al., Astrophys. J. 602, 571 (2004).
+
+26. A. G. Riess, Astrophys. J. 607, 665 (2004).
+
+27. B. Schmidt, Rev. Mod Phys. 84, 987 (2012).
+
+
+
+Erratum
+Equation (13) page 3 has a typo (extra square) and should be written:
+
+                                                      z2
+                                         r = Rs +
+                                                     4Rs
+
+
+
+
+                                               11
+

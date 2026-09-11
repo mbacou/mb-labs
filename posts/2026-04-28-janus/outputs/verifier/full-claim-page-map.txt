@@ -1,0 +1,8 @@
+Claim -> first match (pdf page)
+negative mass -> 0712.0067 p10
+cosmic acceleration -> 0712.0067 p10
+runaway -> 1408.2451 p1
+bimetric -> 0712.0067 p10
+bigravity -> 0712.0067 p12
+rotation -> 1809.05046 p14
+acceleration -> 0712.0067 p10

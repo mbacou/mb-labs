@@ -1,0 +1,41 @@
+as it can be easily verified, with the difference that the anti-fermions (21)
+now have negative energies and masses.
+We insist on that fact : the χ-states as in Eq. (21) remain the same but
+are interpreted in a different way. Under the unitary PT transformation, the
+following changes arise
+
+               E → −E , m → −m , xµ → −xµ , pµ → −pµ
+
+but they leave the different elements of the χ-states invariant whether it is
+the normalization factor         s
+                                   E +m
+                                       2E
+the plane wave part
+                                 e−i(~p.~x−Et)
+or the fractions inside the bi-spinors because the signs of both numerators
+and denominators simultaneously change.
+Another point is the fact that, in Eq.(32), by opposition to Eq.(25), the
+unitary PT connects the sectors ψ1 − χ1 , ψ2 − χ2 . This is due to the transfor-
+mations of such an operator on position, momentum and angular momentum
+operators
+                          ~x → ~x , ~p → p~ ⇒ ~
+                                              L→~   L                      (33)
+(compare with Eq.(26)) implying the conservation of the spin vector. This
+implies that unitary P T acts on spin up (resp. spin down) ψ-states to give
+spin up (resp. spin down) χ-states.
+
+
+4    Conclusion
+We have shown that negative masses can take place in relativistic quantum
+mechanics up to the condition of being related to negative energies. The uni-
+tary PT transformation we propose acts on states associated with positive
+energy and mass fermions to give states associated with negative energy and
+mass anti-fermions. This is an alternative to the anti-unitary charge conju-
+gation operator leading to the same states but then subtended by positive
+energy and mass anti-fermions.
+We argue, in complete agreement with [11], that there are two types of anti-
+matter. The ”classical” one, created in laboratories and associated with an
+anti-unitary PT, and the primordial antimatter reached by the unitary PT,
+
+                                      12
+

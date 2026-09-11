@@ -1,0 +1,71 @@
+      Coordinates                                  Line element
+
+ Eddington-Finkelstein                         rs  2                                regular at horizon,
+                                           1−       dv − 2 dv dr − r2 dΩ2             extends across
+      (ingoing)                                 s
+                                                                                      future horizon
+
+ Eddington-Finkelstein                         rs  2                                regular at horizon,
+                                           1−       du − 2 du dr − r2 dΩ2             extends across
+      (outgoing)                                s
+                                                                                      past horizon
+                                                     r
+                                   rs  2               τs
+  Gullstrand-Painlevé            1−     dT − 2              dT dr − dr2 − r2 dΩ2      regular at horizon
+                                    s                    r
+                                  rs                                         isotropic lightcones
+                                     
+                             1 − 4R      2
+                                                  rs 4    2      2      2
+        Isotropic                      dt  −   1 +       dx   + dy   + dz     on constant
+                                 τs 2              4R
+                                     
+                             1 + 4R
+                                                                              time slices
+
+                         Fig. 1. Schwarzschild’s geometry. Alternative coordinates.
+
+
+whose signature (+, +) changes into (−, +) when r > Rs . But, through the simple following
+coordinate change
+                                        r = Rs sin θ,                                  (3)
+this object becomes a sphere:
+
+                                        ds2 = Rs2 dθ2 + sin2 θ dϕ2 .
+                                                                  
+                                                                                                           (4)
+
+   Another example. Consider the metric:
+
+                                                   dr2
+                                 ds2 =                          + r2 dϕ2                                   (5)
+                                           −r2 + 2rR + r02 − R2
+   The signature is (+, +) if
+                                            R − r0 < r < R + r0 ,                                          (6)
+but through the new coordinate change
+
+                                                r = R + r0 cos θ,                                          (7)
+
+we get the well-known metric of the torus:
+
+                                     ds2 = r0 dθ2 + (R + r0 cos θ) dϕ2 .                                   (8)
+
+   Now, let us focus on the space part of Schwarzschild’s line element, limited to {r, ϕ} coordi-
+nates:
+                                             dr2
+                                   dΣ2 =           + r2 dϕ2                                   (9)
+                                           1 − Rrs
+   For r < Rs , the signature (+, +) is changed into (−, +). Let us make the change of variable:
+
+                                            r = Rs (1 + Log ch ρ) ,                                    (10)
+
+which gives:                                                                   
+                     2               (1 + Log ch ρ) 2                      2
+                    dΣ   = Rs2                            2                   2
+                                                   th ρ dρ + (1 + Log ch ρ) dϕ .                       (11)
+                                        Log ch ρ
+
+
+
+                                                         2
+

@@ -1,0 +1,54 @@
+                                                 Noname manuscript No.
+                                                 (will be inserted by the editor)
+
+
+
+
+                                                 Can negative mass be considered in
+                                                 General Relativity ?
+
+                                                 Jean-Pierre Petit · Gilles dAgostini
+
+
+
+
+arXiv:1408.2451v1 [physics.gen-ph] 29 May 2014
+                                                 Received: date / Accepted: date
+
+
+
+                                                 Abstract We show, through Newtonian approximation, that shifting to a bimet-
+                                                 ric model of the Universe based on a suitable system of coupled field equations,
+                                                 removes the preposterous runaway effect and gives different interaction laws, be-
+                                                 tween positive and negative masses, that bring new insights into the alternative
+                                                 VLS interpretations previously proposed by several authors, and strengthening
+                                                 their assumptions.
+
+                                                 Keywords negative mass · bimetric model · gravitation · runaway effect
+
+
+
+                                                 1 Introduction
+
+                                                 Scientists have been trying long ago to mix positive and negative masses to com-
+                                                 pose a new cosmological model. The lacunar structure of the Universe at large
+                                                 scales early suggested that some negative matter could have formed clumps, re-
+                                                 pelling positive matter into remnant places shaped like joint bubbles. Such a bubble
+                                                 structure was suggested in 1986 by De Lapparent et al. [1] then by Kirshner et al.
+                                                 [2] in 1986, Rood [3] in 1988 and Geller et al. [4] in 1989. The idea of repulsive
+                                                 structures, shaping positive matter into lacunar structures was progressively de-
+                                                 velopped by El-Ad et al. [5, 6, 7].
+                                                 The possibility of gravitational repulsion was explicitely evoked by Piran [8] in
+                                                 1997, a paper in which he suggested that initial tiny perturbations in the primor-
+                                                 dial density field, acting as if they had a negative mass, could expand and play
+                                                 a role in the VLS (Very Large Scale) structure. He further theorized, with no
+                                                 justification however, that negative mass could own a negative active mass (from
+                                                 Bondis definition [11]), but positive inertial and passive masses, so that two nega-
+                                                 tive masses would mutually attract. Hence, negative material could form clusters
+                                                 while positive and negative masses would repel each other. He developped a Void
+
+                                                 F. Author
+                                                 E-mail: jppetit1937@yahoo.fr
+                                                 Gilles dAgostini
+                                                 E-mail: dagostini.gilles@laposte.net
+

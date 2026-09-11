@@ -1,0 +1,43 @@
+Combined with the parity operator (15), we are led to the following unitary
+PT transformation
+
+                ψ(t, ~x) → iγ 0 γ 1 γ 2 γ 3 ψ(−t, −~x) = γ 5 ψ(−t, −~x)     (19)
+
+The PT-symmetry within the Dirac formalism is not just only related to
+opposite space-time coordinates, it is also subtended by the γ 5 matrix.
+    We are used to interpret this matrix as the one realizing the chirality
+operator. But it is not just so. Indeed, the γ 5 matrix anticommutes with
+each of the γ µ ’s. Acting on the Dirac equation (12), this implies that either
+the sign of each of the pµ ’s has to change (which is expected in a unitary
+PT symmetry) or, in an equivalent way, the mass has to become negative.
+Such developments can also be found in the quantum field theory context
+[18] where it was quoted that the γ 5 chiral transformation is associated to
+the fact that the sign of the mass term in the Lagrangian is reversed. Let us
+also mention as an aside that the γ 5 matrix has also been associated to the
+charge operator [19]. More precisely, in [19], it was required that the Dirac
+parity operator should always be of the form (15) whether it is defined in
+the fermion or antifermion wavefunction space. And this had consequences
+that the fermion field and the charge-conjugate (related to γ 5 ) antifermion
+field obey opposite-mass Dirac equations. However, despite of the fact that
+this approach is close to ours, it is different in the sense that we are not only
+in the QFT field but mostly because we are concerned here with negative
+energies.
+    Together with previous remarks, this fact tends to prove that the matrix
+  5
+γ has not yet revealed all its wealthes...
+    Anyway, the matrix γ 5 is essentially considered here as the one for what
+we call a M-symmetry : m → −m. Such a symmetry is naturally connected
+to a unitary PT-transformation.
+    Let us now analyse the impact of such considerations on the four solutions
+of the Dirac equation.
+As well known, the free Dirac   √ equation (12) has positive as well as nega-
+tive energies p0 = ±Ep = ± p2 + m2 . The four solutions consist in two
+solutions with positive energies E = Ep (spin up and spin down, respec-
+tively, according to the eigenvalues of the third component of the spin vector
+S3 = 21 diag(1, −1, 1, −1)) which write in the p-representation (in which pµ
+
+
+
+
+                                          8
+

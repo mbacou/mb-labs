@@ -1,0 +1,150 @@
+                                                                                          Date: 17/05/2022
+                               ATHENA                                                     Page : 18/47
+
+
+
+            APC ARCHITECTURE, PERIMETER AND INTERFACES
+     The ApC architecture, perimeter and interfaces that underlie the present specification are detailed below and
+     illustrated by the schematic in Figure 3. This ApC architecture is the result of a configuration trade-off that was
+     performed upstream this specification (see [RD-7]). Requirements specifying this architecture and the
+     subsequent components will be defined in the requirement sections of this document.
+
+
+
+
+                Figure 3 – ApC architecture and interfaces underlying the present ApC specification
+Figure 16. Left) The ApC architecture and interfaces. Right) Drawing of the mechanical design of the ApC. See Thibert
+   Architecture:
+et al., 2022, SPIE submitted.
+     The ApC includes four thermal stages: ApC_300K, ApC_100K, ApC_30K, ApC_LCS, each of them being
+     thermally anchored to a different thermal stage of the Cryostat (OV, OCS, ICS, LCS).
+
+       • To protect the filters from Dewar contamination,
+     The first three thermal stages provide mechanical support and conductive interface to the three Dewar Thermal
+     Filters (THF300, THF100, THF30). These three stages are equipped with thermal sensors and heaters,
+                                                                                                              IFU FW development at the University of Geneva (UoG, Switzerland) and the on-going
+       • To provide heating capability to the thermal filters,
+     respectively read-out and operated by the SIM Cryostat.
+                                                                                                            carried out in collaboration with the University of Palermo (Italy).
+     From the mechanical point of view, the ApC includes three mechanical sub-assemblies: OV sub-assembly,
+       • To
+     ICS       reduce
+         sub-assembly,      straylight
+                        and LCS                radiation
+                                   baffle. The OV  sub-assembly  tocombines
+                                                                       the the ApC
+                                                                            detector,
+                                                                                    300K thermal stage and the
+     100K thermal stage, with the 100K stage fixed to the 300K stage by a low conductive mechanical support, and                      2. THE HERITAGE OF THE UNIVERSITY OF GEN
+       •  Toanchored
+     thermally protect  to hethe    detector
+                               Cryostat OCS          against
+                                              by a flexible        the radiated electromagnetic fields.
+                                                            thermal link.
+                                                                                                                        The X-IFU FW is being designed by the University of Geneva (UoG) based on the he
+                                                           ApC thermal                                    ApC sub-assy
+                                                                                                                            mission ([5]). We developed the FW mechanism (FWM) for Astro-H, which has been mo
+2.8 ApC
+    The    FilterCorresponding
+        thermal
+      stages
+                    Wheel stage
+                  thermal filter
+                                 (FW) anchored to ApC mechanical
+                                 (Cryostat thermal sub-assemblies
+                                                                                                           mechanically
+                                                                                                           supported by Soft X-ray Spectrometer (SXS), and its associated commanding electronics (FEW). The
+                              stages)
+The Filter Wheel used for X-IFU    implements the following functions:                                                      provide the
+                                                                                                        (Cryostat structures)        66capability to move different filters into the X-ray beam, before the latter reac
+             ApC_300K                 THF300                     OV                                                     The flight model (FM) of the SXS FW was successfully delivered by the UoG to the Jap
+                                                                                   OV sub-assy                    OV
+             ApC_100K                 THF100                    OCS                                                     the end of 2013 and launched on-board Astro-H in 2016.
+      • ApC_30K
+           Reduction of the            THF30  optical load          ICS from ICS    bright        stars which
+                                                                                             sub-assy                 ICScould degrade the energy resolution of the instrument,
+
+      • Possibility
+             ApC_LCS
+                                 to optimize
+                                         none
+                                                           theLCS    observational                throughput
+                                                                                         LCS baffle                  LCS     The FM
+                                                                                                                         in case       of the SXS
+                                                                                                                                  of bright         FW is targets,
+                                                                                                                                                  X-ray     shown in Figure 2-1. The photo on the left side shows the bot
+                                                                                                                             with a dummy filter holder. The photo on the right side shows a large opened cylinder
+      • Provision of a radioactive calibration source ( Fe) as a sources
+                               Table 1 – ApC architecture underlying the ApC specification55
+                                                                                                                              backup      to the
+                                                                                                                                      (MXSs,         Modulated
+                                                                                                                                                [6]) are mounted, twoX-ray     Sources
+                                                                                                                                                                       rectangular        (MXS)
+                                                                                                                                                                                   boxes which are the high voltage powe
+     This document belongs to CNES. Its information cannot be distributed, published or reproduced without a CNES agreement
+           and for early calibration purposes,                                                                               the functioning of the MXSs and the top of the housing. The filter wheel hosting six posi
+                                                                              Réf.: XIFU-DD-10000-00816-CNES                 mounted on a shaft held by wet lubricated angular ball bearings. The FWM is actuated b
+      • Capability to     ATHENA        monitor the intrinsic                          instrumental background,
+                                                                              Issue : 1.0                                    eccentric position with respect to the FWM rotation axis. A planetary gear is embed
+      • Powering and controlling the Date :                                Modulated   2022/06/03
+                                                                                                   X-ray Sources (flash      connected to    the FWM with
+                                                                                                                                     duration,       intensity,a pinion and  a spur gear. A potentiometer is used to m
+                                                                                                                                                                   frequency),
+                                                                              Page : 173/198                                 placement of all FW components mentioned so far is shown in Figure 2-2. The MXSs, w
+      • Protection of the X-IFU focal plane detectors against micro                                                               meteorites
+                                                                                                                             of the SXS             and
+                                                                                                                                          instrument,      contamination.
+                                                                                                                                                        are mounted  on the FWM housing. In the Astro-H project, both th
+By design, the filter wheel is imbalanced. In order to limit the amount of counterweights, the radioactive              HVPS (also mounted on the FW housing) were developed and provided under the
+source assembly are located at the opposite side of the closed position. Two counterweights are foreseen to
+balance the wheel.
+                                                                                                                        Netherlands) but controlled by the FWE that was part of the UoG contribution.
+
+
+
+
+                            Figure 106: The filter positions and the counterweights.
+Figure 17. Left) The various filter positions of the X-IFU FW. Right)                 Figure
+                                                                                           The 2-1FW
+                                                                                                   The developed
+                                                                                                         Astro-H FWfor developed
+                                                                                                                          Hitomibyby thethe
+                                                                                                                                         University  of Geneva and the Swi
+                                                                                                                                             University
+5.12.1.2.MATERIAL BREAKDOWN                                                           approximate size of the overall FWM shown above is 351 mm (length) x 384mm (w
+of  Geneva and the Swiss industry Ruag Space. The approximate sizestimated               of the overall    FW     shown   above   is 351  mm   (length)
+                                                                                                  mass, including the harness and the HVPSs is of 2.5 Kg. The figure on
+The material breakdown of the part constituting the FWA is listed in the table below.
+× 384 mm (width) × 100 mm (height).66 The X-IFU FW having one                             moreand
+                                                                                      positions   filter
+                                                                                                      the will behole
+                                                                                                          central   significantly  larger
+                                                                                                                       where the shaft,    in diameter
+                                                                                                                                        regulating the FWM rotation, has to
+(∼ 68 cm). Table 23: Material           breakdown of the parts constituting the FWA.
+                                     Part                           material
+                                                                                      right is taken   from the opposite  side and shows  the details of the FWM housing h
+                                      Wheel
+                                                                aluminium alloy 6 or
+                                                                                                                        which the MXSs are located, the motor, and the two HVPS with the corresponding
+                                  Filter holder
+                                                                   7XXX series                                          visible on the FWM housing connects the FWM with the FWE.
+The current implementation of the  filter wheel foresees (see Figure 17):
+                                      Cover
+                                 Counterweight
+                                Tungsten alloy
+                           Radioactive sources support
+                                                              Stainless steel 17-4 PH
+                                Gear connection
+                                 Wheel bracket                 Titanium alloy Ti6Al4V
+
+5.12.1.3.LUBRICANT
+Given the present FWA requirements (AD1), all tribological elements of the FWA are planned to be dry
+lubricated. UoG has heritage on the usage of dry lubrication especially from the Euclid project.
+
+5.12.2. THE FILTERS AND 55FE RADIOACTIVE SOURCES
+The current plan is to include in the FWA:
+   1. One closed position (Molybdenum filter), to be used during launch for the protection of the focal plane
+        detectors and in-flight for the evaluation of the internal detectors background (the filter will screen out
+        all X-ray photons coming from the telescope beam).
+

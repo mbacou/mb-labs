@@ -1,0 +1,600 @@
+                                            On evidence for negative energies and masses
+                                              in the Dirac equation through a unitary
+                                                       time-reversal operator
+
+
+
+
+arXiv:1809.05046v2 [quant-ph] 7 Nov 2018
+                                                             N. Debergh 1 , J.-P. Petit 2 and G. D’Agostini 3
+                                            1
+                                                Department of agronomy, Haute Ecole Charlemagne, 3, rue Saint-Victor, 4500 Huy,
+                                                                     Belgium, nathalie.debergh@hech.be
+                                                                                 2
+                                                                                     jp.petit@mailaps.org
+                                                                            3
+                                                                                dagostinigilles@mailaps.org
+
+                                                Keywords : Quantum mechanics, Dirac equation, discrete symmetry, negative masses, antimatter
+
+                                                                                        Abstract
+                                                      We review the standards of relativistic quantum mechanics such
+                                                  as the Dirac equation under the concept of negative masses. We show
+                                                  that negative energies are acceptable provided the masses are simul-
+                                                  taneously negative. Negative energy and mass anti-fermions are ob-
+                                                  tained from positive energy and mass fermions through a unitary PT
+                                                  transformation.
+
+
+                                           1      Introduction
+                                           Until recently, the concept of negative masses was relegated to the field of
+                                           exotic, and even far-fetched, ideas.
+                                                Proposed by Hermann Bondi [1] and revisited by William B. Bonnor [2] in
+                                           the context of general relativity, negative masses have been considered by a
+                                           few physicists only due to the fact that they have never been detected in lab-
+                                           oratories. Let us mention among these avant-garde physicists, M.A. Markov
+                                           who, from a previously proposed second-order equation for spin 12 particles
+                                           [3], has put in evidence two first-order equations, one with a ”plus”’ sign and
+                                           the other one with a ”minus” sign multiplying the mass [4]. Nevertheless, for
+                                           the reason of being qualified as ”non-physical”and because they could imply
+                                           a very unpleasant runaway effect, negative masses have been rejected by the
+                                           majority of the scientific community for many years.
+                                                However, minds are evolving nowadays : the possibility of negative masses
+                                           is seriously reconsidered. As examples, let us mention that negative mass
+
+                                                                                             1
+solutions have been considered within a Schwarzschildde Sitter geometry [5]
+or in various aspects of physics [6], going from wormholes to strings. In [7], it
+was shown that negative mass can produce a Schwarzschild solution without
+violating the energy condition. The Dirac equation has also been considered
+with the two possibilities of signs for the mass and it was shown [8] that
+positive as well as negative energies can arise.
+    Besides these theoretical contributions, a negative effective inertial mass
+has been experimentally realized by cooling rubidium atoms with lasers as
+stated in [9].
+    A further reason for this renewed interest in negative masses is the fol-
+lowing. We have mentioned the runaway effect as one of the main causes for
+leaving these masses away. What is it from ? As well known, general relativ-
+ity stands that Universe is a manifold equipped with a metric gµν according
+to the Einstein equation
+                                  1
+                             Rµν − Rgµν = χTµν
+                                  2
+The matter energy tensor Tµν is the source of the gravitational field.
+    The paradox comes from the fact that it is arbitrarily assumed that par-
+ticles of positive or negative masses immersed in the same gravitational field,
+react in the same way. Indeed, as there is only one metric, the effect on
+each particle from that field created by a positive or negative (in that case
+T → −T ) mass is the following :
+   • Positive mass attracts both other positive masses and negative masses
+
+   • Negative mass repels both other negative masses and positive masses
+This means that the particle of negative mass pursues, in a uniformly ac-
+celerated movement with a conserved kinetic energy, the particle of positive
+mass. Indeed, due to their respective signs, the kinetic energy of the positive
+mass is simultaneously, while remaining in the same ratio, compensated by
+that of the positive mass irrespective of the increase of the speed.
+    Besides the fact that this runaway effect violates the action-reaction prin-
+ciple, it also disagrees with experimental data [10].
+    If we deviate from the assumption that positive and negative masses
+react in the same way, we need two metrics and a set of two field equations,
+generalizing the Einstein one. A model ( the Janus cosmological model or
+JCM) with such two coupled field equations has been proposed [11]. The
+
+                                       2
+subsequent Newtonian approximation provides the following corresponding
+interaction rules :
+    • Positive mass attracts positive masses and repels negative masses
+    • Negative mass attracts negative masses and repels positive masses
+The JCM perfectly fits available observational data [12] and restores the
+action-reaction as well as the equivalence principles. This certainly gives
+substance to the study of negative masses.
+    Despite of the growing interest in negative masses, there were very few
+papers devoted to the subject within the quantum mechanical paradigm. Let
+us cite [13] where the concept of negative mass is used to solve Schrdinger
+equations.
+    The purpose of this article is to initiate a study of the impact of negative
+masses on relativistic quantum mechanics by taking a new look at its stan-
+dards such as the Dirac equation (for a review of these standards, see, for
+instance, Section 2.3 of [14]).
+    The reason to do so is that relativistic quantum mechanics naturally puts
+in evidence negative energies having an unpleasant consequence which can
+be avoided if masses are negative, too. Indeed, one of the arguments for
+having given up the Klein-Gordon equation is the fact that the density of
+                                                                         E
+probability is, up to the square of a normalization factor, the ratio m    . It is
+obvious to see that this probability is positive if energies and masses have
+the same sign. So, negative energies can be restored if masses are negative,
+too.
+    The contents is distributed as follows. In Section 2, we show that if the
+time-reversal operator is chosen as unitary, masses become negative (while
+an anti-unitary one leads to positive masses). In Section 3, we realize this
+unitary operator within the Dirac formalism. States corresponding to an-
+tifermions are then associated with negative masses and energies. We con-
+clude in Section 4.
+    We work in the following in the standard units. Greek letters run from 0
+to 3 while Latin indices are equal to 1, 2, 3.
+
+
+2     Unitarity of the time-reversal operator
+First, let us recall that a unitary operator U is defined through
+                            < Uψ|Uφ >=< ψ|φ >                                 (1)
+
+                                        3
+for all states |ψ > and |φ > of the Hilbert space H. It is also a linear operator
+
+              U(a|ψ > +b|φ >) = a U|ψ > +b U|φ > , a, b ∈ C                  (2)
+
+An operator A is anti-unitary if it obeys
+
+                            < Aψ|Aφ >=< ψ|φ >∗                               (3)
+
+where the symbol ∗ denotes the complex conjugation.
+Furthermore, it fills a similar relation to Eq. (2) but where the second mem-
+ber has been conjugated, meaning that A is anti-linear.
+   Usually, one can see any anti-unitary operator as the product of a unitary
+one and the complex conjugation (i.e. i → −i).
+   Such operators are crucial in quantum mechanics due to the fact that
+E.P. Wigner [15] showed that a symmetry operator S of a Hamiltonian is
+necessarily a unitary one or an anti-unitary one.
+   In what concerns the discrete symmetries, it is usually understood that
+the parity operator P such that
+
+                          ~x → −~x , p~ → −~p , t → t                        (4)
+
+is a unitary one while the time-reversal operator T implying
+
+                                ~x → ~x , t → −t                             (5)
+
+is anti-unitary (in which case, p~ → −~p)
+    The reasons for such a belief are the following ones. First, if we want
+the energies to stay positive, we have to add a complex conjugation to the
+reversal of time because of the quantization
+                                           ∂
+                                   E↔i                                       (6)
+                                           ∂t
+Second, this is a way to remain the fundamental relation of quantum me-
+chanics
+                              [xj , pk ] = iδjk                     (7)
+invariant under the transformation PT as its action can be summarized by
+
+                     ~x → −~x , p~ → p~ , E → E , i → −i                     (8)
+
+
+                                       4
+These developments suggest that both energies and masses are positive.
+These signs are thus related to an anti-unitary PT.
+   We argue that they can be understood in a different way.
+   Indeed, Eq. (6) is coherent with T being unitary if we allow the energy
+to be negative while Eq. (7) is still true under a unitary PT in which case
+Eq. (8) has to be replaced by
+                     ~x → −~x , p~ → −~p , E → −E , i → i               (9)
+The fact that the sign of the energy changes has consequences on masses.
+This can be seen, for example, through the Einstein relation E = m.
+    Thus we have two options. The usual one, dealing with an anti-unitary
+PT symmetry and ensuring the energies and masses to stay positive together,
+and the one we propose, that is a unitary PT symmetry (P and T are both
+unitary operators) which allows energies and masses to simultaneously be
+negative.
+    Note that this second path is in perfect agreement with what we know
+about the Lorentz group. Indeed, being defined as the group of matrices Λ
+satisfying
+                    ΛT g Λ = g, g = diag(1, −1, −1, −1)
+where ΛT is the transpose of Λ,the entire Lorentz group is composed of four
+components [16]
+   • L↑+
+   • L↑− = P L↑+
+   • L↓− = T L↑+
+   • L↓+ = P T L↑+
+where the subscript ± denotes the signs of the determinant of Λ while the
+superscript refers to the signs of the first element of this matrix.
+As is well known, there are transformations that maps one component into
+another. These transformations are nothing but the parity and time-reversal
+operators realized here through
+              P = diag(1, −1, −1, −1) , T = diag(−1, 1, 1, 1)         (10)
+
+Let us take a while here to notice that both P and T being realized through
+such matrices are linear and unitary.
+
+                                      5
+Only a few components do form a group, i.e. L↑+ (named the restricted
+Lorentz group ; it is the one considered by physicists exclusively concerned
+with positive masses and energies ), L↑+ ∪ L↑− (named the orthochronous
+Lorentz group), L↑+ ∪ L↓+ (named the proper Lorentz group ), L↑+ ∪ L↓− and
+the set of four components referred to as the entire Lorentz group.
+Only one of these options, the proper Lorentz group, is recognized as a known
+Lie group, namely SO(1, 3)
+
+                          L↑+ ∪ P T L↑+ ⇒ SO(1, 3)
+
+    If we now add to these transformations the four abelian translations and
+their PT version, we obtain two components generating a subgroup of the
+entire Poincar group. One thing well-known about this group is that it
+admits two Casimir operators, the first one having the square of the mass
+as eigenvalues. The only requirement on these eigenvalues is their reality.
+The mass itself can thus be positive or negative. Besides, the meaning of
+the second Casimir operator constructed from the Pauli-Lubanski 4-vector
+is clear when limited to isotropy groups. In this case, one can choose a
+particular time-like momentum 4-vector, say
+
+                                      m
+                                           
+                                     0 
+                                                                            (11)
+                                       
+                                     0 
+                                       
+
+                                      0
+
+and see that the second Casimir operator is related, up to the square of the
+mass (again), to the spin of the particles. These are very well-known facts.
+    Now, let us have a look on the 4-vector (11). If the mass is positive
+(respectively negative), it belongs to the future (respectively past) light cone.
+An orthochronous transformation is realized through a matrix whose first
+element is bigger than one (it is the ”↑” symbol). So, when applied to a
+4-vector like Eq. (11), it gives rise to another time-like 4-vector within the
+same part of the cone light : if the mass is positive and the 4-vector belongs
+to the future part, its image will also stand in the future part. If the mass
+is negative, the 4-vector lives in the past part and stays in this part after
+an orthochronous transformation. Only antichronous transformations (the
+”↓” symbol) can join the two parts. If the mass is positive at the start
+and the four-vector oriented from past to future, it will change its direction
+but also the sign of the associated mass. This is due to the fact that the
+
+                                        6
+antichronous transformations result from the application of a unitary PT (=
+−diag(1, 1, 1, 1)) on the orthochronous ones, changing the sign of the first
+component of 4-vectors. And if the mass becomes negative, so is the energy
+through the Einstein relation E = m for a relativistic particle at rest.
+
+
+3      Realization of the unitary PT symmetry
+       for the Dirac equation
+Let us now see the impact of a unitary PT transformation on the Dirac
+equation.
+For recall, the covariant Dirac equation is written as [17]
+
+                                    (γ µ pµ − m)ψ = 0                             (12)
+
+with the Dirac matrices satisfying
+
+                     {γ µ , γ ν } = 2g µν , g = diag(1, −1, −1, −1)               (13)
+
+We realize these matrices through the so-called Dirac representation i.e.
+                                          !                       !
+                                  0 ~σ                    I 0
+                        ~γ =                  , γ0 =                              (14)
+                                 −~σ 0                    0 −I
+
+where the ~σ are the Pauli matrices.
+The usual unitary parity operator P is realized through
+
+                                 ψ(t, ~x) → γ 0 ψ(t, −~x)                         (15)
+
+In what concerns a unitary time-reversal, we have to ask for
+
+    TU (iγ 0 ∂t + iγ j ∂j − m)TU−1 TU ψ(x) = (−iγ 0 ∂t + iγ j ∂j − m)ψ ′ (x′ ) = 0 (16)
+
+with
+                               x = (t, ~x) → x′ = (−t, ~x)                        (17)
+In other words, we have to search for a matrix TU anticommuting with γ 0
+and commuting with each of the γ j ’s. This matrix is γ 1 γ 2 γ 3 . Up to a phase,
+the action of the time reversal as a unitary operator is thus marked by
+
+                               ψ(t, ~x) → γ 1 γ 2 γ 3 ψ(−t, ~x)                   (18)
+
+                                              7
+Combined with the parity operator (15), we are led to the following unitary
+PT transformation
+
+                ψ(t, ~x) → iγ 0 γ 1 γ 2 γ 3 ψ(−t, −~x) = γ 5 ψ(−t, −~x)     (19)
+
+The PT-symmetry within the Dirac formalism is not just only related to
+opposite space-time coordinates, it is also subtended by the γ 5 matrix.
+    We are used to interpret this matrix as the one realizing the chirality
+operator. But it is not just so. Indeed, the γ 5 matrix anticommutes with
+each of the γ µ ’s. Acting on the Dirac equation (12), this implies that either
+the sign of each of the pµ ’s has to change (which is expected in a unitary
+PT symmetry) or, in an equivalent way, the mass has to become negative.
+Such developments can also be found in the quantum field theory context
+[18] where it was quoted that the γ 5 chiral transformation is associated to
+the fact that the sign of the mass term in the Lagrangian is reversed. Let us
+also mention as an aside that the γ 5 matrix has also been associated to the
+charge operator [19]. More precisely, in [19], it was required that the Dirac
+parity operator should always be of the form (15) whether it is defined in
+the fermion or antifermion wavefunction space. And this had consequences
+that the fermion field and the charge-conjugate (related to γ 5 ) antifermion
+field obey opposite-mass Dirac equations. However, despite of the fact that
+this approach is close to ours, it is different in the sense that we are not only
+in the QFT field but mostly because we are concerned here with negative
+energies.
+    Together with previous remarks, this fact tends to prove that the matrix
+  5
+γ has not yet revealed all its wealthes...
+    Anyway, the matrix γ 5 is essentially considered here as the one for what
+we call a M-symmetry : m → −m. Such a symmetry is naturally connected
+to a unitary PT-transformation.
+    Let us now analyse the impact of such considerations on the four solutions
+of the Dirac equation.
+As well known, the free Dirac   √ equation (12) has positive as well as nega-
+tive energies p0 = ±Ep = ± p2 + m2 . The four solutions consist in two
+solutions with positive energies E = Ep (spin up and spin down, respec-
+tively, according to the eigenvalues of the third component of the spin vector
+S3 = 21 diag(1, −1, 1, −1)) which write in the p-representation (in which pµ
+
+
+
+
+                                          8
+now stand for eigenvalues)
+                                                                                      
+        s                           1                 s                         0
+            E + m i(~p.~x−Et)      0        E + m i(~p.~x−Et)                 1
+                                                                                      
+ψ1+ =                                       , ψ+ =
+                                                                        
+                 e           p3
+                              
+                                                2   e           p1−ip2 
+             2E               
+                            E+m
+                              
+                                           
+                                              2E              
+                                                                E+m 
+                                                                         
+                           p1+ip2                                   p3
+                            E+m
+                                                                 − E+m
+                                                                       (20)
+and two solutions with negative energies E = −Ep (spin up and spin down,
+respectively)
+                                    p3                                        p1−ip2
+                                                                                      
+        s                          E−m                s                      E−m
+                                  p1+ip2                                         p3
+            E − m i(~p.~x−Et)                            E − m i(~p.~x−Et) 
+                                                                             − E−m
+                                                                                       
+ψ1− =                                       , ψ− =
+                                                                                        
+                 e                E−m                         e                         
+                                                2
+             2E               
+                                   1      
+                                                          2E             
+                                                                               0        
+                                                                                         
+                                    0                                           1
+
+which are replaced by two solutions with positive energies E = Ep (spin down
+and spin up, respectively)
+                                    p3                                         p1−ip2
+                                                                                        
+       s                           E+m                s                       E+m
+                                  p1+ip2                                          p3
+           E + m −i(~p.~x−Et)                            E + m −i(~p.~x−Et) 
+                                                                              − E+m
+                                                                                         
+χ+                                          , χ+ =
+                                                                                          
+ 1 =            e                 E+m                         e                           
+                                                2
+            2E                
+                                   1      
+                                                           2E              
+                                                                                   0      
+                                                                                           
+                                    0                                               1
+                                                                                        (21)
+by the transformation
+                                  ~p → −~p , E → −E                                     (22)
+Actually, the states (21) are solutions of a slightly different Dirac equation
+
+                                   (γ µ pµ + m)χ = 0
+
+The changes (22) are attributed to Feynman [20] and Stueckelberg [21], inde-
+pendently. They were motivated by two reasons : first, keep positive energies
+only and second, give a physical interpretation to these states. Indeed, in
+case of an electromagnetic interaction, the corresponding negative energy so-
+lutions dont give back a meaningful Pauli equation at the non-relativistic
+limit while the new positive energy ones (21) do with an electric charge hav-
+ing been replaced by its opposite. This is what have led physicists to interpret
+these new solutions as the ones associated with antimatter.
+    Let us now analyse these solutions (20) and (21) by keeping in mind that
+both energies and masses can be simultaneously negative.
+
+                                               9
+Besides the bi-spinors, we notice that the link matter-antimatter is related
+to the following transformation of the exponential
+
+                               ei(~p.~x−Et) → e−i(~p.~x−Et)                        (23)
+
+which can be performed in three different ways.
+First, the complex conjugation : this is the path followed by Dirac [22]. Its
+anti-unitary charge conjugation operator is just the complex conjugation in
+the Majorana representation but writes
+
+                                      C = iγ 2 C                                   (24)
+
+in representation (14).
+It is easy to verify that
+
+                     C ψ1+ (x) = χ+          +         +
+                                  2 (x) , C ψ2 (x) = −χ1 (x)                       (25)
+
+The anti-unitary charge conjugation operator thus transforms positive energy
+and mass fermions into positive energy and mass anti-fermions. The mix
+between ψ1 − χ2 , ψ2 − χ1 in Eqs (25) is related to the fact that the charge
+conjugation operator is such that
+                                                 ~ → −L
+                            ~x → ~x , p~ → −~p ⇒ L    ~                            (26)
+
+Consequently, the sign of the spin vector has also to change in order to stay
+coherent. This implies that C acts on spin up (resp. down) ψ-states to give
+spin up (resp. spin down) χ-states. Let us insist on the fact that these
+developments concern the first quantization field only. In quantum field
+theory, the charge conjugation operator is somewhat different and appears,
+in particular, to be unitary.
+Second, the transformation (22) : it is what Feynman (and Stueckelberg)
+proposed. This is associated to an anti-unitary PT transformation in the
+quantum field theory context. However, when we limit ourselves to the first
+quantization as we do here, such a transformation cannot relate ψ-states to
+χ-states. Indeed, the anti-unitary reversal-time transformation would be the
+one ensuring a relation similar to (16)
+
+ TAU (iγ 0 ∂t + iγ j ∂j − m)TAU
+                             −1
+                                TAU ψ(x) = (iγ 0 ∂t − i(γ j )∗ ∂j − m)ψ ′ (x′ ) = 0 (27)
+
+
+                                           10
+meaning that TAU has now to commute with γ 0 and γ 2 (the only matrix
+among the γ j ’s to have imaginary elements) and anticommute with γ 1 and
+γ 3 . In other words, the action of TAU would be such that
+                            ψ(t, ~x) → iγ 1 γ 3 ψ(−t, ~x)∗                      (28)
+for the Dirac equation we are concerned with. Combined with the parity
+(15), it gives rise to the following anti-unitary PT
+                          ψ(t, ~x) → iγ 0 γ 1 γ 3 ψ(−t, −~x)∗                   (29)
+which it is easy to see that it simply connects positive energy and mass
+fermions to positive energy and mass fermions
+           γ 0 γ 1 γ 3 ψ1+ (−x)∗ = −ψ2+ (x) , γ 0 γ 1 γ 3 ψ2+ (−x)∗ = ψ1+ (x)   (30)
+This is in complete agreement with what we quoted in Section 2 : only
+unitary PT can rely the two parts of the light cone.
+So, we come to the third proposal : a unitary PT as given in Eq. (19)
+which, let us insist on that point, does not only perform the change (23) by
+replacing the coordinates by their opposites but also implies the M-symmetry
+m → −m.
+The explanation is obvious when considering the Dirac operator
+                                                       !
+                                 E −m     −~σ .~p
+                                                                                (31)
+                                  ~σ .~p −E − m
+acting on bi-spinors to give 0. There are two options only : either you perform
+the changes (22) and leave in particular the negative energies to concentrate
+on positive ones                                   !
+                                −E − m      ~σ .~p
+                                 −~σ .~p  E−m
+or you choose to keep the negative energies but then, you are obliged to
+consider, simultaneously, negative masses
+                                                       !
+                                 E+m      −~σ .~p
+                                  ~σ .~p −E + m
+So, this third solution, based on a unitary PT, also leads to the solutions
+(21)
+                  γ 5 ψ1+ (−x) = χ+        5 +         +
+                                  1 (x) , γ ψ2 (−x) = χ2 (x)           (32)
+
+                                          11
+as it can be easily verified, with the difference that the anti-fermions (21)
+now have negative energies and masses.
+We insist on that fact : the χ-states as in Eq. (21) remain the same but
+are interpreted in a different way. Under the unitary PT transformation, the
+following changes arise
+
+               E → −E , m → −m , xµ → −xµ , pµ → −pµ
+
+but they leave the different elements of the χ-states invariant whether it is
+the normalization factor         s
+                                   E +m
+                                       2E
+the plane wave part
+                                 e−i(~p.~x−Et)
+or the fractions inside the bi-spinors because the signs of both numerators
+and denominators simultaneously change.
+Another point is the fact that, in Eq.(32), by opposition to Eq.(25), the
+unitary PT connects the sectors ψ1 − χ1 , ψ2 − χ2 . This is due to the transfor-
+mations of such an operator on position, momentum and angular momentum
+operators
+                          ~x → ~x , ~p → p~ ⇒ ~
+                                              L→~   L                      (33)
+(compare with Eq.(26)) implying the conservation of the spin vector. This
+implies that unitary P T acts on spin up (resp. spin down) ψ-states to give
+spin up (resp. spin down) χ-states.
+
+
+4    Conclusion
+We have shown that negative masses can take place in relativistic quantum
+mechanics up to the condition of being related to negative energies. The uni-
+tary PT transformation we propose acts on states associated with positive
+energy and mass fermions to give states associated with negative energy and
+mass anti-fermions. This is an alternative to the anti-unitary charge conju-
+gation operator leading to the same states but then subtended by positive
+energy and mass anti-fermions.
+We argue, in complete agreement with [11], that there are two types of anti-
+matter. The ”classical” one, created in laboratories and associated with an
+anti-unitary PT, and the primordial antimatter reached by the unitary PT,
+
+                                      12
+composed of the same elements, this time with a negative mass and energy.
+It is this antimatter of negative mass (what we call negative antimatter)
+which is responsible for the acceleration of cosmic expansion, for the confine-
+ment of positive mass objects, the spiral structure, strong gravitational lens
+effects and so on.
+Is there any place for a (unitary or anti-unitary) charge conjugation oper-
+ator leading to this negative antimatter ? This question remains open at
+this stage as well as the extension of our results to the quantum field theory
+context.
+
+
+References
+ [1] H. Bondi, Rev. Mod. Phys. 29 (1957) 423
+
+ [2] W. B. Bonnor, Gen. Rel. and Gravit. 21 (1989) 1143
+
+ [3] M.A. Markov, JETP 7 (1937) 603
+
+ [4] M.A. Markov, Nucl. Phys. 55 (1964) 130
+
+ [5] Jonathan Belletête and M.B. Paranjape, Int. J. of Modern Physics D22
+     (2013) 1341017
+
+ [6] Richard T. Hammond, Eur. J. of Physics 36 (2015) 025005
+
+ [7] Saoussen Mbarek and M.B. Paranjape, Phys. Rev. D90 (2014) 101502
+     (R)
+
+ [8] V.V. Dvoeglazov, Z. Naturforsch. A71 (2016) 345
+
+ [9] M. A. Khamehchi et al., Phys.Rev.Lett. 118 (2017) 155301
+
+[10] Adam G. Riess et al., The Astronomical Journal 116 (1998) 1009
+
+[11] J.-P. Petit and G. DAgostini, Mod. Phys. Lett. A29 (2014) 1450182
+
+[12] J.-P. Petit and G. DAgostini, Astrophysics and Space Science 363 (2018)
+     139
+
+[13] Yu Hsin-Chen and Sheng D. Chao, J. of the Chinese Chem. Soc. 65
+     (2018) 654
+
+                                      13
+[14] L.H. Ryder, Quantum Field Theory, Cambridge University Press (1985)
+
+[15] E.P. Wigner (1931). Gruppentheorie und ihre Anwendung auf die Quan-
+     ten mechanik der Atomspektren Braunschweig, Friedrich Vieweg und
+     Sohn. pp. 251254
+
+[16] K.N. Srinivasa Rao (1988), The Rotation and Lorentz Groups and Their
+     Representations for Physicists, John Wiley and Sons, page 213
+
+[17] P. A.M. Dirac, Proc. Roy. Soc. 117 (1928) 610
+
+[18] V.V. Dvoeglazov, Acta Physica Slovaca 50 (2000) 629
+
+[19] A. Barut and G. Ziino, Mod. Phys. Lett. A8 (1993) 1099
+     G. Ziino, Int. J. Mod. Phys. A11 (1996) 2081
+
+[20] R. P. Feynman, Phys. Rev. 76 (1949) 749
+
+[21] E.C.G. Stueckelberg, Helv. Phys. Acta 15 (1942) 23
+
+[22] P.A.M. Dirac (1958) , The Principles of Quantum Mechanics, Oxford
+     University Press, 4th edition
+
+
+
+
+                                   14
+

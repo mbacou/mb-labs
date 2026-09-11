@@ -1,0 +1,17 @@
+                                                                                                                        11
+
+
+
+
+FIG. 3. Computed morphogenesis of large interface deformation dynamics for celerity contrast c− /c+ = 0.95, waveguiding
+parameter V = 2.0 with PDI (a,b, i, j) and without PDI (e)–(h), (m–q). (a)–(h) cfrom > cto , Π0 = 6. (i)–(q) cfrom < cto ,
+Π0 = 6. Graphical representation is identical to that of Fig. 2.
+
+
+   Here we provide new insight into the slenderness tran-                     2.   Experimental observations
+sition mechanism by combining novel experiments and
+numerical investigation in the absence of bulk radiation
+forces, within a framework encompassing both for acous-           Two experimental observations of slenderness transi-
+tic and electromagnetic waves.                                 tion respectively driven by acoustic and optical beams are
+                                                               reported in Fig. 5 at the onset of the transition threshold,
+

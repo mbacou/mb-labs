@@ -1,0 +1,49 @@
+                    Fig. 8. By crossing the throat sphere, the tetrahedron is inverted.
+
+
+   In the 2D {ρ, ϕ} representation the adjacent points are defined by the relation:
+
+                                      M : (ρ, θ) → M 0 : (−ρ, θ).
+
+    In the 3D {ρ, θ, ϕ} representation the adjacent points in 2D and 3D are defined by the
+relation:
+                                M : (ρ, θ, ϕ) → M 0 : (−ρ, θ, ϕ).
+    The association of points M and M 0 goes hand in hand with an enantiomorphic relation
+between their corresponding neighborhoods.
+    Now let us go back to (2) and apply (10). We get
+                                                                                            
+    2      Log ch ρ 2 2          2 (1 + Log ch ρ)    2    2                  2   2  2    2
+                                                                                           
+  ds =                 c dt − Rs                   th ρ dρ + (1 + Log ch ρ) dθ + sin θ dϕ      .
+        1 + Log ch ρ                   Log ch ρ
+                                                                                           (16)
+    When ρ tends to ±∞, Log ch ρ → ρ and th ρ → 1. The metric tends to Lorentz metric. Space
+is extended to (ρ > 0; ρ < 0) domain. The hypersurface becomes a spacetime bridge, linking two
+Lorentz spaces through a throat surface S2. When we calculate the geodesics in the plane θ = π2
+in the {t, r, θ, ϕ} representation we find the following (Eq. (6.90) in Ref. 8):
+                                       1           dr
+                                dϕ = ± 2 q 2 2                 ,                                (17)
+                                      r   c l −1
+                                                 + Rs − 1 + Rs
+                                                 h2       h2 r   r2    f3
+
+where l and h are the classical parameters of the quasi-Keplerian trajectory (Eqs. (6.80) and
+(6.81) in Ref. 8). On the Schwarzschild’s sphere (r = Rs ) we get:
+
+                                                  dϕ         h
+                                     tg α = Rs            =       .                             (18)
+                                                  dr r=Rs   Rs cl
+
+    In a {t, ρ, θ, ϕ} representation, with θ = π2 , we obtain curves ρ = f (ϕ) that will be inscribed
+in two (adjacent) folds F (+) and F (−) .
+    With
+                                         ρ dϕ     r dϕ ρ dr     h
+                            (tg β)ρ→0 =       =             = 2 ρ2 → 0.                          (19)
+                                          dρ        dr r dρ    Rs cl
+   The throat sphere r = Rs is reduced to a point. But the geodesics of the fold F (+) can be
+prolonged continuously in the adjacent fold F (−) . The central singularity disappears. Now let us
+deal with spacetime structures.
+   Referring to Introduction to General Relativity, Sec. 2.6 of Ref. 8:
+
+                                                      6
+

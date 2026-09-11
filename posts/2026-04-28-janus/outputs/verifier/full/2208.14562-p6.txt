@@ -1,0 +1,173 @@
+                                                                  1. X-IFU: A BREAKTHROUGH CAPABILITY FOR ATHENA
+                         We first recap the way X-IFU will address its core scientific objectives, emphasizing on the drivers of its perfor-
+                         mance requirements, which are met in its current design.
+S E R V A1.1
+          T IToO address
+                 N S OitsFcoreGscientific
+                                A L A Xobjectives
+                                          Y CLUSTERS
+ A Y I N Ttheme. TheLHotF I             UtheN Ibaryons
+                  ESA’s Athena X-ray observatory mission was selected in 2014 to address the Hot and Energetic Universe science
+            EGRA            ELD
+                            1–18
+                        Universe refers to        T in the Universe at temperatures above 10                                                                                               5−6
+                                                                                                                                                                                                K, which
+                  accounts for most of its baryons content. The Energetic Universe refers to all phenomena occurring in the
+  u E . 1, Pe i l l e
+                  vicinityP. of
+                              2, R a
+                                   compact  sia E.   objects 3,4, B across iffi
+                                                                              theV.    mass 3,5, C l
+                                                                                                   spectrum.   e r c N . 1,Supermassive black holes, for instance largely influence
+                  their   surroundings              out    to   large-scales         through            a   poorly         understood process called Cosmic Feedback. As X-rays
+l a g K . 7,8, W      i l m s J . 9 , P a j o t F. 1 , B a r r e t D . 1
+                  are copiously produced by hot gas and accretion around black holes, the best observational handle on the Hot
+                  and
+  ulouse, France - 3 INA Energetic
+                          F, O s s e r v aUniverse
+                                           t o r i o A s t ris
+                                                             o nthrough
+                                                                 o m i c o d iX-ray
+                                                                               T r i e s t eobservations.
+                                                                                              , T r i e s t e , I t a l iIn
+                                                                                                                          a - 4 D e p a r t m eX-rays
+                                                                                                                             addition,                            c , U n i vrelatively
+                                                                                                                                                          h y s i escape
+                                                                                                                                                n t o f P can                 ersity    unimpeded from
+                  significantly  6     obscured          environments    7         and        are     sensitive,
+ di Trieste, Trieste, Italia - INFN, Tri ste, Italy - U iversity Observatory of Munich, Munich, Deutschla d - Dr.          for   a   wide      range     of   column        densities,
+                                                                                                                                                                               9        to all ionization
+                  states
+ tre for Astroparticl      (from
+                       e Phys  ics, U  cold
+                                          n i v eto   highly
+                                                   rsität          ionized
+                                                             Erlagen           gas)
+                                                                           -Nurnb     e r gof, Dall
+                                                                                                  eutscmost  hland abundant elements (such as C, N, O, Si, Mg, Fe, Ni, etc.).
+                  To address its science objectives, Athena has been conceived as a large observatory requiring in particular the
+board the ESA L2      mission to
+                  capability       Athena.
+                                        perform    With its array
+                                                        spatially-resolved  of 3840high-resolution
+                                                                                            superconducting                    Transition as
+                                                                                                                           spectroscopy,         Edge      Sensors
+                                                                                                                                                       well as           micro-calorimeters,
+                                                                                                                                                                    the capability     to observe bright
+oscopy (2.5 eV FWHM up to 7 keV) in the 0.2-12 keV energy band. These transformational capabilities will allow for
+                  X-ray    sources,        including          also    its   fast    repointing              capability.          This      defines     the    sizing    requirements      the the
+                                                                                                                                                                                               X- Athena
+                                                                              20
+                  X-ray    Integral       Field       Unit      (X-IFU).
+ ties of large-scale structures with unprecedented accuracy. Starting from numerically-simulated local (z~0.1) massive
+mical abundances, In   redshift
+                           short,and   thegas        temperature
+                                               X-IFU will           enable   spatial       distributions,
+                                                                                for the first                          making use of
+                                                                                                           time, critical            observations      field-of-view
+                                                                                                                                                 full of        the hot and  end-to-end    (E2E)
+                                                                                                                                                                                   energetic  universe, in
+mical Enrichment of      the 1)
+                  particular  Universe          sciencethe
+                                        the study              objective.
+                                                                   chemicalSome     evolution  of theof the challenges Universe   of thealongdata    analysis
+                                                                                                                                                   with             related to the
+                                                                                                                                                           the physical                observa-
+                                                                                                                                                                                 processes  governing the
+ght mixing, particle    background)
+                  assembly      and the are           also addressed
+                                                  evolution                        in light ofstructures,
+                                                                    of the large-scale                   these simulations.   and 2) the determination of how black holes (and all
+                  types of compact objects) work and shape the Universe. The breadth of the science affordable with the X-IFU
+                                                                     4. MEASURING THE PHYSICAL PROPERTIES
+                  will encompass key scientific issues of the Hot and Energetic Universe science theme and beyond.
+ -IFU                         X-IFU will provide revolutionary observations through:
+                                                                                 OF THE ICM
+
+
+ sibility of
+   physical
+ ulations.
+
+
+
+ spectrometer                                                                                                    0.07                                                                       0.035
+ a (2030) and                  0.20
+                                         Relative error distribution (kT)
+                                         Best fit (μerr=-0.9%,σerr=2.2%)
+                                         μerr ±μfit (2.4%)
+                                                                                                                         Relative error distribution (Fe)
+                                                                                                                         Best fit (μerr=1.5%,σerr=7.3%)
+                                                                                                                         μerr ±μfit (9.3%)
+                                                                                                                                                                                                       Relative error distribution (vbulk)
+                                                                                                                                                                                                       Best fit (μerr=3.9%,σerr=10.2km/s)
+                                                                                                                                                                                                       μerr ±μfit (7.4 km/s)
+                                                                                                                 0.06                                                                       0.030
+ iased super-
+ rs (TESs) [2]                 0.15
+                                                                                                                 0.05                                                                       0.025
+
+
+ ument is cur-                                                                                                   0.04                                                                       0.020
+
+  .                            0.10
+                                                                                                                 0.03                                                                       0.015
+
+
+ with a spatial                0.05
+                                                                                                                 0.02                                                                       0.010
+
+  r FoV), and a                                                                                                  0.01                                                                       0.005
+
+  p to 7 keV)                    0                                                                                 0                                                                             0
+                                 −30           −20              −10         0        10         20          30     −30         −20              −10          0         10       20   30          −40     −30         −20          −10        0      10          20   30   40
+                                                           Relative error on temperature (%)                                             Relative error on iron abundance (%)                                               Relative error on bulk motion (%)
+
+                              Figure 4: (Top:) Spatial distribution profiles of the ICM parameters for cluster 4. (From left to right): Spectral-like temperature [13] in keV, abundance
+                         Figure    1. Examples of (Top:) Spatial distribution profiles of the ICM parameters for a nearby ”typical” cluster. (From left
+ mic lines, al-               of iron (wrt to solar) and bulk motion (km/s) computed from the mean redshift of the cluster. White dots represent the excised point sources. (Bot-
+                         to right):    Plasma temperature in keV, abundance of iron (with respect to solar) and bulk motion (km/s) computed from
+                              tom:) Corresponding normalised relative error distribution (%) of output with respect to input histogram (green) along with Gaussian best fit (red sol-
+ ent of the In-
+                              mean
+                         the id        redshift
+                                 line). Blue      oflines
+                                             dashed   theindicate
+                                                           cluster.    White
+                                                                  the mean        dots
+                                                                             values      represent
+                                                                                     of the statistical error excised
+                                                                                                         the related        fit. sources. (Bottom:) Corresponding normalised
+                                                                                                                         point
+                                                                                                                     to the
+                         relative error distribution (%) of output with respect to input histogram (green) along with Gaussian best fit (red solid
+  of details of          line). ICM  parameters
+                                Blue dashed  linesare accurately
+                                                   indicate      recovered
+                                                            the mean values of small
+                                                                            buthe statisticalremain due
+                                                                                     biases error        to to the fit.
+                                                                                                   related              (Credits:,between
+                                                                                                            cross-correlations     19      parameters,
+                                                                                                                                      simulations courtesy:
+                                notably between   the norm  and abundances. Improvements    can
+                         S. Borgani, V. Biffi, K. Dolag, L. Tornatore, E. Rasia - INAF Trieste) be achieved   using  spectral-like  weighting for tem-
+ tions inputs
+                                      perature [13] and multi-band spectral fits. Residuals error can be explained by low-statistics in the lines, mixing
+es.
+                                      along the line of sight and non optimal exposure time strategy.
+
+                                      These maps provide information on the ICM e.g. its intrinsic dynamics (bulk motion), the presence of shocks/bub-
+                                      bles (surface brightness and temperature maps) and the distribution of the metal population (abundance maps).
+                                  0.30                                                               0.30                                                        0.5
+                                                                                      O                                                           Mg                                      Si
+                                                                                      O input                                                     Mg Input                                Si input
+                                  0.25                                                               0.25
+
+                                                                                                                                                                                                                  The X-IFU will measure metal-
+                                                                                                                                                                 0.4
+
+                                  0.20                                                               0.20
+                                                                                                                                                                 0.3                                              licity profiles out to R500, as
+                                  0.15                                                               0.15
+

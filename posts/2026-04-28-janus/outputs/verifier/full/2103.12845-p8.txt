@@ -1,0 +1,48 @@
+                                     Fig. 11. Building a 3D spacetime.
+
+
+
+
+                    Fig. 12. In turning the throat circle, the arrow of time is inverted.
+
+
+through various choices of coordinate systems, in Schwarzschild solution this term g00 (called
+gtt ) vanishes on the so-called horizon (r = Rs ), or throat surface (ρ = 0). It means that on this
+peculiar portion of the hypersurface, normal vector and space orientation cannot be defined.
+     Let us build a 3D spacetime on a 2D surface, as the twofold cover of a manifold M2 , as shown
+in Fig. 11.
+     As shown in Fig. 12 we will find some problem at the common boundary, where it is impossible
+to define space orientation and arrow of time (identified to normal vector). But, for adjacent
+regions we have imbricated PT-symmetrical spacetime structures. Such coupling concept, called
+at that time “twin universe theory”, was first presented by Sakharov in 1967 12–15 and later in
+Ref. 11. In addition, this goes with recent works 9,10 (Janus Cosmological Model).
+     We have to deal with 4D spacetime, not 3D spacetime, which is just a didactic image of such
+geometric structure.
+     Back to the expression of the Schwarzschild metric in the new coordinates (16) we see that,
+on the throat surface (ρ = 0), gtt vanishes (as well as in expressions shown in Fig. 1). According
+to Sec. 2.6 of Ref. 8, Gaussian coordinates cannot be defined, which means that on the throat
+surface, time and space cannot be oriented. This fits time and space inversion from fold F (+) to
+fold F (−) , so that we must write joint metrics:
+
+               Log ch ρ 2 (+)2
+  ds(+)2 =                c dt
+             1 + Log ch ρ
+                                                                                    
+                          2 (1 + Log ch ρ)   2    2                2  2     2    2
+                                                                                   
+                     − Rs                  th ρ dρ + (1 + Log ch ρ) dθ + sin θ dϕ      , (20a)
+                               Log ch ρ
+
+
+               Log ch ρ 2 (−)2
+  ds(−)2 =                c dt
+             1 + Log ch ρ
+                                                                                       
+                             (1 + Log ch ρ) 2
+                     − Rs2                 th ρ dρ2 + (1 + Log ch ρ)2 dθ2 + sin2 θ dϕ2 , (20b)
+                                                                                      
+                                Log ch ρ
+
+
+                                                     8
+

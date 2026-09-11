@@ -1,0 +1,29 @@
+                                                                                               18
+
+
+
+The diamond-like portions of surface suggest a region where the O(2) symmetry is broken. On
+the right, the Greek letter Φ is the Sakharov singularity. The figure 13 is a 2d didactic
+representation of Sakharov’s Φ singularity.
+
+
+
+7) A Universe without "initial singularity"
+
+Inspired by an egg-timer we can modify the precedent figure in order to eliminate the singularity,
+replaced by a narrow throat. In addition, if we assume that the Universe is closed, the
+corresponding 2d didactic model is a torus T2:
+
+
+
+
+                                     Fig.14: 2d torus world
+
+
+Then we can shape this T2 torus as the two-fold cover of a Klein bottle K2.
+
+
+
+
+                          Fig15: Two-folds cover of a Klein bottle K2
+

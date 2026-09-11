@@ -1,0 +1,1414 @@
+---
+File: outputs/raw/arxiv/0712.0067.pdf
+                                                                                            1
+
+
+
+
+                    Bigravity as an interpretation
+                     of the cosmic acceleration
+                      Jean-Pierre Petit ( phd, astrophysicist, retired )
+
+                                 and Gilles d’Agostini, phd
+
+                                   jppetit1937@yahoo.fr
+
+            International Meeting on Variational Techniques (CITV) - August 2007
+
+___________________________________________________________________________
+
+Abstract:
+
+A bimetric description of the Universe is proposed, which may explain the cosmic
+acceleration deduced from optically observed high-redshift supernovae. This phenomenon is
+classically charged to a mysterious repulsive "dark energy" whose true nature remains
+unknown. It is identified in the present model with a set of particles having negative mass and
+energy. These negative mass particles are emitting negative energy photons, hence they are
+not observable using optical instruments.
+
+___________________________________________________________________________
+
+
+
+
+1 – Introduction
+
+For years, astrophysicists and cosmologists have tried to define which of the three Friedmann
+models, solutions to Einstein's equations, fit the observations. With time, a general consensus
+had been established to conclude that in Einstein's equations, the cosmological constant Λ had
+to be zero. Thus the cosmological model was supposed to rise from the Friedmann equation:
+(1)
+                                       R 2 R" + a 2 = 0
+
+where the second derivative of R(t) could only be negative. However, measurements
+performed on distant supernovae over the last decade have revealed an unexpected
+acceleration of the cosmic expansion, R’’ becoming positive for high redshifts[, deep space].
+Todays, specialists think that cosmic dynamics depends on three components:
+
+   -   Visible matter:            4%
+   -   Dark matter (attractive): 22 %
+   -   Dark energy (repulsive): 74 %
+                                                                                           2
+
+   The last component, whose existence had been neglected until now recently, might well
+   explain the observed acceleration if it is basically related to repulsive forces.
+
+   As shown below, it is possible to obtain such an effect if we suppose the Universe
+   consisting of:
+
+   -   Particles with non-zero, positive mass and positive energy.
+
+   -   Particles with zero mass: positive energy photons.
+
+   -   Particles with non-zero, negative mass and negative energy.
+
+   -   Particles with zero mass: negative energy photons.
+
+Group theory accounts for this since a long time. Relativistic dynamics of a material point is
+associated with the dynamic Poincaré group, which is based on the Lorentz group. If Γ is the
+Gramm matrix:
+(2)
+                                        ⎡1 0      0    0⎤
+                                        ⎢0 − 1 0       0 ⎥⎥
+                                   Γ = ⎢
+                                        ⎢0 0 − 1 0 ⎥
+                                        ⎢                 ⎥
+                                        ⎣0 0      0 − 1⎦
+
+
+the Lorentz group can be represented by (4,4) matrices L . Hence:
+(3)
+                                        t
+                                          LΓL = Γ
+
+If C is the space-time translation vector:
+(4)
+                                                 ⎡ Δt ⎤
+                                                 ⎢Δ x ⎥
+                                             C = ⎢    ⎥
+                                                 ⎢Δ y ⎥
+                                                 ⎢    ⎥
+                                                 ⎣Δ z ⎦
+
+then Poincaré's group corresponds to the matrix:
+(5)
+                                          ⎡L C ⎤
+                                          ⎢0 1 ⎥
+                                          ⎣      ⎦
+
+
+The Lorentz group owns four connected components. Using a terminology borrowed from
+reference [1] the first two ones form the orthochron subgroup and do not reverse the time
+coordinate. The last two ones constitute the antichron subset and their components reverse
+time. The Poincaré group, owing ten dimensions, inherits this property and also owns four
+connected components. Let us call Lo the matrices of the antichron subgroup of the Lorentz
+                                                                                           3
+
+group. The set of matrices made from the neutral component Ln of the Lorentz group is
+traditionally known as the restricted Poincaré group:
+(5bis)
+                                           ⎡L n C ⎤
+                                           ⎢ 0 1⎥
+                                           ⎣       ⎦
+
+Now, writing the matrix of the orthochron subgroup of Poincaré's group:
+(6)
+                                          ⎡L o C ⎤
+                                          ⎢ 0 1⎥
+                                          ⎣      ⎦
+
+the complete group can be written:
+(7)
+                              ⎡λ L o   C⎤
+                              ⎢ 0                 with λ = ± 1
+                              ⎣        1 ⎥⎦
+
+In reference [1] J.M.Souriau built the coadjoint action of Poincaré's group on its momentum
+space, which owns the same number of dimensions as the group. He writes the momentum by
+forming, with four of its components, the energy-impulsion vector P :
+(8)
+                                               ⎡E⎤
+                                               ⎢p ⎥
+                                          P = ⎢ x⎥
+                                               ⎢ px ⎥
+                                               ⎢ ⎥
+                                               ⎣ px ⎦
+
+and bringing together the last six components, which form an antisymmetric matrix M,
+Souriau then writes the momentum of Poincaré's group:
+(9)
+                                      J={M,P}
+
+The coadjoint action of Poincaré's group on its Lie algebra then gives:
+(10)
+                                         P’ = λ Lo P
+(11)
+
+                          M’ = Lo M tLo + ( C tP tLo - Lo P tC )
+
+This result can be found in reference [1], page 198. It clearly shows that the antichron
+components of Poincaré's group transform any orthochron movement (corresponding to a
+{M,P} set of the momentum components) with positive energy into an antichron movement
+with negative energy. As highlighted by the author of "Structure of Dynamical Systems", in
+order to avoid the problems caused by negative energy (and negative mass) particles,
+relativistic dynamics of material points can arbitrarily be limited to the restricted Poincaré
+group.
+                                                                                            4
+
+2) A world populated by positive and negative energy particles
+
+But todays, particles with negative energy and mass should be taken into account, which
+implies having recourse to the complete Poincaré group, outfitted with its orthochron and
+antichron components.
+
+Notice importantly that antichron components of the group also transform orthochron photons
+movements with positive energy into antichron movements with negative energy.
+
+We can then suppose that real observers, or measuring instruments, being made of particles
+with positive mass and energy, they are not able to deal with negative energy photons, and
+conversely that hypothetic observers and measuring instruments made of negative mass and
+energy particles, would not be able to deal with positive energy photons.
+
+From this point of view the two cosmic contents, one with positive energy and the other with
+negative energy, cannot interact through electromagnetic waves. Concretely, this implies that
+if our Universe contains negative mass and energy particles, we cannot see them nor record
+images of them with optical devices such as telescopes, whatever the frequency considered.
+
+
+3) The true nature of antimatter
+
+It is possible to consider that antimatter particles correspond to other kinds of a material
+point's relativistic movements. The electric charge q can be geometrized, making of it an
+additional component of the momentum, by extending Poincaré's group. Introducing an
+additional parameter ν we can then bring out (as explained in reference [2], chapter 5, page
+413) the fact that the fifth dimension of Kaluza comes with a charge reversal. Let us introduce
+the four-vector:
+(12)
+                                                 ⎡t ⎤
+                                                 ⎢ x⎥
+                                            ξ = ⎢ ⎥
+                                                 ⎢ y⎥
+                                                 ⎢ ⎥
+                                                 ⎣z⎦
+
+and the five-vector:
+(13)
+                                             ⎡ς ⎤
+                                             ⎢ξ ⎥
+                                             ⎣ ⎦
+
+where ζ represents the additional dimension of Kaluza. We define this property by
+introducing the group of four connected components:
+(14)
+---
+File: outputs/raw/arxiv/0805.1423.pdf
+                                                                                                      1
+
+
+                   Five-dimensional bigravity.
+            New topological description of the Universe.
+                              Jean-Pierre Petit and Gilles d'Agostini
+
+                                       jppetit1937@yahoo.fr
+
+______________________________________________________________________________
+
+Abstract:
+
+We extend the bimetric description of the Universe to a five-dimensional framework. Starting
+from Souriau’s work (1964) we use Robertson-Walker metrics, with an extra term corresponding
+to the additional Kaluza dimension. This first order model is limited to zero densities of electric
+charge and electromagnetic energy. Assuming that the massive particles, with positive or
+negative mass and energies have finite lifetimes, it restores the O(3) symmetry and makes the
+generalized gauge process to restart. As a consequence the speed of light tends to zero.
+We assume the Universe to be closed in all its dimensions. Then, following an idea introduced in
+1994 we describe the Universe as the two folds cover of a projective space. The inversion of the
+arrow of time, mass and energy is a consequence of this geometrical hypothesis and fits the
+bimetric model. We choose to eliminate the “initial singularity” replaced by a boundary space,
+which is found to be Euclidean.
+______________________________________________________________________________
+
+
+1) Introduction
+
+The theory of the General Relativity was extended to a five-dimensional framework in 1964 by
+the French mathematician Jean-Marie Souriau in the chapter five of his book “Géométrie et
+relativité” [1]. He assumes the Universe to be a five dimensional manifold M5. Page 388 he
+defines his notations and we will choose the same. When the indexes are labelled by Latin letters
+j , k , l , m, it means that the refer to five values { 1 , 2 , 3 , 4 , 5 }. When Greek letters are used
+they refer to a set of four { 1 , 2 , 3 , 4 }. He introduces a Lagragian density, that he calls
+“presence”:
+ (1)
+                                            p = a + b g lm R lm
+
+or, in a simpler way:
+(2)
+                                             p=a+bR
+
+where R is the scalar curvature. The fifth dimension is space-like, whence the signature of the
+metric is
+(3)
+                                           (+----)
+                                                                                                          2
+
+If not, the zero divergence condition would not give the classical equations of physics, in non-
+relativistic Newtonian approximation. Following the Jordan-Thiry approximation Souriau
+assumes the g jk of the 5d metric do not depend on the fifth variable x5:
+(4)
+                                                      ∂ 5 g jk = 0
+and writes t:
+(5)
+                                 ⎡x1 ⎤
+                                 ⎢x 2 ⎥                    ⎡x1 ⎤
+                                 ⎢ ⎥                       ⎢ 2⎥
+                                                              x                ⎡ xˆ ⎤
+                             x = ⎢x 3 ⎥               xˆ = ⎢ 3 ⎥           x = ⎢ 5⎥
+                                 ⎢ 4⎥                      ⎢x ⎥                ⎣x ⎦
+                                 ⎢x ⎥                      ⎢ 5⎥
+                                 ⎢⎣ x 5 ⎥⎦                 ⎢⎣ x ⎥⎦
+
+
+The Universe U is a bundle. The fifth dimension is supposed to be closed, then Souriau writes:
+(6)
+                                         ξ = − g 55
+The length of the loop is:
+(7)
+                                                 2π
+                                             ∫
+                                             0
+                                                      ξ dx5       ≡ 2π ξ
+
+
+ξ can be considered as the radius of the "tube-Universe".
+
+In the following the equation (34.13) page 332 defines the action:
+
+(8)
+
+                                             A =         ∫ ∑ p vol
+                                                          C
+                                                              j
+                                                                    j
+
+
+
+
+The variational method gives the field equation, where the sum of the stress-energy tensors
+includes the gravitation and all other phenomena. The 5d field equation ([1], (41.59) page 405) is:
+
+(9)
+
+                       1
+                 R jk − R g jk + Λ g jk = χ ∑ Tjk                 with     j et k ∈{ 1, 2 , 3 , 4 , 5 }
+                       2
+
+where Λ is the cosmological constant and χ is Einstein’s constant. As in the 4d approach we
+find:
+
+(10)
+                                                        a                1
+                                             Λ=−                   ξ=
+                                                        2b               2b
+                                                                                                   3
+
+The calculation provides the four-dimensional equations ([1], (41.61) p.405 and (41.62) p.406)
+
+(11)
+
+
+
+
+(12)
+
+
+
+Writing the zero divergence condition J.M. Souriau gets the Maxwell equations ([1], p.407). Then
+he simplifies these equations, assuming the radius of the “tube-Universe” ξ to be constant.
+
+The last term of the second member of equation (11) becomes zero.
+(13)
+
+
+
+
+2) Extension of the bigravity model to a five-dimensional geometry.
+
+The equation (13) rules a Universe containing electrically charged particles. It is possible to build
+a first order solution, assuming the densities of electrical charge and electromagnetic energy are
+zero everywhere, which gives the simplified equation:
+(14)
+
+
+
+
+We add the hypothesis of a nil cosmological constant Λ .
+
+(15)
+                        R μ ν − R gμ ν = ∑ Tμ ν     with μ and ν ∈{1,2,3,4 }
+
+which is the projection of the five-dimensional equation:
+
+(16)
+                        R j k − R g j k = ∑ Tj k   with j and k ∈{1,2,3,4,5 }
+
+If the Universe is homogeneous and isotropic, the Robertson-Walker metric is a solution, with an
+extra term:
+
+(17)
+                                                                                                      4
+
+
+                                                      d u 2 + u 2 ( d θ 2 + sin 2 θ dϕ 2 )
+                                       [ ]
+                   d s 2 = (d x 1 )2 − R (x 1 ) 2
+                                                                        k u2 2
+                                                                                           − dx 5
+                                                                  ( 1+       )
+                                                                          4
+
+In order to link to the notations of former papers ([3], [4], [5]) we prefer to write the five
+variables:
+(18)
+                           { x° , x1 , x2 , x3 , ζ } or { x° , r , θ , ϕ , ζ }
+
+
+x° is the time-marker, { x1 , x2 , x3} or { r , θ , ϕ } the space markers and ζ the Kaluza
+coordinate, associated to the additional dimension. Introducing flatness (k = 0) we write the
+metric:
+(19)
+                                      [       ]
+                d s 2 = (d x o )2 − R (x o1 ) 2 [ d u 2 + u 2 ( d θ 2 + sin 2 θ dϕ 2 )] − d x 5
+
+Introducing the function:
+(20)
+                                       [
+                    F = ( xÝo )2 − R (x o1 ) 2    ] [ uÝ + u ( θÝ + sin θ ϕÝ )] − xÝ
+                                                          2     2    2       2     2         5
+
+
+
+
+and the Lagrange equations:
+(21)
+                                               d ∂F        ∂F
+                                                 (      )=
+                                               ds ∂ xÝi
+                                                           ∂x i
+
+we get:
+(22)
+                                            ς&&=0i.e :ς =α s+ β (linear )
+
+
+The introduction of an additional closed dimension does not change the results of our precedent
+papers. We can give the manifold M5 two five-dimensional metrics g + et g - , solutions of the
+---
+File: outputs/raw/arxiv/1408.2451.pdf
+                                                 Noname manuscript No.
+                                                 (will be inserted by the editor)
+
+
+
+
+                                                 Can negative mass be considered in
+                                                 General Relativity ?
+
+                                                 Jean-Pierre Petit · Gilles dAgostini
+
+
+
+
+arXiv:1408.2451v1 [physics.gen-ph] 29 May 2014
+                                                 Received: date / Accepted: date
+
+
+
+                                                 Abstract We show, through Newtonian approximation, that shifting to a bimet-
+                                                 ric model of the Universe based on a suitable system of coupled field equations,
+                                                 removes the preposterous runaway effect and gives different interaction laws, be-
+                                                 tween positive and negative masses, that bring new insights into the alternative
+                                                 VLS interpretations previously proposed by several authors, and strengthening
+                                                 their assumptions.
+
+                                                 Keywords negative mass · bimetric model · gravitation · runaway effect
+
+
+
+                                                 1 Introduction
+
+                                                 Scientists have been trying long ago to mix positive and negative masses to com-
+                                                 pose a new cosmological model. The lacunar structure of the Universe at large
+                                                 scales early suggested that some negative matter could have formed clumps, re-
+                                                 pelling positive matter into remnant places shaped like joint bubbles. Such a bubble
+                                                 structure was suggested in 1986 by De Lapparent et al. [1] then by Kirshner et al.
+                                                 [2] in 1986, Rood [3] in 1988 and Geller et al. [4] in 1989. The idea of repulsive
+                                                 structures, shaping positive matter into lacunar structures was progressively de-
+                                                 velopped by El-Ad et al. [5, 6, 7].
+                                                 The possibility of gravitational repulsion was explicitely evoked by Piran [8] in
+                                                 1997, a paper in which he suggested that initial tiny perturbations in the primor-
+                                                 dial density field, acting as if they had a negative mass, could expand and play
+                                                 a role in the VLS (Very Large Scale) structure. He further theorized, with no
+                                                 justification however, that negative mass could own a negative active mass (from
+                                                 Bondis definition [11]), but positive inertial and passive masses, so that two nega-
+                                                 tive masses would mutually attract. Hence, negative material could form clusters
+                                                 while positive and negative masses would repel each other. He developped a Void
+
+                                                 F. Author
+                                                 E-mail: jppetit1937@yahoo.fr
+                                                 Gilles dAgostini
+                                                 E-mail: dagostini.gilles@laposte.net
+2                                                       Jean-Pierre Petit, Gilles dAgostini
+
+
+Finder Algorithm allowing to identify voids in redshift surveys and to measure
+their size and underdensity. Interesting three-dimensional views of voids, based on
+the IRAS survey, are shown in his paper [8].
+2D-simulations involving the same interaction schema had been performed by Pe-
+tit [9] in 1995, also giving a VLS lacunar structure. More recently (July 2013)
+Izumi et al. [10] suggested that the distortions observed on the images of distant
+galaxies, if considered as due to some negative gravitational lensing effect being
+radial instead of azimutal, would lead to a somewhat different mapping of the
+invisible matter.
+However, all these works contradicted Bondis result of 1957 [11] based on General
+Relativity (GR), hence on the assumption that the Universe is a M4 manifold,
+coupled to a single metric g obeying Einsteins equation. The Newtonian approxi-
+mation gives such a metric a time independent quasi-Lorentzian form :
+
+                                  g µν = η µν + εγ µν                                  (1)
+
+
+A subsequent development of the field equation into a series, combined to similar
+approximation of the equations of geodesics, provides Newtons law and Poisson’s
+equation. Bondi expressed the result as :
+                              2−
+                               →                 −
+                                                 → −  →
+                          (1) d r1         (2) ( r2 − r1 )
+                        mi      2
+                                   = Gm(1)
+                                       p ma     →
+                                                −     →
+                                                      −                                (2)
+                              dt               | r2 − r1 |3
+
+accounting for the gravitational action of a mass (2) on a mass (1), and decided
+to introduce three kinds of masses :
+- inertial mass mi
+- passive gravitational mass mp
+- active gravitational mass ma
+Because of the equivalence principle the first two are identical, so that Equ. 2
+becomes :
+                             d2 −
+                                →
+                                r1           → −
+                                             −     →
+                                        (2) ( r2 − r1 )
+                                   = Gm                                      (3)
+                                            |−
+                                             →
+                                             r2 − −
+                                                  →
+                                        a
+                              dt2                 r1 |3
+
+In other words: according to GR, a positive mass attracts any kind of mass, what-
+ever positive or negative. Conversely, a negative mass would repel any kind of
+mass. In particular, if one considers a couple of masses with equal absolute values
+but opposite signs, the negative mass escapes, while the positive mass runs after it,
+both being accelerated the same way. To increase such paradoxical phenomenon,
+because the masses have opposite signs, energy and momentum are conserved.
+In addition, according to Bondi’s analysis two negative masses mutually repel,
+so that negative matter cannot form clusters by gravitational accretion through
+Jeans instability.
+Bondi tried to integrate such puzzling runaway particles in GR without any suc-
+cess. Only much later, in 1989, Bonnor [12] also published a paper devoted to
+negative mass. He considered the runaway phenomenon as preposterous and stud-
+ied a universe only filled with negative masses, immediatly pointing out that this
+has nothing to do with physics and astrophysics, for such a medium cannot form
+stars and galaxies through gravitational instability.
+Can negative mass be considered in General Relativity ?                             3
+
+
+As a conclusion, in despite of interesting perspectives suggested by the previ-
+ously mentioned references, GR bans any introduction of negative masses in the
+Universe, unless giving up the equivalence principle itself.
+
+
+2 Bimetric Newtonian approximation
+
+A first tentative solution was suggested in 1994 by Petit [9, 13], and later by Henry-
+Couannier [14], then Hossenfelder [15]. All are based on a new description of the
+Universe, considered as a manifold M4 coupled to two metrics instead of a single
+one.
+                               (+)
+Basically, the first metric gµν refers to positive energy particles (and positive
+                               (−)
+mass, if they have one), and gµν to negative energy particles (and negative mass,
+if they have one). Opposite energy particles cannot encounter, for they cruise on
+distinct geodesic families. Both families include null geodesics, with positive energy
+                                                          (+)
+photons cruising on null geodesics built from metric gµν , while negative energy
+                                                      (−)
+photons cruise on null geodesics built from metric gµν . It is assumed than positive
+structures, made of positive masses, can emit or absorb positive energy photons
+only, while negative structures, made of negative masses, can emit and absorb
+negative energy photons only. In short, on purely geometrical grounds, negative
+mass structures would be invisible for a positive mass observer (and vice-versa).
+
+First, let us consider a system of coupled field equations with which we intend to
+describe a time-independant configuration, or quasi time-independant. The study
+of a time dependant solution, based on a modified system will be the subject of a
+next publication.
+                       (+)  1              
+                                             (+)    (−)
+                                                        
+                      Rµν  − R(+) gµν
+                                   (+)
+                                       = +χ Tµν  + Tµν
+                            2
+
+                       (−)     1 (−) (−)   
+                                             (+)    (−)
+                                                        
+                      Rµν  −     R gµν = −χ Tµν  + Tµν                            (4)
+                               2
+
+                                                 (+)      (−)
+We find the Ricci tensors built from metrics gµν and gµν . The energy-momentum
+          (+)        (−)
+tensors Tµν and Tµν , in the simple case of non interacting incoherent matters,
+can be expressed in term of the scalar proper density fields ρ(+) and ρ(−) and
+                                µ
+                                        µν
+four-velocity flows uµ (x) = dx
+                              ds by : T    = ρ(x)uµ (x)uν (x).
+
+In the Newtonian approximation, for both species, the velocities are small with
+respect to the speed of light and the energy densities low. The energy-momentum
+tensors for a field of matter can be writen,in this case, as :
+                         1 0 0 0                                     1 0 0 0
+                                                                         
+
+        (+) µ    (+) 2  0 0 0 0                  (−) µ     (−) 2  0 0 0 0
+      T     ν =ρ    c                         T     ν = ρ    c              (5)
+                         0 0 0 0                                    0 0 0 0
+                         0 0 0 0                                     0 0 0 0
+
+with ρ(+) > 0 and ρ(−) < 0
+4                                                         Jean-Pierre Petit, Gilles dAgostini
+
+
+In the Newtonian approximation, the system (4) admits, for ρ(+) + ρ(−) = 0
+a couple of Lorentzian solutions η (+) and η (−) :
+
+                                     1 0 0 0
+                                                         
+
+---
+File: outputs/raw/arxiv/1809.05046.pdf
+                                            On evidence for negative energies and masses
+                                              in the Dirac equation through a unitary
+                                                       time-reversal operator
+
+
+
+
+arXiv:1809.05046v2 [quant-ph] 7 Nov 2018
+                                                             N. Debergh 1 , J.-P. Petit 2 and G. D’Agostini 3
+                                            1
+                                                Department of agronomy, Haute Ecole Charlemagne, 3, rue Saint-Victor, 4500 Huy,
+                                                                     Belgium, nathalie.debergh@hech.be
+                                                                                 2
+                                                                                     jp.petit@mailaps.org
+                                                                            3
+                                                                                dagostinigilles@mailaps.org
+
+                                                Keywords : Quantum mechanics, Dirac equation, discrete symmetry, negative masses, antimatter
+
+                                                                                        Abstract
+                                                      We review the standards of relativistic quantum mechanics such
+                                                  as the Dirac equation under the concept of negative masses. We show
+                                                  that negative energies are acceptable provided the masses are simul-
+                                                  taneously negative. Negative energy and mass anti-fermions are ob-
+                                                  tained from positive energy and mass fermions through a unitary PT
+                                                  transformation.
+
+
+                                           1      Introduction
+                                           Until recently, the concept of negative masses was relegated to the field of
+                                           exotic, and even far-fetched, ideas.
+                                                Proposed by Hermann Bondi [1] and revisited by William B. Bonnor [2] in
+                                           the context of general relativity, negative masses have been considered by a
+                                           few physicists only due to the fact that they have never been detected in lab-
+                                           oratories. Let us mention among these avant-garde physicists, M.A. Markov
+                                           who, from a previously proposed second-order equation for spin 12 particles
+                                           [3], has put in evidence two first-order equations, one with a ”plus”’ sign and
+                                           the other one with a ”minus” sign multiplying the mass [4]. Nevertheless, for
+                                           the reason of being qualified as ”non-physical”and because they could imply
+                                           a very unpleasant runaway effect, negative masses have been rejected by the
+                                           majority of the scientific community for many years.
+                                                However, minds are evolving nowadays : the possibility of negative masses
+                                           is seriously reconsidered. As examples, let us mention that negative mass
+
+                                                                                             1
+solutions have been considered within a Schwarzschildde Sitter geometry [5]
+or in various aspects of physics [6], going from wormholes to strings. In [7], it
+was shown that negative mass can produce a Schwarzschild solution without
+violating the energy condition. The Dirac equation has also been considered
+with the two possibilities of signs for the mass and it was shown [8] that
+positive as well as negative energies can arise.
+    Besides these theoretical contributions, a negative effective inertial mass
+has been experimentally realized by cooling rubidium atoms with lasers as
+stated in [9].
+    A further reason for this renewed interest in negative masses is the fol-
+lowing. We have mentioned the runaway effect as one of the main causes for
+leaving these masses away. What is it from ? As well known, general relativ-
+ity stands that Universe is a manifold equipped with a metric gµν according
+to the Einstein equation
+                                  1
+                             Rµν − Rgµν = χTµν
+                                  2
+The matter energy tensor Tµν is the source of the gravitational field.
+    The paradox comes from the fact that it is arbitrarily assumed that par-
+ticles of positive or negative masses immersed in the same gravitational field,
+react in the same way. Indeed, as there is only one metric, the effect on
+each particle from that field created by a positive or negative (in that case
+T → −T ) mass is the following :
+   • Positive mass attracts both other positive masses and negative masses
+
+   • Negative mass repels both other negative masses and positive masses
+This means that the particle of negative mass pursues, in a uniformly ac-
+celerated movement with a conserved kinetic energy, the particle of positive
+mass. Indeed, due to their respective signs, the kinetic energy of the positive
+mass is simultaneously, while remaining in the same ratio, compensated by
+that of the positive mass irrespective of the increase of the speed.
+    Besides the fact that this runaway effect violates the action-reaction prin-
+ciple, it also disagrees with experimental data [10].
+    If we deviate from the assumption that positive and negative masses
+react in the same way, we need two metrics and a set of two field equations,
+generalizing the Einstein one. A model ( the Janus cosmological model or
+JCM) with such two coupled field equations has been proposed [11]. The
+
+                                       2
+subsequent Newtonian approximation provides the following corresponding
+interaction rules :
+    • Positive mass attracts positive masses and repels negative masses
+    • Negative mass attracts negative masses and repels positive masses
+The JCM perfectly fits available observational data [12] and restores the
+action-reaction as well as the equivalence principles. This certainly gives
+substance to the study of negative masses.
+    Despite of the growing interest in negative masses, there were very few
+papers devoted to the subject within the quantum mechanical paradigm. Let
+us cite [13] where the concept of negative mass is used to solve Schrdinger
+equations.
+    The purpose of this article is to initiate a study of the impact of negative
+masses on relativistic quantum mechanics by taking a new look at its stan-
+dards such as the Dirac equation (for a review of these standards, see, for
+instance, Section 2.3 of [14]).
+    The reason to do so is that relativistic quantum mechanics naturally puts
+in evidence negative energies having an unpleasant consequence which can
+be avoided if masses are negative, too. Indeed, one of the arguments for
+having given up the Klein-Gordon equation is the fact that the density of
+                                                                         E
+probability is, up to the square of a normalization factor, the ratio m    . It is
+obvious to see that this probability is positive if energies and masses have
+the same sign. So, negative energies can be restored if masses are negative,
+too.
+    The contents is distributed as follows. In Section 2, we show that if the
+time-reversal operator is chosen as unitary, masses become negative (while
+an anti-unitary one leads to positive masses). In Section 3, we realize this
+unitary operator within the Dirac formalism. States corresponding to an-
+tifermions are then associated with negative masses and energies. We con-
+clude in Section 4.
+    We work in the following in the standard units. Greek letters run from 0
+to 3 while Latin indices are equal to 1, 2, 3.
+
+
+2     Unitarity of the time-reversal operator
+First, let us recall that a unitary operator U is defined through
+                            < Uψ|Uφ >=< ψ|φ >                                 (1)
+
+                                        3
+for all states |ψ > and |φ > of the Hilbert space H. It is also a linear operator
+
+              U(a|ψ > +b|φ >) = a U|ψ > +b U|φ > , a, b ∈ C                  (2)
+
+An operator A is anti-unitary if it obeys
+
+                            < Aψ|Aφ >=< ψ|φ >∗                               (3)
+
+where the symbol ∗ denotes the complex conjugation.
+Furthermore, it fills a similar relation to Eq. (2) but where the second mem-
+ber has been conjugated, meaning that A is anti-linear.
+   Usually, one can see any anti-unitary operator as the product of a unitary
+one and the complex conjugation (i.e. i → −i).
+   Such operators are crucial in quantum mechanics due to the fact that
+E.P. Wigner [15] showed that a symmetry operator S of a Hamiltonian is
+necessarily a unitary one or an anti-unitary one.
+   In what concerns the discrete symmetries, it is usually understood that
+the parity operator P such that
+
+                          ~x → −~x , p~ → −~p , t → t                        (4)
+
+is a unitary one while the time-reversal operator T implying
+
+                                ~x → ~x , t → −t                             (5)
+
+is anti-unitary (in which case, p~ → −~p)
+    The reasons for such a belief are the following ones. First, if we want
+the energies to stay positive, we have to add a complex conjugation to the
+reversal of time because of the quantization
+                                           ∂
+                                   E↔i                                       (6)
+                                           ∂t
+Second, this is a way to remain the fundamental relation of quantum me-
+chanics
+                              [xj , pk ] = iδjk                     (7)
+invariant under the transformation PT as its action can be summarized by
+
+                     ~x → −~x , p~ → p~ , E → E , i → −i                     (8)
+
+
+                                       4
+These developments suggest that both energies and masses are positive.
+These signs are thus related to an anti-unitary PT.
+   We argue that they can be understood in a different way.
+   Indeed, Eq. (6) is coherent with T being unitary if we allow the energy
+to be negative while Eq. (7) is still true under a unitary PT in which case
+Eq. (8) has to be replaced by
+                     ~x → −~x , p~ → −~p , E → −E , i → i               (9)
+The fact that the sign of the energy changes has consequences on masses.
+This can be seen, for example, through the Einstein relation E = m.
+    Thus we have two options. The usual one, dealing with an anti-unitary
+PT symmetry and ensuring the energies and masses to stay positive together,
+and the one we propose, that is a unitary PT symmetry (P and T are both
+unitary operators) which allows energies and masses to simultaneously be
+negative.
+    Note that this second path is in perfect agreement with what we know
+about the Lorentz group. Indeed, being defined as the group of matrices Λ
+satisfying
+                    ΛT g Λ = g, g = diag(1, −1, −1, −1)
+where ΛT is the transpose of Λ,the entire Lorentz group is composed of four
+components [16]
+   • L↑+
+   • L↑− = P L↑+
+   • L↓− = T L↑+
+   • L↓+ = P T L↑+
+where the subscript ± denotes the signs of the determinant of Λ while the
+superscript refers to the signs of the first element of this matrix.
+As is well known, there are transformations that maps one component into
+another. These transformations are nothing but the parity and time-reversal
+operators realized here through
+              P = diag(1, −1, −1, −1) , T = diag(−1, 1, 1, 1)         (10)
+
+Let us take a while here to notice that both P and T being realized through
+such matrices are linear and unitary.
+
+                                      5
+Only a few components do form a group, i.e. L↑+ (named the restricted
+---
+File: outputs/raw/arxiv/2103.12845.pdf
+                                                 Cancellation of the central singularity of the Schwarzschild
+                                                       solution with natural mass inversion process.
+                                                             Published inModern Physics Letters A, Vol. 30, No. 9 (2015) 1550051
+
+
+                                                                              J.P. Petit∗                G. D’Agostini†
+
+                                                                                         March 25, 2021
+
+
+                                                                                           Abstract
+
+
+
+
+arXiv:2103.12845v1 [gr-qc] 23 Mar 2021
+                                                      We reconsider the classical Schwarzschild solution in the context of a Janus cosmological
+                                                   model. We show that the central singularity can be eliminated through a simple coordinate
+                                                   change and that the subsequent transit from one fold to the other is accompanied by mass
+                                                   inversion. In such scenario matter swallowed by black holes could be ejected as invisible
+                                                   negative mass and dispersed in space.
+
+                                            Keywords: Black hole; space bridge; Schwarzschild metric; Kerr metric; central singularity; Janus
+                                         cosmological model; Gaussian coordinates; mass inversion process.
+                                                 PACS Nos.: 98.80.Bp, 98.80.Qc
+
+
+                                         1        Introduction
+                                         When Schwarzschild published his solution 1 of Einstein equation, in 1916, the basic hypothesis
+                                         was just time-independence and spherical symmetry. Nobody suspected that there was an addi-
+                                         tional one: null-homotopy. The consequence of this last one was that, in the proposed solution,
+                                         r was a radial coordinate:
+
+                                                                                       dr2
+                                                                         
+                                                              2        Rs 2 2                      2    2       2     2
+                                                                                                                        
+                                                            ds = 1 −        c dt −        R
+                                                                                             −  r   dθ   + sin   θ dϕ    .          (1)
+                                                                        r            1 − rs
+                                             A first problem at r = Rs , considered as coordinate singularity, was eliminated by various
+                                         coordinates changes. See Fig. 1.
+                                             But r = 0 was considered as a true singularity, a point of space where the geodesics end.
+                                         The goal of this paper is to show, through a very simple coordinate change, that this so-called
+                                         “central singularity” is due to a wrong choice of local topology.
+                                             We must introduce the concept of representation space which is the space in which we build
+                                         a mental image of an object. As an example we believe we live in R3 and that space and time
+                                         are separated. This old belief is useful and enough for today’s life. But if the speed of light
+                                         was much smaller we should shift to Minkowski’s spacetime. Similarly, when we send a probe
+                                         to Jupiter or predict an eclipse we neglect space curvature. If this last was not neglectible, we
+                                         should use Einstein’s equation instead of Newton’s. If we intend to describe an object through
+                                         a line element it is easy to show, through 2D examples that inadequate coordinate choice may
+                                         induce wrong image of a geometric object. For example, consider the following metric:
+                                                                                                dr2
+                                                                                      ds2 =         2    + r2 dϕ,                                 (2)
+                                                                                              1 − Rr 2
+                                                                                                     s
+
+                                             ∗
+                                                 CNRS, BP 55, 84122 Pertuis, France, e-mail: jppetit1937@yahoo.fr
+                                             †
+                                                 dagostini.gilles@laposte.net
+
+
+                                                                                                  1
+      Coordinates                                  Line element
+
+ Eddington-Finkelstein                         rs  2                                regular at horizon,
+                                           1−       dv − 2 dv dr − r2 dΩ2             extends across
+      (ingoing)                                 s
+                                                                                      future horizon
+
+ Eddington-Finkelstein                         rs  2                                regular at horizon,
+                                           1−       du − 2 du dr − r2 dΩ2             extends across
+      (outgoing)                                s
+                                                                                      past horizon
+                                                     r
+                                   rs  2               τs
+  Gullstrand-Painlevé            1−     dT − 2              dT dr − dr2 − r2 dΩ2      regular at horizon
+                                    s                    r
+                                  rs                                         isotropic lightcones
+                                     
+                             1 − 4R      2
+                                                  rs 4    2      2      2
+        Isotropic                      dt  −   1 +       dx   + dy   + dz     on constant
+                                 τs 2              4R
+                                     
+                             1 + 4R
+                                                                              time slices
+
+                         Fig. 1. Schwarzschild’s geometry. Alternative coordinates.
+
+
+whose signature (+, +) changes into (−, +) when r > Rs . But, through the simple following
+coordinate change
+                                        r = Rs sin θ,                                  (3)
+this object becomes a sphere:
+
+                                        ds2 = Rs2 dθ2 + sin2 θ dϕ2 .
+                                                                  
+                                                                                                           (4)
+
+   Another example. Consider the metric:
+
+                                                   dr2
+                                 ds2 =                          + r2 dϕ2                                   (5)
+                                           −r2 + 2rR + r02 − R2
+   The signature is (+, +) if
+                                            R − r0 < r < R + r0 ,                                          (6)
+but through the new coordinate change
+
+                                                r = R + r0 cos θ,                                          (7)
+
+we get the well-known metric of the torus:
+
+                                     ds2 = r0 dθ2 + (R + r0 cos θ) dϕ2 .                                   (8)
+
+   Now, let us focus on the space part of Schwarzschild’s line element, limited to {r, ϕ} coordi-
+nates:
+                                             dr2
+                                   dΣ2 =           + r2 dϕ2                                   (9)
+                                           1 − Rrs
+   For r < Rs , the signature (+, +) is changed into (−, +). Let us make the change of variable:
+
+                                            r = Rs (1 + Log ch ρ) ,                                    (10)
+
+which gives:                                                                   
+                     2               (1 + Log ch ρ) 2                      2
+                    dΣ   = Rs2                            2                   2
+                                                   th ρ dρ + (1 + Log ch ρ) dϕ .                       (11)
+                                        Log ch ρ
+
+
+
+                                                         2
+    All singularities disappear, r = Rs corresponds to ρ = 0. In this point the determinant of
+the metric
+                                             (1 + Log ch ρ)2 2
+                                 det g = Rs4                th ρ,
+                                                Log ch ρ
+is no longer zero. The metric is well defined for all values of ρ. If we embed the surface in a
+3D-Euclidean space we can define the meridians, corresponding to
+
+                                                 dr2
+                                        dΣ2 =      Rs
+                                                      + dz 2                                  (12)
+                                                1− r
+
+      And we immediately get the meridians as∗
+
+                                                                    z2
+                                      r
+                                         r
+                             z = ±2Rs       − 1,       r2 = Rs +       .                      (13)
+                                         Rs                        4Rs
+
+      The surface is a space bridge, a “2D diabolo” linking two 2D-Euclidean surfaces.
+
+
+
+
+                                Fig. 2. The 2D diabolo embedded in R3 .
+
+    The problem of the signature has disappeared. From Lagrange equations we can calculate
+the geodesics in the [ρ, ϕ] coordinate system. If embedded, the surface owns a throat circle whose
+perimeter is 2πRs . We can shape the surface as a twofold F (+) and F (−) cover of a M2 manifold
+with a 1D common circular border, and create induced mapping between adjacent points M (+)
+and M (−) .
+    Figure 4 shows the projection αβγ of a geodesic ABC (see Fig. 2) tangent to the common
+boundary, which ensures the continuity of the geodesics of the fold F (+) with the ones of the fold
+F (−) (dotted lines). Radial line λµν is the image of a geodesic meridian curve LMN of Fig. 2.
+This will be important for the following.
+    Figure 5 shows how vicinities of adjacent points are linked by enantiomorphy relationship.
+    Figures 3–5 correspond to a reduction of our representation space to a 2D Euclidean rep-
+resentation space, through a non-isometric imbedding which artificially transforms the throat
+into a pleat and couples points through an adjacent and enantiomorphic relationship. “The circle
+owns no center and there is nothing inside”, because we are out of the considered 2D surface,
+the 2D diabolo.
+  ∗
+      Erratum page 11
+
+
+
+
+                                                  3
+                 Fig. 3. Twofold cover of a manifold with a circle as common boundary.
+
+
+
+
+                                    Fig. 4. Projection of geodesics.
+
+
+   Now introduce the 3D metric
+                                       dr2
+                              dΣ2 =         + r2 dθ2 + sin2 θ dϕ2 ,
+                                                                 
+                                         Rs
+                                                                                              (14)
+                                      1− r
+---
+File: outputs/raw/arxiv/2206.00300.pdf
+                                                       Numerical simulation of universal morphogenesis of fluid interface deformations
+                                                                                driven by radiation pressure
+                                                                                Hugo Chesneau,1 Hamza Chraibi,1 Nicolas Bertin,1 Julien Petit,1
+                                                                             Jean-Pierre Delville,1 Etienne Brasselet,1, ∗ and Régis Wunenburger 1, 2, †
+                                                                                1
+                                                                                 Univ. Bordeaux, CNRS, LOMA, UMR 5798, F-33400 Talence, France
+                                                                      2
+                                                                          Sorbonne Université, CNRS, Institut Jean Le Rond d’Alembert, F-75005 Paris, France
+                                                                    We report on numerical simulation of fluid interface deformations induced either by acoustic or
+
+
+
+
+arXiv:2206.00300v3 [physics.flu-dyn] 17 Nov 2022
+                                                                 optical radiation pressure. This is done by solving simultaneously the scalar wave propagation
+                                                                 equation and the two-phase flow equations using the boundary element method. Using dimensional
+                                                                 analysis, we show that interface deformation morphogenesis is universal, i.e. depends on the same
+                                                                 dimensionless parameters in acoustics and electromagnetics. We numerically investigate a few se-
+                                                                 lected phenomena—in particular the shape of large deformations, the slenderness transition and its
+                                                                 hysteresis— and compare with existing and novel experimental observations. Qualitative agreement
+                                                                 between the numerical simulations and experiments is found when the mutual interaction between
+                                                                 wave propagation and wave-induced deformations is taken into account. Our results demonstrate
+                                                                 the leading role of the radiation pressure in morphogenesis of fluid interface deformations and the
+                                                                 importance of the propagation-deformation interplay .
+
+
+                                                                     I.     INTRODUCTION                             it, hence the radiation pressure exerted on it. From
+                                                                                                                     now on, we refer to such a feedback mechanism as the
+                                                      In 1939, Hertz and Mende showed that fluid inter-              propagation-deformation interplay (PDI), which is the
+                                                   faces were deformed by intense ultrasonic beams [1]. In           subject of this work.
+                                                   1973, Ashkin and Dziedzic [2] demonstrated the same                  In the regime of ‘small’ deformations (i.e., whose height
+                                                   phenomenon using focused optical beams. Using ex-                 is smaller than the beam diameter), the disturbances
+                                                   tremely soft fluid interfaces, Casner and Delville [3] ob-        of the beam by the curved interface are noticeable only
+                                                   served ‘large’ interface deformations (i.e., whose height         far downstream of the interface [24]. Consequently, the
+                                                   is comparable to or larger than the beam diameter) us-            shape of a static interface can be quantitatively described
+                                                   ing optical beams. Since then, various kinds of interface         by solving the balance between Laplace pressure, buoy-
+                                                   deformations have been observed using either acoustic or          ancy and the radiation pressure exerted by the incident,
+                                                   optical beams: bell-shaped deformations [3, 4], stepped           non perturbed, wave [3, 4, 25]. By contrast, the descrip-
+                                                   deformations [4–6], needle-like deformations [4, 7, 8], liq-      tion of large interface deformations requires to account
+                                                   uid bridges [9–12] and cones [13]. Since Maxwell’s and            for the perturbation of the wave by the interface, i.e.
+                                                   Lord Rayleigh’s pioneering works [14, 15], it is well es-         PDI. The particular case of axisymmetric liquid columns
+                                                   tablished that the main mechanical effect of an acous-            can be treated analytically owing to the translational in-
+                                                   tic (AC) or electromagnetic (EM) wave on a liquid-                variance of the interface shape along its axis of revolu-
+                                                   liquid interface is a normal stress called radiation pres-        tion [10–12]. The predicted equilibrium radius of the col-
+                                                   sure [16, 17]. Since then, several other mechanical ef-           umn, which has been calculated within an exact scalar
+                                                   fects of acoustic and electromagnetic waves on liquids            description of the electromagnetic field in both liquids,
+                                                   and liquid interfaces have been identified, in particular         is in agreement with experimental observations [10, 11].
+                                                   in presence of wave absorption or wave scattering by liq-         The case of stepped deformations is far more challenging
+                                                   uids. Namely, one can mention situations where interface          from an analytical point of view. Still, the beam propa-
+                                                   deformations result from either bulk flows triggered by           gation through axisymmetric dioptres having the shape
+                                                   bulk forces [8, 18–21] or thermocapillary flows originating       of the experimentally observed steady interfaces can be
+                                                   from interfacial tension gradients triggered by tempera-          numerically computed. The radiation pressure distribu-
+                                                   ture gradients [22, 23]. Regarding non-scattering and             tion deduced from the computed wave field was found to
+                                                   non-absorbing liquids, the previously cited studies have          satisfactorily balance the Laplace pressure and buoyancy
+                                                   led to conclude that the observed morphological diversity         assessed from the measured shape of the interface [6]. Al-
+                                                   of fluid interface deformations originates basically from         though this is an a posteriori verification of the validity
+                                                   the mutual interplay between the shape of the interface           of the PDI hypothesis, a self-consistent determination of
+                                                   deformed by the radiation pressure and the wave prop-             the shapes of the irradiated interfaces resulting from the
+                                                   agation. Indeed, a distorted interface acts as a dioptre          PDI is still missing. Furthermore, the mechanism under-
+                                                   that modifies the structure of the wave passing through           lying the instability leading to the formation of needle-
+                                                                                                                     like deformations, which is likely to involve PDI, is still
+                                                                                                                     unknown [7, 25].
+                                                   ∗ etienne.brasselet@u-bordeaux.fr
+                                                                                                                      In this work we aim to determine the interface defor-
+                                                   † regis.wunenburger@sorbonne-universite.fr
+                                                                                                                     mations by solving the PDI problem for any deformation
+                                                                                                                         2
+
+amplitude. This is done by numerically mimicking an
+experiment. In other words, we simultaneously solve the
+hydrodynamic evolution of an irradiated two-phase fluid
+sample and the propagation of the acoustic or electro-
+magnetic beam through the moving interface, taking a
+planar and horizontal interface at rest as the initial con-
+dition (time t = 0) and considering a nonzero constant
+beam power for t > 0. Such a numerical simulation of
+the radiation pressure-driven deformation morphogene-
+sis of fluid interfaces allows us to address the following
+questions:
+   (i) How do the interface deformations depend on the
+various parameters characterizing the wave-matter inter-
+action?
+   (ii) Do the numerical simulations predict the same in-
+                                                              FIG. 1. Sketch of the simulation domain with the definitions
+terface deformation shapes as those experimentally ob-
+                                                              of the used notations. The convention c1 = c+ and c2 =
+served?                                                       c− with c− < c+ is used, see Section V A for details. The
+   (iii) Does the instability leading to the formation of     bold vertical arrows refer to the two possible directions of
+needle-like deformations and the ensuing observed hys-        propagation of the irradiating waves.
+teresis originate from the PDI [7, 25]?
+   The paper is organized as follows. The key-ingredients
+of the model are presented in Section II. The dimension-
+less formulation of the model and its numerical handling      where q is the fluid pressure perturbation p′ associated
+are provided in Section III. Then, a dimensional analysis     to acoustic waves, whereas it refers to the electric field E
+is performed in Section IV, which shows that the defor-       or the magnetic field H for electromagnetic waves, and
+mation height depends on five independent dimensionless       c is the wave celerity (also equal to the phase and group
+quantities both in acoustics and electromagnetics. The        velocities). In addition the subscript i, refers to the fluid
+numerical results and its comparison with existing and        labeled i, i = (1, 2), see Fig. 1.
+novel experimental observations are presented in Section
+V, which addresses the three main questions listed above.
+Finally, Section VI then summarizes the main results of                           1.   Acoustic waves
+this work.
+                                                                 In the case of acoustic waves, ci = (ρi χi )−1/2 where
+                                                              ρi is the mass density and χi the isentropic compressibil-
+                      II.    MODEL                            ity. The complex harmonic velocity field ui associated
+                                                              to the acoustic pressure perturbation p′i satisfies the lin-
+   In this section, we first present the wave propagation     earized Euler’s equation ρi ∂u          ′
+                                                                                           ∂t = −∇pi . Along the fluid
+                                                                                             i
+
+equations describing the acoustic and electromagnetic         interface, the pressure and the velocity fields satisfy the
+fields and the corresponding radiation stresses exerted       condition of stress continuity
+on the interface. Then, we present the hydrodynamic
+equations describing the evolution of the fluid sample in                              p′1 = p′2 ,                     (2)
+the creeping-flow regime that suits well most of the ex-
+periments reported so far.                                    as well as the impermeability condition between the two
+                                                              fluids
+
+                    A.      Propagation                                             u1 · n = u2 · n ,                  (3)
+
+   Considering both fluids 1 and 2 as homogeneous,            where n is the unit vector normal to the interface oriented
+isotropic and linear, we also assume inviscid and non         from fluid 1 to fluid 2. Finally, since the acoustic fluid
+heat-conducting media when dealing with acoustic waves        velocity is irrotational in absence of acoustic attenuation,
+whereas we assume non absorbing and non dispersive            ui = −∇φi and consequently p′i = ρi ∂φ   ∂t . Thus, the con-
+                                                                                                         i
+
+                                                                           ′
+media for electromagnetic waves. Within the latter            tinuity of p across the interface results in the continuity
+framework, the propagation of small-amplitude acous-          of ρφ, hence of ∇k (ρφ) = ρ∇k φ, where ∇k is the gradient
+tic waves and of electromagnetic waves is described by        in the tangent plane to the interface. Since ∇k φ = −uk ,
+d’Alembert’s wave equation                                    where uk = u − (u · n)n is the projection of u on the
+                                                              tangent plane to the interface, we conclude that
+              ∂ 2 qi
+                     − c2i ∇2 qi = 0, i = (1, 2),      (1)                         ρ1 uk1 = ρ2 uk2 .                   (4)
+              ∂t2
+                                                                                                                              3
+
+                  2.    Electromagnetic waves                      of the acoustic radiation stress
+                                                                                                              
+                                                                       AC          1     ′2    1    2     2
+                                                                                                             
+   In the case of electromagnetic waves, ci = (εi µi )−1/2          TR · n = − χ2 hp2 i + ρ2 hut2 i − hun2 i
+                                                                                   2           2
+where εi is the dielectric permittivity and µi is the mag-                                                        (11)
+netic permeability (which is usually equal to its value in                           1      ′2    1   2     2
+                                                                                                                 
+                                                                               − − χ1 hp1 i + ρ1 hut1 i − hun1 i ,
+vacuum, µ0 , in the optical frequency domain), both con-                             2            2
+sidered as real. The harmonic fields Ei and Hi satisfy
+                                                                   where, according to Eqs. (3) and (4), the normal and
+Maxwell’s equations ∇ · (εi Ei ) = 0, ∇ × Ei = −µi ∂H  ∂t ,
+                                                         i
+
+                                    ∂Ei
+                                                                   tangential components of the velocity field on both sides
+∇ · (µi Hi ) = 0 and ∇ × Hi = εi ∂t . Thus, along the              of the interface satisfy
+fluid interface, Ei and Hi satisfy
+                                                                                           ρ1 ut1 = ρ2 ut2 ,               (12)
+                   ε1 E1 · n = ε2 E2 · n,                   (5)                              un1 = un2 .                   (13)
+                    n × E1 = n × E2 ,                       (6)
+                                                                   Noticeably, the tangential component of the acoustic ra-
+                   µ1 H1 · n = µ2 H2 · n,                   (7)    diation stress TAC
+                                                                                    R · t is zero, which justifies the improper
+                    n × H1 = n × H2 .                       (8)    name of radiation pressure given to the acoustic radia-
+                                 p                                 tion stress although it is not isotropic [27]. Since TAC
+                                                                                                                          R ·n
+The refractive index is ni =        (εi µi )/(ε0 µ0 ) = c0 /ci ,   is axisymmetric, we expect axisymmetric interface defor-
+where ε0 is the dielectric permittivity of vacuum and c0 =         mations, which the problem two-dimensional.
+(ε0 µ0 )−1/2 is the wave celerity in vacuum. Note that                Considering an incident plane wave, the acoustic radi-
+in acoustics, a refractive index can be also defined as            ation pressure exerted on the horizontal interface at rest
+ni = 1/ci .                                                        is
+                                                                                               2   2     c
+                                                                                          2I Z1 + Z2 − 2 c21 Z1 Z2
+                                                                             TAC
+                                                                              R,0 =                                n,      (14)
+                                                                                         cfrom   (Z1 + Z2 )2
+                   B.       Radiation stress
+                                                                   where I is the acoustic intensity of the incident plane
+  In this section we define the acoustic and electromag-           wave, cfrom is the wave celerity of the medium from which
+netic stresses exerted on the fluid interface, and we derive       the incident wave impinges on the interface and Zi = ρi ci
+their expression assuming incident fields having axisym-           is the acoustic impedance [4, 17]. In particular, when
+metric incident intensity profiles. The beam propagation           ρ1 = ρ2 , Eq. (14) simplifies to
+direction defines the z axis, which is normal to the in-
+                                                                                                2I c2 − c1
+terface at rest. We thus introduce the cylindrical coor-                            TAC
+                                                                                     R,0 =                   n.            (15)
+dinates (r, ϕ, z) associated with the direct orthonormal                                       cfrom c1 + c2
+basis (er , eϕ , ez ) and also the local direct orthonormal
+basis (n, t, eϕ ), see Fig. 1.                                                      2.    Electromagnetic waves
+
+                                                                      The time-averaged electromagnetic radiation stress
+                       1.    Acoustic waves                        TEM   exerted on the fluid interface by the surrounding
+                                                                     R
+                                                                   electromagnetic field is expressed as
+   The time-averaged acoustic radiation stress TAC
+                                                 R  ex-
+                                                                                  TEM         EM
+                                                                                                 − TEM
+                                                                                                        
+erted on the fluid interface by the surrounding acoustic                            R = T2           1    ·n,         (16)
+---
+File: outputs/raw/arxiv/2208.14562.pdf
+                                               The Athena X-ray Integral Field Unit: a consolidated design
+                                                  for the system requirement review of the preliminary
+                                                                    definition phase
+                                                 Didier Barret1 , Vincent Albouys2 , Jan-Willem den Herder3 , Luigi Piro4 , Massimo Cappi5 ,
+                                               Juhani Huovelin6 , Richard Kelley7 , J. Miguel Mas-Hesse8 , Stéphane Paltani9 , Gregor Rauw10 ,
+                                                Agata Rozanska11 , Jiri Svoboda12 , Joern Wilms13 , Noriko Yamasaki14 , Marc Audard9 , Simon
+                                                Bandler7 , Marco Barbera15 , Xavier Barcons16 , Enrico Bozzo9 , Maria Teresa Ceballos16 , Ivan
+
+
+
+
+arXiv:2208.14562v2 [astro-ph.IM] 28 Nov 2022
+                                                   Charles17 , Elisa Costantini3 , Thomas Dauser13 , Anne Decourchelle18 , Lionel Duband17 ,
+                                                    Jean-Marc Duval17 , Fabrizio Fiore19 , Flavio Gatti20 , Andrea Goldwurm21 , Roland den
+                                                   Hartog3 , Brian Jackson22 , Peter Jonker3 , Caroline Kilbourne7 , Seppo Korpela6 , Claudio
+                                               Macculi4 , Mariano Mendez23 , Kazuhisa Mitsuda24 , Silvano Molendi25 , François Pajot1 , Etienne
+                                                  Pointecouteau1 , Frederick Porter7 , Gabriel W. Pratt18 , Damien Prêle21 , Laurent Ravera1 ,
+                                                 Kosuke Sato26 , Joop Schaye27 , Keisuke Shinozaki28 , Konrad Skup29 , Jan Soucek30 , Tanguy
+                                               Thibert31 , Jacco Vink32 , Natalie Webb1 , Laurence Chaoul2 , Desi Raulin2 , Aurora Simionescu3 ,
+                                                  Jose Miguel Torrejon33 , Fabio Acero18 , Graziella Branduardi-Raymont34 , Stefano Ettori5 ,
+                                                  Alexis Finoguenov6 , Nicolas Grosso35 , Jelle Kaastra3 , Pasquale Mazzotta36 , Jon Miller37 ,
+                                                 Giovanni Miniutti8 , Fabrizio Nicastro38 , Salvatore Sciortino39 , Hiroya Yamaguchi14 , Sophie
+                                                 Beaumont1 , Edoardo Cucchetti2 , Matteo D’Andrea4 , Megan Eckart40 , Philippe Ferrando18 ,
+                                               Elias Kammoun1 , Simone Lotti4 , Jean-Michel Mesnager2 , Lorenzo Natalucci4 , Philippe Peille2 ,
+                                                   Jelle de Plaa3 , Florence Ardellier21 , Andrea Argan41 , Elise Bellouard2 , Jérôme Carron2 ,
+                                                  Elisabetta Cavazzuti42 , Mauro Fiorini25 , Pourya Khosropanah3 , Sylvain Martin17 , James
+                                                  Perry7 , Frederic Pinsard18 , Alice Pradines2 , Manuela Rigano20 , Peter Roelfsema22 , Denis
+                                                  Schwander2 , Guido Torrioli43 , Joel Ullom44 , Isabel Vera45 , Eduardo Medinaceli Villegas5 ,
+                                                Monika Zuchniak11 , Frank Brachet2 , Ugo Lo Cicero39 , William Doriese44 , Malcom Durkin44 ,
+                                                 Valentina Fioretti5 , Hervé Geoffray2 , Lionel Jacques31 , Christian Kirsch13 , Stephen Smith7 ,
+                                                     Joseph Adams46 , Emilie Gloaguen2 , Ruud Hoogeveen3 , Paul van der Hulst3 , Mikko
+                                                  Kiviranta47 , Jan van der Kuur22 , Aurélien Ledot2 , Bert-Joost van Leeuwen3 , Dennis van
+                                                   Loon3 , Bertrand Lyautey2 , Yann Parot1 , Kazuhiro Sakai46 , Henk van Weers3 , Shariefa
+                                                Abdoelkariem3 , Thomas Adam17 , Christophe Adami35 , Corinne Aicardi2 , Hiroki Akamatsu3 ,
+                                               Pablo Eleazar Merino Alonso33 , Roberta Amato1 , Jérôme André2 , Matteo Angelinelli5 , Manuel
+                                                 Anon-Cancela45 , Shebli Anvar18 , Ricardo Atienza45 , Anthony Attard17 , Natalia Auricchio5 ,
+                                                   Ana Balado45 , Florian Bancel17 , Lorenzo Ferrari Barusso20 , Arturo Bascuñan45 , Vivian
+                                                   Bernard2 , Alicia Berrocal45 , Sylvie Blin21 , Donata Bonino48 , François Bonnet2 , Patrick
+                                                  Bonny17 , Peter Boorman12 , Charles Boreux18 , Ayoub Bounab18 , Martin Boutelier2 , Kevin
+                                                    Boyce7 , Daniele Brienza4 , Marcel Bruijn3 , Andrea Bulgarelli5 , Simona Calarco2 , Paul
+                                                     Callanan49 , Alberto Prada Campello45 , Thierry Camus1 , Florent Canourgues2 , Vito
+                                                 Capobianco48 , Nicolas Cardiel50 , Florent Castellani1 , Oscar Cheatom7 , James Chervenak7 ,
+                                                Fabio Chiarello43 , Laurent Clerc17 , Nicolas Clerc1 , Beatriz Cobo16 , Odile Coeur-Joly1 , Alexis
+                                                 Coleiro21 , Stéphane Colonges21 , Leonardo Corcione48 , Mickael Coriat1 , Alexandre Coynel17 ,
+                                                 Francesco Cuttaia5 , Antonino D’Ai51 , Fabio D’anca39 , Mauro Dadina5 , Christophe Daniel2 ,
+                                                Lea Dauner13 , Natalie DeNigris7 , Johannes Dercksen3 , Michael DiPirro7 , Eric Doumayrou18 ,
+                                                 Luc Dubbeldam3 , Michel Dupieux1 , Simon Dupourqué1 , Jean Louis Durand17 , Dominique
+                                                    Eckert9 , Valvanera Eiriz45 , Eric Ercolani17 , Christophe Etcheverry2 , Fred Finkbeiner7 ,
+    Mariateresa Fiocchi4 , Hervé Fossecave2 , Philippe Franssen31 , Martin Frericks3 , Stefano
+  Gabici21 , Florent Gant2 , Jian-Rong Gao3 , Fabio Gastaldello25 , Ludovic Genolet9 , Simona
+      Ghizzardi25 , Mª Angeles Alcacera Gil45 , Elisa Giovannini43 , Olivier Godet1 , Javier
+ Gomez-Elvira45 , Raoul Gonzalez2 , Manuel Gonzalez21 , Luciano Gottardi3 , Dolorès Granat1 ,
+   Michel Gros18 , Nicolas Guignard2 , Paul Hieltjes3 , Adolfo Jesús Hurtado45 , Kent Irwin52 ,
+  Christian Jacquey1 , Agnieszka Janiuk53 , Jean Jaubert2 , Maria Jiménez45 , Antoine Jolly2 ,
+ Thierry Jourdan17 , Sabine Julien2 , Bartosz Kedziora54 , Andrew Korb7 , Ingo Kreykenbohm13 ,
+Ole König13 , Mathieu Langer55 , Philippe Laudet2 , Philippe Laurent18 , Monica Laurenza4 , Jean
+Lesrel21 , Sebastiano Ligori48 , Maximilian Lorenz13 , Alfredo Luminari4 , Bruno Maffei55 , Océane
+    Maisonnave2 , Lorenzo Marelli2 , Didier Massonet2 , Irwin Maussang2 , Alejandro Gonzalo
+ Melchor45 , Isabelle Le Mer18 , Francisco Javier San Millan45 , Jean-Pierre Millerioux2 , Teresa
+ Mineo51 , Gabriele Minervini4 , Alexeı̈ Molin1 , David Monestes2 , Nicola Montinaro56 , Baptiste
+   Mot1 , David Murat1 , Kenichiro Nagayoshi3 , Yaël Nazé10 , Loı̈c Noguès1 , Damien Pailot21 ,
+   Francesca Panessa4 , Luigi Parodi20 , Pascal Petit1 , Enrico Piconcelli38 , Ciro Pinto51 , Jose
+   Miguel Encinas Plaza45 , Borja Plaza45 , David Poyatos45 , Thomas Prouvé17 , Andy Ptak7 ,
+Simonetta Puccetti42 , Elena Puccio56 , Pascale Ramon1 , Manuel Reina45 , Guillaume Rioland2 ,
+Louis Rodriguez18 , Anton Roig2 , Bertrand Rollet17 , Mauro Roncarelli5 , Gilles Roudil1 , Tomasz
+     Rudnicki29 , Julien Sanisidro2 , Luisa Sciortino15 , Vitor Silva3 , Michael Sordet9 , Javier
+   Soto-Aguilar1 , Pierre Spizzi2 , Christian Surace35 , Miguel Fernández Sánchez45 , Emanuele
+   Taralli3 , Guilhem Terrasa31 , Régis Terrier21 , Michela Todaro56 , Pietro Ubertini4 , Michela
+Uslenghi25 , Jan Geralt Bij de Vaate3 , Davide Vaccaro3 , Salvatore Varisco39 , Peggy Varnière21 ,
+    Laurent Vibert55 , Marı́a Vidriales45 , Fabrizio Villa5 , Boris Martin Vodopivec45 , Angela
+  Volpe42 , Cor de Vries3 , Nicholas Wakeham7 , Gavin Walmsley2 , Michael Wise3 , Martin de
+                                   Wit3 , and Grzegorz Woźniak11
+1
+  Institut de Recherche en Astrophysique et Planétologie, Université de Toulouse, CNRS, UPS,
+         CNES 9, Avenue du Colonel Roche, BP 44346, F-31028, Toulouse Cedex 4, France
+   2
+     Centre National d’Etudes Spatiales, Centre spatial de Toulouse, 18 avenue Edouard Belin,
+                                    31401 Toulouse Cedex 9, France
+    3
+      SRON, Netherlands Institute for Space Research, Niels Bohrweg 4, 2333 CA Leiden, The
+                                              Netherlands
+4
+  Istituto di Astrofisica e Planetologia Spaziali, Via Fosso del Cavaliere 100, 00133, Roma, Italy
+  5
+    INAF, Osservatorio di Astrofisica e Scienza dello Spazio, via Gobetti 93/3, 40129, Bologna,
+                                                  Italy
+       6
+         Department of Physics, Faculty of Science, P.O. Box 64 (Gustaf Hällströmin katu 2),
+                                FI-00014, University of Helsinki, Finland
+7
+  NASA Goddard Space Flight Center, 8800 Greenbelt Rd, Greenbelt, MD 20771, United States
+      8
+        Centro de Astrobiologı́a (CSIC-INTA), Dep. de Astrofı́sica, Unidad Marı́a de Maeztu,
+  European Space Astronomy Centre (ESA-ESAC), Camino Bajo del Castillo s/n - Villafranca
+                     del Castillo, 28692 Villanueva de la Cañada, Madrid, Spain
+   9
+     Département d’Astronomie, Université de Genève, Chemin d’Ecogia 16, CH-1290 Versoix,
+                                              Switzerland
+10
+    Université de Liège, Institut d’Astrophysique et de Géophysique, Quartier Agora, Allée du 6
+                           Août 19c, B-4000 Liège 1 (Sart-Tilman), Belgium
+  11
+     Centrum Astronomiczne im. Mikolaja Kopernika Polskiej Akademii Nauk, ul. Bartycka 18,
+                                             00-716 Warszawa, Poland
+  12
+       Astronomical Institute, Czech Academy of Sciences, Bocni II 1401/1, CZ-14100 Praha 4,
+                                                  Czech Republic
+ 13
+    Astronomical Institute of the FAU, Erlangen Centre for Astroparticle Physics, University of
+                      Erlangen-Nüremberg, Sternwartstr. 7, 96049 Bamberg, Germany
+           14
+              Institute of Space and Astronautical Science (ISAS), 3-1-1 Yoshinodai, Chuo-ku,
+                                           Sagamihara, 252-5210, Japan
+15
+   Università degli Studi di Palermo, Dipartimento di Fisica e Chimica, Via Archirafi 36, 90123
+      Palermo, Italy and INAF/Osservatorio Astronomico di Palermo G.S.Vaiana, Piazza del
+                                       Parlamento 1, 90134 Palermo, Italy
+16
+   Instituto de Fı́sica de Cantabria (CSIC-UC) Edificio Juan Jordá, Avenida de los Castros, s/n
+                                     - E-39005 Santander, Cantabria, Spain
+   17
+      Département des Systèmes Basses Températures, CEA-Grenoble, 17 avenue des Martyrs,
+                                         38054 Grenoble cedex 99, France
+     18
+        Département d’Astrophysique, UMR AIM, Orme des Merisiers, Bât 709, 91191 Gif sur
+                                                  Yvette , France
+            19
+               INAF-Osservatorio Astronomico di Trieste, via Tiepolo 11, Trieste 34143, Italy
+     20
+        Università di Genova, Dipartimento di Fisica, Via Dodecaneso 33, 16146, Genova, Italy
+    21
+       Université Paris Cité, CNRS, CEA, Astroparticule et Cosmologie (APC), F-75013 Paris,
+                                                      France
+   22
+      SRON Netherlands Institute for Space Research, Landleven 12, 9747 AD Groningen, The
+                                                    Netherlands
+    23
+       Rijksuniversiteit Groningen, Faculty of Science and Engineering, Landleven 12, 9747 AD
+                                           Groningen, The Netherlands
+24
+   National Astronomical Observatory of Japan, 2-21-1 Osawa, Mitaka, Tokyo 181-8588, Japan
+                    25
+                       INAF - IASF Milano, Via Alfonso Corti 12, I-20133 Milano, Italy
+        26
+           Department of Physics, Saitama University, 255 Shimo-Okubo, Sakura-ku, Saitama,
+                                                  338-8570, Japan
+27
+   Leiden Observatory, Leiden University, PO Box 9513, NL-2300 RA Leiden, The Netherlands
+   28
+      Japan Aerospace Exploration Agency, Research Unit II (U2), Research and Development
+                        Directorate, 305-8505 2-1-1, Sengen, Tsukuba, Ibaraki, Japan
+ 29
+    Centrum Badan Kosmicznych, Polish Academy of Science, Bartycka 18a, 00-716 Warszawa,
+                                                      Poland
+ 30
+    Institute of Atmospheric Physics, Czech Academy of Science, Bocni II 1401, 14131 Praha 4,
+                                                  Czech Republic
+   31
+       Centre Spatial de Liège, Liège Science Park, Avenue du Pré-Aily, 4031 Angleur, Belgium
+  32
+     Anton Pannekoek Institute/GRAPPA, University of Amsterdam, PO Box 94249, 1090 GE
+                                           Amsterdam, The Netherlands
+      33
+         Instituto de Fisica Aplicada a las Ciencias y las Tecnologias, Universidad de Alicante,
+    Carretera de San Vicente del Raspeig s/n, 03090 San Vicente del Raspeig, Alicante, Spain
+         34
+            Mullard Space Science Laboratory of University College London, Holmbury House,
+                     Holmbury St Mary, Dorking, Surrey, RH5 6NT, United Kingdom
+35
+   LAM - Laboratoire d’Astrophysique de Marseille, Pôle de l’Étoile Site de Château-Gombert,
+                        38, rue Frédéric Joliot-Curie 13388 Marseille cedex 13, France
+    36
+       Dipartimento di Fisica, Universita di Roma Tor Vergata, Via Della Ricerca Scientifica 1,
+                                            I-00133, Roma, Italy
+37
+    University of Michigan Department of Astronomy, 1085 South University Avenue, 323 West
+                              Hall, Ann Arbor, MI 48109-1107, United States
+  38
+     INAF - Osservatorio Astronomico di Roma, Via Frascati, 33, 00040, Monte Porzio Catone,
+                                                 Rome, Italy
+   39
+      INAF/Osservatorio Astronomico di Palermo G.S.Vaiana, Piazza del Parlamento 1, 90134
+                                               Palermo, Italy
+  40
+     Lawrence Livermore National Laboratory, 7000 East Avenue, L-509, Livermore CA 94550,
+                                                United States
+                 41
+                    INAF Headquarter, Viale del Parco Mellini 84, 00136 Rome, Italy
+42
+   Agenzia Spaziale Italiana, Unita’ di Ricerca Scientifica, Via del Politecnico snc, 00133 Roma,
+                                                    Italia
+  43
+     Istituto di Fotonica et Nanotecnologie - Consiglio Nazionale Ricerche, Via Cineto Romano
+                                           42, 00156 Roma, Italia
+   44
+      National Institute of Standards and Technology, 325 Broadway, Boulder, CO 80305-3328,
+                                                United States
+             45
+                INTA, Crtra de Ajalvir km 4, 28850, Torrejon de Ardoz, Madrid, Spain
+46

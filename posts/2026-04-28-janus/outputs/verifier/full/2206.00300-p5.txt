@@ -1,0 +1,74 @@
+                                                                                                                           5
+
+(·)T refering to the transpose.                                    The incident acoustic or electromagnetic beam is cho-
+   Along the moving interface, the sum of the hydrody-          sen to be focused at the fluid interface at rest, as is
+namic and radiation pressures stresses is balanced by the       usually done in experiments. More precisely, based on
+Laplace pressure:                                               an experimental argument, we choose Gaussian incident
+                                                                beams whose intensity profiles at z = 0 in absence of
+                  TH0 + TR + σκ n = 0.                  (33)    interface is
+where σ is the interfacial tension, h(r, t) is the height of                            2P
+the axisymmetric interface deformation at radius r and                         I(r) =        exp(−2r2 /w02 ) ,          (39)
+                                                                                        πw02
+time t and
+                                                                where P is the total beam power. Indeed, in the elec-
+                   ∂h 1 ∂ 2 h          ∂2r
+                                 
+              κ=            + 2 − 2                     (34)    tromagnetic case, a continuous-wave laser sources in the
+                    ∂s r      ∂s       ∂s                       TEM00 mode is usually used, see for instance [3, 25]. In
+is the associated curvature, s being the curvilinear ab-        the case of acoustics, spherically focused single-element
+scissa defined along the deformation h(r, t), see Fig. 1.       transducers are usually used [4, 6]. Still, it has been
+   In order to separate the effect of gravity from the effect   shown in [29] that Eq. (39) accurately fits the acoustic
+of flows on the interface shape, it is useful to define the     intensity distribution in the focal plane of these transduc-
+pseudo-stress tensor as                                         ers. To conclude, Eq. (39) is adapted to the description
+                                                                of electromagnetic and acoustic beams at their focus.
+                           ηi                                     Using w0 as the characteristic spatial scale we can de-
+            TH                  ∇Ui + (∇Ui )T
+                                                 
+             i = −P̂i I +                               (35)
+                           2                                    fine the characteristic fluid velocity in the creeping flow
+and the hydrodynamic pseudo-stress as                           regime as U0 = σ/η2 (note: choosing η1 instead of η2
+                                                                would be equally relevant), the characteristic interface
+                TH = TH      H                                  evolution timescale as τ = w0 /U0 and the characteristic
+                               
+                        2 − T1 · n.                     (36)
+                                                                pseudo-pressure variation in each fluid as P̂i0 = ηi U0 /w0 .
+Eq. (33) can be rewritten as:                                   These characteristic parameters allow to formulate the
+                                                                problem in a dimensionless manner. namely, we in-
+          TH + TR + σκ n + (ρ1 − ρ2 )gh n = 0.          (37)
+                                                                troduce the dimensionless position vector x̃ = x/w0 ,
+where TH solely encompasses all the effect of flows on          time t̃ = t/τ , velocity Ũi = Ui /U0 , pseudo-pressure
+the interface shape.                                            P̃i = P̂i /P̂i0 and deformation height h̃ = h/w0 . Ac-
+                                                                cordingly, Eqs. (28)–(30) and (37) are rewritten in a di-
+                                                                mensionless form as
+         III.    NUMERICAL RESOLUTION
+                                                                                      ˜ · Ũi = 0 ,
+                                                                                      ∇                                 (40)
+            A.    Dimensionless formulation                                        −˜
+                                                                                    ∇P̃i + ∇˜ 2 Ũi = 0 ,               (41)
+                                                                                   Ũ1 = Ũ2 , x ∈ Cint ,               (42)
+   The axisymmetry of the problem results in a two-
+                                                                             H
+dimensional formulation. As depicted in Fig. 1, the com-           (T̃H
+                                                                      2 − αT̃1 ) · n + T̃R + κ̃n + Bo h̃n = 0 , x ∈ Cint ,
+putation domain is included in the meridional plane (r, z)                                                              (43)
+and is defined as 0 ≤ r ≤ rmax , 0 ≤ z ≤ zmax (we chose
+rmax = 4ω0 and zmax = 8ω0 ). Accordingly, fluids 1 and 2        where α = η1 /η2 , Bo = (ρ1 − ρ2 )gw02 /σ is the Bond
+are associated with identical areas equal to rmax zmax and      number, T̃i = Ti /P̂i0 is the dimensionless hydrodynamic
+whose closed-path contour is made of a fixed contour Ci ,       stress tensor and T̃R = TR w0 /σ is the dimensionless
+i = (1, 2), and a mobile contour Cint which defines the         radiation stress. Finally, the boundary condition along
+fluid interface, as sketched in Fig. 1. The interface co-       C1 and C2 is
+incides with the plane z = 0 at rest and its contact line
+is pinned at (r = ±rmax , z = 0) with variable contact                               Ũi = 0 , x ∈ Ci .                 (44)
+angle.
+   The goal of the numerical simulation is to evaluate U
+and P at any point x(r, z) = r er + z ez of the computa-                  B.   Boundary Integral formulation
+tion domain and at any time t ≥ 0 in order to compute
+the stresses exerted on the interface at its location, then       The solution of Eqs. (40) and (41) can be obtained
+its motion, which is computed using a Lagrangian ap-            by determining the solution of the Stokes equation cor-
+proach according to                                             responding to a Dirac-excitation [30, 31]. It consists in
+                  dx                                            exerting a unit point-force on the fluid at a given point
+                     = U(x) , x ∈ Cint ,                (38)    and determining the induced velocity field Ũ and hydro-
+                  dt
+                                                                dynamic stress tensor T̃H everywhere else. Taking ad-
+starting from rest at t = 0.                                    vantage of axisymmetry of the problem, the solution can
+

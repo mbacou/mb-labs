@@ -1,0 +1,70 @@
+Can negative mass be considered in General Relativity ?                             3
+
+
+As a conclusion, in despite of interesting perspectives suggested by the previ-
+ously mentioned references, GR bans any introduction of negative masses in the
+Universe, unless giving up the equivalence principle itself.
+
+
+2 Bimetric Newtonian approximation
+
+A first tentative solution was suggested in 1994 by Petit [9, 13], and later by Henry-
+Couannier [14], then Hossenfelder [15]. All are based on a new description of the
+Universe, considered as a manifold M4 coupled to two metrics instead of a single
+one.
+                               (+)
+Basically, the first metric gµν refers to positive energy particles (and positive
+                               (−)
+mass, if they have one), and gµν to negative energy particles (and negative mass,
+if they have one). Opposite energy particles cannot encounter, for they cruise on
+distinct geodesic families. Both families include null geodesics, with positive energy
+                                                          (+)
+photons cruising on null geodesics built from metric gµν , while negative energy
+                                                      (−)
+photons cruise on null geodesics built from metric gµν . It is assumed than positive
+structures, made of positive masses, can emit or absorb positive energy photons
+only, while negative structures, made of negative masses, can emit and absorb
+negative energy photons only. In short, on purely geometrical grounds, negative
+mass structures would be invisible for a positive mass observer (and vice-versa).
+
+First, let us consider a system of coupled field equations with which we intend to
+describe a time-independant configuration, or quasi time-independant. The study
+of a time dependant solution, based on a modified system will be the subject of a
+next publication.
+                       (+)  1              
+                                             (+)    (−)
+                                                        
+                      Rµν  − R(+) gµν
+                                   (+)
+                                       = +χ Tµν  + Tµν
+                            2
+
+                       (−)     1 (−) (−)   
+                                             (+)    (−)
+                                                        
+                      Rµν  −     R gµν = −χ Tµν  + Tµν                            (4)
+                               2
+
+                                                 (+)      (−)
+We find the Ricci tensors built from metrics gµν and gµν . The energy-momentum
+          (+)        (−)
+tensors Tµν and Tµν , in the simple case of non interacting incoherent matters,
+can be expressed in term of the scalar proper density fields ρ(+) and ρ(−) and
+                                µ
+                                        µν
+four-velocity flows uµ (x) = dx
+                              ds by : T    = ρ(x)uµ (x)uν (x).
+
+In the Newtonian approximation, for both species, the velocities are small with
+respect to the speed of light and the energy densities low. The energy-momentum
+tensors for a field of matter can be writen,in this case, as :
+                         1 0 0 0                                     1 0 0 0
+                                                                         
+
+        (+) µ    (+) 2  0 0 0 0                  (−) µ     (−) 2  0 0 0 0
+      T     ν =ρ    c                         T     ν = ρ    c              (5)
+                         0 0 0 0                                    0 0 0 0
+                         0 0 0 0                                     0 0 0 0
+
+with ρ(+) > 0 and ρ(−) < 0
+

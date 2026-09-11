@@ -1,0 +1,90 @@
+                                                                                                                              3
+
+                  2.    Electromagnetic waves                      of the acoustic radiation stress
+                                                                                                              
+                                                                       AC          1     ′2    1    2     2
+                                                                                                             
+   In the case of electromagnetic waves, ci = (εi µi )−1/2          TR · n = − χ2 hp2 i + ρ2 hut2 i − hun2 i
+                                                                                   2           2
+where εi is the dielectric permittivity and µi is the mag-                                                        (11)
+netic permeability (which is usually equal to its value in                           1      ′2    1   2     2
+                                                                                                                 
+                                                                               − − χ1 hp1 i + ρ1 hut1 i − hun1 i ,
+vacuum, µ0 , in the optical frequency domain), both con-                             2            2
+sidered as real. The harmonic fields Ei and Hi satisfy
+                                                                   where, according to Eqs. (3) and (4), the normal and
+Maxwell’s equations ∇ · (εi Ei ) = 0, ∇ × Ei = −µi ∂H  ∂t ,
+                                                         i
+
+                                    ∂Ei
+                                                                   tangential components of the velocity field on both sides
+∇ · (µi Hi ) = 0 and ∇ × Hi = εi ∂t . Thus, along the              of the interface satisfy
+fluid interface, Ei and Hi satisfy
+                                                                                           ρ1 ut1 = ρ2 ut2 ,               (12)
+                   ε1 E1 · n = ε2 E2 · n,                   (5)                              un1 = un2 .                   (13)
+                    n × E1 = n × E2 ,                       (6)
+                                                                   Noticeably, the tangential component of the acoustic ra-
+                   µ1 H1 · n = µ2 H2 · n,                   (7)    diation stress TAC
+                                                                                    R · t is zero, which justifies the improper
+                    n × H1 = n × H2 .                       (8)    name of radiation pressure given to the acoustic radia-
+                                 p                                 tion stress although it is not isotropic [27]. Since TAC
+                                                                                                                          R ·n
+The refractive index is ni =        (εi µi )/(ε0 µ0 ) = c0 /ci ,   is axisymmetric, we expect axisymmetric interface defor-
+where ε0 is the dielectric permittivity of vacuum and c0 =         mations, which the problem two-dimensional.
+(ε0 µ0 )−1/2 is the wave celerity in vacuum. Note that                Considering an incident plane wave, the acoustic radi-
+in acoustics, a refractive index can be also defined as            ation pressure exerted on the horizontal interface at rest
+ni = 1/ci .                                                        is
+                                                                                               2   2     c
+                                                                                          2I Z1 + Z2 − 2 c21 Z1 Z2
+                                                                             TAC
+                                                                              R,0 =                                n,      (14)
+                                                                                         cfrom   (Z1 + Z2 )2
+                   B.       Radiation stress
+                                                                   where I is the acoustic intensity of the incident plane
+  In this section we define the acoustic and electromag-           wave, cfrom is the wave celerity of the medium from which
+netic stresses exerted on the fluid interface, and we derive       the incident wave impinges on the interface and Zi = ρi ci
+their expression assuming incident fields having axisym-           is the acoustic impedance [4, 17]. In particular, when
+metric incident intensity profiles. The beam propagation           ρ1 = ρ2 , Eq. (14) simplifies to
+direction defines the z axis, which is normal to the in-
+                                                                                                2I c2 − c1
+terface at rest. We thus introduce the cylindrical coor-                            TAC
+                                                                                     R,0 =                   n.            (15)
+dinates (r, ϕ, z) associated with the direct orthonormal                                       cfrom c1 + c2
+basis (er , eϕ , ez ) and also the local direct orthonormal
+basis (n, t, eϕ ), see Fig. 1.                                                      2.    Electromagnetic waves
+
+                                                                      The time-averaged electromagnetic radiation stress
+                       1.    Acoustic waves                        TEM   exerted on the fluid interface by the surrounding
+                                                                     R
+                                                                   electromagnetic field is expressed as
+   The time-averaged acoustic radiation stress TAC
+                                                 R  ex-
+                                                                                  TEM         EM
+                                                                                                 − TEM
+                                                                                                        
+erted on the fluid interface by the surrounding acoustic                            R = T2           1    ·n,         (16)
+field is expressed as
+                                                                   where TEM is the time-averaged electromagnetic radia-
+                       AC   AC                                     tion tensor defined in each fluid as [16]:
+                 TAC
+                               
+                  R = T2 − T1    · n,                       (9)
+                                                                              1          1
+where TAC is the time-averaged acoustic radiation tensor           TEM
+                                                                     i   = − εi hE2i i I− µi hH2i i I+εi hEi ⊗Ei i+µi hHi ⊗Hi i.
+                                                                              2          2
+defined in each fluid as [17, 26]:                                                                                         (17)
+                                                                   The electrostriction term is purposely discarded since it
+          1            1                                           does not contribute to the stress balance at the inter-
+   TAC
+    i  = − χi hp′2           2
+                i i I + ρi hui i I − ρi hui ⊗ ui i.        (10)
+          2            2                                           face [28].
+                                                                       Noteworthy, in contrast to the case of acoustic waves,
+I is the identify tensor, ⊗ is the dyadic product, and h·i         it is not enough to assume axisymmetric phase spatial
+refers to the time average over one period T = 2π/ω.               distribution for both the electric and magnetic fields in
+   Assuming the incident acoustic pressure and velocity            order to get an axisymmetric radiation stress leading to
+fields to have axisymmetric amplitude and phase spatial            a two-dimensional problem. Axisymmetric electromag-
+distribution, the acoustic velocity can be expressed as            netic radiation stress can be actually obtained by con-
+ui = uni n + uti t and one finds for the normal component          sidering either axisymmetric transverse electric (TE) or
+

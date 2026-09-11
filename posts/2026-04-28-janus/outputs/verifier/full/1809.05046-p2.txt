@@ -1,0 +1,40 @@
+solutions have been considered within a Schwarzschildde Sitter geometry [5]
+or in various aspects of physics [6], going from wormholes to strings. In [7], it
+was shown that negative mass can produce a Schwarzschild solution without
+violating the energy condition. The Dirac equation has also been considered
+with the two possibilities of signs for the mass and it was shown [8] that
+positive as well as negative energies can arise.
+    Besides these theoretical contributions, a negative effective inertial mass
+has been experimentally realized by cooling rubidium atoms with lasers as
+stated in [9].
+    A further reason for this renewed interest in negative masses is the fol-
+lowing. We have mentioned the runaway effect as one of the main causes for
+leaving these masses away. What is it from ? As well known, general relativ-
+ity stands that Universe is a manifold equipped with a metric gµν according
+to the Einstein equation
+                                  1
+                             Rµν − Rgµν = χTµν
+                                  2
+The matter energy tensor Tµν is the source of the gravitational field.
+    The paradox comes from the fact that it is arbitrarily assumed that par-
+ticles of positive or negative masses immersed in the same gravitational field,
+react in the same way. Indeed, as there is only one metric, the effect on
+each particle from that field created by a positive or negative (in that case
+T → −T ) mass is the following :
+   • Positive mass attracts both other positive masses and negative masses
+
+   • Negative mass repels both other negative masses and positive masses
+This means that the particle of negative mass pursues, in a uniformly ac-
+celerated movement with a conserved kinetic energy, the particle of positive
+mass. Indeed, due to their respective signs, the kinetic energy of the positive
+mass is simultaneously, while remaining in the same ratio, compensated by
+that of the positive mass irrespective of the increase of the speed.
+    Besides the fact that this runaway effect violates the action-reaction prin-
+ciple, it also disagrees with experimental data [10].
+    If we deviate from the assumption that positive and negative masses
+react in the same way, we need two metrics and a set of two field equations,
+generalizing the Einstein one. A model ( the Janus cosmological model or
+JCM) with such two coupled field equations has been proposed [11]. The
+
+                                       2
+

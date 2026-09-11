@@ -1,0 +1,85 @@
+1.2 To surpass all other past and future instruments/missions
+In the current X-ray science context, the X-IFU has been thought and designed to provide unprecedented
+spatially-resolved spectroscopy with performances greatly exceeding those offered by current X-ray observatories
+like XMM-Newton and Chandra, or XRISM with its Resolve high resolution spectrometer.24 This capability
+comes from an X-ray telescope combining unprecedented collecting area (1.4 m2 at 1 keV), a very good angular
+resolution (5-10”) to provide sufficient counts on a 5’ (equivalent diameter) field of view, a better than 2.5 eV
+energy resolution below 7 keV, and a sensitive band pass going from 0.2 to 12 keV (see Figure 4)
+
+                                                                                                                                           Perseus: Fe XXV Heα, z = 0.01756, σv,turb = 160 km/s
+                                                                                                        14
+                                                                                                                                      Athena/X-IFU
+                                                                                                                                      Hitomi/SXS=XRISM/Resolve
+                                                                                                        12
+
+
+                                                                                                        10
+
+
+
+
+                                                                                         Counts/s/keV
+                                                                                                         8
+
+
+                                                                                                         6
+
+
+                                                                                                         4
+                                                                                                                                                  Athena/X-IFU
+                         FoV (2.9'x2.9', HEW=100")     FoV (5' eq. Φ), HEW=5-10")
+                                                                                                                                                  XRISM/Resolve
+                                                                                                         2
+
+                                                                                                                                                                                                                 ©DB/X-IFU
+
+                                                                                                                          6.50                         6.52       6.54       6.56      6.58            6.60
+                                                                                                                                                                    Energy (keV)
+
+                                     Athena/X-IFU                              XMM-Newton/RGS
+                                     XRISM/Resolve                             Chandra/HETG                                                                   Athena/X-IFU                              XRISM/Resolve
+                            4
+                       10
+                                                                                                                                                  50
+
+
+                       103
+                                                                                                                                                  20
+
+
+                                                                                                                          weak line sensitivity
+
+
+
+Effective area (cm2)
+                                             ×35                            ×8
+                                             (1 keV)                        (5 keV)
+                       102                                                                                                                        10
+                                                                                                                                                                         x8                  x4
+
+
+
+                                                                                                                              ∝ Aeff/ΔE
+                                                                                                                                                                         (1 keV)             (5 keV)
+                                                                                                                                                   5
+                       101                                                          ×10
+                                                                                    (8 keV)
+
+
+                        1                                                                                                                          2
+
+                                                                                                              ©DB/X-IFU                                                                                                      ©DB/X-IFU
+                                                                                                                                                   1
+                                                          1                                              10                                                                      1                                   10
+                                                        Energy (keV)                                                                                                          Energy (keV)
+
+Figure 4. Top) The Hitomi/SXS=XRISM/Resolve and X-IFU images and spectra of Perseus cluster. Credit: Jeremy
+Sanders (MPE). This combined figure shows at the same time the significant improvement in fine imaging, over a compa-
+rable field of view, as well as the higher throughput of X-IFU compared to Resolve (the two spectra are simulated with
+the same exposure time). Bottom) Effective area (left) and weak narrow line sensitivity (right) of X-IFU in comparison
+with the one of XRISM/Resolve and Chandra/XMM-Newton gratings (not encapsulated in that figure, the fact that the
+angular resolution will be ten times better for Athena/X-IFU compared to XRISM/Resolve). The effective area require-
+ment applying to X-IFU are indicated with filled green square symbols. This assumes the mirror telescope configuration
+as described in ATHENA - Telescope Reference Design and Effective Area Estimates, ESA-ATHENA-ESTEC-PL-DD-
+001, Issue 3.3, 21/12/2020 and the instrument efficiency presented in §4.1.
+

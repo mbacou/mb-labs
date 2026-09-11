@@ -1,0 +1,38 @@
+meaning that TAU has now to commute with γ 0 and γ 2 (the only matrix
+among the γ j ’s to have imaginary elements) and anticommute with γ 1 and
+γ 3 . In other words, the action of TAU would be such that
+                            ψ(t, ~x) → iγ 1 γ 3 ψ(−t, ~x)∗                      (28)
+for the Dirac equation we are concerned with. Combined with the parity
+(15), it gives rise to the following anti-unitary PT
+                          ψ(t, ~x) → iγ 0 γ 1 γ 3 ψ(−t, −~x)∗                   (29)
+which it is easy to see that it simply connects positive energy and mass
+fermions to positive energy and mass fermions
+           γ 0 γ 1 γ 3 ψ1+ (−x)∗ = −ψ2+ (x) , γ 0 γ 1 γ 3 ψ2+ (−x)∗ = ψ1+ (x)   (30)
+This is in complete agreement with what we quoted in Section 2 : only
+unitary PT can rely the two parts of the light cone.
+So, we come to the third proposal : a unitary PT as given in Eq. (19)
+which, let us insist on that point, does not only perform the change (23) by
+replacing the coordinates by their opposites but also implies the M-symmetry
+m → −m.
+The explanation is obvious when considering the Dirac operator
+                                                       !
+                                 E −m     −~σ .~p
+                                                                                (31)
+                                  ~σ .~p −E − m
+acting on bi-spinors to give 0. There are two options only : either you perform
+the changes (22) and leave in particular the negative energies to concentrate
+on positive ones                                   !
+                                −E − m      ~σ .~p
+                                 −~σ .~p  E−m
+or you choose to keep the negative energies but then, you are obliged to
+consider, simultaneously, negative masses
+                                                       !
+                                 E+m      −~σ .~p
+                                  ~σ .~p −E + m
+So, this third solution, based on a unitary PT, also leads to the solutions
+(21)
+                  γ 5 ψ1+ (−x) = χ+        5 +         +
+                                  1 (x) , γ ψ2 (−x) = χ2 (x)           (32)
+
+                                          11
+

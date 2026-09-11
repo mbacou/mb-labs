@@ -1,0 +1,20 @@
+                                                                                                                                                   10
+
+
+
+
+FIG. 2. Computed morphogenesis of large interface deformations for celerity contrast c− /c+ = 0.5, waveguiding parameter V = 5.4 with
+Propagation-Deformation Interplay (PDI) (a,b, i, j) and without PDI (e)–(h), (m–q). (a)–(h) cfrom > cto , Π0 = 10. (i)–(q) cfrom < cto , Π0 = 5.
+The deformation profiles shown in panel (b) [respectively (f), (j) and (n)] correspond to the instants indicated by the symbols with corresponding
+color in panel (a) [respectively (e), (i) and (m)]. The curves in panels (b), (f), (j) and (n) are shifted vertically one with respect to the other for
+clarity purpose. In panels (c), (g), (k) and (p), Φ is the phase of the wave field. In panels (d), (h), (l) and (q), E is the wave energy density and
+E0 is the energy density maximum of the incident beam in absence of interface.
+
+
+
+micro-emulsions involved in the first experimental obser-                     (i.e., the sudden occurrence of droplet emission at the
+vations were turbid [7], both both radiation pressure and                     tip of a needle-like deformation [8]) which shares several
+bulk radiation forces may contribute to the slenderness                       common features with the slenderness transition [19, 38].
+transition. Since then, bulk radiation forces associated                      The question of whether the slenderness transition can
+with turbidity have been shown to induce a jet transition                     be triggered solely by radiation pressure is still open.
+

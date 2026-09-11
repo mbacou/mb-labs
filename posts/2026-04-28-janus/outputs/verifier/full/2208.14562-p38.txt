@@ -1,0 +1,51 @@
+impacts is being debated within the community,89 this very same community that should lead by example.90
+In this context, a life cycle assessment (LCA) of X-IFU is being performed to evaluate the global footprint of
+developing X-IFU along its complete life cycle. The LCA will identify the contribution of all life cycle phases
+(from cradle to grave) to several environmental impacts, including global warming (in particular CO2 emissions),
+waste, water consumption, raw materials consumption, human health, and biodiversity. The idea is simply to
+identify hot spots and take corrective actions whenever possible, while not jeopardizing the ultimate success of
+the project. X-IFU has already committed to reduce significantly its global travel footprint,91 starting even in
+the pre-covid era, but the LCA will enable us to go one step further by identifying those actions in our daily
+activities that can lead to substantial reductions of our impact, such as switching off test equipments over night,
+and sharing resources and infrastructures wherever possible. At the time of this writing, the assessment has not
+yet been completed, but the data have been collected from all sub-systems making up the X-IFU. There has
+been enthusiastic support for the tedious data collection, which is now extrapolated when partial and properly
+modeled with a dedicated LCA software. There is great hope that the quality of the assessment will enable clear
+guidelines to be formulated for building the X-IFU, while lowering its environmental impact.
+
+                                    11. FROM THE SRR ONWARD
+The discovery of an unanticipated cost increase of Athena by the ESA executive now imposes us the challenge of
+a design-to-cost exercise to bring the cost of Athena within an envelope affordable by the ESA science program
+(∼ 1.3 G€). This exercise should preserve the flagship capabilities of the Athena mission. The X-IFU team,
+including its international partners, has the expertise and is committed to enter this exercise in a pro-active way,
+focusing first on the way to simplify the cooling chain. Let alone for feeling accountable for the tax-payer money
+already spent, the scientific and technical expertise developed over the years should not be wasted, and will be
+a critical input of the design-to-cost exercise, which will start from the X-IFU design presented at the SRR.
+    The extent by which X-IFU will change will also depend on the changes applying to the overall telescope and
+spacecraft, which are under ESA responsibility. A close collaboration between ESA and the instrument teams
+will be required for Athena to retain the capability to reach most, if not all, the scientific objectives spelled
+out for the Hot and Energetic Universe, and whose priorities have been repeated constantly since its original
+formulation in 2013.
+
+                                            12. CONCLUSIONS
+X-IFU entered its system requirement review with a consolidated design and performance budgets understood.
+As an indication of the extent of the work done for the SRR, the data pack produced by the team consisted
+of over 100 documents and of more than 5000 pages. This paper aimed at summarizing this documentation,
+providing a reference point for the upcoming design-to-cost exercise. We, as a team, will use all our knowledge
+for X-IFU to maintain flagship capabilities in spatially resolved high resolution X-ray spectroscopy, as to enable
+most of the original X-IFU related scientific objectives of the Athena mission to be retained.
+
+                                      13. ACKNOWLEDGMENTS
+This paper is based on the documentation assembled by the CNES project team and the Consortium partners
+for the X-IFU System Requirement Review, which has started at the end of June, albeit with reduced objectives
+(the review will be completed in September 2022). DB wishes to thank the CNES Project and Support teams for
+continuing the preparation of the SRR data pack, during the disruptive and unfortunate events that happened
+to Athena, which could have led to the termination of X-IFU. There is no doubt that their efforts will be
+rewarded in the upcoming design-to-cost exercise. DB would also like to express his gratitude to the CNES
+Management (Philippe Baptiste, President), Lionel Suchet (Chief Operating Officer), Caroline Laurent (Director
+of orbital systems and applications), Philippe Lier (Deputy-Director of orbital systems and applications), the
+French ESA SPC delegation (Olivier La Marle and Juliette Lambin) for their unfailing support to X-IFU.
+This support was instrumental in preserving an X-IFU on the new Athena mission and will remain precious
+in the upcoming phase of the reformulation of the mission. Special thanks to all the SPC delegations which
+supported the objective of keeping a flagship X-ray observatory in the ESA Science Program. DB is also
+

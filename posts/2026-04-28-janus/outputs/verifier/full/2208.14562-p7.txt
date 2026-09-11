@@ -1,0 +1,97 @@
+                                • Integral field spectroscopic mapping of hot cosmic plasmas, enabling 3-D measurements of gas bulk motions
+                                  and turbulence, chemical abundances and the spatial distribution of these and other physical parameters in
+                                  local and distant galaxy clusters (see Figure 1). This drives the X-IFU field of view and spatial resolution,
+                                  quantum efficiency, particle background, spectral resolution and calibration accuracy.
+
+
+                      1.05
+
+                                                                                                                                                                 2000
+                                                                                                                                                                                          Fe complex
+                      1.00
+
+                                                                                                                                                                 1000
+
+
+
+
+                                                                                                                                   νFν (keV cm-2 s-1)
+                      0.95
+
+
+
+   Data/Model
+                                                                                                                                                                  500
+
+                                              OVII Heβ
+                      0.90                    (z=0.4339)
+
+                                                                                                                                                                  200
+                                                                                                     OVII Heα
+                                                                                                     (z=0.4339)                                                                                                                                Al, Si, S
+                      0.85
+
+                                                                                                                                                                  100
+                                                                                                                                                                                                                                                                      ©DB/X-IFU
+                                                                                                                       ©DB/X-IFU
+                      0.80
+                                                                                                                                                                        0.2                                   0.4                 0.6           0.8             1.0
+                                   25    26          27         28               29         30             31
+                                                               Wavelength (Å)                                                                                                                                  Energy (keV)
+
+Figure 2. Left) Simulated X-IFU spectrum of an intervening absorber in the Warm-Hot Intergalactic Medium at z=0.4339.
+The plot shows the ratio of the X-IFU data of the blazar 1ES 1553+113 with the local best-fitting continuum model, to
+highlight the two OVII He-α and He-β absorption lines. The simulation is performed using the best fitting parameters
+derived from the long XMM-Newton RGS observations.21 Right) A simulated X-IFU X-ray spectrum of a medium bright
+(fluence = 0.4 × 10−6 erg cm−2 ) Gamma-Ray Burst (GRB) afterglow at z = 7, characterized by deep narrow resonant
+lines of Fe, Si, S, Ar, Mg, from the gas in the environment of the GRB. An effective intrinsic column density of 2 × 1022
+cm−2 has been adopted.
+
+
+                                • High sensitivity to line detection, enabling the detection of absorption and emission lines from Warm
+                                  and Hot Intergalactic Medium (WHIM) filaments, and weak spectral features produced by unusual ion
+                                  species or states (see Figure 2). This drives the X-IFU spectral resolution, quantum efficiency, calibration,
+                                  throughput, and fast reaction time.
+
+                                10−2
+
+                                                                                                                                                                  0.2
+                                                                                FeXXVI Lyβ (0.24c)
+
+
+
+
+keV2 (Photons cm-2 s-1 keV-1)                                                                                                      Normalized counts/s/keV/cm2
+                                                                                                                                                                                                         Ni XXVII (He-like)                Ni XXVIII (H-like)
+                                                                         FeXXV Heβ (0.24c)
+                                                                                                                                                                                                                                                      Fe XXVI Hβ
+                                                                                                                                                                  0.1
+
+
+                                10−3
+                                              FeXXIV/XXV Li/Heα (0.2c)
+                                                                                                                                                                 0.05
+
+                                                      Fe XXV Heα (0.24c)
+                                                                                             FeXXVI Lyα (0.24c)                                                                                     Fe XXVI
+                                                                                                                                                                          Fe XXV Heα
+
+                                                                                                                   ©DB/X-IFU                                                                                                                                          ©DB/X-IFU
+                                                                                                                                                                                       Fe XXVI Hα
+                                                                                                                                                                 0.02                                                         Fe XXV Heβ
+                                10−4
+                                                5              6            7                 8            9      10                                                6.5                    7.0                   7.5                 8.0                8.5
+                                                               Energy (keV)                                                                                                                                    Energy (keV)
+
+Figure 3. Left) Probing (slow) warm absorbers and (fast) massive outflows in AGN. Simulated 100 ks X-IFU spectrum
+of PDS456 (z=0.184) above 4 keV obtained assuming a source state as in the XMM+NuSTAR observations of PDS456
+as shown in.22 Right) X-IFU simulated observation lasting only 120 seconds of the Black Hole binary GRS1915+105. A
+disk wind, as reported in23 has been simulated. Strong spectral features can be clearly seen in the spectrum.This rich set
+of features will enable unprecedented studies of the structure of the disk winds.
+
+
+                                • Physical characterization of the Hot and Energetic Universe, including plasma diagnostics using emission
+                                  line multiplets, absorption lines (see Figure 3), AGN reverberation and black hole spin measurements,
+                                  winds in galactic sources in outburst, AGN winds, and outflows. This drives the X-IFU spectral resolution,
+                                  calibration, high-count rate capability, and fast reaction time.
+

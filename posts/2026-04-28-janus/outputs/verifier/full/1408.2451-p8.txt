@@ -1,0 +1,49 @@
+8                                                          Jean-Pierre Petit, Gilles dAgostini
+
+
+the presence of some negative mass. A positive energy photon can cross freely a
+negative mass. Considering positive energy photons, this give a negative lensing
+effect not only in the vicinity of a negative mass, but also inside it, as firstly
+suggested in [9]. The present work supports the assumptions corresponding to
+reference [8].
+
+
+6 Conclusion
+
+The classical General Relativity model bans the existence of negative mass in the
+Universe, while implying a puzzling phenomenon : the runaway effect. After GR,
+positive mass attracts anything and negative mass repels anything, so that if two
+masses with opposite signs encounter, the positive one escapes and the negative
+one runs after it since both experience the same acceleration, while energy and
+momentum are conserved. G.W. Bonnor qualified such phenomenon as prepos-
+terous. However, choosing other interaction laws provides interesting challenging
+interpretations of the VLS as shown in the present work, based on a new bimetric
+model of the Universe supporting the various assumptions of previous investigators
+and opening the road towards interesting research.
+
+
+References
+
+1. De Lapparent V., Geller M.H. , Huchra J.P., Astrophys. J. Letters 302, L1 (1986)
+2. Kirshner R.P , Oemler A. Jr. , Schlechter P.L., Schectman S.A, Astrophys. Jr. 314, 496
+  (1987)
+3. Rood H.J., Ann. Rev. Astron. Astrophys. 26, 245 (1988)
+4. Geller M.J. , Huchra J.P. , Science, 246, 897 (1989)
+5. El-Ad H. , Piran T. , Da Costa L.N. ,Astrophys. J. Lett. 462 L13 (1996)
+6. El-Ad H. , Piran T. , Da Costa L.N. , Mon. Not. R. Astro. Soc. 287 : 790 (1997)
+7. El-Ad H. , Piran T. , Astrophys. J. Vol. 491 n2 (1997)
+8. Piran T., On Gravitational Repulsion, Gen. Relat. and Gravit. Vol. 29 , N 11 (1997)
+9. Petit J.P., Twin Universe Cosmology. Astrophysics and Space Science (226): 273307. (1995)
+10. Koki Izumi, Chizaki Hagiwara, Koki Nakajima, Takao Kitamura and Hideki Asada, Gravi-
+  tational lensing shear by an exotic lens with negative convergence or negative mass, Physical
+  Review D 88, 024049 (2013)
+11. Bondi H., Negative mass in General Relativity, Rev. of Mod. Phys., Vol 29, N3 (1957)
+12. Bonnor W.B., Negative mass and general relativity, General Relativity and Gravitation
+  Vol.21, N11 (1989)
+13. Petit J.P., The missing mass problem, Il Nuevo Cimento B, 109 : 697-710
+14. Henry-Couannier F., Int. J. Mod. Phys. A20 2341 (2005)
+15. Hossenfelder S., A bimetric Theory with Exchange Symmetry, Phys. Rev. D78, 044015
+  (2008)
+16. R. Adler, R. Bazin, M. Schiffer, Introduction to General Relativity, Mc Graw Hill Book
+  (1967)
+

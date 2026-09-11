@@ -1,0 +1,53 @@
+                                                                                              5
+
+(15)
+                                        J={q,M,P}
+
+where q is the electric charge. And the action of the group on its momentum space thus gives:
+(16)
+                                            q’ = ν q
+
+(17)
+                                          P’ = Lo P
+(18)
+                              (            )
+                       M ' = L o M t L o + ( C tP t L o ) − ( L o P tC )
+
+Starting from the movement of a material point supposed equivalent to a matter particle of
+positive mass and energy, the action of an element ( ν = - 1 ) from the group will reverse the
+extra dimension of Kaluza and its associated charge, and this movement will become that of
+an antimatter particle. Since this action does not concern the four-vector P, it is classically
+deduced that antimatter has positive energy and mass.
+
+
+3) About negative energy antimatter
+
+If we decide that our physics, that relativistic dynamics of the material point, are dependent on
+the restricted dynamic Poincaré group or on the orthochron subgroup of the Poincaré group,
+then the Universe is only made of particles having both mass and energy of the same sign
+(positive).
+
+If we extend the group as shown above, by introducing the additional dimension ζ and by
+doubling the number of components (which goes from two to four) we obtain a Universe
+populated by matter and antimatter.
+
+If, in the group above, the Lorentz group restricted to its orthochron components is replaced
+by the complete Lorentz group, we obtain a group of eight connected components with six
+kinds of particles:
+
+   -   Matter particles of positive energy and mass.
+   -   Antimatter particles of positive energy and mass.
+   -   Photons of positive energy (the photon is its own antiparticle)
+
+   -   Matter particles of negative energy and mass.
+   -   Antimatter particles of negative energy and mass.
+   -   Photons of negative energy (the photon is its own antiparticle)
+
+By combining in the following way (admittedly arbitrary) the transformations reversing
+space, time and charge, we can write:
+(19)
+                                      ⎡λ ν 0 λν φ ⎤
+                                      ⎢ 0 λL
+                                      ⎢       C ⎥⎥
+                                      ⎢⎣ 0 0  1 ⎥⎦
+

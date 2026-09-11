@@ -1,0 +1,31 @@
+                                                                                   1
+
+
+
+Appendix: The program of the CITV 2007 Meeting.
+
+1 Pascal Adjamagbo « Symplectic geometry with positive characteristic »
+
+2 Kossi Atchonouglo « Special, symmetric, tridiagonal matrix. Calculation of the
+eigenvalues and eigenvectors»
+
+3 Dominique Chevallier « Holonomy group for dynamical systems »
+
+4 Dan Dimitriu « Rigid bodies dynamics »
+
+5 Boris Kolev « Introduction to Ricci flow »
+
+6 Boris Kolev « Structure equations for Killing tensors »
+
+7 Jean-Pierre Petit « Negative mass and energy. Complete Poincaré group »
+
+8 Jean-Pierre Petit « MHD : The Z-machine »
+
+9 Jean-Pierre Petit « The trouble with astrophysics »
+
+10 Michel Petitot « Equivalence problems and groupoids »
+
+11 Géry de Saxcé « Path integral »
+
+12 Gijs Tuynman « To cut and to glue »
+

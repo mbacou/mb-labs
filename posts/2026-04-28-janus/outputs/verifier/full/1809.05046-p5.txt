@@ -1,0 +1,36 @@
+These developments suggest that both energies and masses are positive.
+These signs are thus related to an anti-unitary PT.
+   We argue that they can be understood in a different way.
+   Indeed, Eq. (6) is coherent with T being unitary if we allow the energy
+to be negative while Eq. (7) is still true under a unitary PT in which case
+Eq. (8) has to be replaced by
+                     ~x → −~x , p~ → −~p , E → −E , i → i               (9)
+The fact that the sign of the energy changes has consequences on masses.
+This can be seen, for example, through the Einstein relation E = m.
+    Thus we have two options. The usual one, dealing with an anti-unitary
+PT symmetry and ensuring the energies and masses to stay positive together,
+and the one we propose, that is a unitary PT symmetry (P and T are both
+unitary operators) which allows energies and masses to simultaneously be
+negative.
+    Note that this second path is in perfect agreement with what we know
+about the Lorentz group. Indeed, being defined as the group of matrices Λ
+satisfying
+                    ΛT g Λ = g, g = diag(1, −1, −1, −1)
+where ΛT is the transpose of Λ,the entire Lorentz group is composed of four
+components [16]
+   • L↑+
+   • L↑− = P L↑+
+   • L↓− = T L↑+
+   • L↓+ = P T L↑+
+where the subscript ± denotes the signs of the determinant of Λ while the
+superscript refers to the signs of the first element of this matrix.
+As is well known, there are transformations that maps one component into
+another. These transformations are nothing but the parity and time-reversal
+operators realized here through
+              P = diag(1, −1, −1, −1) , T = diag(−1, 1, 1, 1)         (10)
+
+Let us take a while here to notice that both P and T being realized through
+such matrices are linear and unitary.
+
+                                      5
+

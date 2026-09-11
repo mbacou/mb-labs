@@ -1,0 +1,51 @@
+added in quadrature to the total budget. The main contributors to the energy resolution budget are listed in
+Table 5.
+
+  Contribution                  Allocation               Comment
+  ∆E at instrument level        2.5 eV                   up to 7 keV
+  Detector array                2.1 eV                   Including non-linearity and non-optimal set points. Al-
+                                                         lows 1.4 eV for all other terms
+  Instantaneous gain cali-      0.3 eV                   To be achieved over 4000 s, and taking into account
+  bration accuracy                                       MXS limitations
+  Active crosstalk              0.20 eV                  Taken separately in lieu of a detailed budget for indi-
+                                                         vidual units
+  Focal Plane Assembly          0.58 eV                  The SQ1 receives a 0.45 eV contribution
+  Digital Readout Electron-     0.57 eV                  Incl. some extra margin for DACs. In particular the
+  ics                                                    SQ1 feedback gets 0.46 eV. Arrival phase variation re-
+                                                         ceives 0.2 eV.
+  Detector Cooling System       0.59 eV                  Incl. harness and aperture cylinder. Conducted suscep-
+                                                         tibility receives 0.22 eV
+  Warm Front-End Elec-          0.46 eV                  LNA white and 1/f noise receives 0.36 eV
+  tronics
+  Unspecified margin            0.71 eV
+      Table 5. Main contributors to the energy resolution budget, leading to a 2.5 eV resolution at system level.
+
+    As shown in Figure 21, TDM multiplexed, multi-channel readout has been already shown to meet the energy
+resolution requirement for X-IFU, using lab electronics.31, 41
+
+4.3 Energy scale knowledge
+The energy scale is the function that relates the output of the on-board Event Processor (in digital units) to
+actual calibrated keV units. The X-IFU requirement on its knowledge is to achieve a 1σ error of < 0.4 eV in the
+range 0.2 − 7 keV, over a 4 ks (TBC) timescale. This requirement derives from the need to measure accurately
+(down to 20 km/s accuracy) bulk motions of hot plasma in galaxy clusters, being deemed sufficient to measure
+the thermal broadening in typical clusters so to reveal any significant non-thermal pressure associated with gas
+motions in addition to bulk velocities.70
+    Owing to the high sensitivity of the microcalorimeters, the energy scale function is sensitive to the different
+instrumental conditions. The real detector energy scale will thus drift over time and the use of a single ground-
+calibrated energy scale function would inevitably result in large systematic errors in the energy measurement.
+The present strategy is to accurately map during ground calibration the gain scale behaviour as a function of
+the main drift sources (temperature, magnetic field, optical load, etc...) and later interpolate the current gain
+scale using different real-time observables. For this, we will primarily use on-board modulated X-ray sources (see
+§2.9) providing X-ray photons at known characteristic energies, but also dedicated pixel readings and subsystem
+housekeeping data.71, 72
+   We identify four main contributors to the energy scale:
+
+   • the accuracy of the ground calibration of this function, limited by the statistics of the calibration data (0.1
+     eV 1σ),
+   • the instantaneous precision of the gain drift measurement that will be limited by the number of useful
+     MXS counts available on the correction timescale (4 ks),
+   • the systematic non-linearities introduced by the imperfect settling of the readout signal at the end of a
+     TDM row36 (expected to be < 0.05 eV with the X-IFU readout bandwidths),
+   • the finite accuracy of the gain drift correction algorithms and housekeeping data which introduce systematic
+     correction errors.
+

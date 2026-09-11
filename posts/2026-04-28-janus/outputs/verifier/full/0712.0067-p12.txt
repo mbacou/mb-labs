@@ -1,0 +1,45 @@
+                                                                                          1
+
+Taking into account mass conservation, we get :
+(52)
+
+                                                           R +3
+                                      R + 2 R + '' + 1 −        = 0
+                                                           R −3
+(53)
+                                                           R −3
+                                       R −2 R − '' + 1 −        = 0
+                                                           R +3
+
+a system with the trivial solution:
+(54)
+                                             R+=R-=at
+
+which is unstable :
+
+                      If R + > R -        then    R + ’’ > 0 and      R - ’’ < 0
+
+and vice-versa.
+
+We thus obtain an acceleration effect on the expansion for the positive mass and energy
+population, and a reverse phenomenon for the negative mass and energy population:
+
+
+
+
+                                        Scale factors evolution
+
+We must remember that what we actually measure is a redshift related to the derivative of the
+scale factor R. The important thing is to take account of the observations. Measurements of
+the recession speed for the most remote supernovae have revealed a re-acceleration of the
+expansion that is commonly charged to a mysterious dark energy. The model presented here
+is an alternative interpretation for its nature.
+
+
+Conclusion
+
+The present work, based on a bimetric description of the Universe going with a bigravity
+dynamics, accounts for the re-acceleration of the part of the Universe accessible to optical
+observations, a phenomenon charged until now to a mysterious repulsive dark energy whose
+true nature remains unknown. Our model fully accounts for this phenomenon, through a new
+

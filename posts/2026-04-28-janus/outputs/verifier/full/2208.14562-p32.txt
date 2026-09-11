@@ -1,0 +1,38 @@
+  Issue date
+
+
+
+
+               Engineering Model (EM) test campaign                     Proto Flight Model (PFM) test campaign
+
+
+
+
+Figure 24. Top panel) The main instrument/mission development phases. Mid panel) The main instrument test campaigns.
+Cryostat XIII refers to the on-going DCS development. Bottom panels) On the left the engineering model test campaign
+and on the right the proto-flight model test campaign.
+
+
+    At the time of the SRR preparation, the assumption for the launch date of Athena was the end of 2035 and
+the adoption of the mission in June 2023. The development schedule of X-IFU, including the early verification
+phase, as iterated with ESA is presented in Figure 24. Although this schedule is now obsolete, it is worth noting
+that the X-IFU engineering model delivery to industry was planned for September 2027, while the delivery of
+the flight model was planned by August 2030 (meaning about 3 years were needed to move from one model
+to the next). The models would have then been integrated in the cryostat at the Prime premises and coupled
+tests performed, including calibration activities. Note that these coupled activities at the Prime facilities are
+costly and will be part of the items to discuss as part of the upcoming design to cost exercise. The relatively
+long leap time separating the X-IFU model delivery dates and the launch date will also have to be looked at for
+optimizations.
+
+                                                      6. CALIBRATION
+X-IFU being a sensitive high resolution spectrometer, special care is required for its calibration both on the
+ground and in-flight.83, 84 The X-IFU calibration strategy combines measurements and analysis:
+
+   • At component level (detector array, filters, readout electronics, ...),
+   • At sub-system level (Focal Plane Assembly, detection chain, . . . ),
+   • At instrument level (integrated in the GSE cryostat, on the Science Instrument Module, during Thermal
+     Vacuum/Thermal Balance of the SIM and/or the spacecraft which should be the last opportunity to have
+     a cold instrument before launch),
+   • In-flight on internal sources or specific X-IFU configuration (ie on MXS, with filter wheel in closed position,
+     specific acquisition mode during the calibration performance verification phase,...),
+

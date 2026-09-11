@@ -1,0 +1,45 @@
+    The CAS, alongside the FW, is mechanically supported by the Filter Wheel support Structure (FWSS, plate),
+to be accommodated in the SIM at the entrance of the instrument (see Figure 18). The MXS photon flashes will
+be synchronized with the instrument time reference, thereby allowing their identification in the science telemetry.
+The flashes will typically last 1 second and be generated every 67 seconds.
+   As stated above, the MXS are controlled by the FW electronics.
+
+2.10 The 2K Core Controller
+The 2K Core Controller (2KCC) is a unit which groups all the items controlling the 2K Core in a single box. Its
+main function is to perform the internal thermal control of the 2K Core, and in particular of the T0 (50 mK)
+stage of the FPA. The 2KCC merges the Hybrid Cooler Controller electronics (HybCCE) and the FPA Auxiliary
+Board (FAB).
+   The HybCCE is in charge of controlling the hybrid cooler. Its functions are:
+
+   • To provide electrical power to the ADR magnetic coil and the associated 3 He sorption stage,
+   • To perform temperature and voltage acquisitions of the different items in the cooler,
+   • To manage the temperature regulation of the cooler, based on the cooler temperatures and ADR current
+     control.
+
+The FAB is in charge of the:
+
+   • Housekeeping of the FPA (readout of FPA thermal sensors),
+   • Powering the FPA heaters,
+   • Control the FPA B-coil used to optimize the magnetic field at the detector interface.
+
+    Additionally, the 2KCC is in charge of the housekeeping (thermal sensors readout and heaters activation)
+for the 2K Core frame (2KC HK) (2K plate, 2K EMC covers, 2K and 4K thermal links, etc.). The 2KCC also
+includes a DC/DC converter (also called LVPS or CV) for the supply of secondary power to the other parts of
+the unit (FAB, HybCCE & 2KC HK).
+
+2.11 Cold harnesses
+The signals generated within the cryostat must be propagated to the warm electronics. This is achieved via
+cold harnesses, which are divided in 5 bundles: 1) 3 harnesses for the FPA Detector signals, 2) 1 harness for
+the cryo-AC signals and including the 2K core housekeeping (HK) and control signals, and 3) 1 harness for the
+Hybrid Cooler ADR Coil current lead. Those harnesses are a critical part of any cryogenic system, as they must
+fulfill several requirements: 1) low thermal loads, implying the use of ultra thin, low thermal conductance wires
+(stainless steel or phosphor bronze, as thin as 100µm), 2) a careful optimization between joule dissipation and
+conductive losses, 3) a limited crosstalk between wires, and 4) a large number of wires to be accommodated via
+connectors on the cold side, where room is highly constrained.
+     There are two technologies to be considered for X-IFU: Twisted Shielded Pairs (TSPs) versus looms. The
+current understanding is that TSP wires are better for performance, but more delicate for manufacturing and
+implementation, and more demanding or constraining in terms of interfaces (rejected heat loads, mass, volume,
+stiffness, bending radius). Looms are easier to implement and less constraining, but may have a worse perfor-
+mance. Because it is believed that manufacturing and thermal issues can be overcome, TSPs are currently the
+preferred option. The wiring of the cold harnesses for X-IFU is presented in Figure 19.
+

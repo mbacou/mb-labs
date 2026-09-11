@@ -1,0 +1,45 @@
+  Counts/s/cm2/keV
+
+
+
+
+                                Energy (keV)                                           Energy (keV)
+
+Figure 23. Total background level (GCR protons, α particles and electrons) of 4.6 ± 0.07 × 10−3 counts cm−2 s−1 keV−1 ,
+(no margin included), at a resolution of 1 keV on the left and 10 eV on the right. These 100 ks simulations were performed
+on the Kapton/Au passive shielding configuration, with the 0.25 mm clearance from the detector surface. Note that the
+gold fluorescence peak at 9.7 keV is clearly visible.
+
+
+on worst case assumptions for the L1 environment (solar minimum), such that much lower background periods
+can be expected along the mission lifetime.
+
+4.6 Targets of Opportunity (ToO)
+Concerning ToO, X-IFU has to fulfill two scientific requirements stated as :
+
+         • X-IFU shall be able to deliver 50 high-resolution X-ray spectra of GRB afterglows with at least 1 million
+           counts over its nominal mission lifetime.
+         • X-IFU shall be able to perform observations of a ToO in four hours wrt. ToO alert with at least 50 ks
+           (TBC) available exposure for 40% (TBC) of the events (assuming a 50% Field-of-Regard, FoR)
+
+The X-IFU, with its cooling cycle, plays a key role in the ToO response capability, as a successful observation is
+only possible if sufficient cold time is available at the appropriate time. Of course, in the end, the corresponding
+performance depends on the full Athena system. The main instrument contributors are: 1) The cold time (a
+significant fraction of “successful” ToO are observed without recycling the instrument), 2) The duty cycle (ratio
+between the cold time and the sum of the cold time and regeneration time), and 3) The duration of a detector
+set-up, including possible calibrations required to get the right performance at the beginning of the observation.
+   To optimize the instrument fast response, different recycling schemes have been investigated via extensive
+Monte Carlo simulations, accounting for a full modeling of the Athena system and its mock observing plan.79
+The best strategy (so called “partial heat-up”) uses the capability of the sub-Kelvin cooler to anticipate the early
+phase of the recycling (heat-up) and wait for a variable time (standby), before finishing the recycling and cooling
+down. The reference tuning of the cooler is a regeneration time of 8h50, a cold time = 28h30, corresponding to
+a duty cycle = 76.3 % (note that a conservative 30 minutes of cold time is reserved prior to any observation to
+properly set up the instrument).
+    A sensitivity analysis of the ToO requirement with respect to the hybrid cooler performance parameters (cold
+and regeneration times) was also performed. This showed that the requirement expressed as 4 h delay / 50 ksec
+of observing time for 80% of accessible ToO (FOR = 50%) is never met for all cases of tuning. Instead a 8 h
+delay / 50 ksec is achievable for the “reference tuning” of the cooler. For the requirement expressed in terms
+of number of photons collected and number of successful ToO over the mission lifetime, this objective is always
+met with significant margins for all tuning of the X-IFU cooler. For the reference tuning, X-IFU could record up
+to ∼ 25 one million count GRB afterglow spectra per year, indicating a factor of 2 margin in performance. The
+

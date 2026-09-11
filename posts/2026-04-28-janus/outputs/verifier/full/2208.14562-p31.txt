@@ -1,0 +1,50 @@
+Athena effective observing efficiency was further shown not to depend at first order on the cold time of X-IFU.
+On the other hand, to optimize the Athena scheduling performance, the X-IFU duty cycle should be larger than
+the fraction of time allocated to X-IFU.
+
+                 5. TECHNOLOGY DEMONSTRATION AND SCHEDULE
+A demonstration plan of critical technologies and design has been elaborated in view of the mission adoption
+and later the instrument Preliminary Design Review. This plan includes demonstration activities at different
+levels, from key technological technologies to the coupling of several subsystem demonstrators.
+   At subsystem level, the items considered in the plan are :
+
+   • the FPA and associated technologies, e.g. the TES array, the Kevlar suspensions, the SQUIDs, internal
+     harnesses. . .
+   • the hybrid cooler, e.g. the ADR superconducting coil. . .
+   • the cryo-AC, e.g. the cryo-AC TES chip and CFEE. . .
+   • the thermal filters, e.g. their resistance to vibration loads. . .
+   • the aperture cylinder, e.g. EMC tightness, contamination protection. . .
+   • the readout electronics, e.g. for the DRE: the RAS and DEMUX modules, the DC/DC converter, and for
+     the WFEE: the ASIC holding the low-noise amplifier. . .
+   • the cold harnesses, e.g. technology trade-off between looms and shielded twisted pairs. . .
+   • the optical filters of the filter wheel
+
+Not all sub-systems are involved in the plan, as some have already reached or exceeded the required level of
+technology readiness. Those activities are mostly funded by the national funding agencies, with support from
+ESA in some cases.
+   At system level, there are two main activities foreseen:
+
+   • The first one involves the first demonstration of a 2K Core 1) to validate the integration of the FPA DM
+     with the subKelvin cooler (EM model from Safari) and 2K core structure, 2) to assess the sensitivity of the
+     2K core performances against external perturbations (microvibrations, thermal stability, magnetic field),
+     3) to characterize the recycling phase and stabilization time needed after recycling phase, and finally 4)
+     to determine the best way to thermally regulate the 50mK stage (=T0 stage) of FPA DM. This activity
+     is funded in part by ESA in the context of the Core Technology Program ”Detector Cooling System”, and
+     is supported by JAXA through the key procurement of a 2K Joule Thomson cooler.80, 81 The activity will
+     rely on a demonstration model for the FPA, holding an array of 80 pixels readout by a frequency domain
+     multiplexing lab electronics (note that TDM readout was selected as the X-IFU baseline after the design
+     activities of the FPA DM had started).
+   • The second one involves the demonstration of a multiplexed readout chain featuring design solutions for
+     X-IFU (e.g. balanced differential readout, impedance matching, filtering at 2K, etc...), which were put
+     in place to mitigate two risks: EMI/EMC compatibility and the impact of parasitic couplings on the
+     dynamic behaviour of the TDM signals. The intention is to validate early on these design choices, as
+     well as the associated interfaces between the different elements of the chain, in particular well in advance
+     of the EM test campaign. This activity constitutes the so-called early verification phase. It will rely
+     on the development and coupled testing of demonstration models of the X-IFU electronics (WFEE +
+     DRE), as well as breadboards to study the electrical interface between the FPA, WFEE and cold harness.
+     The demonstration electronics will eventually be coupled to a dedicated cryogenic test platform, housed
+     in a commercial two-stage ADR cryostat, hosting a focal plane array placed at 50 mK with a kilopixel
+     TES array and associated cold readout electronics82 (see Figure 26 left). As discussed above, the choice to
+     implement TDM readout for X-IFU was based mainly on the maturity level of this solution. Demonstration
+     in laboratory set-up have shown performances compliant, if not exceeding X-IFU requirements.31, 41
+

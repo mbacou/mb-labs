@@ -1,0 +1,47 @@
+                                                                                                   3
+
+The calculation provides the four-dimensional equations ([1], (41.61) p.405 and (41.62) p.406)
+
+(11)
+
+
+
+
+(12)
+
+
+
+Writing the zero divergence condition J.M. Souriau gets the Maxwell equations ([1], p.407). Then
+he simplifies these equations, assuming the radius of the “tube-Universe” ξ to be constant.
+
+The last term of the second member of equation (11) becomes zero.
+(13)
+
+
+
+
+2) Extension of the bigravity model to a five-dimensional geometry.
+
+The equation (13) rules a Universe containing electrically charged particles. It is possible to build
+a first order solution, assuming the densities of electrical charge and electromagnetic energy are
+zero everywhere, which gives the simplified equation:
+(14)
+
+
+
+
+We add the hypothesis of a nil cosmological constant Λ .
+
+(15)
+                        R μ ν − R gμ ν = ∑ Tμ ν     with μ and ν ∈{1,2,3,4 }
+
+which is the projection of the five-dimensional equation:
+
+(16)
+                        R j k − R g j k = ∑ Tj k   with j and k ∈{1,2,3,4,5 }
+
+If the Universe is homogeneous and isotropic, the Robertson-Walker metric is a solution, with an
+extra term:
+
+(17)
+

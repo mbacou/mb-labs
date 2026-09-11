@@ -1,0 +1,42 @@
+for all states |ψ > and |φ > of the Hilbert space H. It is also a linear operator
+
+              U(a|ψ > +b|φ >) = a U|ψ > +b U|φ > , a, b ∈ C                  (2)
+
+An operator A is anti-unitary if it obeys
+
+                            < Aψ|Aφ >=< ψ|φ >∗                               (3)
+
+where the symbol ∗ denotes the complex conjugation.
+Furthermore, it fills a similar relation to Eq. (2) but where the second mem-
+ber has been conjugated, meaning that A is anti-linear.
+   Usually, one can see any anti-unitary operator as the product of a unitary
+one and the complex conjugation (i.e. i → −i).
+   Such operators are crucial in quantum mechanics due to the fact that
+E.P. Wigner [15] showed that a symmetry operator S of a Hamiltonian is
+necessarily a unitary one or an anti-unitary one.
+   In what concerns the discrete symmetries, it is usually understood that
+the parity operator P such that
+
+                          ~x → −~x , p~ → −~p , t → t                        (4)
+
+is a unitary one while the time-reversal operator T implying
+
+                                ~x → ~x , t → −t                             (5)
+
+is anti-unitary (in which case, p~ → −~p)
+    The reasons for such a belief are the following ones. First, if we want
+the energies to stay positive, we have to add a complex conjugation to the
+reversal of time because of the quantization
+                                           ∂
+                                   E↔i                                       (6)
+                                           ∂t
+Second, this is a way to remain the fundamental relation of quantum me-
+chanics
+                              [xj , pk ] = iδjk                     (7)
+invariant under the transformation PT as its action can be summarized by
+
+                     ~x → −~x , p~ → p~ , E → E , i → −i                     (8)
+
+
+                                       4
+

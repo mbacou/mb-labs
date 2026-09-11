@@ -1,0 +1,45 @@
+Besides the bi-spinors, we notice that the link matter-antimatter is related
+to the following transformation of the exponential
+
+                               ei(~p.~x−Et) → e−i(~p.~x−Et)                        (23)
+
+which can be performed in three different ways.
+First, the complex conjugation : this is the path followed by Dirac [22]. Its
+anti-unitary charge conjugation operator is just the complex conjugation in
+the Majorana representation but writes
+
+                                      C = iγ 2 C                                   (24)
+
+in representation (14).
+It is easy to verify that
+
+                     C ψ1+ (x) = χ+          +         +
+                                  2 (x) , C ψ2 (x) = −χ1 (x)                       (25)
+
+The anti-unitary charge conjugation operator thus transforms positive energy
+and mass fermions into positive energy and mass anti-fermions. The mix
+between ψ1 − χ2 , ψ2 − χ1 in Eqs (25) is related to the fact that the charge
+conjugation operator is such that
+                                                 ~ → −L
+                            ~x → ~x , p~ → −~p ⇒ L    ~                            (26)
+
+Consequently, the sign of the spin vector has also to change in order to stay
+coherent. This implies that C acts on spin up (resp. down) ψ-states to give
+spin up (resp. spin down) χ-states. Let us insist on the fact that these
+developments concern the first quantization field only. In quantum field
+theory, the charge conjugation operator is somewhat different and appears,
+in particular, to be unitary.
+Second, the transformation (22) : it is what Feynman (and Stueckelberg)
+proposed. This is associated to an anti-unitary PT transformation in the
+quantum field theory context. However, when we limit ourselves to the first
+quantization as we do here, such a transformation cannot relate ψ-states to
+χ-states. Indeed, the anti-unitary reversal-time transformation would be the
+one ensuring a relation similar to (16)
+
+ TAU (iγ 0 ∂t + iγ j ∂j − m)TAU
+                             −1
+                                TAU ψ(x) = (iγ 0 ∂t − i(γ j )∗ ∂j − m)ψ ′ (x′ ) = 0 (27)
+
+
+                                           10
+

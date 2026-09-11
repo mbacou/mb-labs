@@ -1,0 +1,75 @@
+4                                                         Jean-Pierre Petit, Gilles dAgostini
+
+
+In the Newtonian approximation, the system (4) admits, for ρ(+) + ρ(−) = 0
+a couple of Lorentzian solutions η (+) and η (−) :
+
+                                     1 0 0 0
+                                                         
+
+                        (+)   (−)   0 −1 0 0 
+                                    0 0 −1 0  ≡ ηµν
+                       ηµν = ηµν =                                                      (6)
+                                              
+
+                                     0 0 0 −1
+
+Let us consider two time-independent small perturbations with finite extents, and
+write the metrics and the mass densities as :
+
+                 (+)           (+)                 (−)           (−)
+                gµν  = ηµν + εγµν                 gµν  = ηµν + εγµν                      (7)
+
+
+                        (+)                                   (−)
+               ρ(+) = ρ(0) + εδρ(+)               ρ(−) = ρ(0) + εδρ(−)                   (8)
+
+      (+)      (−)
+with ρ(0) + ρ(0) = 0. The mass densities are not supposed individually small.
+
+We will now consider only the firt order perturbation terms.
+
+Let us introduce the Laue scalars :
+                         µ                                           µ
+            T (+) ≡ T (+) µ ≃ ρ(+) c2             T (−) ≡ T (−) µ ≃ ρ(−) c2              (9)
+
+in the system (4) which becomes :
+                                       1                    
+                 (+)       (+)     (−)
+                Rµν  ≃ +χ Tµν   + Tµν    − ηµν χ T (+) + T (−)
+                                          2
+                                        1                   
+                Rµν ≃ −χ Tµν + Tµν + ηµν χ T (+) + T (−)
+                 (−)        (+)     (−)
+                                                                                        (10)
+                                           2
+
+
+and then :
+
+                         (+)    χε  (+)        
+                        Rµν  =+     δρ   + δρ(−) c2 δµν
+                                2
+                                χε  (+)        
+                         (−)
+                        Rµν  =−     δρ   + δρ(−) c2 δµν                                 (11)
+                                2
+
+
+
+Using the classical method and notations of [16], the Ricci tensors are developed
+into series:
+
+                                                 (+)          (+)
+                                   1
+                                                    
+                       (+) ∼                            α
+                      Rµν  =         Ln(−g (+) )      −
+                                   2             |µ|ν   µν      |α
+                                              (−)             (−)
+                                   1
+                                                     
+                       (−) ∼                             α
+                      Rµν  =         Ln(−g (−) )      −                                 (12)
+                                   2             |µ|ν   µ ν     |α
+

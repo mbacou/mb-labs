@@ -1,0 +1,67 @@
+                                                       Numerical simulation of universal morphogenesis of fluid interface deformations
+                                                                                driven by radiation pressure
+                                                                                Hugo Chesneau,1 Hamza Chraibi,1 Nicolas Bertin,1 Julien Petit,1
+                                                                             Jean-Pierre Delville,1 Etienne Brasselet,1, ∗ and Régis Wunenburger 1, 2, †
+                                                                                1
+                                                                                 Univ. Bordeaux, CNRS, LOMA, UMR 5798, F-33400 Talence, France
+                                                                      2
+                                                                          Sorbonne Université, CNRS, Institut Jean Le Rond d’Alembert, F-75005 Paris, France
+                                                                    We report on numerical simulation of fluid interface deformations induced either by acoustic or
+
+
+
+
+arXiv:2206.00300v3 [physics.flu-dyn] 17 Nov 2022
+                                                                 optical radiation pressure. This is done by solving simultaneously the scalar wave propagation
+                                                                 equation and the two-phase flow equations using the boundary element method. Using dimensional
+                                                                 analysis, we show that interface deformation morphogenesis is universal, i.e. depends on the same
+                                                                 dimensionless parameters in acoustics and electromagnetics. We numerically investigate a few se-
+                                                                 lected phenomena—in particular the shape of large deformations, the slenderness transition and its
+                                                                 hysteresis— and compare with existing and novel experimental observations. Qualitative agreement
+                                                                 between the numerical simulations and experiments is found when the mutual interaction between
+                                                                 wave propagation and wave-induced deformations is taken into account. Our results demonstrate
+                                                                 the leading role of the radiation pressure in morphogenesis of fluid interface deformations and the
+                                                                 importance of the propagation-deformation interplay .
+
+
+                                                                     I.     INTRODUCTION                             it, hence the radiation pressure exerted on it. From
+                                                                                                                     now on, we refer to such a feedback mechanism as the
+                                                      In 1939, Hertz and Mende showed that fluid inter-              propagation-deformation interplay (PDI), which is the
+                                                   faces were deformed by intense ultrasonic beams [1]. In           subject of this work.
+                                                   1973, Ashkin and Dziedzic [2] demonstrated the same                  In the regime of ‘small’ deformations (i.e., whose height
+                                                   phenomenon using focused optical beams. Using ex-                 is smaller than the beam diameter), the disturbances
+                                                   tremely soft fluid interfaces, Casner and Delville [3] ob-        of the beam by the curved interface are noticeable only
+                                                   served ‘large’ interface deformations (i.e., whose height         far downstream of the interface [24]. Consequently, the
+                                                   is comparable to or larger than the beam diameter) us-            shape of a static interface can be quantitatively described
+                                                   ing optical beams. Since then, various kinds of interface         by solving the balance between Laplace pressure, buoy-
+                                                   deformations have been observed using either acoustic or          ancy and the radiation pressure exerted by the incident,
+                                                   optical beams: bell-shaped deformations [3, 4], stepped           non perturbed, wave [3, 4, 25]. By contrast, the descrip-
+                                                   deformations [4–6], needle-like deformations [4, 7, 8], liq-      tion of large interface deformations requires to account
+                                                   uid bridges [9–12] and cones [13]. Since Maxwell’s and            for the perturbation of the wave by the interface, i.e.
+                                                   Lord Rayleigh’s pioneering works [14, 15], it is well es-         PDI. The particular case of axisymmetric liquid columns
+                                                   tablished that the main mechanical effect of an acous-            can be treated analytically owing to the translational in-
+                                                   tic (AC) or electromagnetic (EM) wave on a liquid-                variance of the interface shape along its axis of revolu-
+                                                   liquid interface is a normal stress called radiation pres-        tion [10–12]. The predicted equilibrium radius of the col-
+                                                   sure [16, 17]. Since then, several other mechanical ef-           umn, which has been calculated within an exact scalar
+                                                   fects of acoustic and electromagnetic waves on liquids            description of the electromagnetic field in both liquids,
+                                                   and liquid interfaces have been identified, in particular         is in agreement with experimental observations [10, 11].
+                                                   in presence of wave absorption or wave scattering by liq-         The case of stepped deformations is far more challenging
+                                                   uids. Namely, one can mention situations where interface          from an analytical point of view. Still, the beam propa-
+                                                   deformations result from either bulk flows triggered by           gation through axisymmetric dioptres having the shape
+                                                   bulk forces [8, 18–21] or thermocapillary flows originating       of the experimentally observed steady interfaces can be
+                                                   from interfacial tension gradients triggered by tempera-          numerically computed. The radiation pressure distribu-
+                                                   ture gradients [22, 23]. Regarding non-scattering and             tion deduced from the computed wave field was found to
+                                                   non-absorbing liquids, the previously cited studies have          satisfactorily balance the Laplace pressure and buoyancy
+                                                   led to conclude that the observed morphological diversity         assessed from the measured shape of the interface [6]. Al-
+                                                   of fluid interface deformations originates basically from         though this is an a posteriori verification of the validity
+                                                   the mutual interplay between the shape of the interface           of the PDI hypothesis, a self-consistent determination of
+                                                   deformed by the radiation pressure and the wave prop-             the shapes of the irradiated interfaces resulting from the
+                                                   agation. Indeed, a distorted interface acts as a dioptre          PDI is still missing. Furthermore, the mechanism under-
+                                                   that modifies the structure of the wave passing through           lying the instability leading to the formation of needle-
+                                                                                                                     like deformations, which is likely to involve PDI, is still
+                                                                                                                     unknown [7, 25].
+                                                   ∗ etienne.brasselet@u-bordeaux.fr
+                                                                                                                      In this work we aim to determine the interface defor-
+                                                   † regis.wunenburger@sorbonne-universite.fr
+                                                                                                                     mations by solving the PDI problem for any deformation
+

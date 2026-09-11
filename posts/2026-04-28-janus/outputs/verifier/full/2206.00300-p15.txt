@@ -1,0 +1,30 @@
+                                                                                                                       15
+
+[11] E. Brasselet, R. Wunenburger, and J.-P. Delville, Physi-    [24] A. Casner and J.-P. Delville, Opt. Lett., OL 26, 1418
+     cal Review Letters 101, 014501 (2008).                           (2001).
+[12] N. Bertin, R. Wunenburger, E. Brasselet, and J.-P.          [25] R. Wunenburger, A. Casner, and J.-P. Delville, Physical
+     Delville, Physical Review Letters 105, 164501 (2010).            Review E 73, 036314 (2006).
+[13] A. Girot, J. Petit, R. Saiseau, T. Guérin, H. Chraibi,     [26] L. Brillouin, Les tenseurs en mécanique et en élasticité
+     U. Delabre, and J.-P. Delville, Physical review letters          (in French) (Masson, 1938).
+     122, 174501 (2019).                                         [27] P. L. Marston, The Journal of the Acoustical Society of
+[14] J. Maxwell, A Treatise on Electricity and Magnetism,             America 67, 15 (1980).
+     no. vol. 2 in A Treatise on Electricity and Magnetism       [28] H. Chraibi, D. Lasseux, E. Arquis, R. Wunenburger, and
+     (Clarendon Press, 1873).                                         J.-P. Delville, Eur. J. Mech. B 27, 419 (2008).
+[15] J. Strutt and B. Rayleigh, Philosophical Magazine 3, 338    [29] B. Issenmann, R. Wunenburger, S. Manneville, and J.-P.
+     (1902).                                                          Delville, Phys. Rev. Lett. 97, 074502 (2006).
+[16] I. Brevik, Physics Reports 52, 133 (1979).                  [30] O. A. Ladyzhenskaya, ”The mathematical theory of vis-
+[17] F. Borgnis, Reviews of Modern Physics 25, 653 (1953).            cous incompressible flow” (Gordon and Breach, 1987).
+[18] R. D. Schroll, R. Wunenburger, A. Casner, W. W. Zhang,      [31] C. Pozrikidis, Cambridge University Press (1992).
+     and J.-P. Delville, Physical Review Letters 98, 133601      [32] H. Chraibi, D. Lasseux, R. Wunenburger, E. Arquis, and
+     (2007).                                                          J.-P. Delville, Eur. Phys. J. E 32, 43 (2010).
+[19] H. Chraibi, J. Petit, R. Wunenburger, and J.-P. Delville,   [33] URL http://www.boundary-element-method.com/helmholtz/.
+     Physical Review Letters 111, 044502 (2013).                 [34] S. Kirkup, ”The Boundary Element Method in Acoustics”
+[20] H. Chesneau, J. Petit, H. Chraı̈bi, and J.-P. Delville,          (Integrated Sound Software, 2007).
+     Physical Review Fluids 5, 024002 (2020).                    [35] K. Okamoto, Fundamentals of optical waveguides (Else-
+[21] M. K. Tan, J. R. Friend, and L. Y. Yeo, Phys. Rev. Lett.         vier, 2021).
+     103, 024501 (2009).                                         [36] E. Buckingham, Physical review 4, 345 (1914).
+[22] H. Chraibi and J.-P. Delville, Physics of Fluids 24,        [37] P. A. Winsor, Transactions of the Faraday Society 44,
+     032102 (2012).                                                   376 (1948).
+[23] D. Rivière, B. Selva, H. Chraibi, U. Delabre, and J.-P.    [38] H. Chesneau, J. Petit, H. Chraı̈bi, and J.-P. Delville,
+     Delville, Physical Review E 93, 023112 (1 (2016).                Phys. Rev. Fluids 5, 024002 (2020).
+

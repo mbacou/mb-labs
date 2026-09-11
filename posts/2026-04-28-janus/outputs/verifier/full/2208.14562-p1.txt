@@ -1,0 +1,49 @@
+                                               The Athena X-ray Integral Field Unit: a consolidated design
+                                                  for the system requirement review of the preliminary
+                                                                    definition phase
+                                                 Didier Barret1 , Vincent Albouys2 , Jan-Willem den Herder3 , Luigi Piro4 , Massimo Cappi5 ,
+                                               Juhani Huovelin6 , Richard Kelley7 , J. Miguel Mas-Hesse8 , Stéphane Paltani9 , Gregor Rauw10 ,
+                                                Agata Rozanska11 , Jiri Svoboda12 , Joern Wilms13 , Noriko Yamasaki14 , Marc Audard9 , Simon
+                                                Bandler7 , Marco Barbera15 , Xavier Barcons16 , Enrico Bozzo9 , Maria Teresa Ceballos16 , Ivan
+
+
+
+
+arXiv:2208.14562v2 [astro-ph.IM] 28 Nov 2022
+                                                   Charles17 , Elisa Costantini3 , Thomas Dauser13 , Anne Decourchelle18 , Lionel Duband17 ,
+                                                    Jean-Marc Duval17 , Fabrizio Fiore19 , Flavio Gatti20 , Andrea Goldwurm21 , Roland den
+                                                   Hartog3 , Brian Jackson22 , Peter Jonker3 , Caroline Kilbourne7 , Seppo Korpela6 , Claudio
+                                               Macculi4 , Mariano Mendez23 , Kazuhisa Mitsuda24 , Silvano Molendi25 , François Pajot1 , Etienne
+                                                  Pointecouteau1 , Frederick Porter7 , Gabriel W. Pratt18 , Damien Prêle21 , Laurent Ravera1 ,
+                                                 Kosuke Sato26 , Joop Schaye27 , Keisuke Shinozaki28 , Konrad Skup29 , Jan Soucek30 , Tanguy
+                                               Thibert31 , Jacco Vink32 , Natalie Webb1 , Laurence Chaoul2 , Desi Raulin2 , Aurora Simionescu3 ,
+                                                  Jose Miguel Torrejon33 , Fabio Acero18 , Graziella Branduardi-Raymont34 , Stefano Ettori5 ,
+                                                  Alexis Finoguenov6 , Nicolas Grosso35 , Jelle Kaastra3 , Pasquale Mazzotta36 , Jon Miller37 ,
+                                                 Giovanni Miniutti8 , Fabrizio Nicastro38 , Salvatore Sciortino39 , Hiroya Yamaguchi14 , Sophie
+                                                 Beaumont1 , Edoardo Cucchetti2 , Matteo D’Andrea4 , Megan Eckart40 , Philippe Ferrando18 ,
+                                               Elias Kammoun1 , Simone Lotti4 , Jean-Michel Mesnager2 , Lorenzo Natalucci4 , Philippe Peille2 ,
+                                                   Jelle de Plaa3 , Florence Ardellier21 , Andrea Argan41 , Elise Bellouard2 , Jérôme Carron2 ,
+                                                  Elisabetta Cavazzuti42 , Mauro Fiorini25 , Pourya Khosropanah3 , Sylvain Martin17 , James
+                                                  Perry7 , Frederic Pinsard18 , Alice Pradines2 , Manuela Rigano20 , Peter Roelfsema22 , Denis
+                                                  Schwander2 , Guido Torrioli43 , Joel Ullom44 , Isabel Vera45 , Eduardo Medinaceli Villegas5 ,
+                                                Monika Zuchniak11 , Frank Brachet2 , Ugo Lo Cicero39 , William Doriese44 , Malcom Durkin44 ,
+                                                 Valentina Fioretti5 , Hervé Geoffray2 , Lionel Jacques31 , Christian Kirsch13 , Stephen Smith7 ,
+                                                     Joseph Adams46 , Emilie Gloaguen2 , Ruud Hoogeveen3 , Paul van der Hulst3 , Mikko
+                                                  Kiviranta47 , Jan van der Kuur22 , Aurélien Ledot2 , Bert-Joost van Leeuwen3 , Dennis van
+                                                   Loon3 , Bertrand Lyautey2 , Yann Parot1 , Kazuhiro Sakai46 , Henk van Weers3 , Shariefa
+                                                Abdoelkariem3 , Thomas Adam17 , Christophe Adami35 , Corinne Aicardi2 , Hiroki Akamatsu3 ,
+                                               Pablo Eleazar Merino Alonso33 , Roberta Amato1 , Jérôme André2 , Matteo Angelinelli5 , Manuel
+                                                 Anon-Cancela45 , Shebli Anvar18 , Ricardo Atienza45 , Anthony Attard17 , Natalia Auricchio5 ,
+                                                   Ana Balado45 , Florian Bancel17 , Lorenzo Ferrari Barusso20 , Arturo Bascuñan45 , Vivian
+                                                   Bernard2 , Alicia Berrocal45 , Sylvie Blin21 , Donata Bonino48 , François Bonnet2 , Patrick
+                                                  Bonny17 , Peter Boorman12 , Charles Boreux18 , Ayoub Bounab18 , Martin Boutelier2 , Kevin
+                                                    Boyce7 , Daniele Brienza4 , Marcel Bruijn3 , Andrea Bulgarelli5 , Simona Calarco2 , Paul
+                                                     Callanan49 , Alberto Prada Campello45 , Thierry Camus1 , Florent Canourgues2 , Vito
+                                                 Capobianco48 , Nicolas Cardiel50 , Florent Castellani1 , Oscar Cheatom7 , James Chervenak7 ,
+                                                Fabio Chiarello43 , Laurent Clerc17 , Nicolas Clerc1 , Beatriz Cobo16 , Odile Coeur-Joly1 , Alexis
+                                                 Coleiro21 , Stéphane Colonges21 , Leonardo Corcione48 , Mickael Coriat1 , Alexandre Coynel17 ,
+                                                 Francesco Cuttaia5 , Antonino D’Ai51 , Fabio D’anca39 , Mauro Dadina5 , Christophe Daniel2 ,
+                                                Lea Dauner13 , Natalie DeNigris7 , Johannes Dercksen3 , Michael DiPirro7 , Eric Doumayrou18 ,
+                                                 Luc Dubbeldam3 , Michel Dupieux1 , Simon Dupourqué1 , Jean Louis Durand17 , Dominique
+                                                    Eckert9 , Valvanera Eiriz45 , Eric Ercolani17 , Christophe Etcheverry2 , Fred Finkbeiner7 ,
+

@@ -1,0 +1,76 @@
+     • In-flight on sky sources,
+     • X-ray emission fundamental physics modeling and ground measurements, at high energy resolution. These
+       include simulations or revised and updated standards needed for such a high-resolution spectroscopy mis-
+       sion.
+
+    Figure 25 gives the strategy that will be followed for the calibration of the various instrument parameters.
+As can be seen, most of the final ground calibration references are expected to be acquired at SIM level, i.e. in
+the flight cryostat of the X-IFU instrument in
+                                             XCaTorder to have a representative
+                                                                   Ref :
+                                                                                       environment including all the major
+                                                                              XIFU-PL-XCAT-180626-IRAP
+drivers of the performance. This calibration campaign is expected          to last
+                                                                   Version : 2.1
+                                                                                    ∼  4 months, a duration that is mainly
+driven by the need to acquire accurateX-IFU
+                                        reference     energy scalesDate
+                                            Calibration Plan        under:    2022-05-17 operating
+                                                                              different               conditions (see §4.3).
+                                                                                               Page : 13/57
+
+
+      Parameter \ When           Component          Subsystem          X-IFU in       X-IFU in SIM           TV/TB           X-IFU         Sky sources       Modeling and
+                                   level              level             TGSE                              SIM and/or        in flight                         lab physics
+                                                                       cryostat                            Spacecraft
+                                                                                                         before launch
+                                  at partners        at SRON           at CNES           at prime           at prime
+   Energy scale                        !                 !                  !                !             spot check       gain-drift      Capella,         X-ray databases
+                                 detector array    FPA + readout          (test           (final            gain-drift      correction      AB DOR
+                                                       GSE            gain curves)     gain curves)        corr. using     using MXS         (TBC)
+                                                                                                            MXS/55Fe         and HK
+   Energy resolution                   !                !                   !                ✓            compatibility      !"#final)      AB DOR           X-ray databases
+                                 detector array    FPA + readout      for reference       ground          w spacecraft    Rescale with       (TBC)
+                                                       GSE                               reference         spot check     BL/MXS/55Fe
+                                                                                                         with MXS/55Fe
+   Extended LSF                        !                              spot check         spot check
+                                 detector array
+   Instrument efficiency                                                spot check      spot check                                       cross-calibration
+                                                                      (source TBC)     (source TBC)                                      including mirror,
+               detectors           !"#final)                                                                                                see [AD2]
+
+               filters/window      !"#final)
+                                                                                             !
+               contamination                                                          reference before                                           ✓
+                                                                                           launch                                             (final)
+
+   Background                     irradiation     irradiation check   irradiation        irradiation                            !"                             GEANT4
+                                   modeling         FPA including        check             check                             (final)                            physics
+                                                       CryoAC                                                                                                  validation
+   Timing                                                 !                !                 !                                             check TBC
+                                                   Readout, MXS         (check)           (final)
+                                                                                          Table 2 : Calibration strategy outline
+Figure 25. Calibration strategy outline.A check                                               symbol Xindicates when calibration activities are performed. Text entries
+indicate     the       component              or    sub-systems                 that       are    considered or other specific characterization or action. The red color
+    This document is for use within the X-IFU consortium. Its distribution outside the consortium must request authorization by the X-IFU PI.
+highlights the last opportunity to calibrate the parameter. Italics refers to AIT/AIV activities.
+
+    One critical step of our verification and calibration is also the thermal GSE (also C2CC, for 2K Core Cal-
+ibration, see Figure 26, right). The C2CC is an assembly of structural, mechanical, electrical, and software
+elements designed to verify the functions and performances of the 2K core, under its operational conditions.
+This means that this cryostat should provide the adequate environment at the 2K core interfaces in terms of
+micro-vibrations, EMC (especially magnetic field), thermal (temperature level and thermal stability). An aper-
+ture cylinder including thermal filters GSE will be also integrated into the C2CC. A functional cold harness
+representative of the flight ones in terms of material, length, and thermal interfaces will be connected to the 2K
+core. This stage constitutes the last level of integration prior to the instrument delivery, allowing to verify the
+instrument performances, including their sensitivity to environment conditions and perform pre-calibrations in
+advance of the more extensive SIM level campaign.
+     For the instrument calibration, a diversity of calibration sources will be used, as described below:
+
+     • First, we plan to use rotating target sources (RTSs) similar to the ones used for Hitomi/SXS.85 RTSs
+       provide a rotating scan of the X-ray lines at a given frequency, which enables them to observe all line
+       complexes in a single cold time and provides a way to track long term drifts in the ground calibration
+       measurements.
+     • These rotating sources will be complemented by the use of a dedicated Electron Beam Ion Trap (EBIT,86 ).
+       Many of the known L/K fluorescent lines at < 1 keVs are indeed broad, and their detailed shape and
+

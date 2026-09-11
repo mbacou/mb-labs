@@ -1,0 +1,193 @@
+---
+title: 2023 Notebook
+date: 2026-09-05
+author: Melanie Bacou
+---
+
+<a id="org23ea642"></a>
+
+# Russia
+
+
+<a id="orge2d13e2"></a>
+
+## State Grant Application
+
+I am an economist and statistician specialised in the agri-food sector with over 20 years of professional experience focused primarily on African markets. I have worked with both public and private sector agencies on public policy and strategic planning  
+
+I have witnessed intensification of commercial relations in the food and agri-business sectors between the Russian Federation and its African partners.  
+
+I have trained to read and write Russian but would like to spend a minimum of 3 months in the country to improve my grammar and practice speaking, as well as to learn about business etiquette and practices.  
+
+My objective is to be able to understand business contracts and proposals in Russian, and hold casual business discussions.  
+
+Long-time admirer of Russian literature, and a fan of traditional Slavic and Cossack music.  
+
+
+<a id="orgb61009a"></a>
+
+# Events
+
+
+<a id="org6bb7226"></a>
+
+## <span class="timestamp-wrapper"><time class="timestamp" datetime="2023-02-27">&lt;2023-02-27 Mon&gt;</time></span> ECMWF Module 2 - Linear Regressions and Decision Trees
+
+I would like to know whether there would be an issue with multi-collinearity by introducing the non-linear terms X<sup>2</sup>, X<sup>2</sup>, X<sup>3</sup> in the linear regression model and so on&hellip;that already depends on X.  
+16:13  
+How to choose the non-linear terms?i.e. how to decide which non-linear term to the data at hand? What works best?  
+16:13  
+Can you post the link / title of the paper?  
+16:16  
+could you please list some references, or explain how we visualize ML-predicted output (raster file) using python script?  
+16:16  
+Are decision trees good candidates for observing monotonous data? It seemed to me that trees could not predict an unlearned domain. (And it should happen when you want to forecast)  
+16:18  
+Hello,  i can unfortunately not attend. Hope the webinar will be recorded and posted later? Best regards, Chris  
+16:19  
+Hello,  i can unfortunately not attend. Hope the webinar will be recorded and posted later? Best regards, Chris  
+Yes, the recording of the webinar will be made available on Moodle later today.  
+16:19  
+Hello,  i can unfortunately not attend. Hope the webinar will be recorded and posted later? Best regards, Chris  
+Yes, it is available on the platform  
+16:23  
+is the hierarchical ascendant classification an example of decision trees?  
+16:23  
+which method need more intensive outlier analysis? LR, RF, NN?  
+16:23  
+Que? How large is large enough for a dataset to be considered for random forest or neural network?  
+16:30  
+Considering we use a Decision Tree Regression to determine the error associated with our forecast to correct it. Does the factor that Decision Trees do not extrapolate means this method won't be allow us correcting at all a forecast during an extreme event (i.e. cyclone)? How can this be overcome?  
+16:30  
+How to calculate averages of trees? Every tree looks different and contains different variables&hellip; Please provide more details on the aggregation.  
+16:36  
+In hyperparameter tuning with sklearn, Is there any alternative to Random and Grid Search that can find the hyperparameters based on the best previous results? Something like Bayesian search, for example?  
+16:41  
+What is the difference between validation data and test data? I have a problem of distinguishing them. Thank you.  
+16:41  
+lazyprogrammer.me/mlcompendium/intro.html  
+16:42  
+How does those methods handle very unbalanced data?  
+16:43  
+lazyprogrammer.me/mlcompendium/intro.html  
+Thanks for that!  
+16:43  
+How to deal with input data that have different magnitudes? Should we use "correcting" factors?  
+16:43  
+I think  the validation set is used to test the model at various stages, and the test data is like the final exam.  That way the final test has not been used at all to build the model.  
+16:43  
+CONTEXT: please provide a literature reference to the CH4 curve article - thx  
+16:43  
+Slide 29, train/test split, for the eval set I thought you had to split your training data back into train/validation data and keep the test data outside of your fitting procedure. Could you explain why you can use the test set here?  
+16:45  
+If we have environment data with outliers representing extreme of a given phenomena. How we should handle in ML models these kind of outliers thar are not random errors, please?  
+16:46  
+Great presentation, thank you!  
+16:46  
+Lots of questions were asked during the talk&hellip; Do people need to post them again?  
+16:47  
+Super clear explanations, thank you!  
+16:48  
+Lots of questions were asked during the talk&hellip; Do people need to post them again?  
+No. Matthew has access to them all. No worries!  
+16:47  
+Thank you Matthew for the nice presentation!  
+16:48  
+Since regression decision trees are used with continuous data, how can one use classification trees on weather prediction?  
+16:47  
+Can a predictor be a constant? E.g. weather station exposure  
+16:48  
+Maybe a stupid question: when you use high level packages you risk not to understand exactly what they are doing. So, sometime, at the beginning, maybe it is more useful to write your own code to implement simple methods like decision trees or random forest&hellip;  
+16:49  
+How wise is to apply different ML techniques one over other? saynLR then RF..  
+16:50  
+Does having very few features limit the performance of random forests, since the algorithm attempts to make trees with feature subsets?  
+16:51  
+Would you use random forest decision trees as a tool for time series change events detection - “a rough split of the time series”  
+16:51  
+For 30 years timeseries, can we perform random forest, XGboost and NN?  
+16:51  
+How can you choose the split method for a tree? Is there a general rule?  
+16:51  
+Where to invest more? trying different ML algorithms or combination of predictors for better result?  
+16:52  
+About short-term weather forecast, how to choose between ARIMA, Prophet and XGBoost?  
+16:52  
+Maybe I misunderstood the concept, but what's the difference between a forest and adding an extra depth layer to a tree?  
+16:53  
+lazyprogrammer.me/mlcompendium/intro.html  
+Many thanks for sharing.  
+16:53  
+How do you combine predictions of multiple trees if we are doing classification rather than regression?  
+16:56  
+Following up the question about averaging the output of different trees, I understood we take the most resulted output (e.g. output was same for 3 out 5 trees), instead of calculating average or both are valid?  
+16:58  
+How to deal with input data that have different magnitudes? Should we use "correcting" factors?  
+16:58  
+Should we scale data beforehand?  
+
+
+<a id="org8e065cf"></a>
+
+## <span class="timestamp-wrapper"><time class="timestamp" datetime="2023-09-18">&lt;2023-09-18 Mon&gt;</time></span> SDSL Workshop (Münster)
+
+Discords notes  
+<https://discord.com/channels/878051191374876683/1153245130308993025>  
+Meeting notes  
+<https://docs.google.com/document/d/1kCeLfNgrxo16TnzbEseuqrCqCjFIQYSjPYUAsigCT14/edit?usp=sharing>  
+
+
+### Data cubes visualizations
+
+See notes.  
+
+
+<a id="orgaf3e351"></a>
+
+## <span class="timestamp-wrapper"><time class="timestamp" datetime="2024-09-26">&lt;2024-09-26 Thu&gt;</time></span> ESA EO for Africa Symposium
+
+Best rainfall prediction product for Africa:  
+
+-   **H87**: H SAF SM2RAIN-based satellite precipitation product
+-   **ERA5**: 5th reanalysis of ECMWF precipitation product
+-   **IMERG<sub>LR</sub>**: GPM state-of-the-art satellite precipitation product
+
+Source: <https://eo-4-africa-symposium-2024.esa.int/watch-live/>  
+(see PDF poster in <file:///home/mbacou/Pictures/Data>, fascinating way to visualise tri-variate datasets)  
+
+This product will be available very soon, not yet available operationally at the moment. If you want the data in advance, please email Paolo (paolo.filippucci@cnr.it) and me (luca.brocca@cnr.it).  
+Luca Brocca interesting! What do you suggest, if one would like to use this product in predictive mapping, **one would weigh the contribution of the three according to this index**? Yes exactly.  
+
+
+<a id="org89a94eb"></a>
+
+# Reading Notes
+
+
+<a id="org6917f54"></a>
+
+## R Programming Language
+
+Hadley says this quote comes from John Chambers. The whole quote is even better. To understand computations in R, two slogans are helpful:  
+
+-   Everything that exists is an object
+-   Everything that happens is a function call
+-   **John Chambers**, quoted in Section 6.3 of <span class="underline">Advanced R</span> by **Hadley Wickham**
+
+R has what **Doug Crockford** has called the <span class="underline">"best idea ever put in a programming language"</span> which is closures. By that alone, it is a functional language. In R this is the function named function that creates closures.  
+
+```{r}
+foo <- function() TRUE
+typeof(foo)
+# [1] "closure"
+```
+
+In R functions (also called closures) are first class objects, primarily because in R everything is a first class object. You can do anything with a function or an expression that you can do with a vector or list or dataframe. Functions and all other objects can be arguments to other functions or values of functions and can be components of lists.  
+
+OTOH if you think the essence of functional programming is a static type system or monads or purity (no side effects), then you might not think that R is functional.  
+
+So the best answer is that R has the key feature (closures) to write code that is a functional as you want it to be. But it also has lots of other features (assignment, for loops, if statements) that can make it look as much like FORTRAN as you want, which is the opposite of functional.  
+
+Functions in R are **pure** by default. Your have to jump through hoops to mutate nonlocal state, although R makes this easy via NSE and functions such as \`assign\` and \`<<-\`, of course.  
+
+It doesn't lack **monads**, you can write monads in R just fine. The point is, however, that because R allows for mutation, monads are not necessary. Monads are needed in Haskell because there are no side effects.  

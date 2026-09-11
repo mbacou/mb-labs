@@ -1,0 +1,52 @@
+     and Schindler, S., “The Hot and Energetic Universe: The astrophysics of galaxy groups and clusters,” arXiv
+     e-prints , arXiv:1306.2322 (June 2013).
+[71] Porter, F. S., Chiao, M. P., Eckart, M. E., Fujimoto, R., Ishisaki, Y., Kelley, R. L., Kilbourne, C. A.,
+     Leutenegger, M. A., McCammon, D., Mitsuda, K., Sawada, M., Szymkowiak, A. E., Takei, Y., Tashiro,
+     M., Tsujimoto, M., Watanabe, T., and Yamada, S., “Temporal Gain Correction for X-ray Calorimeter
+     Spectrometers,” Journal of Low Temperature Physics 184, 498–504 (July 2016).
+[72] Cucchetti, E., Eckart, M. E., Peille, P., de Vries, C., Pajot, F., Pointecouteau, E., Leutenegger, M., Kil-
+     bourne, C. A., and Porter, F. S., “Energy scale calibration and drift correction of the X-IFU,” in [Space
+     Telescopes and Instrumentation 2018: Ultraviolet to Gamma Ray], den Herder, J.-W. A., Nikzad, S., and
+     Nakazawa, K., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series 10699,
+     106994M (July 2018).
+[73] Kirsch, C., Lorenz, M., Peille, P., Dauser, T., Ceballos, M. T., Cobo, B., Merino-Alonso, P. E., Cucchetti,
+     E., Smith, S. Â. J., Gottardi, L., Hartog, R. H. d., Miniussi, A., Durkin, M., Prêle, D., and Wilms, J., “The
+     Athena X-IFU Instrument Simulator xifusim,” Journal of Low Temperature Physics (Mar. 2022).
+[74] Brand, T., Wilms, J., Dauser, T., Peille, P., Cobo, B., Ceballos, M., den Hartog, R. A., Kaastra, J. S.,
+     O’Brien, P., Barcons, X., Piro, L., den Herder, J. W. A., and Barret, D., “Observing the WHIM with
+     Athena,” in [Space Telescopes and Instrumentation 2016: Ultraviolet to Gamma Ray], den Herder, J.-
+     W. A., Takahashi, T., and Bautz, M., eds., Society of Photo-Optical Instrumentation Engineers (SPIE)
+     Conference Series 9905, 99055F (July 2016).
+[75] Walsh, S., McBreen, S., Martin-Carrillo, A., Dauser, T., Wijers, N., Wilms, J., Schaye, J., and Barret, D.,
+     “Detection capabilities of the Athena X-IFU for the warm-hot intergalactic medium using gamma-ray burst
+     X-ray afterglows,” Astronomy and Astrophysics 642, A24 (Oct. 2020).
+[76] Kammoun, E. S., Barret, D., Peille, P., Willingale, R., Dauser, T., Wilms, J., Guainazzi, M., and Miller,
+     J. M., “The defocused observations of bright sources with Athena/X-IFU,” arXiv e-prints , arXiv:2205.01126
+     (May 2022).
+[77] Peille, P., Dauser, T., Kirsch, C., den Hartog, R., Cucchetti, E., Wilms, J., Barret, D., den Herder, J. W.,
+     and Piro, L., “The Performance of the Athena X-ray Integral Field Unit at Very High Count Rates,” Journal
+     of Low Temperature Physics 193, 940–948 (Dec. 2018).
+[78] Dauser, T., Falkner, S., Lorenz, M., Kirsch, C., Peille, P., Cucchetti, E., Schmid, C., Brand, T., Oertel,
+     M., Smith, R., and Wilms, J., “SIXTE: a generic X-ray instrument simulation toolkit,” Astronomy and
+     Astrophysics 630, A66 (Sept. 2019).
+[79] Jaubert, J. and Debout, V., “in 11th International Workshop on Planning and Scheduling for Space Con-
+     ference Proceedings,” in [IWPSS], Berkeley, ed. (July 2019).
+[80] Prouvé, T., Duval, J. M., Charles, I., Yamasaki, N. Y., Mitsuda, K., Nakagawa, T., Shinozaki, K., Tokoku,
+     C., Yamamoto, R., Minami, Y., Le Du, M., Andre, J., Daniel, C., and Linder, M., “ATHENA X-IFU 300
+     K-50 mK cryochain test results,” Cryogenics 112, 103144 (Dec. 2020).
+[81] Shinozaki, K., Tokoku, C., Yamamoto, R., Minami, Y., Yamasaki, N. Y., Mitsuda, K., Nakagawa, T., Duval,
+     J. M., Prouvé, T., Charles, I., Du, M. L., Andre, J., Daniel, C., Linder, M., Tsunematsu, S., Kanao, K.,
+     Otsuka, K., and Narasaki, K., “Cooling performance of Joule Thomson coolers in 300 K -50 mK cryochain
+     demonstration for ATHENA X-IFU,” in [Materials Science and Engineering Conference Series ], Materials
+     Science and Engineering Conference Series 502, 012069 (Apr. 2019).
+[82] Betancourt-Martinez, G., Pajot, F., Beaumont, S., Roudil, G., Adams, J., Akamatsu, H., Bandler, S.,
+     Bertrand, B., Bruijn, M., Castellani, F., Cucchetti, E., Doriese, W., Dupieux, M., Geoffray, H., Gottardi,
+     L., Jackson, B., van der Kuur, J., Kiviranta, M., Miniussi, A., Peille, P., Ravensberg, K., Ravera, L.,
+     Reintsema, C., Sakai, K., Smith, S., Wakeham, N., van Weers, H., Wernicke, D., and Witthoeft, M., “A
+     test platform for the detection and readout chain for the Athena X-IFU,” arXiv e-prints , arXiv:2107.03412
+     (July 2021).
+[83] Cucchetti, E., Pajot, F., Pointecouteau, E., Peille, P., Betancourt-Martinez, G., Smith, S. J., Barbera,
+     M., Eckart, M. E., Bandler, S. R., Kilbourne, C. A., Cappi, M., and Barret, D., “Testing the X-IFU
+     calibration requirements: an example for quantum efficiency and energy resolution,” in [Space Telescopes
+     and Instrumentation 2018: Ultraviolet to Gamma Ray], den Herder, J.-W. A., Nikzad, S., and Nakazawa,
+

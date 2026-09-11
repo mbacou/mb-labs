@@ -1,0 +1,70 @@
+                                                                                                                           12
+
+                            !"#!$% &'(                             The optical experiment is carried out using visible
+                                                                radiation on a two-phase fluid composed a water-rich
+           !"#$%!$                       !"#$%!"                phase coexisting with an oil-rich phase of a three-phase
+'()                                                       '*)   equilibrium of a brine / dioctyl sodium sulfosuccinate
+                                                                (AOT) surfactant / n-heptane mixture [37] called a Win-
+                                                                sor phase. Such a fluid interface is characterized by (i) a
+                                                                small interfacial tension, allowing the slenderness transi-
+                                                                tion to be triggered using a focused beam emitted by a
+                                                                tabletop continuous-wave laser, and (ii) an optical trans-
+                                                                parency of both phases in contact, which ensures that
+                                                                bulk forces can be safely discarded.
+                                                                   The experiments consists in irradiating the fluid us-
+                                                                ing a Gaussian laser beam focused on the fluid interface
+                     &%$$                          &%$$
+                                                                at rest and in observing the steady deformed interface.
+                            !"#!$% &')                          The threshold power value P th at which the slenderness
+                                                                transition occurs is then determined by dichotomy with
+            !"#$%!$                        !"#$%!"              a 1 % accuracy in a wide range of values of w0 at fixed
+'+)                                                       ',)   celerity contrast c− /c+ = 0.96 with cfrom < cto . The
+                                                                         ∞
+                                                                angle θimax   is then evaluated at the inflection point of
+                                                                the steady interface deformation by image processing.
+                                                                                    ∞
+                                                                The variation of θimax  versus V is displayed in Fig. 6(a).
+                                                                                 ∞
+                                                                We find that θi,max is nearly independent of V and that
+                                                                  ∞
+                                                                hθi,max i = 55.3◦ (with 3.3◦ standard deviation) is smaller
+                                                                than θTIR = 73.8◦ by more than 18◦ . This demon-
+
+
+
+                  &%$$                             &%$$
+
+FIG. 4. Experimentally observed morphologies at steady-
+state under acoustic irradiation at 2.25 MHz frequency. (a)
+20 cSt Silicone oil / FC72 oil interface corresponding to
+c− /c+ = 0.51 and V = 4.5. (b) 5 cSt Silicone oil / 65 wt%
+glycerol-water mixture interface corresponding to c− /c+ =
+0.54 and V = 4.5. (c) Water / kerosene interface correspond-
+ing to c− /c+ = 0.88 and V = 2.6. (d) Water / kerosene
+interface corresponding to c− /c+ = 0.88 and V = 2.6.
+
+
+
+which corresponds to Π0 = Πth   0 , and slightly above the
+threshold with Π0 = Πth  0 (1 + ǫ), where ǫ is a small pa-
+rameter. In both cases the celerity contrast is small and
+almost identical, namely, c− /c+ = 0.94 in acoustics and
+c− /c+ = 0.96 in optics, hence providing a playground
+for a generic comparison between experiments and nu-
+merics, which calls for two remarks. First, in acoustics,       FIG. 5. Experimental observation of the slenderness tran-
+the thermoviscous dissipation prevents us from achieving        sition in acoustics at 2.25 MHz frequency and in optics at
+                                                                532 nm wavelength. (a, b) Acoustic irradiation of a mineral
+an experiment virtually free of bulk radiation forces (i.e.
+                                                                oil / 32 wt% glycerol-water mixture interface corresponding
+free of acoustic streaming) and, in our experiments, the        to c− /c+ = 0.94 and V = 1.9. (c,d) Optical irradiation of the
+waveguiding parameter V can only be tuned by chang-             interface between water-rich and oil-rich phases of a three-
+ing the fluids. Second, in optics it is possible to deal with   phase equilibrium (called as a Winsor phase) of a brine /
+fluids virtually free from bulk forces [13] and in our ex-      AOT surfactant / n-heptane mixture [13, 37] corresponding
+periments V can be readily tuned by changing the beam           to c− /c+ = 0.96 and V = 34. Pictures of the interface de-
+waist w0 . Therefore, because we aim to test the impact of      formations are shown at the onset of the transition threshold
+PDI only on the slenderness transition, hereafter we fo-        at Π0 = Πth                                          th
+                                                                            0 (a,c) and slightly above it at Π0 = Π0 (1 + ǫ)
+cus on the electromagnetic case and we present an exper-        with ǫ = 0.02 in panel (b) and ǫ = 0.01 in panel (d). In
+imental parametric study that is compared to numerical          all panels the incident wave propagates from top to bottom
+simulations.                                                    (cfrom < cto ).
+

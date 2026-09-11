@@ -1,0 +1,69 @@
+Can negative mass be considered in General Relativity ?                                  7
+
+
+4 Comparison with observational data
+
+If positive and negative masses repel each other, anywhere positive mass domi-
+nates, negative mass is almost absent, so that in the vicinity of the solar system
+ρ(−) ≃ 0. Our coupled field equations become :
+                                    1               (+)
+                               (+)
+                              Rµν  − R(+) gµν
+                                           (+)
+                                               ≃ +χTµν                                 (24)
+                                    2
+                             (−)        1 (−) (−)    (−)
+                            Rµν  −        R gµν ≃ −χTµν                                (25)
+                                        2
+
+(24) identifying to Einsteins equation with a null cosmological constant, so that
+the bimetric model fits the classical local tests of GR.
+
+
+5 About Schwarzschild’s solutions
+
+Theoreticians also noticed long ago that the parameter m of Schwarzschild’s so-
+lution was nothing but an integration constant, that may be chosen positive or
+negative. We will call the following metric external Schwarschild solution.
+
+                         2m                   dr 2
+                                                                           
+           ds2 =    1−            c2 dt2 −       2m − r
+                                                       2
+                                                            dθ2 + sin2 (θ)dφ2          (26)
+                          r                  1− r
+
+Similarly, in the internal Schwarzschild solution :
+           s                            
+                                                  dr 2
+                              r
+          3       r2   1             r2                      2
+                                                                                  
+     2
+   ds =        1− 0 −            1 −  c2 dt2 −     r 2 − r     dθ2 + sin2 (θ)dφ2
+          2        A   2             A           1− A
+                                                                              3c2
+                                                      f or r ≤ r0 with A =             (27)
+                                                                             8πGρ
+
+ρ can be chosen positive or negative, with the coupling condition :
+
+                            4πGr03
+                       m=          ρ         ( positive or negative )                  (28)
+                              c2
+
+In GR, the internal Schwarzschild solution, describing the geometry inside a sphere
+filled with constant matter density, was considered as some kind of mathematical
+complement to the external solution, since no particle would follow a geodesic
+inside. In the bimetric approach (26) and (27) provide the geodesics around clumps
+of negative mass, corresponding to the equations :
+
+                               (+)      1 (+) (+)    (−)
+                              Rµν  −      R gµν ≃ −χTµν                                (29)
+                                        2
+                             (−)        1 (−) (+)    (−)
+                            Rµν  −        R gµν ≃ +χTµν                                (30)
+                                        2
+
+Equation (29) corresponds to an induced geometry in the positive sector, due to
+

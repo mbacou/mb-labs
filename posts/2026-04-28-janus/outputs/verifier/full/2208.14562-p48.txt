@@ -1,0 +1,27 @@
+     K., eds., Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series 10699, 106994O
+     (July 2018).
+[84] Barret, D. and Cappi, M., “Inferring black hole spins and probing accretion/ejection flows in AGNs with
+     the Athena X-ray Integral Field Unit,” Astronomy and Astrophysics 628, A5 (Aug. 2019).
+[85] Eckart, M. E., Adams, J. S., Boyce, K. R., Brown, G. V., Chiao, M. P., Fujimoto, R., Haas, D. A.,
+     den Herder, J.-W. A., Hoshino, A., Ishisaki, Y., Kilbourne, C. A., Kitamoto, S., Leutenegger, M. A.,
+     McCammon, D., Mitsuda, K., Porter, F. S., Sato, K., Sawada, M., Seta, H., Sneiderman, G. A., Szymkowiak,
+     A. E., Takei, Y., Tashiro, M. S., Tsujimoto, M., de Vries, C. P., Watanabe, T., Yamada, S., and Yamasaki,
+     N. Y., “Ground calibration of the Astro-H (Hitomi) soft x-ray spectrometer,” Journal of Astronomical
+     Telescopes, Instruments, and Systems 4(2), 1 – 22 (2018).
+[86] Levine, M. A., Marrs, R. E., Henderson, J. R., Knapp, D. A., and Schneider, M. B., “The Electron Beam
+     Ion Trap: A New Instrument for Atomic Physics Measurements,” Physica Scripta Volume T 22, 157–163
+     (Jan. 1988).
+[87] Leutenegger, M. A., Eckart, M. E., Moseley, S. J., Rohrbach, S. O., Black, J. K., Chiao, M. P., Kelley,
+     R. L., Kilbourne, C. A., and Porter, F. S., “Simple, compact, high-resolution monochromatic x-ray source
+     for characterization of x-ray calorimeter arrays,” Review of Scientific Instruments 91, 083110 (Aug. 2020).
+[88] Martı́nez-Núñez, S., Carrera, F. J., Ceballos, M. T., Castillo, S., Barret, D., Rau, A., and Bozzo, E., “The
+     Athena Community Office,” in [XIV.0 Scientific Meeting (virtual) of the Spanish Astronomical Society], 232
+     (July 2020).
+[89] Knödlseder, J., Brau-Nogué, S., Coriat, M., Garnier, P., Hughes, A., Martin, P., and Tibaldo, L., “Estimate
+     of the carbon footprint of astronomical research infrastructures,” Nature Astronomy 6, 503–513 (Mar. 2022).
+[90] Burtscher, L., Balaguer-Núñez, L., D’Orazi, V., Barret, D., Beuchert, T., Dil, E., Janiuk, A., Mingo, B.,
+     and Poggio, E., “Astronomy organizations should lead in our battle against the climate crisis,” Nature
+     Astronomy 6, 764–764 (June 2022).
+[91] Barret, D., “Estimating, monitoring and minimizing the travel footprint associated with the development
+     of the Athena X-ray Integral Field Unit,” Experimental Astronomy 49, 183–216 (June 2020).
+

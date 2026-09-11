@@ -1,0 +1,15 @@
+# options specified here will apply to all posts in this folder
+
+date-modified: last-modified
+author:
+  - name: BACOU, Melanie
+    email: mel@mbacou.com
+    orcid: 0000-0003-1810-6818
+citation: false
+toc-depth: 2
+execute:
+  echo: true
+  message: false
+  warning: false
+  error: true
+  eval: false

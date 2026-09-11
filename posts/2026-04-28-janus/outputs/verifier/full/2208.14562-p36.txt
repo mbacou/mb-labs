@@ -1,0 +1,68 @@
+    • Production of value-added scientific data products, including catalogues, surveys, and other contributions
+      to Level-3 products.
+    • As part of the X-ISC daily and long-term instrument performance monitoring, the X-ISC will be responsible
+      for the verification, quality control, and validation of all data products, including the quick-look analysis
+      (QLA) of products suited for the health monitoring of the instruments.
+    • Provision of up-to-date instrument calibration parameters (calibration files)
+    • Assisting the SOC in supporting the user community in those cases where in-depth instrument expertise
+      beyond SOC capabilities is required.
+
+                                             8. X-IFU CONSORTIUM ORGANISATION
+The X-ray Integral Field Unit (X-IFU) and its associated X-IFU Instrument Science Center (X-ISC) will be
+provided by an international consortium of ten ESA member states, plus the United States and Japan. Two
+other European countries (Ireland and United Kingdom) are providing scientific support to X-IFU.
+
+                                                          ESA Athena Study Team
+
+                                       ATHENA STUDY             ATHENA PAYLOAD               ATHENA STUDY             ATHENA SCIENCE                Athena Working Groups & Topical
+                                         MANAGER                   MANAGER                     SCIENTIST                STUDY TEAM                              Panels
+
+
+
+
+                                                                                                                     X-IFU Consortium Board
+
+           Project Team
+                                                                                                                       Instrument Scientist
+                                                                                                                                                         X-IFU Calibration Team
+
+ National/sub-system/local Project
+                                                  X-IFU Project                       X-IFU Principal                 X-ISC Project Scientist
+ Manager Team (for the instrument                                                                                                                       X-IFU Instrument Science
+            and X-ISC)                              Manager                            Investigator
+                                                                                                                                                             Center Board
+                                                                                                                     X-IFU Co-investigators
+
+
+         Working Groups                                                                                              X-IFU Science Advisory
+                                                      Co-Principal                       Co-Principal                         Team
+                                                      Investigator                       Investigator
+                                                                                                                            Associates
+                                                                XSAT Chair (in attendance)
+
+                                                        X-IFU Consortium Management Team
+
+
+
+     X-IFU Consortium                CNES        Consortium & CNES                IRAP                  SRON   INAF-IAPS                 INAF-OAS                  ESA
+
+
+Figure 28. The X-IFU Consortium organisation, highlighting the X-IFU Consortium Management Team, and the Project
+Manager and Principal Investigator interfaces.
+
+    The X-IFU Consortium Management Team (XCMT) acts as the governing body of the X-IFU consortium.
+The XCMT consists of the X-IFU Project Manager (V. Albouys), the X-IFU Principal Investigator (D. Barret),
+and the two X-IFU Co-Principal Investigators (J.W den Herder and L. Piro), with the X-IFU Science Advisory
+Team Chair in attendance (M. Cappi). The XCMT is jointly chaired by the CNES PM and the PI, with the PI
+in charge of organizing the meetings and the day-to-day communication of the XCMT. The XCMT assists and
+supports the X-IFU PM and X-IFU PI in all X-IFU related matters (technical, programmatic, organizational,
+scientific).
+    The PI and the PM interact with various bodies within the Consortium and with the ESA study team (see
+Figure 28). This organisation was formally endorsed by ESA in December 2018 through the instrument consortia
+consolidation process. The X-IFU PI is supported by the X-IFU Science Advisory Team (XSAT), acting as a
+forum to address all scientific matters related to the development of the X-IFU. The X-IFU PI relies on an X-IFU
+Calibration Team, chaired by the X-IFU Instrument scientist, to carry out all activities related to the calibration
+of the instrument, both on-ground and in-flight. The X-IFU Instrument Science Center is the joint responsibility
+of the X-IFU PM and PI, and its development is delegated to an X-ISC system lead and an X-IFU project
+scientist. The X-IFU PM prime responsibility are the engineering activities of the X-IFU and the delivery of
+

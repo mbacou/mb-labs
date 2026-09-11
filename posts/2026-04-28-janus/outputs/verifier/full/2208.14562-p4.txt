@@ -1,0 +1,60 @@
+                                            I-00133, Roma, Italy
+37
+    University of Michigan Department of Astronomy, 1085 South University Avenue, 323 West
+                              Hall, Ann Arbor, MI 48109-1107, United States
+  38
+     INAF - Osservatorio Astronomico di Roma, Via Frascati, 33, 00040, Monte Porzio Catone,
+                                                 Rome, Italy
+   39
+      INAF/Osservatorio Astronomico di Palermo G.S.Vaiana, Piazza del Parlamento 1, 90134
+                                               Palermo, Italy
+  40
+     Lawrence Livermore National Laboratory, 7000 East Avenue, L-509, Livermore CA 94550,
+                                                United States
+                 41
+                    INAF Headquarter, Viale del Parco Mellini 84, 00136 Rome, Italy
+42
+   Agenzia Spaziale Italiana, Unita’ di Ricerca Scientifica, Via del Politecnico snc, 00133 Roma,
+                                                    Italia
+  43
+     Istituto di Fotonica et Nanotecnologie - Consiglio Nazionale Ricerche, Via Cineto Romano
+                                           42, 00156 Roma, Italia
+   44
+      National Institute of Standards and Technology, 325 Broadway, Boulder, CO 80305-3328,
+                                                United States
+             45
+                INTA, Crtra de Ajalvir km 4, 28850, Torrejon de Ardoz, Madrid, Spain
+46
+   University of Maryland Baltimore County, 1000 Hilltop Circle, Baltimore, MD 21250, United
+                                                   States
+                               47
+                                  VTT, Tietotie 3, FIN-02150 Espoo, Finland
+   48
+      INAF - Osservatorio Astrofisico di Torino, Via Osservatorio 20, 10025 Pino Torinese, TO,
+                                                    Italy
+                           49
+                              University College Cork, College Rd, Cork, Ireland
+50
+   Departamento de Fı́sica de la Tierra y Astrofı́sica, Facultad de Ciencias Fı́sicas, Universidad
+                 Complutense de Madrid, Ciudad Universitaria, 28040-Madrid, Spain
+                         51
+                            IASF-Palermo, via Ugo La Malfa 153, 90146 Palermo
+                    52
+                       Stanford University, Stanford, California 94305, United States
+    53
+       Center for Theoretical Physics, Polish Academy of Sciences, Al. Lotnikow 32/46, 02-668
+                                               Warsaw, Poland
+                54
+                   Astronika, ul. Bartycka 18, Office no. 33, 00-716 Warszawa, Poland
+ 55
+    Institut d’Astrophysique Spatiale, Bât. 120-1, Université Paris Saclay, 91405, Orsay, France
+     56
+        Università degli Studi di Palermo, Dipartimento di Fisica e Chimica, Via Archirafi, 36,
+                                            90123, Palermo, Italy
+
+
+
+
+     Further author information: (Send correspondence to Didier Barret & Philippe Peille)
+     Didier Barret: E-mail: dbarret@irap.omp.eu, Philippe Peille: E-mail Philippe.Peille@cnes.fr
+

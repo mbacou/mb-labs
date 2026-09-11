@@ -1,0 +1,49 @@
+                                                                                            1
+
+
+
+
+                    Bigravity as an interpretation
+                     of the cosmic acceleration
+                      Jean-Pierre Petit ( phd, astrophysicist, retired )
+
+                                 and Gilles d’Agostini, phd
+
+                                   jppetit1937@yahoo.fr
+
+            International Meeting on Variational Techniques (CITV) - August 2007
+
+___________________________________________________________________________
+
+Abstract:
+
+A bimetric description of the Universe is proposed, which may explain the cosmic
+acceleration deduced from optically observed high-redshift supernovae. This phenomenon is
+classically charged to a mysterious repulsive "dark energy" whose true nature remains
+unknown. It is identified in the present model with a set of particles having negative mass and
+energy. These negative mass particles are emitting negative energy photons, hence they are
+not observable using optical instruments.
+
+___________________________________________________________________________
+
+
+
+
+1 – Introduction
+
+For years, astrophysicists and cosmologists have tried to define which of the three Friedmann
+models, solutions to Einstein's equations, fit the observations. With time, a general consensus
+had been established to conclude that in Einstein's equations, the cosmological constant Λ had
+to be zero. Thus the cosmological model was supposed to rise from the Friedmann equation:
+(1)
+                                       R 2 R" + a 2 = 0
+
+where the second derivative of R(t) could only be negative. However, measurements
+performed on distant supernovae over the last decade have revealed an unexpected
+acceleration of the cosmic expansion, R’’ becoming positive for high redshifts[, deep space].
+Todays, specialists think that cosmic dynamics depends on three components:
+
+   -   Visible matter:            4%
+   -   Dark matter (attractive): 22 %
+   -   Dark energy (repulsive): 74 %
+

@@ -1,0 +1,69 @@
+                         1
+  United Kingdom 0                                                                                              Active members (298)
+             Ireland 0
+                         1                                                                                      Co-Investigators (49)
+                                     4
+             Finland     1
+                                 3
+   Czech Republic        1
+                                                 7
+             Poland          2
+                                             6
+            Belgium          2
+                                                 7
+           Germany           2
+                                                                       25
+              Spain              3
+                                             6
+         Switzerland             3
+                                                                  22
+       United States                 4
+                                         5
+              Japan
+
+
+
+
+                                                                                                                                                ©DidierBarret/X-IFU
+                                     4
+                                                                                             59
+                Italy                            7
+                                                                            36
+        Netherlands                                  8
+                                                                                                                                        116
+             France                                       12
+
+                    0                                10         20   30       40     50     60    70     80       90     100    110      120   130
+                                                                Number of X-IFU consortium members and co-investigators per country
+Figure 29. The split of active members of the X-IFU Consortium and X-IFU co-investigators per country. Ireland
+and the United Kingdom have no identified contributions to the instrument or the ground segment but contribute to
+scientific activities. None have co-investigators. Note that people identified as contractors, observers or associates, in the
+Consortium database are not included as active members of the X-IFU Consortium.
+
+
+the instrument and its X-ISC to ESA on behalf of the X-IFU Consortium. The X-IFU PM is the interface with
+ESA and the industrial primes on aspects related to the interfaces between X-IFU and the Athena satellite. The
+X-IFU PM is supported by a team of project managers providing a forum for discussing project related issues
+(e.g. planning). The X-IFU PM is also supported by CNES/Consortium Working Groups.
+    Within the current perimeter of the Consortium, the split of X-IFU co-investigators and consortium members
+is presented in Figure 29. This gives an overview of the respective efforts put in the X-IFU by each country.
+
+                                                               9. COMMUNICATION AND OUTREACH
+The X-IFU internal communication is managed through various tools, such as the Document Management
+System CapLinked, Teamwork for action management, and Formsite for online forms and surveys. The external
+communication is achieved through a dedicated web site† , which is the gate for accessing X-IFU related resources,
+e.g. response files. The web site is providing access to outreach material and links to the social media, e.g. a
+YouTube channel dedicated to X-IFU in which movies explaining X-IFU are available in several languages.
+Outreach activities are coordinated with the Athena community office.88 The Consortium database, more than
+300 entries, is managed through Python, interfacing with the web site (where the various bodies of the Consortium
+are listed).
+
+                                 10. X-IFU AND ITS ENVIRONMENTAL FOOTPRINT
+As shown above, the X-IFU is a rather complex instrument, involving very advanced technologies, large resources,
+and a large number of partners spread all across the world. X-IFU is being developed right at the time when
+it is becoming very clear that without an immediate and drastic reduction of our emissions (by at least 50%
+by 2030), across all sectors, the objective of limiting global warming to 1.5 degrees will not be reached. X-IFU
+is also developed when the need for building new large scientific infrastructures having major environmental
+   †
+       http://x-ifu.irap.omp.eu
+

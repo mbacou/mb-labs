@@ -1,0 +1,27 @@
+                                                                                              8
+
+
+
+5) Topological structure
+
+The following ideas were introduced in 1994 in reference [4]. In more recent papers we described
+the Universe as a manifold equipped with two metrics g + and g -. This description is better
+accepted by mathematicians although it becomes then impossible to get any mental representation
+of the object. How to imagine that between two given comoving points A and B we can draw two
+different geodesics and measure two different distances ?
+Anyway it is possible to consider that the manifold, coupled to the metric g + forms a first
+hypersurface, whose points can be called M+ and that the same manifold, coupled to the metric
+g - forms a second hypersurface whose points can be called M- . The (naked) manifold provides a
+point to point mapping between the two hypersurfaces.
+In addition, in the paper [4] the Universe, supposed to be compact, was assumed to be the two-
+fold cover of a projective space P4.
+As a good didactic image let us start from a closed 2d space-time, figured by a sphere. The Big
+Bang is one of its poles. The Big Crunch is the second one. The meridians form the world-lines
+system and the parallel the closed space at successive epochs. The equator of the sphere
+represents the maximum space extension.
+
+
+
+
+                                Fig.5: 2d spherical space-time
+

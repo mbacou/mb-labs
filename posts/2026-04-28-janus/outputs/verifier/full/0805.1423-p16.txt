@@ -1,0 +1,28 @@
+                                                                                                 16
+
+
+
+
+Starting from two cones joined by their summits and using a flatiron we can ensure the continuity
+of the geodesics, through the Sakharov singularity Φ.
+
+
+At this level this 2d geometrical toy model is an image of a Universe composed by two coupled
+folds with opposite arrows of time. This can be extended to a closed 4d structure. Then the
+Universe becomes the two folds cover of a projective space P4.
+P2 and P4 have the same Euler-Poincaré characteristic, whose value is unity. They can be
+mapped with a single pole. The maximum space extension (the "equator" of the hypersurface) is a
+S3 sphere. As suggested in 1994 the inversion of time in Sakharov’s model can be derived on
+topological grounds, considered as the consequence of a two-fold cover representation.
+Notice that this geometrical configuration is equivalent to a bimetric description, each “adjacent
+fold portions of Universe” being defined by its metric. According to [6] the inversion of time
+goes with the inversion of energy and mass.
+
+
+6) Back to the symmetry breaking and symmetry recovering.
+
+The space-time 2d image, corresponding to figure 4 is the following. In a distant past, early in the
+radiation-dominated era a symmetry breaking occurs. According to this image, there is some
+“origin in time” but no end in the future. The white areas represent the region where the O(2)
+symmetry holds.
+

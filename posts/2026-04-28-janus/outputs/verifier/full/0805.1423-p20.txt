@@ -1,0 +1,46 @@
+                                                                                                   20
+
+   -   We assume that matter, with positive or negative mass has a finite lifetime, even the latter
+       is very large. Then we assume that the O(3) symmetry is recovered in a distant future. As
+       a consequence the generalized gauge process restarts and rules the cosmic evolution. The
+       constants of physics vary. In particular the speed of light tends to an almost nil value.
+   -   The dynamics of the Universe corresponds to a bimetric description, going with a system
+       of two coupled field equations [3]. It contains two kinds of species, with positive or
+       negative mass or energy.
+   -   This can be derived from geometrical grounds. The inversion of the arrow of time of one
+       species comes from the geometrical structure of the Universe, considered as the two-fold
+       cover of a projective, which brings both T and P-symmetry. The inversion of the mass
+       and energy goes with the inversion of the time (T-symmetry). Electric charge can be
+       given to the relativistic mass-points, considering the Universe as a five-dimensional
+       bundle. As a first order solution, the Kaluza metric fits the five dimensional field
+       extension, as introduced by J.M. Souriau in 1964.
+
+Choosing the description based on two coupled five-dimensional geometrical structures, inspired
+by the vision of Andrei Sakharov [7]: twin universe model, we may think about the geometric
+structure of the two boundary 4d-universes, linking the two, when the velocity of the light is
+“almost infinite” or “almost nil“. Among the five dimensions, one must disappear. The five
+dimensions are:
+
+   -   Space ( x , y , z )
+   -   Time t
+   -   Fifth dimension ζ
+
+P-symmetry holds in our fold of the Universe (in our positive energy world). The polarization of
+photons is for an example a proof that such symmetry can be found in nature.
+
+ζ-symmetry holds. As shown in [1] this corresponds to charge conjugation and matter-antimatter
+duality. We find antimatter in our positive energy world, so that ζ-symmetry is evidenced in
+natural phenomena.
+
+We don’t find negative energy particles. The “second world”, with negative mass and energy
+corresponds to T-symmetry. As a conclusion, in the two metrics associated to the boundary
+universe, time disappears and the signature becomes Euclidean:
+
+
+                                              (----)
+
+
+The length, in the two boundary Universes (one corresponding to an "infinite" value of the speed
+of light and the second to a "nil" value of this velocity), is an imaginary quantity. The figure 17 is
+a didactic image showing the geometric structure of the "Big Bang" according to this model:
+

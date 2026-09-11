@@ -1,0 +1,67 @@
+                                                                                            9
+
+
+
+This leads to define the gravitational potentials regulating these movements:
+(36)
+                                                c2
+                                        Ψ+ =        ε γ + oo
+                                                 2
+(37)
+                                                c2
+                                          −
+                                        Ψ =         ε γ − oo
+                                                 2
+
+
+In the Newtonian approximation, the tensor density is reduced to a single term T oo
+(38)
+
+                                  ⎡( ρ + − ρ − )                          0   0    0⎤
+                                  ⎢                                                  ⎥
+                                         0                                0   0    0⎥
+                        T =T −T ≅ ⎢
+                            +  −
+                                  ⎢      0                                0   0    0⎥
+                                  ⎢                                                  ⎥
+                                  ⎢⎣     0                                0   0    0⎥⎦
+
+Series developments give:
+(39)
+                        ∂ 2γ +            ∂ 2γ +            ∂ 2γ +
+                                 oo                oo                oo
+
+                 −ε (                 +                 +                 ) = χ( ρ+− ρ− )
+                          ∂x 2              ∂y 2              ∂z 2
+
+(40)
+                     ∂ 2γ −             ∂ 2γ −            ∂ 2γ −
+                                 oo                oo                oo
+
+                −ε (                  +                 +                 ) = χ( ρ−− ρ+)
+                       ∂x 2               ∂y 2              ∂z 2
+
+Taking into account (36), (37) we find two coupled Poisson's equations:
+(41)
+                    ∂2Ψ +             ∂2Ψ +   ∂2Ψ +
+                                 +          +       = 4π G ( ρ + − ρ − )
+                     ∂x 2              ∂y 2
+                                               ∂z 2
+
+
+(42)
+                    ∂2Ψ −             ∂2Ψ −   ∂2Ψ −
+                                 +          +       = 4π G ( ρ − − ρ + )
+                     ∂x 2              ∂y2     ∂z 2
+
+
+Which gives us the extremely simple relation:
+(43)
+                                       Ψ- = - Ψ+
+
+Following : how positive and negative mass particles interact:
+
+   -   Positive mass particles attract each others through Newton’s law
+   -   Negative mass particles attract each others through Newton’s law
+   -   Particles having mass of opposite sign repel each others through « anti-Newton law »
+

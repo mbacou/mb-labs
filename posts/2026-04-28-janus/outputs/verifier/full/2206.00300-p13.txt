@@ -1,0 +1,44 @@
+                                                                                                                                     13
+
+
+
+
+                                         ∞
+FIG. 6. (a) Measured maximum value θi,max     of the incidence angle θi of the rays on the steady deformed interface of a Winsor
+phase irradiated by a downward laser beam with cfrom < cto at the threshold of the slenderness transition as function of the
+waveguiding parameter V at constant value of the celerity contrast c− /c+ = 0.96. Orange circles: experimental values; Black
+lozenges: computed values; θTIR : total internal reflection angle. (b) Computed time evolution of the dimensionless hump height
+for several values of Π0 at and above the threshold of slenderness transition Πth     0 = 5.54, for V = 8.4. Inset: sketch of the
+deformed interface illustrating the incidence angle θi of the rays on the deformed interface. (c,e) Deformation profiles at the
+                                                      th
+threshold (Π0 = Πth0 ) and just above (Π0 = 1.002 Π0 ) at t/τ = (0.5, 1, 2, 4, 8.7, 39) and t/τ = (5, 10, 15, 20, 25, 32), respectively.
+(d,f) Corresponding evolution of θi,max . The colored markers refer to the instants at which the interface deformation profiles
+are shown in panels (c,e).
+
+
+strates experimentally that the slenderness transition is             slightly above is shown in Figs. 6(c-f). The dimension-
+not driven by the total internal reflection phenomenon                less deformation profiles h(r)/w0 vs r/w0 are displayed in
+and does not require bulk radiation forces.                           panels (c) and (e) at several dimensionless instants. Also
+                                                                      the corresponding evolution of the interface inclination
+                                                                      angle θi,max at the inflexion point are shown in panels (d)
+                 3.   Numerical investigation                         and (f). For Π0 = Πth    0 , θi,max increases, then saturates
+                                                                                   ∞
+                                                                      at a value θi,max  significantly smaller than θTIR , while for
+   The numerical investigation of the slenderness transi-             Π0 = 1.002 Πth 0 , the increase of θi,max slows down when
+                                                                                      ∞
+tion, which is only observed with PDI and with cfrom <                approaching θi,max    , then revives up to θTIR . Finally, a
+cto , is conducted by mimicking the experiments presented             thin tip grows at the deformation end, as shown in Fig-
+in the previous section. Accordingly, we determine the                ure 6(e), leading to θi,max ≃ 90◦ , as shown in Figure 6(f).
+threshold dimensionless power value Πth   0 at which the                 Since V is varied by varying kw0 at fixed c− /c+ , in-
+slenderness transition takes place. A typical numerical               creasing V requires to increase the spatial resolution of
+experiment is illustrated in Fig. 6(b) where the evolution            the simulations. Given the associated computational
+of the on-axis height of the deformed interface is shown              cost, our investigations are restricted to the typical range
+for different values of Π0 at c− /c+ = 0.96 and V = 8.4.              2 < V < 18. The numerically computed dependence of
+                                                                       ∞
+The sudden occurrence of a diverging behavior of the                  θi,max versus V is displayed in Fig. 6(a), which quantita-
+deformation height as Π0 increases from 5.54 to 5.55 il-              tively agrees with the experimental measurements. This
+lustrates the abrupt nature of the slenderness transition             confirms that the slenderness transition does not require
+with respect to the control parameter Π0 and justifies the            bulk radiation forces, cannot be explained by the sole
+0.2 % accuracy of the determination of Πth  0 . A detailed            ray-optics approach, and is actually driven by PDI. In
+picture of the interface evolution at the threshold and               addition, Figs. 5(a) and 5(b) also support preceding con-
+

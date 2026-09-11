@@ -1,0 +1,51 @@
+    All singularities disappear, r = Rs corresponds to ρ = 0. In this point the determinant of
+the metric
+                                             (1 + Log ch ρ)2 2
+                                 det g = Rs4                th ρ,
+                                                Log ch ρ
+is no longer zero. The metric is well defined for all values of ρ. If we embed the surface in a
+3D-Euclidean space we can define the meridians, corresponding to
+
+                                                 dr2
+                                        dΣ2 =      Rs
+                                                      + dz 2                                  (12)
+                                                1− r
+
+      And we immediately get the meridians as∗
+
+                                                                    z2
+                                      r
+                                         r
+                             z = ±2Rs       − 1,       r2 = Rs +       .                      (13)
+                                         Rs                        4Rs
+
+      The surface is a space bridge, a “2D diabolo” linking two 2D-Euclidean surfaces.
+
+
+
+
+                                Fig. 2. The 2D diabolo embedded in R3 .
+
+    The problem of the signature has disappeared. From Lagrange equations we can calculate
+the geodesics in the [ρ, ϕ] coordinate system. If embedded, the surface owns a throat circle whose
+perimeter is 2πRs . We can shape the surface as a twofold F (+) and F (−) cover of a M2 manifold
+with a 1D common circular border, and create induced mapping between adjacent points M (+)
+and M (−) .
+    Figure 4 shows the projection αβγ of a geodesic ABC (see Fig. 2) tangent to the common
+boundary, which ensures the continuity of the geodesics of the fold F (+) with the ones of the fold
+F (−) (dotted lines). Radial line λµν is the image of a geodesic meridian curve LMN of Fig. 2.
+This will be important for the following.
+    Figure 5 shows how vicinities of adjacent points are linked by enantiomorphy relationship.
+    Figures 3–5 correspond to a reduction of our representation space to a 2D Euclidean rep-
+resentation space, through a non-isometric imbedding which artificially transforms the throat
+into a pleat and couples points through an adjacent and enantiomorphic relationship. “The circle
+owns no center and there is nothing inside”, because we are out of the considered 2D surface,
+the 2D diabolo.
+  ∗
+      Erratum page 11
+
+
+
+
+                                                  3
+

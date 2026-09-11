@@ -1,0 +1,61 @@
+                                                                                               1
+
+
+
+This result could also have been obtained starting from the expression:
+(44)
+                                                G m m'
+                                        F = −
+                                                  d2
+
+One advantage of such a description of the « dark energy » is that its nature becomes rather
+simple: its components are merely the same as those of normal matter, but simply with
+negative mass and energy. They are no longer « exotic » but consist of:
+
+   -   Protons and antiprotons with negative mass and energy
+   -   Neutrons and antineutrons with negative mass and energy
+   -   Electrons and anti-electrons with negative mass and energy
+   -   Photons with negative energy
+
+
+6) About the cosmic acceleration
+
+In cosmology, observations show a reacceleration of the Universe for high redshifts. Can we
+reach such a result by identifying the dark energy to this negative energy-matter? To do so a
+cosmological model will be built, based on a solution in the form of a couple of conjugated
+metrics ( g +, g - ). We take riemannian metrics of signature ( + - - - ) adding the hypothesis of
+homogeneity and isotropy. This leads us to Robertson-Walker metrics:
+(45)
+                                            1
+                                                 ( d u 2 + u 2 d θ 2 + u 2 sin 2θ d ϕ 2 )
+                          2             2
+              d s 2 = c d t 2 − R (+t )
+                                            k 2
+                                          1+ u
+                                            4
+
+Our Universe is bimetric. Points of this manifold can be located using an arbitrary frame of
+reference. In the above expression we find
+
+- a time-marker t
+- space markers u , θ , ϕ
+
+The first term designates the time coordinate, and the three others the space coordinates. Such
+quantities can be considered as simple numbers, or angles, and be written:
+
+                                           [τ ,u,θ,ϕ ]
+
+
+Let us show that theses coordinates are a common frame of reference for two sets of mass-
+points corresponding to positive and negative energies. Consider two points A and B, with
+coordinates:
+
+                            [ uA , θ A , ϕA ]   and    [ uB , θ B , ϕB ]
+                                                           B
+
+
+
+
+If these two sets of numbers remain constant through time, such points are co-moving. Since
+we are in a situation of isotropy and homogeneity, points A and B can be linked through
+

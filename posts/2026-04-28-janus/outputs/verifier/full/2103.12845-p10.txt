@@ -1,0 +1,60 @@
+    A second criticism may rely on the immediate instability of a quantum vacuum which could
+create pairs (+m, −m). But it is based on the theoretical framework of quantum gravity that,
+however, still today remains purely hypothetical. The creation and annihilation of pairs of par-
+ticles of opposite mass has not been de-scribed till today.
+    A third criticism may issue from Quantum Field Theory, which excludes straight away states
+of negative energy “because a particle could not have an energy less than that of the vacuum”
+(p. 76 of Ref. 17). We quote:
+
+      If we suppose that T is linear and unitary then we should face the disastrous conclu-
+      sion that for any state Ψ of energy E there is another state T−1 Ψ of energy −E. To
+      avoid this we are forced here to conclude that T is anti-linear and anti-unitary.
+
+    In order to refute this statement we would say that it is bootstrap talk and that the conclusion
+is contained in the hypothesis, as occurs with the “CPT theorem”.
+    In his book Weinberg, 17 let us quote his sentence on p. 104:
+
+      No examples are known of particles that furnish unconventional representation of
+      inversions, so these possibilities will not be pursued here. From now on, the inversions
+      will be assumed to have the conventional action assumed in Sec. 2.6.
+
+    This sentence refers of course to the hypothesis expressed on p. 76 of Ref. 17 about the
+anti-unitary and anti-linear character of the T operator. However, cosmic acceleration implies
+the action of a negative pressure and hence of negative energy (pressure is an energy density by
+unit volume). The discovery of such quite un-foreseen phenomenon 18–27 makes it compelling for
+Quantum Field Theory to be extended in order to include negative energy states.
+
+
+References
+ 1. K. Schwarzschild, Sitzber. Preuss. Akad. Wiss. Berlin 189 (1916).
+
+ 2. D. Hilbert, Math. Ann. 92, 1 (1924).
+
+ 3. P. Painlevé, C. R. Acad. Sci. (Paris) 173, 677 (1921).
+
+ 4. A. Gullstrand, Arkiv. Mat. Astron. Fys. 16, 1 (1922).
+
+ 5. A. S. Eddington, Nature 113, 192 (1924).
+
+ 6. D. Finkelstein, Phys. Rev. 110, 965 (1958).
+
+ 7. G. Lemaître, Ann. Soc. Sci. Bruxelles A 53, 51 (1933).
+
+ 8. R. Adler, M. Bazin and M. Schiffer, Introduction to General Relativity (McGraw-Hill, 1965).
+
+ 9. J. P. Petit and G. D’Agostini, Astrophys. Space Sci. 354, 611 (2014).
+
+10. J. P. Petit and G. D’Agostini, Mod. Phys. Lett. A 29, 34 (2014).
+
+11. J. P. Petit, C. R. Acad. Sci. 284, 1217 (1977).
+
+12. A. Sakharov, ZhETF Pis’ma 5, 32 (1967) (in Russian); JETP Lett. 5, 24 (1967).
+
+13. A. Sakharov, ZhETF Pis’ma 76, 1172 (1979) (in Russian); JETP 49, 594 (1979).
+
+14. A. Sakharov, ZhETF Tr. JETP 52, 349 (1980); 79, 689 (1980) (in Russian).
+
+15. A. Sakharov, Collected Scientific Works (Library of Congress, 1982).
+
+                                                10
+

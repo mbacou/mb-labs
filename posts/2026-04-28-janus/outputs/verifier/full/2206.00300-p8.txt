@@ -1,0 +1,65 @@
+                                                                                                                          8
+
+can be rewritten as a relationship between 8 independent       Therefore one can anticipate discrepancies between sim-
+dimensionless quantities, which we choose as                   ulations and experiments in acoustics.
+                                                
+          h∞          r                   Z 1 c1
+              =F         , Bo, Π0 , V, ξ,    ,     . (57)
+          w0         w0                   Z 2 c2
+                                                                B.   Morphogenesis of interface deformations: the
+Taking into account that µ1 = µ2 = µ0 at optical fre-                role of propagation-deformation interplay
+quencies and that Zi = µi ci , and assuming ρ1 = ρ2 , one
+gets                                                              In order to appreciate the role of PDI, we compare the
+                                                             deformation evolution of an initially flat interface expe-
+              h∞        r c1
+                  =F        , , Π0 , V, ξ .          (58)      riencing constant irradiation from time t = 0 with and
+              w0        w0 c2                                  without PDI. The case “with PDI” refers to the treat-
+                                                               ment presented so far whereas the case “without PDI” is
+                       4.   Synthesis
+                                                               carried out by computing the radiation pressure as that
+                                                               exerted by the incident Gaussian field whatever the de-
+                                                               formation of the interface.
+   This analysis shows that whenever the role of the polar-       In order to appreciate the role of the direction of prop-
+ization state of electromagnetic waves can be discarded,       agation, the comparison is conducted in two configura-
+the steady dimensionless shape of the interface can be         tions, namely cfrom > cto and cfrom < cto . In the follow-
+described in a universal manner, indistinctly for acoustic     ing, we adopt the following convention: the bottom fluid
+and electromagnetic waves. Moreover, in the ρ1 = ρ2            indexed by the subscript 1 is taken as that having the
+approximation, this universal description entails four di-     largest celerity (c1 = c+ ) whereas the top fluid indexed
+mensionless parameters, namely cc21 , Π0 , V and ξ.            by the subscript 2 has the smallest celerity (c2 = c− with
+   In the unsteady regime, h also depends on time t, fluid     c− < c+ ). Thus, the configuration cfrom > cto corre-
+viscosities η1 and η2 , as well as ρ1 and ρ2 . According       sponds to a beam propagating upward from fluid 1 to
+to [32], in the creeping flow regime, neither fluid iner-      fluid 2. Conversely, the configuration cfrom < cto corre-
+tia, nor the viscosity ratio have a significant influence on   sponds to a beam propagating downward from fluid 2 to
+the interfacial dynamics, whose characteristic timescale       fluid 1.
+is τ = w0 η2 /σ as already introduced in section III.A.
+
+
+                     V.     RESULTS                                     1.   Large celerity contrast with cfrom > cto
+
+                     A.     Disclaimer                            The evolution of the interface shape and of the radia-
+                                                               tion pressure distribution along the interface for c− /c+ =
+   With the aim at demonstrating that the PDI based            0.5 and cfrom > cto , at Π0 = 10, is shown without PDI
+on the sole action of radiation pressure presented in Sec-     in Figs. 2(a, b) and with PDI in Figs. 2(e, f). An insight
+tion II reproduces the main features of experimental ob-       into the wave field if provided in the right part of the fig-
+servations, we do not report here on the systematic explo-     ure where the spatial distribution of the phase Φ and of
+ration of the four-dimensional parameter space. Instead,       the dimensionless energy density E/E0 of the wave field,
+we set Π0 to a rather large value (typically, Π0 ≃ 5 − 10)     where E0 refers to the maximum of the energy density of
+in order to put the system in regimes where the conse-         the incident beam in absence of interface (i.e., consider-
+quences of PDI are strikingly apparent. Moreover, we           ing that the fluid ‘from’ fills all space). The phase and
+focus on the influence of the celerity contrast and of the     energy density at time t = 0 (at which the interface is
+beam direction of propagation. For this aim, we choose         flat) are shown in Figs. 2(c) and 2(d), respectively. Note
+two values that are representative of low and large val-       the expected factor 2 between the wavelengths in the two
+ues of the ratio c− /c+ , namely, c− /c+ = 0.5, which can      fluids [Fig. 2(c)] and the axial energy modulation in fluid
+be achieved in acoustic experiments, and c− /c+ = 0.95,        ‘from’ [Fig. 2(d)] which results from the interference be-
+which is typical of optical experiments.                       tween the incident beam and the backward wave due to
+   Moreover, the restrictions of our numerical study call      its partial reflection off the interface.
+for a few comments regarding a possible comparison with           In the absence of PDI, the magnitude of the dimen-
+experimental results. Indeed, in our numerical study           sionless hump height h̃0 = h0 /w0 smoothly increases
+gravity effects are discarded owing to the assumption          with time and is associated with a bell shaped dimen-
+ρ1 = ρ2 while in practice ρ1 6= ρ2 . In the optical do-        sionless hump profile h̃(r̃, t̃) at all stages of the evolu-
+main previous works showed that gravity does not have a        tion, see Fig. 2(a), in agreement with previous stud-
+qualitative influence on the observed deformations [3, 25]     ies [28, 32]. Correspondingly, the dimensionless radia-
+whereas in acoustics ρ1 6= ρ2 results in a possible effect     tion pressure distribution along the deformed interface,
+of gravity and also in an additional dimensionless pa-         Π(r̃, t̃), is also smooth and bell-shaped close to the axis
+rameter, the ratio Z1 /Z2 , as discussed in Section IV B.      at all times.
+

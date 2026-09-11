@@ -1,0 +1,52 @@
+[12] Cappi, M., Done, C., Behar, E., Bianchi, S., Braito, V., Costantini, E., Dadina, M., Feruglio, C., Fiore, F.,
+     Gallagher, S., Gandhi, P., Grosso, N., Kaastra, J., King, A., Lobban, A., Maiolino, R., Piconcelli, E., Ponti,
+     G., Porquet, D., Pounds, K., Proga, D., Ranalli, P., Reeves, J., Risaliti, G., Rodriguez Hidalgo, P., Rovilos,
+     E., Sim, S., Stewart, G., Tombesi, F., Tsuru, T. G., Vaughan, S., Wang, D., and Worrall, D., “The Hot and
+     Energetic Universe: Astrophysics of feedback in local AGN,” arXiv e-prints , arXiv:1306.2330 (June 2013).
+[13] Dovciak, M., Matt, G., Bianchi, S., Boller, T., Brenneman, L., Bursa, M., D’Ai, A., di Salvo, T., de Marco,
+     B., Goosmann, R., Karas, V., Iwasawa, K., Kara, E., Miller, J., Miniutti, G., Papadakis, I., Petrucci, P.-O.,
+     Ponti, G., Porquet, D., Reynolds, C., Risaliti, G., Rozanska, A., Zampieri, L., Zezas, A., and Young, A.,
+     “The Hot and Energetic Universe: The close environments of supermassive black holes,” arXiv e-prints ,
+     arXiv:1306.2331 (June 2013).
+[14] Branduardi-Raymont, G., Sciortino, S., Dennerl, K., Güdel, M., Holmstrom, M., Koutroumpa, D., Maggio,
+     A., Micela, G., Pillitteri, I., Sanz-Forcada, J., Read, A., Bhardwaj, A., Ezoe, Y., and Gladstone, R., “The
+     Hot and Energetic Universe: Solar system and exoplanets,” arXiv e-prints , arXiv:1306.2332 (June 2013).
+[15] Sciortino, S., Rauw, G., Audard, M., Argiroffi, C., Chu, Y. H., De Becker, M., Drake, J., Feigelson, E.,
+     Gosset, E., Grosso, N., Güdel, M., Guerrero, M., Hervé, A., Kastner, J., Montez, R., Nazé, Y., Oskinova,
+     L., Stelzer, B., and ud-Doula, A., “The Hot and Energetic Universe: Star formation and evolution,” arXiv
+     e-prints , arXiv:1306.2333 (June 2013).
+[16] Motch, C., Wilms, J., Barret, D., Becker, W., Bogdanov, S., Boirin, L., Corbel, S., Cackett, E., Campana,
+     S., de Martino, D., Haberl, F., in’t Zand, J., Méndez, M., Mignani, R., Miller, J., Orio, M., Psaltis, D., Rea,
+     N., Rodriguez, J., Rozanska, A., Schwope, A., Steiner, A., Webb, N., Zampieri, L., and Zane, S., “The Hot
+     and Energetic Universe: End points of stellar evolution,” arXiv e-prints , arXiv:1306.2334 (June 2013).
+[17] Decourchelle, A., Costantini, E., Badenes, C., Ballet, J., Bamba, A., Bocchino, F., Kaastra, J., Kosenko,
+     D., Lallement, R., Lee, J., Lemoine-Goumard, M., Miceli, M., Paerels, F., Petre, R., Pinto, C., Plucinsky,
+     P., Renaud, M., Sasaki, M., Smith, R., Tatischeff, V., Tiengo, A., Valencic, L., Vink, J., Wang, D., and
+     Wilms, J., “The Hot and Energetic Universe: The astrophysics of supernova remnants and the interstellar
+     medium,” arXiv e-prints , arXiv:1306.2335 (June 2013).
+[18] Jonker, P., O’Brien, P., Amati, L., Atteia, J.-L., Campana, S., Evans, P., Fender, R., Kouveliotou, C.,
+     Lodato, G., Osborne, J., Piro, L., Rau, A., Tanvir, N., and Willingale, R., “The Hot and Energetic Universe:
+     Luminous extragalactic transients,” arXiv e-prints , arXiv:1306.2336 (June 2013).
+[19] Cucchetti, E., Pointecouteau, E., Peille, P., Clerc, N., Rasia, E., Biffi, V., Borgani, S., Tornatore, L., Dolag,
+     K., Roncarelli, M., Gaspari, M., Ettori, S., Bulbul, E., Dauser, T., Wilms, J., Pajot, F., and Barret, D.,
+     “Athena X-IFU synthetic observations of galaxy clusters to probe the chemical enrichment of the Universe,”
+     Astronomy and Astrophysics 620, A173 (Dec. 2018).
+[20] Barret, D., Lam Trong, T., den Herder, J.-W., Piro, L., Cappi, M., Houvelin, J., Kelley, R., Mas-Hesse,
+     J. M., Mitsuda, K., Paltani, S., Rauw, G., Rozanska, A., Wilms, J., Bandler, S., Barbera, M., Barcons,
+     X., Bozzo, E., Ceballos, M. T., Charles, I., Costantini, E., Decourchelle, A., den Hartog, R., Duband, L.,
+     Duval, J.-M., Fiore, F., Gatti, F., Goldwurm, A., Jackson, B., Jonker, P., Kilbourne, C., Macculi, C.,
+     Mendez, M., Molendi, S., Orleanski, P., Pajot, F., Pointecouteau, E., Porter, F., Pratt, G. W., Prêle, D.,
+     Ravera, L., Sato, K., Schaye, J., Shinozaki, K., Thibert, T., Valenziano, L., Valette, V., Vink, J., Webb,
+     N., Wise, M., Yamasaki, N., Douchin, F., Mesnager, J.-M., Pontet, B., Pradines, A., Branduardi-Raymont,
+     G., Bulbul, E., Dadina, M., Ettori, S., Finoguenov, A., Fukazawa, Y., Janiuk, A., Kaastra, J., Mazzotta,
+     P., Miller, J., Miniutti, G., Naze, Y., Nicastro, F., Scioritino, S., Simonescu, A., Torrejon, J. M., Frezouls,
+     B., Geoffray, H., Peille, P., Aicardi, C., André, J., Daniel, C., Clénet, A., Etcheverry, C., Gloaguen, E.,
+     Hervet, G., Jolly, A., Ledot, A., Paillet, I., Schmisser, R., Vella, B., Damery, J.-C., Boyce, K., Dipirro, M.,
+     Lotti, S., Schwander, D., Smith, S., Van Leeuwen, B.-J., van Weers, H., Clerc, N., Cobo, B., Dauser, T.,
+     Kirsch, C., Cucchetti, E., Eckart, M., Ferrando, P., and Natalucci, L., “The ATHENA X-ray Integral Field
+     Unit (X-IFU),” in [Space Telescopes and Instrumentation 2018: Ultraviolet to Gamma Ray], den Herder,
+     J.-W. A., Nikzad, S., and Nakazawa, K., eds., Society of Photo-Optical Instrumentation Engineers (SPIE)
+     Conference Series 10699, 106991G (July 2018).
+[21] Nicastro, F., Kaastra, J., Krongold, Y., Borgani, S., Branchini, E., Cen, R., Dadina, M., Danforth, C. W.,
+     Elvis, M., Fiore, F., Gupta, A., Mathur, S., Mayya, D., Paerels, F., Piro, L., Rosa-Gonzalez, D., Schaye, J.,
+

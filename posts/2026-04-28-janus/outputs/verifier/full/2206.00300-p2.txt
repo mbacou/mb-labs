@@ -1,0 +1,70 @@
+                                                                                                                         2
+
+amplitude. This is done by numerically mimicking an
+experiment. In other words, we simultaneously solve the
+hydrodynamic evolution of an irradiated two-phase fluid
+sample and the propagation of the acoustic or electro-
+magnetic beam through the moving interface, taking a
+planar and horizontal interface at rest as the initial con-
+dition (time t = 0) and considering a nonzero constant
+beam power for t > 0. Such a numerical simulation of
+the radiation pressure-driven deformation morphogene-
+sis of fluid interfaces allows us to address the following
+questions:
+   (i) How do the interface deformations depend on the
+various parameters characterizing the wave-matter inter-
+action?
+   (ii) Do the numerical simulations predict the same in-
+                                                              FIG. 1. Sketch of the simulation domain with the definitions
+terface deformation shapes as those experimentally ob-
+                                                              of the used notations. The convention c1 = c+ and c2 =
+served?                                                       c− with c− < c+ is used, see Section V A for details. The
+   (iii) Does the instability leading to the formation of     bold vertical arrows refer to the two possible directions of
+needle-like deformations and the ensuing observed hys-        propagation of the irradiating waves.
+teresis originate from the PDI [7, 25]?
+   The paper is organized as follows. The key-ingredients
+of the model are presented in Section II. The dimension-
+less formulation of the model and its numerical handling      where q is the fluid pressure perturbation p′ associated
+are provided in Section III. Then, a dimensional analysis     to acoustic waves, whereas it refers to the electric field E
+is performed in Section IV, which shows that the defor-       or the magnetic field H for electromagnetic waves, and
+mation height depends on five independent dimensionless       c is the wave celerity (also equal to the phase and group
+quantities both in acoustics and electromagnetics. The        velocities). In addition the subscript i, refers to the fluid
+numerical results and its comparison with existing and        labeled i, i = (1, 2), see Fig. 1.
+novel experimental observations are presented in Section
+V, which addresses the three main questions listed above.
+Finally, Section VI then summarizes the main results of                           1.   Acoustic waves
+this work.
+                                                                 In the case of acoustic waves, ci = (ρi χi )−1/2 where
+                                                              ρi is the mass density and χi the isentropic compressibil-
+                      II.    MODEL                            ity. The complex harmonic velocity field ui associated
+                                                              to the acoustic pressure perturbation p′i satisfies the lin-
+   In this section, we first present the wave propagation     earized Euler’s equation ρi ∂u          ′
+                                                                                           ∂t = −∇pi . Along the fluid
+                                                                                             i
+
+equations describing the acoustic and electromagnetic         interface, the pressure and the velocity fields satisfy the
+fields and the corresponding radiation stresses exerted       condition of stress continuity
+on the interface. Then, we present the hydrodynamic
+equations describing the evolution of the fluid sample in                              p′1 = p′2 ,                     (2)
+the creeping-flow regime that suits well most of the ex-
+periments reported so far.                                    as well as the impermeability condition between the two
+                                                              fluids
+
+                    A.      Propagation                                             u1 · n = u2 · n ,                  (3)
+
+   Considering both fluids 1 and 2 as homogeneous,            where n is the unit vector normal to the interface oriented
+isotropic and linear, we also assume inviscid and non         from fluid 1 to fluid 2. Finally, since the acoustic fluid
+heat-conducting media when dealing with acoustic waves        velocity is irrotational in absence of acoustic attenuation,
+whereas we assume non absorbing and non dispersive            ui = −∇φi and consequently p′i = ρi ∂φ   ∂t . Thus, the con-
+                                                                                                         i
+
+                                                                           ′
+media for electromagnetic waves. Within the latter            tinuity of p across the interface results in the continuity
+framework, the propagation of small-amplitude acous-          of ρφ, hence of ∇k (ρφ) = ρ∇k φ, where ∇k is the gradient
+tic waves and of electromagnetic waves is described by        in the tangent plane to the interface. Since ∇k φ = −uk ,
+d’Alembert’s wave equation                                    where uk = u − (u · n)n is the projection of u on the
+                                                              tangent plane to the interface, we conclude that
+              ∂ 2 qi
+                     − c2i ∇2 qi = 0, i = (1, 2),      (1)                         ρ1 uk1 = ρ2 uk2 .                   (4)
+              ∂t2
+

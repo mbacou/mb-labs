@@ -1,0 +1,80 @@
+                                                                                             1
+
+geodesic curves, however calculated from the basically different metrics g + et g –. Lengths
+may differ, insofar as their corresponding scale factors R + and R – might no more be equal.
+
+In an expanding or simply evolving Universe, both scale factors will vary according to laws:
+
+                                    R + (τ )   and   R – (τ )
+
+So we get two measurements of arc AB and two different lengths, whether the measurement
+is taken in the world of positive energies and masses with the metric g +, or in the world of
+negative energies and masses with the metric g –.
+
+   -     According to the first measurement, the length of arc AB will vary like R + (τ )
+   -     According to the second measurement, the length of arc AB will vary like R – (τ )
+
+Now consider a 3-ball B3 , whose boundary is a sphere S2. Once again we get different
+                           B
+
+
+
+
+measurements for the surface of the sphere S2 or the volume of the 3-ball B3 depending on the
+                                                                            B
+
+
+
+
+metric we rely on :
+   -
+         Refering to metric g+ the area of sphere S2 will vary like R+2 and the volume of ball
+         B3 like R+3
+          B
+
+
+
+
+   -
+         Refering to metric g – the area of sphere S2 will vary like R-2 and the volume of ball
+         B3 like R -3
+          B
+
+
+
+
+ρ + and ρ – represent the densities of the two species. By expressing mass conservation, we
+write:
+(46)
+                                         ρ + R + 3 = cst
+(47)
+                                         ρ − R − 3 = cst
+
+Let us introduce two Robertson-Walker metrics into the field equations and suppose the
+Universe is only filled with dust, we will end to the following four equations system in which
+the pressure terms can be neglected:
+(48)
+                            3 (R + ' ) 2     3k     8π G
+                               2     +
+                                           + +2 =       2
+                                                           (ρ+−ρ− )
+                              c R            R        c
+(49)
+                                2 R + ''       (R+')2      k
+                                  2      +
+                                            + 2 +2 + + 2 = 0
+                                 c R           c R        R
+
+(50)
+                               3 (R − ' ) 2   3k   8π G
+                                  2     −
+                                            + −2 =    2
+                                                        (ρ−−ρ+ )
+                                c R          R      c
+(51)
+                                 2 R − ''   (R−')2   k
+                                   2    −
+                                          +  2  −2
+                                                   + −2 = 0
+                                 c R        c R     R
+

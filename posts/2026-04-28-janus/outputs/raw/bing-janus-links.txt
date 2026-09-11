@@ -1,0 +1,11 @@
+/copilotsearch?q=Jean-Pierre Petit JANUS&amp;form=CSBSBX
+/copilotsearch?q=Jean-Pierre+Petit+JANUS&amp;FORM=CSSCOP
+/search?format=rss&amp;q=Jean-Pierre+Petit+JANUS
+/search?q=Jean-Pierre+Petit+JANUS&amp;filters=ex1%3a%22ez1%22&amp;FORM=000017
+/search?q=Jean-Pierre+Petit+JANUS&amp;filters=ex1%3a%22ez2%22&amp;FORM=000017
+/search?q=Jean-Pierre+Petit+JANUS&amp;filters=ex1%3a%22ez3%22&amp;FORM=000017
+/search?q=Jean-Pierre+Petit+JANUS&amp;filters=ex1%3a%22ez5_20208_20573%22&amp;FORM=000017
+/search?q=Jean-Pierre+Petit+JANUS&amp;FORM=000017&amp;qpvt=Jean-Pierre+Petit+JANUS
+/search?q=Jean-Pierre+Petit+JANUS&amp;FPIG=FD45877556CF40BE9B00DD107CB811F1&amp;first=11&amp;FORM=PORE
+/search?q=Jean-Pierre+Petit+JANUS&amp;FPIG=FD45877556CF40BE9B00DD107CB811F1&amp;first=11&amp;FORM=PORE1
+/search?q=Jean-Pierre+Petit+JANUS&amp;setlang=en&amp;sid=3FFEEB69A16C64872874FC22A0AE65D7

@@ -1,0 +1,53 @@
+     Shull, J. M., Torres-Zafra, J., Wijers, N., and Zappacosta, L., “Observations of the missing baryons in the
+     warm-hot intergalactic medium,” Nature 558, 406–409 (June 2018).
+[22] Reeves, J. N., Braito, V., Nardini, E., Hamann, F., Chartas, G., Lobban, A. P., O’Brien, P. T., and Turner,
+     T. J., “Resolving the X-Ray Obscuration in a Low-flux Observation of the Quasar PDS 456,” Astrophysical
+     Journal 867, 38 (Nov. 2018).
+[23] Miller, J. M., Raymond, J., Fabian, A. C., Gallo, E., Kaastra, J., Kallman, T., King, A. L., Proga, D.,
+     Reynolds, C. S., and Zoghbi, A., “The Accretion Disk Wind in the Black Hole GRS 1915+105,” Astrophysical
+     Journal Letters 821, L9 (Apr. 2016).
+[24] Guainazzi, M. and Tashiro, M. S., “The Hot Universe with XRISM and Athena,” in [Perseus in Sicily:
+     From Black Hole to Cluster Outskirts ], Asada, K., de Gouveia Dal Pino, E., Giroletti, M., Nagai, H., and
+     Nemmen, R., eds., 342, 29–36 (Jan. 2020).
+[25] Barret, D., den Herder, J. W., Piro, L., Ravera, L., Den Hartog, R., Macculi, C., Barcons, X., Page,
+     M., Paltani, S., Rauw, G., Wilms, J., Ceballos, M., Duband, L., Gottardi, L., Lotti, S., de Plaa, J.,
+     Pointecouteau, E., Schmid, C., Akamatsu, H., Bagliani, D., Bandler, S., Barbera, M., Bastia, P., Biasotti,
+     M., Branco, M., Camon, A., Cara, C., Cobo, B., Colasanti, L., Costa-Kramer, J. L., Corcione, L., Doriese,
+     W., Duval, J. M., Fabrega, L., Gatti, F., de Gerone, M., Guttridge, P., Kelley, R., Kilbourne, C., van der
+     Kuur, J., Mineo, T., Mitsuda, K., Natalucci, L., Ohashi, T., Peille, P., Perinati, E., Pigot, C., Pizzigoni, G.,
+     Pobes, C., Porter, F., Renotte, E., Sauvageot, J. L., Sciortino, S., Torrioli, G., Valenziano, L., Willingale,
+     D., de Vries, C., and van Weers, H., “The Hot and Energetic Universe: The X-ray Integral Field Unit
+     (X-IFU) for Athena+,” arXiv e-prints , arXiv:1308.6784 (Aug. 2013).
+[26] Ravera, L., Barret, D., den Herder, J. W., Piro, L., Clédassou, R., Pointecouteau, E., Peille, P., Pajot, F.,
+     Arnaud, M., Pigot, C., Duband, L., Cara, C., den Hartog, R. H., Gottardi, L., Akamatsu, H., van der Kuur,
+     J., van Weers, H. J., de Plaa, J., Macculi, C., Lotti, S., Torrioli, G., Gatti, F., Valenziano, L., Barbera, M.,
+     Barcons, X., Ceballos, M. T., Fàbrega, L., Mas-Hesse, J. M., Page, M. J., Guttridge, P. R., Willingale, R.,
+     Paltani, S., Genolet, L., Bozzo, E., Rauw, G., Renotte, E., Wilms, J., and Schmid, C., “The X-ray Integral
+     Field Unit (X-IFU) for Athena,” in [Space Telescopes and Instrumentation 2014: Ultraviolet to Gamma
+     Ray], Takahashi, T., den Herder, J.-W. A., and Bautz, M., eds., Society of Photo-Optical Instrumentation
+     Engineers (SPIE) Conference Series 9144, 91442L (July 2014).
+[27] Barret, D., Lam Trong, T., den Herder, J.-W., Piro, L., Barcons, X., Huovelin, J., Kelley, R., Mas-Hesse,
+     J. M., Mitsuda, K., Paltani, S., Rauw, G., RoŻanska, A., Wilms, J., Barbera, M., Bozzo, E., Ceballos,
+     M. T., Charles, I., Decourchelle, A., den Hartog, R., Duval, J.-M., Fiore, F., Gatti, F., Goldwurm, A.,
+     Jackson, B., Jonker, P., Kilbourne, C., Macculi, C., Mendez, M., Molendi, S., Orleanski, P., Pajot, F.,
+     Pointecouteau, E., Porter, F., Pratt, G. W., Prêle, D., Ravera, L., Renotte, E., Schaye, J., Shinozaki, K.,
+     Valenziano, L., Vink, J., Webb, N., Yamasaki, N., Delcelier-Douchin, F., Le Du, M., Mesnager, J.-M.,
+     Pradines, A., Branduardi-Raymont, G., Dadina, M., Finoguenov, A., Fukazawa, Y., Janiuk, A., Miller, J.,
+     Nazé, Y., Nicastro, F., Sciortino, S., Torrejon, J. M., Geoffray, H., Hernandez, I., Luno, L., Peille, P., André,
+     J., Daniel, C., Etcheverry, C., Gloaguen, E., Hassin, J., Hervet, G., Maussang, I., Moueza, J., Paillet, A.,
+     Vella, B., Campos Garrido, G., Damery, J.-C., Panem, C., Panh, J., Bandler, S., Biffi, J.-M., Boyce, K.,
+     Clénet, A., DiPirro, M., Jamotton, P., Lotti, S., Schwander, D., Smith, S., van Leeuwen, B.-J., van Weers,
+     H., Brand, T., Cobo, B., Dauser, T., de Plaa, J., and Cucchetti, E., “The Athena X-ray Integral Field
+     Unit (X-IFU),” in [Space Telescopes and Instrumentation 2016: Ultraviolet to Gamma Ray], den Herder,
+     J.-W. A., Takahashi, T., and Bautz, M., eds., Society of Photo-Optical Instrumentation Engineers (SPIE)
+     Conference Series 9905, 99052F (July 2016).
+[28] Barret, D., Lam Trong, T., den Herder, J.-W., Piro, L., Cappi, M., Houvelin, J., Kelley, R., Mas-Hesse,
+     J. M., Mitsuda, K., Paltani, S., Rauw, G., Rozanska, A., Wilms, J., Bandler, S., Barbera, M., Barcons,
+     X., Bozzo, E., Ceballos, M. T., Charles, I., Costantini, E., Decourchelle, A., den Hartog, R., Duband, L.,
+     Duval, J.-M., Fiore, F., Gatti, F., Goldwurm, A., Jackson, B., Jonker, P., Kilbourne, C., Macculi, C.,
+     Mendez, M., Molendi, S., Orleanski, P., Pajot, F., Pointecouteau, E., Porter, F., Pratt, G. W., Prêle, D.,
+     Ravera, L., Sato, K., Schaye, J., Shinozaki, K., Thibert, T., Valenziano, L., Valette, V., Vink, J., Webb,
+     N., Wise, M., Yamasaki, N., Douchin, F., Mesnager, J.-M., Pontet, B., Pradines, A., Branduardi-Raymont,
+     G., Bulbul, E., Dadina, M., Ettori, S., Finoguenov, A., Fukazawa, Y., Janiuk, A., Kaastra, J., Mazzotta,
+     P., Miller, J., Miniutti, G., Naze, Y., Nicastro, F., Scioritino, S., Simonescu, A., Torrejon, J. M., Frezouls,
+
