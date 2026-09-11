@@ -5,7 +5,6 @@ global.bib
 *.RData
 *.zip
 _data
-_drafts
 _assets
 _site/
 .quarto/

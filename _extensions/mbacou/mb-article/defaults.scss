@@ -214,6 +214,10 @@ a.url:hover {
   filter: darken($link-color, 1);
   text-decoration: underline;
 }
+em {
+  background: linear-gradient(transparent 64%, $info 64%);
+  padding: 0 2px;
+}
 a.uri, a.url, .citation a, a[target="_blank"] {
   text-decoration: underline;
 }
@@ -444,9 +448,9 @@ figcaption, .column-margin figcaption, .margin-caption {
 }
 
 
-/* -------------------------------------------------------------------------------- */
-/* Quarto page layout fixes                                                         */
-/* -------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------- */
+/* Quarto page layout fixes                                                        */
+/* ------------------------------------------------------------------------------- */
 
 #quarto-content>* {
   padding: 0;

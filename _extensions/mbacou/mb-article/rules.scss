@@ -1,14 +1,6 @@
 /*-- scss:rules --*/
 
-/* Compatibility */
-.bg-tertiary {
-  background-color: $tertiary;
-}
-.text-tertiary {
-  color: $tertiary;
-}
-
-/* Navigation */
+/* TOC Navigation */
 nav .nav-item .nav-link,
 .nav-tabs .nav-item .nav-link {
   font-family: $nav-link-font-family;
@@ -45,6 +37,14 @@ nav .nav-item .bi {
 .column-screen-inset-shaded {
   padding: 0 1rem 0 1rem;
   background-color: $shaded;
+}
+
+/* Compatibility with BS4 */
+.bg-tertiary {
+  background-color: $tertiary;
+}
+.text-tertiary {
+  color: $tertiary;
 }
 
 // notes
@@ -195,13 +195,3 @@ mark::after {
   filter: blur(0.5px);
 }
 
-// Scroll animation
-.scroller {
-  width: 100%;
-  overflow: hidden;
-}
-.scroller img {
-  height: 6em;
-  filter: grayscale(1);
-
-}

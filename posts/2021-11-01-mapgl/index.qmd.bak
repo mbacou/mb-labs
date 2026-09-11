@@ -2,13 +2,9 @@
 title: "Visualizing Water: 3D Rendering of River Basins (draft)"
 description: |
   Part 4: how to represent water flux over 3D maps of river basins using Deck.gl.
-author:
-  - name: Melanie BACOU
-    email: mel@mbacou.com
-    url: https://linkedin/in/mbacou
 date: "`r Sys.Date()`"
 date_prefix: 2021-11-01
-freeze: true
+draft: true
 preview: preview.png
 bibliography: biblio.bib
 nocite: "@*"
@@ -22,7 +18,7 @@ Testing additional 3D mapping libraries to render river basin topography.
 
 ```{r setup}
 
-if(interactive()) setwd("posts/2021-11-01-deckgl/")
+if(interactive()) setwd("_posts/2021-11-01-deckgl/")
 
 library(knitr)
 library(scales)
